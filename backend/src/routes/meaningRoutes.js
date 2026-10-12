@@ -1,5 +1,6 @@
 import express from 'express';
 import { findPalaceByName, findStarByName } from '../db/repositories.js';
+import { logSafeError } from '../http/safeErrorLog.js';
 
 const router = express.Router();
 
@@ -54,7 +55,7 @@ router.get('/star/:name', async (req, res) => {
 
         return res.json({ text: `Hiện chưa có giải nghĩa chi tiết cho sao ${cleanName} tại cung ${cungName}.` });
     } catch (error) {
-        console.error("Meaning Fetch Error (Star):", error);
+        logSafeError('Meaning Fetch Error (Star)', error);
         res.status(500).json({ error: 'Lỗi tra cứu dữ liệu sao' });
     }
 });
@@ -85,7 +86,7 @@ router.get('/palace/:name', async (req, res) => {
         }
         return res.json(results);
     } catch (error) {
-        console.error("Meaning Fetch Error (Palace):", error);
+        logSafeError('Meaning Fetch Error (Palace)', error);
         res.status(500).json({ error: 'Lỗi tra cứu dữ liệu cung' });
     }
 });

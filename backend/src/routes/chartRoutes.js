@@ -3,6 +3,7 @@ import { solarToLunar } from '../engine/lunar.js';
 import { calculateTuVi } from '../engine/tuviRules.mjs';
 import { validateChartInput } from '../engine/chartInput.js';
 import { normalizeChart } from '../engine/normalizeChart.js';
+import { logSafeError } from '../http/safeErrorLog.js';
 
 const router = express.Router();
 
@@ -51,8 +52,8 @@ router.post('/generate', async (req, res) => {
 
         return res.json(chartData);
 
-    } catch {
-        console.error('Tuvi Calculation Error');
+    } catch (error) {
+        logSafeError('Tuvi Calculation Error', error);
         res.status(500).json({ error: 'Lỗi tính toán lá số' });
     }
 });

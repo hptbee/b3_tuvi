@@ -1,6 +1,7 @@
 import express from 'express';
 import catalogJson from '../data/combinations.json' with { type: 'json' };
 import { matchCombinations } from '../engine/combinationMatch.js';
+import { logSafeError } from '../http/safeErrorLog.js';
 
 const router = express.Router();
 
@@ -17,7 +18,7 @@ router.post('/match', async (req, res) => {
         );
         res.json({ count: matched.length, combinations: matched });
     } catch (error) {
-        console.error('Combination match error:', error);
+        logSafeError('Combination match error', error);
         res.status(500).json({ error: 'Lỗi đối chiếu cách cục' });
     }
 });
