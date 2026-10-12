@@ -207,7 +207,7 @@ Không thực thi trong phiên nền tảng trừ khi near-term ở trên đã x
 | V2-M0-05 | Backup/recovery checks trên DB tạm | COMPLETED | V2-KB-03 prototype | no |
 | V2-M0-06 | Error handling/logging review | PLANNED | none | no |
 | V2-M0-08 | Tách golden vs regression fixtures | PLANNED | none | no |
-| V2-KB-04 | Knowledge validator | PLANNED | V2-KB-01 | no |
+| V2-KB-04 | Knowledge validator | COMPLETED | V2-KB-01 | no |
 | V2-KB-05 | Query layer | PLANNED | V2-KB-03 | no |
 | V2-KB-06 | Mở rộng 63 cách | PLANNED | V2-KB-02 cho claim đã duyệt | yes nếu nâng trạng thái |
 | V2-RULE-01 | Đối chiếu CONFLICT/PARTIAL | PLANNED | nghiên cứu; sửa runtime cần duyệt | yes để ghi `rulesV2.json` |
