@@ -44,3 +44,22 @@ export function buildKnowledgeCoverage() {
         rulesV2Changed: false
     };
 }
+
+export function buildSprint9Inventory() {
+    const coverage = buildKnowledgeCoverage();
+    const approvedForInterpretationCount = pilot.claims.filter((claim) => claim.approvedForInterpretation === true).length;
+    return {
+        usage: 'sprint9_live_inventory',
+        catalogCountIsNotVerification: true,
+        combinationCount: coverage.combinationCount,
+        ruleCount: coverage.ruleCount,
+        pilotClaimCount: coverage.pilotClaimCount,
+        pilotByFormulaComparison: coverage.pilotByFormulaComparison,
+        uncomparedCombinationCount: coverage.uncomparedCombinationCount,
+        formulaCheckedAgainstSourceCount: coverage.matrixFormulaCheckedCount,
+        approvedForInterpretationCount,
+        sourceCount: sourcesDoc.sources.length,
+        editionCount: sourcesDoc.editions.length,
+        meaningStoresReviewed: coverage.meaningStoresReviewed
+    };
+}
