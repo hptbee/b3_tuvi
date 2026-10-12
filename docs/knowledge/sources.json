@@ -253,9 +253,13 @@
       "pageCount": null,
       "coverStatement": null,
       "publisher": null,
-      "publicationYear": null,
+      "publicationYear": 1956,
       "authenticated": false,
-      "verificationNotes": "Internet Archive, upload 2017-07-31, identifier TuViDdauSoTanBien-VDThaiThuLang-DV. Nhiều PDF tách phần (mục lục và dv01 trở đi), OCR. Chưa đếm trang và chưa đối mục 19 với PDF 277 trang. Không phải bản 2012. Chưa authenticated."
+      "archiveItemVerified": true,
+      "digitalArtifactVerified": false,
+      "originalEditionAuthenticated": false,
+      "textCollatedAgainstOriginal": false,
+      "verificationNotes": "Internet Archive, upload 2017-07-31, identifier TuViDdauSoTanBien-VDThaiThuLang-DV. Nhiều PDF tách phần (mục lục và dv01 trở đi), OCR. Metadata/bìa scan ghi 1956; năm in chưa được chứng minh thư viện. Đã xác nhận item IA (2026-10-12). Chưa đếm trang và chưa đối mục 19 với PDF 277 trang. Không phải bản 2012. authenticated vẫn false; bản đối chiếu đang dùng vẫn là PDF 277 trang owner-accepted."
     }
   ]
 }

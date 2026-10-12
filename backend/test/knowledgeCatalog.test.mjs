@@ -85,6 +85,10 @@ assert.strictEqual(print2012.catalogRecordVerified, true);
 assert.strictEqual(print2012.physicalCopyInspected, false);
 assert.strictEqual(print2012.textVerified, false);
 assert.strictEqual(print2012.pageCount, 427);
+const archiveMultipart = sourcesDoc.editions.find((edition) => edition.editionId === 'tan-bien-archive-2017-multipart');
+assert.strictEqual(archiveMultipart.authenticated, false);
+assert.strictEqual(archiveMultipart.archiveItemVerified, true);
+assert.strictEqual(archiveMultipart.publicationYear, 1956);
 assert.ok(sourcesDoc.editions.filter((edition) => edition.editionId !== accepted.editionId).every((edition) => edition.authenticated === false));
 assert.notStrictEqual(sourcesDoc.editions[0].pageCount, sourcesDoc.editions[1].pageCount);
 
