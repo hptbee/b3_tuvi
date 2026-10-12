@@ -206,7 +206,7 @@ Không thực thi trong phiên nền tảng trừ khi near-term ở trên đã x
 |---|---|---|---|---|
 | V2-M0-05 | Backup/recovery checks trên DB tạm | COMPLETED | V2-KB-03 prototype | no |
 | V2-M0-06 | Error handling/logging review | COMPLETED | none | no |
-| V2-M0-08 | Tách golden vs regression fixtures | PLANNED | none | no |
+| V2-M0-08 | Tách golden vs regression fixtures | COMPLETED | none | no |
 | V2-KB-04 | Knowledge validator | COMPLETED | V2-KB-01 | no |
 | V2-KB-05 | Query layer | COMPLETED | V2-KB-03 | no |
 | V2-KB-06 | Mở rộng 63 cách | PLANNED | V2-KB-02 cho claim đã duyệt | yes nếu nâng trạng thái |
@@ -285,3 +285,9 @@ Dừng trước `V2-KB-02`, production migration, sửa `rulesV2.json`, LLM publ
 ## 13. Progress rules
 
 Một task `COMPLETED` khi acceptance đã kiểm bằng lệnh, review không còn finding chặn, commit trên feature branch. Checkpoint: `.b3/autodev/` (ignored). Không push `main`. PR là đề xuất review, không phải merge.
+
+## 14. Sprint 2
+
+Các task kỹ thuật sau foundation đã có mã trên `autodev/v2-sprint-2`: `V2-M0-05`, `V2-KB-04`, `V2-KB-05`, `V2-M0-06`, `V2-RULE-03`, `V2-M0-08`.
+
+`V2-KB-03-prod` vẫn `BLOCKED_HUMAN`. Prototype và query layer không phải knowledge base production. Không có lá số expert-verified golden. Evidence v3 chưa được nối vào response API. Deterministic interpretation chưa bắt đầu.
