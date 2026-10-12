@@ -40,3 +40,6 @@ Desktop.ini
 *.njsproj
 *.sln
 *.sw?
+
+# B3: local host skill link (do not commit)
+.agents/skills
