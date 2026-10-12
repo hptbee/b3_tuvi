@@ -3,16 +3,16 @@
  */
 import dotenv from 'dotenv';
 import combinations from '../data/combinations.json' with { type: 'json' };
-import { initDatabase } from '../db/sqlite.js';
+import { initDatabase, withTransaction } from '../db/sqlite.js';
 import { countCombinations, upsertCombination } from '../db/repositories.js';
 
 dotenv.config();
 
 function syncCombinations() {
     initDatabase();
-    for (const combo of combinations) {
-        upsertCombination(combo);
-    }
+    withTransaction(() => {
+        for (const combo of combinations) upsertCombination(combo);
+    });
     console.log(`combinations: ${countCombinations()}`);
 }
 

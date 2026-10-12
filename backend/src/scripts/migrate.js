@@ -3,7 +3,7 @@
  * Chạy: node src/scripts/migrate.js
  */
 import dotenv from 'dotenv';
-import { initDatabase } from '../db/sqlite.js';
+import { initDatabase, withTransaction } from '../db/sqlite.js';
 import { countPalaces, countStars, upsertPalace, upsertStar } from '../db/repositories.js';
 
 dotenv.config();
@@ -183,15 +183,15 @@ function migrate() {
   console.log('✅ SQLite ready');
 
   console.log('\n📌 Seeding stars...');
-  for (const s of starsToSeed) {
-    upsertStar(s);
-  }
+  withTransaction(() => {
+    for (const s of starsToSeed) upsertStar(s);
+  });
   console.log(`   ✓ ${starsToSeed.length} stars upserted (${countStars()} in DB)`);
 
   console.log('📌 Seeding palaces...');
-  for (const p of palacesToSeed) {
-    upsertPalace(p);
-  }
+  withTransaction(() => {
+    for (const p of palacesToSeed) upsertPalace(p);
+  });
   console.log(`   ✓ ${palacesToSeed.length} palaces upserted (${countPalaces()} in DB)`);
 
   console.log('\n🎉 Seed complete (SQLite).');

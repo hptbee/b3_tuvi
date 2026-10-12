@@ -4,7 +4,7 @@
  * Chạy: node src/scripts/seed.js
  */
 import dotenv from 'dotenv';
-import { initDatabase } from '../db/sqlite.js';
+import { initDatabase, withTransaction } from '../db/sqlite.js';
 import { countPalaces, countStars, upsertPalace, upsertStar } from '../db/repositories.js';
 
 dotenv.config();
@@ -272,22 +272,26 @@ function seed() {
   console.log('✅ SQLite ready');
 
   console.log('📌 Seeding Palaces...');
-  for (const p of palaceData) {
-    upsertPalace({
-      palace_name: p.name,
-      short_name: p.perPalace.short,
-      core_meaning: p.perPalace.description
-    });
-  }
+  withTransaction(() => {
+    for (const p of palaceData) {
+      upsertPalace({
+        palace_name: p.name,
+        short_name: p.perPalace.short,
+        core_meaning: p.perPalace.description
+      });
+    }
+  });
 
   console.log('📌 Seeding Stars...');
-  for (const s of starData) {
-    upsertStar({
-      name: s.name,
-      basic_meaning: s.perPalace.default || '',
-      palace_meanings: s.perPalace
-    });
-  }
+  withTransaction(() => {
+    for (const s of starData) {
+      upsertStar({
+        name: s.name,
+        basic_meaning: s.perPalace.default || '',
+        palace_meanings: s.perPalace
+      });
+    }
+  });
 
   console.log(`🌱 Seed complete: ${countPalaces()} palaces, ${countStars()} stars.`);
 }

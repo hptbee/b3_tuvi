@@ -47,7 +47,7 @@ Engine nằm tại `backend/src/engine/` và là "trái tim" của hệ thống:
 
 -   **Horoscope**: Một lá số đã lập (input dương lịch, âm lịch kể cả `isLeap` và `anSaoMonth`, `full_chart`).
 -   **Star / Palace**: Ý nghĩa sao và cung cho thao tác click trên lá số.
--   **Combination**: Cách cục dùng cho `POST /api/combinations/match`. Nguồn là `combinations.json`. `GET /api/combinations` có thể đọc SQLite sau seed.
+-   **Combination**: `GET /api/combinations` và `POST /api/combinations/match` đều đọc `combinations.json`. Bảng SQLite `combinations` chỉ là bản seed, API không đọc.
 
 ## 5. Tích hợp AI (AI Ready)
 

@@ -9,6 +9,8 @@ const DEFAULT_DB_PATH = path.join(__dirname, '../../data/tuvi.sqlite');
 let db = null;
 let ready = false;
 
+const SCHEMA_VERSION = '1';
+
 const SCHEMA = `
 CREATE TABLE IF NOT EXISTS horoscopes (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -62,12 +64,24 @@ CREATE TABLE IF NOT EXISTS combinations (
 
 CREATE INDEX IF NOT EXISTS idx_combinations_type ON combinations(type);
 CREATE INDEX IF NOT EXISTS idx_horoscopes_created ON horoscopes(created_at);
+
+CREATE TABLE IF NOT EXISTS schema_meta (
+  key TEXT PRIMARY KEY,
+  value TEXT NOT NULL
+);
 `;
 
 export function resolveDbPath() {
     return process.env.SQLITE_PATH
         ? path.resolve(process.env.SQLITE_PATH)
         : DEFAULT_DB_PATH;
+}
+
+export function closeDatabase() {
+    if (!db) return;
+    db.close();
+    db = null;
+    ready = false;
 }
 
 export function initDatabase() {
@@ -77,10 +91,33 @@ export function initDatabase() {
     db = new DatabaseSync(dbPath);
     db.exec('PRAGMA foreign_keys = ON;');
     db.exec('PRAGMA journal_mode = WAL;');
+    db.exec('PRAGMA busy_timeout = 5000;');
     db.exec(SCHEMA);
+    const version = db.prepare(`SELECT value FROM schema_meta WHERE key = 'schema_version'`).get();
+    if (!version) {
+        db.prepare(`INSERT INTO schema_meta (key, value) VALUES ('schema_version', ?)`).run(SCHEMA_VERSION);
+    } else if (version.value !== SCHEMA_VERSION) {
+        const message = `Unsupported SQLite schema version ${version.value}`;
+        db.close();
+        db = null;
+        throw new Error(message);
+    }
     ready = true;
     console.log(`SQLite ready at ${dbPath}`);
     return db;
+}
+
+export function withTransaction(work) {
+    const database = getDb();
+    database.exec('BEGIN IMMEDIATE');
+    try {
+        const result = work();
+        database.exec('COMMIT');
+        return result;
+    } catch (error) {
+        database.exec('ROLLBACK');
+        throw error;
+    }
 }
 
 export function getDb() {

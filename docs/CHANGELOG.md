@@ -12,6 +12,8 @@ Tất cả các thay đổi đáng chú ý của dự án **Tử Vi Việt Nam (
 - Backend chuyển từ MongoDB/Mongoose sang SQLite (`node:sqlite`, file `backend/data/tuvi.sqlite`). Bỏ `docker-compose.yml` và dependency `mongoose`.
 
 ### Khắc phục lỗi (Fixed)
+- Rule v2: độ sáng áp vào bản sao nằm trong vùng điều kiện, không loại cả ngôi sao vì một bản ở cung khác. Rule thiếu `id`, `samePalace` rỗng, `giap.mode` lạ, `countAtLeast.n` không hợp lệ, hoặc `excluded.relation` khác `same` thì không khớp.
+- `GET /api/combinations` đọc `combinations.json`, cùng nguồn với matcher, không đọc catalog SQLite đã seed.
 - `POST /api/combinations/match` có integration test đối chiếu pure matcher.
 - Giáp cung phải có sao ở cả hai bên Mệnh. `require_ham` gắn với cung của quy tắc.
 - Khóa cách cục trên lá số gồm giờ sinh, giới tính và fingerprint sao.

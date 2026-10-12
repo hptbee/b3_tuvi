@@ -226,11 +226,52 @@ function testUnknownStarDoesNotMatch() {
     console.log('unknown star does not match passed');
 }
 
+function testBrightnessAppliesToInstanceInScope() {
+    const ctx = blankChart(7);
+    ctx.boxes[7].majorStars = ['Thái Dương (M)'];
+    ctx.boxes[1].majorStars = ['Thái Dương (H)'];
+    const chart = normalizeChart({ tuviInfo: { boxes: ctx.boxes, menh: 7, than: null } });
+    const hit = evaluateRule(chart, {
+        id: 'duong_m_at_menh',
+        target: 'menh',
+        clauses: [{ stars: ['Thái Dương'], at: 'target', brightness: ['M'] }]
+    });
+    assert.ok(hit, 'bản M tại Mệnh phải khớp dù bản H ở cung khác');
+    assert.deepStrictEqual(hit.evidence.stars[0].palaces, [7]);
+    const wrong = evaluateRule(chart, {
+        id: 'duong_m_at_ty',
+        target: 'menh',
+        clauses: [{ stars: ['Thái Dương'], at: 'opposite', brightness: ['M'] }]
+    });
+    assert.strictEqual(wrong, null);
+    console.log('brightness follows the instance in scope passed');
+}
+
+function testMalformedRulesDoNotMatch() {
+    const ctx = blankChart(1);
+    ctx.boxes[1].majorStars = ['Tử Vi (M)'];
+    const chart = normalizeChart({ tuviInfo: { boxes: ctx.boxes, menh: 1, than: null } });
+    const samples = [
+        { id: 'empty-same', target: 'menh', samePalace: [] },
+        { id: 'bad-giap', target: 'menh', giap: { mode: 'nope', stars: ['Tử Vi'] } },
+        { id: 'bad-count', target: 'menh', countAtLeast: { stars: ['Địa Không'], markers: ['tuan'] } },
+        { id: 'empty-clause', target: 'menh', clauses: [{ stars: [] }] },
+        { id: 'bad-excluded', target: 'menh', samePalace: ['Tử Vi'], excluded: [{ relation: 'tam_hop', stars: ['Hóa Kỵ'] }] },
+        { target: 'menh', samePalace: ['Tử Vi'] }
+    ];
+    samples.forEach((rule) => {
+        assert.strictEqual(evaluateRule(chart, rule), null, rule.id || 'missing-id');
+    });
+    console.log('malformed rules do not match passed');
+}
+
 testRuleCoverage();
 testParity();
 testSamePalaceIsNotAZone();
 testBrightnessAndExcluded();
 testUnknownStarDoesNotMatch();
+testBrightnessAppliesToInstanceInScope();
+testMalformedRulesDoNotMatch();
 testStrictPositions();
 testPalaceFunctionAndMarkers();
 console.log('All rule engine tests passed');

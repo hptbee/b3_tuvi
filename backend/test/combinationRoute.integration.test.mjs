@@ -1,4 +1,7 @@
 import assert from 'assert';
+import fs from 'fs';
+import os from 'os';
+import path from 'path';
 import express from 'express';
 import { calculateTuVi } from '../src/engine/tuviRules.mjs';
 import { findStarOnChart } from '../src/engine/starNames.js';
@@ -6,6 +9,9 @@ import { matchCombinations } from '../src/engine/combinationMatch.js';
 import combinationRoutes from '../src/routes/combinationRoutes.js';
 import catalog from '../src/data/combinations.json' with { type: 'json' };
 import tuHoaMap from '../src/data/tuHoaMap.json' with { type: 'json' };
+
+const tempDb = path.join(os.tmpdir(), `tuvi-api-${process.pid}.sqlite`);
+process.env.SQLITE_PATH = tempDb;
 
 function listen(app) {
     return new Promise((resolve) => {
@@ -63,6 +69,37 @@ function testTuHoaThroughChart() {
     console.log('Tứ Hóa Bính on chart passed');
 }
 
+async function testGetUsesJsonNotSqlite() {
+    const { initDatabase, closeDatabase } = await import('../src/db/sqlite.js');
+    const { upsertCombination } = await import('../src/db/repositories.js');
+    initDatabase();
+    upsertCombination({
+        name: 'Cách Chỉ Có Trong SQLite',
+        type: 'cat_cach',
+        description: 'Không được lộ qua API.'
+    });
+    const app = express();
+    app.use('/api/combinations', combinationRoutes);
+    const server = await listen(app);
+    const port = server.address().port;
+    try {
+        const response = await fetch(`http://127.0.0.1:${port}/api/combinations`);
+        const payload = await response.json();
+        assert.strictEqual(response.status, 200);
+        assert.strictEqual(payload.length, catalog.length);
+        assert.ok(payload.every((item) => item.name !== 'Cách Chỉ Có Trong SQLite'));
+        assert.deepStrictEqual(payload.map((item) => item.name), catalog.map((item) => item.name));
+        console.log('GET /combinations follows JSON catalog passed');
+    } finally {
+        await new Promise((resolve, reject) => server.close((err) => (err ? reject(err) : resolve())));
+        closeDatabase();
+        for (const suffix of ['', '-wal', '-shm']) {
+            fs.rmSync(`${tempDb}${suffix}`, { force: true });
+        }
+    }
+}
+
 await testRouteMatchesPureMatcher();
+await testGetUsesJsonNotSqlite();
 testTuHoaThroughChart();
 console.log('API integration tests passed');

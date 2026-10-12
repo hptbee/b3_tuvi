@@ -19,8 +19,8 @@ Tài liệu này được thiết kế để cung cấp cho mô hình AI (như C
 | Kiểm tra input lập lá số | `backend/src/engine/chartInput.js` |
 | Cấu hình thuật ngữ | `backend/src/engine/constants.js` |
 | API lập lá số | `backend/src/routes/chartRoutes.js` |
-| Schema lá số | `backend/src/models/Horoscope.js` |
-| Ý nghĩa sao / cung | `backend/src/models/Star.js`, `backend/src/models/Palace.js` |
+| SQLite | `backend/src/db/sqlite.js`, `backend/src/db/repositories.js`, `docs/SQLITE_MIGRATION_VERIFICATION.md` |
+| Ý nghĩa sao / cung | bảng `stars`, `palaces` sau `npm run db:seed` |
 | Cách cục | `backend/src/engine/combinationMatch.js`, `backend/src/data/combinations.json`, `backend/src/routes/combinationRoutes.js` |
 | Model lá số chuẩn hóa | `backend/src/engine/normalizeChart.js`, `backend/src/engine/starCatalog.js`, `docs/CHART_DOMAIN_MODEL.md` |
 | Quan hệ cung | `backend/src/engine/palaceRelation.js`, `backend/src/engine/chartQuery.js`, `docs/PALACE_RELATIONSHIPS.md` |
@@ -53,7 +53,7 @@ Tài liệu này được thiết kế để cung cấp cho mô hình AI (như C
 - **Múi giờ**: Giờ nhập là giờ đồng hồ, route đổi sang canh giờ 1–12 trước khi gọi engine. Mặc định giờ Việt Nam (GMT+7).
 - **Cách cục**: `POST /api/combinations/match` dùng `combinations.json`. Matcher mặc định Tọa thủ. Chi tiết P0: `docs/P0_IMPLEMENTATION_REPORT.md`.
 - **Lá số chuẩn hóa**: `POST /api/charts/generate` thêm `normalizedChart`. UI vẫn dùng `tuviInfo`. Xem `docs/P1_1_CHART_MODEL_REPORT.md`.
-- **Rule v2**: cách `matching_ok` và các cách provisional có công thức vị trí, kể cả cung chức và Tuần/Triệt. Cách còn lại đi logic cũ hoặc `disabled`. Xem `docs/P1_2_RULE_ENGINE.md`.
+- **Rule v2**: cách `matching_ok` và các cách provisional có công thức vị trí, kể cả cung chức và Tuần/Triệt. Cách còn lại đi logic cũ hoặc `disabled`. `GET` và `POST /api/combinations` đều đọc `combinations.json`. Xem `docs/P1_2_RULE_ENGINE.md` và `docs/P1_2_5_DEEP_AUDIT.md`.
 
 ## Prompting Tips cho AI
 Khi yêu cầu AI viết code mới, hãy kèm theo các chỉ dẫn:

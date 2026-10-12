@@ -79,6 +79,21 @@ export function countPalaces() {
     return getDb().prepare('SELECT COUNT(*) AS n FROM palaces').get().n;
 }
 
+export function getHoroscopeById(id) {
+    const row = getDb().prepare('SELECT * FROM horoscopes WHERE id = ?').get(id);
+    if (!row) return null;
+    return {
+        id: row.id,
+        user_id: row.user_id,
+        input_data: parseJson(row.input_data, null),
+        lunar_data: parseJson(row.lunar_data, {}),
+        full_chart: parseJson(row.full_chart, null),
+        is_public: Boolean(row.is_public),
+        notes: row.notes,
+        created_at: row.created_at
+    };
+}
+
 export function insertHoroscope(doc) {
     const db = getDb();
     const result = db.prepare(`

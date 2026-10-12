@@ -4,7 +4,7 @@
  */
 import dotenv from 'dotenv';
 import combinations from '../data/combinations.json' with { type: 'json' };
-import { initDatabase } from '../db/sqlite.js';
+import { initDatabase, withTransaction } from '../db/sqlite.js';
 import { combinationTypeStats, countCombinations, upsertCombination } from '../db/repositories.js';
 
 dotenv.config();
@@ -13,9 +13,9 @@ function seedCombinations() {
     initDatabase();
     console.log(`Seeding ${combinations.length} cách cục...`);
 
-    for (const combo of combinations) {
-        upsertCombination(combo);
-    }
+    withTransaction(() => {
+        for (const combo of combinations) upsertCombination(combo);
+    });
 
     const stats = combinationTypeStats();
     console.log(`Done: ${countCombinations()} rows in combinations`);

@@ -23,7 +23,7 @@ File: `backend/src/data/rulesV2.json`. Đánh giá: `evaluateRule` trong `ruleEn
 | `strict` | Rule chặt hơn matcher cũ. Cách vẫn `provisional` |
 | `anyOf` | Một trong các nhánh điều kiện |
 
-`clauses.brightness` yêu cầu mọi bản sao của ngôi đó đúng mức sáng, rồi mới lấy bản nằm trong vùng.
+`clauses.brightness` lọc từng bản sao sau khi bản đó đã nằm trong vùng `at`. Bản cùng ngôi sao ở cung khác, độ sáng khác, không làm rớt bản đúng vùng.
 
 Tên sao chưa có trong catalog làm rule không khớp.
 

@@ -1,5 +1,4 @@
 import express from 'express';
-import { listCombinations } from '../db/repositories.js';
 import catalogJson from '../data/combinations.json' with { type: 'json' };
 import { matchCombinations } from '../engine/combinationMatch.js';
 
@@ -7,7 +6,7 @@ const router = express.Router();
 
 /**
  * Matcher dùng catalog JSON (nguồn sự thật).
- * SQLite phục vụ GET danh sách khi đã seed; matcher vẫn dùng JSON.
+ * GET và POST đều đọc combinations.json. Bảng SQLite combinations không được API đọc.
  */
 router.post('/match', async (req, res) => {
     try {
@@ -23,18 +22,10 @@ router.post('/match', async (req, res) => {
     }
 });
 
-router.get('/', async (req, res) => {
-    try {
-        const { type } = req.query;
-        const combos = listCombinations(type ? { type } : {});
-        if (!combos.length) {
-            const fallback = type ? catalogJson.filter((c) => c.type === type) : catalogJson;
-            return res.json(fallback);
-        }
-        res.json(combos);
-    } catch (error) {
-        res.status(500).json({ error: 'Lỗi tải cách cục' });
-    }
+router.get('/', (req, res) => {
+    const { type } = req.query;
+    const list = type ? catalogJson.filter((item) => item.type === type) : catalogJson;
+    res.json(list);
 });
 
 export default router;

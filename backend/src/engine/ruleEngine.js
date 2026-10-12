@@ -32,10 +32,6 @@ function palaceHasAny(chart, palace, spec) {
     return (spec.markers || []).some((marker) => markerOn(palace, marker));
 }
 
-function rowsAt(palaceId, ids) {
-    return ids.map((starId) => ({ starId, palaces: [Number(palaceId)] }));
-}
-
 function zoneIds(palace, at) {
     const rel = branchIndexRelations(palace.branchId);
     if (!rel) return [];
@@ -52,9 +48,6 @@ function zoneIds(palace, at) {
 function instancesInClause(chart, starId, palace, clause) {
     const hits = chart.byStarId?.[starId] || [];
     if (hits.length === 0) return [];
-    if (clause.brightness?.length && !hits.every((hit) => clause.brightness.includes(hit.brightness))) {
-        return [];
-    }
     const zone = zoneIds(palace, clause.at || 'target');
     const branches = clause.branches?.map(normalizeChi);
     return hits
@@ -63,27 +56,37 @@ function instancesInClause(chart, starId, palace, clause) {
             if (!where) return false;
             if (zone && !zone.includes(Number(where.id))) return false;
             if (branches && !branches.includes(normalizeChi(where.branchName))) return false;
+            if (clause.brightness?.length && !clause.brightness.includes(hit.brightness)) return false;
             if (!palaceHasAny(chart, where, clause.samePalaceAny)) return false;
             return true;
         })
-        .map((hit) => Number(hit.palaceId));
+        .map((hit) => ({ palaceId: Number(hit.palaceId), brightness: hit.brightness }));
+}
+
+function packHits(starId, hits) {
+    return {
+        starId,
+        palaces: hits.map((hit) => hit.palaceId),
+        brightness: hits.map((hit) => hit.brightness)
+    };
 }
 
 function clauseRows(chart, palace, clause) {
+    if (!Array.isArray(clause?.stars) || clause.stars.length === 0) return null;
     const ids = starIds(clause.stars);
     if (ids.some((id) => !id)) return null;
     if (clause.any) {
         for (const starId of ids) {
-            const palaces = instancesInClause(chart, starId, palace, clause);
-            if (palaces.length) return [{ starId, palaces }];
+            const hits = instancesInClause(chart, starId, palace, clause);
+            if (hits.length) return [packHits(starId, hits)];
         }
         return null;
     }
     const rows = [];
     for (const starId of ids) {
-        const palaces = instancesInClause(chart, starId, palace, clause);
-        if (!palaces.length) return null;
-        rows.push({ starId, palaces });
+        const hits = instancesInClause(chart, starId, palace, clause);
+        if (!hits.length) return null;
+        rows.push(packHits(starId, hits));
     }
     return rows;
 }
@@ -174,16 +177,16 @@ function giapAnchorFlanks(chart, palaceId, anchorId, groups) {
 
 function excludedHits(chart, palaceId, excluded) {
     return (excluded || []).some((clause) => {
+        if (!clause || clause.relation !== 'same' || !Array.isArray(clause.stars) || clause.stars.length === 0) {
+            return true;
+        }
         const ids = starIds(clause.stars);
         if (ids.some((id) => !id)) return true;
-        if (clause.relation === 'same') {
-            return ids.some((id) => hasStarAtPalace(chart, id, palaceId));
-        }
-        return false;
+        return ids.some((id) => hasStarAtPalace(chart, id, palaceId));
     });
 }
 
-function finish(rule, palace, rows, op) {
+function finish(rule, chart, palace, rows, op) {
     if (!rows) return null;
     return {
         ruleId: rule.id,
@@ -193,7 +196,12 @@ function finish(rule, palace, rows, op) {
             palaceId: palace.id,
             branchName: palace.branchName,
             op,
-            stars: rows.map((row) => ({ starId: row.starId, palaces: row.palaces }))
+            schoolId: chart.schoolId || null,
+            stars: rows.map((row) => ({
+                starId: row.starId,
+                palaces: row.palaces,
+                ...(row.brightness ? { brightness: row.brightness } : {})
+            }))
         }
     };
 }
@@ -224,12 +232,13 @@ export function evaluateRule(chart, rule) {
 
     const hasBody = rule.samePalace || rule.giap || rule.clauses || rule.countAtLeast || rule.linked;
     if (rule.noMajor && !hasBody) {
-        return finish(rule, palace, [], 'no_major');
+        return finish(rule, chart, palace, [], 'no_major');
     }
 
     let rows = [];
     let op = 'clauses';
     if (rule.samePalace) {
+        if (!Array.isArray(rule.samePalace) || rule.samePalace.length === 0) return null;
         const ids = starIds(rule.samePalace);
         if (ids.some((id) => !id)) return null;
         if (!ids.every((id) => hasStarAtPalace(chart, id, palace.id))) return null;
@@ -241,8 +250,14 @@ export function evaluateRule(chart, rule) {
             });
             if (!brightOk) return null;
         }
-        rows = rows.concat(rowsAt(palace.id, ids));
+        rows = rows.concat(ids.map((starId) => {
+            const star = palace.stars.find((item) => item.starId === starId);
+            return { starId, palaces: [Number(palace.id)], brightness: [star?.brightness ?? null] };
+        }));
         op = 'same_palace';
+    }
+    if (rule.giap) {
+        if (rule.giap.mode !== 'both_flanks' && rule.giap.mode !== 'anchor_flanks') return null;
     }
     if (rule.giap?.mode === 'both_flanks') {
         const ids = starIds(rule.giap.stars);
@@ -261,7 +276,8 @@ export function evaluateRule(chart, rule) {
         rows = rows.concat(giapRows);
         op = 'giap_anchor_flanks';
     }
-    if (rule.clauses?.length) {
+    if (rule.clauses) {
+        if (!Array.isArray(rule.clauses) || rule.clauses.length === 0) return null;
         for (const clause of rule.clauses) {
             const part = clauseRows(chart, palace, clause);
             if (!part) return null;
@@ -270,8 +286,10 @@ export function evaluateRule(chart, rule) {
         if (!rule.samePalace && !rule.giap) op = 'clauses';
     }
     if (rule.countAtLeast) {
+        const n = rule.countAtLeast.n;
+        if (!Number.isInteger(n) || n < 1) return null;
         const counted = countSignals(chart, palace, rule.countAtLeast);
-        if (!counted || counted.length < rule.countAtLeast.n) return null;
+        if (!counted || counted.length < n) return null;
         rows = rows.concat(counted);
         op = 'count';
     }
@@ -283,6 +301,6 @@ export function evaluateRule(chart, rule) {
     }
     if (!rule.noMajor && !rule.samePalace && !rule.giap && !rule.clauses && !rule.countAtLeast && !rule.linked) return null;
     if (excludedHits(chart, palace.id, rule.excluded)) return null;
-    if (rule.noMajor && rows.length === 0) return finish(rule, palace, [], 'no_major');
-    return finish(rule, palace, rows, op);
+    if (rows.length === 0) return null;
+    return finish(rule, chart, palace, rows, op);
 }
