@@ -150,7 +150,7 @@ Test V2 chỉ khóa invariant ổn định (AUTH bị loại, KB-02 còn `BLOCKE
 
 - epic: KB
 - priority: P1
-- status: READY
+- status: COMPLETED
 - dependencies: [V2-KB-01]
 - dependency_class: TECHNICAL (prototype) / HUMAN_APPROVAL + DATA_MIGRATION (production)
 - scope: module schema áp trên DB tạm; test temp file
@@ -166,7 +166,7 @@ Test V2 chỉ khóa invariant ổn định (AUTH bị loại, KB-02 còn `BLOCKE
 
 - epic: M0
 - priority: P1
-- status: PLANNED
+- status: READY
 - dependencies: []
 - dependency_class: SECURITY
 - scope: `chartRoutes.js` và test: generate không bắt buộc ghi ngày giờ
@@ -249,14 +249,14 @@ AUTH-01 không có cạnh.
 
 ## 10. Session order
 
-`V2-M0-02` đã xong. Task READY kế tiếp là `V2-KB-03` prototype.
+`V2-KB-03` prototype đã xong trên DB tạm. Task READY kế tiếp là `V2-M0-04`. Production migration vẫn `BLOCKED_HUMAN`.
 
 1. `V2-M0-01` — COMPLETED
 2. `V2-KB-01` — COMPLETED
 3. `V2-M0-03` — COMPLETED
 4. `V2-M0-02` — COMPLETED
-5. `V2-KB-03` prototype — READY
-6. `V2-M0-04` stateless generate (không xóa dữ liệu cũ)
+5. `V2-KB-03` prototype — COMPLETED
+6. `V2-M0-04` stateless generate (không xóa dữ liệu cũ) — READY
 
 Dừng trước `V2-KB-02`, production migration, sửa `rulesV2.json`, LLM public, deploy.
 
