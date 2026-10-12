@@ -2,7 +2,7 @@ import {
     wrapIndex,
     normalizeChi,
     getStarsInBox,
-    findStarOnChart,
+    getStarRecords,
     isTuanAlias,
     isTrietAlias
 } from './starNames.js';
@@ -25,6 +25,101 @@ const HUNG_ABSOLUTE_DISCLAIMER =
 
 function unique(arr) {
     return Array.from(new Set(arr));
+}
+
+/** Quan hệ cung quanh Mệnh. Id cung là chỉ số 1–12. Chưa phải API P1.1. */
+export function palaceRelations(menhIndex) {
+    const menh = Number(menhIndex);
+    const tamHop = [menh, wrapIndex(menh + 4), wrapIndex(menh + 8)];
+    const xungChieu = wrapIndex(menh + 6);
+    const giapCung = [wrapIndex(menh - 1), wrapIndex(menh + 1)];
+    return {
+        targetPalaceId: String(menh),
+        tamHop: tamHop.map(String),
+        xungChieu: String(xungChieu),
+        giapCung: giapCung.map(String),
+        tamPhuongTuChinh: [...tamHop, xungChieu].map(String)
+    };
+}
+
+function relationIndices(token, menh) {
+    const rel = palaceRelations(menh);
+    if (token === 'Toàn cục') return Array.from({ length: 12 }, (_, i) => i + 1);
+    if (token === 'Đồng cung' || token === 'Tọa thủ') return [menh];
+    if (token === 'Xung chiếu') return [menh, Number(rel.xungChieu)];
+    if (token === 'Tam hợp') return rel.tamHop.map(Number);
+    if (token === 'Hội chiếu' || token === 'Hội tụ') return rel.tamPhuongTuChinh.map(Number);
+    if (token === 'Giáp') return [Number(rel.giapCung[0]), menh, Number(rel.giapCung[1])];
+    return [];
+}
+
+function locateStars(boxes, indices, stars) {
+    const places = stars.map((star) => ({
+        star,
+        palaces: indices.filter((idx) => getStarsInBox(boxes[idx]).includes(star))
+    }));
+    if (places.some((row) => row.palaces.length === 0)) return null;
+    return places;
+}
+
+/** Giáp: hai bên Mệnh đều có ít nhất một sao yêu cầu. Sao chỉ nằm trong Mệnh thì không phải giáp. */
+function giapPlacement(boxes, menh, stars) {
+    const left = wrapIndex(menh - 1);
+    const right = wrapIndex(menh + 1);
+    const places = locateStars(boxes, [left, menh, right], stars);
+    if (!places) return null;
+    const leftHit = stars.some((star) => getStarsInBox(boxes[left]).includes(star));
+    const rightHit = stars.some((star) => getStarsInBox(boxes[right]).includes(star));
+    if (!leftHit || !rightHit) return null;
+    return places;
+}
+
+function samePalacePlacement(boxes, menh, stars) {
+    const names = new Set(getStarsInBox(boxes[menh]));
+    if (!stars.every((star) => names.has(star))) return null;
+    return stars.map((star) => ({ star, palaces: [menh] }));
+}
+
+/**
+ * Nhiều token: "Đồng cung + hội/xung/giáp" là HOẶC.
+ * "Tam hợp + Xung chiếu" (không có đồng cung) là hợp vùng tứ chính.
+ * Giáp đơn lẻ bắt buộc cả hai bên.
+ */
+function resolvePlacement(boxes, menh, positions, stars) {
+    const tokens = (positions || []).filter((token) => SUPPORTED_POSITIONS.has(token));
+    const wantsSame = tokens.some((token) => token === 'Đồng cung' || token === 'Tọa thủ');
+    const rest = tokens.filter((token) => token !== 'Đồng cung' && token !== 'Tọa thủ');
+
+    if (tokens.length === 0 || (wantsSame && rest.length === 0)) {
+        return samePalacePlacement(boxes, menh, stars);
+    }
+    if (!wantsSame && rest.length === 1 && rest[0] === 'Giáp') {
+        return giapPlacement(boxes, menh, stars);
+    }
+    if (wantsSame) {
+        const atMenh = samePalacePlacement(boxes, menh, stars);
+        if (atMenh) return atMenh;
+        if (rest.length === 1 && rest[0] === 'Giáp') return giapPlacement(boxes, menh, stars);
+        const zone = unique(rest.flatMap((token) => relationIndices(token, menh)));
+        return locateStars(boxes, zone, stars);
+    }
+    const zone = unique(rest.flatMap((token) => relationIndices(token, menh)));
+    return locateStars(boxes, zone, stars);
+}
+
+function hamOnPlacement(boxes, placement, relationPalaceIds, requireHam) {
+    if (!requireHam || requireHam.length === 0) return true;
+    const allowed = new Set(relationPalaceIds);
+    for (const star of requireHam) {
+        const row = placement.find((item) => item.star === star);
+        const indices = (row ? row.palaces : relationPalaceIds).filter((idx) => allowed.has(idx));
+        if (indices.length === 0) return false;
+        for (const idx of indices) {
+            const hit = getStarRecords(boxes[idx]).find((record) => record.name === star);
+            if (!hit || hit.brightness !== 'H') return false;
+        }
+    }
+    return true;
 }
 
 export function resolveCheckIndices(positions, menhIndex) {
@@ -99,16 +194,6 @@ function splitRequiredStars(required) {
     return { stars, needTuan, needTriet };
 }
 
-function hamSatisfied(boxes, requireHam) {
-    if (!requireHam || requireHam.length === 0) return true;
-    for (const star of requireHam) {
-        const hits = findStarOnChart(boxes, star);
-        if (hits.length === 0) return false;
-        if (!hits.every((h) => h.brightness === 'H')) return false;
-    }
-    return true;
-}
-
 /**
  * Pure matcher. Returns [] when input is missing/invalid.
  * Never returns true for empty conditions.
@@ -151,45 +236,44 @@ export function matchCombinations({ boxes, menhIndex, menhChi } = {}, catalog = 
             continue;
         }
 
-        const zoneStars = starsInIndices(boxes, indices);
-        const flags = tuanTrietInIndices(boxes, indices);
+        const placement = resolvePlacement(boxes, menh, positions.length ? positions : ['Tọa thủ'], requiredStars);
+        if (!placement) continue;
 
-        const dongOnly = (positions.includes('Đồng cung') || positions.includes('Tọa thủ'))
-            && !positions.some((p) => ['Hội chiếu', 'Hội tụ', 'Tam hợp', 'Xung chiếu', 'Giáp', 'Toàn cục'].includes(p));
+        const usedPalaces = unique(placement.flatMap((row) => row.palaces));
+        const flags = tuanTrietInIndices(boxes, usedPalaces);
+        const zoneStars = starsInIndices(boxes, usedPalaces);
 
-        let starsOk;
-        if (dongOnly) {
-            const menhStars = new Set(getStarsInBox(boxes[menh]));
-            starsOk = requiredStars.every((s) => menhStars.has(s));
-        } else {
-            starsOk = requiredStars.every((s) => zoneStars.has(s));
-        }
-        if (!starsOk) continue;
         if (needTuan && !flags.tuan) continue;
         if (needTriet && !flags.triet) continue;
-        if (excluded.some((s) => zoneStars.has(s))) continue;
-        if (!hamSatisfied(boxes, requireHam)) continue;
+        if (excluded.some((star) => zoneStars.has(star))) continue;
+        if (!hamOnPlacement(boxes, placement, indices, requireHam)) continue;
 
-        matched.push(toMatchDto(combo));
+        matched.push(toMatchDto(combo, placement));
     }
 
     return matched;
 }
 
-function toMatchDto(combo) {
+function toMatchDto(combo, placement = []) {
     const lc = combo.logic_conditions || {};
     const type = combo.type;
+    const status = combo.verification_status || 'provisional';
     const summary = combo.interpretations?.[0]?.content || combo.description || '';
+    const unverified = status !== 'matching_ok';
     return {
         _id: combo._id,
         name: combo.name,
         type,
         description: combo.description,
         formula_text: lc.formula_text || '',
-        summary,
+        summary: unverified ? `[Chưa xác thực] ${summary}` : summary,
         tags: combo.tags || [],
-        verification_status: combo.verification_status || 'provisional',
-        disclaimer: type === 'hung_bai_cach' ? (combo.disclaimer || HUNG_ABSOLUTE_DISCLAIMER) : combo.disclaimer
+        verification_status: status,
+        certainty: unverified ? 'unverified' : 'rule_match_only',
+        placements: placement,
+        disclaimer: type === 'hung_bai_cach'
+            ? (combo.disclaimer || HUNG_ABSOLUTE_DISCLAIMER)
+            : (combo.disclaimer || 'Khớp điều kiện sao đã khai báo. Không phải kết luận chắc chắn về cuộc đời.')
     };
 }
 

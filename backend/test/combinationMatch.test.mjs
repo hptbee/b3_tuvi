@@ -1,6 +1,6 @@
 import assert from 'assert';
 import { calculateTuVi } from '../src/engine/tuviRules.mjs';
-import { matchCombinations } from '../src/engine/combinationMatch.js';
+import { matchCombinations, palaceRelations } from '../src/engine/combinationMatch.js';
 import catalog from '../src/data/combinations.json' with { type: 'json' };
 
 const DANGEROUS_ALWAYS = [
@@ -241,6 +241,77 @@ function testDisclaimerOnHung() {
     console.log('hung disclaimer passed');
 }
 
+function boxChart(menh = 5) {
+    const boxes = {};
+    for (let i = 1; i <= 12; i++) {
+        boxes[i] = { chiName: 'Tí', majorStars: [], goodStars: [], badStars: [], isTuan: false, isTriet: false };
+    }
+    return { boxes, menhIndex: menh, menhChi: 'Tí' };
+}
+
+function testGiapIsPositional() {
+    const ctx = boxChart(5);
+    ctx.boxes[4].badStars = ['Kình Dương'];
+    ctx.boxes[6].badStars = ['Đà La'];
+    const rule = [{
+        name: 'Giáp thử',
+        type: 'hung_bai_cach',
+        description: 'x',
+        verification_status: 'provisional',
+        logic_conditions: { required_stars: ['Kình Dương', 'Đà La'], positions: ['Giáp'] },
+        interpretations: [{ context: 'a', content: 'b' }]
+    }];
+    const hit = matchCombinations(ctx, rule);
+    assert.strictEqual(hit.length, 1);
+    assert.deepStrictEqual(hit[0].placements.map((row) => row.palaces.sort()), [[4], [6]]);
+
+    const bothInMenh = boxChart(5);
+    bothInMenh.boxes[5].badStars = ['Kình Dương', 'Đà La'];
+    assert.strictEqual(matchCombinations(bothInMenh, rule).length, 0);
+
+    const sameSide = boxChart(5);
+    sameSide.boxes[4].badStars = ['Kình Dương', 'Đà La'];
+    assert.strictEqual(matchCombinations(sameSide, rule).length, 0);
+    console.log('Giáp positional passed');
+}
+
+function testHamBoundToRulePalace() {
+    const rule = [{
+        name: 'Hãm tại Mệnh',
+        type: 'hung_bai_cach',
+        description: 'x',
+        verification_status: 'provisional',
+        logic_conditions: {
+            required_stars: ['Thái Dương'],
+            positions: ['Tọa thủ'],
+            require_ham: ['Thái Dương']
+        },
+        interpretations: [{ context: 'a', content: 'b' }]
+    }];
+    const brightElsewhere = boxChart(3);
+    brightElsewhere.boxes[3].majorStars = ['Thái Dương (H)'];
+    brightElsewhere.boxes[9].majorStars = ['Thái Dương (M)'];
+    assert.strictEqual(matchCombinations(brightElsewhere, rule).length, 1);
+
+    const hamElsewhereOnly = boxChart(3);
+    hamElsewhereOnly.boxes[3].majorStars = ['Thái Dương (M)'];
+    hamElsewhereOnly.boxes[9].majorStars = ['Thái Dương (H)'];
+    assert.strictEqual(matchCombinations(hamElsewhereOnly, rule).length, 0);
+    console.log('require_ham bound to palace passed');
+}
+
+function testRelations() {
+    const rel = palaceRelations(1);
+    assert.strictEqual(rel.targetPalaceId, '1');
+    assert.deepStrictEqual(rel.tamHop, ['1', '5', '9']);
+    assert.strictEqual(rel.xungChieu, '7');
+    assert.deepStrictEqual(rel.giapCung, ['12', '2']);
+    console.log('palaceRelations passed');
+}
+
+testGiapIsPositional();
+testHamBoundToRulePalace();
+testRelations();
 testInvalidInput();
 testNeverTrueOnEmpty();
 testDisabledUnsupported();

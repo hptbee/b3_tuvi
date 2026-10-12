@@ -2,6 +2,22 @@
 
 Ngày: 2026-10-12. Phạm vi: sửa an sao đã xác nhận, siết matcher cách cục, test hồi quy. Không làm AI, vận hạn, hay P1–P3.
 
+Nhánh đã push: **`main`** (`c93e23b` rồi `fbf3744`). Không có nhánh riêng.
+
+Đối chiếu raw `origin/main` ngày 12/10/2026: `combinationRoutes.js` đã gọi `matchCombinations()`, và Tứ Hóa trong `tuviRules.mjs` chạy sau khi an Xương, Khúc, Tả, Hữu. Hai mục Critical trong review là trạng thái trước commit đó, không còn trên `main`.
+
+## P0.5 — tích hợp (cùng ngày)
+
+| Mục | Việc đã làm |
+|---|---|
+| API vs matcher | `backend/test/combinationRoute.integration.test.mjs`: `POST /api/combinations/match` trả đúng tên cách của pure matcher, input rỗng trả `[]` |
+| Giáp | Hai bên Mệnh đều phải có sao yêu cầu. Cả hai sao nằm trong Mệnh không còn bị tính là giáp |
+| `require_ham` | Chỉ xét độ sáng tại cung thỏa quy tắc, không lấy bản sao (H) ở cung khác |
+| Định vị | Mỗi cách khớp kèm `placements` (sao → chỉ số cung). `palaceRelations()` trả tam hợp, xung, giáp, tứ chính |
+| Giao diện | Khóa lá số gồm năm, tháng, ngày, giờ, giới tính và toàn bộ sao/đại hạn. Cách `provisional` hiện `[Chưa xác thực]` |
+
+Tam hợp + xung chiếu vẫn là hợp các cung tứ chính: mỗi sao phải nằm trong vùng đó, không bắt từng cặp đồng cung. DSL đầy đủ để tách “hoặc / và” từng quan hệ thuộc P1.2, chưa làm.
+
 ## 1. Lỗi đã sửa
 
 | ID | Lỗi | Trạng thái |
@@ -52,7 +68,7 @@ Ngày: 2026-10-12. Phạm vi: sửa an sao đã xác nhận, siết matcher các
 cd backend && npm test
 ```
 
-PASS (2026-10-12): engine + placement tables + combinations + migrate syntax.
+PASS (2026-10-12, sau P0.5): engine + placement tables + combination matcher + `POST /match` integration + migrate syntax.
 
 ```
 cd frontend && npx eslint src/App.jsx src/components/CachCucPanel.jsx
@@ -64,7 +80,7 @@ PASS: no issues.
 cd frontend && npm run build
 ```
 
-PASS: Vite 5.4.21, `dist/assets/index-Bj30Nlv2.js`.
+PASS: Vite 5.4.21, `dist/assets/index-tUQI8EkX.js`.
 
 Không chạy được integration MongoDB: Docker daemon không có trong môi trường kiểm toán. Matcher không phụ thuộc Mongo (catalog JSON).
 

@@ -6,6 +6,11 @@ Tất cả các thay đổi đáng chú ý của dự án **Tử Vi Việt Nam (
 
 ## [Unreleased]
 
+### Khắc phục lỗi (Fixed)
+- `POST /api/combinations/match` có integration test đối chiếu pure matcher.
+- Giáp cung phải có sao ở cả hai bên Mệnh. `require_ham` gắn với cung của quy tắc.
+- Khóa cách cục trên lá số gồm giờ sinh, giới tính và fingerprint sao.
+
 ### Kế hoạch (chưa triển khai)
 - Module AI luận giải, đăng nhập, lịch sử lá số, Tiểu hạn / lưu niên: **chưa có trong code**. Trang `/luan-giai` vẫn là placeholder.
 

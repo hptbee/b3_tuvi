@@ -7,10 +7,34 @@ const TYPE_CONFIG = {
   hung_bai_cach:   { label: 'Hung Bại Cách', color: '#8b0000', bg: '#fff5f5', badge: '#ff6b6b', icon: '⚠' },
 };
 
-export default function CachCucPanel({ chartData }) {
-  const chartKey = chartData?.tuviInfo
-    ? `${chartData.tuviInfo.menh}-${chartData.lunarInfo?.lunarDay}-${chartData.lunarInfo?.lunarMonth}-${chartData.lunarInfo?.lunarYear}`
-    : '';
+function chartFingerprint(chartData, userInfo) {
+  const tv = chartData?.tuviInfo;
+  const ld = chartData?.lunarInfo;
+  if (!tv?.boxes || !tv.menh) return '';
+  const starSig = Array.from({ length: 12 }, (_, offset) => {
+    const box = tv.boxes[offset + 1];
+    if (!box) return '';
+    return [
+      offset + 1,
+      box.cungName,
+      ...(box.majorStars || []),
+      ...(box.goodStars || []),
+      ...(box.badStars || []),
+      box.daiHan,
+      box.isTuan ? 'T' : '',
+      box.isTriet ? 'R' : ''
+    ].join(',');
+  }).join(';');
+  return [
+    userInfo?.year, userInfo?.month, userInfo?.day, userInfo?.hour, userInfo?.gender,
+    ld?.lunarDay, ld?.lunarMonth, ld?.lunarYear, ld?.isLeapMonth,
+    tv.menh, tv.than, tv.textAmDuong, tv.anSaoMonth,
+    starSig
+  ].join('#');
+}
+
+export default function CachCucPanel({ chartData, userInfo }) {
+  const chartKey = chartFingerprint(chartData, userInfo);
   const [result, setResult] = useState({ key: '', combinations: [] });
   const [expanded, setExpanded] = useState(null);
   const loading = Boolean(chartData?.tuviInfo?.boxes) && result.key !== chartKey;
@@ -114,8 +138,11 @@ export default function CachCucPanel({ chartData }) {
                     <span className="card-arrow">{expanded === (combo._id || combo.name) ? '▲' : '▼'}</span>
                   </div>
                   <p className="card-desc">{combo.description}</p>
-                  {combo.verification_status === 'provisional' && (
-                    <p className="card-desc" style={{ fontSize: '12px', opacity: 0.75 }}>Cách cục tạm thời — điều kiện đã siết, nguồn luận giải chưa đủ.</p>
+                  {combo.verification_status !== 'matching_ok' && (
+                    <p className="card-desc" style={{ fontSize: '12px', opacity: 0.85 }}>Chưa xác thực — không phải kết luận chắc chắn về cuộc đời.</p>
+                  )}
+                  {combo.verification_status === 'matching_ok' && (
+                    <p className="card-desc" style={{ fontSize: '12px', opacity: 0.75 }}>Chỉ khớp điều kiện sao đã khai báo.</p>
                   )}
                   {expanded === (combo._id || combo.name) && (
                     <div className="card-detail">

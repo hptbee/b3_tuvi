@@ -176,7 +176,7 @@ function App() {
                   <TuViChart lunarInfo={chartData.lunarInfo} tuviInfo={chartData.tuviInfo} userInfo={userInfo} />
                 </div>
               )}
-              {hasChartQuery && chartData && <CachCucPanel chartData={chartData} />}
+              {hasChartQuery && chartData && <CachCucPanel chartData={chartData} userInfo={userInfo} />}
             </div>
           } />
           <Route path="/luan-giai" element={<LuanGiai />} />
