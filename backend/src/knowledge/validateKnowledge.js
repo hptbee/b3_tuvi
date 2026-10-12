@@ -245,6 +245,21 @@ export function validateKnowledgeBundle(bundle) {
         if (claim.formulaComparisonStatus && !FORMULA_COMPARISON.has(claim.formulaComparisonStatus)) {
             errors.push(issue('invalid_provenance', 'formulaComparisonStatus is not allowed', claim.claimId));
         }
+        if (claim.crossReviewed === true) {
+            if (typeof claim.locator !== 'string' || claim.locator.trim() === '') {
+                errors.push(issue('missing_locator', 'cross-reviewed claim needs a locator', claim.claimId));
+            }
+            if (!claim.editionId) {
+                errors.push(issue('broken_reference', 'cross-reviewed claim needs an edition', claim.claimId));
+            }
+            if (!VARIANT_TYPES.has(claim.variantType)) {
+                errors.push(issue('invalid_variant', 'variantType is not registered', claim.claimId));
+            }
+            const variant = (schoolRegistry.variants || []).find((item) => item.variantId === claim.variantId);
+            if (!variant || variant.variantType !== claim.variantType || (claim.schoolId && variant.schoolId !== claim.schoolId)) {
+                errors.push(issue('invalid_variant', 'variantId is not registered for this claim', claim.claimId));
+            }
+        }
         for (const starId of claim.relatedStars || []) {
             if (!getStarById(starId)) errors.push(issue('unknown_star', 'related star is not in the catalog', claim.claimId));
         }

@@ -106,6 +106,41 @@ assert.ok(schoolsDoc.variants.some((variant) => variant.variantType === 'interpr
 assert.ok(schoolsDoc.variants.every((variant) => variant.appliedByDefault === false));
 assert.ok(schoolsDoc.schools.filter((school) => school.schoolId !== DEFAULT_SCHOOL.id).every((school) => school.calculationApplied === false));
 
+const crossReviewed = bundle();
+crossReviewed.pilot.claims[0].crossReviewed = true;
+crossReviewed.pilot.claims[0].locator = '19.2.11/230';
+crossReviewed.pilot.claims[0].editionId = 'ed';
+crossReviewed.pilot.claims[0].variantType = 'rule';
+crossReviewed.pilot.claims[0].variantId = 'rule-pilot-not-runtime';
+crossReviewed.pilot.claims[0].schoolId = 'vn-tam-hop-default';
+assert.strictEqual(validateKnowledgeBundle(crossReviewed).ok, true);
+
+const missingLocator = bundle();
+missingLocator.pilot.claims[0].crossReviewed = true;
+missingLocator.pilot.claims[0].editionId = 'ed';
+missingLocator.pilot.claims[0].variantType = 'rule';
+missingLocator.pilot.claims[0].variantId = 'rule-pilot-not-runtime';
+assert.ok(codes(missingLocator).has('missing_locator'));
+
+const wrongEdition = bundle();
+wrongEdition.sources.editions.push({ editionId: 'other-source-edition', sourceId: 'missing-source', authenticated: false });
+wrongEdition.pilot.claims[0].crossReviewed = true;
+wrongEdition.pilot.claims[0].locator = '19.2.11/230';
+wrongEdition.pilot.claims[0].editionId = 'other-source-edition';
+wrongEdition.pilot.claims[0].variantType = 'rule';
+wrongEdition.pilot.claims[0].variantId = 'rule-pilot-not-runtime';
+wrongEdition.pilot.claims[0].schoolId = 'vn-tam-hop-default';
+assert.ok(codes(wrongEdition).has('broken_reference') || codes(wrongEdition).has('mismatched_edition'));
+
+const unknownVariant = bundle();
+unknownVariant.pilot.claims[0].crossReviewed = true;
+unknownVariant.pilot.claims[0].locator = '19.2.11/230';
+unknownVariant.pilot.claims[0].editionId = 'ed';
+unknownVariant.pilot.claims[0].variantType = 'rule';
+unknownVariant.pilot.claims[0].variantId = 'not-a-variant';
+unknownVariant.pilot.claims[0].schoolId = 'vn-tam-hop-default';
+assert.ok(codes(unknownVariant).has('invalid_variant'));
+
 const mixed = bundle();
 mixed.schools = {
     baselineSchoolId: DEFAULT_SCHOOL.id,
