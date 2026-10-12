@@ -1,0 +1,17 @@
+{
+  "measuredAt": "2026-10-12",
+  "commit": "2ca0186ff4d42c44321a594472ec300bef829fc3",
+  "node": "v22.23.2",
+  "backend": {
+    "lines": 76.06,
+    "statements": 76.06,
+    "functions": 88.67,
+    "branches": 82.29
+  },
+  "frontend": {
+    "lines": 0,
+    "statements": 0,
+    "functions": 0,
+    "branches": 0
+  }
+}
