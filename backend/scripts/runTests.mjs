@@ -24,6 +24,8 @@ export const unitTests = [
     'test/sourceHygiene.test.mjs',
     'test/crossReview.test.mjs',
     'test/decisionRegistry.test.mjs',
+    'test/storedDecision.test.mjs',
+    'test/internalSlice.test.mjs',
     'test/qualityEdges.test.mjs',
     'test/perfSmoke.test.mjs'
 ];

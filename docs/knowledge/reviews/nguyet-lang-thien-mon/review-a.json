@@ -1,0 +1,27 @@
+{
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-648db1d1-e4c2-591c-b300-df3fad013304",
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "19.2.11+19.5",
+  "sourceDigest": "950bae3902afe40ca2d65daff0e20bab3fdd0e8fe9667a4804f84d45c276ee3e",
+  "claimId": "claim-nguyet-lang-thien-mon",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "palace_menh_or_quan_loc",
+    "branch_hoi",
+    "star_nguyet_toa_thu",
+    "avoid_tuan",
+    "avoid_triet",
+    "avoid_sat",
+    "avoid_bai",
+    "strengthened_by_khoa_quyen_loc"
+  ],
+  "exceptions": [],
+  "quotation": "Cung Mệnh hay Quan Lộc an tại Hợi có Nguyệt tọa thủ (Hợi thuộc quẻ Kiền là biểu tượng của Trời nên gọi là Thiên Môn).\n19.5. Phụ luận\nPhú cục và Qúy cục trình bày sơ lược ở trên rất cần phải xa lánh Tuần, Triệt, Sát tinh và Bại tinh. Ngoại trừ Qúy cục 19.2.9 - 19.2.16 - 19.2.22 gặp Sát tinh cũng không bị chiết giảm mất sự tốt đẹp. Nếu Sát tinh sáng sủa, dĩ nhiên lại càng thêm rực rỡ.\nPhú cục và Qúy cục rất cần gặp Khoa, Quyền, Lộc hội hợp, như vậy mới được toàn mỹ.",
+  "uncertainties": []
+}

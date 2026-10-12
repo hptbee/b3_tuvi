@@ -1,0 +1,54 @@
+{
+  "decisionId": "nguyet-lang-thien-mon-2026-10-12",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-nguyet-lang-thien-mon",
+  "schoolId": "vn-tam-hop-default",
+  "variantType": "rule",
+  "variantId": "rule-pilot-not-runtime",
+  "sourceId": "thai-thu-lang-tan-bien",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "19.2.11+19.5",
+  "sourceDigest": "950bae3902afe40ca2d65daff0e20bab3fdd0e8fe9667a4804f84d45c276ee3e",
+  "fileSha256": "941b104504dd552fe967354759da1683dda30a529aa59a8e570b05727f5b4458",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "PARTIAL",
+      "reviewRef": "docs/knowledge/reviews/nguyet-lang-thien-mon/review-a.json",
+      "agentId": "bc-648db1d1-e4c2-591c-b300-df3fad013304",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "PARTIAL",
+      "reviewRef": "docs/knowledge/reviews/nguyet-lang-thien-mon/review-b.json",
+      "agentId": "bc-f2d13e7f-0535-5745-9fd7-4ab60b74adb6",
+      "available": true
+    }
+  ],
+  "decision": "AI_ACCEPTED",
+  "crossReviewOutcome": "AI_CROSS_REVIEWED",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "formulaComparison": "PARTIAL",
+  "conditions": [
+    "avoid_bai",
+    "avoid_sat",
+    "avoid_triet",
+    "avoid_tuan",
+    "branch_hoi",
+    "palace_menh_or_quan_loc",
+    "star_nguyet_toa_thu",
+    "strengthened_by_khoa_quyen_loc"
+  ],
+  "exceptions": [],
+  "hostModelBuildId": null,
+  "notes": "Both requested model slugs returned PARTIAL. The host did not return a separate build id. The runtime rule was not changed."
+}
