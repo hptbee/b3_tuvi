@@ -43,10 +43,19 @@ test('shows a safe message when analysis fails', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'LÁ SỐ TỬ VI' })).toBeVisible();
 });
 
-test('keyboard reaches the print control', async ({ page }) => {
+test('keyboard reaches and activates the print control', async ({ page }) => {
+  await page.addInitScript(() => {
+    window.printCalls = 0;
+    window.print = () => { window.printCalls += 1; };
+  });
   await page.goto('/la-so?day=15&month=6&year=1990&hour=8&gender=1');
-  await page.getByRole('button', { name: 'In lá số' }).focus();
-  await expect(page.getByRole('button', { name: 'In lá số' })).toBeFocused();
+  const print = page.getByRole('button', { name: 'In lá số' });
+  await expect(print).toBeVisible();
+  await page.getByRole('button', { name: 'Lập Lá Số' }).focus();
+  await page.keyboard.press('Tab');
+  await expect(print).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect.poll(() => page.evaluate(() => window.printCalls)).toBe(1);
 });
 
 test('editing the form keeps the chart tied to the submitted birth time', async ({ page }) => {
