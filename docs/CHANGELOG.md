@@ -12,6 +12,7 @@ Tất cả các thay đổi đáng chú ý của dự án **Tử Vi Việt Nam (
 - Backend chuyển từ MongoDB/Mongoose sang SQLite (`node:sqlite`, file `backend/data/tuvi.sqlite`). Bỏ `docker-compose.yml` và dependency `mongoose`.
 - Sổ nguồn và ma trận 63 cách (P1.3A): `docs/knowledge/`. Không có cách nào được gắn trang sách. Không đổi schema SQLite.
 - P1.3A.1: mười cách có đoạn trong PDF Tân Biên 277 trang (bản dựng 2014, bìa ghi 1956). Không khớp rule đang chạy. Không sửa rule, không bật Khoa Minh Lộc Ám.
+- AutoDev Master Plan (`docs/AUTODEV_MASTER_PLAN.md`): hàng đợi M0 → KB-01; P1.3B, LLM và vận hạn không READY.
 
 ### Khắc phục lỗi (Fixed)
 - Rule v2: độ sáng áp vào bản sao nằm trong vùng điều kiện, không loại cả ngôi sao vì một bản ở cung khác. Rule thiếu `id`, `samePalace` rỗng, `giap.mode` lạ, `countAtLeast.n` không hợp lệ, hoặc `excluded.relation` khác `same` thì không khớp.

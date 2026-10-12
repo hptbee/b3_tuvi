@@ -1,9 +1,23 @@
 import assert from 'assert';
+import { readFileSync } from 'fs';
+import { fileURLToPath } from 'url';
 import sourcesDoc from '../../docs/knowledge/sources.json' with { type: 'json' };
 import matrixDoc from '../../docs/knowledge/combination-source-matrix.json' with { type: 'json' };
 import catalog from '../src/data/combinations.json' with { type: 'json' };
 import rules from '../src/data/rulesV2.json' with { type: 'json' };
 import pilot from '../../docs/knowledge/pilotClaims.json' with { type: 'json' };
+
+const masterPlan = readFileSync(
+    fileURLToPath(new URL('../../docs/AUTODEV_MASTER_PLAN.md', import.meta.url)),
+    'utf8'
+);
+assert.match(masterPlan, /M0-01\s+Master Plan\s+completed/);
+assert.match(masterPlan, /M0-02\s+CONTRIBUTING safeguards\s+READY/);
+assert.match(masterPlan, /KB-02\s+Authenticate edition\s+BLOCKED/);
+assert.match(masterPlan, /P1\.3B\s+SQLite schema v2\s+BLOCKED/);
+assert.match(masterPlan, /LLM-01 \/ FORTUNE-01\s+deferred/);
+assert.match(masterPlan, /Không ấn bản in nào `authenticated: true`/);
+assert.match(masterPlan, /Không cách nào `formulaCheckedAgainstSource: true`/);
 
 const PILOT = new Set(pilot.claims.map((claim) => claim.combinationName));
 const FORMULA = new Set(['CONFLICT', 'PARTIAL', 'NOT_IMPLEMENTED', 'MATCH']);
