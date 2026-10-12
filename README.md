@@ -1,118 +1,158 @@
-# Tử Vi Việt Nam (Tuvi_B)
+# Tử Vi Việt Nam (`b3_tuvi`)
 
-Dự án **Tử Vi Việt Nam** là một nền tảng web hoàn chỉnh giúp lập và luận giải lá số Tử Vi theo phong cách hiện đại. Hệ thống được xây dựng theo kiến trúc **3 lớp (3-Tier Architecture)** tách biệt rõ ràng: Giao diện (Frontend), Máy chủ API (Backend) và Cơ sở dữ liệu (Database).
+Nền tảng web lập và luận giải **lá số Tử Vi**. Kiến trúc 3 lớp: giao diện React, API Node.js/Express, và MongoDB.
 
-> [!TIP]
-> **Dành cho AI & Developers:** Dự án này được tối ưu để các mô hình AI (LLMs) có thể hỗ trợ phát triển nhanh chóng. Vui lòng đọc [docs/AI_CONTEXT.md](docs/AI_CONTEXT.md) và [docs/DOMAIN_KNOWLEDGE.md](docs/DOMAIN_KNOWLEDGE.md) để hiểu sâu về thuật toán an sao.
+> **Dành cho AI & developers:** đọc [docs/AI_CONTEXT.md](docs/AI_CONTEXT.md) và [docs/DOMAIN_KNOWLEDGE.md](docs/DOMAIN_KNOWLEDGE.md) trước khi sửa thuật toán an sao.
 
-## ✨ Tính năng nổi bật
+## Tính năng
 
-- 📅 **Chuyển đổi Lịch Âm – Dương**: Chính xác cao, tự động tính toán Can Chi năm sinh.
-- ☯️ **Lập Lá số Tử Vi Trọn Bộ**: An bài 14 Chính tinh, Phụ tinh (Thái Tuế, Tràng Sinh, Lộc Tồn, Tứ Hóa...), Tuần, Triệt, Đại Hạn.
-- 🔮 **Luận giải chi tiết**: Click trực tiếp vào Cung hoặc Sao để xem ý nghĩa chuyên sâu, lấy dữ liệu trực tiếp từ API.
-- 🗺️ **Điều hướng đa trang (Multi-page Routing)**: Trang Chủ, Lập Lá Số, Luận Giải, Kiến Thức, Liên Hệ.
-- 💾 **Lưu trữ lịch sử**: Tự động lưu mỗi lá số đã lập vào MongoDB để phục vụ tra cứu và phân tích sau.
-- 🤖 **Sẵn sàng tích hợp AI**: Kiến trúc Backend/DB tách biệt giúp dễ dàng gắn module AI luận giải tự động.
+- **Chuyển Dương lịch → Âm lịch**, Can Chi năm sinh, hỗ trợ tháng nhuận khi an sao.
+- **Lập lá số trọn bộ**: 14 chính tinh, phụ tinh (Thái Tuế, Trường Sinh, Lộc Tồn, Tứ Hóa, …), Tuần, Triệt, Đại Hạn.
+- **Click sao / cung** trên lá số để xem ý nghĩa từ API (`stars`, `palaces`).
+- **Luận cách cục**: khớp tổ hợp sao (cát / hung / đặc biệt) qua `POST /api/combinations/match`.
+- **Chia sẻ lá số qua URL** (`/la-so?year=&month=&day=&hour=&gender=&name=`).
+- Mỗi lần lập lá số được **lưu vào MongoDB** (`horoscopes`). Chưa có màn hình lịch sử trên UI.
 
-## 🏗️ Kiến trúc Hệ thống
+Các trang **Luận Giải**, **Kiến Thức**, **Tài Liệu**, **Liên Hệ** hiện là placeholder.
 
-Hệ thống được thiết kế theo mô hình client-server hiện đại:
+## Kiến trúc
 
-- **Frontend**: [React 19](frontend/README.md) + **Vite**. UI Glassmorphism hiện đại, tối ưu hiệu năng.
-- **Backend**: [Node.js (Express)](backend/README.md) cung cấp REST API.
-- **Engine**: Thuật toán an sao lõi nằm tại `backend/src/engine/`.
-- **Database**: **MongoDB** lưu trữ thông tin lá số và cơ sở dữ liệu luận giải.
-
-```
-Tuvi_B/
-├── frontend/          # React 19 + Vite (Giao diện) - [Xem Chi Tiết](frontend/README.md)
-├── backend/           # Node.js + Express (API Server) - [Xem Chi Tiết](backend/README.md)
-│   └── src/
-│       ├── engine/    # Thuật toán Tử Vi (Lunar, TuviRules)
-│       ├── models/    # MongoDB Schemas (User, Chart, Meaning)
-│       └── routes/    # API Endpoints
-├── docs/              # Tài liệu bổ trợ dành cho AI/Developer
-│   ├── ARCHITECTURAL_OVERVIEW.md
-│   ├── DOMAIN_KNOWLEDGE.md
-│   ├── AI_CONTEXT.md
-│   ├── CONTRIBUTING.md
-│   └── CHANGELOG.md
-```
-
-| Thành phần | Công nghệ | Cổng |
+| Thành phần | Công nghệ | Cổng mặc định |
 |---|---|---|
-| Frontend | React 19, Vite | `5173` |
-| Backend | Node.js, Express | `5000` |
+| Frontend | React 19, Vite, React Router 7 | `5173` |
+| Backend | Node.js, Express 5, Mongoose | `5000` |
 | Database | MongoDB (Docker) | `27017` |
-| DB Admin UI | Mongo Express | `8081` |
+| DB Admin | Mongo Express | `8081` |
 
-## 🚀 Hướng dẫn Cài đặt và Chạy
-
-**Yêu cầu:** Node.js LTS, Docker Desktop.
-
-### Bước 1: Clone dự án
-
-```bash
-git clone https://github.com/your-username/Tuvi_B.git
-cd Tuvi_B
+```
+b3_tuvi/
+├── frontend/                 # React + Vite
+│   ├── src/components/       # TuViChart, PalaceBox, CachCucPanel, …
+│   └── src/pages/            # Luận giải, kiến thức, tài liệu, liên hệ
+├── backend/
+│   ├── server.js
+│   └── src/
+│       ├── engine/           # lunar.js, tuviRules.mjs, chartInput.js
+│       ├── data/             # Bảng an sao (JSON)
+│       ├── models/           # Horoscope, Star, Palace, Combination
+│       ├── routes/           # charts, meanings, combinations
+│       └── scripts/          # seed, seedCombinations, migrate
+├── docker-compose.yml
+└── docs/
 ```
 
-### Bước 2: Khởi động Database (Docker)
+Engine an sao nằm ở `backend/src/engine/`. Frontend chỉ gọi REST API (`frontend/src/apiBase.js`).
 
-Mở **Docker Desktop** trước, sau đó chạy:
+## Yêu cầu
+
+- Node.js LTS
+- Docker Desktop (MongoDB)
+
+## Cài đặt và chạy
+
+### 1. Clone
 
 ```bash
-docker-compose up -d
+git clone https://github.com/hptbee/b3_tuvi.git
+cd b3_tuvi
 ```
 
-- MongoDB sẽ chạy tại `localhost:27017`
-- Giao diện quản trị DB (Mongo Express) tại `http://localhost:8081`
+### 2. Database
 
-### Bước 3: Chạy Backend (API Server)
+```bash
+docker compose up -d
+```
+
+- MongoDB: `localhost:27017` (user `admin` / `adminpassword`)
+- Mongo Express: http://localhost:8081
+
+URI mặc định của backend:
+
+```text
+mongodb://admin:adminpassword@localhost:27017/
+```
+
+Có thể ghi đè bằng `MONGO_URI` (file `.env` ở `backend/`).
+
+### 3. Seed dữ liệu luận giải (lần đầu)
+
+Không seed thì click sao/cung và panel cách cục sẽ trống hoặc fallback.
 
 ```bash
 cd backend
 npm install
-npm start # Hoặc npm run dev nếu có nodemon
+node src/scripts/seed.js
+node src/scripts/seedCombinations.js
 ```
 
-Server API chạy tại `http://localhost:5000`.
+### 4. Cài dependencies và chạy cả stack
 
-### Bước 4: Chạy Frontend (React)
+Từ thư mục gốc:
 
 ```bash
-cd frontend
-npm install
+npm run install:all
 npm run dev
 ```
 
-Truy cập ứng dụng tại `http://localhost:5173`.
+- Frontend: http://localhost:5173
+- Backend: http://localhost:5000 (`GET /api/health`)
 
-## 🌐 API Endpoints (Sơ lược)
+Chạy từng phần:
+
+```bash
+cd backend && npm run dev    # nodemon
+cd frontend && npm run dev
+```
+
+Frontend đọc `VITE_API_BASE_URL` (xem `frontend/.env.example`). Mặc định `http://localhost:5000`.
+
+## API
 
 | Method | Endpoint | Mô tả |
 |---|---|---|
-| `GET` | `/api/health` | Kiểm tra trạng thái server |
-| `POST` | `/api/charts/generate` | Tính toán & lưu lá số |
-| `GET` | `/api/meanings/star/:name` | Lấy ý nghĩa của một sao |
+| `GET` | `/api/health` | Trạng thái server |
+| `POST` | `/api/charts/generate` | Tính, lưu, trả `{ lunarInfo, tuviInfo }` |
+| `GET` | `/api/meanings/star/:name?palace=` | Ý nghĩa sao tại cung |
+| `GET` | `/api/meanings/palace/:name` | Ý nghĩa cung (hỗ trợ cung kép `Mệnh / Thân`) |
+| `POST` | `/api/combinations/match` | Khớp cách cục theo 12 cung |
+| `GET` | `/api/combinations` | Catalog cách cục (`?type=` tùy chọn) |
 
-Chi tiết xem tại: [docs/ARCHITECTURAL_OVERVIEW.md](docs/ARCHITECTURAL_OVERVIEW.md)
+Body lập lá số (`POST /api/charts/generate`):
 
-## 🔧 Build Production
+| Field | Kiểu | Ghi chú |
+|---|---|---|
+| `name` | string | Tùy chọn, tối đa 100 ký tự |
+| `day`, `month`, `year` | int | Ngày dương lịch thật |
+| `hour` | int | `0`–`23` |
+| `gender` | int | `1` nam, `-1` nữ |
+
+Chi tiết luồng dữ liệu: [docs/ARCHITECTURAL_OVERVIEW.md](docs/ARCHITECTURAL_OVERVIEW.md).
+
+## Test
+
+```bash
+cd backend
+npm test
+```
+
+Chạy `backend/test/engine.test.mjs` (an sao / lịch).
+
+## Build frontend
 
 ```bash
 cd frontend
 npm run build
+npm run preview   # tùy chọn
 ```
 
-## 🤝 Đóng góp
+## Tài liệu
 
-Xem chi tiết tại [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md).
-
-## 📋 Changelog
-
-Lịch sử thay đổi tại [docs/CHANGELOG.md](docs/CHANGELOG.md).
-
-## 📄 Giấy phép
-
-MIT License.
+| File | Nội dung |
+|---|---|
+| [docs/AI_CONTEXT.md](docs/AI_CONTEXT.md) | Map file → chức năng cho AI |
+| [docs/DOMAIN_KNOWLEDGE.md](docs/DOMAIN_KNOWLEDGE.md) | Thuật ngữ và quy tắc Tử Vi |
+| [docs/ARCHITECTURAL_OVERVIEW.md](docs/ARCHITECTURAL_OVERVIEW.md) | Luồng dữ liệu, schema |
+| [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md) | Cách đóng góp |
+| [docs/CHANGELOG.md](docs/CHANGELOG.md) | Lịch sử thay đổi |
+| [frontend/README.md](frontend/README.md) | Ghi chú frontend |
+| [backend/README.md](backend/README.md) | Ghi chú backend |
