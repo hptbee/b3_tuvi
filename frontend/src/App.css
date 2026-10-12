@@ -441,6 +441,21 @@ body {
   text-decoration: underline;
 }
 
+button.clickable {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  padding: 0;
+  text-align: inherit;
+}
+
+button.clickable:focus-visible,
+.evidence-pick:focus-visible {
+  outline: 2px solid #8b0000;
+  outline-offset: 2px;
+}
+
 /* ============================================================
    CÁCH CỤC PANEL
    ============================================================ */
@@ -661,4 +676,38 @@ body {
 
 .evidence-note {
   margin-top: 12px;
+}
+
+.evidence-picks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.evidence-pick {
+  background: #fff;
+  border: 1px solid #3d4f3a;
+  border-radius: 8px;
+  color: #222;
+  cursor: pointer;
+  font: inherit;
+  min-height: 44px;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.evidence-pick.is-selected {
+  background: #243026;
+  color: #fff;
+}
+
+.evidence-detail h3,
+.evidence-detail h4 {
+  margin: 12px 0 6px;
+}
+
+@media (max-width: 720px) {
+  .evidence-pick {
+    flex: 1 1 100%;
+  }
 }
