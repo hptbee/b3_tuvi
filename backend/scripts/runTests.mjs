@@ -22,6 +22,7 @@ export const unitTests = [
     'test/fixtureClasses.test.mjs',
     'test/knowledgeCatalog.test.mjs',
     'test/sourceHygiene.test.mjs',
+    'test/crossReview.test.mjs',
     'test/qualityEdges.test.mjs',
     'test/perfSmoke.test.mjs'
 ];
