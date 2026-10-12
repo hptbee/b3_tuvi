@@ -1,11 +1,6 @@
 import contract from '../../../docs/knowledge/provenance-contract.json' with { type: 'json' };
 
 const RELATIONSHIP_OPS = new Set(['giap_both_flanks', 'giap_anchor_flanks', 'clauses', 'linked', 'count']);
-const LIMITED_EDITION_SCOPES = new Set([
-    'digital_file_accepted_as_working_text',
-    'library_record_accepted_by_owner',
-    'archive_item_accepted_by_owner'
-]);
 
 function instancesOf(stars) {
     return stars.flatMap((star) => {
@@ -18,10 +13,8 @@ function instancesOf(stars) {
     });
 }
 
-function editionCanCarryTextProof(context) {
-    return context.editionAuthenticated === true
-        && context.textCollatedAgainstOriginal === true
-        && !LIMITED_EDITION_SCOPES.has(context.authenticationScope);
+function editionAuthenticated(context) {
+    return context.editionAuthenticated === true;
 }
 
 function acceptLayer(layer, value, context, rejected) {
@@ -29,7 +22,7 @@ function acceptLayer(layer, value, context, rejected) {
     const allowed = contract.layers[layer] || [];
     const gate = contract.gates[layer]?.[value];
     const blockedByTest = context.inferredFromTestPass === true && (value === 'primary' || value === 'checked_against_edition');
-    const gateClosed = (gate === 'editionAuthenticated' && !editionCanCarryTextProof(context))
+    const gateClosed = (gate === 'editionAuthenticated' && !editionAuthenticated(context))
         || (gate === 'sourceId' && !(typeof context.sourceId === 'string' && context.sourceId.length > 0))
         || (value === 'checked_against_edition' && context.formulaCheckedAgainstEdition !== true);
     if (!allowed.includes(value) || blockedByTest || gateClosed) {
@@ -56,7 +49,7 @@ function verificationOf(context) {
 
 function formationOf(context) {
     const sourced = context.formationConditions === 'source_satisfied' || context.formationConditions === 'source_not_satisfied';
-    if (sourced && context.formulaCheckedAgainstEdition === true && editionCanCarryTextProof(context)) {
+    if (sourced && context.formulaCheckedAgainstEdition === true && editionAuthenticated(context)) {
         return context.formationConditions;
     }
     return 'unknown';
@@ -86,7 +79,7 @@ export function buildEvidenceV3(evidence, context = {}) {
         patternDetected: true,
         formationConditions: formationOf(context),
         breakingConditions: breakingOf(context),
-        formulaReview: context.formulaCheckedAgainstEdition === true && editionCanCarryTextProof(context) ? 'checked_against_edition' : 'not_checked',
+        formulaReview: context.formulaCheckedAgainstEdition === true && editionAuthenticated(context) ? 'checked_against_edition' : 'not_checked',
         ruleId: evidence.ruleId,
         schoolId: evidence.schoolId ?? null,
         targetPalace: {

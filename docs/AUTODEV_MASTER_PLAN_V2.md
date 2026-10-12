@@ -291,4 +291,4 @@ Một task `COMPLETED` khi acceptance đã kiểm bằng lệnh, review không c
 
 Các task kỹ thuật sau foundation đã có mã trên `autodev/v2-sprint-2`: `V2-M0-05`, `V2-KB-04`, `V2-KB-05`, `V2-M0-06`, `V2-RULE-03`, `V2-M0-08`.
 
-`V2-KB-03-prod` vẫn `BLOCKED_HUMAN`. Prototype và query layer không phải knowledge base production. Không có lá số expert-verified golden. Evidence v3 ghi runtime match; thành cách theo nguồn và phá cách không được suy từ pattern. DTO này chưa nối vào response API. Deterministic interpretation chưa bắt đầu.
+`V2-KB-03-prod` vẫn `BLOCKED_HUMAN`. Prototype và query layer không phải knowledge base production. Không có lá số expert-verified golden. Evidence v3 ghi runtime match; thành cách theo nguồn chỉ khi công thức đã đối chiếu trên edition `authenticated: true`. Phá cách không được suy từ pattern. Cổng edition chỉ nhìn `authenticated`. DTO này chưa nối vào response API. Deterministic interpretation chưa bắt đầu.

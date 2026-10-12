@@ -170,6 +170,9 @@ const reviewed = bundle();
 reviewed.sources.sources[0].bibliographicStatus = 'primary';
 reviewed.sources.editions[0].authenticated = true;
 reviewed.sources.editions[0].authenticationBasis = 'project_owner';
+reviewed.sources.editions[0].textCollatedAgainstOriginal = false;
+reviewed.sources.editions[0].originalEditionAuthenticated = false;
+reviewed.sources.editions[0].authenticationScope = 'library_record_accepted_by_owner';
 reviewed.pilot.claims[0].editionId = 'ed';
 reviewed.pilot.claims[0].sourceId = 'thai-thu-lang-tan-bien';
 Object.assign(reviewed.pilot.claims[0], {

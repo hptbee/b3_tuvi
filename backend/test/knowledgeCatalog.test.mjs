@@ -96,6 +96,8 @@ assert.strictEqual(archiveMultipart.digitalArtifactVerified, false);
 assert.strictEqual(archiveMultipart.originalEditionAuthenticated, false);
 assert.strictEqual(archiveMultipart.publicationYear, 1956);
 assert.ok(sourcesDoc.editions.every((edition) => edition.authenticationBasis === 'project_owner'));
+assert.ok(sourcesDoc.editions.every((edition) => edition.authenticated === true));
+assert.ok(accepted.authenticated && accepted.textCollatedAgainstOriginal === false);
 assert.notStrictEqual(sourcesDoc.editions[0].pageCount, sourcesDoc.editions[1].pageCount);
 
 const claimIds = pilot.claims.map((claim) => claim.claimId);

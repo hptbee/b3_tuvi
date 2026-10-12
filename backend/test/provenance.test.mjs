@@ -32,6 +32,16 @@ const withEdition = canTransition(matched, {
     formulaStatus: 'checked_against_edition'
 }, { editionAuthenticated: true }, contract);
 assert.strictEqual(withEdition.ok, true, withEdition.errors.join('; '));
+const ownerAccepted = canTransition(matched, {
+    ...matched,
+    formulaStatus: 'checked_against_edition'
+}, {
+    editionAuthenticated: true,
+    textCollatedAgainstOriginal: false,
+    originalEditionAuthenticated: false,
+    authenticationScope: 'digital_file_accepted_as_working_text'
+}, contract);
+assert.strictEqual(ownerAccepted.ok, true, ownerAccepted.errors.join('; '));
 
 const stepped = canTransition(base, {
     ...base,

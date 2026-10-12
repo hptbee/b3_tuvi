@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "note": "Hợp đồng trạng thái. Test PASS không nâng bibliographicStatus hoặc formulaStatus.",
+  "note": "Hợp đồng trạng thái. Test PASS không nâng bibliographicStatus hoặc formulaStatus. Cổng editionAuthenticated chỉ nhìn edition.authenticated === true. textCollatedAgainstOriginal, originalEditionAuthenticated và authenticationScope là metadata, không chặn cổng. Xác thực edition không tự nâng mọi công thức.",
   "layers": {
     "implementationStatus": ["untested", "tested", "not_executable"],
     "formulaStatus": ["undocumented", "matches_repo_formula", "checked_against_edition"],

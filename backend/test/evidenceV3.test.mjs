@@ -52,30 +52,42 @@ const claimed = buildEvidenceV3(hit.evidence, {
     interpretationStatus: 'sourced',
     editionAuthenticated: true,
     authenticationScope: 'digital_file_accepted_as_working_text',
+    textCollatedAgainstOriginal: false,
+    originalEditionAuthenticated: false,
     formulaCheckedAgainstEdition: true,
     sourceId: 'thai-thu-lang-tan-bien',
     sourceClaimReferences: [{ claimId: 'claim-phu-tuong-trieu-vien', sourceId: 'thai-thu-lang-tan-bien' }]
 });
 assert.strictEqual(claimed.runtimeMatchStatus, 'matched');
-assert.strictEqual(claimed.formationConditions, 'unknown');
+assert.strictEqual(claimed.formationConditions, 'source_satisfied');
 assert.strictEqual(claimed.breakingConditions, 'not_implemented');
-assert.strictEqual(claimed.formulaReview, 'not_checked');
-assert.strictEqual(claimed.verification.formulaStatus, null);
-assert.strictEqual(claimed.verification.bibliographicStatus, null);
-assert.ok(claimed.verification.rejected.some((item) => item.value === 'primary'));
-assert.ok(claimed.verification.rejected.some((item) => item.value === 'checked_against_edition'));
+assert.strictEqual(claimed.formulaReview, 'checked_against_edition');
+assert.strictEqual(claimed.verification.formulaStatus, 'checked_against_edition');
+assert.strictEqual(claimed.verification.bibliographicStatus, 'primary');
+assert.strictEqual(claimed.verification.interpretationStatus, 'sourced');
 
-const omittedScope = buildEvidenceV3(hit.evidence, {
+const unauthenticated = buildEvidenceV3(hit.evidence, {
     formationConditions: 'source_satisfied',
     formulaStatus: 'checked_against_edition',
     bibliographicStatus: 'primary',
-    editionAuthenticated: true,
+    editionAuthenticated: false,
     formulaCheckedAgainstEdition: true
 });
-assert.strictEqual(omittedScope.formationConditions, 'unknown');
-assert.strictEqual(omittedScope.formulaReview, 'not_checked');
-assert.strictEqual(omittedScope.verification.formulaStatus, null);
-assert.strictEqual(omittedScope.verification.bibliographicStatus, null);
+assert.strictEqual(unauthenticated.formationConditions, 'unknown');
+assert.strictEqual(unauthenticated.formulaReview, 'not_checked');
+assert.strictEqual(unauthenticated.verification.formulaStatus, null);
+assert.strictEqual(unauthenticated.verification.bibliographicStatus, null);
+
+const authWithoutFormula = buildEvidenceV3(hit.evidence, {
+    formationConditions: 'source_satisfied',
+    formulaStatus: 'checked_against_edition',
+    bibliographicStatus: 'primary',
+    editionAuthenticated: true
+});
+assert.strictEqual(authWithoutFormula.formationConditions, 'unknown');
+assert.strictEqual(authWithoutFormula.formulaReview, 'not_checked');
+assert.strictEqual(authWithoutFormula.verification.formulaStatus, null);
+assert.strictEqual(authWithoutFormula.verification.bibliographicStatus, 'primary');
 
 const notImplemented = buildEvidenceV3(hit.evidence, { formationConditions: 'not_implemented' });
 assert.strictEqual(notImplemented.formationConditions, 'unknown');
