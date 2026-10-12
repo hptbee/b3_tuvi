@@ -83,7 +83,7 @@ export default function CachCucPanel({ chartData, userInfo }) {
       <div className="cach-cuc-header">
         <h2 className="cach-cuc-title">
           <span className="cach-cuc-title-icon">☯</span>
-          Luận Cách Cục
+          Cách cục
         </h2>
         <p className="cach-cuc-subtitle">
           Tổ hợp sao đặc biệt được phát hiện trong lá số này
@@ -151,7 +151,7 @@ export default function CachCucPanel({ chartData, userInfo }) {
                         <span>{combo.formula_text}</span>
                       </div>
                       <div className="card-meaning">
-                        <span className="formula-label">Luận giải:</span>
+                        <span className="formula-label">Mô tả trong catalog:</span>
                         <span>{combo.summary}</span>
                       </div>
                       {combo.disclaimer && (

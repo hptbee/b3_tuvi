@@ -3,6 +3,7 @@ import { solarToLunar } from '../engine/lunar.js';
 import { calculateTuVi } from '../engine/tuviRules.mjs';
 import { validateChartInput } from '../engine/chartInput.js';
 import { normalizeChart } from '../engine/normalizeChart.js';
+import { hourBranchIndex } from '../engine/hourBranch.js';
 import { logSafeError } from '../http/safeErrorLog.js';
 
 const router = express.Router();
@@ -25,9 +26,7 @@ router.post('/generate', async (req, res) => {
             return res.status(400).json({ error: 'Không đổi được ngày dương sang âm lịch' });
         }
 
-        // Tí: 23h–1h (giờ 0), Sửu: 1h–3h, ...
-        let canhGio = Math.floor((hour + 1) / 2) + 1;
-        if (canhGio > 12) canhGio = 1;
+        const canhGio = hourBranchIndex(hour);
 
         const tvInfo = calculateTuVi(
             ld.canIndex,

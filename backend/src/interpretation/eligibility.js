@@ -1,4 +1,75 @@
-export function claimEligibility(claim, chart = {}) {
+import { evaluateRule } from '../engine/ruleEngine.js';
+
+function listedIds(value) {
+    if (!Array.isArray(value)) return [];
+    return value.filter((item) => typeof item === 'string' && item.trim() !== '');
+}
+
+function palaceStars(palace) {
+    return new Set((palace?.stars || []).map((star) => star.starId).filter(Boolean));
+}
+
+function targetsFor(claim, chart, palace) {
+    if (palace) return [palace];
+    const ids = listedIds(claim?.relatedPalaces);
+    return (chart?.palaces || []).filter((item) => ids.includes(item.functionId));
+}
+
+function ruleBody(rule) {
+    return Boolean(rule && (
+        rule.samePalace || rule.giap || rule.clauses || rule.countAtLeast || rule.linked || rule.noMajor
+    ));
+}
+
+/**
+ * A condition evaluation is non-empty only when at least one star check
+ * actually ran against a palace. Unknown prose in `conditions` is not a pass.
+ */
+export function evaluateClaimConditions(claim, chart = {}, palace = null) {
+    const stars = listedIds(claim?.relatedStars);
+    const phrases = Array.isArray(claim?.conditions) ? claim.conditions : null;
+    const rule = claim?.rule && typeof claim.rule === 'object' ? claim.rule : null;
+    const targets = targetsFor(claim, chart, palace);
+    if (phrases && phrases.some((item) => typeof item !== 'string' || item.trim() === '')) {
+        return { evaluated: false, holds: false };
+    }
+    const executablePhrases = phrases ? phrases.map((item) => item.trim()).filter(Boolean) : [];
+    const parsed = [];
+    for (const phrase of executablePhrases) {
+        const match = /^starId=([a-z0-9_]+)$/.exec(phrase);
+        if (!match) return { evaluated: false, holds: false };
+        parsed.push(match[1]);
+    }
+    const hasRule = ruleBody(rule);
+    if (stars.length === 0 && parsed.length === 0 && !hasRule) {
+        return { evaluated: false, holds: false };
+    }
+    if ((stars.length > 0 || parsed.length > 0) && targets.length === 0) {
+        return { evaluated: false, holds: false };
+    }
+    const required = [...stars, ...parsed];
+    if (required.length > 0) {
+        const holds = targets.every((target) => {
+            const present = palaceStars(target);
+            return required.every((starId) => present.has(starId));
+        });
+        if (!holds) return { evaluated: true, holds: false };
+    }
+    if (hasRule) {
+        const hit = evaluateRule(chart, {
+            ...rule,
+            id: rule.id || claim.claimId || 'claim-rule',
+            target: rule.target || palace?.functionId || claim.relatedPalaces?.[0] || 'menh'
+        });
+        if (!hit) return { evaluated: true, holds: false };
+        if (palace && String(hit.evidence?.palaceId) !== String(palace.id)) {
+            return { evaluated: true, holds: false };
+        }
+    }
+    return { evaluated: true, holds: true };
+}
+
+export function claimEligibility(claim, chart = {}, palace = null) {
     const reasons = [];
     if (!claim || typeof claim !== 'object' || !claim.claimId) reasons.push('missing_claim');
     if (claim?.usage === 'synthetic_test_fixture') reasons.push('synthetic_fixture');
@@ -6,12 +77,15 @@ export function claimEligibility(claim, chart = {}) {
     if (claim?.interpretationStatus !== 'sourced') reasons.push('interpretation_not_sourced');
     const hasSource = Boolean(claim?.sourceId) || (claim?.sourceReferences || []).length > 0;
     if (!hasSource) reasons.push('missing_source');
-    if (claim?.formulaComparisonStatus && claim.formulaComparisonStatus !== 'MATCH') {
-        reasons.push('formula_not_matched');
+    if (claim?.formulaComparisonStatus !== 'MATCH') {
+        reasons.push(claim?.formulaComparisonStatus ? 'formula_not_matched' : 'formula_status_missing');
     }
     if (claim?.schoolId && chart.schoolId && claim.schoolId !== chart.schoolId) {
         reasons.push('school_mismatch');
     }
+    const conditions = evaluateClaimConditions(claim, chart, palace);
+    if (!conditions.evaluated) reasons.push('conditions_not_evaluated');
+    else if (!conditions.holds) reasons.push('conditions_not_met');
     return {
         claimId: claim?.claimId || null,
         eligible: reasons.length === 0,

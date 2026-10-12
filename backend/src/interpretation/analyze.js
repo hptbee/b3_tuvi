@@ -2,6 +2,7 @@ import { solarToLunar } from '../engine/lunar.js';
 import { calculateTuVi } from '../engine/tuviRules.mjs';
 import { validateChartInput } from '../engine/chartInput.js';
 import { normalizeChart } from '../engine/normalizeChart.js';
+import { hourBranchIndex } from '../engine/hourBranch.js';
 import { PALACE_FUNCTIONS, interpretChart } from './pipeline.js';
 import { synthesize } from './wholeChart.js';
 import { timeOverlay } from '../time/timeEngine.js';
@@ -10,8 +11,7 @@ function chartFromBirth(value) {
     const { day, month, year, hour, gender } = value;
     const lunar = solarToLunar(day, month, year);
     if (!lunar.lunarDay || !lunar.lunarMonth || !lunar.lunarYear) return null;
-    let canhGio = Math.floor((hour + 1) / 2) + 1;
-    if (canhGio > 12) canhGio = 1;
+    const canhGio = hourBranchIndex(hour);
     const tuviInfo = calculateTuVi(
         lunar.canIndex,
         lunar.chiIndex,
@@ -26,11 +26,17 @@ function chartFromBirth(value) {
 
 function responseFor(chart) {
     const analysis = interpretChart(chart);
-    if (!analysis.ok) return { status: 400, body: { error: 'Lá số không hợp lệ' } };
+    if (!analysis.ok) {
+        if (analysis.error === 'knowledge_bundle_invalid') {
+            return { status: 400, body: { error: 'Dữ liệu tri thức chưa được chấp nhận', code: 'knowledge_bundle_invalid' } };
+        }
+        return { status: 400, body: { error: 'Lá số không hợp lệ' } };
+    }
     return {
         status: 200,
         body: {
             ...analysis,
+            chartSource: 'server',
             palaceFunctions: analysis.statements.filter((statement) => !statement.thanOverlay).map((statement) => statement.functionId),
             wholeChart: synthesize(analysis),
             time: timeOverlay(chart),
@@ -41,8 +47,7 @@ function responseFor(chart) {
 
 export function analyzeChartRequest(body) {
     if (body?.normalizedChart) {
-        if (!body.normalizedChart.ok) return { status: 400, body: { error: 'Lá số không hợp lệ' } };
-        return responseFor(body.normalizedChart);
+        return { status: 400, body: { error: 'Lá số phải được tính từ ngày giờ sinh', code: 'client_chart_rejected' } };
     }
     const parsed = validateChartInput(body);
     if (!parsed.ok) return { status: 400, body: { error: 'Dữ liệu lập lá số không hợp lệ', details: parsed.errors } };

@@ -3,6 +3,7 @@ import { calculateTuVi } from '../src/engine/tuviRules.mjs';
 import { normalizeChart } from '../src/engine/normalizeChart.js';
 import { CORE_PALACES, PALACE_FUNCTIONS, interpretChart } from '../src/interpretation/pipeline.js';
 import { claimEligibility } from '../src/interpretation/eligibility.js';
+import contract from '../../docs/knowledge/provenance-contract.json' with { type: 'json' };
 
 function chartFrom(can, chi, day, month, hour, gender) {
     const tuviInfo = calculateTuVi(can, chi, day, month, hour, gender, false);
@@ -36,29 +37,68 @@ for (const statement of matched) {
     assert.strictEqual(statement.breakingConditions, 'not_implemented');
 }
 
+assert.ok(first.statements.every((item) => item.availabilityStatus !== 'eligible_claims_present'));
+const host = chart.palaces.find((palace) => (palace.stars || []).some((star) => star.starId));
+assert.ok(host);
+const starId = host.stars.find((star) => star.starId).starId;
 const eligibleClaim = {
-    claimId: 'fixture-eligible-tai',
+    claimId: 'fixture-eligible-host',
     approvedForInterpretation: true,
     interpretationStatus: 'sourced',
     formulaComparisonStatus: 'MATCH',
     sourceId: 'thai-thu-lang-tan-bien',
-    relatedPalaces: ['tai_bach'],
+    relatedPalaces: [host.functionId],
+    relatedStars: [starId],
+    conditions: [`starId=${starId}`],
     schoolId: 'vn-tam-hop-default'
 };
 chart.schoolId = 'vn-tam-hop-default';
 const withClaim = interpretChart(chart, { claims: [eligibleClaim] });
-const tai = withClaim.statements.find((item) => item.statementId === 'palace:tai_bach');
-assert.strictEqual(tai.availabilityStatus, 'eligible_claims_present');
-assert.strictEqual(tai.prose, null);
-assert.ok(tai.claimIds.includes('fixture-eligible-tai'));
+const hostStatement = withClaim.statements.find((item) => item.statementId === `palace:${host.functionId}`);
+assert.strictEqual(hostStatement.availabilityStatus, 'eligible_claims_present');
+assert.strictEqual(hostStatement.prose, null);
+assert.ok(hostStatement.claimIds.includes('fixture-eligible-host'));
+
+const flagsOnly = {
+    claimId: 'fixture-flags-only',
+    approvedForInterpretation: true,
+    interpretationStatus: 'sourced',
+    formulaComparisonStatus: 'MATCH',
+    sourceId: 'thai-thu-lang-tan-bien',
+    relatedPalaces: [host.functionId],
+    schoolId: 'vn-tam-hop-default'
+};
+assert.strictEqual(claimEligibility(flagsOnly, chart, host).eligible, false);
+assert.ok(claimEligibility(flagsOnly, chart, host).reasons.includes('conditions_not_evaluated'));
+
+const omittedFormula = { ...eligibleClaim, claimId: 'fixture-no-formula' };
+delete omittedFormula.formulaComparisonStatus;
+const omitted = claimEligibility(omittedFormula, chart, host);
+assert.strictEqual(omitted.eligible, false);
+assert.ok(omitted.reasons.includes('formula_status_missing'));
+
+const stripped = {
+    ...chart,
+    palaces: chart.palaces.map((palace) => (
+        palace.functionId === host.functionId ? { ...palace, stars: [] } : palace
+    ))
+};
+const absent = interpretChart(stripped, { claims: [eligibleClaim] });
+const absentStatement = absent.statements.find((item) => item.statementId === `palace:${host.functionId}`);
+assert.notStrictEqual(absentStatement.availabilityStatus, 'eligible_claims_present');
+assert.ok(absentStatement.claimApplicability.find((item) => item.claimId === 'fixture-eligible-host').reasons.includes('conditions_not_met'));
+
+const proseCondition = claimEligibility({ ...eligibleClaim, claimId: 'fixture-prose', conditions: ['nếu hãm'] }, chart, host);
+assert.strictEqual(proseCondition.eligible, false);
+assert.ok(proseCondition.reasons.includes('conditions_not_evaluated'));
 
 const left = { ...eligibleClaim, claimId: 'fixture-left', contradicts: ['fixture-right'] };
 const right = { ...eligibleClaim, claimId: 'fixture-right', contradicts: ['fixture-left'] };
 const conflicted = interpretChart(chart, { claims: [left, right] });
-assert.strictEqual(conflicted.statements.find((item) => item.statementId === 'palace:tai_bach').availabilityStatus, 'contradiction');
+assert.strictEqual(conflicted.statements.find((item) => item.statementId === `palace:${host.functionId}`).availabilityStatus, 'contradiction');
 
 const mismatch = interpretChart(chart, { claims: [{ ...eligibleClaim, claimId: 'fixture-other-school', schoolId: 'other-school' }] });
-const mismatched = mismatch.statements.find((item) => item.statementId === 'palace:tai_bach');
+const mismatched = mismatch.statements.find((item) => item.statementId === `palace:${host.functionId}`);
 assert.strictEqual(mismatched.availabilityStatus, 'insufficient_evidence');
 assert.ok(mismatched.claimApplicability.find((item) => item.claimId === 'fixture-other-school').reasons.includes('school_mismatch'));
 
@@ -82,5 +122,18 @@ const negativeMenh = negative.statements.find((item) => item.runtimeMatchStatus 
 assert.ok(negativeMenh);
 assert.strictEqual(negativeMenh.formationConditions, 'source_not_satisfied');
 assert.ok(!negativeMenh.limitations.includes('formation_unknown'));
+
+const invalidKnowledge = interpretChart(chart, {
+    knowledgeBundle: {
+        sources: { sources: [{ sourceId: 's', bibliographicStatus: 'primary' }], editions: [] },
+        matrix: { rows: [{ name: 'Phủ Tướng Triều Viên', sources: [], formulaCheckedAgainstSource: true }] },
+        pilot: { claims: [] },
+        contract,
+        combinationNames: []
+    }
+});
+assert.strictEqual(invalidKnowledge.ok, false);
+assert.strictEqual(invalidKnowledge.error, 'knowledge_bundle_invalid');
+assert.deepStrictEqual(invalidKnowledge.statements, []);
 
 console.log('interpretation pipeline stays structured when evidence is missing');

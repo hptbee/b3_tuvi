@@ -2,8 +2,8 @@ import React from 'react';
 
 export const LuanGiai = () => (
   <div style={{ textAlign: 'center', padding: '50px 20px' }}>
-    <h2>Luận Giải Tử Vi</h2>
-    <p style={{ marginTop: '20px' }}>Tính năng luận giải tự động lá số đang được phát triển. Vui lòng quay lại sau!</p>
+    <h2>Luận giải</h2>
+    <p style={{ marginTop: '20px' }}>Chưa có luận giải đã duyệt. Trên lá số, mục trạng thái chứng cứ chỉ ghi claim nào đủ điều kiện và không viết lời luận.</p>
   </div>
 );
 

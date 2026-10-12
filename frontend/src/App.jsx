@@ -3,6 +3,7 @@ import { Routes, Route, Link, NavLink, useNavigate, useSearchParams } from 'reac
 import './App.css';
 import TuViChart from './components/TuViChart';
 import CachCucPanel from './components/CachCucPanel';
+import StructuredAnalysis from './components/StructuredAnalysis';
 import { LuanGiai, KienThuc, TaiLieu, LienHe } from './pages/Pages';
 import { API_BASE } from './apiBase';
 
@@ -176,6 +177,7 @@ function App() {
                   <TuViChart lunarInfo={chartData.lunarInfo} tuviInfo={chartData.tuviInfo} userInfo={userInfo} />
                 </div>
               )}
+              {hasChartQuery && chartData && <StructuredAnalysis userInfo={userInfo} />}
               {hasChartQuery && chartData && <CachCucPanel chartData={chartData} userInfo={userInfo} />}
             </div>
           } />

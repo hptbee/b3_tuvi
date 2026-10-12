@@ -2,6 +2,7 @@ import assert from 'assert';
 import { readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { logSafeError, safeErrorFields } from '../src/http/safeErrorLog.js';
+import { requestLogLine } from '../src/http/requestLog.js';
 
 const error = new Error('calculation failed');
 error.body = { name: 'Lan', day: 1, month: 2, year: 1990, hour: 3, gender: 'nu' };
@@ -31,5 +32,17 @@ for (const name of routes) {
     assert.match(source, /logSafeError\(/);
     assert.ok(!source.includes('console.error'));
 }
+
+const loggedRequest = requestLogLine({
+    method: 'POST',
+    url: '/api/charts/generate?year=1990&day=15',
+    path: '/api/charts/generate'
+});
+assert.strictEqual(loggedRequest, 'POST /api/charts/generate');
+assert.ok(!loggedRequest.includes('1990'));
+assert.strictEqual(requestLogLine({ method: 'GET', url: '/api/health?hour=3' }), 'GET /api/health');
+const serverSource = readFileSync(fileURLToPath(new URL('../server.js', import.meta.url)), 'utf8');
+assert.ok(serverSource.includes('requestLogLine'));
+assert.ok(!serverSource.includes('req.url'));
 
 console.log('route error logs omit birth fields attached to the error');
