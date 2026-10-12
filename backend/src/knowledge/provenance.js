@@ -5,6 +5,8 @@ const LAYERS = [
     'interpretationStatus'
 ];
 
+// editionAuthenticated is edition.authenticated === true. Collation and scope are not gates.
+
 function gateOpen(gate, context) {
     if (gate === 'editionAuthenticated') return context.editionAuthenticated === true;
     if (gate === 'sourceId') return typeof context.sourceId === 'string' && context.sourceId.length > 0;

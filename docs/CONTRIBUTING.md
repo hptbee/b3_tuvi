@@ -81,6 +81,8 @@ Giữ riêng, không gộp một điểm:
 | `bibliographicStatus` | Ấn bản đã được nhận dạng chưa? | JSON hợp lệ |
 | `interpretationStatus` | Lời luận đã được review chưa? | Sao nằm đúng chỗ |
 
+Cổng edition: `authenticated: true` là đủ. `textCollatedAgainstOriginal`, `originalEditionAuthenticated`, `authenticationScope` chỉ ghi dấu vết, không chặn. Authenticated không tự nâng `formulaStatus` của mọi claim.
+
 Chi tiết: `docs/KNOWLEDGE_CLAIM_MODEL.md`, `docs/AUTODEV_MASTER_PLAN_V2.md`.
 
 ## Ngoài phạm vi sản phẩm

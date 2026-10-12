@@ -26,7 +26,7 @@ Mười lớp: calculation, normalized chart, palace relations, rule engine, kno
 | CI workflow | chưa có |
 | SQLite | schema v1. Sau `V2-M0-04`, `POST /api/charts/generate` không ghi ngày giờ sinh. Hàng cũ không bị xóa |
 | Catalog | 63 cách, 58 rule v2; 10 pilot: 7 CONFLICT, 2 PARTIAL, 1 NOT_IMPLEMENTED, 0 MATCH |
-| Ấn bản lúc audit | cả hai edition `authenticated: false`. Sau đó chủ dự án chấp nhận PDF 277 trang; bản 2012 và bản Archive 2017 vẫn false |
+| Ấn bản lúc audit | cả hai edition `authenticated: false`. Sau đó chủ dự án chấp nhận PDF 277 trang, rồi đặt `authenticated: true` cho phiếu 2012 và item Archive 2017. Sách 2012 chưa mở, scan 2017 chưa đối chữ |
 | LLM / Tiểu hạn / đăng nhập | chưa có trong code |
 
 Working tree lúc tách nhánh còn dirty **ngoài** V2: `package-lock.json`, `frontend/package-lock.json`, `.cursor/`, `rules/`. Không stage.
@@ -186,7 +186,8 @@ Test V2 chỉ khóa invariant ổn định (AUTH bị loại, KB-02 còn `BLOCKE
 - dependencies: []
 - dependency_class: DOMAIN_SOURCE, HUMAN_APPROVAL
 - scope: PDF 277 trang tuvithuchanh.com, do chủ dự án chấp nhận 2026-10-12
-- acceptanceCriteria: `authenticated: true` trên edition PDF 277 trang, với `authenticationBasis: project_owner`. Không ghi năm in 1956 là đã chứng minh. Bản EMIC 2012 và bản Internet Archive 2017 vẫn `authenticated: false`. Edition khác: `authenticated: true` chỉ sau khi người mở được đúng bản.
+- acceptanceCriteria: `authenticated: true` trên edition PDF 277 trang, với `authenticationBasis: project_owner`. Không ghi năm in 1956 là đã chứng minh. Edition khác: `authenticated: true` chỉ sau khi người chấp nhận đúng bản.
+- later: ngày 2026-10-12 chủ dự án đặt `authenticated: true` cho phiếu 2012 (`library_record_accepted_by_owner`) và item Archive 2017 (`archive_item_accepted_by_owner`). `physicalCopyInspected`, `textVerified`, `textCollatedAgainstOriginal` vẫn false.
 - requiresHumanApproval: yes — đã có cho file PDF này
 - rollbackPlan: đặt lại `authenticated: false` nếu chủ dự án rút chấp nhận
 - deliverables: `docs/knowledge/sources.json`
@@ -204,15 +205,15 @@ Không thực thi trong phiên nền tảng trừ khi near-term ở trên đã x
 
 | Id | Epic | Status | Hard dependency | Human |
 |---|---|---|---|---|
-| V2-M0-05 | Backup/recovery checks trên DB tạm | PLANNED | V2-KB-03 prototype | no |
-| V2-M0-06 | Error handling/logging review | PLANNED | none | no |
-| V2-M0-08 | Tách golden vs regression fixtures | PLANNED | none | no |
-| V2-KB-04 | Knowledge validator | PLANNED | V2-KB-01 | no |
-| V2-KB-05 | Query layer | PLANNED | V2-KB-03 | no |
+| V2-M0-05 | Backup/recovery checks trên DB tạm | COMPLETED | V2-KB-03 prototype | no |
+| V2-M0-06 | Error handling/logging review | COMPLETED | none | no |
+| V2-M0-08 | Tách golden vs regression fixtures | COMPLETED | none | no |
+| V2-KB-04 | Knowledge validator | COMPLETED | V2-KB-01 | no |
+| V2-KB-05 | Query layer | COMPLETED | V2-KB-03 | no |
 | V2-KB-06 | Mở rộng 63 cách | PLANNED | V2-KB-02 cho claim đã duyệt | yes nếu nâng trạng thái |
 | V2-RULE-01 | Đối chiếu CONFLICT/PARTIAL | PLANNED | nghiên cứu; sửa runtime cần duyệt | yes để ghi `rulesV2.json` |
 | V2-RULE-02 | DSL mới | PLANNED | nhu cầu đã chứng minh | yes nếu bật disabled |
-| V2-RULE-03 | Evidence v3 | PLANNED | rule engine hiện tại | no nếu chỉ thêm DTO |
+| V2-RULE-03 | Evidence v3 | COMPLETED | rule engine hiện tại | no nếu chỉ thêm DTO |
 | V2-RULE-04 | Contradiction resolver | PLANNED | V2-KB-01 | no |
 | V2-INTERPRET-01…08 | Luận giải tất định | PLANNED | claims có nhãn; không LLM | yes nếu đưa chữ tuyệt đối ra UI |
 | V2-TIME-01…05 | Vận hạn | PLANNED | nguồn công thức | yes trước khi luận UI |
@@ -285,3 +286,9 @@ Dừng trước `V2-KB-02`, production migration, sửa `rulesV2.json`, LLM publ
 ## 13. Progress rules
 
 Một task `COMPLETED` khi acceptance đã kiểm bằng lệnh, review không còn finding chặn, commit trên feature branch. Checkpoint: `.b3/autodev/` (ignored). Không push `main`. PR là đề xuất review, không phải merge.
+
+## 14. Sprint 2
+
+Các task kỹ thuật sau foundation đã có mã trên `autodev/v2-sprint-2`: `V2-M0-05`, `V2-KB-04`, `V2-KB-05`, `V2-M0-06`, `V2-RULE-03`, `V2-M0-08`.
+
+`V2-KB-03-prod` vẫn `BLOCKED_HUMAN`. Prototype và query layer không phải knowledge base production. Không có lá số expert-verified golden. Evidence v3 ghi runtime match; thành cách theo nguồn chỉ khi công thức đã đối chiếu trên edition `authenticated: true`. Phá cách không được suy từ pattern. Cổng edition chỉ nhìn `authenticated`. DTO này chưa nối vào response API. Deterministic interpretation chưa bắt đầu.

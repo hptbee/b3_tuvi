@@ -37,7 +37,7 @@ Câu có điều kiện (“nếu hãm”, “nếu gặp sát”) giữ điều
 | `bibliographicStatus` | như sổ nguồn | Schema JSON hợp lệ |
 | `interpretationStatus` | `unreviewed`, `sourced`, `absolute_claim_needs_review` | Công thức vị trí khớp |
 
-Schema JSON hợp lệ chỉ chứng minh file không vỡ. Test `knowledgeCatalog.test.mjs` cố ý cấm `bibliographicStatus: primary` và cấm `formulaCheckedAgainstSource: true` trong catalog hiện tại.
+Schema JSON hợp lệ chỉ chứng minh file không vỡ. Test `knowledgeCatalog.test.mjs` cố ý cấm `bibliographicStatus: primary` và cấm `formulaCheckedAgainstSource: true` trong catalog hiện tại. Cổng edition là `authenticated: true`; đối chữ và phạm vi chấp nhận là metadata.
 
 ## Ví dụ hình thức, chưa phải claim của dự án
 
