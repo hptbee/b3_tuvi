@@ -1,0 +1,10 @@
+---
+description: Strong architecture guideline — prefer the simplest architecture that meets named requirements. Use when choosing layers, services, CQRS, DDD, or extra frameworks.
+alwaysApply: false
+---
+
+Follow the portable simplest-correct rule:
+
+@rules/simplest-correct.md
+
+Method: `.cursor/skills/architecture/simplest-correct/SKILL.md`

@@ -1,0 +1,8 @@
+---
+description: Hard evidence rule — classify claim authority; do not copy external skills verbatim
+alwaysApply: true
+---
+
+Follow the portable evidence-and-provenance rule:
+
+@rules/evidence-and-provenance.md

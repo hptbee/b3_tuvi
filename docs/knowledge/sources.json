@@ -51,7 +51,7 @@
       "url": "https://tuvisonkhiem.vn/thu-vien/sach/tu-vi-dau-so-tan-bien/",
       "accessedAt": "2026-10-12",
       "bibliographicStatus": "conflicting_secondary",
-      "verificationNotes": "Sơn Khiêm ghi trang bìa Sài Gòn, 1956, nhà xuất bản chưa rõ. Catalog EMIC 605898 là bản khác: NXB Thời đại, Hà Nội, 2012, 427 trang. PDF 277 trang ở tuvithuchanh.com là file InDesign 2014, bìa ghi Sài Gòn 1956, không phải bản 2012 và chưa chứng minh là in 1956.",
+      "verificationNotes": "Chủ dự án chấp nhận PDF 277 trang tuvithuchanh.com làm bản đối chiếu đang dùng (2026-10-12). File vẫn là dựng InDesign 2014, bìa ghi Sài Gòn 1956; năm in 1956 chưa được chứng minh. Bản 2012 có phiếu thư viện (477358 / EMIC 605898, 427 trang) nhưng chưa mở sách. Không gộp hai bản. Không nâng bibliographicStatus lên primary.",
       "copyrightNotes": "Không chép nguyên văn."
     },
     {
@@ -218,22 +218,44 @@
       "coverStatement": "SÀI GÒN - 1956",
       "publisher": null,
       "publicationYear": null,
-      "authenticated": false,
-      "verificationNotes": "Đọc ngày 2026-10-12. Metadata PDF: Creator Adobe InDesign CC 2014, CreationDate 2014-11-03. Không thấy tên nhà in trên bìa và lời nói đầu. Số trang in ở đầu trang khớp số trang PDF ở mục 19 (trang 229). Đây là chứng cứ chữ của file này, không phải bản in 1956 đã giám định."
+      "authenticated": true,
+      "authenticationBasis": "project_owner",
+      "authenticatedAt": "2026-10-12",
+      "authenticationScope": "digital_file_accepted_as_working_text",
+      "digitalArtifactVerified": true,
+      "originalEditionAuthenticated": false,
+      "textCollatedAgainstOriginal": false,
+      "verificationNotes": "Chủ dự án chấp nhận đúng URL này ngày 2026-10-12. Đã đọc file 277 trang và mục 19. Metadata PDF: Adobe InDesign CC 2014, CreationDate 2014-11-03. Không thấy tên nhà in. authenticated áp cho file số, không chứng minh bản in 1956, và không đổi formulaCheckedAgainstSource."
     },
     {
       "editionId": "tan-bien-nxb-thoi-dai-2012",
       "sourceId": "thai-thu-lang-tan-bien",
       "documentType": "library_bibliographic_record",
-      "documentUrl": "https://www.emiclib.com/Item/ItemDetail/605898",
+      "documentUrl": "https://phucvu.thuvientphcm.gov.vn/Item/ItemDetail/477358?siteid=2",
+      "alternateDocumentUrl": "https://www.emiclib.com/Item/ItemDetail/605898",
       "pageCount": 427,
       "coverStatement": null,
       "publisher": "Thời đại",
       "publicationYear": 2012,
       "place": "Hà Nội",
-      "holding": "Thư viện Khoa học Tổng hợp TP.HCM, ký hiệu VV 3328/2012",
+      "holding": "Thư viện Khoa học Tổng hợp TP.HCM, GSL_KHO 8, VV 3328/2012",
       "authenticated": false,
-      "verificationNotes": "Chỉ đọc trang thư mục EMIC ngày 2026-10-12. Không mở sách 427 trang. Không đối chiếu đoạn cách cục. Không gộp với PDF 277 trang."
+      "catalogRecordVerified": true,
+      "physicalCopyInspected": false,
+      "textVerified": false,
+      "verificationNotes": "Phiếu 477358 và EMIC 605898 cùng một bản ghi: Hà Nội, NXB Thời đại, 2012, 427 trang, VV 3328/2012. Đã đọc phiếu, chưa mở sách, chưa đối chiếu chữ với PDF 277 trang."
+    },
+    {
+      "editionId": "tan-bien-archive-2017-multipart",
+      "sourceId": "thai-thu-lang-tan-bien",
+      "documentType": "archive_scan_multipart",
+      "documentUrl": "https://archive.org/details/TuViDdauSoTanBien-VDThaiThuLang-DV",
+      "pageCount": null,
+      "coverStatement": null,
+      "publisher": null,
+      "publicationYear": null,
+      "authenticated": false,
+      "verificationNotes": "Internet Archive, upload 2017-07-31, identifier TuViDdauSoTanBien-VDThaiThuLang-DV. Nhiều PDF tách phần (mục lục và dv01 trở đi), OCR. Chưa đếm trang và chưa đối mục 19 với PDF 277 trang. Không phải bản 2012. Chưa authenticated."
     }
   ]
 }
