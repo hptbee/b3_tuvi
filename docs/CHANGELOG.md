@@ -15,6 +15,7 @@ Tất cả các thay đổi đáng chú ý của dự án **Tử Vi Việt Nam (
 - AutoDev Master Plan (`docs/AUTODEV_MASTER_PLAN.md`): hàng đợi M0 → KB-01; P1.3B, LLM và vận hạn không READY.
 - AutoDev Master Plan V2 (`docs/AUTODEV_MASTER_PLAN_V2.md`): điều phối sau V1. V1 giữ làm lịch sử. AUTH-01 loại khỏi phạm vi. KB-02 và migration production vẫn chờ người.
 - CONTRIBUTING: bốn điều cấm (công thức, nâng nguồn, ghi đè SQLite, merge nhạy cảm) và bốn lớp provenance.
+- Hợp đồng provenance (`docs/knowledge/provenance-contract.json`): bốn lớp và cổng chuyển trạng thái. Test PASS không nâng thành primary hoặc `checked_against_edition`.
 
 ### Khắc phục lỗi (Fixed)
 - Rule v2: độ sáng áp vào bản sao nằm trong vùng điều kiện, không loại cả ngôi sao vì một bản ở cung khác. Rule thiếu `id`, `samePalace` rỗng, `giap.mode` lạ, `countAtLeast.n` không hợp lệ, hoặc `excluded.relation` khác `same` thì không khớp.
