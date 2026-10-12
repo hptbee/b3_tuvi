@@ -674,8 +674,40 @@ button.clickable:focus-visible,
   margin: 4px 0;
 }
 
-.evidence-note {
-  margin-top: 12px;
+.chart-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  max-width: 830px;
+}
+
+.chart-actions button {
+  min-height: 44px;
+  padding: 8px 14px;
+}
+
+.chart-actions p {
+  margin: 0;
+  flex-basis: 100%;
+}
+
+@media print {
+  .app-header,
+  .app-footer,
+  .form-container,
+  .cach-cuc-panel,
+  .chart-actions,
+  .evidence-picks {
+    display: none !important;
+  }
+
+  .tuvi-chart,
+  .grid-container,
+  .palace-box {
+    break-inside: avoid;
+  }
 }
 
 .evidence-picks {
