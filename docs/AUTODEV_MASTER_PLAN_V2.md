@@ -212,7 +212,7 @@ Không thực thi trong phiên nền tảng trừ khi near-term ở trên đã x
 | V2-KB-06 | Mở rộng 63 cách | PLANNED | V2-KB-02 cho claim đã duyệt | yes nếu nâng trạng thái |
 | V2-RULE-01 | Đối chiếu CONFLICT/PARTIAL | PLANNED | nghiên cứu; sửa runtime cần duyệt | yes để ghi `rulesV2.json` |
 | V2-RULE-02 | DSL mới | PLANNED | nhu cầu đã chứng minh | yes nếu bật disabled |
-| V2-RULE-03 | Evidence v3 | PLANNED | rule engine hiện tại | no nếu chỉ thêm DTO |
+| V2-RULE-03 | Evidence v3 | COMPLETED | rule engine hiện tại | no nếu chỉ thêm DTO |
 | V2-RULE-04 | Contradiction resolver | PLANNED | V2-KB-01 | no |
 | V2-INTERPRET-01…08 | Luận giải tất định | PLANNED | claims có nhãn; không LLM | yes nếu đưa chữ tuyệt đối ra UI |
 | V2-TIME-01…05 | Vận hạn | PLANNED | nguồn công thức | yes trước khi luận UI |
