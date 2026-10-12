@@ -41,7 +41,7 @@ const loggedRequest = requestLogLine({
 assert.strictEqual(loggedRequest, 'POST /api/charts/generate');
 assert.ok(!loggedRequest.includes('1990'));
 assert.strictEqual(requestLogLine({ method: 'GET', url: '/api/health?hour=3' }), 'GET /api/health');
-const serverSource = readFileSync(fileURLToPath(new URL('../server.js', import.meta.url)), 'utf8');
+const serverSource = readFileSync(fileURLToPath(new URL('../src/app.js', import.meta.url)), 'utf8');
 assert.ok(serverSource.includes('requestLogLine'));
 assert.ok(!serverSource.includes('req.url'));
 

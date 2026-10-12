@@ -11,7 +11,7 @@
     "test:unit": "node scripts/runTests.mjs unit",
     "test:integration": "node scripts/runTests.mjs integration",
     "test:coverage": "c8 --all --include src/**/*.js --include src/**/*.mjs --include server.js --exclude test/** --reporter text --reporter html --reporter lcov --reporter json-summary --reports-dir coverage node scripts/runTests.mjs all",
-    "test:ci": "npm run test:coverage",
+    "test:ci": "npm run test:coverage && node scripts/checkCoverageFloor.mjs",
     "db:seed": "node src/scripts/migrate.js",
     "db:combinations": "node src/scripts/seedCombinations.js"
   },

@@ -21,7 +21,8 @@ export const unitTests = [
     'test/timeEngine.test.mjs',
     'test/fixtureClasses.test.mjs',
     'test/knowledgeCatalog.test.mjs',
-    'test/qualityEdges.test.mjs'
+    'test/qualityEdges.test.mjs',
+    'test/perfSmoke.test.mjs'
 ];
 
 export const integrationTests = [

@@ -49,3 +49,4 @@ Khóa tính chất: không nâng nguồn từ test pass, catalog không thành p
 - `knowledgeCatalog.test.mjs`
 - `knowledgeValidate.test.mjs`
 - `fixtureClasses.test.mjs`
+- `perfSmoke.test.mjs`
