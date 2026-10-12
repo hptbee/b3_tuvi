@@ -104,7 +104,7 @@ Test V2 chỉ khóa invariant ổn định (AUTH bị loại, KB-02 còn `BLOCKE
 
 - epic: M0
 - priority: P1
-- status: READY
+- status: COMPLETED
 - dependencies: []
 - dependency_class: TECHNICAL
 - scope: `.github/workflows/ci.yml`
@@ -120,7 +120,7 @@ Test V2 chỉ khóa invariant ổn định (AUTH bị loại, KB-02 còn `BLOCKE
 
 - epic: M0
 - priority: P1
-- status: PLANNED
+- status: READY
 - dependencies: [V2-M0-01]
 - dependency_class: TECHNICAL
 - scope: `docs/AGENT_ENGINEERING.md`
@@ -249,12 +249,12 @@ AUTH-01 không có cạnh.
 
 ## 10. Session order
 
-`V2-KB-01` đã xong. Task READY kế tiếp là `V2-M0-03`.
+`V2-M0-03` đã xong. Task READY kế tiếp là `V2-M0-02`.
 
 1. `V2-M0-01` — COMPLETED
 2. `V2-KB-01` — COMPLETED
-3. `V2-M0-03` — READY
-4. `V2-M0-02`
+3. `V2-M0-03` — COMPLETED
+4. `V2-M0-02` — READY
 5. `V2-KB-03` prototype
 6. `V2-M0-04` stateless generate (không xóa dữ liệu cũ)
 
