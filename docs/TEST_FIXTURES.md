@@ -35,6 +35,7 @@ Dữ liệu dựng trong test, database tạm, hoặc lỗi giả. Không dùng 
 - `interpretationPipeline.test.mjs`
 - `knowledgeCoverage.test.mjs`
 - `wholeChart.test.mjs`
+- `timeEngine.test.mjs`
 
 ## Property/invariant test
 

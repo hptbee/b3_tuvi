@@ -216,7 +216,7 @@ Không thực thi trong phiên nền tảng trừ khi near-term ở trên đã x
 | V2-RULE-03 | Evidence v3 | COMPLETED | rule engine hiện tại | no nếu chỉ thêm DTO |
 | V2-RULE-04 | Contradiction resolver | PLANNED | V2-KB-01 | no |
 | V2-INTERPRET-01…08 | Luận giải tất định | foundation COMPLETED trên sprint 3; lời luận UI vẫn cần duyệt | claims có nhãn; không LLM | yes nếu đưa chữ tuyệt đối ra UI |
-| V2-TIME-01…05 | Vận hạn | PLANNED | nguồn công thức | yes trước khi luận UI |
+| V2-TIME-01…05 | Vận hạn | PARTIAL: đọc nhãn đại hạn; chu kỳ khác BLOCKED | nguồn công thức | yes trước khi luận UI |
 | V2-AI-01 | POC nội bộ | DEFERRED | interpretation + evidence DTO | yes trước public |
 | V2-AI-02…06 | Provider, narrator, guard, chat, eval | DEFERRED | V2-AI-01 | yes trước public |
 | V2-UX-01…08 | UI luận giải, evidence, export | PLANNED | API tương ứng | no |
@@ -304,3 +304,7 @@ Báo cáo coverage đọc catalog hiện có. Pilot claims giữ nguyên trạng
 ## 17. Sprint 5
 
 `POST /api/interpretations/analyze` trả 12 cung chức, lớp Thân, và tổng hợp chủ đề. Không có điểm toàn lá số và không có lời luận. Response không kèm payload ngày giờ sinh.
+
+## 18. Sprint 6
+
+Nhãn đại hạn đã có trên lá số gốc được đọc lại, không tính lại. Tiểu hạn, lưu niên, lưu tinh, tứ hóa hạn và vận hạn tháng nhuận ở `blocked` / `not_applied` vì chưa có công thức được duyệt. Không có luận vận hạn.

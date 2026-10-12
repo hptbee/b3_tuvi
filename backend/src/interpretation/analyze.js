@@ -4,6 +4,7 @@ import { validateChartInput } from '../engine/chartInput.js';
 import { normalizeChart } from '../engine/normalizeChart.js';
 import { PALACE_FUNCTIONS, interpretChart } from './pipeline.js';
 import { synthesize } from './wholeChart.js';
+import { timeOverlay } from '../time/timeEngine.js';
 
 function chartFromBirth(value) {
     const { day, month, year, hour, gender } = value;
@@ -32,6 +33,7 @@ function responseFor(chart) {
             ...analysis,
             palaceFunctions: analysis.statements.filter((statement) => !statement.thanOverlay).map((statement) => statement.functionId),
             wholeChart: synthesize(analysis),
+            time: timeOverlay(chart),
             palaceCount: PALACE_FUNCTIONS.length
         }
     };
