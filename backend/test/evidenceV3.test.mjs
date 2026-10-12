@@ -25,20 +25,75 @@ assert.deepStrictEqual(Object.keys(hit).sort(), ['evidence', 'rows', 'ruleId']);
 
 const dto = buildEvidenceV3(hit.evidence);
 assert.strictEqual(dto.version, 3);
+assert.strictEqual(dto.runtimeMatchStatus, 'matched');
 assert.strictEqual(dto.patternDetected, true);
-assert.strictEqual(dto.formationConditions, 'satisfied');
-assert.strictEqual(dto.breakingConditions, 'unknown');
+assert.strictEqual(dto.formationConditions, 'unknown');
+assert.strictEqual(dto.breakingConditions, 'not_implemented');
+assert.strictEqual(dto.formulaReview, 'not_checked');
 assert.strictEqual(dto.ruleId, 'tu_phu_dong_cung');
 assert.strictEqual(dto.targetPalace.palaceId, hit.evidence.palaceId);
 assert.deepStrictEqual(dto.matchedStars, ['tu_vi', 'thien_phu']);
 assert.strictEqual(dto.matchedStarInstances.length, 2);
 assert.ok(dto.brightnessEvidence.length >= 1);
 assert.deepStrictEqual(dto.relationshipEvidence, []);
-assert.deepStrictEqual(dto.satisfiedConditions, [{ op: 'same_palace', status: 'satisfied' }]);
+assert.deepStrictEqual(dto.satisfiedConditions, [{ op: 'same_palace', status: 'runtime_matched' }]);
 assert.deepStrictEqual(dto.unresolvedConditions, []);
 assert.deepStrictEqual(dto.sourceClaimReferences, []);
-assert.strictEqual(dto.verification.formulaStatus, 'undocumented');
-assert.strictEqual(dto.verification.bibliographicStatus, 'unverified');
+assert.strictEqual(dto.verification.formulaStatus, null);
+assert.strictEqual(dto.verification.bibliographicStatus, null);
+assert.strictEqual(dto.verification.interpretationStatus, null);
+assert.strictEqual(dto.verification.availability, 'not_recorded');
+
+const claimed = buildEvidenceV3(hit.evidence, {
+    formationConditions: 'source_satisfied',
+    breakingConditions: 'checked_clear',
+    formulaStatus: 'checked_against_edition',
+    bibliographicStatus: 'primary',
+    interpretationStatus: 'sourced',
+    editionAuthenticated: true,
+    authenticationScope: 'digital_file_accepted_as_working_text',
+    formulaCheckedAgainstEdition: true,
+    sourceId: 'thai-thu-lang-tan-bien',
+    sourceClaimReferences: [{ claimId: 'claim-phu-tuong-trieu-vien', sourceId: 'thai-thu-lang-tan-bien' }]
+});
+assert.strictEqual(claimed.runtimeMatchStatus, 'matched');
+assert.strictEqual(claimed.formationConditions, 'unknown');
+assert.strictEqual(claimed.breakingConditions, 'not_implemented');
+assert.strictEqual(claimed.formulaReview, 'not_checked');
+assert.strictEqual(claimed.verification.formulaStatus, null);
+assert.strictEqual(claimed.verification.bibliographicStatus, null);
+assert.ok(claimed.verification.rejected.some((item) => item.value === 'primary'));
+assert.ok(claimed.verification.rejected.some((item) => item.value === 'checked_against_edition'));
+
+const omittedScope = buildEvidenceV3(hit.evidence, {
+    formationConditions: 'source_satisfied',
+    formulaStatus: 'checked_against_edition',
+    bibliographicStatus: 'primary',
+    editionAuthenticated: true,
+    formulaCheckedAgainstEdition: true
+});
+assert.strictEqual(omittedScope.formationConditions, 'unknown');
+assert.strictEqual(omittedScope.formulaReview, 'not_checked');
+assert.strictEqual(omittedScope.verification.formulaStatus, null);
+assert.strictEqual(omittedScope.verification.bibliographicStatus, null);
+
+const notImplemented = buildEvidenceV3(hit.evidence, { formationConditions: 'not_implemented' });
+assert.strictEqual(notImplemented.formationConditions, 'unknown');
+assert.strictEqual(notImplemented.breakingConditions, 'not_implemented');
+
+const fakeStatus = buildEvidenceV3(hit.evidence, { bibliographicStatus: 'unverified' });
+assert.strictEqual(fakeStatus.verification.bibliographicStatus, null);
+assert.deepStrictEqual(fakeStatus.verification.rejected, [{ layer: 'bibliographicStatus', value: 'unverified' }]);
+
+const recorded = buildEvidenceV3(hit.evidence, {
+    formulaStatus: 'undocumented',
+    bibliographicStatus: 'conflicting_secondary',
+    interpretationStatus: 'unreviewed'
+});
+assert.strictEqual(recorded.verification.availability, 'recorded');
+assert.strictEqual(recorded.verification.formulaStatus, 'undocumented');
+assert.strictEqual(recorded.verification.bibliographicStatus, 'conflicting_secondary');
+assert.strictEqual(recorded.formationConditions, 'unknown');
 
 const linked = buildEvidenceV3({
     ruleId: 'linked_rule',
@@ -51,9 +106,10 @@ const linked = buildEvidenceV3({
     sourceClaimReferences: [{ claimId: 'claim-phu-tuong-trieu-vien', sourceId: 'thai-thu-lang-tan-bien' }]
 });
 assert.deepStrictEqual(linked.relationshipEvidence, [{ op: 'clauses', starIds: ['tu_vi'] }]);
-assert.strictEqual(linked.breakingConditions, 'unknown');
+assert.strictEqual(linked.breakingConditions, 'not_implemented');
 assert.strictEqual(linked.sourceClaimReferences[0].claimId, 'claim-phu-tuong-trieu-vien');
-assert.strictEqual(linked.verification.formulaStatus, 'undocumented');
+assert.strictEqual(linked.verification.formulaStatus, null);
+assert.strictEqual(linked.formationConditions, 'unknown');
 assert.strictEqual(buildEvidenceV3(null), null);
 
 const boxes = {};
@@ -67,4 +123,4 @@ assert.strictEqual(matched.evidence.ruleId, 'tu_phu_dong_cung');
 assert.ok(!('version' in matched));
 assert.ok(!('breakingConditions' in matched));
 
-console.log('evidence v3 describes a hit without inventing breaking conditions');
+console.log('evidence v3 keeps a runtime match separate from source formation');
