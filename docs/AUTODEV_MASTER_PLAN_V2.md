@@ -26,7 +26,7 @@ Mười lớp: calculation, normalized chart, palace relations, rule engine, kno
 | CI workflow | chưa có |
 | SQLite | schema v1. Sau `V2-M0-04`, `POST /api/charts/generate` không ghi ngày giờ sinh. Hàng cũ không bị xóa |
 | Catalog | 63 cách, 58 rule v2; 10 pilot: 7 CONFLICT, 2 PARTIAL, 1 NOT_IMPLEMENTED, 0 MATCH |
-| Ấn bản lúc audit | cả hai edition `authenticated: false`. Sau đó chủ dự án chấp nhận PDF 277 trang; bản 2012 và bản Archive 2017 vẫn false |
+| Ấn bản lúc audit | cả hai edition `authenticated: false`. Sau đó chủ dự án chấp nhận PDF 277 trang, rồi đặt `authenticated: true` cho phiếu 2012 và item Archive 2017. Sách 2012 chưa mở, scan 2017 chưa đối chữ |
 | LLM / Tiểu hạn / đăng nhập | chưa có trong code |
 
 Working tree lúc tách nhánh còn dirty **ngoài** V2: `package-lock.json`, `frontend/package-lock.json`, `.cursor/`, `rules/`. Không stage.
@@ -186,7 +186,8 @@ Test V2 chỉ khóa invariant ổn định (AUTH bị loại, KB-02 còn `BLOCKE
 - dependencies: []
 - dependency_class: DOMAIN_SOURCE, HUMAN_APPROVAL
 - scope: PDF 277 trang tuvithuchanh.com, do chủ dự án chấp nhận 2026-10-12
-- acceptanceCriteria: `authenticated: true` trên edition PDF 277 trang, với `authenticationBasis: project_owner`. Không ghi năm in 1956 là đã chứng minh. Bản EMIC 2012 và bản Internet Archive 2017 vẫn `authenticated: false`. Edition khác: `authenticated: true` chỉ sau khi người mở được đúng bản.
+- acceptanceCriteria: `authenticated: true` trên edition PDF 277 trang, với `authenticationBasis: project_owner`. Không ghi năm in 1956 là đã chứng minh. Edition khác: `authenticated: true` chỉ sau khi người chấp nhận đúng bản.
+- later: ngày 2026-10-12 chủ dự án đặt `authenticated: true` cho phiếu 2012 (`library_record_accepted_by_owner`) và item Archive 2017 (`archive_item_accepted_by_owner`). `physicalCopyInspected`, `textVerified`, `textCollatedAgainstOriginal` vẫn false.
 - requiresHumanApproval: yes — đã có cho file PDF này
 - rollbackPlan: đặt lại `authenticated: false` nếu chủ dự án rút chấp nhận
 - deliverables: `docs/knowledge/sources.json`
