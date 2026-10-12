@@ -295,4 +295,8 @@ Các task kỹ thuật sau foundation đã có mã trên `autodev/v2-sprint-2`: 
 
 ## 15. Sprint 3
 
-`V2-INTERPRET` foundation trên `autodev/v2-sprint-3`: contract luận điểm, nối rule engine với evidence v3, eligibility, 12 cung chức cộng lớp Thân, mâu thuẫn và thiếu chứng cứ. Không có lời luận người dùng. Sprint 4–7 chưa nằm trong nhánh này.
+`V2-INTERPRET` foundation trên `autodev/v2-sprint-3`: contract luận điểm, nối rule engine với evidence v3, eligibility, 12 cung chức cộng lớp Thân, mâu thuẫn và thiếu chứng cứ. Không có lời luận người dùng.
+
+## 16. Sprint 4
+
+Báo cáo coverage đọc catalog hiện có. Pilot claims giữ nguyên trạng thái đối chiếu. `rulesV2.json` không đổi. Edition authenticated không biến công thức thành đã kiểm. Ý nghĩa sao và cung trong SQLite chưa được review thư tịch.
