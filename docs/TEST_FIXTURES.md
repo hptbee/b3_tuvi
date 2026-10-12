@@ -33,6 +33,10 @@ Dữ liệu dựng trong test, database tạm, hoặc lỗi giả. Không dùng 
 - `safeErrorLog.test.mjs`
 - `evidenceV3.test.mjs`
 - `interpretationPipeline.test.mjs`
+- `knowledgeCoverage.test.mjs`
+- `wholeChart.test.mjs`
+- `timeEngine.test.mjs`
+- `narrator.test.mjs`
 
 ## Property/invariant test
 
