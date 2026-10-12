@@ -66,7 +66,7 @@ Dữ liệu luận giải tĩnh ở `backend/src/data/`. Ý nghĩa sao/cung và 
 Bốn điều không làm im lặng:
 
 1. **Công thức.** Không sửa `tuviRules.mjs`, bảng an sao, `rulesV2.json`, hoặc logic trong `combinations.json` khi chưa có đối chiếu nguồn và duyệt nếu công thức đang tranh luận. Test phần mềm PASS không phải phép sửa thư.
-2. **Trạng thái nguồn.** Không nâng `bibliographicStatus`, `authenticated`, `formulaCheckedAgainstSource`, hay `verification_status` chỉ vì test xanh hoặc vì một PDF dựng lại.
+2. **Trạng thái nguồn.** Không nâng `bibliographicStatus`, `authenticated`, `formulaCheckedAgainstSource`, hay `verification_status` chỉ vì test xanh hoặc vì một PDF dựng lại. Sprint 9 ủy quyền đối chiếu đoạn sách cho dual-AI cross-review. Kết quả đó là `AI_CROSS_REVIEWED`, `expertVerified` vẫn `false`, và không tự mở merge công thức, migration SQLite production, hay luận giải/AI public. Chủ dự án vẫn quyết các cổng phát hành đó.
 3. **SQLite người dùng.** Không ghi đè hoặc xóa `backend/data/*.sqlite`. Schema production chỉ đổi khi có backup và duyệt.
 4. **Merge nhạy cảm.** Công thức, nguồn đã nâng cấp, migration dữ liệu, và AI luận giải công khai không merge vào `main` khi chưa được duyệt.
 
