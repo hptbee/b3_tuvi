@@ -17,7 +17,14 @@ router.post('/analyze', (req, res) => {
 
 router.post('/ask', (req, res) => {
     try {
-        const answer = answerQuestion(req.body?.analysis, req.body?.questionId, req.body?.topic);
+        if (!req.body || typeof req.body !== 'object' || Object.prototype.hasOwnProperty.call(req.body, 'analysis')) {
+            return res.status(400).json({ ok: false, error: 'client_analysis_rejected', prose: null });
+        }
+        const result = analyzeChartRequest(req.body);
+        if (result.status !== 200) {
+            return res.status(result.status).json({ ok: false, error: 'analysis_failed', prose: null });
+        }
+        const answer = answerQuestion(result.body, req.body.questionId, req.body.topic);
         res.status(answer.ok ? 200 : 400).json(answer);
     } catch (error) {
         logSafeError('Interpretation ask error', error);

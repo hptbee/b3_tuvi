@@ -1,8 +1,13 @@
 import rulesV2 from '../data/rulesV2.json' with { type: 'json' };
+import combinations from '../data/combinations.json' with { type: 'json' };
 import pilot from '../../../docs/knowledge/pilotClaims.json' with { type: 'json' };
+import sourcesDoc from '../../../docs/knowledge/sources.json' with { type: 'json' };
+import matrixDoc from '../../../docs/knowledge/combination-source-matrix.json' with { type: 'json' };
+import contract from '../../../docs/knowledge/provenance-contract.json' with { type: 'json' };
 import { evaluateRule } from '../engine/ruleEngine.js';
 import { buildEvidenceV3 } from '../engine/evidenceV3.js';
 import { branchIndexRelations } from '../engine/palaceRelation.js';
+import { validateKnowledgeBundle } from '../knowledge/validateKnowledge.js';
 import { claimEligibility } from './eligibility.js';
 
 export const PALACE_FUNCTIONS = [
@@ -24,6 +29,24 @@ export const CORE_PALACES = ['menh', 'phuc_duc', 'quan_loc', 'tai_bach'];
 
 function byId(left, right) {
     return String(left.claimId || left.ruleId || left.starId || '').localeCompare(String(right.claimId || right.ruleId || right.starId || ''));
+}
+
+function defaultKnowledgeBundle() {
+    return {
+        sources: sourcesDoc,
+        matrix: matrixDoc,
+        pilot,
+        contract,
+        combinationNames: combinations.map((item) => item.name)
+    };
+}
+
+let cachedKnowledge = null;
+
+function knowledgeAcceptance(bundle) {
+    if (bundle) return validateKnowledgeBundle(bundle);
+    if (!cachedKnowledge) cachedKnowledge = validateKnowledgeBundle(defaultKnowledgeBundle());
+    return cachedKnowledge;
 }
 
 function catalogClaims(extra) {
@@ -83,7 +106,7 @@ function rollupFormation(hits) {
 function statementFor(chart, palace, spec, hits, claims) {
     const palaceHits = palace ? hits.filter((hit) => hit.palaceId === palace.id) : [];
     const applied = applicableClaims(claims, chart, spec.functionId, palaceHits);
-    const eligibility = applied.map((claim) => claimEligibility(claim, chart));
+        const eligibility = applied.map((claim) => claimEligibility(claim, chart, palace));
     const links = linkEvidence(applied);
     const eligible = eligibility.filter((item) => item.eligible);
     let availabilityStatus = 'insufficient_evidence';
@@ -146,6 +169,10 @@ function statementFor(chart, palace, spec, hits, claims) {
 }
 
 export function interpretChart(chart, options = {}) {
+    const knowledge = knowledgeAcceptance(options.knowledgeBundle);
+    if (!knowledge.ok) {
+        return { ok: false, error: 'knowledge_bundle_invalid', statements: [], usage: 'structured_analysis' };
+    }
     if (!chart || chart.ok === false || !Array.isArray(chart.palaces) || chart.palaces.length !== 12) {
         return { ok: false, error: 'malformed_chart', statements: [], usage: 'structured_analysis' };
     }

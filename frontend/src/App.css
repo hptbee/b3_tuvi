@@ -616,3 +616,49 @@ body {
   border-radius: 10px;
   background: rgba(255,255,255,0.7);
 }
+
+.evidence-panel {
+  width: 100%;
+  max-width: 830px;
+  background: #fff;
+  color: #222;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  border: 2px solid #3d4f3a;
+  margin-top: 10px;
+}
+
+.evidence-header {
+  background: #243026;
+  color: #fff;
+  padding: 20px 25px 15px;
+}
+
+.evidence-header h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+.evidence-header p,
+.evidence-body,
+.evidence-note {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.evidence-body {
+  padding: 16px 25px 20px;
+}
+
+.evidence-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.evidence-list li {
+  margin: 4px 0;
+}
+
+.evidence-note {
+  margin-top: 12px;
+}

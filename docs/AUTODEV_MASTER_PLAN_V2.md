@@ -250,16 +250,9 @@ AUTH-01 không có cạnh.
 
 ## 10. Session order
 
-Near-term queue của phiên này đã xong (`V2-M0-04` COMPLETED). Production migration và `V2-KB-02` vẫn `BLOCKED_HUMAN`. Không còn task READY trong hàng gần.
+Hàng gần ở mục 6 đã xong. Trạng thái từng task lấy ở mục 7: `V2-KB-02` là COMPLETED, không còn là cổng chặn. Production migration `V2-KB-03-prod` vẫn `BLOCKED_HUMAN`.
 
-1. `V2-M0-01` — COMPLETED
-2. `V2-KB-01` — COMPLETED
-3. `V2-M0-03` — COMPLETED
-4. `V2-M0-02` — COMPLETED
-5. `V2-KB-03` prototype — COMPLETED
-6. `V2-M0-04` stateless generate (không xóa dữ liệu cũ) — COMPLETED
-
-Dừng trước `V2-KB-02`, production migration, sửa `rulesV2.json`, LLM public, deploy.
+Các phiên sau nền tảng nằm ở mục 14 đến mục 19. Không sửa `docs/AUTODEV_MASTER_PLAN.md`.
 
 ## 11. Release milestones
 

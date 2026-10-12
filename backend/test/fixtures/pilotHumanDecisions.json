@@ -1,0 +1,16 @@
+{
+  "usage": "human_decision_fixture",
+  "note": "Independent of coverageReport.js. A MATCH or approval on a pilot claim must be recorded here first.",
+  "claims": [
+    { "claimId": "claim-phu-tuong-trieu-vien", "formulaComparisonStatus": "CONFLICT", "approvedForInterpretation": false, "humanRecorded": true },
+    { "claimId": "claim-that-sat-trieu-dau", "formulaComparisonStatus": "CONFLICT", "approvedForInterpretation": false, "humanRecorded": true },
+    { "claimId": "claim-nguyet-lang-thien-mon", "formulaComparisonStatus": "PARTIAL", "approvedForInterpretation": false, "humanRecorded": true },
+    { "claimId": "claim-nhat-nguyet-tinh-minh", "formulaComparisonStatus": "CONFLICT", "approvedForInterpretation": false, "humanRecorded": true },
+    { "claimId": "claim-khoa-minh-loc-am", "formulaComparisonStatus": "NOT_IMPLEMENTED", "approvedForInterpretation": false, "humanRecorded": true },
+    { "claimId": "claim-tu-phu-trieu-vien", "formulaComparisonStatus": "CONFLICT", "approvedForInterpretation": false, "humanRecorded": true },
+    { "claimId": "claim-nhat-nguyet-dong-lam", "formulaComparisonStatus": "CONFLICT", "approvedForInterpretation": false, "humanRecorded": true },
+    { "claimId": "claim-hinh-tu-giap-an", "formulaComparisonStatus": "PARTIAL", "approvedForInterpretation": false, "humanRecorded": true },
+    { "claimId": "claim-minh-chau-xuat-hai", "formulaComparisonStatus": "CONFLICT", "approvedForInterpretation": false, "humanRecorded": true },
+    { "claimId": "claim-ma-lac-khong-vong", "formulaComparisonStatus": "CONFLICT", "approvedForInterpretation": false, "humanRecorded": true }
+  ]
+}

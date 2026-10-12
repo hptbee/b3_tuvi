@@ -7,6 +7,7 @@ import chartRoutes from './src/routes/chartRoutes.js';
 import meaningRoutes from './src/routes/meaningRoutes.js';
 import combinationRoutes from './src/routes/combinationRoutes.js';
 import interpretationRoutes from './src/routes/interpretationRoutes.js';
+import { requestLogLine } from './src/http/requestLog.js';
 
 dotenv.config();
 
@@ -14,7 +15,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use((req, res, next) => {
-  console.log(`${req.method} ${req.url}`);
+  console.log(requestLogLine(req));
   next();
 });
 

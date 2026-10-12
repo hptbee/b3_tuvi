@@ -17,16 +17,35 @@ export function collectAllowedIds(analysis) {
     return ids;
 }
 
+function idsOnStatement(statement) {
+    const ids = new Set();
+    if (statement?.statementId) ids.add(statement.statementId);
+    for (const id of statement?.claimIds || []) ids.add(id);
+    for (const star of statement?.stars || []) if (star.starId) ids.add(star.starId);
+    for (const evidence of statement?.ruleEvidence || []) if (evidence.ruleId) ids.add(evidence.ruleId);
+    for (const reference of statement?.sourceReferences || []) if (reference.sourceId) ids.add(reference.sourceId);
+    return ids;
+}
+
 export function evaluateNarration(draft, analysis) {
     const allowed = collectAllowedIds(analysis);
     const referenced = Array.isArray(draft?.referencedIds) ? draft.referencedIds : [];
     const extra = Array.isArray(draft?.extraClaims) ? draft.extraClaims : [];
     const unknown = referenced.filter((id) => !allowed.has(id));
+    const statements = analysis?.statements || [];
+    const hosts = statements.filter((statement) => referenced.includes(statement.statementId));
+    const grounded = new Set();
+    for (const statement of hosts) {
+        for (const id of idsOnStatement(statement)) grounded.add(id);
+    }
+    const ungroundedIds = referenced.filter((id) => !unknown.includes(id) && (hosts.length === 0 || !grounded.has(id)));
     return {
         modelCalled: draft?.modelCalled === true,
-        evidenceFidelity: unknown.length === 0 && extra.length === 0,
+        evidenceFidelity: unknown.length === 0 && extra.length === 0 && ungroundedIds.length === 0,
+        qualityEvaluated: false,
         unsupportedStatements: extra,
         sourceHallucinations: unknown,
+        ungroundedIds,
         structuredOutput: draft?.text == null || typeof draft.text === 'string',
         cost: draft?.cost ?? null,
         latencyMs: draft?.latencyMs ?? null
