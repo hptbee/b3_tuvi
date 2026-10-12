@@ -63,8 +63,8 @@ assert.throws(() => assertSafePrototypePath(escaped), /refuses/);
 assert.ok(!fs.existsSync(path.resolve(escaped)));
 
 const linkDir = fs.mkdtempSync(path.join(os.tmpdir(), 'tuvi-kb-filelink-'));
-const outsideFile = path.join(path.dirname(fs.realpathSync(os.tmpdir())), `tuvi-kb-secret-${process.pid}.sqlite`);
 try {
+    const outsideFile = path.join(linkDir, 'secret.sqlite');
     fs.writeFileSync(outsideFile, 'sentinel');
     const linkedDb = path.join(linkDir, 'prototype.sqlite');
     fs.linkSync(outsideFile, linkedDb);
@@ -83,7 +83,6 @@ try {
         assert.strictEqual(fs.readFileSync(outsideFile, 'utf8'), 'sentinel');
     }
 } finally {
-    fs.rmSync(outsideFile, { force: true });
     fs.rmSync(linkDir, { recursive: true, force: true });
 }
 
