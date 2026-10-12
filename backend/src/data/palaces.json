@@ -1,0 +1,184 @@
+[
+    {
+        "palace_name": "MỆNH",
+        "short_name": "Cung Mệnh",
+        "core_meaning": "Cung Mệnh là cung quan trọng nhất trong lá số Tử Vi, là cơ sở để xem xét bản mệnh, tính cách, tướng mạo, cũng như mức độ phú quý, bần tiện, thọ yểu của đương số.",
+        "life_aspect": [
+            "bản thân",
+            "tính cách",
+            "tướng mạo"
+        ],
+        "keywords": [
+            "mệnh",
+            "bản mệnh",
+            "tính cách"
+        ]
+    },
+    {
+        "palace_name": "PHỤ MẪU",
+        "short_name": "Cung Phụ Mẫu",
+        "core_meaning": "Xem về cha mẹ, sự thọ yểu của cha mẹ, sự hòa hợp hay xung khắc giữa đương số và cha mẹ.",
+        "life_aspect": [
+            "gia đình"
+        ],
+        "keywords": [
+            "cha mẹ",
+            "phụ mẫu"
+        ]
+    },
+    {
+        "palace_name": "PHÚC ĐỨC",
+        "short_name": "Cung Phúc Đức",
+        "core_meaning": "Xem về phúc phận, thọ mạng, họ hàng nội ngoại, sự phù hộ của tổ tiên. Đây là cung ảnh hưởng đến toàn bộ lá số.",
+        "life_aspect": [
+            "phúc phận",
+            "tổ tiên"
+        ],
+        "keywords": [
+            "phúc đức",
+            "thọ mạng",
+            "tổ tiên"
+        ]
+    },
+    {
+        "palace_name": "ĐIỀN TRẠCH",
+        "short_name": "Cung Điền Trạch",
+        "core_meaning": "Xem về nhà cửa, đất đai, bất động sản, sự kế thừa sản nghiệp và tình trạng nơi ở.",
+        "life_aspect": [
+            "tài sản",
+            "nhà cửa"
+        ],
+        "keywords": [
+            "điền trạch",
+            "nhà",
+            "đất"
+        ]
+    },
+    {
+        "palace_name": "QUAN LỘC",
+        "short_name": "Cung Quan Lộc",
+        "core_meaning": "Xem về công danh, sự nghiệp, học hành, thi cử, bằng cấp, nghề nghiệp phù hợp và uy quyền trong xã hội.",
+        "life_aspect": [
+            "sự nghiệp",
+            "học vấn"
+        ],
+        "keywords": [
+            "quan lộc",
+            "sự nghiệp",
+            "công danh",
+            "học hành"
+        ]
+    },
+    {
+        "palace_name": "NÔ BỘC",
+        "short_name": "Cung Nô Bộc",
+        "core_meaning": "Xem về bạn bè, đồng nghiệp, người giúp việc, cấp dưới, những người giao tiếp ngoài xã hội. Sự giúp đỡ hay phản trắc của họ.",
+        "life_aspect": [
+            "xã hội",
+            "bạn bè"
+        ],
+        "keywords": [
+            "nô bộc",
+            "bạn bè",
+            "đồng nghiệp"
+        ]
+    },
+    {
+        "palace_name": "THIÊN DI",
+        "short_name": "Cung Thiên Di",
+        "core_meaning": "Xem về môi trường xã hội, khả năng giao tiếp, những điều gặp phải khi rời quê hương đi làm ăn xa hoặc xuất ngoại.",
+        "life_aspect": [
+            "di chuyển",
+            "xã hội"
+        ],
+        "keywords": [
+            "thiên di",
+            "xuất ngoại",
+            "di chuyển"
+        ]
+    },
+    {
+        "palace_name": "TẬT ÁCH",
+        "short_name": "Cung Tật Ách",
+        "core_meaning": "Xem về tình trạng sức khỏe, bệnh tật, cũng như những tai ương, ách nạn có thể gặp phải trong đời.",
+        "life_aspect": [
+            "sức khỏe",
+            "tai nạn"
+        ],
+        "keywords": [
+            "tật ách",
+            "sức khỏe",
+            "bệnh tật"
+        ]
+    },
+    {
+        "palace_name": "TÀI BẠCH",
+        "short_name": "Cung Tài Bạch",
+        "core_meaning": "Xem về năng lực kiếm tiền, khả năng giữ tiền, nguồn tài chính, phương thức làm giàu và mức độ giàu nghèo.",
+        "life_aspect": [
+            "tài chính",
+            "tiền bạc"
+        ],
+        "keywords": [
+            "tài bạch",
+            "tiền bạc",
+            "kiếm tiền",
+            "tài chính"
+        ]
+    },
+    {
+        "palace_name": "TỬ TỨC",
+        "short_name": "Cung Tử Tức",
+        "core_meaning": "Xem về con cái, số lượng con, giới tính (nam nữ), sự hiếu thuận, thành đạt của con cái, và quan hệ giữa đương số với con cái.",
+        "life_aspect": [
+            "con cái",
+            "gia đình"
+        ],
+        "keywords": [
+            "tử tức",
+            "con cái"
+        ]
+    },
+    {
+        "palace_name": "PHU THÊ",
+        "short_name": "Cung Phu Thê",
+        "core_meaning": "Xem về tính cách, đạo đức, xuất thân của người hôn phối, cũng như hạnh phúc gia đình, sự viên mãn hay gãy đổ trong hôn nhân.",
+        "life_aspect": [
+            "hôn nhân",
+            "tình cảm"
+        ],
+        "keywords": [
+            "phu thê",
+            "hôn nhân",
+            "vợ chồng",
+            "tình yêu"
+        ]
+    },
+    {
+        "palace_name": "HUYNH ĐỆ",
+        "short_name": "Cung Huynh Đệ",
+        "core_meaning": "Xem về anh chị em ruột thịt, số lượng anh chị em, sự hòa thuận, giúp đỡ hay xung khắc lẫn nhau.",
+        "life_aspect": [
+            "gia đình"
+        ],
+        "keywords": [
+            "huynh đệ",
+            "anh em",
+            "chị em"
+        ]
+    },
+    {
+        "palace_name": "THÂN",
+        "short_name": "Cung Thân",
+        "core_meaning": "Cung Thân là cung chỉ hậu vận (thường sau 30 tuổi), đánh giá những gì đương số đạt được thông qua nỗ lực bản thân.",
+        "life_aspect": [
+            "hậu vận",
+            "bản thân"
+        ],
+        "keywords": [
+            "thân",
+            "hậu vận",
+            "nỗ lực"
+        ]
+    }
+]

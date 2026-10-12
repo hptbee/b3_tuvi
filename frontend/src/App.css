@@ -1,0 +1,618 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif; /* Tuvivietnam uses standard serif/sans-serif combo */
+  background-color: #f6ebd8; /* Creme paper background like tuvivietnam */
+  color: #000;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Header & Navigation Styles */
+.app-header {
+  background-color: #8b0000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  height: 70px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  font-size: 32px;
+  color: #ffd700;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.main-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.main-menu a {
+  text-decoration: none;
+  color: #ffcccc;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.main-menu a:hover, .main-menu a.active {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* Footer Styles */
+.app-footer {
+  background-color: #2c1a1a;
+  color: #ddd;
+  padding: 40px 20px 20px;
+  border-top: 5px solid #8b0000;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-section h3 {
+  color: #ffd700;
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.footer-section p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.footer-section a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  font-size: 14px;
+  color: #888;
+}
+
+
+.form-container {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.tuviform {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.tuviform input, .tuviform select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.tuviform button {
+  background: #c62828;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.chart-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.back-btn {
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+/* GRIDS AND POSTURE */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  grid-template-rows: repeat(4, 280px);
+  border: 2px solid #000;
+  background-color: #f6ebd8;
+}
+
+/* PALACE BOX */
+.palace-box {
+  border: 1px solid #777;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  font-family: Arial, sans-serif;
+}
+
+.box-header {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.chi-name {
+  color: #c62828; /* Can Chi Cung Name in Red */
+}
+
+.cung-name-group {
+  display: flex;
+  gap: 10px;
+}
+
+.cung-name {
+  color: #000;
+}
+
+.dai-han {
+  color: #000;
+  font-weight: bold;
+}
+
+.major-stars-container {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  min-height: 40px;
+}
+
+.major-star {
+  margin-bottom: 2px;
+  display: block;
+}
+
+.minor-stars-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 12px;
+  flex-grow: 1;
+}
+
+.minor-star {
+  margin-bottom: 2px;
+  display: block;
+}
+
+.good-stars {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.bad-stars {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.box-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #000;
+  font-weight: bold;
+  margin-top: auto;
+}
+
+.thang-lap {
+  color: #555;
+  font-weight: normal;
+}
+
+/* TUAN TRIET */
+.tuan-label, .triet-label {
+  position: absolute;
+  background: #000;
+  color: #fff;
+  padding: 2px 5px;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+/* Simple representation. Accurately drawing Tuan Triet boundaries in CSS grid is complex, 
+   we place it on the border. */
+.has-tuan .tuan-label { top: -10px; left: 50%; transform: translateX(-50%); }
+.has-triet .triet-label { bottom: -10px; left: 50%; transform: translateX(-50%); background: red; }
+
+/* CENTER INFO */
+.center-wrapper {
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 2;
+  border: 1px solid #777;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Yin_yang.svg/240px-Yin_yang.svg.png');
+  background-size: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(246, 235, 216, 0.95);
+}
+
+.center-info {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #000;
+}
+
+.site-title {
+  color: #0000ff;
+  font-size: 16px;
+  margin-bottom: 2px;
+}
+
+.site-link {
+  color: #ff0000;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.chart-title {
+  color: #0000ff;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.info-row {
+  display: flex;
+  gap: 10px;
+}
+
+.label {
+  font-weight: bold;
+  width: 80px;
+}
+
+.value {
+  color: #000;
+}
+
+.text-blue {
+  color: #0000ff;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  font-size: 60px;
+  color: rgba(0,0,0,0.05);
+  pointer-events: none;
+}
+
+/* Star Modal Styles */
+.star-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+}
+
+.star-modal-content {
+  background: #fffdf7;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  text-align: left;
+  border: 2px solid #8b0000;
+}
+
+.star-modal-content h3 {
+  color: #c62828;
+  margin-bottom: 5px;
+  border-bottom: 2px solid #edc2c2;
+  padding-bottom: 10px;
+  font-size: 22px;
+}
+
+.cung-subtitle {
+  color: #555;
+  font-size: 15px;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.star-meaning-body {
+  line-height: 1.6;
+  font-size: 16px;
+  color: #333;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #888;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  color: #c62828;
+}
+
+/* Hover effects for stars */
+.clickable {
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.clickable:hover {
+  transform: scale(1.15);
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* ============================================================
+   CÁCH CỤC PANEL
+   ============================================================ */
+.cach-cuc-panel {
+  width: 100%;
+  max-width: 830px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin-top: 10px;
+  border: 2px solid #8b0000;
+}
+
+.cach-cuc-header {
+  background: linear-gradient(135deg, #8b0000, #c62828);
+  padding: 20px 25px 15px;
+  color: #fff;
+}
+
+.cach-cuc-title {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 5px;
+}
+
+.cach-cuc-title-icon { font-size: 24px; }
+
+.cach-cuc-subtitle {
+  font-size: 13px;
+  opacity: 0.85;
+  margin: 0;
+}
+
+.cach-cuc-loading, .cach-cuc-empty {
+  text-align: center;
+  padding: 30px;
+  color: #888;
+  font-style: italic;
+}
+
+.spinner {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+  font-size: 20px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.cach-cuc-summary-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding: 12px 20px;
+  background: #fafafa;
+  border-bottom: 1px solid #eee;
+}
+
+.summary-badge {
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: #333;
+}
+
+.summary-total {
+  margin-left: auto;
+  font-size: 13px;
+  color: #555;
+}
+
+.cach-cuc-group {
+  padding: 15px 20px;
+  border-bottom: 1px solid #f0e6e6;
+}
+.cach-cuc-group:last-child { border-bottom: none; }
+
+.group-label {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cach-cuc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 10px;
+}
+
+.cach-cuc-card {
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+
+.cach-cuc-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+.cach-cuc-card.expanded {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.card-icon { font-size: 14px; }
+
+.card-name {
+  font-size: 13px;
+  flex: 1;
+}
+
+.card-arrow {
+  font-size: 10px;
+  color: #999;
+  transition: transform 0.2s;
+}
+
+.card-desc {
+  font-size: 12px;
+  color: #555;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.card-detail {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card-formula, .card-meaning {
+  font-size: 12px;
+  color: #444;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  line-height: 1.5;
+}
+
+.formula-label {
+  font-weight: bold;
+  color: #333;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 4px;
+}
+
+.tag {
+  font-size: 10px;
+  padding: 2px 7px;
+  border: 1px solid;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.7);
+}
