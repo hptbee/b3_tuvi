@@ -300,3 +300,7 @@ Các task kỹ thuật sau foundation đã có mã trên `autodev/v2-sprint-2`: 
 ## 16. Sprint 4
 
 Báo cáo coverage đọc catalog hiện có. Pilot claims giữ nguyên trạng thái đối chiếu. `rulesV2.json` không đổi. Edition authenticated không biến công thức thành đã kiểm. Ý nghĩa sao và cung trong SQLite chưa được review thư tịch.
+
+## 17. Sprint 5
+
+`POST /api/interpretations/analyze` trả 12 cung chức, lớp Thân, và tổng hợp chủ đề. Không có điểm toàn lá số và không có lời luận. Response không kèm payload ngày giờ sinh.
