@@ -36,14 +36,14 @@ Tài liệu này được thiết kế để cung cấp cho mô hình AI (như C
 1. Mở `backend/src/engine/constants.js`: Thêm tên sao và màu sắc vào `STAR_COLORS`.
 2. Mở `backend/src/engine/tuviRules.mjs`: an sao đó trong `calculateTuVi`.
 3. Nếu sao có miếu/vượng/đắc/hãm, thêm dòng vào `backend/src/data/starStatus.json`.
-4. (Tùy chọn) Thêm ý nghĩa sao vào MongoDB collection `stars`.
+4. (Tùy chọn) Seed ý nghĩa sao/cung: `cd backend && npm run db:seed`.
 
 ### 2. Sửa đổi giao diện Cung
 - Component lá số là `frontend/src/components/TuViChart.jsx`.
 - Mỗi cung là `frontend/src/components/PalaceBox.jsx`.
 
 ### 3. Debug thuật toán an sao
-- Chạy `npm test` trong `backend` (không cần MongoDB).
+- Chạy `npm test` trong `backend` (không cần file SQLite; matcher dùng JSON).
 - Input API: `{ day, month, year, hour, gender, name }`. `hour` là giờ đồng hồ 0–23. `gender` là `1` hoặc `-1`.
 
 ## Lưu ý kỹ thuật (Gotchas)

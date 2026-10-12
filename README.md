@@ -1,6 +1,6 @@
 # Tử Vi Việt Nam (`b3_tuvi`)
 
-Nền tảng web lập và luận giải **lá số Tử Vi**. Kiến trúc 3 lớp: giao diện React, API Node.js/Express, và MongoDB.
+Nền tảng web lập và luận giải **lá số Tử Vi**. Kiến trúc 3 lớp: giao diện React, API Node.js/Express, và SQLite (file cục bộ).
 
 > **Dành cho AI & developers:** đọc [docs/AI_CONTEXT.md](docs/AI_CONTEXT.md) và [docs/DOMAIN_KNOWLEDGE.md](docs/DOMAIN_KNOWLEDGE.md) trước khi sửa thuật toán an sao.
 
@@ -11,7 +11,7 @@ Nền tảng web lập và luận giải **lá số Tử Vi**. Kiến trúc 3 l�
 - **Click sao / cung** trên lá số để xem ý nghĩa từ API (`stars`, `palaces`).
 - **Luận cách cục**: khớp tổ hợp sao (cát / hung / đặc biệt) qua `POST /api/combinations/match`.
 - **Chia sẻ lá số qua URL** (`/la-so?year=&month=&day=&hour=&gender=&name=`).
-- Mỗi lần lập lá số được **lưu vào MongoDB** (`horoscopes`). Chưa có màn hình lịch sử trên UI.
+- Mỗi lần lập lá số được **lưu vào SQLite** (`horoscopes`). Chưa có màn hình lịch sử trên UI.
 
 Các trang **Luận Giải**, **Kiến Thức**, **Tài Liệu**, **Liên Hệ** hiện là placeholder.
 
@@ -20,9 +20,8 @@ Các trang **Luận Giải**, **Kiến Thức**, **Tài Liệu**, **Liên Hệ**
 | Thành phần | Công nghệ | Cổng mặc định |
 |---|---|---|
 | Frontend | React 19, Vite, React Router 7 | `5173` |
-| Backend | Node.js, Express 5, Mongoose | `5000` |
-| Database | MongoDB (Docker) | `27017` |
-| DB Admin | Mongo Express | `8081` |
+| Backend | Node.js, Express 5 | `5000` |
+| Database | SQLite (`backend/data/tuvi.sqlite`) | — |
 
 ```
 b3_tuvi/
@@ -34,10 +33,9 @@ b3_tuvi/
 │   └── src/
 │       ├── engine/           # lunar.js, tuviRules.mjs, chartInput.js
 │       ├── data/             # Bảng an sao (JSON)
-│       ├── models/           # Horoscope, Star, Palace, Combination
+│       ├── db/               # SQLite + repositories
 │       ├── routes/           # charts, meanings, combinations
 │       └── scripts/          # seed, seedCombinations, migrate
-├── docker-compose.yml
 └── docs/
 ```
 
@@ -45,8 +43,7 @@ Engine an sao nằm ở `backend/src/engine/`. Frontend chỉ gọi REST API (`f
 
 ## Yêu cầu
 
-- Node.js LTS
-- Docker Desktop (MongoDB)
+- Node.js 22+ (dùng `node:sqlite` tích hợp)
 
 ## Cài đặt và chạy
 
@@ -57,35 +54,20 @@ git clone https://github.com/hptbee/b3_tuvi.git
 cd b3_tuvi
 ```
 
-### 2. Database
-
-```bash
-docker compose up -d
-```
-
-- MongoDB: `localhost:27017` (user `admin` / `adminpassword`)
-- Mongo Express: http://localhost:8081
-
-URI mặc định của backend:
-
-```text
-mongodb://admin:adminpassword@localhost:27017/
-```
-
-Có thể ghi đè bằng `MONGO_URI` (file `.env` ở `backend/`).
-
-### 3. Seed dữ liệu luận giải (lần đầu)
+### 2. Seed dữ liệu luận giải (lần đầu)
 
 Không seed thì click sao/cung và panel cách cục sẽ trống hoặc fallback.
 
 ```bash
 cd backend
 npm install
-node src/scripts/seed.js
-node src/scripts/seedCombinations.js
+npm run db:seed
+npm run db:combinations
 ```
 
-### 4. Cài dependencies và chạy cả stack
+File DB mặc định: `backend/data/tuvi.sqlite`. Ghi đè bằng `SQLITE_PATH` trong `backend/.env` (xem `.env.example`).
+
+### 3. Cài dependencies và chạy cả stack
 
 Từ thư mục gốc:
 

@@ -15,8 +15,8 @@ Dự án tuân thủ mô hình 3 lớp tiêu chuẩn:
     - Chứa thuật toán an sao lõi (Astrology Engine).
     - Xử lý logic nghiệp vụ và điều phối dữ liệu.
 3.  **Data Layer (Database)**:
-    - MongoDB (lưu trữ thông tin lá số đã lập và cơ sở dữ liệu ý nghĩa các sao/cung).
-    - Được quản lý thông qua Mongoose ORM.
+    - SQLite file (`backend/data/tuvi.sqlite`) lưu lá số, ý nghĩa sao/cung, và catalog cách cục đã seed.
+    - Truy cập qua `src/db/repositories.js` (`node:sqlite`).
 
 ## 2. Luồng dữ liệu (Data Flow)
 
@@ -28,7 +28,7 @@ Dự án tuân thủ mô hình 3 lớp tiêu chuẩn:
     - Gọi `lunar.js` để chuyển Dương lịch sang Âm lịch (`isLeapMonth`).
     - Gọi `calculateTuVi` trong `tuviRules.mjs` để an 14 chính tinh, phụ tinh, Tuần, Triệt, đại hạn. Tháng nhuận đi qua `resolveAnSaoMonth`.
     - Kết quả tính là `{ lunarInfo, tuviInfo }`. Response thêm `normalizedChart` (model P1.1). `tuviInfo` giữ nguyên cho UI.
-4.  **Storage**: Backend lưu document `Horoscope` vào MongoDB. `full_chart` vẫn là `tuviInfo`, không lưu bản chuẩn hóa.
+4.  **Storage**: Backend ghi hàng `horoscopes` trong SQLite. `full_chart` vẫn là `tuviInfo`, không lưu bản chuẩn hóa.
 5.  **Response**: `TuViChart` chỉ đọc `lunarInfo` và `tuviInfo`. Panel cách cục gọi `POST /api/combinations/match`.
 
 ## 3. Cấu trúc Engine (Astrology Engine)
@@ -47,7 +47,7 @@ Engine nằm tại `backend/src/engine/` và là "trái tim" của hệ thống:
 
 -   **Horoscope**: Một lá số đã lập (input dương lịch, âm lịch kể cả `isLeap` và `anSaoMonth`, `full_chart`).
 -   **Star / Palace**: Ý nghĩa sao và cung cho thao tác click trên lá số.
--   **Combination**: Cách cục dùng cho `POST /api/combinations/match`. Nguồn là `combinations.json`. Matcher không cache Mongo.
+-   **Combination**: Cách cục dùng cho `POST /api/combinations/match`. Nguồn là `combinations.json`. `GET /api/combinations` có thể đọc SQLite sau seed.
 
 ## 5. Tích hợp AI (AI Ready)
 

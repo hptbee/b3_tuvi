@@ -1,6 +1,5 @@
 import express from 'express';
-import Star from '../models/Star.js';
-import Palace from '../models/Palace.js';
+import { findPalaceByName, findStarByName } from '../db/repositories.js';
 
 const router = express.Router();
 
@@ -14,7 +13,7 @@ router.get('/star/:name', async (req, res) => {
             .replace(/\s*\([a-zA-ZĐđ]\)/g, '').trim();
         const cungName = req.query.palace || '';
 
-        const doc = await Star.findOne({ name: cleanName });
+        const doc = findStarByName(cleanName);
         if (!doc) {
             return res.json({ text: `Chưa có dữ liệu hồ sơ cho sao ${cleanName}.` });
         }
@@ -41,14 +40,14 @@ router.get('/star/:name', async (req, res) => {
         };
         const searchKey = palaceMapping[mainCung] || mainCung;
 
-        const palaceMeanings = doc.palace_meanings || new Map();
-        const specific = palaceMeanings.get(searchKey);
-        
+        const palaceMeanings = doc.palace_meanings || {};
+        const specific = palaceMeanings[searchKey];
+
         if (specific) {
             return res.json({ text: specific });
         }
 
-        const fallback = palaceMeanings.get('default') || doc.basic_meaning;
+        const fallback = palaceMeanings.default || doc.basic_meaning;
         if (fallback) {
             return res.json({ text: `Tại cung ${cungName}: ${fallback}` });
         }
@@ -72,7 +71,7 @@ router.get('/palace/:name', async (req, res) => {
 
         const results = [];
         for (const part of parts) {
-            const doc = await Palace.findOne({ palace_name: part });
+            const doc = findPalaceByName(part);
             if (doc) {
                 results.push({
                     title: doc.short_name || part,

@@ -1,44 +1,31 @@
 # Backend API Server - Tuvi_B
 
-Máy chủ API được xây dựng trên nền tảng **Node.js** và **Express**, chịu trách nhiệm xử lý logic an sao và quản lý dữ liệu MongoDB.
+Máy chủ API **Node.js** + **Express**, xử lý an sao và lưu dữ liệu trong **SQLite** (file `data/tuvi.sqlite`).
 
-## 📁 Cấu trúc thư mục
+## Cấu trúc thư mục
 
--   **`src/engine/`**: Chứa thuật toán lõi (Lunar, TuviRules). Đây là phần quan trọng nhất.
--   **`src/models/`**: Định nghĩa các Mongoose Schemas (`Chart`, `Meaning`, `KnowledgeBase`).
--   **`src/routes/`**: Các endpoints định nghĩa giao tiếp API.
--   **`src/controllers/`**: Logic xử lý cho từng route (tách biệt khỏi route definition).
--   **`src/config/`**: Cấu hình kết nối Database và các biến môi trường.
--   **`src/scripts/`**: Các script hỗ trợ (migration, seed data, cleanup).
+- **`src/engine/`**: Thuật toán lõi (lunar, tuviRules, matcher cách cục).
+- **`src/db/`**: Kết nối SQLite và repositories.
+- **`src/routes/`**: Endpoints API.
+- **`src/config/`**: Khởi tạo database.
+- **`src/scripts/`**: Seed, migrate, cleanup.
 
-## 🚀 Khởi chạy
+## Khởi chạy
 
-1.  Cài đặt dependencies:
-    ```bash
-    npm install
-    ```
-2.  Chạy ở chế độ phát triển (với nodemon):
-    ```bash
-    npm run dev
-    ```
-3.  Chạy production:
-    ```bash
-    npm start
-    ```
+```bash
+npm install
+npm run db:seed          # sao + cung (lần đầu)
+npm run db:combinations  # catalog cách cục (tùy chọn cho GET /api/combinations)
+npm run dev
+```
 
-## 🔌 API Endpoints tiêu biểu
+## API tiêu biểu
 
-### Charts
--   `POST /api/charts/generate`: Tạo mới một lá số từ thông tin người dùng.
--   `GET /api/charts`: Lấy danh sách các lá số đã lưu.
--   `GET /api/charts/:id`: Chi tiết một lá số.
+- `POST /api/charts/generate` — lập lá số và lưu `horoscopes`.
+- `GET /api/meanings/star/:name` — ý nghĩa sao (cần seed).
+- `POST /api/combinations/match` — khớp cách cục (catalog JSON, không phụ thuộc DB).
 
-### Meanings
--   `GET /api/meanings/star/:name`: Truy vấn ý nghĩa của một sao cụ thể.
--   `GET /api/meanings/palace/:name`: Truy vấn ý nghĩa của một cung cụ thể.
+## Công nghệ
 
-## 🛠 Công nghệ sử dụng
--   **Express**: Framework web.
--   **Mongoose**: ODM cho MongoDB.
--   **CORS**: Cho phép Frontend truy cập API.
--   **Nodemon**: Tự động reload server khi có thay đổi code.
+- Express 5, CORS, dotenv
+- SQLite qua `node:sqlite` (Node 22+)

@@ -1,24 +1,25 @@
 import dotenv from 'dotenv';
-import mongoose from 'mongoose';
+import { initDatabase } from '../db/sqlite.js';
+import {
+    countCombinations,
+    countHoroscopes,
+    countPalaces,
+    countStars
+} from '../db/repositories.js';
 
 dotenv.config();
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://admin:adminpassword@localhost:27017/';
 
-async function check() {
-  try {
-    await mongoose.connect(MONGO_URI);
-    const db = mongoose.connection.db;
-    const collections = await db.listCollections().toArray();
-    console.log('Collection counts:');
-    for (const c of collections) {
-      const count = await db.collection(c.name).countDocuments();
-      console.log(`- ${c.name}: ${count}`);
-    }
-  } catch (err) {
-    console.error(err);
-  } finally {
-    await mongoose.disconnect();
-  }
+function checkCounts() {
+    initDatabase();
+    console.log('stars:', countStars());
+    console.log('palaces:', countPalaces());
+    console.log('combinations:', countCombinations());
+    console.log('horoscopes:', countHoroscopes());
 }
 
-check();
+try {
+    checkCounts();
+} catch (err) {
+    console.error(err);
+    process.exit(1);
+}

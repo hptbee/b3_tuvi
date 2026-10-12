@@ -10,10 +10,9 @@ Tuvi_B/
 ├── backend/           # Node.js + Express — logic và API nằm ở đây
 │   └── src/
 │       ├── engine/    # Thuật toán lõi Tử Vi — sửa đổi cẩn thận!
-│       ├── models/    # MongoDB Schemas
+│       ├── db/        # SQLite + repositories
 │       ├── routes/    # API Endpoints
 │       └── config/    # Cấu hình kết nối DB
-├── docker-compose.yml # Cài đặt MongoDB qua Docker
 ```
 
 ## Làm thế nào để đóng góp?
@@ -31,7 +30,7 @@ Tạo **Issue** với nhãn `enhancement`, mô tả rõ:
 - (Tuỳ chọn) Ý tưởng thiết kế UI/UX.
 
 ### 3. Đóng góp dữ liệu Luận giải (Astrology Data)
-Dữ liệu luận giải được lưu tại `backend/src/data/` và dần sẽ được chuyển lên MongoDB.
+Dữ liệu luận giải tĩnh ở `backend/src/data/`. Ý nghĩa sao/cung và lá số đã lập nằm trong SQLite (`backend/data/tuvi.sqlite`) sau khi seed/chạy API.
 - `starMeanings.js`: Ý nghĩa các sao.
 - `palaceMeanings.js`: Ý nghĩa các cung.
 - Lời văn cần logic, khách quan, không chứa thông tin cực đoan.
@@ -41,7 +40,7 @@ Dữ liệu luận giải được lưu tại `backend/src/data/` và dần sẽ
 1. Fork dự án.
 2. Tạo branch mới: `git checkout -b feature/TenTinhNang`
 3. Chạy đầy đủ môi trường để test:
-   - `docker-compose up -d` (Database)
+   - `cd backend && npm run db:seed` (lần đầu)
    - `cd backend && node server.js` (API)
    - `cd frontend && npm run dev` (UI)
 4. Commit: `git commit -m 'feat: Mô tả thay đổi'`

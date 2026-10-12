@@ -1,12 +1,10 @@
-import mongoose from 'mongoose';
+import { initDatabase } from '../db/sqlite.js';
 
-const connectDB = async () => {
+const connectDB = () => {
     try {
-        const uri = process.env.MONGO_URI || 'mongodb://admin:adminpassword@localhost:27017/';
-        await mongoose.connect(uri);
-        console.log('MongoDB connected successfully');
+        initDatabase();
     } catch (error) {
-        console.error('MongoDB connection error:', error.message);
+        console.error('SQLite init error:', error.message);
         process.exit(1);
     }
 };

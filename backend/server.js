@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import connectDB from './src/config/db.js';
+import { isDbReady } from './src/db/sqlite.js';
 import chartRoutes from './src/routes/chartRoutes.js';
 import meaningRoutes from './src/routes/meaningRoutes.js';
 import combinationRoutes from './src/routes/combinationRoutes.js';
@@ -24,7 +25,10 @@ app.use('/api/charts', chartRoutes);       // Quản lý dữ liệu lá số (H
 app.use('/api/meanings', meaningRoutes);   // Tra cứu ý nghĩa sao và cung
 app.use('/api/combinations', combinationRoutes); // Xử lý Cách Cục (Pattern Matching)
 
-app.get('/api/health', (req, res) => res.json({ status: 'server is running', database: 'connected' }));
+app.get('/api/health', (req, res) => res.json({
+    status: 'server is running',
+    database: isDbReady() ? 'sqlite' : 'disconnected'
+}));
 app.get('/api/test-direct', (req, res) => res.json({ ok: true }));
 
 const PORT = process.env.PORT || 5000;

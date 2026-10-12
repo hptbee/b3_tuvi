@@ -1,5 +1,5 @@
 import express from 'express';
-import Combination from '../models/Combination.js';
+import { listCombinations } from '../db/repositories.js';
 import catalogJson from '../data/combinations.json' with { type: 'json' };
 import { matchCombinations } from '../engine/combinationMatch.js';
 
@@ -7,7 +7,7 @@ const router = express.Router();
 
 /**
  * Matcher dùng catalog JSON (nguồn sự thật).
- * Mongo chỉ phục vụ GET danh sách khi đã seed.
+ * SQLite phục vụ GET danh sách khi đã seed; matcher vẫn dùng JSON.
  */
 router.post('/match', async (req, res) => {
     try {
@@ -26,8 +26,7 @@ router.post('/match', async (req, res) => {
 router.get('/', async (req, res) => {
     try {
         const { type } = req.query;
-        const filter = type ? { type } : {};
-        const combos = await Combination.find(filter).select('-vector_embedding');
+        const combos = listCombinations(type ? { type } : {});
         if (!combos.length) {
             const fallback = type ? catalogJson.filter((c) => c.type === type) : catalogJson;
             return res.json(fallback);

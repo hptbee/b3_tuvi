@@ -1,16 +1,13 @@
 /**
- * Seed script: Đẩy dữ liệu gốc (Stars & Palaces) lên MongoDB.
+ * Seed script: Đẩy dữ liệu gốc (Stars & Palaces) vào SQLite.
  * Sử dụng cho Architecture: 6-collections.
  * Chạy: node src/scripts/seed.js
  */
 import dotenv from 'dotenv';
-import mongoose from 'mongoose';
-import Star from '../models/Star.js';
-import Palace from '../models/Palace.js';
+import { initDatabase } from '../db/sqlite.js';
+import { countPalaces, countStars, upsertPalace, upsertStar } from '../db/repositories.js';
 
 dotenv.config();
-
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://admin:adminpassword@localhost:27017/';
 
 // ============================================================
 // DỮ LIỆU CUNG (PALACE)
@@ -270,41 +267,34 @@ const starData = [
 // ============================================================
 // XỬ LÝ SEED DỮ LIỆU
 // ============================================================
-async function seed() {
-  await mongoose.connect(MONGO_URI);
-  console.log('✅ MongoDB connected');
+function seed() {
+  initDatabase();
+  console.log('✅ SQLite ready');
 
-  // 1. Seed Palaces
   console.log('📌 Seeding Palaces...');
   for (const p of palaceData) {
-    const palaceDoc = {
+    upsertPalace({
       palace_name: p.name,
       short_name: p.perPalace.short,
       core_meaning: p.perPalace.description
-    };
-    await Palace.findOneAndUpdate({ palace_name: palaceDoc.palace_name }, palaceDoc, { upsert: true });
+    });
   }
 
-  // 2. Seed Stars
   console.log('📌 Seeding Stars...');
   for (const s of starData) {
-    const starDoc = {
+    upsertStar({
       name: s.name,
       basic_meaning: s.perPalace.default || '',
-      palace_meanings: new Map(Object.entries(s.perPalace))
-    };
-    await Star.findOneAndUpdate({ name: s.name }, starDoc, { upsert: true });
+      palace_meanings: s.perPalace
+    });
   }
 
-  const pCount = await Palace.countDocuments();
-  const sCount = await Star.countDocuments();
-  
-  console.log(`🌱 Seed complete: ${pCount} Palaces, ${sCount} Stars.`);
-  await mongoose.disconnect();
-  console.log('👋 Disconnected');
+  console.log(`🌱 Seed complete: ${countPalaces()} palaces, ${countStars()} stars.`);
 }
 
-seed().catch(err => {
+try {
+  seed();
+} catch (err) {
   console.error('❌ Seed failed:', err);
   process.exit(1);
-});
+}

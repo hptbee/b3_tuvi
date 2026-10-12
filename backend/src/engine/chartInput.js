@@ -15,7 +15,7 @@ function isRealSolarDate(day, month, year) {
 }
 
 /**
- * Kiểm tra payload lập lá số trước khi đổi lịch và ghi MongoDB.
+ * Kiểm tra payload lập lá số trước khi đổi lịch và ghi SQLite.
  * hour là giờ đồng hồ 0–23. gender: 1 nam, -1 nữ.
  */
 export function validateChartInput(body) {

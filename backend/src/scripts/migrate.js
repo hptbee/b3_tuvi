@@ -1,16 +1,12 @@
 /**
- * Migration script: Chuyển đổi dữ liệu từ collection 'charts' cũ sang 'horoscopes'
- * và đồng bộ hóa Stars/Palaces từ meanings.
+ * Seed Stars/Palaces vào SQLite (npm run db:seed).
  * Chạy: node src/scripts/migrate.js
  */
 import dotenv from 'dotenv';
-import mongoose from 'mongoose';
-import Star from '../models/Star.js';
-import Palace from '../models/Palace.js';
-import Horoscope from '../models/Horoscope.js';
+import { initDatabase } from '../db/sqlite.js';
+import { countPalaces, countStars, upsertPalace, upsertStar } from '../db/repositories.js';
 
 dotenv.config();
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://admin:adminpassword@localhost:27017/';
 
 // ============================================================
 // DỮ LIỆU SAO — chuyển từ meanings collection sang stars
@@ -182,55 +178,28 @@ const palacesToSeed = [
 // ============================================================
 // RUN MIGRATION
 // ============================================================
-async function migrate() {
-  await mongoose.connect(MONGO_URI);
-  console.log('✅ MongoDB connected');
+function migrate() {
+  initDatabase();
+  console.log('✅ SQLite ready');
 
-  // 1. Seed Stars
-  console.log('\n📌 Seeding stars collection...');
+  console.log('\n📌 Seeding stars...');
   for (const s of starsToSeed) {
-    const doc = { ...s, palace_meanings: new Map(Object.entries(s.palace_meanings)) };
-    await Star.findOneAndUpdate({ name: s.name }, doc, { upsert: true, returnDocument: 'after' });
+    upsertStar(s);
   }
-  console.log(`   ✓ ${starsToSeed.length} stars upserted`);
+  console.log(`   ✓ ${starsToSeed.length} stars upserted (${countStars()} in DB)`);
 
-  // 2. Seed Palaces
-  console.log('📌 Seeding palaces collection...');
+  console.log('📌 Seeding palaces...');
   for (const p of palacesToSeed) {
-    await Palace.findOneAndUpdate({ palace_name: p.palace_name }, p, { upsert: true, returnDocument: 'after' });
+    upsertPalace(p);
   }
-  console.log(`   ✓ ${palacesToSeed.length} palaces upserted`);
+  console.log(`   ✓ ${palacesToSeed.length} palaces upserted (${countPalaces()} in DB)`);
 
-  // 3. Migrate charts → horoscopes
-  console.log('📌 Migrating charts → horoscopes...');
-  const db = mongoose.connection.db;
-  const chartsCol = db.collection('charts');
-  const count = await chartsCol.countDocuments();
-  if (count > 0) {
-    const oldCharts = await chartsCol.find({}).toArray();
-    let migrated = 0;
-    for (const c of oldCharts) {
-      const exists = await Horoscope.findOne({ 'input_data.day': c.day, 'input_data.month': c.month, 'input_data.year': c.year, 'input_data.name': c.name });
-      if (!exists) {
-        await Horoscope.create({
-          input_data: { name: c.name || '', day: c.day, month: c.month, year: c.year, hour: c.hour, gender: c.gender },
-          lunar_data: c.chartData?.lunarInfo || {},
-          full_chart: c.chartData?.tuviInfo || c.chartData || {}
-        });
-        migrated++;
-      }
-    }
-    console.log(`   ✓ ${migrated} charts migrated to horoscopes (${count - migrated} already existed)`);
-  } else {
-    console.log('   ℹ️  No old charts to migrate');
-  }
-
-  console.log('\n🎉 Migration complete!');
-  await mongoose.disconnect();
-  console.log('👋 Disconnected');
+  console.log('\n🎉 Seed complete (SQLite).');
 }
 
-migrate().catch(err => {
+try {
+  migrate();
+} catch (err) {
   console.error('❌ Migration failed:', err);
   process.exit(1);
-});
+}

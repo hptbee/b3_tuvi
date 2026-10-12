@@ -3,7 +3,7 @@ import { solarToLunar } from '../engine/lunar.js';
 import { calculateTuVi } from '../engine/tuviRules.mjs';
 import { validateChartInput } from '../engine/chartInput.js';
 import { normalizeChart } from '../engine/normalizeChart.js';
-import Horoscope from '../models/Horoscope.js';
+import { insertHoroscope } from '../db/repositories.js';
 
 const router = express.Router();
 
@@ -50,7 +50,7 @@ router.post('/generate', async (req, res) => {
             normalizedChart: normalized.ok ? normalized : null
         };
 
-        const newHoroscope = new Horoscope({
+        insertHoroscope({
             input_data: { name, day, month, year, hour, gender },
             lunar_data: {
                 lunarDay: ld.lunarDay,
@@ -63,8 +63,6 @@ router.post('/generate', async (req, res) => {
             },
             full_chart: tvInfo
         });
-
-        await newHoroscope.save();
 
         return res.json(chartData);
 

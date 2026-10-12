@@ -9,6 +9,7 @@ Tất cả các thay đổi đáng chú ý của dự án **Tử Vi Việt Nam (
 ### Thêm mới (Added)
 - Model lá số chuẩn hóa và quan hệ cung (P1.1): `normalizedChart` trên API lập lá số, không đổi `tuviInfo`.
 - Rule engine v2 cho 15 cách `matching_ok`, và các cách provisional có công thức vị trí, kể cả cung Phu Thê, Tật Ách, Tài Bạch, Thân và cờ Tuần/Triệt. Cách siết chặt hơn matcher cũ vẫn ghi `provisional`. Lưỡng Trùng Thiên Mã và Cát Xứ Tàng Hung chuyển sang `disabled`.
+- Backend chuyển từ MongoDB/Mongoose sang SQLite (`node:sqlite`, file `backend/data/tuvi.sqlite`). Bỏ `docker-compose.yml` và dependency `mongoose`.
 
 ### Khắc phục lỗi (Fixed)
 - `POST /api/combinations/match` có integration test đối chiếu pure matcher.

@@ -16,6 +16,8 @@ dist-ssr
 *.local
 
 # Local app data / tooling
+backend/data/*.sqlite
+backend/data/*.sqlite-*
 .b3/
 .vite/
 coverage/
