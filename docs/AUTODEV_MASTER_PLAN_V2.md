@@ -305,3 +305,12 @@ Nhãn đại hạn đã có trên lá số gốc được đọc lại, không t
 ## 19. Sprint 7
 
 POC nội bộ: hỏi đáp đọc DTO. Narrator chỉ giữ id đã có trong phân tích và không chuyển lời của model ra ngoài. Fallback khi model bịa id hoặc quá hạn. Không gọi model thật trong test. Không có API key. Chưa public.
+
+## 20. Sprint 8
+
+Nhánh `autodev/v2-sprint-8` từ `2ca0186`. Đo coverage trước khi thêm test: backend 76.06% dòng / 82.29% nhánh, frontend 0%. Sau test: backend 79.14 / 84.86, frontend 38.73 / 59.04. Chi tiết ở `docs/quality/`.
+
+Đã thêm explorer chứng cứ theo cung, in và JSON không kèm luận giải đã duyệt, `createApp`, giới hạn body 256kb, và smoke Playwright local (4 passed). GitHub Actions của nhánh này chưa được chạy trong phiên lập báo cáo.
+
+Không sửa `tuviRules.mjs`, `rulesV2.json`, hoặc `docs/AUTODEV_MASTER_PLAN.md`. Không duyệt claim. Không mở vận hạn hay AI public.
+

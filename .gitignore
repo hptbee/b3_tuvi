@@ -22,6 +22,8 @@ backend/data/*.sqlite-*
 .b3/autodev/
 .vite/
 coverage/
+frontend/test-results/
+frontend/playwright-report/
 
 # Windows
 Thumbs.db

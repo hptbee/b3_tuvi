@@ -14,52 +14,55 @@ function PalaceBox({ data, position, onStarClick, onPalaceClick }) {
 
             <div className="box-header">
                 <span className="chi-name">{fullCanChi}</span>
-                <span 
-                    className="cung-name-group clickable" 
+                <button
+                    type="button"
+                    className="cung-name-group clickable"
                     onClick={() => onPalaceClick && onPalaceClick(cungName)}
-                    style={{ cursor: 'pointer' }}
                 >
                     <span className="cung-name">{cungName}</span>
                     <span className="dai-han">{daiHan}</span>
-                </span>
+                </button>
             </div>
 
             <div className="major-stars-container">
                 {majorStars.map((star, idx) => (
-                    <div 
-                        key={idx} 
-                        className="major-star clickable" 
+                    <button
+                        key={idx}
+                        type="button"
+                        className="major-star clickable"
                         style={{ color: getStarColor(star) }}
                         onClick={() => onStarClick && onStarClick(star, cungName)}
                     >
                         {star}
-                    </div>
+                    </button>
                 ))}
             </div>
 
             <div className="minor-stars-container">
                 <div className="good-stars">
                     {goodStars.map((star, idx) => (
-                        <div 
-                            key={idx} 
-                            className="minor-star clickable" 
+                        <button
+                            key={idx}
+                            type="button"
+                            className="minor-star clickable"
                             style={{ color: getStarColor(star) }}
                             onClick={() => onStarClick && onStarClick(star, cungName)}
                         >
                             {star}
-                        </div>
+                        </button>
                     ))}
                 </div>
                 <div className="bad-stars">
                     {badStars.map((star, idx) => (
-                        <div 
-                            key={idx} 
-                            className="minor-star clickable" 
+                        <button
+                            key={idx}
+                            type="button"
+                            className="minor-star clickable"
                             style={{ color: getStarColor(star) }}
                             onClick={() => onStarClick && onStarClick(star, cungName)}
                         >
                             {star}
-                        </div>
+                        </button>
                     ))}
                 </div>
             </div>

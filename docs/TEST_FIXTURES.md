@@ -22,6 +22,7 @@ Giữ hành vi đã có của engine, API, hoặc chuẩn hóa. Kết quả kỳ
 - `ruleEngine.test.mjs`
 - `combinationRoute.integration.test.mjs`
 - `chartGenerate.test.mjs`
+- `httpApi.test.mjs`
 
 ## Synthetic test case
 
@@ -37,6 +38,7 @@ Dữ liệu dựng trong test, database tạm, hoặc lỗi giả. Không dùng 
 - `wholeChart.test.mjs`
 - `timeEngine.test.mjs`
 - `narrator.test.mjs`
+- `qualityEdges.test.mjs`
 
 ## Property/invariant test
 
@@ -47,3 +49,4 @@ Khóa tính chất: không nâng nguồn từ test pass, catalog không thành p
 - `knowledgeCatalog.test.mjs`
 - `knowledgeValidate.test.mjs`
 - `fixtureClasses.test.mjs`
+- `perfSmoke.test.mjs`

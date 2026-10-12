@@ -4,6 +4,7 @@ import './App.css';
 import TuViChart from './components/TuViChart';
 import CachCucPanel from './components/CachCucPanel';
 import StructuredAnalysis from './components/StructuredAnalysis';
+import ChartActions from './components/ChartActions';
 import { LuanGiai, KienThuc, TaiLieu, LienHe } from './pages/Pages';
 import { API_BASE } from './apiBase';
 
@@ -174,6 +175,7 @@ function App() {
               />
               {hasChartQuery && chartData && (
                 <div className="chart-view">
+                  <ChartActions chartData={chartData} />
                   <TuViChart lunarInfo={chartData.lunarInfo} tuviInfo={chartData.tuviInfo} userInfo={userInfo} />
                 </div>
               )}
