@@ -20,7 +20,8 @@ export const unitTests = [
     'test/wholeChart.test.mjs',
     'test/timeEngine.test.mjs',
     'test/fixtureClasses.test.mjs',
-    'test/knowledgeCatalog.test.mjs'
+    'test/knowledgeCatalog.test.mjs',
+    'test/qualityEdges.test.mjs'
 ];
 
 export const integrationTests = [

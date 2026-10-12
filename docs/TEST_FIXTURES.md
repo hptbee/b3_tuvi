@@ -37,6 +37,7 @@ Dữ liệu dựng trong test, database tạm, hoặc lỗi giả. Không dùng 
 - `wholeChart.test.mjs`
 - `timeEngine.test.mjs`
 - `narrator.test.mjs`
+- `qualityEdges.test.mjs`
 
 ## Property/invariant test
 
