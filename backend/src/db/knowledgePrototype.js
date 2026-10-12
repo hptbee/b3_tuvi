@@ -91,6 +91,25 @@ function refusesDataDir(candidate) {
     return folded.includes(marker);
 }
 
+export function refusesLinkedStat(stat) {
+    if (!stat) return false;
+    const symlink = typeof stat.isSymbolicLink === 'function' && stat.isSymbolicLink();
+    return symlink || stat.nlink > 1;
+}
+
+function refuseIfLinkedFile(finalPath) {
+    let stat;
+    try {
+        stat = fs.lstatSync(finalPath);
+    } catch (error) {
+        if (error.code === 'ENOENT') return;
+        throw error;
+    }
+    if (refusesLinkedStat(stat)) {
+        throw new Error(`knowledge prototype refuses ${finalPath}`);
+    }
+}
+
 export function assertSafePrototypePath(dbPath) {
     const stripped = stripTrailingDots(path.resolve(dbPath));
     if (refusesDataDir(stripped)) {
@@ -113,16 +132,19 @@ export function assertSafePrototypePath(dbPath) {
     if (!isUnder(realParent, tmpRoot) || refusesDataDir(realParent)) {
         throw new Error(`knowledge prototype refuses ${stripped}`);
     }
-    return path.join(realParent, path.basename(stripped));
+    const finalPath = path.join(realParent, path.basename(stripped));
+    if (!isUnder(finalPath, tmpRoot) || refusesDataDir(finalPath)) {
+        throw new Error(`knowledge prototype refuses ${finalPath}`);
+    }
+    refuseIfLinkedFile(finalPath);
+    return finalPath;
 }
 
-export function applyKnowledgePrototype(dbPath) {
-    const resolved = assertSafePrototypePath(dbPath);
-    const db = new DatabaseSync(resolved);
+export function applyPrototypeStatements(db, sql = PROTOTYPE_SQL) {
     db.exec('PRAGMA foreign_keys = ON;');
     db.exec('BEGIN IMMEDIATE');
     try {
-        db.exec(PROTOTYPE_SQL);
+        db.exec(sql);
         db.prepare(`
             INSERT INTO kb_prototype_meta (key, value) VALUES ('version', '1')
             ON CONFLICT(key) DO NOTHING
@@ -130,6 +152,16 @@ export function applyKnowledgePrototype(dbPath) {
         db.exec('COMMIT');
     } catch (error) {
         db.exec('ROLLBACK');
+        throw error;
+    }
+}
+
+export function applyKnowledgePrototype(dbPath) {
+    const resolved = assertSafePrototypePath(dbPath);
+    const db = new DatabaseSync(resolved);
+    try {
+        applyPrototypeStatements(db);
+    } catch (error) {
         db.close();
         throw error;
     }
@@ -137,4 +169,19 @@ export function applyKnowledgePrototype(dbPath) {
     const claims = db.prepare('SELECT COUNT(*) AS n FROM claims').get().n;
     db.close();
     return { path: resolved, version: version.value, claims };
+}
+
+export function backupPrototype(dbPath) {
+    const resolved = assertSafePrototypePath(dbPath);
+    const backup = `${resolved}.bak`;
+    refuseIfLinkedFile(backup);
+    fs.copyFileSync(resolved, backup);
+    return backup;
+}
+
+export function restorePrototype(dbPath, backupPath) {
+    const resolved = assertSafePrototypePath(dbPath);
+    const backup = assertSafePrototypePath(backupPath);
+    fs.copyFileSync(backup, resolved);
+    return resolved;
 }
