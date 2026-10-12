@@ -8,6 +8,7 @@ export default defineConfig({
     globals: true,
     setupFiles: './src/test/setup.js',
     passWithNoTests: true,
+    exclude: ['**/node_modules/**', '**/dist/**', 'e2e/**'],
     coverage: {
       provider: 'v8',
       all: true,
