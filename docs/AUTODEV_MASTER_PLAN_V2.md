@@ -67,7 +67,7 @@ Test V2 chỉ khóa invariant ổn định (AUTH bị loại, KB-02 còn `BLOCKE
 
 - epic: M0
 - priority: P0
-- status: READY
+- status: COMPLETED
 - dependencies: []
 - dependency_class: TECHNICAL
 - scope: `docs/CONTRIBUTING.md`, `docs/CHANGELOG.md`, dòng trạng thái trong file này
@@ -86,7 +86,7 @@ Test V2 chỉ khóa invariant ổn định (AUTH bị loại, KB-02 còn `BLOCKE
 
 - epic: KB
 - priority: P0
-- status: PLANNED
+- status: READY
 - dependencies: [V2-M0-01]
 - dependency_class: TECHNICAL
 - scope: `docs/knowledge/provenance-contract.json`, `backend/src/knowledge/provenance.js`, `backend/test/provenance.test.mjs`, `backend/package.json` test script
@@ -249,10 +249,10 @@ AUTH-01 không có cạnh.
 
 ## 10. Session order
 
-Chỉ `V2-M0-01` đang `READY`. Các mục sau là thứ tự khi dependency xong, chưa phải status READY:
+`V2-M0-01` đã xong. Task READY kế tiếp là `V2-KB-01`.
 
-1. `V2-M0-01` — READY
-2. `V2-KB-01`
+1. `V2-M0-01` — COMPLETED
+2. `V2-KB-01` — READY
 3. `V2-M0-03` (độc lập, làm sau KB-01 trong phiên này)
 4. `V2-M0-02`
 5. `V2-KB-03` prototype
