@@ -43,8 +43,54 @@ test('shows a safe message when analysis fails', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'LÁ SỐ TỬ VI' })).toBeVisible();
 });
 
-test('keyboard reaches the print control', async ({ page }) => {
+test('keyboard reaches and activates the print control', async ({ page }) => {
+  await page.addInitScript(() => {
+    window.printCalls = 0;
+    window.print = () => { window.printCalls += 1; };
+  });
   await page.goto('/la-so?day=15&month=6&year=1990&hour=8&gender=1');
-  await page.getByRole('button', { name: 'In lá số' }).focus();
-  await expect(page.getByRole('button', { name: 'In lá số' })).toBeFocused();
+  const print = page.getByRole('button', { name: 'In lá số' });
+  await expect(print).toBeVisible();
+  await page.getByRole('button', { name: 'Lập Lá Số' }).focus();
+  await page.keyboard.press('Tab');
+  await expect(print).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect.poll(() => page.evaluate(() => window.printCalls)).toBe(1);
+});
+
+test('editing the form keeps the chart tied to the submitted birth time', async ({ page }) => {
+  await page.goto('/la-so?day=15&month=6&year=1990&hour=8&gender=1');
+  await expect(page.locator('.center-info')).toContainText('8 giờ 00 phút');
+  await page.getByRole('combobox', { name: 'Giờ sinh', exact: true }).selectOption('10');
+  await expect(page.locator('.center-info')).toContainText('8 giờ 00 phút');
+  await page.getByRole('button', { name: 'Lập Lá Số' }).click();
+  await expect(page.locator('.center-info')).toContainText('10 giờ 00 phút');
+});
+
+test('a slow chart cannot replace the latest chart after navigation', async ({ page }) => {
+  await page.route('**/api/charts/generate', async route => {
+    if (route.request().postDataJSON().hour === 8) await new Promise(resolve => setTimeout(resolve, 800));
+    try { await route.continue(); } catch { /* Navigation cancels the old request. */ }
+  });
+  await page.goto('/la-so?day=15&month=6&year=1990&hour=8&gender=1');
+  await page.getByRole('link', { name: '← Về trang bắt đầu' }).click();
+  await page.getByRole('combobox', { name: 'Giờ sinh', exact: true }).selectOption('10');
+  await page.getByRole('button', { name: 'Lập Lá Số' }).click();
+  await expect(page.locator('.center-info')).toContainText('10 giờ 00 phút');
+  await page.waitForTimeout(1000);
+  await expect(page.locator('.center-info')).toContainText('10 giờ 00 phút');
+});
+
+test('mobile navigation separates the disciplines without page overflow', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto('/');
+  await expect(page.getByRole('heading', { name: 'Lập lá số của bạn' })).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.getByRole('navigation', { name: 'Chọn lĩnh vực' }).getByRole('link', { name: /Thần Số Học/ }).click();
+  await expect(page).toHaveURL(/than-so-hoc/);
+  await expect(page.getByText('Đang phát triển', { exact: true })).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.goto('/la-so?day=15&month=6&year=1990&hour=8&gender=1');
+  await expect(page.locator('.center-info')).toBeVisible();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });

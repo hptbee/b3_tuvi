@@ -1,0 +1,56 @@
+/* Public landing page and shared site navigation. */
+.app-container { display: flex; flex-direction: column; min-height: 100vh; }
+.app-workspace { flex: 1; }
+.app-main { max-width: 1280px; padding: 40px; margin: 0 auto; }
+.site-nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 20px 40px; border-bottom: 1px solid var(--line); background: var(--surface); }
+.brand { font-size: 26px; flex-shrink: 0; }
+.brand-symbol { font-size: 34px; }
+.landing-menu { display: flex; align-items: center; gap: 30px; }
+.landing-menu a { text-decoration: none; font-size: 13px; padding: 10px 0; color: var(--muted); }
+.landing-menu a:hover, .landing-menu a.active { color: var(--accent); }
+.landing-menu a.active { box-shadow: 0 1px var(--accent); }
+.menu-soon { font-size: 9px; margin-left: 5px; color: #8a739e; }
+.nav-cta { text-decoration: none; border: 1px solid #cad5c6; border-radius: 30px; padding: 11px 18px; font-size: 12px; display: flex; gap: 20px; white-space: nowrap; }
+.nav-cta:hover { background: #e8eddf; }
+.landing-hero { display: grid; grid-template-columns: 1.15fr 1fr; align-items: center; min-height: 530px; gap: 20px; padding: 40px 0 70px; }
+.hero-copy { position: relative; z-index: 1; }
+.hero-copy h1 { font: 64px/1.14 Georgia, 'Times New Roman', serif; letter-spacing: -2px; margin: 25px 0; }
+.hero-copy h1 em { font-weight: 400; color: #748468; }
+.hero-copy > p { font-size: 15px; line-height: 1.95; color: var(--muted); max-width: 470px; }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; margin: 30px 0 17px; }
+.hero-actions .primary-button { text-decoration: none; border-radius: 30px; padding: 16px 24px; font-size: 13px; }
+.hero-copy .hero-footnote { font-size: 11px; }
+.hero-cosmos { position: relative; height: 440px; display: grid; place-items: center; background: radial-gradient(ellipse, #dfe6d5 0%, #eef0e560 48%, transparent 70%); }
+.cosmos-ring { position: absolute; border: 1px solid #9aaa8555; border-radius: 50%; }
+.ring-outer { width: 350px; height: 350px; }.ring-inner { width: 290px; height: 290px; border-style: dashed; }
+.cosmos-center { width: 160px; height: 160px; color: #34523c; transform: rotate(-25deg); }.cosmos-center svg, .discipline-yin svg { width: 100%; height: 100%; }
+.cosmos-star { position: absolute; color: #7b9169; }.star-one { top: 65px; left: 65px; font-size: 38px; }.star-two { right: 40px; top: 120px; font-size: 55px; }.star-three { bottom: 60px; left: 110px; font-size: 22px; }
+.cosmos-number { position: absolute; right: 90px; bottom: 35px; font: italic 105px Georgia, serif; color: #aa92bd99; }
+.cosmos-caption { position: absolute; bottom: 0; font-size: 8px; letter-spacing: 2.5px; color: #7c896e; }
+.explore-section, .landing-start, .landing-faq { scroll-margin-top: 28px; }
+.landing-section-heading { display: flex; justify-content: space-between; align-items: end; gap: 25px; margin-bottom: 28px; }
+.landing-section-heading h2, .start-copy h2, .landing-faq h2 { font: 36px/1.25 Georgia, serif; letter-spacing: -.8px; margin-top: 16px; }
+.landing-section-heading > p { font-size: 12px; line-height: 1.9; color: var(--muted); }
+.discipline-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.discipline-card { position: relative; padding: 38px; min-height: 410px; overflow: hidden; border-radius: 3px; }
+.tuvi-card { background: #e8eddf; color: #294733; }.numbers-card { background: #ede6f2; color: #604877; }
+.discipline-label { position: relative; z-index: 1; font-size: 10px; letter-spacing: 1.8px; }
+.discipline-card h3 { position: relative; z-index: 1; font: 37px/1.2 Georgia, serif; margin: 52px 0 20px; }
+.discipline-card > p { position: relative; z-index: 1; font-size: 13px; line-height: 1.9; max-width: 310px; }
+.discipline-link { position: relative; z-index: 1; display: flex; justify-content: space-between; padding-top: 28px; margin-top: 28px; border-top: 1px solid #879b7040; text-decoration: none; font-size: 12px; }
+.discipline-link:hover { text-decoration: underline; text-underline-offset: 5px; }
+.card-soon { display: inline-block; font-size: 9px; letter-spacing: 0; padding: 4px 8px; border: 1px solid #bba4ca; border-radius: 20px; margin-left: 10px; }
+.discipline-art { position: absolute; right: -22px; top: 90px; width: 220px; height: 220px; opacity: .2; }
+.discipline-yin { display: block; width: 160px; height: 160px; margin: 20px; transform: rotate(20deg); }
+.discipline-star { position: absolute; right: 18px; top: -5px; font-size: 55px; }
+.number-composition { display: flex; gap: 10px; font: 90px Georgia, serif; transform: rotate(-15deg); top: 130px; opacity: .17; }.number-composition > span:nth-child(2) { transform: translateY(-35px); }
+.landing-start { margin-top: 100px; padding: 60px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 90px; border-top: 1px solid var(--line); }
+.start-copy { padding-top: 15px; }.start-copy h2 { font-size: 44px; margin: 20px 0; }.start-copy > p { max-width: 420px; font-size: 14px; line-height: 1.9; color: var(--muted); }
+.landing-steps { list-style: none; display: grid; gap: 24px; margin-top: 32px; padding: 0; }.landing-steps li { display: flex; gap: 20px; }.landing-steps li > span { font: 24px Georgia, serif; color: #a2ad96; }.landing-steps h3 { font-size: 13px; margin: 3px 0 7px; }.landing-steps p { font-size: 12px; line-height: 1.8; color: var(--muted); }
+.landing-start .form-container { border-radius: 5px; box-shadow: 0 16px 45px #253f2a06; padding: 36px; }
+.landing-philosophy { text-align: center; padding: 65px 20px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }.landing-philosophy > span { display: inline-block; font-size: 35px; color: #8fa17c; margin-bottom: 20px; }.landing-philosophy p { font: 30px/1.5 Georgia, serif; }.landing-philosophy em { color: #7d8c70; }
+.landing-faq { display: grid; grid-template-columns: 1fr 1.2fr; gap: 70px; padding: 75px 0 30px; }.faq-list details { border-bottom: 1px solid var(--line); padding: 19px 0; }.faq-list summary { cursor: pointer; font-size: 14px; line-height: 1.8; }.faq-list details p { font-size: 12px; line-height: 1.9; color: var(--muted); margin: 14px 0 6px; padding-right: 15px; }
+@media (max-width: 1100px) { .site-nav { gap: 18px; padding: 20px 28px; }.landing-menu { gap: 20px; }.menu-soon { display: none; }.hero-copy h1 { font-size: 54px; }.landing-start { gap: 45px; }.discipline-card { padding: 30px; }.discipline-card h3 { font-size: 32px; } }
+@media (max-width: 800px) { .site-nav { flex-wrap: wrap; padding: 18px 24px; }.landing-menu { order: 3; width: 100%; justify-content: space-between; gap: 12px; }.brand { font-size: 24px; }.app-main { padding: 30px 24px; }.landing-hero { grid-template-columns: 1fr; padding: 35px 0 65px; gap: 20px; }.hero-copy h1 { font-size: 54px; }.hero-cosmos { height: 360px; }.ring-outer { width: 310px; height: 310px; }.ring-inner { width: 250px; height: 250px; }.cosmos-caption { bottom: -10px; }.landing-section-heading { flex-direction: column; align-items: start; }.landing-section-heading > p br { display: none; }.discipline-grid { gap: 16px; }.discipline-card h3 { font-size: 29px; }.discipline-card { padding: 24px; }.card-soon { display: block; width: fit-content; margin: 10px 0 0; }.landing-start { grid-template-columns: 1fr; margin-top: 60px; gap: 36px; }.landing-faq { grid-template-columns: 1fr; gap: 20px; }.landing-philosophy p { font-size: 27px; } }
+@media (max-width: 520px) { .site-nav { padding: 15px 18px; gap: 10px; }.brand { font-size: 21px; gap: 7px; }.brand-symbol { font-size: 29px; }.nav-cta { padding: 9px 12px; gap: 10px; font-size: 11px; }.landing-menu { gap: 8px; }.landing-menu a { font-size: 11px; }.app-main { padding: 24px 18px; }.hero-copy h1 { font-size: 43px; letter-spacing: -1.4px; }.hero-copy > p { font-size: 13px; }.hero-actions { gap: 18px; }.hero-cosmos { height: 330px; }.ring-outer { width: 280px; height: 280px; }.ring-inner { width: 230px; height: 230px; }.cosmos-center { width: 125px; height: 125px; }.star-one { left: 30px; }.star-two { right: 18px; }.cosmos-number { right: 40px; bottom: 20px; font-size: 90px; }.discipline-grid { grid-template-columns: 1fr; }.discipline-card { min-height: 360px; padding: 30px; }.discipline-card h3 { font-size: 35px; margin-top: 38px; }.card-soon { display: inline-block; margin: 0 0 0 8px; }.landing-section-heading h2, .landing-faq h2 { font-size: 32px; }.landing-start .form-container { padding: 24px; }.start-copy h2 { font-size: 36px; }.landing-philosophy { padding: 45px 0; }.landing-philosophy p { font-size: 24px; }.landing-faq { padding-top: 50px; } }
+@media print { .site-nav { display: none !important; }.app-main { max-width: none; padding: 0; } }
