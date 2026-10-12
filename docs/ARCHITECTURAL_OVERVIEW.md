@@ -15,7 +15,7 @@ Dự án tuân thủ mô hình 3 lớp tiêu chuẩn:
     - Chứa thuật toán an sao lõi (Astrology Engine).
     - Xử lý logic nghiệp vụ và điều phối dữ liệu.
 3.  **Data Layer (Database)**:
-    - SQLite file (`backend/data/tuvi.sqlite`) lưu lá số, ý nghĩa sao/cung, và catalog cách cục đã seed.
+    - SQLite file (`backend/data/tuvi.sqlite`) lưu ý nghĩa sao/cung và catalog cách cục đã seed. API lập lá số không thêm hàng ngày giờ sinh.
     - Truy cập qua `src/db/repositories.js` (`node:sqlite`).
 
 ## 2. Luồng dữ liệu (Data Flow)
@@ -28,7 +28,7 @@ Dự án tuân thủ mô hình 3 lớp tiêu chuẩn:
     - Gọi `lunar.js` để chuyển Dương lịch sang Âm lịch (`isLeapMonth`).
     - Gọi `calculateTuVi` trong `tuviRules.mjs` để an 14 chính tinh, phụ tinh, Tuần, Triệt, đại hạn. Tháng nhuận đi qua `resolveAnSaoMonth`.
     - Kết quả tính là `{ lunarInfo, tuviInfo }`. Response thêm `normalizedChart` (model P1.1). `tuviInfo` giữ nguyên cho UI.
-4.  **Storage**: Backend ghi hàng `horoscopes` trong SQLite. `full_chart` vẫn là `tuviInfo`, không lưu bản chuẩn hóa.
+4.  **Storage**: `POST /api/charts/generate` không ghi ngày giờ sinh. Hàng `horoscopes` đã có từ trước vẫn nằm trong file SQLite và không bị xóa bởi API lập lá số.
 5.  **Response**: `TuViChart` chỉ đọc `lunarInfo` và `tuviInfo`. Panel cách cục gọi `POST /api/combinations/match`.
 
 ## 3. Cấu trúc Engine (Astrology Engine)

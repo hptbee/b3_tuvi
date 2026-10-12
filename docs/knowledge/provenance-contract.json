@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "note": "Hợp đồng trạng thái. Test PASS không nâng bibliographicStatus hoặc formulaStatus.",
+  "layers": {
+    "implementationStatus": ["untested", "tested", "not_executable"],
+    "formulaStatus": ["undocumented", "matches_repo_formula", "checked_against_edition"],
+    "bibliographicStatus": ["primary", "secondary", "unverified_attribution", "conflicting_secondary", "internal"],
+    "interpretationStatus": ["unreviewed", "sourced", "absolute_claim_needs_review"]
+  },
+  "transitions": {
+    "implementationStatus": {
+      "untested": ["tested", "not_executable"],
+      "tested": ["untested"],
+      "not_executable": ["untested"]
+    },
+    "formulaStatus": {
+      "undocumented": ["matches_repo_formula"],
+      "matches_repo_formula": ["checked_against_edition", "undocumented"],
+      "checked_against_edition": ["matches_repo_formula"]
+    },
+    "bibliographicStatus": {
+      "unverified_attribution": ["conflicting_secondary", "secondary"],
+      "conflicting_secondary": ["secondary", "unverified_attribution"],
+      "secondary": ["primary", "conflicting_secondary"],
+      "internal": ["secondary"],
+      "primary": ["secondary"]
+    },
+    "interpretationStatus": {
+      "unreviewed": ["sourced", "absolute_claim_needs_review"],
+      "sourced": ["unreviewed", "absolute_claim_needs_review"],
+      "absolute_claim_needs_review": ["unreviewed"]
+    }
+  },
+  "gates": {
+    "bibliographicStatus": {
+      "primary": "editionAuthenticated"
+    },
+    "formulaStatus": {
+      "checked_against_edition": "editionAuthenticated"
+    },
+    "interpretationStatus": {
+      "sourced": "sourceId"
+    }
+  }
+}

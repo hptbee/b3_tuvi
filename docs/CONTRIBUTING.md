@@ -61,4 +61,30 @@ Dữ liệu luận giải tĩnh ở `backend/src/data/`. Ý nghĩa sao/cung và 
 **Thuật toán lõi (`backend/src/engine/`):**
 - Đây là phần quan trọng nhất. Mọi thay đổi cần được kiểm tra bằng test case cụ thể (năm sinh, tháng, giờ → vị trí sao mong đợi).
 
+## Hàng rào domain
+
+Bốn điều không làm im lặng:
+
+1. **Công thức.** Không sửa `tuviRules.mjs`, bảng an sao, `rulesV2.json`, hoặc logic trong `combinations.json` khi chưa có đối chiếu nguồn và duyệt nếu công thức đang tranh luận. Test phần mềm PASS không phải phép sửa thư.
+2. **Trạng thái nguồn.** Không nâng `bibliographicStatus`, `authenticated`, `formulaCheckedAgainstSource`, hay `verification_status` chỉ vì test xanh hoặc vì một PDF dựng lại.
+3. **SQLite người dùng.** Không ghi đè hoặc xóa `backend/data/*.sqlite`. Schema production chỉ đổi khi có backup và duyệt.
+4. **Merge nhạy cảm.** Công thức, nguồn đã nâng cấp, migration dữ liệu, và AI luận giải công khai không merge vào `main` khi chưa được duyệt.
+
+### Bốn lớp provenance
+
+Giữ riêng, không gộp một điểm:
+
+| Lớp | Câu hỏi | Không suy từ |
+|---|---|---|
+| `implementationStatus` | Code đã chạy và test chưa? | Sách đúng |
+| `formulaStatus` | Công thức repo có khớp đoạn nguồn không? | Test PASS |
+| `bibliographicStatus` | Ấn bản đã được nhận dạng chưa? | JSON hợp lệ |
+| `interpretationStatus` | Lời luận đã được review chưa? | Sao nằm đúng chỗ |
+
+Chi tiết: `docs/KNOWLEDGE_CLAIM_MODEL.md`, `docs/AUTODEV_MASTER_PLAN_V2.md`.
+
+## Ngoài phạm vi sản phẩm
+
+Không thêm đăng ký, đăng nhập, hồ sơ cá nhân, lịch sử lá số, hay API truy xuất ngày giờ sinh đã lưu. Lá số ưu tiên tính và trả về, không bắt buộc gắn tài khoản.
+
 Cảm ơn bạn đã đồng hành cùng chúng tôi! 🙏

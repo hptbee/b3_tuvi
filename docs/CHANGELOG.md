@@ -13,6 +13,13 @@ Tất cả các thay đổi đáng chú ý của dự án **Tử Vi Việt Nam (
 - Sổ nguồn và ma trận 63 cách (P1.3A): `docs/knowledge/`. Không có cách nào được gắn trang sách. Không đổi schema SQLite.
 - P1.3A.1: mười cách có đoạn trong PDF Tân Biên 277 trang (bản dựng 2014, bìa ghi 1956). Không khớp rule đang chạy. Không sửa rule, không bật Khoa Minh Lộc Ám.
 - AutoDev Master Plan (`docs/AUTODEV_MASTER_PLAN.md`): hàng đợi M0 → KB-01; P1.3B, LLM và vận hạn không READY.
+- AutoDev Master Plan V2 (`docs/AUTODEV_MASTER_PLAN_V2.md`): điều phối sau V1. V1 giữ làm lịch sử. AUTH-01 loại khỏi phạm vi. KB-02 và migration production vẫn chờ người.
+- CONTRIBUTING: bốn điều cấm (công thức, nâng nguồn, ghi đè SQLite, merge nhạy cảm) và bốn lớp provenance.
+- Hợp đồng provenance (`docs/knowledge/provenance-contract.json`): bốn lớp và cổng chuyển trạng thái. Test PASS không nâng thành primary hoặc `checked_against_edition`.
+- CI (`.github/workflows/ci.yml`): backend `npm test`; frontend lint và build. Node 22. Không deploy.
+- `docs/AGENT_ENGINEERING.md`: hàng rào cho agent, phạm vi đã loại, cổng cần người.
+- Prototype schema tri thức trên DB tạm (`knowledgePrototype.js`). Không gọi từ `initDatabase()`. Không ghi `backend/data`. Không nạp description cách cục. Migration production vẫn chờ người.
+- `POST /api/charts/generate` không lưu ngày giờ sinh. Không xóa hàng `horoscopes` đã có.
 
 ### Khắc phục lỗi (Fixed)
 - Rule v2: độ sáng áp vào bản sao nằm trong vùng điều kiện, không loại cả ngôi sao vì một bản ở cung khác. Rule thiếu `id`, `samePalace` rỗng, `giap.mode` lạ, `countAtLeast.n` không hợp lệ, hoặc `excluded.relation` khác `same` thì không khớp.

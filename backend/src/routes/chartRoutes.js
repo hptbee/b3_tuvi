@@ -3,13 +3,12 @@ import { solarToLunar } from '../engine/lunar.js';
 import { calculateTuVi } from '../engine/tuviRules.mjs';
 import { validateChartInput } from '../engine/chartInput.js';
 import { normalizeChart } from '../engine/normalizeChart.js';
-import { insertHoroscope } from '../db/repositories.js';
 
 const router = express.Router();
 
 /**
  * POST /api/charts/generate
- * Thực hiện tính toán lá số và lưu vào collection 'horoscopes'.
+ * Tính lá số và trả JSON. Không ghi ngày giờ sinh vào SQLite.
  */
 router.post('/generate', async (req, res) => {
     const parsed = validateChartInput(req.body);
@@ -50,25 +49,11 @@ router.post('/generate', async (req, res) => {
             normalizedChart: normalized.ok ? normalized : null
         };
 
-        insertHoroscope({
-            input_data: { name, day, month, year, hour, gender },
-            lunar_data: {
-                lunarDay: ld.lunarDay,
-                lunarMonth: ld.lunarMonth,
-                lunarYear: ld.lunarYear,
-                canIndex: ld.canIndex,
-                chiIndex: ld.chiIndex,
-                isLeap: Boolean(ld.isLeapMonth),
-                anSaoMonth: tvInfo.anSaoMonth
-            },
-            full_chart: tvInfo
-        });
-
         return res.json(chartData);
 
-    } catch (error) {
-        console.error("Tuvi Calculation Error:", error);
-        res.status(500).json({ error: 'Lỗi tính toán và lưu lá số' });
+    } catch {
+        console.error('Tuvi Calculation Error');
+        res.status(500).json({ error: 'Lỗi tính toán lá số' });
     }
 });
 
