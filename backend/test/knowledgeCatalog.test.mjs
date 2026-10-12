@@ -19,6 +19,17 @@ assert.match(masterPlan, /LLM-01 \/ FORTUNE-01\s+deferred/);
 assert.match(masterPlan, /Không ấn bản in nào `authenticated: true`/);
 assert.match(masterPlan, /Không cách nào `formulaCheckedAgainstSource: true`/);
 
+const masterPlanV2 = readFileSync(
+    fileURLToPath(new URL('../../docs/AUTODEV_MASTER_PLAN_V2.md', import.meta.url)),
+    'utf8'
+);
+assert.match(masterPlanV2, /\| AUTH-01 \| — \| `EXCLUDED_BY_PRODUCT_SCOPE` \|/);
+assert.match(masterPlanV2, /### V2-KB-02[\s\S]{0,240}- status: BLOCKED_HUMAN/);
+assert.match(masterPlanV2, /### V2-KB-03-prod[\s\S]{0,240}- status: BLOCKED_HUMAN/);
+assert.match(masterPlanV2, /V2-M0-01/);
+assert.match(masterPlanV2, /V2-KB-01/);
+assert.match(masterPlanV2, /`authenticated: true` chỉ sau/);
+
 const PILOT = new Set(pilot.claims.map((claim) => claim.combinationName));
 const FORMULA = new Set(['CONFLICT', 'PARTIAL', 'NOT_IMPLEMENTED', 'MATCH']);
 
