@@ -1,0 +1,8 @@
+---
+description: Hard portability rule — do not fork B3 meaning per host; adapters map, they do not rewrite
+alwaysApply: true
+---
+
+Follow the portable portability rule:
+
+@rules/portability.md

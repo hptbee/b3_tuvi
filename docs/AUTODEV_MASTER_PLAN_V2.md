@@ -26,7 +26,7 @@ Mười lớp: calculation, normalized chart, palace relations, rule engine, kno
 | CI workflow | chưa có |
 | SQLite | schema v1. Sau `V2-M0-04`, `POST /api/charts/generate` không ghi ngày giờ sinh. Hàng cũ không bị xóa |
 | Catalog | 63 cách, 58 rule v2; 10 pilot: 7 CONFLICT, 2 PARTIAL, 1 NOT_IMPLEMENTED, 0 MATCH |
-| Ấn bản | cả hai edition `authenticated: false` |
+| Ấn bản lúc audit | cả hai edition `authenticated: false`. Sau đó chủ dự án chấp nhận PDF 277 trang; bản 2012 và bản Archive 2017 vẫn false |
 | LLM / Tiểu hạn / đăng nhập | chưa có trong code |
 
 Working tree lúc tách nhánh còn dirty **ngoài** V2: `package-lock.json`, `frontend/package-lock.json`, `.cursor/`, `rules/`. Không stage.
@@ -182,21 +182,21 @@ Test V2 chỉ khóa invariant ổn định (AUTH bị loại, KB-02 còn `BLOCKE
 
 - epic: KB
 - priority: P0
-- status: BLOCKED_HUMAN
+- status: COMPLETED
 - dependencies: []
 - dependency_class: DOMAIN_SOURCE, HUMAN_APPROVAL
-- scope: hồ sơ metadata cần người duyệt; không sửa `authenticated`
-- acceptanceCriteria: `authenticated: true` chỉ sau bìa/colophon hoặc catalog thư viện do người xác nhận
-- requiresHumanApproval: yes
-- rollbackPlan: n/a
-- deliverables: chưa mở
+- scope: PDF 277 trang tuvithuchanh.com, do chủ dự án chấp nhận 2026-10-12
+- acceptanceCriteria: `authenticated: true` trên edition PDF 277 trang, với `authenticationBasis: project_owner`. Không ghi năm in 1956 là đã chứng minh. Bản EMIC 2012 và bản Internet Archive 2017 vẫn `authenticated: false`. Edition khác: `authenticated: true` chỉ sau khi người mở được đúng bản.
+- requiresHumanApproval: yes — đã có cho file PDF này
+- rollbackPlan: đặt lại `authenticated: false` nếu chủ dự án rút chấp nhận
+- deliverables: `docs/knowledge/sources.json`
 
 ### V2-KB-03-prod — Production schema migration
 
 - status: BLOCKED_HUMAN
 - dependencies: [V2-KB-02, V2-KB-03]
 - requiresHumanApproval: yes
-- note: không đánh completed khi mới có prototype
+- note: vẫn BLOCKED_HUMAN. PDF 277 trang đã được chủ dự án chấp nhận, nhưng bibliographicStatus của tác phẩm vẫn `conflicting_secondary`, công thức pilot chưa MATCH, và không có duyệt migration.
 
 ## 8. Later epics (not READY)
 
@@ -234,7 +234,7 @@ V2-KB-01 provenance contract
         │
 V2-KB-03 prototype (temp DB)     V2-M0-03 CI (độc lập)
         │
-V2-KB-02 BLOCKED_HUMAN ────────── V2-KB-03-prod BLOCKED_HUMAN
+V2-KB-02 PDF 277 trang owner-accepted ── V2-KB-03-prod BLOCKED_HUMAN
         │
 V2-RULE-01 (sửa runtime: HUMAN)
         │

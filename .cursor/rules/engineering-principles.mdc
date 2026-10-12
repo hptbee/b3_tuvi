@@ -1,0 +1,8 @@
+---
+description: Hard engineering principles — understand before changing, smallest change, do not confuse layers
+alwaysApply: true
+---
+
+Follow the portable engineering-principles rule:
+
+@rules/engineering-principles.md

@@ -1,0 +1,8 @@
+---
+description: Hard verification rule — never claim PASS without executed evidence
+alwaysApply: true
+---
+
+Follow the portable verification rule:
+
+@rules/verification.md

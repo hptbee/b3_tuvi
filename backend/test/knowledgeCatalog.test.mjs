@@ -24,7 +24,7 @@ const masterPlanV2 = readFileSync(
     'utf8'
 );
 assert.match(masterPlanV2, /\| AUTH-01 \| — \| `EXCLUDED_BY_PRODUCT_SCOPE` \|/);
-assert.match(masterPlanV2, /### V2-KB-02[\s\S]{0,240}- status: BLOCKED_HUMAN/);
+assert.match(masterPlanV2, /### V2-KB-02[\s\S]{0,400}- status: COMPLETED/);
 assert.match(masterPlanV2, /### V2-KB-03-prod[\s\S]{0,240}- status: BLOCKED_HUMAN/);
 assert.match(masterPlanV2, /V2-M0-01/);
 assert.match(masterPlanV2, /V2-KB-01/);
@@ -59,7 +59,7 @@ matrixDoc.rows.forEach((row, index) => {
     assert.strictEqual(row.interpretationSourced, false);
     if (PILOT.has(row.name)) {
         assert.deepStrictEqual(row.sources, ['thai-thu-lang-tan-bien']);
-        assert.strictEqual(row.sourceVerificationStatus, 'passage_located_edition_unverified');
+        assert.strictEqual(row.sourceVerificationStatus, 'passage_located_owner_accepted_digital');
         assert.ok(FORMULA.has(row.formulaComparisonStatus));
     } else {
         assert.deepStrictEqual(row.sources, []);
@@ -72,7 +72,20 @@ matrixDoc.rows.forEach((row, index) => {
 
 const editionIds = sourcesDoc.editions.map((edition) => edition.editionId);
 assert.strictEqual(new Set(editionIds).size, editionIds.length);
-assert.ok(sourcesDoc.editions.every((edition) => edition.authenticated === false));
+const accepted = sourcesDoc.editions.find((edition) => edition.editionId === 'tan-bien-retypeset-277-cover-1956');
+assert.strictEqual(accepted.authenticated, true);
+assert.strictEqual(accepted.authenticationBasis, 'project_owner');
+assert.strictEqual(accepted.digitalArtifactVerified, true);
+assert.strictEqual(accepted.originalEditionAuthenticated, false);
+assert.strictEqual(accepted.textCollatedAgainstOriginal, false);
+assert.strictEqual(accepted.publicationYear, null);
+const print2012 = sourcesDoc.editions.find((edition) => edition.editionId === 'tan-bien-nxb-thoi-dai-2012');
+assert.strictEqual(print2012.authenticated, false);
+assert.strictEqual(print2012.catalogRecordVerified, true);
+assert.strictEqual(print2012.physicalCopyInspected, false);
+assert.strictEqual(print2012.textVerified, false);
+assert.strictEqual(print2012.pageCount, 427);
+assert.ok(sourcesDoc.editions.filter((edition) => edition.editionId !== accepted.editionId).every((edition) => edition.authenticated === false));
 assert.notStrictEqual(sourcesDoc.editions[0].pageCount, sourcesDoc.editions[1].pageCount);
 
 const claimIds = pilot.claims.map((claim) => claim.claimId);
@@ -90,4 +103,4 @@ assert.ok(!rules.some((rule) => rule.combination === 'Khoa Minh Lộc Ám'));
 const phu = rules.find((rule) => rule.id === 'phu_tuong_trieu_vien');
 assert.strictEqual(phu.clauses[0].at, 'tam_hop_partners');
 
-console.log('knowledge catalogs keep edition unverified and runtime rules unchanged');
+console.log('knowledge catalogs keep formula flags false and only the accepted PDF edition authenticated');
