@@ -1,6 +1,10 @@
+import { createHash } from 'crypto';
+
 export const POLICY_VERSION = 'dual-ai-source-review-v1';
 
 const AGREEMENT_FIELDS = ['schoolId', 'editionId', 'locator', 'claimId', 'formulaComparison', 'verdict'];
+const FORMULA = new Set(['MATCH', 'PARTIAL', 'CONFLICT', 'NOT_IMPLEMENTED']);
+const HEX64 = /^[0-9a-f]{64}$/;
 
 function decision(fields) {
     return {
@@ -25,8 +29,16 @@ function sameList(left, right) {
     return a.every((item, index) => item === b[index]);
 }
 
+function text(value) {
+    return typeof value === 'string' && value.trim() !== '';
+}
+
 function spanContains(span, quotation) {
-    return typeof quotation === 'string' && quotation.trim().length > 0 && span.includes(quotation);
+    return typeof quotation === 'string' && quotation.trim().length >= 40 && quotation.trim() === quotation && span.includes(quotation);
+}
+
+function digestOf(span) {
+    return createHash('sha256').update(span).digest('hex');
 }
 
 function missingRequired(required, actual) {
@@ -35,11 +47,17 @@ function missingRequired(required, actual) {
 }
 
 export function compareReviews(input) {
-    if (!input || input.sourceAvailable !== true || typeof input.storedSpan !== 'string' || input.storedSpan.trim() === '' || typeof input.sourceDigest !== 'string' || input.sourceDigest.trim() === '') {
-        return decision({ decision: 'SOURCE_INACCESSIBLE', reason: 'stored source span or digest is missing' });
+    if (!input || input.sourceAvailable !== true || typeof input.storedSpan !== 'string' || input.storedSpan.trim() === '') {
+        return decision({ decision: 'SOURCE_INACCESSIBLE', reason: 'stored source span is missing' });
+    }
+    if (!HEX64.test(input.sourceDigest || '') || digestOf(input.storedSpan) !== input.sourceDigest) {
+        return decision({ decision: 'UNRESOLVED', reason: 'source digest does not match the stored span' });
+    }
+    if (!text(input.editionId) || !Array.isArray(input.requiredConditions) || input.requiredConditions.length === 0 || !Array.isArray(input.requiredExceptions) || !Array.isArray(input.requiredAnchors) || input.requiredAnchors.length === 0) {
+        return decision({ decision: 'UNRESOLVED', reason: 'stored edition, conditions, or anchors are missing' });
     }
     const reviews = Array.isArray(input.reviews) ? input.reviews : [];
-    if (reviews.length === 0 || reviews.some((review) => !review || review.available === false)) {
+    if (reviews.some((review) => !review || review.available !== true)) {
         return decision({ decision: 'REVIEW_NOT_EXECUTED', reason: 'a configured model did not return a review' });
     }
     if (reviews.length !== 2) {
@@ -59,6 +77,12 @@ export function compareReviews(input) {
     if (disagreements.length > 0) {
         return decision({ decision: 'CONFLICT', reason: 'reviews disagree', disagreements });
     }
+    if (!text(left.model) || !text(right.model) || left.model.trim() !== left.model || right.model.trim() !== right.model || left.model.trim() === right.model.trim()) {
+        return decision({ decision: 'UNRESOLVED', reason: 'reviews are not from two models' });
+    }
+    if (['schoolId', 'editionId', 'locator', 'claimId'].some((field) => !text(left[field])) || !FORMULA.has(left.formulaComparison)) {
+        return decision({ decision: 'UNRESOLVED', reason: 'agreed identity or formula status is incomplete' });
+    }
     if (!spanContains(input.storedSpan, left.quotation) || !spanContains(input.storedSpan, right.quotation)) {
         return decision({ decision: 'UNRESOLVED', reason: 'quotation is not in the stored span' });
     }
@@ -70,6 +94,9 @@ export function compareReviews(input) {
     }
     if (!sameList(left.exceptions || [], right.exceptions || []) || missingRequired(input.requiredExceptions, left.exceptions || [])) {
         return decision({ decision: 'UNRESOLVED', reason: 'an exception is missing or disputed' });
+    }
+    if (input.requiredAnchors.some((anchor) => typeof anchor !== 'string' || anchor.length < 4 || !left.quotation.includes(anchor) || !right.quotation.includes(anchor))) {
+        return decision({ decision: 'UNRESOLVED', reason: 'quotation does not contain a required anchor' });
     }
     return decision({
         decision: 'AI_ACCEPTED',

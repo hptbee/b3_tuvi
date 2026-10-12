@@ -151,6 +151,13 @@ mixed.schools = {
 };
 assert.ok(codes(mixed).has('mixed_school'));
 
+const blankVariant = bundle();
+blankVariant.schools = {
+    ...schoolsDoc,
+    variants: schoolsDoc.variants.map((variant, index) => index === 0 ? { ...variant, variantId: ' ' } : variant)
+};
+assert.ok(codes(blankVariant).has('duplicate_id'));
+
 const promoted = bundle();
 promoted.sources.sources[0].bibliographicStatus = 'primary';
 assert.ok(codes(promoted).has('unsupported_promotion'));

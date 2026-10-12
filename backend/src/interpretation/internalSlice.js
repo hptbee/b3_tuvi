@@ -56,8 +56,8 @@ export function evaluateInternalSlice(chart, decision) {
     if (!chart?.schoolId || chart.schoolId !== decision.schoolId) {
         return result(decision, { availabilityStatus: 'insufficient_evidence', reason: 'school_mismatch', conditionResults: [] });
     }
-    const conditionResults = (decision.conditions || []).map((conditionId) => evaluateCondition(conditionId, chart));
-    if (conditionResults.some((item) => item.status === 'not_implemented' || item.status === 'unknown')) {
+    const conditionResults = decision.conditions.map((conditionId) => evaluateCondition(conditionId, chart));
+    if (conditionResults.some((item) => item.status === 'not_implemented')) {
         return result(decision, { availabilityStatus: 'not_implemented', conditionResults });
     }
     if (conditionResults.some((item) => item.status !== 'satisfied')) {

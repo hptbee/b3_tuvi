@@ -1,6 +1,7 @@
 import { POLICY_VERSION } from './crossReview.js';
 
-const PLACEHOLDER_DIGEST = /placeholder|example-digest|actual-digest-at-runtime|todo/i;
+const HEX64 = /^[0-9a-f]{64}$/;
+const DECISIONS = new Set(['AI_ACCEPTED', 'CONFLICT', 'UNRESOLVED', 'SOURCE_INACCESSIBLE', 'REVIEW_NOT_EXECUTED']);
 
 function issue(code, message) {
     return { code, message };
@@ -17,22 +18,37 @@ export function validateDecisionRecord(record) {
     if (record.policyVersion !== POLICY_VERSION) {
         errors.push(issue('policy', 'policyVersion is not the dual-AI source policy'));
     }
-    if (typeof record.sourceDigest !== 'string' || record.sourceDigest.trim() === '' || PLACEHOLDER_DIGEST.test(record.sourceDigest)) {
-        errors.push(issue('digest', 'sourceDigest must be a measured digest'));
+    if (typeof record.sourceDigest !== 'string' || !HEX64.test(record.sourceDigest)) {
+        errors.push(issue('digest', 'sourceDigest must be a measured sha256'));
     }
-    if (!Array.isArray(record.reviewers) || record.reviewers.length !== 2 || record.reviewers.some((reviewer) => !reviewer || typeof reviewer.reviewRef !== 'string' || reviewer.reviewRef.trim() === '')) {
-        errors.push(issue('reviewers', 'two review refs are required'));
+    if (!DECISIONS.has(record.decision)) {
+        errors.push(issue('decision', 'decision is not a known outcome'));
+    }
+    const reviewers = Array.isArray(record.reviewers) ? record.reviewers : [];
+    const refs = reviewers.map((reviewer) => reviewer?.reviewRef);
+    if (reviewers.length !== 2 || refs.some((ref) => typeof ref !== 'string' || ref.trim() === '' || ref.trim() !== ref) || new Set(refs.map((ref) => ref.trim())).size !== 2) {
+        errors.push(issue('reviewers', 'two distinct review refs are required'));
+    }
+    if (record.crossReviewOutcome === 'AI_CROSS_REVIEWED' && record.decision !== 'AI_ACCEPTED') {
+        errors.push(issue('promotion', 'only an accepted decision is cross-reviewed'));
     }
     if (record.decision === 'AI_ACCEPTED') {
         if (record.crossReviewOutcome !== 'AI_CROSS_REVIEWED') {
             errors.push(issue('promotion', 'AI_ACCEPTED requires a cross-review outcome'));
         }
-        if ((record.reviewers || []).some((reviewer) => reviewer?.available === false)) {
+        if (typeof record.editionId !== 'string' || record.editionId.trim() === '' || typeof record.locator !== 'string' || record.locator.trim() === '') {
+            errors.push(issue('locator', 'an accepted decision needs an edition and locator'));
+        }
+        const models = reviewers.map((reviewer) => reviewer?.model);
+        if (models.some((model) => typeof model !== 'string' || model.trim() === '' || model.trim() !== model) || new Set(models.map((model) => model.trim())).size !== 2) {
+            errors.push(issue('reviewers', 'accepted reviews need two models'));
+        }
+        if (reviewers.some((reviewer) => reviewer?.available !== true)) {
             errors.push(issue('promotion', 'an unavailable review cannot be accepted'));
         }
-    }
-    if (record.decision === 'REVIEW_NOT_EXECUTED' && record.crossReviewOutcome === 'AI_CROSS_REVIEWED') {
-        errors.push(issue('promotion', 'REVIEW_NOT_EXECUTED cannot be cross-reviewed'));
+        if (!Array.isArray(record.conditions) || record.conditions.length === 0 || record.conditions.some((item) => typeof item !== 'string' || item.trim() === '')) {
+            errors.push(issue('conditions', 'an accepted decision needs conditions'));
+        }
     }
     return { ok: errors.length === 0, errors };
 }

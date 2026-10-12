@@ -126,7 +126,7 @@ function registeredSchoolIds(registry, errors) {
     }
     const variantIds = new Set();
     for (const variant of variants) {
-        if (!variant || typeof variant.variantId !== 'string' || variantIds.has(variant.variantId)) {
+        if (!variant || typeof variant.variantId !== 'string' || variant.variantId.trim() === '' || variantIds.has(variant.variantId)) {
             errors.push(issue('duplicate_id', 'variant id duplicated or empty', variant?.variantId || 'variant'));
             continue;
         }

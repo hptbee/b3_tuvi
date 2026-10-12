@@ -26,6 +26,12 @@ const compared = compareReviews({
     editionId: decision.editionId,
     requiredConditions: decision.conditions,
     requiredExceptions: decision.exceptions,
+    requiredAnchors: [
+        'Cung Mệnh hay Quan Lộc an tại Hợi có Nguyệt tọa thủ',
+        'xa lánh Tuần',
+        'Sát tinh và Bại tinh',
+        'Khoa, Quyền, Lộc'
+    ],
     reviews: [reviewA, reviewB]
 });
 assert.strictEqual(compared.decision, decision.decision);

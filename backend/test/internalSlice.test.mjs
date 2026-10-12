@@ -50,6 +50,14 @@ assert.strictEqual(stored.availabilityStatus, 'not_implemented');
 assert.strictEqual(stored.prose, null);
 assert.ok(stored.conditionResults.some((item) => item.conditionId === 'avoid_sat' && item.status === 'not_implemented'));
 
+const noEdition = evaluateInternalSlice(chart(), { ...structural, editionId: '' });
+assert.strictEqual(noEdition.availabilityStatus, 'insufficient_evidence');
+assert.notStrictEqual(noEdition.availabilityStatus, 'conditional_match');
+
+const noConditions = evaluateInternalSlice(chart(), { ...structural, conditions: [] });
+assert.strictEqual(noConditions.availabilityStatus, 'insufficient_evidence');
+assert.notStrictEqual(noConditions.availabilityStatus, 'conditional_match');
+
 const otherSchool = evaluateInternalSlice(chart({ schoolId: 'trung-chau' }), structural);
 assert.strictEqual(otherSchool.availabilityStatus, 'insufficient_evidence');
 assert.strictEqual(otherSchool.reason, 'school_mismatch');

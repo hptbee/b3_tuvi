@@ -34,6 +34,7 @@ Dữ liệu dựng trong test, database tạm, hoặc lỗi giả. Không dùng 
 - `safeErrorLog.test.mjs`
 - `evidenceV3.test.mjs`
 - `interpretationPipeline.test.mjs`
+- `internalSlice.test.mjs`
 - `knowledgeCoverage.test.mjs`
 - `wholeChart.test.mjs`
 - `timeEngine.test.mjs`
@@ -48,5 +49,10 @@ Khóa tính chất: không nâng nguồn từ test pass, catalog không thành p
 - `provenance.test.mjs`
 - `knowledgeCatalog.test.mjs`
 - `knowledgeValidate.test.mjs`
+- `sourceHygiene.test.mjs`
+- `crossReview.test.mjs`
+- `crossReviewNegatives.test.mjs`
+- `decisionRegistry.test.mjs`
+- `storedDecision.test.mjs`
 - `fixtureClasses.test.mjs`
 - `perfSmoke.test.mjs`

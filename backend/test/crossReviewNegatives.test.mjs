@@ -1,7 +1,9 @@
 import assert from 'assert';
+import { createHash } from 'crypto';
 import { compareReviews } from '../src/knowledge/crossReview.js';
 
 const span = 'Cung Mệnh hay Quan Lộc an tại Hợi có Nguyệt tọa thủ. Xa Tuần Triệt.';
+const digest = createHash('sha256').update(span).digest('hex');
 
 function review(overrides = {}) {
     return {
@@ -9,7 +11,7 @@ function review(overrides = {}) {
         schoolId: 'vn-tam-hop-default',
         editionId: 'tan-bien-retypeset-277-cover-1956',
         locator: '19.2.11+19.5',
-        sourceDigest: 'digest-1',
+        sourceDigest: digest,
         claimId: 'claim-nguyet-lang-thien-mon',
         formulaComparison: 'PARTIAL',
         verdict: 'PARTIAL',
@@ -24,10 +26,11 @@ function packet(overrides = {}) {
     return {
         sourceAvailable: true,
         storedSpan: span,
-        sourceDigest: 'digest-1',
+        sourceDigest: digest,
         editionId: 'tan-bien-retypeset-277-cover-1956',
         requiredConditions: ['palace_menh_or_quan_loc', 'avoid_tuan'],
         requiredExceptions: ['xa_tuan_triet'],
+        requiredAnchors: ['Mệnh hay Quan Lộc', 'Nguyệt tọa thủ'],
         reviews: [review({ model: 'a' }), review({ model: 'b' })],
         ...overrides
     };
@@ -39,6 +42,12 @@ const cases = {
         reviews: [
             review({ quotation: 'câu không có trong đoạn' }),
             review({ quotation: 'câu không có trong đoạn' })
+        ]
+    }),
+    long_quotation_outside_span: packet({
+        reviews: [
+            review({ model: 'a', quotation: 'Cung Mệnh hay Quan Lộc an tại Hợi có Nguyệt tọa thủ.X' }),
+            review({ model: 'b', quotation: 'Cung Mệnh hay Quan Lộc an tại Hợi có Nguyệt tọa thủ.X' })
         ]
     }),
     wrong_edition: packet({
@@ -64,6 +73,8 @@ const cases = {
 
 assert.strictEqual(compareReviews(cases.single_model).decision, 'UNRESOLVED');
 assert.strictEqual(compareReviews(cases.shared_fabricated_quotation).decision, 'UNRESOLVED');
+assert.strictEqual(compareReviews(cases.long_quotation_outside_span).decision, 'UNRESOLVED');
+assert.notStrictEqual(compareReviews(cases.long_quotation_outside_span).decision, 'AI_ACCEPTED');
 assert.notStrictEqual(compareReviews(cases.wrong_edition).decision, 'AI_ACCEPTED');
 assert.strictEqual(compareReviews(cases.missing_source).decision, 'SOURCE_INACCESSIBLE');
 assert.strictEqual(compareReviews(cases.dropped_condition).decision, 'UNRESOLVED');
