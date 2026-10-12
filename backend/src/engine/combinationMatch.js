@@ -6,6 +6,7 @@ import {
     isTuanAlias,
     isTrietAlias
 } from './starNames.js';
+import { branchIndexRelations } from './palaceRelation.js';
 
 export const SUPPORTED_POSITIONS = new Set([
     'Đồng cung',
@@ -27,18 +28,18 @@ function unique(arr) {
     return Array.from(new Set(arr));
 }
 
-/** Quan hệ cung quanh Mệnh. Id cung là chỉ số 1–12. Chưa phải API P1.1. */
+/** Hình cũ cho matcher: tamHop gồm cung gốc rồi hai đối tác. Công thức nằm ở palaceRelation.js. */
 export function palaceRelations(menhIndex) {
-    const menh = Number(menhIndex);
-    const tamHop = [menh, wrapIndex(menh + 4), wrapIndex(menh + 8)];
-    const xungChieu = wrapIndex(menh + 6);
-    const giapCung = [wrapIndex(menh - 1), wrapIndex(menh + 1)];
+    const rel = branchIndexRelations(menhIndex);
+    if (!rel) {
+        return { targetPalaceId: String(menhIndex), tamHop: [], xungChieu: '', giapCung: [], tamPhuongTuChinh: [] };
+    }
     return {
-        targetPalaceId: String(menh),
-        tamHop: tamHop.map(String),
-        xungChieu: String(xungChieu),
-        giapCung: giapCung.map(String),
-        tamPhuongTuChinh: [...tamHop, xungChieu].map(String)
+        targetPalaceId: String(rel.branchId),
+        tamHop: [rel.branchId, rel.tamHop[0], rel.tamHop[1]].map(String),
+        xungChieu: String(rel.xungChieu),
+        giapCung: rel.giap.map(String),
+        tamPhuongTuChinh: rel.tamPhuongTuChinh.map(String)
     };
 }
 

@@ -2,6 +2,7 @@ import express from 'express';
 import { solarToLunar } from '../engine/lunar.js';
 import { calculateTuVi } from '../engine/tuviRules.mjs';
 import { validateChartInput } from '../engine/chartInput.js';
+import { normalizeChart } from '../engine/normalizeChart.js';
 import Horoscope from '../models/Horoscope.js';
 
 const router = express.Router();
@@ -38,7 +39,16 @@ router.post('/generate', async (req, res) => {
             ld.isLeapMonth
         );
 
-        const chartData = { lunarInfo: ld, tuviInfo: tvInfo };
+        const normalized = normalizeChart({
+            tuviInfo: tvInfo,
+            lunarInfo: ld,
+            input: { name, day, month, year, hour, gender }
+        });
+        const chartData = {
+            lunarInfo: ld,
+            tuviInfo: tvInfo,
+            normalizedChart: normalized.ok ? normalized : null
+        };
 
         const newHoroscope = new Horoscope({
             input_data: { name, day, month, year, hour, gender },

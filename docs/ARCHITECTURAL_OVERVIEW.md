@@ -27,9 +27,9 @@ Dự án tuân thủ mô hình 3 lớp tiêu chuẩn:
     - Backend nhận request tại `chartRoutes.js` và kiểm tra payload bằng `chartInput.js` trước khi tính.
     - Gọi `lunar.js` để chuyển Dương lịch sang Âm lịch (`isLeapMonth`).
     - Gọi `calculateTuVi` trong `tuviRules.mjs` để an 14 chính tinh, phụ tinh, Tuần, Triệt, đại hạn. Tháng nhuận đi qua `resolveAnSaoMonth`.
-    - Kết quả là `{ lunarInfo, tuviInfo }`.
-4.  **Storage**: Backend lưu document `Horoscope` vào MongoDB.
-5.  **Response**: Trả lá số cho `TuViChart`. Panel cách cục gọi `POST /api/combinations/match`.
+    - Kết quả tính là `{ lunarInfo, tuviInfo }`. Response thêm `normalizedChart` (model P1.1). `tuviInfo` giữ nguyên cho UI.
+4.  **Storage**: Backend lưu document `Horoscope` vào MongoDB. `full_chart` vẫn là `tuviInfo`, không lưu bản chuẩn hóa.
+5.  **Response**: `TuViChart` chỉ đọc `lunarInfo` và `tuviInfo`. Panel cách cục gọi `POST /api/combinations/match`.
 
 ## 3. Cấu trúc Engine (Astrology Engine)
 
@@ -37,13 +37,16 @@ Engine nằm tại `backend/src/engine/` và là "trái tim" của hệ thống:
 
 -   **`constants.js`**: Định nghĩa danh sách Thiên Can, Địa Chi, Cung Chức, và bảng màu cho các Sao (Ngũ hành).
 -   **`lunar.js`**: Thuật toán chuyển đổi lịch và tính toán Can/Chi/Tiết khí. Tương đối phức tạp, dựa trên các công thức thiên văn học.
--   **`tuviRules.mjs`**: `calculateTuVi` an toàn bộ lá số. Bảng độ sáng nằm ở `data/starStatus.json`. Đầu ra là 12 cung, mỗi cung có danh sách sao.
+-   **`tuviRules.mjs`**: `calculateTuVi` an toàn bộ lá số. Bảng độ sáng nằm ở `data/starStatus.json`. Đầu ra là 12 cung, mỗi cung có danh sách sao dạng chuỗi.
+-   **`starCatalog.js`**: ID sao ổn định, tách độ sáng khỏi tên.
+-   **`normalizeChart.js`**: đổi `tuviInfo` thành model 12 cung. Không ghi đè engine.
+-   **`palaceRelation.js` / `chartQuery.js`**: tam hợp, xung chiếu, giáp, tứ chính cho mọi chi. Chi tiết: `docs/PALACE_RELATIONSHIPS.md`, `docs/CHART_DOMAIN_MODEL.md`.
 
 ## 4. Mô hình dữ liệu (Database Schemas)
 
 -   **Horoscope**: Một lá số đã lập (input dương lịch, âm lịch kể cả `isLeap` và `anSaoMonth`, `full_chart`).
 -   **Star / Palace**: Ý nghĩa sao và cung cho thao tác click trên lá số.
--   **Combination**: Cách cục dùng cho `POST /api/combinations/match`. Catalog được cache 60 giây và không tải `vector_embedding`.
+-   **Combination**: Cách cục dùng cho `POST /api/combinations/match`. Nguồn là `combinations.json`. Matcher không cache Mongo.
 
 ## 5. Tích hợp AI (AI Ready)
 

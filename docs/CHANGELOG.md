@@ -6,6 +6,9 @@ Tất cả các thay đổi đáng chú ý của dự án **Tử Vi Việt Nam (
 
 ## [Unreleased]
 
+### Thêm mới (Added)
+- Model lá số chuẩn hóa và quan hệ cung (P1.1): `normalizedChart` trên API lập lá số, không đổi `tuviInfo`.
+
 ### Khắc phục lỗi (Fixed)
 - `POST /api/combinations/match` có integration test đối chiếu pure matcher.
 - Giáp cung phải có sao ở cả hai bên Mệnh. `require_ham` gắn với cung của quy tắc.
