@@ -96,12 +96,28 @@ function testValidateChartInput() {
     console.log('validateChartInput test passed');
 }
 
+function testBinhHoaKhoaOnVanXuong() {
+    // Can Bính = 2, Hóa Khoa trên Văn Xương (tuHoaMap).
+    const res = calculateTuVi(2, 3, 1, 1, 1, 1);
+    const xuong = Object.values(res.boxes).find((b) =>
+        (b.goodStars || []).some((s) => s.startsWith('Văn Xương'))
+        || (b.majorStars || []).some((s) => s.startsWith('Văn Xương'))
+    );
+    assert.ok(xuong, 'Văn Xương must exist');
+    assert.ok(
+        [...xuong.goodStars, ...xuong.majorStars].some((s) => s.includes('Hóa Khoa')),
+        'Bính: Hóa Khoa must follow Văn Xương'
+    );
+    console.log('Bính Hóa Khoa on Văn Xương passed');
+}
+
 function run() {
     testCalculateTuVi();
     testMenhAtDanForMonth1HourTi();
     testLeapMonthRule();
     testGetStarStatus();
     testValidateChartInput();
+    testBinhHoaKhoaOnVanXuong();
     console.log('All engine tests passed');
 }
 

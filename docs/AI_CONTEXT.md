@@ -21,7 +21,8 @@ Tài liệu này được thiết kế để cung cấp cho mô hình AI (như C
 | API lập lá số | `backend/src/routes/chartRoutes.js` |
 | Schema lá số | `backend/src/models/Horoscope.js` |
 | Ý nghĩa sao / cung | `backend/src/models/Star.js`, `backend/src/models/Palace.js` |
-| Cách cục | `backend/src/models/Combination.js`, `backend/src/routes/combinationRoutes.js` |
+| Cách cục | `backend/src/engine/combinationMatch.js`, `backend/src/data/combinations.json`, `backend/src/routes/combinationRoutes.js` |
+| Hồ sơ trường phái | `backend/src/engine/schoolProfile.js`, `docs/TU_VI_SCHOOL_VARIANTS.md` |
 | UI lá số | `frontend/src/components/TuViChart.jsx` |
 | Form nhập liệu | `TuviFormBox` trong `frontend/src/App.jsx` |
 | Gốc URL API | `frontend/src/apiBase.js` (`VITE_API_BASE_URL`) |
@@ -47,7 +48,7 @@ Tài liệu này được thiết kế để cung cấp cho mô hình AI (như C
 - **Index Địa Chi**: Trong mảng `DIA_CHI`, index 1 là "Tí", index 12 là "Hợi".
 - **Tháng nhuận**: `solarToLunar` trả `isLeapMonth`. `calculateTuVi` nhận cờ đó và gọi `resolveAnSaoMonth`: trước ngày 15 giữ số tháng, từ ngày 15 tính tháng sau (tháng 12 nhuận sang tháng 1).
 - **Múi giờ**: Giờ nhập là giờ đồng hồ, route đổi sang canh giờ 1–12 trước khi gọi engine. Mặc định giờ Việt Nam (GMT+7).
-- **Cách cục**: `POST /api/combinations/match` dùng catalog đã cache 60 giây và bỏ `vector_embedding`. Đối chiếu tam hợp / xung chiếu vẫn chạy trong bộ nhớ.
+- **Cách cục**: `POST /api/combinations/match` dùng `combinations.json` (không cache Mongo). Matcher mặc định Tọa thủ; không khớp khi thiếu sao hoặc `verification_status: disabled`. Chi tiết P0: `docs/P0_IMPLEMENTATION_REPORT.md`.
 
 ## Prompting Tips cho AI
 Khi yêu cầu AI viết code mới, hãy kèm theo các chỉ dẫn:

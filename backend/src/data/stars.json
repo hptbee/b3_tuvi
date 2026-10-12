@@ -6,23 +6,8 @@
         "basic_meaning": "Tử Vi là sao Đế Toà, tượng trưng cho uy quyền, cao quý, phúc lộc và tuổi thọ. Tính chất hóa giải hung ách rất tốt.",
         "palace_meanings": {
             "Mệnh": "Tử Vi thủ Mệnh là người có vẻ mặt hiền hòa, đoan chính, tính tình trung hậu, nghiêm trang. Có khả năng lãnh đạo, uy quyền và quý hiển.",
-            "Phụ Mẫu": "Cha mẹ có uy quyền, có danh chức. Trong gia đình cha mẹ là người nghiêm khắc nhưng thương con.",
-            "Quan Lộc": "Công danh hiển đạt, thường làm người đứng đầu, tài lãnh đạo bẩm sinh.",
-            "Tài Bạch": "Mưu cầu tiền bạc dễ dàng, tài khí dồi dào, có khả năng quản lý tài chính tốt.",
-            "Tử Tức": "Con cái hiếu thảo, giỏi giang, có chí làm ăn.",
-            "Phu Thê": "Vợ chồng có người làm quyền chức, tính tình có chút gia trưởng hoặc hay quán xuyến gia đình.",
-            "default": "Tử Vi là sao Đế Toà, tượng trưng cho uy quyền, cao quý, phúc lộc và tuổi thọ. Tính chất hóa giải hung ách rất tốt."
-        },
-        "rules": [
-            {
-                "condition": "Đắc Địa",
-                "description": "Phúc lộc vẹn toàn, uy quyền hiển đạt."
-            },
-            {
-                "condition": "Hãm Địa",
-                "description": "Dễ tự cao tự đại, khó hòa hợp với người khác."
-            }
-        ]
+            "default": "Tử Vi là sao Đế Toà, tượng trưng cho uy quyền, cao quý, phúc lộc và tuổi thọ."
+        }
     },
     {
         "name": "Thiên Cơ",
@@ -30,9 +15,7 @@
         "group": "chinh_tinh",
         "basic_meaning": "Thiên Cơ là sao Thiện, chủ về huynh đệ, trí lực, mưu kế, sự khéo léo và tính hiền lành.",
         "palace_meanings": {
-            "Mệnh": "Thiên Cơ thủ Mệnh là người mưu trí, khéo léo, đầu óc nhanh nhẹn, tính tình nhân từ. Làm việc có kế hoạch, nhưng hay suy nghĩ nhiều.",
-            "Phu Thê": "Người hôn phối thường khéo léo, có tài lẻ, tuy nhiên tình cảm đôi khi hay thay đổi.",
-            "Quan Lộc": "Phù hợp với các ngành nghề cần đầu óc tính toán, mưu lược, tham mưu, giáo dục."
+            "Mệnh": "Thiên Cơ thủ Mệnh là người mưu trí, khéo léo, đầu óc nhanh nhẹn, tính tình nhân từ."
         }
     },
     {
@@ -42,10 +25,7 @@
         "basic_meaning": "Thái Dương thuộc Hỏa, chủ về sự cao quý, quyền uy, nam giới (cha, chồng, con trai), tính quang minh, nóng nảy.",
         "palace_meanings": {
             "Mệnh": "Thái Dương là mặt trời. Người có Thái Dương thủ mệnh thường cương trực, nhân ái, có tính tự trọng cao, bộc trực.",
-            "Quan Lộc": "Quan Lộc rực rỡ, thích hợp với các việc hoạt động xã hội, chính trị, năng động.",
-            "Tài Bạch": "Kiếm tiền chân chính, quang minh chính đại. Ưa tiêu xài phóng khoáng.",
-            "default": "Thái Dương thuộc Hỏa, chủ về sự cao quý, quyền uy, nam giới (cha, chồng, con trai), tính quang minh, nóng nảy."
+            "default": "Thái Dương thuộc Hỏa, chủ về sự cao quý, quyền uy, nam giới."
         }
     }
-    // NOTE: truncated here for brevity. Full star list will be copied if you confirm.
 ]

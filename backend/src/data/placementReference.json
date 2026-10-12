@@ -1,0 +1,65 @@
+{
+  "status": "independent_tables",
+  "notes": "Bảng kỳ vọng không sinh từ calculateTuVi. Nguồn ghi trong từng mục. Dị bản xem docs/TU_VI_SCHOOL_VARIANTS.md.",
+  "vanTinhByCan": {
+    "source": "Bảng an sao theo thiên can: Kabala Huyền Học – Cách lập lá số; Xemsomenh; Phong Thủy Thanh Hóa.",
+    "positions": { "0": 6, "1": 7, "2": 9, "3": 10, "4": 9, "5": 10, "6": 12, "7": 1, "8": 3, "9": 4 },
+    "vanTinhNhamVariant": "Nhâm = Dần là mặc định engine; dị bản Dậu."
+  },
+  "phaToaiByChiGroup": {
+    "source": "Khẩu quyết Tí Ngọ Mão Dậu ở Tị / Dần Thân Tị Hợi ở Dậu / Thìn Tuất Sửu Mùi ở Sửu — Kabala ch.4; Tử Vi Sơn Khiêm; thansohoconline.",
+    "tuChinh": 6,
+    "tuSinh": 10,
+    "tuMo": 2
+  },
+  "thienDucNguyetDuc": {
+    "source": "Học viện lý số bài 12: Thiên Đức khởi Dậu năm Tí thuận; Nguyệt Đức khởi Tị năm Tí thuận.",
+    "thienDucYearTi": 10,
+    "nguyetDucYearTi": 6
+  },
+  "chuThan": {
+    "source": "Kabala – Mệnh chủ và Thân chủ; Học viện lý số; tracuulasotuvi. Năm Ngọ = Linh Tinh.",
+    "byChi": {
+      "1": "Hỏa Tinh",
+      "2": "Thiên Tướng",
+      "3": "Thiên Lương",
+      "4": "Thiên Đồng",
+      "5": "Văn Xương",
+      "6": "Thiên Cơ",
+      "7": "Linh Tinh",
+      "8": "Thiên Tướng",
+      "9": "Thiên Lương",
+      "10": "Thiên Đồng",
+      "11": "Văn Xương",
+      "12": "Thiên Cơ"
+    }
+  },
+  "duongPhu": {
+    "source": "Kabala ch.4: từ Lộc Tồn kể 1, đếm nghịch đến cung thứ 8.",
+    "rule": "fixChi(locPos - 7)"
+  },
+  "tetDates": {
+    "status": "provisional_historical",
+    "source": "Ngày Tết dương lịch Việt Nam đã công bố (không lấy từ lunar.js).",
+    "cases": [
+      { "day": 29, "month": 1, "year": 1968, "lunarDay": 1, "lunarMonth": 1, "canName": "Mậu", "chiName": "Thân" },
+      { "day": 21, "month": 1, "year": 1985, "lunarDay": 1, "lunarMonth": 1, "canName": "Ất", "chiName": "Sửu" },
+      { "day": 5, "month": 2, "year": 2000, "lunarDay": 1, "lunarMonth": 1, "canName": "Canh", "chiName": "Thìn" },
+      { "day": 17, "month": 2, "year": 2007, "lunarDay": 1, "lunarMonth": 1, "canName": "Đinh", "chiName": "Hợi" },
+      { "day": 25, "month": 1, "year": 2020, "lunarDay": 1, "lunarMonth": 1, "canName": "Canh", "chiName": "Tí" },
+      { "day": 22, "month": 1, "year": 2023, "lunarDay": 1, "lunarMonth": 1, "canName": "Quý", "chiName": "Mão" },
+      { "day": 10, "month": 2, "year": 2024, "lunarDay": 1, "lunarMonth": 1, "canName": "Giáp", "chiName": "Thìn" },
+      { "day": 29, "month": 1, "year": 2025, "lunarDay": 1, "lunarMonth": 1, "canName": "Ất", "chiName": "Tị" },
+      { "day": 17, "month": 2, "year": 2026, "lunarDay": 1, "lunarMonth": 1, "canName": "Bính", "chiName": "Ngọ" }
+    ]
+  },
+  "leapMonths": {
+    "status": "provisional_historical",
+    "source": "Tháng nhuận âm lịch Việt Nam đã công bố.",
+    "cases": [
+      { "day": 23, "month": 5, "year": 2020, "lunarMonth": 4, "isLeapMonth": true },
+      { "day": 22, "month": 3, "year": 2023, "lunarMonth": 2, "isLeapMonth": true },
+      { "day": 25, "month": 7, "year": 2025, "lunarMonth": 6, "isLeapMonth": true }
+    ]
+  }
+}

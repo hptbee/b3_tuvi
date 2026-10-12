@@ -222,7 +222,6 @@ async function migrate() {
     }
     console.log(`   ✓ ${migrated} charts migrated to horoscopes (${count - migrated} already existed)`);
   } else {
-    import fs from 'fs/promises';
     console.log('   ℹ️  No old charts to migrate');
   }
 
@@ -230,25 +229,8 @@ async function migrate() {
   await mongoose.disconnect();
   console.log('👋 Disconnected');
 }
-let starsToSeed = [];
-let palacesToSeed = [];
+
 migrate().catch(err => {
   console.error('❌ Migration failed:', err);
   process.exit(1);
 });
-
-// load JSON data files
-try {
-  const sRaw = await fs.readFile(new URL('../data/stars.json', import.meta.url), 'utf8');
-  starsToSeed = JSON.parse(sRaw);
-} catch (err) {
-  console.error('Failed to load stars.json:', err);
-  process.exit(1);
-}
-try {
-  const pRaw = await fs.readFile(new URL('../data/palaces.json', import.meta.url), 'utf8');
-  palacesToSeed = JSON.parse(pRaw);
-} catch (err) {
-  console.error('Failed to load palaces.json:', err);
-  process.exit(1);
-}

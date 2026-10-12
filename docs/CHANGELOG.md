@@ -6,10 +6,29 @@ Tất cả các thay đổi đáng chú ý của dự án **Tử Vi Việt Nam (
 
 ## [Unreleased]
 
+### Kế hoạch (chưa triển khai)
+- Module AI luận giải, đăng nhập, lịch sử lá số, Tiểu hạn / lưu niên: **chưa có trong code**. Trang `/luan-giai` vẫn là placeholder.
+
+## [0.5.0] - 2026-10-12
+
 ### Thêm mới (Added)
-- Module AI luận giải tự động (Đang phát triển).
-- Chức năng đăng ký / đăng nhập người dùng.
-- Màn hình lịch sử lá số đã xem.
+- Matcher cách cục thuần (`combinationMatch.js`), catalog `combinations.json` với `verification_status`.
+- Hồ sơ trường phái mặc định `schoolProfile.js`.
+- Test bảng an sao độc lập và regression cách cục.
+- `docs/P0_IMPLEMENTATION_REPORT.md`, `GOLDEN_TEST_REFERENCE.md`, `TU_VI_SCHOOL_VARIANTS.md`.
+
+### Thay đổi (Changed)
+- `POST /api/combinations/match` dùng catalog JSON, không phụ thuộc Mongo.
+- Hung cách kèm disclaimer; không luận sinh tử / bệnh / cha mẹ từ một tổ hợp.
+- Ghi chú: changelog 0.1.0 từng ghi “Tiểu hạn” — UI chỉ có mốc Đại hạn, không có Tiểu hạn.
+
+### Khắc phục lỗi (Fixed)
+- Tứ Hóa bỏ sót Xương, Khúc, Tả, Hữu.
+- Đường Phù, Văn Tinh (Mậu/Kỷ), Phá Toái, Thiên Đức, Nguyệt Đức, Chủ Thân năm Ngọ.
+- Cách cục quét 12 cung khi thiếu vị trí (hung cách khớp ~100% lá số).
+- Chuẩn hóa Tí/Tị; tắt Nhị hợp/Ám hợp và Nhật Nguyệt Tật Ách.
+- `migrate.js` lỗi cú pháp; `stars.json` JSON hỏng.
+- ESLint `set-state-in-effect` trên App và CachCucPanel.
 
 ---
 

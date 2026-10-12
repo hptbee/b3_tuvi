@@ -8,16 +8,17 @@ const TYPE_CONFIG = {
 };
 
 export default function CachCucPanel({ chartData }) {
-  const [combinations, setCombinations] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const chartKey = chartData?.tuviInfo
+    ? `${chartData.tuviInfo.menh}-${chartData.lunarInfo?.lunarDay}-${chartData.lunarInfo?.lunarMonth}-${chartData.lunarInfo?.lunarYear}`
+    : '';
+  const [result, setResult] = useState({ key: '', combinations: [] });
   const [expanded, setExpanded] = useState(null);
+  const loading = Boolean(chartData?.tuviInfo?.boxes) && result.key !== chartKey;
 
   useEffect(() => {
     if (!chartData?.tuviInfo?.boxes) return;
 
     const { boxes, menh } = chartData.tuviInfo;
-
-    // Find menhChi (Chi of the palace containing "MỆNH")
     let menhChi = '';
     Object.values(boxes).forEach(box => {
       if (box.cungName?.includes('MỆNH')) {
@@ -25,21 +26,25 @@ export default function CachCucPanel({ chartData }) {
       }
     });
 
-    setLoading(true);
+    const key = chartKey;
     fetch(`${API_BASE}/api/combinations/match`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ 
-        boxes, 
-        menhIndex: menh, 
-        menhChi 
+      body: JSON.stringify({
+        boxes,
+        menhIndex: menh,
+        menhChi
       })
     })
       .then(r => r.json())
-      .then(data => setCombinations(data.combinations || []))
-      .catch(err => console.error('Cách cục fetch error:', err))
-      .finally(() => setLoading(false));
-  }, [chartData]);
+      .then(data => setResult({ key, combinations: data.combinations || [] }))
+      .catch(err => {
+        console.error('Cách cục fetch error:', err);
+        setResult({ key, combinations: [] });
+      });
+  }, [chartData, chartKey]);
+
+  const combinations = result.key === chartKey ? result.combinations : [];
 
   if (!chartData) return null;
 
@@ -98,27 +103,33 @@ export default function CachCucPanel({ chartData }) {
             <div className="cach-cuc-grid">
               {list.map(combo => (
                 <div
-                  key={combo._id}
-                  className={`cach-cuc-card ${expanded === combo._id ? 'expanded' : ''}`}
+                  key={combo._id || combo.name}
+                  className={`cach-cuc-card ${expanded === (combo._id || combo.name) ? 'expanded' : ''}`}
                   style={{ background: cfg.bg, borderColor: cfg.color }}
-                  onClick={() => setExpanded(expanded === combo._id ? null : combo._id)}
+                  onClick={() => setExpanded(expanded === (combo._id || combo.name) ? null : (combo._id || combo.name))}
                 >
                   <div className="card-top">
                     <span className="card-icon" style={{ color: cfg.color }}>{cfg.icon}</span>
                     <strong className="card-name" style={{ color: cfg.color }}>{combo.name}</strong>
-                    <span className="card-arrow">{expanded === combo._id ? '▲' : '▼'}</span>
+                    <span className="card-arrow">{expanded === (combo._id || combo.name) ? '▲' : '▼'}</span>
                   </div>
                   <p className="card-desc">{combo.description}</p>
-                  {expanded === combo._id && (
+                  {combo.verification_status === 'provisional' && (
+                    <p className="card-desc" style={{ fontSize: '12px', opacity: 0.75 }}>Cách cục tạm thời — điều kiện đã siết, nguồn luận giải chưa đủ.</p>
+                  )}
+                  {expanded === (combo._id || combo.name) && (
                     <div className="card-detail">
                       <div className="card-formula">
-                        <span className="formula-label">📖 Điều kiện:</span>
+                        <span className="formula-label">Điều kiện:</span>
                         <span>{combo.formula_text}</span>
                       </div>
                       <div className="card-meaning">
-                        <span className="formula-label">💡 Luận giải:</span>
+                        <span className="formula-label">Luận giải:</span>
                         <span>{combo.summary}</span>
                       </div>
+                      {combo.disclaimer && (
+                        <p className="card-desc" style={{ fontSize: '12px', marginTop: '8px' }}>{combo.disclaimer}</p>
+                      )}
                       {combo.tags?.length > 0 && (
                         <div className="card-tags">
                           {combo.tags.filter(t => t !== combo.type).map(t => (

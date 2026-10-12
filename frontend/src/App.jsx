@@ -90,29 +90,33 @@ const TuviFormBox = ({ userInfo, setUserInfo, onSubmit, onBack }) => (
   </div>
 );
 
+function readInfoFromSearch(searchParams) {
+  if (!searchParams.has('year') || !searchParams.has('month') || !searchParams.has('day')) {
+    return { name: '', day: 1, month: 1, year: 1990, hour: 1, gender: 1 };
+  }
+  return {
+    name: searchParams.get('name') ?? '',
+    day: parseInt(searchParams.get('day')) || 1,
+    month: parseInt(searchParams.get('month')) || 1,
+    year: parseInt(searchParams.get('year')) || 1990,
+    hour: searchParams.has('hour') ? parseInt(searchParams.get('hour')) : 1,
+    gender: parseInt(searchParams.get('gender')) || 1
+  };
+}
+
 function App() {
-  const [userInfo, setUserInfo] = useState({ name: '', day: 1, month: 1, year: 1990, hour: 1, gender: 1 });
-  const [chartData, setChartData] = useState(null);
   const [searchParams, setSearchParams] = useSearchParams();
+  const [userInfo, setUserInfo] = useState(() => readInfoFromSearch(searchParams));
+  const [chartData, setChartData] = useState(null);
   const navigate = useNavigate();
 
+  const hasChartQuery = searchParams.has('year') && searchParams.has('month') && searchParams.has('day');
+
   useEffect(() => {
-    // Đọc URLSearchParams lúc khởi động để tự động nạp Lá số
-    if (searchParams.has('year') && searchParams.has('month') && searchParams.has('day')) {
-      const info = {
-        name: searchParams.get('name') ?? '',
-        day: parseInt(searchParams.get('day')) || 1,
-        month: parseInt(searchParams.get('month')) || 1,
-        year: parseInt(searchParams.get('year')) || 1990,
-        hour: searchParams.has('hour') ? parseInt(searchParams.get('hour')) : 1,
-        gender: parseInt(searchParams.get('gender')) || 1
-      };
-      setUserInfo(info);
-      generateChart(info, setChartData);
-    } else {
-      setChartData(null);
-    }
-  }, [searchParams]);
+    if (!hasChartQuery) return;
+    const info = readInfoFromSearch(searchParams);
+    generateChart(info, setChartData);
+  }, [searchParams, hasChartQuery]);
 
   const handleHomeSubmit = (e) => {
     e.preventDefault();
@@ -167,12 +171,12 @@ function App() {
                 onSubmit={handleLaSoSubmit} 
                 onBack={handleBack} 
               />
-              {chartData && (
+              {hasChartQuery && chartData && (
                 <div className="chart-view">
                   <TuViChart lunarInfo={chartData.lunarInfo} tuviInfo={chartData.tuviInfo} userInfo={userInfo} />
                 </div>
               )}
-              {chartData && <CachCucPanel chartData={chartData} />}
+              {hasChartQuery && chartData && <CachCucPanel chartData={chartData} />}
             </div>
           } />
           <Route path="/luan-giai" element={<LuanGiai />} />

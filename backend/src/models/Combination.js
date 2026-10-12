@@ -27,8 +27,18 @@ const CombinationSchema = new mongoose.Schema({
         // Mối quan hệ vị trí ("Tam hợp", "Đồng cung", "Xung chiếu", "Nhị hợp")
         positions:        { type: [String], default: [] },
         // Mô tả điều kiện tự do (dùng khi logic quá phức tạp)
-        formula_text:     { type: String, default: '' }
+        formula_text:     { type: String, default: '' },
+        require_ham:      { type: [String], default: [] },
+        require_no_major_at_menh: { type: Boolean, default: false }
     },
+
+    verification_status: {
+        type: String,
+        enum: ['matching_ok', 'provisional', 'disabled'],
+        default: 'provisional'
+    },
+    disclaimer: { type: String, default: '' },
+    notes: { type: String, default: '' },
 
     // Các đoạn luận giải theo ngữ cảnh — AI dùng để viết bài
     interpretations: [{

@@ -1,4 +1,6 @@
 import { CUNG_CHUC, CUC_SO_MAP, DIA_CHI, THIEN_CAN } from './constants.js';
+import { palaceHasStar } from './starNames.js';
+import { DEFAULT_SCHOOL, resolveSchool } from './schoolProfile.js';
 import tuviRing from '../data/tuviRing.json' with { type: 'json' };
 import phuRing from '../data/phuRing.json' with { type: 'json' };
 import tsArray from '../data/tsArray.json' with { type: 'json' };
@@ -57,7 +59,8 @@ function computeCucId(canMenh, menh) {
     return napAmToCuc[hanhVal];
 }
 
-export function calculateTuVi(canYearIndex, chiYearIndex, day, month, hour, gender, isLeapMonth = false) {
+export function calculateTuVi(canYearIndex, chiYearIndex, day, month, hour, gender, isLeapMonth = false, schoolProfile = DEFAULT_SCHOOL) {
+    const school = resolveSchool(schoolProfile);
     const boxes = initBoxes();
     const anSaoMonth = resolveAnSaoMonth(month, day, isLeapMonth);
 
@@ -151,17 +154,6 @@ export function calculateTuVi(canYearIndex, chiYearIndex, day, month, hour, gend
         else addGood(pos, star);
     }
 
-    // tuHoaMap loaded from JSON seed
-    let tuHoaList = tuHoaMap[canYearIndex];
-    let hoaNames = ["Hóa Lộc", "Hóa Quyền", "Hóa Khoa", "Hóa Kỵ"];
-    for (let i = 1; i <= 12; i++) {
-        tuHoaList.forEach((st, idx) => {
-            if (boxes[i].majorStars.some(ms => ms.includes(st))) {
-                if (idx === 3) addBad(i, hoaNames[idx]); else addGood(i, hoaNames[idx]);
-            }
-        });
-    }
-
     let taPhu = fixChi(5 + anSaoMonth - 1); let huuBat = fixChi(11 - anSaoMonth + 1);
     addGood(taPhu, "Tả Phù"); addGood(huuBat, "Hữu Bật");
 
@@ -218,13 +210,15 @@ export function calculateTuVi(canYearIndex, chiYearIndex, day, month, hour, gend
     addGood(fixChi(taPhu + day - 1), "Tam Thai");
     addGood(fixChi(huuBat - day + 1), "Bát Tọa");
 
-    const dhMap = { 0: 8, 1: 9, 2: 10, 3: 12, 4: 8, 5: 9, 6: 10, 7: 12, 8: 1, 9: 6 };
-    addGood(dhMap[canYearIndex], "Đường Phù");
+    // Đường Phù: Lộc Tồn là cung 1, đếm nghịch đến cung thứ 8.
+    addGood(fixChi(locPos - 7), "Đường Phù");
 
     const tTruMap = { 0: 6, 1: 7, 2: 1, 3: 6, 4: 7, 5: 9, 6: 3, 7: 7, 8: 10, 9: 11 };
     addGood(tTruMap[canYearIndex], "Thiên Trù");
 
-    const vTinhMap = { 0: 6, 1: 7, 2: 9, 3: 10, 4: 6, 5: 7, 6: 12, 7: 1, 8: 3, 9: 4 };
+    // Văn Tinh theo can năm. Nhâm mặc định Dần (dị bản Dậu: school.vanTinhNham = 'dau').
+    const vTinhMap = { 0: 6, 1: 7, 2: 9, 3: 10, 4: 9, 5: 10, 6: 12, 7: 1, 8: 3, 9: 4 };
+    if (school.vanTinhNham === 'dau') vTinhMap[8] = 10;
     addGood(vTinhMap[canYearIndex], "Văn Tinh");
 
     addBad(fixChi(thaiTuePos - anSaoMonth + hour), "Đẩu Quân");
@@ -239,18 +233,29 @@ export function calculateTuVi(canYearIndex, chiYearIndex, day, month, hour, gend
     addGood(tQuanMap[canYearIndex], "Thiên Quan");
     addGood(tPhucMap[canYearIndex], "Thiên Phúc");
 
-    const nDucMap = { 1: 7, 2: 8, 3: 9, 4: 10, 5: 11, 6: 12, 7: 1, 8: 2, 9: 3, 10: 4, 11: 5, 12: 6 };
-    addGood(nDucMap[anSaoMonth], "Nguyệt Đức");
-    const tDucMap2 = { 1: 10, 2: 7, 3: 4, 4: 1, 5: 10, 6: 7, 7: 4, 8: 10, 9: 10, 10: 7, 11: 4, 12: 1 };
-    addGood(tDucMap2[anSaoMonth], "Thiên Đức");
+    // Thiên Đức khởi Dậu năm Tí, Nguyệt Đức khởi Tị năm Tí, đếm thuận theo chi năm.
+    addGood(fixChi(6 + chiYearIndex - 1), "Nguyệt Đức");
+    addGood(fixChi(10 + chiYearIndex - 1), "Thiên Đức");
 
     const lHMap = { 0: 10, 1: 11, 2: 8, 3: 9, 4: 6, 5: 7, 6: 4, 7: 5, 8: 12, 9: 3 };
     addBad(lHMap[canYearIndex], "Lưu Hà");
 
     let kiepSat = isDanNgoTuat ? 12 : isThanTiThin ? 6 : isTyDauSuu ? 3 : 9;
     addBad(kiepSat, "Kiếp Sát");
-    let phaToai = isDanNgoTuat ? 10 : isThanTiThin ? 2 : isTyDauSuu ? 6 : 2;
-    addBad(phaToai, "Phá Toái");
+    const isTuChinh = [1, 7, 4, 10].includes(chiYearIndex);
+    const isTuSinh = [3, 9, 6, 12].includes(chiYearIndex);
+    addBad(isTuChinh ? 6 : isTuSinh ? 10 : 2, "Phá Toái");
+
+    // Tứ Hóa sau khi đã an Xương, Khúc, Tả, Hữu và các phụ tinh khác.
+    let tuHoaList = tuHoaMap[canYearIndex];
+    let hoaNames = ["Hóa Lộc", "Hóa Quyền", "Hóa Khoa", "Hóa Kỵ"];
+    for (let i = 1; i <= 12; i++) {
+        tuHoaList.forEach((st, idx) => {
+            if (palaceHasStar(boxes[i], st)) {
+                if (idx === 3) addBad(i, hoaNames[idx]); else addGood(i, hoaNames[idx]);
+            }
+        });
+    }
 
     let chiStartGiap = fixChi(chiYearIndex - canYearIndex);
     boxes[fixChi(chiStartGiap - 1)].isTuan = true; boxes[fixChi(chiStartGiap - 2)].isTuan = true;
@@ -259,7 +264,12 @@ export function calculateTuVi(canYearIndex, chiYearIndex, day, month, hour, gend
     if (trietMap[canYearIndex]) { boxes[trietMap[canYearIndex][0]].isTriet = true; boxes[trietMap[canYearIndex][1]].isTriet = true; }
 
     const chuMenhArr = { 1: "Tham Lang", 2: "Cự Môn", 3: "Lộc Tồn", 4: "Văn Khúc", 5: "Liêm Trinh", 6: "Vũ Khúc", 7: "Phá Quân", 8: "Vũ Khúc", 9: "Liêm Trinh", 10: "Văn Khúc", 11: "Lộc Tồn", 12: "Cự Môn" };
-    const chuThanArr = { 1: "Hỏa Tinh", 2: "Thiên Tướng", 3: "Thiên Lương", 4: "Thiên Đồng", 5: "Văn Xương", 6: "Thiên Cơ", 7: "Hỏa Tinh", 8: "Thiên Tướng", 9: "Thiên Lương", 10: "Thiên Đồng", 11: "Văn Xương", 12: "Thiên Cơ" };
+    const chuThanArr = { 1: "Hỏa Tinh", 2: "Thiên Tướng", 3: "Thiên Lương", 4: "Thiên Đồng", 5: "Văn Xương", 6: "Thiên Cơ", 7: "Linh Tinh", 8: "Thiên Tướng", 9: "Thiên Lương", 10: "Thiên Đồng", 11: "Văn Xương", 12: "Thiên Cơ" };
+    const chuMenhKey = school.chuMenhBy === 'menhChi' ? menh : chiYearIndex;
 
-    return { menh, than, cucInfo: CUC_SO_MAP[cucId], boxes, nguHanhBanMenh, textAmDuong, thuanLy, cucKhacMenh, chuMenh: chuMenhArr[chiYearIndex], chuThan: chuThanArr[chiYearIndex], anSaoMonth, isLeapMonth: Boolean(isLeapMonth) };
+    return {
+        menh, than, cucInfo: CUC_SO_MAP[cucId], boxes, nguHanhBanMenh, textAmDuong, thuanLy, cucKhacMenh,
+        chuMenh: chuMenhArr[chuMenhKey], chuThan: chuThanArr[chiYearIndex],
+        anSaoMonth, isLeapMonth: Boolean(isLeapMonth), schoolId: school.id
+    };
 }
