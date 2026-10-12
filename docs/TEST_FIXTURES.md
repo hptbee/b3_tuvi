@@ -22,6 +22,7 @@ Giữ hành vi đã có của engine, API, hoặc chuẩn hóa. Kết quả kỳ
 - `ruleEngine.test.mjs`
 - `combinationRoute.integration.test.mjs`
 - `chartGenerate.test.mjs`
+- `httpApi.test.mjs`
 
 ## Synthetic test case
 

@@ -30,7 +30,8 @@ export const integrationTests = [
     'test/knowledgePrototype.test.mjs',
     'test/knowledgeQuery.test.mjs',
     'test/narrator.test.mjs',
-    'test/chartGenerate.test.mjs'
+    'test/chartGenerate.test.mjs',
+    'test/httpApi.test.mjs'
 ];
 
 const checks = [
