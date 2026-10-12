@@ -1,6 +1,7 @@
 import { canTransition, validateProvenance } from './provenance.js';
 import { getStarById } from '../engine/starCatalog.js';
 import { DEFAULT_SCHOOL } from '../engine/schoolProfile.js';
+import schoolsDoc from '../../../docs/knowledge/schools.json' with { type: 'json' };
 
 export const CLAIM_TYPES = new Set([
     'placement',
@@ -32,6 +33,7 @@ export const PALACE_FUNCTION_IDS = new Set([
 ]);
 
 export const FORMULA_COMPARISON = new Set(['CONFLICT', 'PARTIAL', 'NOT_IMPLEMENTED', 'MATCH']);
+export const VARIANT_TYPES = new Set(['calculation', 'rule', 'interpretation']);
 
 const LAYERS = [
     'implementationStatus',
@@ -100,6 +102,54 @@ function citedEdition(claim, bundleSourceId, editionById) {
     return edition;
 }
 
+function registeredSchoolIds(registry, errors) {
+    const ids = new Set();
+    const schools = Array.isArray(registry?.schools) ? registry.schools : [];
+    const variants = Array.isArray(registry?.variants) ? registry.variants : [];
+    if (schools.length === 0) {
+        errors.push(issue('unknown_school', 'school registry is empty', registry?.baselineSchoolId || null));
+        return ids;
+    }
+    for (const school of schools) {
+        if (!school || typeof school.schoolId !== 'string' || school.schoolId.trim() === '' || ids.has(school.schoolId)) {
+            errors.push(issue('duplicate_id', 'school id duplicated or empty', school?.schoolId || 'school'));
+            continue;
+        }
+        ids.add(school.schoolId);
+        const isBaseline = school.schoolId === registry.baselineSchoolId;
+        if (isBaseline !== (school.calculationApplied === true)) {
+            errors.push(issue('mixed_school', 'only the baseline school is applied to calculation', school.schoolId));
+        }
+    }
+    if (registry.baselineSchoolId !== DEFAULT_SCHOOL.id || !ids.has(registry.baselineSchoolId)) {
+        errors.push(issue('unknown_school', 'baseline school is not the engine default', registry.baselineSchoolId || null));
+    }
+    const variantIds = new Set();
+    for (const variant of variants) {
+        if (!variant || typeof variant.variantId !== 'string' || variantIds.has(variant.variantId)) {
+            errors.push(issue('duplicate_id', 'variant id duplicated or empty', variant?.variantId || 'variant'));
+            continue;
+        }
+        variantIds.add(variant.variantId);
+        if (!VARIANT_TYPES.has(variant.variantType)) {
+            errors.push(issue('invalid_variant', 'variantType is not calculation, rule, or interpretation', variant.variantId));
+        }
+        if (!ids.has(variant.schoolId)) {
+            errors.push(issue('unknown_school', 'variant school is not registered', variant.variantId));
+        }
+        if (variant.appliedByDefault !== false) {
+            errors.push(issue('mixed_school', 'variant is applied by default', variant.variantId));
+        }
+    }
+    const present = new Set(variants.map((variant) => variant?.variantType));
+    for (const required of VARIANT_TYPES) {
+        if (!present.has(required)) {
+            errors.push(issue('invalid_variant', 'variant layer is missing', required));
+        }
+    }
+    return ids;
+}
+
 export function validateKnowledgeBundle(bundle) {
     const errors = [];
     const gaps = [];
@@ -110,7 +160,8 @@ export function validateKnowledgeBundle(bundle) {
     const matrixRows = Array.isArray(bundle.matrix?.rows) ? bundle.matrix.rows : (bundle.matrix ? null : []);
     const names = new Set(bundle.combinationNames || []);
     const contract = bundle.contract;
-    const schools = new Set([DEFAULT_SCHOOL.id]);
+    const schoolRegistry = bundle.schools || schoolsDoc;
+    const schools = registeredSchoolIds(schoolRegistry, errors);
 
     if (!Array.isArray(sources) || !Array.isArray(editions) || !Array.isArray(claims) || !Array.isArray(matrixRows)) {
         errors.push(issue('malformed_json', 'sources, editions, and claims must be arrays'));

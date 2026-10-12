@@ -5,6 +5,8 @@ import pilotDoc from '../../docs/knowledge/pilotClaims.json' with { type: 'json'
 import contract from '../../docs/knowledge/provenance-contract.json' with { type: 'json' };
 import catalog from '../src/data/combinations.json' with { type: 'json' };
 import { parseKnowledgeJson, validateKnowledgeBundle } from '../src/knowledge/validateKnowledge.js';
+import schoolsDoc from '../../docs/knowledge/schools.json' with { type: 'json' };
+import { DEFAULT_SCHOOL, resolveSchool } from '../src/engine/schoolProfile.js';
 
 const live = validateKnowledgeBundle({
     sources: sourcesDoc,
@@ -92,6 +94,27 @@ assert.ok(codes(badType).has('invalid_claim_type'));
 const badSchool = bundle();
 badSchool.pilot.claims[0].schoolId = 'other-school';
 assert.ok(codes(badSchool).has('unknown_school'));
+
+const researchSchool = bundle();
+researchSchool.pilot.claims[0].schoolId = 'trung-chau';
+assert.strictEqual(validateKnowledgeBundle(researchSchool).ok, true);
+assert.strictEqual(schoolsDoc.baselineSchoolId, DEFAULT_SCHOOL.id);
+assert.deepStrictEqual(resolveSchool(), DEFAULT_SCHOOL);
+assert.ok(schoolsDoc.variants.some((variant) => variant.variantType === 'calculation'));
+assert.ok(schoolsDoc.variants.some((variant) => variant.variantType === 'rule'));
+assert.ok(schoolsDoc.variants.some((variant) => variant.variantType === 'interpretation'));
+assert.ok(schoolsDoc.variants.every((variant) => variant.appliedByDefault === false));
+assert.ok(schoolsDoc.schools.filter((school) => school.schoolId !== DEFAULT_SCHOOL.id).every((school) => school.calculationApplied === false));
+
+const mixed = bundle();
+mixed.schools = {
+    baselineSchoolId: DEFAULT_SCHOOL.id,
+    schools: schoolsDoc.schools,
+    variants: schoolsDoc.variants.map((variant) => variant.variantId === 'calc-chu-menh-menh-chi'
+        ? { ...variant, appliedByDefault: true }
+        : variant)
+};
+assert.ok(codes(mixed).has('mixed_school'));
 
 const promoted = bundle();
 promoted.sources.sources[0].bibliographicStatus = 'primary';

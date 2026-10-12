@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "baselineSchoolId": "vn-tam-hop-default",
+  "note": "Registry only. resolveSchool applies backend/src/engine/schoolProfile.js. A variant with appliedByDefault false is not a second calculator.",
+  "schools": [
+    {
+      "schoolId": "vn-tam-hop-default",
+      "label": "Tam Hợp Việt Nam",
+      "role": "baseline",
+      "calculationApplied": true
+    },
+    {
+      "schoolId": "trung-chau",
+      "label": "Trung Châu",
+      "role": "research",
+      "calculationApplied": false
+    },
+    {
+      "schoolId": "phi-tinh",
+      "label": "Phi Tinh / Tứ Hóa",
+      "role": "research",
+      "calculationApplied": false
+    },
+    {
+      "schoolId": "thien-luong",
+      "label": "Thiên Lương",
+      "role": "research",
+      "calculationApplied": false
+    }
+  ],
+  "variants": [
+    {
+      "variantId": "calc-chu-menh-menh-chi",
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "calculation",
+      "appliedByDefault": false,
+      "note": "Dị bản chủ Mệnh theo chi cung Mệnh. Mặc định engine là yearChi."
+    },
+    {
+      "variantId": "calc-van-tinh-nham-dau",
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "calculation",
+      "appliedByDefault": false,
+      "note": "Dị bản Văn Tinh can Nhâm tại Dậu. Mặc định engine là Dần."
+    },
+    {
+      "variantId": "calc-leap-month-as-normal",
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "calculation",
+      "appliedByDefault": false,
+      "note": "Dị bản tháng nhuận tính như tháng thường. Mặc định engine là day15."
+    },
+    {
+      "variantId": "calc-ty-hour-next-day",
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "calculation",
+      "appliedByDefault": false,
+      "note": "Dị bản giờ Tý sớm đổi ngày. Mặc định engine giữ ngày dương."
+    },
+    {
+      "variantId": "calc-thien-thuong-swap",
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "calculation",
+      "appliedByDefault": false,
+      "note": "Dị bản đổi Thiên Thương và Thiên Sứ. Mặc định engine không đổi."
+    },
+    {
+      "variantId": "calc-phi-tinh-not-in-engine",
+      "schoolId": "phi-tinh",
+      "variantType": "calculation",
+      "appliedByDefault": false,
+      "note": "Phi tinh nằm ngoài engine mặc định. Chưa có công thức mới."
+    },
+    {
+      "variantId": "calc-thien-luong-loc-kinh-da",
+      "schoolId": "thien-luong",
+      "variantType": "calculation",
+      "appliedByDefault": false,
+      "note": "An Lộc, Kình, Đà có thể khác baseline. Chưa áp vào schoolProfile."
+    },
+    {
+      "variantId": "rule-pilot-not-runtime",
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "appliedByDefault": false,
+      "note": "Đối chiếu cách cục nằm ở pilotClaims.json. Không sửa rulesV2.json từ registry này."
+    },
+    {
+      "variantId": "interp-thien-luong-thai-tue",
+      "schoolId": "thien-luong",
+      "variantType": "interpretation",
+      "appliedByDefault": false,
+      "note": "Luận theo vòng Thái Tuế là dị bản giải nghĩa, không trộn vào lá số mặc định."
+    }
+  ]
+}
