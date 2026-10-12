@@ -1,0 +1,1555 @@
+{
+  "version": 1,
+  "generatedFrom": "combinations.json+rulesV2.json",
+  "accessedAt": "2026-10-12",
+  "rows": [
+    {
+      "combinationId": "combo_01",
+      "name": "Tử Phủ Đồng Cung",
+      "verificationStatus": "matching_ok",
+      "executableV2": true,
+      "ruleId": "tu_phu_dong_cung",
+      "strict": false,
+      "formula": "Mệnh tại Dần hoặc Thân có Tử Vi và Thiên Phủ đồng cung.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_02",
+      "name": "Tử Phủ Vũ Tướng",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "tu_phu_vu_tuong",
+      "strict": true,
+      "formula": "Tử Vi, Thiên Phủ, Vũ Khúc, Thiên Tướng nằm tại các cung Mệnh, Tài, Quan hội chiếu.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "strict: khác matcher cũ, vẫn provisional"
+      ],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_03",
+      "name": "Cơ Nguyệt Đồng Lương",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "co_nguyet_dong_luong",
+      "strict": false,
+      "formula": "Thiên Cơ, Thái Âm, Thiên Đồng, Thiên Lương hội chiếu tại Mệnh.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_04",
+      "name": "Sát Phá Tham",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "sat_pha_tham",
+      "strict": false,
+      "formula": "Thất Sát, Phá Quân, Tham Lang luôn hội chiếu nhau tại Tam hợp Mệnh - Tài - Quan.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_05",
+      "name": "Nhật Nguyệt Tịnh Minh",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "nhat_nguyet_tinh_minh",
+      "strict": true,
+      "formula": "Mệnh tại Sửu/Mùi, Thái Dương ở Tỵ/Ngọ (sáng), Thái Âm ở Dậu/Tý (sáng) hội chiếu.",
+      "sources": [
+        "thai-thu-lang-tan-bien"
+      ],
+      "sourceVerificationStatus": "passage_located_edition_unverified",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Đoạn trong PDF dựng lại mục 19; ấn bản in 1956 chưa được chứng minh là cùng file này"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "strict: khác matcher cũ, vẫn provisional"
+      ],
+      "absoluteClaimReview": false,
+      "recommendedAction": "do_not_change_runtime_until_authenticated_edition",
+      "formulaComparisonStatus": "CONFLICT"
+    },
+    {
+      "combinationId": "combo_06",
+      "name": "Minh Châu Xuất Hải",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "minh_chau_xuat_hai",
+      "strict": true,
+      "formula": "Mệnh Vô chính diệu tại Mùi, có Thái Âm ở Hợi và Thái Dương ở Mão hội chiếu về.",
+      "sources": [
+        "thai-thu-lang-tan-bien"
+      ],
+      "sourceVerificationStatus": "passage_located_edition_unverified",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Đoạn trong PDF dựng lại mục 19; ấn bản in 1956 chưa được chứng minh là cùng file này"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "strict: khác matcher cũ, vẫn provisional"
+      ],
+      "absoluteClaimReview": false,
+      "recommendedAction": "do_not_change_runtime_until_authenticated_edition",
+      "formulaComparisonStatus": "CONFLICT"
+    },
+    {
+      "combinationId": "combo_07",
+      "name": "Cự Nhật Đồng Cung",
+      "verificationStatus": "matching_ok",
+      "executableV2": true,
+      "ruleId": "cu_nhat_dong_cung",
+      "strict": false,
+      "formula": "Cự Môn và Thái Dương đồng cung tại Dần hoặc Thân.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_08",
+      "name": "Dương Lương Xương Lộc",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "duong_luong_xuong_loc",
+      "strict": true,
+      "formula": "Thái Dương, Thiên Lương, Văn Xương, Lộc Tồn (hoặc Hóa Lộc) hội tụ tại Mão.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "strict: khác matcher cũ, vẫn provisional"
+      ],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_09",
+      "name": "Nguyệt Lãng Thiên Môn",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "nguyet_lang_thien_mon",
+      "strict": false,
+      "formula": "Mệnh có Thái Âm tọa thủ tại Hợi.",
+      "sources": [
+        "thai-thu-lang-tan-bien"
+      ],
+      "sourceVerificationStatus": "passage_located_edition_unverified",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Đoạn trong PDF dựng lại mục 19; ấn bản in 1956 chưa được chứng minh là cùng file này"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "do_not_change_runtime_until_authenticated_edition",
+      "formulaComparisonStatus": "PARTIAL"
+    },
+    {
+      "combinationId": "combo_10",
+      "name": "Nhật Chiếu Lôi Môn",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "nhat_chieu_loi_mon",
+      "strict": false,
+      "formula": "Mệnh có Thái Dương tọa thủ tại Mão.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_11",
+      "name": "Thất Sát Triều Đẩu",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "that_sat_trieu_dau",
+      "strict": false,
+      "formula": "Thất Sát tọa thủ tại Dần, Thân, Tý, Ngọ.",
+      "sources": [
+        "thai-thu-lang-tan-bien"
+      ],
+      "sourceVerificationStatus": "passage_located_edition_unverified",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Đoạn trong PDF dựng lại mục 19; ấn bản in 1956 chưa được chứng minh là cùng file này"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "do_not_change_runtime_until_authenticated_edition",
+      "formulaComparisonStatus": "CONFLICT"
+    },
+    {
+      "combinationId": "combo_12",
+      "name": "Tham Vũ Đồng Hành",
+      "verificationStatus": "matching_ok",
+      "executableV2": true,
+      "ruleId": "tham_vu_dong_hanh",
+      "strict": false,
+      "formula": "Tham Lang và Vũ Khúc đồng cung tại Sửu hoặc Mùi.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_13",
+      "name": "Hỏa Tham",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "hoa_tham",
+      "strict": true,
+      "formula": "Tham Lang đi cùng Hỏa Tinh đắc địa.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "strict: khác matcher cũ, vẫn provisional"
+      ],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_14",
+      "name": "Linh Tham",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "linh_tham",
+      "strict": true,
+      "formula": "Tham Lang đi cùng Linh Tinh đắc địa.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "strict: khác matcher cũ, vẫn provisional"
+      ],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_15",
+      "name": "Thạch Trung Ẩn Ngọc",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "thach_trung_an_ngoc",
+      "strict": true,
+      "formula": "Cự Môn tọa Mệnh tại Tý hoặc Ngọ, có thêm Hóa Lộc, Hóa Quyền hoặc Lộc Tồn.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "strict: khác matcher cũ, vẫn provisional"
+      ],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_16",
+      "name": "Tam Kỳ Gia Hội",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "tam_ky_gia_hoi",
+      "strict": false,
+      "formula": "Hóa Khoa, Hóa Quyền, Hóa Lộc hội chiếu cung Mệnh.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_17",
+      "name": "Song Lộc Triều Viên",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "song_loc_trieu_vien",
+      "strict": false,
+      "formula": "Hóa Lộc và Lộc Tồn hội chiếu về cung Mệnh.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_18",
+      "name": "Khoa Minh Lộc Ám",
+      "verificationStatus": "disabled",
+      "executableV2": false,
+      "ruleId": null,
+      "strict": false,
+      "formula": "Mệnh có Hóa Khoa, cung Nhị Hợp có Hóa Lộc (hoặc Lộc Tồn).",
+      "sources": [
+        "thai-thu-lang-tan-bien"
+      ],
+      "sourceVerificationStatus": "passage_located_edition_unverified",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Đoạn trong PDF dựng lại mục 19; ấn bản in 1956 chưa được chứng minh là cùng file này"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "Không có rule v2"
+      ],
+      "absoluteClaimReview": false,
+      "recommendedAction": "remain_disabled",
+      "formulaComparisonStatus": "NOT_IMPLEMENTED"
+    },
+    {
+      "combinationId": "combo_19",
+      "name": "Lộc Mã Giao Trì",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "loc_ma_giao_tri",
+      "strict": true,
+      "formula": "Thiên Mã đồng cung hoặc hội chiếu với Lộc Tồn / Hóa Lộc.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "strict: khác matcher cũ, vẫn provisional"
+      ],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_20",
+      "name": "Hùng Tú Triều Viên",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "hung_tu_trieu_vien",
+      "strict": false,
+      "formula": "Liêm Trinh tọa Mệnh tại Dần hoặc Thân.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_21",
+      "name": "Linh Xương Đà Vũ",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "linh_xuong_da_vu",
+      "strict": true,
+      "formula": "Hội tụ đủ 4 sao: Linh Tinh, Văn Xương, Đà La, Vũ Khúc tại Mệnh hoặc Hạn.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "strict: khác matcher cũ, vẫn provisional"
+      ],
+      "absoluteClaimReview": true,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_22",
+      "name": "Hình Kỵ Giáp Ấn",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "hinh_ky_giap_an",
+      "strict": true,
+      "formula": "Thiên Tướng (Ấn) tại Mệnh bị Kình Dương (hoặc Thiên Hình) và Hóa Kỵ giáp hai bên.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "strict: khác matcher cũ, vẫn provisional"
+      ],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_23",
+      "name": "Mệnh Lý Phùng Không",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "menh_ly_phung_khong",
+      "strict": true,
+      "formula": "Mệnh có Địa Không hoặc Tuần Không, Triệt Không; Thân có Địa Kiếp (hoặc ngược lại).",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "strict: khác matcher cũ, vẫn provisional"
+      ],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_24",
+      "name": "Kình Đà Hiệp Kỵ",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "kinh_da_hiep_ky",
+      "strict": true,
+      "formula": "Mệnh có Hóa Kỵ, bị Kình Dương và Đà La giáp hai bên.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "strict: khác matcher cũ, vẫn provisional"
+      ],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_25",
+      "name": "Lộc Phùng Xung Phá",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "loc_phung_xung_pha",
+      "strict": true,
+      "formula": "Lộc Tồn hoặc Hóa Lộc bị Không Kiếp, Hóa Kỵ, Tuần Triệt phá hỏng.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "strict: khác matcher cũ, vẫn provisional"
+      ],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_26",
+      "name": "Mã Lạc Không Vong",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "ma_lac_khong_vong",
+      "strict": true,
+      "formula": "Thiên Mã đồng cung với Tuần Không, Triệt Không hoặc Địa Không.",
+      "sources": [
+        "thai-thu-lang-tan-bien"
+      ],
+      "sourceVerificationStatus": "passage_located_edition_unverified",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Đoạn trong PDF dựng lại mục 19; ấn bản in 1956 chưa được chứng minh là cùng file này"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "strict: khác matcher cũ, vẫn provisional"
+      ],
+      "absoluteClaimReview": false,
+      "recommendedAction": "do_not_change_runtime_until_authenticated_edition",
+      "formulaComparisonStatus": "CONFLICT"
+    },
+    {
+      "combinationId": "combo_27",
+      "name": "Cự Hỏa Kình Dương",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "cu_hoa_kinh_duong",
+      "strict": false,
+      "formula": "Cự Môn đồng cung hoặc hội chiếu với Hỏa Tinh và Kình Dương.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_28",
+      "name": "Phiếm Thủy Đào Hoa",
+      "verificationStatus": "matching_ok",
+      "executableV2": true,
+      "ruleId": "phiem_thuy_dao_hoa",
+      "strict": false,
+      "formula": "Tham Lang tọa Mệnh tại Tý hoặc Hợi.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_29",
+      "name": "Phong Lưu Thái Trượng",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "phong_luu_thai_truong",
+      "strict": false,
+      "formula": "Tham Lang và Đà La đồng cung tại Dần hoặc Thân.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": true,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_30",
+      "name": "Nhật Nguyệt Tàng Huy",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "nhat_nguyet_tang_huy",
+      "strict": false,
+      "formula": "Thái Dương, Thái Âm đều nằm ở vị trí Hãm địa.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": true,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_31",
+      "name": "Bán Không Chiết Xỉ",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "ban_khong_chiet_xi",
+      "strict": true,
+      "formula": "Các bộ sao quyền lực như Thất Sát, Thiên Tướng ngộ Địa Không, Địa Kiếp ở Mệnh hoặc Hạn.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "strict: khác matcher cũ, vẫn provisional"
+      ],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_32",
+      "name": "Mệnh Vô Chính Diệu",
+      "verificationStatus": "matching_ok",
+      "executableV2": true,
+      "ruleId": "menh_vo_chinh_dieu",
+      "strict": false,
+      "formula": "Cung Mệnh không có chính tinh. Cần mượn bộ chính tinh ở đối cung (cung Thiên Di) để luận đoán.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": true,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_33",
+      "name": "Ám Lộc",
+      "verificationStatus": "disabled",
+      "executableV2": false,
+      "ruleId": null,
+      "strict": false,
+      "formula": "Mệnh có Lộc Tồn Nhị hợp hoặc Ám hợp với cung Tài/Quan.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "Không có rule v2"
+      ],
+      "absoluteClaimReview": false,
+      "recommendedAction": "remain_disabled"
+    },
+    {
+      "combinationId": "combo_34",
+      "name": "Tử Phủ Triều Viên",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "tu_phu_trieu_vien",
+      "strict": false,
+      "formula": "Tử Vi và Thiên Phủ nằm ở cung Tam hợp hoặc Xung chiếu chiếu về Mệnh.",
+      "sources": [
+        "thai-thu-lang-tan-bien"
+      ],
+      "sourceVerificationStatus": "passage_located_edition_unverified",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Đoạn trong PDF dựng lại mục 19; ấn bản in 1956 chưa được chứng minh là cùng file này"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "do_not_change_runtime_until_authenticated_edition",
+      "formulaComparisonStatus": "CONFLICT"
+    },
+    {
+      "combinationId": "combo_35",
+      "name": "Thiên Ất Củng Mệnh",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "thien_at_cung_menh",
+      "strict": false,
+      "formula": "Thiên Khôi và Thiên Việt tọa thủ ở Mệnh hoặc nằm ở đối cung chiếu về.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_36",
+      "name": "Tả Hữu Đồng Cung",
+      "verificationStatus": "matching_ok",
+      "executableV2": true,
+      "ruleId": "ta_huu_dong_cung",
+      "strict": false,
+      "formula": "Tả Phù và Hữu Bật đồng cung tại Sửu hoặc Mùi ở cung Mệnh.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_37",
+      "name": "Văn Tinh Củng Mệnh",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "van_tinh_cung_menh",
+      "strict": true,
+      "formula": "Văn Xương, Văn Khúc, Hóa Khoa hội tụ tại Mệnh.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "strict: khác matcher cũ, vẫn provisional"
+      ],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_38",
+      "name": "Nhật Nguyệt Đồng Lâm",
+      "verificationStatus": "matching_ok",
+      "executableV2": true,
+      "ruleId": "nhat_nguyet_dong_lam",
+      "strict": false,
+      "formula": "Thái Dương và Thái Âm đồng cung tại Sửu hoặc Mùi.",
+      "sources": [
+        "thai-thu-lang-tan-bien"
+      ],
+      "sourceVerificationStatus": "passage_located_edition_unverified",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Đoạn trong PDF dựng lại mục 19; ấn bản in 1956 chưa được chứng minh là cùng file này"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "do_not_change_runtime_until_authenticated_edition",
+      "formulaComparisonStatus": "CONFLICT"
+    },
+    {
+      "combinationId": "combo_39",
+      "name": "Thọ Tinh Nhập Miếu",
+      "verificationStatus": "matching_ok",
+      "executableV2": true,
+      "ruleId": "tho_tinh_nhap_mieu",
+      "strict": false,
+      "formula": "Thiên Lương đắc địa tọa thủ tại Mệnh ở Ngọ.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_40",
+      "name": "Anh Tinh Nhập Miếu",
+      "verificationStatus": "matching_ok",
+      "executableV2": true,
+      "ruleId": "anh_tinh_nhap_mieu",
+      "strict": false,
+      "formula": "Phá Quân đắc địa tọa thủ tại Tý hoặc Ngọ.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_41",
+      "name": "Kình Dương Nhập Miếu (Mã Đầu Đới Tiễn)",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "kinh_duong_nhap_mieu",
+      "strict": true,
+      "formula": "Kình Dương cư tại Mệnh ở các cung Thìn, Tuất, Sửu, Mùi hoặc Ngọ (có thêm Thất Sát/Tham Lang).",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "strict: khác matcher cũ, vẫn provisional"
+      ],
+      "absoluteClaimReview": true,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_42",
+      "name": "Tài Ấn Giao Trì",
+      "verificationStatus": "matching_ok",
+      "executableV2": true,
+      "ruleId": "tai_an_giao_tri",
+      "strict": false,
+      "formula": "Vũ Khúc (Tài) và Thiên Tướng (Ấn) đồng cung tại Dần hoặc Thân.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_43",
+      "name": "Giáp Đệ Đăng Khoa",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "giap_de_dang_khoa",
+      "strict": true,
+      "formula": "Hóa Khoa ở Mệnh, Hóa Quyền ở Tam hợp chiếu về.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "strict: khác matcher cũ, vẫn provisional"
+      ],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_44",
+      "name": "Đế Ngộ Hung Đồ",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "de_ngo_hung_do",
+      "strict": false,
+      "formula": "Tử Vi tọa Mệnh hội hợp quá nhiều sát tinh như Không Kiếp, Kình Đà, Hỏa Linh.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_45",
+      "name": "Nhật Nguyệt Tật Ách",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "nhat_nguyet_tat_ach",
+      "strict": true,
+      "formula": "Thái Dương và Thái Âm đồng cung hoặc hội chiếu tại cung Tật Ách gặp Kỵ, Sát.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "strict: khác matcher cũ, vẫn provisional",
+        "Chữ sát tinh trong formula_text không được mã hóa"
+      ],
+      "absoluteClaimReview": true,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_46",
+      "name": "Khúc Ám Đồng Cung",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "khuc_am_dong_cung",
+      "strict": false,
+      "formula": "Văn Khúc và Cự Môn (Ám tinh) đồng cung hoặc hội chiếu.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_47",
+      "name": "Thiên Cơ Tỵ Hợi",
+      "verificationStatus": "provisional",
+      "executableV2": false,
+      "ruleId": null,
+      "strict": false,
+      "formula": "Thiên Cơ tọa Mệnh hãm địa tại Tỵ hoặc Hợi ngộ sát tinh.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "Không có rule v2",
+        "ngộ sát tinh không có danh sách đóng"
+      ],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_48",
+      "name": "Hình Tù Giáp Ấn",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "hinh_tu_giap_an",
+      "strict": true,
+      "formula": "Thiên Tướng ở Mệnh bị Kình Dương (hoặc Thiên Hình) và Liêm Trinh (Tù tinh) kẹp hai bên.",
+      "sources": [
+        "thai-thu-lang-tan-bien"
+      ],
+      "sourceVerificationStatus": "passage_located_edition_unverified",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Đoạn trong PDF dựng lại mục 19; ấn bản in 1956 chưa được chứng minh là cùng file này"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "strict: khác matcher cũ, vẫn provisional"
+      ],
+      "absoluteClaimReview": false,
+      "recommendedAction": "do_not_change_runtime_until_authenticated_edition",
+      "formulaComparisonStatus": "PARTIAL"
+    },
+    {
+      "combinationId": "combo_49",
+      "name": "Cự Phùng Tứ Sát",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "cu_phung_tu_sat",
+      "strict": true,
+      "formula": "Cự Môn cư Mệnh hội đủ 4 sao Kình Dương, Đà La, Hỏa Tinh, Linh Tinh.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "strict: khác matcher cũ, vẫn provisional"
+      ],
+      "absoluteClaimReview": true,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_50",
+      "name": "Lộ Bàng Mai Thi",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "lo_bang_mai_thi",
+      "strict": true,
+      "formula": "Liêm Trinh, Thất Sát đồng cung tại Sửu, Mùi gặp Hóa Kỵ, Kình Đà.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "strict: khác matcher cũ, vẫn provisional"
+      ],
+      "absoluteClaimReview": true,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_51",
+      "name": "Hoa Cái Cư Phu Thê",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "hoa_cai_cu_phu_the",
+      "strict": true,
+      "formula": "Sao Hoa Cái (chủ về sự đài các, cô độc) nằm tại cung Phu Thê gặp Sát tinh/Cô Quả.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "strict: khác matcher cũ, vẫn provisional"
+      ],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_52",
+      "name": "Lưỡng Trùng Thiên Mã",
+      "verificationStatus": "disabled",
+      "executableV2": false,
+      "ruleId": null,
+      "strict": false,
+      "formula": "Thiên Mã ở Mệnh gặp Lưu Thiên Mã (Đại hạn/Tiểu hạn) trùng phùng ngộ Sát tinh.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "Không có rule v2"
+      ],
+      "absoluteClaimReview": true,
+      "recommendedAction": "remain_disabled"
+    },
+    {
+      "combinationId": "combo_53",
+      "name": "Cát Xứ Tàng Hung",
+      "verificationStatus": "disabled",
+      "executableV2": false,
+      "ruleId": null,
+      "strict": false,
+      "formula": "Các chính tinh đắc địa tụ hội nhưng lại dính ngay Triệt Không hoặc Địa Kiếp hãm địa ẩn tàng.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "Không có rule v2"
+      ],
+      "absoluteClaimReview": false,
+      "recommendedAction": "remain_disabled"
+    },
+    {
+      "combinationId": "combo_54",
+      "name": "Phủ Tướng Triều Viên",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "phu_tuong_trieu_vien",
+      "strict": true,
+      "formula": "Thiên Phủ và Thiên Tướng nằm ở cung Tam hợp (Tài Bạch, Quan Lộc) cùng hội chiếu về cung Mệnh.",
+      "sources": [
+        "thai-thu-lang-tan-bien"
+      ],
+      "sourceVerificationStatus": "passage_located_edition_unverified",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Đoạn trong PDF dựng lại mục 19; ấn bản in 1956 chưa được chứng minh là cùng file này"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "strict: khác matcher cũ, vẫn provisional"
+      ],
+      "absoluteClaimReview": false,
+      "recommendedAction": "do_not_change_runtime_until_authenticated_edition",
+      "formulaComparisonStatus": "CONFLICT"
+    },
+    {
+      "combinationId": "combo_55",
+      "name": "Nhật Lệ Trung Thiên",
+      "verificationStatus": "matching_ok",
+      "executableV2": true,
+      "ruleId": "nhat_le_trung_thien",
+      "strict": false,
+      "formula": "Mệnh có Thái Dương tọa thủ đắc địa tại cung Ngọ (không bị Tuần, Triệt hay Không Kiếp phá).",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_56",
+      "name": "Chúng Thủy Triều Đông",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "chung_thuy_trieu_dong",
+      "strict": true,
+      "formula": "Mệnh hoặc Tài Bạch có Đại Hao, Tiểu Hao tọa thủ tại cung Mão hoặc Dậu.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "strict: khác matcher cũ, vẫn provisional"
+      ],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_57",
+      "name": "Không Kiếp Giáp Mệnh",
+      "verificationStatus": "matching_ok",
+      "executableV2": true,
+      "ruleId": "khong_kiep_giap_menh",
+      "strict": false,
+      "formula": "Cung Mệnh bị hai sao Địa Không và Địa Kiếp nằm ở hai cung kề bên (nhị hợp/giáp) kẹp lại.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_58",
+      "name": "Kình Đà Giáp Mệnh",
+      "verificationStatus": "matching_ok",
+      "executableV2": true,
+      "ruleId": "kinh_da_giap_menh",
+      "strict": false,
+      "formula": "Cung Mệnh bị hai sao Kình Dương và Đà La nằm ở hai cung kề bên kẹp lại.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_59",
+      "name": "Quân Thần Khánh Hội",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "quan_than_khanh_hoi",
+      "strict": true,
+      "formula": "Tử Vi tọa thủ ở Mệnh hội họp đầy đủ các trung tinh cát như Tả Hữu, Khôi Việt, Xương Khúc.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "strict: khác matcher cũ, vẫn provisional"
+      ],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_60",
+      "name": "Cơ Cự Đồng Lâm",
+      "verificationStatus": "matching_ok",
+      "executableV2": true,
+      "ruleId": "co_cu_dong_lam",
+      "strict": false,
+      "formula": "Thiên Cơ và Cự Môn đồng cung đắc địa tại Mão hoặc Dậu (đặc biệt tốt nếu có thêm Hóa Lộc hoặc Lộc Tồn).",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_61",
+      "name": "Thủy Trừng Quế Ngạc",
+      "verificationStatus": "matching_ok",
+      "executableV2": true,
+      "ruleId": "thuy_trung_que_ngac",
+      "strict": false,
+      "formula": "Thiên Đồng và Thái Âm đồng cung đắc địa tại cung Tý.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_62",
+      "name": "Đồng Lương Tỵ Hợi",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "dong_luong_ty_hoi",
+      "strict": false,
+      "formula": "Thiên Đồng và Thiên Lương hãm địa đồng cung hoặc xung chiếu tại Tỵ và Hợi.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [
+        "starStatus.json: Thiên Đồng tại Tị/Hợi là đắc, Thiên Lương tại hai chi đó là hãm. Rule không bắt hãm."
+      ],
+      "implementationGaps": [],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    },
+    {
+      "combinationId": "combo_63",
+      "name": "Mệnh VCD Đắc Tam Không",
+      "verificationStatus": "provisional",
+      "executableV2": true,
+      "ruleId": "menh_vcd_tam_khong",
+      "strict": true,
+      "formula": "Mệnh Vô Chính Diệu hội đủ 3 trong 4 sao Không: Tuần Không, Triệt Không, Thiên Không, Địa Không.",
+      "sources": [],
+      "sourceVerificationStatus": "none",
+      "formulaCheckedAgainstSource": false,
+      "interpretationSourced": false,
+      "missingFormation": [
+        "Chưa có ấn bản để biết công thức trong JSON còn thiếu điều kiện nào"
+      ],
+      "missingBreaking": [
+        "Catalog không có điều kiện phá cách đã dẫn nguồn"
+      ],
+      "schoolDifferences": [],
+      "implementationGaps": [
+        "strict: khác matcher cũ, vẫn provisional"
+      ],
+      "absoluteClaimReview": false,
+      "recommendedAction": "hold_until_edition_checked"
+    }
+  ],
+  "pilotNote": "10 cách có đoạn trong PDF 277 trang. formulaCheckedAgainstSource vẫn false vì ấn bản chưa xác thực."
+}
