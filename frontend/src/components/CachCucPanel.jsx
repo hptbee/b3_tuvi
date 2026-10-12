@@ -35,7 +35,7 @@ function chartFingerprint(chartData, userInfo) {
 
 export default function CachCucPanel({ chartData, userInfo }) {
   const chartKey = chartFingerprint(chartData, userInfo);
-  const [result, setResult] = useState({ key: '', combinations: [] });
+  const [result, setResult] = useState({ key: '', combinations: [], error: '' });
   const [expanded, setExpanded] = useState(null);
   const loading = Boolean(chartData?.tuviInfo?.boxes) && result.key !== chartKey;
 
@@ -51,8 +51,10 @@ export default function CachCucPanel({ chartData, userInfo }) {
     });
 
     const key = chartKey;
+    const controller = new AbortController();
     fetch(`${API_BASE}/api/combinations/match`, {
       method: 'POST',
+      signal: controller.signal,
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         boxes,
@@ -60,12 +62,19 @@ export default function CachCucPanel({ chartData, userInfo }) {
         menhChi
       })
     })
-      .then(r => r.json())
-      .then(data => setResult({ key, combinations: data.combinations || [] }))
+      .then(async response => {
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || 'Không đọc được cách cục');
+        return data;
+      })
+      .then(data => {
+        if (!controller.signal.aborted) setResult({ key, combinations: data.combinations || [], error: '' });
+      })
       .catch(err => {
-        console.error('Cách cục fetch error:', err);
-        setResult({ key, combinations: [] });
+        if (controller.signal.aborted) return;
+        setResult({ key, combinations: [], error: err.message || 'Chưa kết nối được máy chủ.' });
       });
+    return () => controller.abort();
   }, [chartData, chartKey]);
 
   const combinations = result.key === chartKey ? result.combinations : [];
@@ -96,7 +105,8 @@ export default function CachCucPanel({ chartData, userInfo }) {
         </div>
       )}
 
-      {!loading && combinations.length === 0 && (
+      {result.key === chartKey && result.error && <p className="cach-cuc-empty" role="alert">Không tải được cách cục. Vui lòng lập lại lá số để thử lại.</p>}
+      {!loading && !result.error && combinations.length === 0 && (
         <div className="cach-cuc-empty">
           Không phát hiện cách cục đặc biệt nào trong lá số này.
         </div>
