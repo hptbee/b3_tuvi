@@ -215,7 +215,7 @@ Không thực thi trong phiên nền tảng trừ khi near-term ở trên đã x
 | V2-RULE-02 | DSL mới | PLANNED | nhu cầu đã chứng minh | yes nếu bật disabled |
 | V2-RULE-03 | Evidence v3 | COMPLETED | rule engine hiện tại | no nếu chỉ thêm DTO |
 | V2-RULE-04 | Contradiction resolver | PLANNED | V2-KB-01 | no |
-| V2-INTERPRET-01…08 | Luận giải tất định | PLANNED | claims có nhãn; không LLM | yes nếu đưa chữ tuyệt đối ra UI |
+| V2-INTERPRET-01…08 | Luận giải tất định | foundation COMPLETED trên sprint 3; lời luận UI vẫn cần duyệt | claims có nhãn; không LLM | yes nếu đưa chữ tuyệt đối ra UI |
 | V2-TIME-01…05 | Vận hạn | PLANNED | nguồn công thức | yes trước khi luận UI |
 | V2-AI-01 | POC nội bộ | DEFERRED | interpretation + evidence DTO | yes trước public |
 | V2-AI-02…06 | Provider, narrator, guard, chat, eval | DEFERRED | V2-AI-01 | yes trước public |
@@ -291,4 +291,8 @@ Một task `COMPLETED` khi acceptance đã kiểm bằng lệnh, review không c
 
 Các task kỹ thuật sau foundation đã có mã trên `autodev/v2-sprint-2`: `V2-M0-05`, `V2-KB-04`, `V2-KB-05`, `V2-M0-06`, `V2-RULE-03`, `V2-M0-08`.
 
-`V2-KB-03-prod` vẫn `BLOCKED_HUMAN`. Prototype và query layer không phải knowledge base production. Không có lá số expert-verified golden. Evidence v3 ghi runtime match; thành cách theo nguồn chỉ khi công thức đã đối chiếu trên edition `authenticated: true`. Phá cách không được suy từ pattern. Cổng edition chỉ nhìn `authenticated`. DTO này chưa nối vào response API. Deterministic interpretation chưa bắt đầu.
+`V2-KB-03-prod` vẫn `BLOCKED_HUMAN`. Prototype và query layer không phải knowledge base production. Không có lá số expert-verified golden. Evidence v3 ghi runtime match; thành cách theo nguồn chỉ khi công thức đã đối chiếu trên edition `authenticated: true`. Phá cách không được suy từ pattern. Cổng edition chỉ nhìn `authenticated`. DTO này chưa nối vào response API. Deterministic interpretation pipeline trả phân tích có cấu trúc và `prose: null` khi chưa có claim được duyệt.
+
+## 15. Sprint 3
+
+`V2-INTERPRET` foundation trên `autodev/v2-sprint-3`: contract luận điểm, nối rule engine với evidence v3, eligibility, 12 cung chức cộng lớp Thân, mâu thuẫn và thiếu chứng cứ. Không có lời luận người dùng. Sprint 4–7 chưa nằm trong nhánh này.

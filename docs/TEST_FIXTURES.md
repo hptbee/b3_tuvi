@@ -32,6 +32,7 @@ Dữ liệu dựng trong test, database tạm, hoặc lỗi giả. Không dùng 
 - `knowledgeQuery.test.mjs`
 - `safeErrorLog.test.mjs`
 - `evidenceV3.test.mjs`
+- `interpretationPipeline.test.mjs`
 
 ## Property/invariant test
 
