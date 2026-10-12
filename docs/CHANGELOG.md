@@ -19,6 +19,7 @@ Tất cả các thay đổi đáng chú ý của dự án **Tử Vi Việt Nam (
 - CI (`.github/workflows/ci.yml`): backend `npm test`; frontend lint và build. Node 22. Không deploy.
 - `docs/AGENT_ENGINEERING.md`: hàng rào cho agent, phạm vi đã loại, cổng cần người.
 - Prototype schema tri thức trên DB tạm (`knowledgePrototype.js`). Không gọi từ `initDatabase()`. Không ghi `backend/data`. Không nạp description cách cục. Migration production vẫn chờ người.
+- `POST /api/charts/generate` không lưu ngày giờ sinh. Không xóa hàng `horoscopes` đã có.
 
 ### Khắc phục lỗi (Fixed)
 - Rule v2: độ sáng áp vào bản sao nằm trong vùng điều kiện, không loại cả ngôi sao vì một bản ở cung khác. Rule thiếu `id`, `samePalace` rỗng, `giap.mode` lạ, `countAtLeast.n` không hợp lệ, hoặc `excluded.relation` khác `same` thì không khớp.

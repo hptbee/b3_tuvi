@@ -21,7 +21,7 @@ app.use((req, res, next) => {
 connectDB();
 
 // API Routes
-app.use('/api/charts', chartRoutes);       // Quản lý dữ liệu lá số (Horoscopes)
+app.use('/api/charts', chartRoutes);
 app.use('/api/meanings', meaningRoutes);   // Tra cứu ý nghĩa sao và cung
 app.use('/api/combinations', combinationRoutes); // Xử lý Cách Cục (Pattern Matching)
 

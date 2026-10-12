@@ -24,7 +24,7 @@ Mười lớp: calculation, normalized chart, palace relations, rule engine, kno
 | `cd frontend && npm run lint` | PASS |
 | `cd frontend && npm run build` | PASS |
 | CI workflow | chưa có |
-| SQLite | schema v1; `POST /api/charts/generate` vẫn `insertHoroscope` (họ tên, ngày giờ, giới) |
+| SQLite | schema v1. Sau `V2-M0-04`, `POST /api/charts/generate` không ghi ngày giờ sinh. Hàng cũ không bị xóa |
 | Catalog | 63 cách, 58 rule v2; 10 pilot: 7 CONFLICT, 2 PARTIAL, 1 NOT_IMPLEMENTED, 0 MATCH |
 | Ấn bản | cả hai edition `authenticated: false` |
 | LLM / Tiểu hạn / đăng nhập | chưa có trong code |
@@ -166,7 +166,7 @@ Test V2 chỉ khóa invariant ổn định (AUTH bị loại, KB-02 còn `BLOCKE
 
 - epic: M0
 - priority: P1
-- status: READY
+- status: COMPLETED
 - dependencies: []
 - dependency_class: SECURITY
 - scope: `chartRoutes.js` và test: generate không bắt buộc ghi ngày giờ
@@ -249,14 +249,14 @@ AUTH-01 không có cạnh.
 
 ## 10. Session order
 
-`V2-KB-03` prototype đã xong trên DB tạm. Task READY kế tiếp là `V2-M0-04`. Production migration vẫn `BLOCKED_HUMAN`.
+Near-term queue của phiên này đã xong (`V2-M0-04` COMPLETED). Production migration và `V2-KB-02` vẫn `BLOCKED_HUMAN`. Không còn task READY trong hàng gần.
 
 1. `V2-M0-01` — COMPLETED
 2. `V2-KB-01` — COMPLETED
 3. `V2-M0-03` — COMPLETED
 4. `V2-M0-02` — COMPLETED
 5. `V2-KB-03` prototype — COMPLETED
-6. `V2-M0-04` stateless generate (không xóa dữ liệu cũ) — READY
+6. `V2-M0-04` stateless generate (không xóa dữ liệu cũ) — COMPLETED
 
 Dừng trước `V2-KB-02`, production migration, sửa `rulesV2.json`, LLM public, deploy.
 

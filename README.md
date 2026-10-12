@@ -11,7 +11,7 @@ Nền tảng web lập và luận giải **lá số Tử Vi**. Kiến trúc 3 l�
 - **Click sao / cung** trên lá số để xem ý nghĩa từ API (`stars`, `palaces`).
 - **Luận cách cục**: khớp tổ hợp sao (cát / hung / đặc biệt) qua `POST /api/combinations/match`.
 - **Chia sẻ lá số qua URL** (`/la-so?year=&month=&day=&hour=&gender=&name=`).
-- Mỗi lần lập lá số được **lưu vào SQLite** (`horoscopes`). Chưa có màn hình lịch sử trên UI.
+- Lập lá số trả kết quả ngay và **không ghi** ngày giờ sinh vào SQLite. Bảng `horoscopes` cũ, nếu có, không bị xóa. Không có tài khoản hay màn hình lịch sử.
 
 Các trang **Luận Giải**, **Kiến Thức**, **Tài Liệu**, **Liên Hệ** hiện là placeholder.
 
