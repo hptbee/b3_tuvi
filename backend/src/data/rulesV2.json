@@ -1,0 +1,513 @@
+[
+  {
+    "id": "tu_phu_dong_cung",
+    "combination": "Tử Phủ Đồng Cung",
+    "target": "menh",
+    "branches": ["Dần", "Thân"],
+    "samePalace": ["Tử Vi", "Thiên Phủ"]
+  },
+  {
+    "id": "cu_nhat_dong_cung",
+    "combination": "Cự Nhật Đồng Cung",
+    "target": "menh",
+    "branches": ["Dần", "Thân"],
+    "samePalace": ["Cự Môn", "Thái Dương"]
+  },
+  {
+    "id": "tham_vu_dong_hanh",
+    "combination": "Tham Vũ Đồng Hành",
+    "target": "menh",
+    "branches": ["Sửu", "Mùi"],
+    "samePalace": ["Tham Lang", "Vũ Khúc"]
+  },
+  {
+    "id": "ta_huu_dong_cung",
+    "combination": "Tả Hữu Đồng Cung",
+    "target": "menh",
+    "branches": ["Sửu", "Mùi"],
+    "samePalace": ["Tả Phù", "Hữu Bật"]
+  },
+  {
+    "id": "nhat_nguyet_dong_lam",
+    "combination": "Nhật Nguyệt Đồng Lâm",
+    "target": "menh",
+    "branches": ["Sửu", "Mùi"],
+    "samePalace": ["Thái Dương", "Thái Âm"]
+  },
+  {
+    "id": "tai_an_giao_tri",
+    "combination": "Tài Ấn Giao Trì",
+    "target": "menh",
+    "branches": ["Dần", "Thân"],
+    "samePalace": ["Vũ Khúc", "Thiên Tướng"]
+  },
+  {
+    "id": "co_cu_dong_lam",
+    "combination": "Cơ Cự Đồng Lâm",
+    "target": "menh",
+    "branches": ["Mão", "Dậu"],
+    "samePalace": ["Thiên Cơ", "Cự Môn"]
+  },
+  {
+    "id": "thuy_trung_que_ngac",
+    "combination": "Thủy Trừng Quế Ngạc",
+    "target": "menh",
+    "branches": ["Tí"],
+    "samePalace": ["Thiên Đồng", "Thái Âm"]
+  },
+  {
+    "id": "phiem_thuy_dao_hoa",
+    "combination": "Phiếm Thủy Đào Hoa",
+    "target": "menh",
+    "branches": ["Tí", "Hợi"],
+    "samePalace": ["Tham Lang"]
+  },
+  {
+    "id": "tho_tinh_nhap_mieu",
+    "combination": "Thọ Tinh Nhập Miếu",
+    "target": "menh",
+    "branches": ["Ngọ"],
+    "samePalace": ["Thiên Lương"]
+  },
+  {
+    "id": "anh_tinh_nhap_mieu",
+    "combination": "Anh Tinh Nhập Miếu",
+    "target": "menh",
+    "branches": ["Tí", "Ngọ"],
+    "samePalace": ["Phá Quân"]
+  },
+  {
+    "id": "nhat_le_trung_thien",
+    "combination": "Nhật Lệ Trung Thiên",
+    "target": "menh",
+    "branches": ["Ngọ"],
+    "samePalace": ["Thái Dương"]
+  },
+  {
+    "id": "menh_vo_chinh_dieu",
+    "combination": "Mệnh Vô Chính Diệu",
+    "target": "menh",
+    "noMajor": true
+  },
+  {
+    "id": "khong_kiep_giap_menh",
+    "combination": "Không Kiếp Giáp Mệnh",
+    "target": "menh",
+    "giap": {
+      "stars": ["Địa Không", "Địa Kiếp"],
+      "mode": "both_flanks"
+    }
+  },
+  {
+    "id": "kinh_da_giap_menh",
+    "combination": "Kình Đà Giáp Mệnh",
+    "target": "menh",
+    "giap": {
+      "stars": ["Kình Dương", "Đà La"],
+      "mode": "both_flanks"
+    }
+  },
+  {
+    "id": "phong_luu_thai_truong",
+    "combination": "Phong Lưu Thái Trượng",
+    "target": "menh",
+    "branches": ["Dần", "Thân"],
+    "samePalace": ["Tham Lang", "Đà La"]
+  },
+  {
+    "id": "nguyet_lang_thien_mon",
+    "combination": "Nguyệt Lãng Thiên Môn",
+    "target": "menh",
+    "branches": ["Hợi"],
+    "samePalace": ["Thái Âm"]
+  },
+  {
+    "id": "nhat_chieu_loi_mon",
+    "combination": "Nhật Chiếu Lôi Môn",
+    "target": "menh",
+    "branches": ["Mão"],
+    "samePalace": ["Thái Dương"]
+  },
+  {
+    "id": "that_sat_trieu_dau",
+    "combination": "Thất Sát Triều Đẩu",
+    "target": "menh",
+    "branches": ["Dần", "Thân", "Tí", "Ngọ"],
+    "samePalace": ["Thất Sát"]
+  },
+  {
+    "id": "hung_tu_trieu_vien",
+    "combination": "Hùng Tú Triều Viên",
+    "target": "menh",
+    "branches": ["Dần", "Thân"],
+    "samePalace": ["Liêm Trinh"]
+  },
+  {
+    "id": "sat_pha_tham",
+    "combination": "Sát Phá Tham",
+    "target": "menh",
+    "clauses": [
+      { "stars": ["Thất Sát", "Phá Quân", "Tham Lang"], "at": "tam_hop" }
+    ]
+  },
+  {
+    "id": "co_nguyet_dong_luong",
+    "combination": "Cơ Nguyệt Đồng Lương",
+    "target": "menh",
+    "clauses": [
+      { "stars": ["Thiên Cơ", "Thái Âm", "Thiên Đồng", "Thiên Lương"], "at": "tam_phuong_tu_chinh" }
+    ]
+  },
+  {
+    "id": "tu_phu_trieu_vien",
+    "combination": "Tử Phủ Triều Viên",
+    "target": "menh",
+    "clauses": [
+      { "stars": ["Tử Vi", "Thiên Phủ"], "at": "tam_phuong_tu_chinh" }
+    ]
+  },
+  {
+    "id": "song_loc_trieu_vien",
+    "combination": "Song Lộc Triều Viên",
+    "target": "menh",
+    "clauses": [
+      { "stars": ["Hóa Lộc", "Lộc Tồn"], "at": "tam_phuong_tu_chinh" }
+    ]
+  },
+  {
+    "id": "tam_ky_gia_hoi",
+    "combination": "Tam Kỳ Gia Hội",
+    "target": "menh",
+    "clauses": [
+      { "stars": ["Hóa Khoa", "Hóa Quyền", "Hóa Lộc"], "at": "tam_phuong_tu_chinh" }
+    ]
+  },
+  {
+    "id": "thien_at_cung_menh",
+    "combination": "Thiên Ất Củng Mệnh",
+    "target": "menh",
+    "clauses": [
+      { "stars": ["Thiên Khôi", "Thiên Việt"], "at": "menh_or_opposite" }
+    ]
+  },
+  {
+    "id": "nhat_nguyet_tang_huy",
+    "combination": "Nhật Nguyệt Tàng Huy",
+    "target": "menh",
+    "clauses": [
+      { "stars": ["Thái Dương"], "at": "chart", "brightness": ["H"] },
+      { "stars": ["Thái Âm"], "at": "chart", "brightness": ["H"] }
+    ]
+  },
+  {
+    "id": "tu_phu_vu_tuong",
+    "combination": "Tử Phủ Vũ Tướng",
+    "strict": true,
+    "target": "menh",
+    "clauses": [
+      { "stars": ["Tử Vi", "Thiên Phủ", "Vũ Khúc", "Thiên Tướng"], "at": "tam_hop" }
+    ]
+  },
+  {
+    "id": "giap_de_dang_khoa",
+    "combination": "Giáp Đệ Đăng Khoa",
+    "strict": true,
+    "target": "menh",
+    "clauses": [
+      { "stars": ["Hóa Khoa"], "at": "target" },
+      { "stars": ["Hóa Quyền"], "at": "tam_hop_partners" }
+    ]
+  },
+  {
+    "id": "phu_tuong_trieu_vien",
+    "combination": "Phủ Tướng Triều Viên",
+    "strict": true,
+    "target": "menh",
+    "clauses": [
+      { "stars": ["Thiên Phủ", "Thiên Tướng"], "at": "tam_hop_partners" }
+    ]
+  },
+  {
+    "id": "van_tinh_cung_menh",
+    "combination": "Văn Tinh Củng Mệnh",
+    "strict": true,
+    "target": "menh",
+    "samePalace": ["Văn Xương", "Văn Khúc", "Hóa Khoa"]
+  },
+  {
+    "id": "duong_luong_xuong_loc",
+    "combination": "Dương Lương Xương Lộc",
+    "strict": true,
+    "target": "menh",
+    "branches": ["Mão"],
+    "clauses": [
+      { "stars": ["Thái Dương", "Thiên Lương", "Văn Xương"], "at": "target" },
+      { "stars": ["Lộc Tồn", "Hóa Lộc"], "at": "target", "any": true }
+    ]
+  },
+  {
+    "id": "nhat_nguyet_tinh_minh",
+    "combination": "Nhật Nguyệt Tịnh Minh",
+    "strict": true,
+    "target": "menh",
+    "branches": ["Sửu", "Mùi"],
+    "clauses": [
+      { "stars": ["Thái Dương"], "at": "chart", "branches": ["Tị", "Ngọ"], "brightness": ["M", "V"] },
+      { "stars": ["Thái Âm"], "at": "chart", "branches": ["Dậu", "Tí"], "brightness": ["M", "V"] }
+    ]
+  },
+  {
+    "id": "minh_chau_xuat_hai",
+    "combination": "Minh Châu Xuất Hải",
+    "strict": true,
+    "target": "menh",
+    "branches": ["Mùi"],
+    "noMajor": true,
+    "clauses": [
+      { "stars": ["Thái Âm"], "at": "chart", "branches": ["Hợi"] },
+      { "stars": ["Thái Dương"], "at": "chart", "branches": ["Mão"] }
+    ]
+  },
+  {
+    "id": "kinh_da_hiep_ky",
+    "combination": "Kình Đà Hiệp Kỵ",
+    "strict": true,
+    "target": "menh",
+    "giap": {
+      "mode": "anchor_flanks",
+      "anchor": "Hóa Kỵ",
+      "flankGroups": [["Kình Dương"], ["Đà La"]]
+    }
+  },
+  {
+    "id": "hinh_ky_giap_an",
+    "combination": "Hình Kỵ Giáp Ấn",
+    "strict": true,
+    "target": "menh",
+    "giap": {
+      "mode": "anchor_flanks",
+      "anchor": "Thiên Tướng",
+      "flankGroups": [["Kình Dương", "Thiên Hình"], ["Hóa Kỵ"]]
+    }
+  },
+  {
+    "id": "hinh_tu_giap_an",
+    "combination": "Hình Tù Giáp Ấn",
+    "strict": true,
+    "target": "menh",
+    "giap": {
+      "mode": "anchor_flanks",
+      "anchor": "Thiên Tướng",
+      "flankGroups": [["Kình Dương", "Thiên Hình"], ["Liêm Trinh"]]
+    }
+  },
+  {
+    "id": "hoa_tham",
+    "combination": "Hỏa Tham",
+    "strict": true,
+    "target": "menh",
+    "clauses": [
+      { "stars": ["Tham Lang"], "at": "tam_phuong_tu_chinh", "brightness": ["M", "V", "Đ"] },
+      { "stars": ["Hỏa Tinh"], "at": "tam_phuong_tu_chinh" }
+    ]
+  },
+  {
+    "id": "linh_tham",
+    "combination": "Linh Tham",
+    "strict": true,
+    "target": "menh",
+    "clauses": [
+      { "stars": ["Tham Lang"], "at": "tam_phuong_tu_chinh", "brightness": ["M", "V", "Đ"] },
+      { "stars": ["Linh Tinh"], "at": "tam_phuong_tu_chinh" }
+    ]
+  },
+  {
+    "id": "thach_trung_an_ngoc",
+    "combination": "Thạch Trung Ẩn Ngọc",
+    "strict": true,
+    "target": "menh",
+    "branches": ["Tí", "Ngọ"],
+    "clauses": [
+      { "stars": ["Cự Môn"], "at": "target" },
+      { "stars": ["Hóa Lộc", "Hóa Quyền", "Lộc Tồn"], "at": "target", "any": true }
+    ]
+  },
+  {
+    "id": "loc_ma_giao_tri",
+    "combination": "Lộc Mã Giao Trì",
+    "strict": true,
+    "target": "menh",
+    "clauses": [
+      { "stars": ["Thiên Mã"], "at": "tam_phuong_tu_chinh" },
+      { "stars": ["Lộc Tồn", "Hóa Lộc"], "at": "tam_phuong_tu_chinh", "any": true }
+    ]
+  },
+  {
+    "id": "linh_xuong_da_vu",
+    "combination": "Linh Xương Đà Vũ",
+    "strict": true,
+    "target": "menh",
+    "samePalace": ["Linh Tinh", "Văn Xương", "Đà La", "Vũ Khúc"]
+  },
+  {
+    "id": "menh_ly_phung_khong",
+    "combination": "Mệnh Lý Phùng Không",
+    "strict": true,
+    "target": "menh",
+    "linked": {
+      "orSwap": true,
+      "left": { "palace": "menh", "stars": ["Địa Không"], "markers": ["tuan", "triet"], "min": 1 },
+      "right": { "palace": "than", "stars": ["Địa Kiếp"], "min": 1 }
+    }
+  },
+  {
+    "id": "loc_phung_xung_pha",
+    "combination": "Lộc Phùng Xung Phá",
+    "strict": true,
+    "target": "menh",
+    "clauses": [
+      {
+        "stars": ["Lộc Tồn", "Hóa Lộc"],
+        "any": true,
+        "at": "menh_or_opposite",
+        "samePalaceAny": { "stars": ["Địa Không", "Địa Kiếp", "Hóa Kỵ"], "markers": ["tuan", "triet"] }
+      }
+    ]
+  },
+  {
+    "id": "ma_lac_khong_vong",
+    "combination": "Mã Lạc Không Vong",
+    "strict": true,
+    "target": "menh",
+    "clauses": [
+      {
+        "stars": ["Thiên Mã"],
+        "at": "tam_phuong_tu_chinh",
+        "samePalaceAny": { "stars": ["Địa Không"], "markers": ["tuan", "triet"] }
+      }
+    ]
+  },
+  {
+    "id": "cu_hoa_kinh_duong",
+    "combination": "Cự Hỏa Kình Dương",
+    "target": "menh",
+    "clauses": [
+      { "stars": ["Cự Môn", "Hỏa Tinh", "Kình Dương"], "at": "tam_phuong_tu_chinh" }
+    ]
+  },
+  {
+    "id": "ban_khong_chiet_xi",
+    "combination": "Bán Không Chiết Xỉ",
+    "strict": true,
+    "target": "menh",
+    "clauses": [
+      { "stars": ["Thất Sát", "Thiên Tướng"], "at": "target", "any": true },
+      { "stars": ["Địa Không", "Địa Kiếp"], "at": "target" }
+    ]
+  },
+  {
+    "id": "kinh_duong_nhap_mieu",
+    "combination": "Kình Dương Nhập Miếu (Mã Đầu Đới Tiễn)",
+    "strict": true,
+    "target": "menh",
+    "branches": ["Thìn", "Tuất", "Sửu", "Mùi", "Ngọ"],
+    "clauses": [
+      { "stars": ["Kình Dương"], "at": "target" },
+      { "stars": ["Thất Sát", "Tham Lang"], "at": "target", "any": true }
+    ]
+  },
+  {
+    "id": "de_ngo_hung_do",
+    "combination": "Đế Ngộ Hung Đồ",
+    "target": "menh",
+    "samePalace": ["Tử Vi", "Kình Dương", "Hỏa Tinh"]
+  },
+  {
+    "id": "nhat_nguyet_tat_ach",
+    "combination": "Nhật Nguyệt Tật Ách",
+    "strict": true,
+    "target": "tat_ach",
+    "clauses": [
+      { "stars": ["Thái Dương", "Thái Âm", "Hóa Kỵ"], "at": "tam_phuong_tu_chinh" }
+    ]
+  },
+  {
+    "id": "khuc_am_dong_cung",
+    "combination": "Khúc Ám Đồng Cung",
+    "target": "menh",
+    "clauses": [
+      { "stars": ["Văn Khúc", "Cự Môn"], "at": "tam_phuong_tu_chinh" }
+    ]
+  },
+  {
+    "id": "cu_phung_tu_sat",
+    "combination": "Cự Phùng Tứ Sát",
+    "strict": true,
+    "target": "menh",
+    "clauses": [
+      { "stars": ["Cự Môn"], "at": "target" },
+      { "stars": ["Kình Dương", "Đà La", "Hỏa Tinh", "Linh Tinh"], "at": "tam_phuong_tu_chinh" }
+    ]
+  },
+  {
+    "id": "lo_bang_mai_thi",
+    "combination": "Lộ Bàng Mai Thi",
+    "strict": true,
+    "target": "menh",
+    "branches": ["Sửu", "Mùi"],
+    "clauses": [
+      { "stars": ["Liêm Trinh", "Thất Sát"], "at": "target" },
+      { "stars": ["Hóa Kỵ", "Kình Dương", "Đà La"], "at": "tam_phuong_tu_chinh" }
+    ]
+  },
+  {
+    "id": "hoa_cai_cu_phu_the",
+    "combination": "Hoa Cái Cư Phu Thê",
+    "strict": true,
+    "target": "phu_the",
+    "clauses": [
+      { "stars": ["Hoa Cái"], "at": "target" },
+      {
+        "stars": ["Cô Thần", "Quả Tú", "Kình Dương", "Đà La", "Hỏa Tinh", "Linh Tinh", "Địa Không", "Địa Kiếp"],
+        "at": "target",
+        "any": true
+      }
+    ]
+  },
+  {
+    "id": "chung_thuy_trieu_dong",
+    "combination": "Chúng Thủy Triều Đông",
+    "strict": true,
+    "anyOf": [
+      { "target": "menh", "branches": ["Mão", "Dậu"], "samePalace": ["Đại Hao", "Tiểu Hao"] },
+      { "target": "tai_bach", "branches": ["Mão", "Dậu"], "samePalace": ["Đại Hao", "Tiểu Hao"] }
+    ]
+  },
+  {
+    "id": "quan_than_khanh_hoi",
+    "combination": "Quân Thần Khánh Hội",
+    "strict": true,
+    "target": "menh",
+    "clauses": [
+      { "stars": ["Tử Vi"], "at": "target" },
+      { "stars": ["Tả Phù", "Hữu Bật", "Thiên Khôi", "Thiên Việt"], "at": "tam_phuong_tu_chinh" }
+    ]
+  },
+  {
+    "id": "dong_luong_ty_hoi",
+    "combination": "Đồng Lương Tỵ Hợi",
+    "target": "menh",
+    "branches": ["Tị", "Hợi"],
+    "clauses": [
+      { "stars": ["Thiên Đồng", "Thiên Lương"], "at": "menh_or_opposite" }
+    ]
+  },
+  {
+    "id": "menh_vcd_tam_khong",
+    "combination": "Mệnh VCD Đắc Tam Không",
+    "strict": true,
+    "target": "menh",
+    "noMajor": true,
+    "countAtLeast": { "n": 3, "stars": ["Thiên Không", "Địa Không"], "markers": ["tuan", "triet"] }
+  }
+]

@@ -24,6 +24,7 @@ Tài liệu này được thiết kế để cung cấp cho mô hình AI (như C
 | Cách cục | `backend/src/engine/combinationMatch.js`, `backend/src/data/combinations.json`, `backend/src/routes/combinationRoutes.js` |
 | Model lá số chuẩn hóa | `backend/src/engine/normalizeChart.js`, `backend/src/engine/starCatalog.js`, `docs/CHART_DOMAIN_MODEL.md` |
 | Quan hệ cung | `backend/src/engine/palaceRelation.js`, `backend/src/engine/chartQuery.js`, `docs/PALACE_RELATIONSHIPS.md` |
+| Rule cách cục v2 | `backend/src/engine/ruleEngine.js`, `backend/src/data/rulesV2.json`, `docs/P1_2_RULE_ENGINE.md` |
 | Hồ sơ trường phái | `backend/src/engine/schoolProfile.js`, `docs/TU_VI_SCHOOL_VARIANTS.md` |
 | UI lá số | `frontend/src/components/TuViChart.jsx` |
 | Form nhập liệu | `TuviFormBox` trong `frontend/src/App.jsx` |
@@ -52,6 +53,7 @@ Tài liệu này được thiết kế để cung cấp cho mô hình AI (như C
 - **Múi giờ**: Giờ nhập là giờ đồng hồ, route đổi sang canh giờ 1–12 trước khi gọi engine. Mặc định giờ Việt Nam (GMT+7).
 - **Cách cục**: `POST /api/combinations/match` dùng `combinations.json`. Matcher mặc định Tọa thủ. Chi tiết P0: `docs/P0_IMPLEMENTATION_REPORT.md`.
 - **Lá số chuẩn hóa**: `POST /api/charts/generate` thêm `normalizedChart`. UI vẫn dùng `tuviInfo`. Xem `docs/P1_1_CHART_MODEL_REPORT.md`.
+- **Rule v2**: cách `matching_ok` và các cách provisional có công thức vị trí, kể cả cung chức và Tuần/Triệt. Cách còn lại đi logic cũ hoặc `disabled`. Xem `docs/P1_2_RULE_ENGINE.md`.
 
 ## Prompting Tips cho AI
 Khi yêu cầu AI viết code mới, hãy kèm theo các chỉ dẫn:

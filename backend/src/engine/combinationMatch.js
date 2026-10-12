@@ -7,6 +7,10 @@ import {
     isTrietAlias
 } from './starNames.js';
 import { branchIndexRelations } from './palaceRelation.js';
+import { normalizeChart } from './normalizeChart.js';
+import { evaluateRule } from './ruleEngine.js';
+import { getStarById } from './starCatalog.js';
+import rulesV2 from '../data/rulesV2.json' with { type: 'json' };
 
 export const SUPPORTED_POSITIONS = new Set([
     'Đồng cung',
@@ -195,23 +199,51 @@ function splitRequiredStars(required) {
     return { stars, needTuan, needTriet };
 }
 
+const RULES_V2 = new Map(rulesV2.map((rule) => [rule.combination, rule]));
+
+function chartFromMatchInput(boxes, menh) {
+    return normalizeChart({
+        tuviInfo: { boxes, menh, than: null }
+    });
+}
+
+function placementFromRows(rows) {
+    return rows.map((row) => ({
+        star: getStarById(row.starId)?.displayName || row.starId,
+        starId: row.starId,
+        palaces: row.palaces
+    }));
+}
+
 /**
  * Pure matcher. Returns [] when input is missing/invalid.
- * Never returns true for empty conditions.
+ * Cách có rule v2 được đánh giá trên lá số chuẩn hóa.
+ * Cách chưa có rule giữ logic cũ.
  */
-export function matchCombinations({ boxes, menhIndex, menhChi } = {}, catalog = []) {
+export function matchCombinations(input = {}, catalog = [], options = {}) {
+    const useV2 = options.useV2 !== false;
+    const { boxes, menhIndex, menhChi } = input;
     if (!boxes || typeof boxes !== 'object' || Array.isArray(boxes)) return [];
     const menh = Number(menhIndex);
     if (!menh || menh < 1 || menh > 12) return [];
     if (Object.keys(boxes).length === 0) return [];
     if (!Array.isArray(catalog) || catalog.length === 0) return [];
 
+    const chart = useV2 ? chartFromMatchInput(boxes, menh) : null;
     const menhChiNorm = normalizeChi(menhChi || boxes[menh]?.chiName || boxes[menh]?.chi || '');
     const matched = [];
 
     for (const combo of catalog) {
         const status = combo.verification_status || 'provisional';
         if (status === 'disabled') continue;
+
+        const rule = useV2 ? RULES_V2.get(combo.name) : null;
+        if (rule) {
+            const hit = evaluateRule(chart, rule);
+            if (!hit) continue;
+            matched.push(toMatchDto(combo, placementFromRows(hit.rows), hit.evidence));
+            continue;
+        }
 
         const lc = combo.logic_conditions || {};
         const requiredPalaces = (lc.required_palaces || []).map(normalizeChi);
@@ -255,7 +287,11 @@ export function matchCombinations({ boxes, menhIndex, menhChi } = {}, catalog = 
     return matched;
 }
 
-function toMatchDto(combo, placement = []) {
+export function matchLegacyCombinations(input, catalog) {
+    return matchCombinations(input, catalog, { useV2: false });
+}
+
+function toMatchDto(combo, placement = [], evidence = null) {
     const lc = combo.logic_conditions || {};
     const type = combo.type;
     const status = combo.verification_status || 'provisional';
@@ -272,6 +308,7 @@ function toMatchDto(combo, placement = []) {
         verification_status: status,
         certainty: unverified ? 'unverified' : 'rule_match_only',
         placements: placement,
+        evidence,
         disclaimer: type === 'hung_bai_cach'
             ? (combo.disclaimer || HUNG_ABSOLUTE_DISCLAIMER)
             : (combo.disclaimer || 'Khớp điều kiện sao đã khai báo. Không phải kết luận chắc chắn về cuộc đời.')

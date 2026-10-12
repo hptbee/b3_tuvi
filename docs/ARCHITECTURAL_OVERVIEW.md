@@ -41,6 +41,7 @@ Engine nằm tại `backend/src/engine/` và là "trái tim" của hệ thống:
 -   **`starCatalog.js`**: ID sao ổn định, tách độ sáng khỏi tên.
 -   **`normalizeChart.js`**: đổi `tuviInfo` thành model 12 cung. Không ghi đè engine.
 -   **`palaceRelation.js` / `chartQuery.js`**: tam hợp, xung chiếu, giáp, tứ chính cho mọi chi. Chi tiết: `docs/PALACE_RELATIONSHIPS.md`, `docs/CHART_DOMAIN_MODEL.md`.
+-   **`ruleEngine.js`**: rule trong `rulesV2.json` cho cách `matching_ok` và các cách provisional có công thức vị trí. Cách còn lại vẫn đi `combinationMatch.js`.
 
 ## 4. Mô hình dữ liệu (Database Schemas)
 

@@ -1680,8 +1680,8 @@
       "khat_cha_me",
       "hung_bai_cach"
     ],
-    "verification_status": "disabled",
-    "notes": "Disabled: công thức đòi cung chức Tật Ách, matcher P0 chỉ xét Mệnh.",
+    "verification_status": "provisional",
+    "notes": "Rule v2 xét tam phương của cung Tật Ách và Hóa Kỵ. Chữ sát tinh trong câu cổ không được liệt kê thành sao, nên chưa xét.",
     "disclaimer": "Luận giải mang tính tham khảo theo công thức cách cục, không phải kết luận về sức khỏe, hôn nhân, cha mẹ hay sinh tử."
   },
   {
@@ -1943,7 +1943,8 @@
       "tai_nan_di_chuyen",
       "hung_bai_cach"
     ],
-    "verification_status": "provisional",
+    "verification_status": "disabled",
+    "notes": "Disabled: công thức cần Lưu Thiên Mã của đại hạn hoặc tiểu hạn. Engine chưa có vận hạn.",
     "disclaimer": "Luận giải mang tính tham khảo theo công thức cách cục, không phải kết luận về sức khỏe, hôn nhân, cha mẹ hay sinh tử."
   },
   {
@@ -1978,7 +1979,8 @@
       "dinh_cao",
       "hung_bai_cach"
     ],
-    "verification_status": "provisional",
+    "verification_status": "disabled",
+    "notes": "Disabled: câu cổ không liệt kê chính tinh đắc địa. Không kết luận chỉ từ Địa Kiếp tại Mệnh.",
     "disclaimer": "Luận giải mang tính tham khảo theo công thức cách cục, không phải kết luận về sức khỏe, hôn nhân, cha mẹ hay sinh tử."
   },
   {
