@@ -10,10 +10,10 @@ Không điền năm, nhà xuất bản, chương, trang khi các trang thứ c�
 |---|---|---|
 | `ziwei-quanshu-tradition` | Tên Hán 紫微斗數全書. Các bài tiếng Việt gán Hi Di Trần Đoàn và La Hồng Tiên. Không có bản Hán trong tay. | `unverified_attribution` |
 | `vu-tai-luc-toan-thu` | Bản Việt được giới thiệu là Vũ Tài Lục dịch. Một trang bán và đầu một scan ghi Ngân Hà Thư Xã 1973. Sơn Khiêm nói năm bản Việt chưa đối soát. | `conflicting_secondary` |
-| `thai-thu-lang-tan-bien` | Bút danh Vân Đằng Thái Thứ Lang. PDF 277 trang, bìa ghi Sài Gòn 1956, file InDesign 2014, chưa phải bản in đã giám định. Catalog EMIC: NXB Thời đại, Hà Nội, 2012, 427 trang, chưa đọc chữ. Hai vật không gộp. | `conflicting_secondary` |
-| `nguyen-phat-loc-ham-so` | Tên *Tử Vi Hàm Số*, mốc khoảng 1972 chỉ qua dòng thời gian thứ cấp. | `unverified_attribution` |
+| `thai-thu-lang-tan-bien` | Bút danh Vân Đằng Thái Thứ Lang. PDF 277 trang, bìa ghi Sài Gòn 1956, file InDesign 2014, chưa phải bản in đã giám định. Ngày 2026-10-12 file tại URL đã chấp nhận có SHA-256 `941b104504dd552fe967354759da1683dda30a529aa59a8e570b05727f5b4458`, 2202452 byte, 277 đối tượng trang. Catalog EMIC: NXB Thời đại, Hà Nội, 2012, 427 trang, chưa đọc chữ. Hai vật không gộp. | `conflicting_secondary` |
+| `nguyen-phat-loc-ham-so` | Ngày 2026-10-12 URL cũ là trang *Tân Biên*. URL hiện tại là trang giới thiệu *Tử Vi Hàm Số*. Không phải file sách. | `secondary` |
 | `nguyen-phat-loc-tong-hop` | Trang bán ghi Nguyễn Phát Lộc, 686 trang. Không năm, không nhà in trên phần đã đọc. | `secondary` |
-| `thien-luong-nghiem-ly` | Tên *Tử Vi Nghiệm Lý* và mốc khoảng 1974 chỉ trên dòng thời gian Sơn Khiêm. | `unverified_attribution` |
+| `thien-luong-nghiem-ly` | Ngày 2026-10-12 URL cũ là *Tử Vi Lập Thành Và Phú Đoán*. URL đã gỡ. Trang *Nghiệm Lý Toàn Thư* là một sách khác, không gắn vào mục này. | `unverified_attribution` |
 | `trung-chau-wang-tingzhi` | Bài mô tả phái của Vương Đình Chi, không phải một sách. | `secondary` |
 
 *Tử Vi Đẩu Số Tân Biên* không phải sách của Nguyễn Phát Lộc. Hai tên này bị trang tìm kiếm gộp; sổ này tách ra.
