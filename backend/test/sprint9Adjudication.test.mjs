@@ -14,7 +14,8 @@ const allowed = new Set([
     'HISTORICAL_NAME_NOT_ESTABLISHED',
     'IDENTITY_MISMATCH',
     'SOURCE_CONTRADICTION',
-    'INSUFFICIENT_EVIDENCE'
+    'INSUFFICIENT_EVIDENCE',
+    'PDF_TEXT_LAYER_MISMATCH_CONFIRMED'
 ]);
 
 assert.strictEqual(matrix.cases.length, 21);
@@ -98,5 +99,27 @@ assert.strictEqual(oppositeMenh.chiName, 'Mùi');
 const suu = boxes(oppositeLuminaries).find((box) => box.chiName === 'Sửu');
 assert.ok(has(suu, 'Thái Dương') && has(suu, 'Thái Âm'));
 assert.ok(!(has(oppositeMenh, 'Thái Dương') && has(oppositeMenh, 'Thái Âm')));
+const visualTinh = calculateTuVi(0, 0, 14, 2, 3, 1, false);
+const visualMenh = menh(visualTinh);
+assert.strictEqual(visualMenh.chiName, 'Sửu');
+assert.strictEqual(boxes(visualTinh).find((box) => has(box, 'Thái Dương')).chiName, 'Tị');
+assert.strictEqual(boxes(visualTinh).find((box) => has(box, 'Thái Âm')).chiName, 'Dậu');
+const clause2 = calculateTuVi(0, 0, 1, 2, 9, 1, false);
+assert.strictEqual(menh(clause2).chiName, 'Mùi');
+assert.strictEqual(boxes(clause2).find((box) => has(box, 'Thái Dương')).chiName, 'Mão');
+assert.strictEqual(boxes(clause2).find((box) => has(box, 'Thái Âm')).chiName, 'Hợi');
+const editorialOpposite = calculateTuVi(0, 0, 18, 2, 3, 1, false);
+assert.strictEqual(menh(editorialOpposite).chiName, 'Sửu');
+assert.strictEqual(boxes(editorialOpposite).find((box) => has(box, 'Thái Dương')).chiName, 'Mùi');
+assert.ok(!has(menh(editorialOpposite), 'Thái Dương'));
+const tinhRule = rules.find((row) => row.id === 'nhat_nguyet_tinh_minh');
+assert.deepStrictEqual(tinhRule.clauses[0].branches, ['Tị', 'Ngọ']);
+assert.deepStrictEqual(tinhRule.clauses[1].branches, ['Dậu', 'Tí']);
+const dongRule = rules.find((row) => row.id === 'nhat_nguyet_dong_lam');
+assert.deepStrictEqual(dongRule.samePalace, ['Thái Dương', 'Thái Âm']);
+assert.ok(tinhSpan.includes('Tý') && !tinhSpan.includes('Tỵ'));
+const visualCase = matrix.cases.find((row) => row.slug === 'nhat-nguyet-tinh-minh');
+assert.strictEqual(visualCase.disposition, 'PDF_TEXT_LAYER_MISMATCH_CONFIRMED');
+assert.strictEqual(visualCase.originalDecision, 'CONFLICT');
 
 console.log('sprint 9 adjudication keeps the stored decisions and separates scope from match');

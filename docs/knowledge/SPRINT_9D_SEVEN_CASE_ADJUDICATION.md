@@ -1,12 +1,12 @@
 # Sprint 9D adjudication of seven Tân Biên conflicts
 
-Sprint 9 stays open. The stored Tân Biên decisions remain `CONFLICT`. The models were not rerun. The printed Tân Biên pages were not opened. Modern 108s pages are a different school record.
+Sprint 9 stays open. The stored Tân Biên decisions remain `CONFLICT`. The models were not rerun. The registered PDF was hashed and pages 230, 71, and 229 were rendered. Modern 108s pages remain a different school record.
 
 Machine-readable rows: `docs/knowledge/research/sprint-9d-seven-cases.json`.
 
 ## Nhật Nguyệt Tịnh Minh
 
-The stored span puts Thái Dương at Tý and Thái Âm at Hợi, or Thái Dương at Mão and Thái Âm at Hợi. The current placer's Sun/Moon pairs include Mão/Hợi and Tí/Dần. They do not include Tí/Hợi, so the first clause has no chart in the searched grid. `rulesV2` wants the Sun at Tị or Ngọ and the Moon at Dậu or Tí. One reachable runtime example is year indices 0/0, day 14, month 1, hour 2. 108s info/250 instead requires both luminaries bright in the Mệnh 三方四正. The id `branch_ty` corresponds to the span word Tý. The span does not contain Tỵ. `avoid_tuan` repeats `avoid_tuan_triet`. Disposition remains `INSUFFICIENT_EVIDENCE` because the printed page was not checked.
+The registered PDF SHA-256 matches `941b104504dd552fe967354759da1683dda30a529aa59a8e570b05727f5b4458`. On printed page 230 the text layer encodes the Sun position as U+00FD, `Tý`. The rendered glyph has a dot below the y, matching page 71 words encoded U+1EF5, `Tỵ`. Page 71's U+00FD in `lý` has an acute and no dot below. The stored span was not changed. The visible first clause is Sửu / Sun Tỵ / Moon Hợi. That pair is not produced by the current placer. Quách Ngọc Bội says the book wrote Hợi by mistake and the Moon should be Dậu. Page 71 labels Sửu / Sun Tỵ / Moon Dậu, and a different illustration on the same page puts Sun Mão and Moon Hợi at Sửu. Editorial Sửu / Tỵ / Dậu is reachable at can=0, chi=0, day=14, month=2, hour=3. Clause 2, Mùi / Mão / Hợi, is reachable at can=0, chi=0, day=1, month=2, hour=9. `rulesV2` allows Sun Tị or Ngọ and Moon Dậu or Tí, so it accepts the editorial pair and other mixtures, and it does not implement clause 2. Disposition: `PDF_TEXT_LAYER_MISMATCH_CONFIRMED`. The original decision stays `CONFLICT`.
 
 ## Cự Nhật Đồng Cung
 
@@ -30,4 +30,4 @@ The stored span is a bright-host disjunction at Mệnh or Quan. Terra's general 
 
 ## Nhật Nguyệt Đồng Lâm
 
-108s info/222 and `rulesV2` require both luminaries in one palace at Sửu or Mùi. Year indices 0/0, day 6, month 3, hour 4 is that chart. The stored second clause is Mệnh at Mùi with both luminaries at Sửu, reachable at day 3, month 3, hour 10. The stored first clause uses the unreachable Tý/Hợi pair. The printed page was not opened, so the disposition remains `INSUFFICIENT_EVIDENCE`.
+The same page-230 mismatch applies to 19.2.14. The visible first clause is Sửu / Sun Tỵ / Moon Hợi, and that pair is not produced by the placer. The printed second clause, Mệnh at Mùi with both luminaries at Sửu, is reachable at can=0, chi=0, day=3, month=3, hour=10. Section 19.1.5 on printed page 229 and Quách Ngọc Bội section 14 put the conjunction opposite the target. Mệnh Sửu with both luminaries at Mùi is reachable at can=0, chi=0, day=18, month=2, hour=3. `rulesV2` requires both stars in the target palace. That is a different chart, can=0, chi=0, day=6, month=3, hour=4. Disposition: `PDF_TEXT_LAYER_MISMATCH_CONFIRMED`. The original decision stays `CONFLICT`. This file is the registered retypeset PDF, not a proven 1956 printing. The archive.org item was opened and its scan was not visually collated.

@@ -1,8 +1,8 @@
 # Sprint 9 adjudication matrix
 
-Sprint 9 stays open. The 24 Tân Biên decisions and 39 Sprint 9C decisions were not rewritten. The two models were not rerun for the seven Tân Biên rows. A row here is a scoped research record, not a new `MATCH`.
+Sprint 9 stays open. Stored decisions were not rewritten. The two Nhật Nguyệt rows now record a confirmed text-layer mismatch on the registered PDF. That is not formula MATCH and not expert verification.
 
-Baseline of the prior matrix: `7a4504c580dbafcabdd904b3fec0d08cf5f7a02b`. Seven-case update: `sprint9d-seven-v1`. Records: 21.
+Records: 21. Seven-case update: `sprint9d-seven-v1`. Visual collation: page 230 glyph versus text layer.
 
 | Combination | Stored decision | Disagreement | Disposition | Identity |
 | --- | --- | --- | --- | --- |
@@ -17,13 +17,13 @@ Baseline of the prior matrix: `7a4504c580dbafcabdd904b3fec0d08cf5f7a02b`. Seven-
 | Bán Không Chiết Xỉ | `CONFLICT` | IDENTITY | `IDENTITY_MISMATCH` | `IDENTITY_MISMATCH` |
 | Lộ Bàng Mai Thi | `CONFLICT` | CONDITION_LIST | `DOCUMENTED_SOURCE_VARIANT` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
 | Mệnh VCD Đắc Tam Không | `CONFLICT` | CONDITION_LIST | `SOURCE_CONTRADICTION` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
-| Nhật Nguyệt Tịnh Minh | `CONFLICT` | CONDITION_LIST | `INSUFFICIENT_EVIDENCE` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
+| Nhật Nguyệt Tịnh Minh | `CONFLICT` | CONDITION_LIST | `PDF_TEXT_LAYER_MISMATCH_CONFIRMED` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
 | Cự Nhật Đồng Cung | `CONFLICT` | RUBRIC_SCOPE | `DOCUMENTED_SOURCE_VARIANT` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
 | Thất Sát Triều Đẩu | `CONFLICT` | RUBRIC_SCOPE | `DOCUMENTED_SOURCE_VARIANT` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
 | Tham Vũ Đồng Hành | `CONFLICT` | CONDITION_ID_REDUNDANCY | `DOCUMENTED_SOURCE_VARIANT` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
 | Mã Lạc Không Vong | `CONFLICT` | CONDITION_LIST | `SOURCE_CONTRADICTION` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
 | Tử Phủ Triều Viên | `CONFLICT` | CONDITION_ID_REDUNDANCY | `DOCUMENTED_SOURCE_VARIANT` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
-| Nhật Nguyệt Đồng Lâm | `CONFLICT` | CONDITION_LIST | `INSUFFICIENT_EVIDENCE` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
+| Nhật Nguyệt Đồng Lâm | `CONFLICT` | CONDITION_LIST | `PDF_TEXT_LAYER_MISMATCH_CONFIRMED` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
 | Hình Tù Giáp Ấn | `CONFLICT` | CONDITION_LIST | `DOCUMENTED_SOURCE_VARIANT` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
 | Nhật Lệ Trung Thiên | `CONFLICT` | RUBRIC_SCOPE | `DOCUMENTED_SOURCE_VARIANT` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
 | Kình Dương Nhập Miếu (Mã Đầu Đới Tiễn) | `UNRESOLVED` | DIGEST_MISMATCH | `IDENTITY_MISMATCH` | `IDENTITY_MISMATCH` |
@@ -98,9 +98,9 @@ Baseline of the prior matrix: `7a4504c580dbafcabdd904b3fec0d08cf5f7a02b`. Seven-
 
 ### Nhật Nguyệt Tịnh Minh
 
-- Recognition: `DISJOINT_FROM_RUNTIME`. Full grade: `PHU_LUAN_SEPARATE`.
-- Runtime: Stored span: Mệnh or Quan at Sửu with Thái Dương at Tý and Thái Âm at Hợi, or at Mùi with Thái Dương at Mão and Thái Âm at Hợi. The current placer produces Sun/Moon pairs Tí/Dần and Mão/Hợi, not Tí/Hợi, so the first clause had no chart in a year-month-day-hour search. rulesV2 instead wants Mệnh Sửu or Mùi, Sun at Tị or Ngọ, Moon at Dậu or Tí. A reachable example is can=0,chi=0,day=14,month=1,hour=2 (Mệnh Sửu, Sun Tị, Moon Dậu). 108s info/250 is another formula: both luminaries bright in the Mệnh 三方四正. Grok lists branch_ty for the span word Tý; the span does not contain Tỵ. avoid_tuan is redundant with avoid_tuan_triet in the phrase floor. PDF page not verified, so the stored coordinates were not corrected.
-- Fetch: 108s info/250 HTTP 200; placer search found no Tí/Hợi pair
+- Recognition: `VISUAL_TY_HOI_UNREACHABLE`. Full grade: `EDITORIAL_TY_DAU_REACHABLE`.
+- Runtime: SHA-256 of https://tuvithuchanh.com/wp-content/uploads/2022/11/Tu-vi-dau-so.pdf matches the registry 941b104504dd552fe967354759da1683dda30a529aa59a8e570b05727f5b4458. Printed page 230, PDF index 229. The text layer encodes the Sun position as U+0054 U+00FD (Tý). The rendered glyph has a detached dot below the y, the same shape as page 71 words whose text layer is U+1EF5 (Tỵ). On page 71, U+00FD in lý has an acute and no dot below, so the font can draw both. This is a text-layer mismatch, not a 1956-edition proof. The stored span was not rewritten. Visual first clause is Sửu / Sun Tỵ / Moon Hợi. That Sun/Moon pair is not produced by the current placer. Quách Ngọc Bội, fetched 2026-10-13, says the book wrote Hợi by mistake and the Moon should be Dậu. Page 71 labels a separate illustration Nhật Tỵ Nguyệt Dậu at Sửu, and another illustration on the same page puts Sun Mão and Moon Hợi at Sửu. Those are not one rule. Editorial Sửu / Tỵ / Dậu is reachable at can=0,chi=0,day=14,month=2,hour=3. Clause 2 Mùi / Mão / Hợi is reachable at can=0,chi=0,day=1,month=2,hour=9. rulesV2 allows Sun Tị or Ngọ and Moon Dậu or Tí, so it covers the editorial pair and also other mixtures, and it does not implement clause 2. Original decision stays CONFLICT. expertVerified remains false.
+- Fetch: PDF sha matched; page 230 glyph crop; page 71 comparison; sonchu.vn Quách Ngọc Bội sections 14-15 HTTP 200
 
 ### Cự Nhật Đồng Cung
 
@@ -134,9 +134,9 @@ Baseline of the prior matrix: `7a4504c580dbafcabdd904b3fec0d08cf5f7a02b`. Seven-
 
 ### Nhật Nguyệt Đồng Lâm
 
-- Recognition: `OVERLAPPING_DIFFERENT`. Full grade: `GRADE_ONLY_ON_108S`.
-- Runtime: Stored span first clause uses Sun at Tý and Moon at Hợi, a pair the current placer did not produce. The second clause, Mệnh at Mùi with both luminaries together at Sửu, is reachable at can=0,chi=0,day=3,month=3,hour=10. rulesV2 and 108s info/222 require both luminaries in the same palace at Sửu or Mùi. A reachable same-palace example is can=0,chi=0,day=6,month=3,hour=4, Mệnh Sửu. That matches the modern page and the runtime, not the stored opposite-palace clause. PDF page not verified.
-- Fetch: 108s info/222 HTTP 200
+- Recognition: `OPPOSITE_PALACE_NOT_SAME_PALACE`. Full grade: `EDITORIAL_OPPOSITE_CONJUNCTION`.
+- Runtime: SHA-256 of https://tuvithuchanh.com/wp-content/uploads/2022/11/Tu-vi-dau-so.pdf matches the registry 941b104504dd552fe967354759da1683dda30a529aa59a8e570b05727f5b4458. Printed page 230, PDF index 229. The text layer encodes the Sun position as U+0054 U+00FD (Tý). The rendered glyph has a detached dot below the y, the same shape as page 71 words whose text layer is U+1EF5 (Tỵ). On page 71, U+00FD in lý has an acute and no dot below, so the font can draw both. This is a text-layer mismatch, not a 1956-edition proof. The stored span was not rewritten. Visual first clause Sửu / Sun Tỵ / Moon Hợi is unreachable. The printed second clause, Mệnh Mùi with both luminaries at Sửu, is reachable at can=0,chi=0,day=3,month=3,hour=10. Section 19.1.5 on printed page 229 and Quách Ngọc Bội section 14 put both luminaries opposite the target: Sửu with the pair at Mùi, or Mùi with the pair at Sửu. The opposite Sửu-target chart is reachable at can=0,chi=0,day=18,month=2,hour=3. rulesV2 requires both stars in the target palace at Sửu or Mùi. That matches a different same-palace chart, can=0,chi=0,day=6,month=3,hour=4, and does not match the opposite-palace clauses. Original decision stays CONFLICT.
+- Fetch: PDF sha matched; page 230 glyph crop; page 229 text 19.1.5; sonchu.vn section 14
 
 ### Hình Tù Giáp Ấn
 
