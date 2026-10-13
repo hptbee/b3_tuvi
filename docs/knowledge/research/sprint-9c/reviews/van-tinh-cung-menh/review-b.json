@@ -1,0 +1,22 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/254",
+  "sourceDigest": "6588d301c07c1f5548b49d7defad55b18e84191206f83ec82245411349c715a7",
+  "claimId": "claim-9c-van-tinh-cung-menh",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "palace_menh",
+    "star_xuong_khuc_aspect",
+    "avoid_sat"
+  ],
+  "exceptions": [],
+  "quotation": "文昌、文曲在命宮三方四正，就能構成此格局的基本條件。貴格還需看命宮三方四正內的星曜性質及無煞忌。",
+  "uncertainties": [],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-ec9dcf25-efad-56bd-92a5-cde049381d21"
+}

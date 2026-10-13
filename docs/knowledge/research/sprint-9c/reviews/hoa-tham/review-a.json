@@ -1,0 +1,24 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/217",
+  "sourceDigest": "14c68f9f7bc470a5c7c1cd2e65f813cd86b7242bbf78a0c6e7986b011b2c4f5a",
+  "claimId": "claim-9c-hoa-tham",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "palace_menh",
+    "star_tham_host",
+    "star_hoa_same"
+  ],
+  "exceptions": [],
+  "quotation": "火貪格，貪狼星獨坐命宮，同宮有火星為正格，其次是對宮。貪狼遇火必英雄，指日邊庭立大功。",
+  "uncertainties": [
+    "UNRESOLVED_IDENTITY: the span names 火貪格 and does not say that title is the catalog name Hỏa Tham."
+  ],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-84130757-508c-5029-a804-ff899a1fc508"
+}

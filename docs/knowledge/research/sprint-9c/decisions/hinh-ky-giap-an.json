@@ -1,0 +1,44 @@
+{
+  "decisionId": "hinh-ky-giap-an-2026-10-13",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-9c-hinh-ky-giap-an",
+  "schoolId": "unassigned-modern-article",
+  "variantType": "rule",
+  "variantId": "rule-not-runtime",
+  "sourceId": "xinglin-108s",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/206",
+  "sourceDigest": "6dcd7372497707ab6ed7bfb40d8a431b999510ce3c649c77aaddf1432bc83cfe",
+  "sourceUrl": "https://www.108s.tw/article/info/206",
+  "retrievedAt": "2026-10-13",
+  "pdfTextChecked": false,
+  "binding": "webpage_excerpt",
+  "identity": "UNRESOLVED_IDENTITY",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "CONFLICT",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/hinh-ky-giap-an/review-a.json",
+      "agentId": "bc-714aaa66-48de-53e2-8318-7cac849bd3a0",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "PARTIAL",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/hinh-ky-giap-an/review-b.json",
+      "agentId": "bc-25aa43f1-cb7b-573f-979a-e2c24c7943bf",
+      "available": true
+    }
+  ],
+  "decision": "CONFLICT",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "notes": "Comparator returned CONFLICT: reviews disagree. Catalog identity stays UNRESOLVED_IDENTITY. The runtime rule was not changed."
+}

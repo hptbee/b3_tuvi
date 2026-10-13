@@ -1,0 +1,53 @@
+{
+  "decisionId": "hung-tu-trieu-vien-2026-10-13",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-9c-hung-tu-trieu-vien",
+  "schoolId": "unassigned-modern-article",
+  "variantType": "rule",
+  "variantId": "rule-not-runtime",
+  "sourceId": "xinglin-108s",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/213",
+  "sourceDigest": "d3324ec07065e96f33f9650ba2dcdfa98b45d941058a6b07cb2c675b8851934b",
+  "sourceUrl": "https://www.108s.tw/article/info/213",
+  "retrievedAt": "2026-10-13",
+  "pdfTextChecked": false,
+  "binding": "webpage_excerpt",
+  "identity": "NAME_MISMATCH",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "PARTIAL",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/hung-tu-trieu-vien/review-a.json",
+      "agentId": "bc-2016d013-b1b8-562d-820b-c1ea4b291b5f",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "PARTIAL",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/hung-tu-trieu-vien/review-b.json",
+      "agentId": "bc-3b838ba6-3d7e-5d3f-bdea-8e0d8401d479",
+      "available": true
+    }
+  ],
+  "decision": "AI_ACCEPTED",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "notes": "Comparator agreed on PARTIAL. Catalog identity stays NAME_MISMATCH. The runtime rule was not changed.",
+  "crossReviewOutcome": "AI_CROSS_REVIEWED",
+  "formulaComparison": "PARTIAL",
+  "conditions": [
+    "branch_dan_than",
+    "palace_menh",
+    "star_liem_host",
+    "star_tham_opposite"
+  ],
+  "exceptions": []
+}

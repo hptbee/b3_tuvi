@@ -1,0 +1,23 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/220",
+  "sourceDigest": "97ac7f01ccbc5f08dda47f223e6c2d33d451a4805267a0fa93a229dab8457be5",
+  "claimId": "claim-9c-phong-luu-thai-truong",
+  "variantType": "rule",
+  "formulaComparison": "MATCH",
+  "verdict": "MATCH",
+  "conditions": [
+    "palace_menh",
+    "branch_dan",
+    "star_tham_host",
+    "star_da_same"
+  ],
+  "exceptions": [],
+  "quotation": "貪狼星獨坐命宮在寅位，並有陀羅同宮，就能構成此格局的基本條件。刑遇貪狼，號曰風流彩杖。",
+  "uncertainties": [],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-562a2e5d-1672-53e5-86ab-ad35ba027254"
+}

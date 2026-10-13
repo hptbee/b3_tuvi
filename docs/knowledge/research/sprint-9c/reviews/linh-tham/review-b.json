@@ -1,0 +1,24 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/217",
+  "sourceDigest": "d19d2e99c26babe651c9ecaef15ff88aed58c91217e6a365053578c2607fdd93",
+  "claimId": "claim-9c-linh-tham",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "palace_menh",
+    "star_tham_host",
+    "star_linh_same"
+  ],
+  "exceptions": [],
+  "quotation": "鈴貪格，貪狼星獨坐命宮，同宮有鈴星為正格，其次是對宮。貪鈴並守，將相之名。",
+  "uncertainties": [
+    "UNRESOLVED_IDENTITY: the span does not establish that 鈴貪格 is identical to the Vietnamese catalog name Linh Tham."
+  ],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-a2a86cdc-f58e-5d98-89b7-2caa95779c94"
+}

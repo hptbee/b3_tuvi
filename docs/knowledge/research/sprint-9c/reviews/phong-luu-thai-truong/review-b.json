@@ -1,0 +1,23 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/220",
+  "sourceDigest": "97ac7f01ccbc5f08dda47f223e6c2d33d451a4805267a0fa93a229dab8457be5",
+  "claimId": "claim-9c-phong-luu-thai-truong",
+  "variantType": "rule",
+  "formulaComparison": "MATCH",
+  "verdict": "MATCH",
+  "conditions": [
+    "palace_menh",
+    "branch_dan",
+    "star_tham_host",
+    "star_da_same"
+  ],
+  "exceptions": [],
+  "quotation": "貪狼星獨坐命宮在寅位，並有陀羅同宮，就能構成此格局的基本條件。",
+  "uncertainties": [],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-693fac22-0e3a-51a9-bd7c-2852203a2eee"
+}

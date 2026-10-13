@@ -1,0 +1,24 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/267",
+  "sourceDigest": "edf1dede6b79dc0baf1a0da2ef79ce00ad453c8852094598f0918b451f47b503",
+  "claimId": "claim-9c-menh-ly-phung-khong",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "palace_menh",
+    "star_khong_kiep_host",
+    "branch_ty_hoi"
+  ],
+  "exceptions": [],
+  "quotation": "坐命有地劫、地空，就能構成此格局的基本條件。最符合此格局是命宮空宮在巳位或亥位，地劫、地空同宮坐命。",
+  "uncertainties": [
+    "UNRESOLVED_IDENTITY"
+  ],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-8f35acd6-18a9-5615-8f98-7e9fca51b652"
+}

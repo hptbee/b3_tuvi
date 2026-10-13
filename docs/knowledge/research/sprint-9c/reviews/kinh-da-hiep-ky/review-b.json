@@ -1,0 +1,23 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/248",
+  "sourceDigest": "ded963e1cb4c27ff4a5f3aa68793130fd8119f08926fe41413389b7d5e8b6148",
+  "claimId": "claim-9c-kinh-da-hiep-ky",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "palace_menh",
+    "star_loc_ton_host",
+    "star_kinh_da_flank",
+    "star_hoa_ky"
+  ],
+  "exceptions": [],
+  "quotation": "命宮有祿存時，必定被擎羊、陀羅夾，此時命宮有化忌星或是命宮空宮，對宮有化忌星沖破，就能構成此格局的基本條件。",
+  "uncertainties": [],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-a78dccad-fd1d-50fc-ad21-42879c05d483"
+}

@@ -106,5 +106,152 @@
     "anchor": "命宮主星化科，三方四正內有星曜化權來照會",
     "locator": "article/info/259",
     "span": "命宮主星化科，三方四正內有星曜化權來照會，就能構成此格局的基本條件。貴格還需三方四正無煞忌，並且有吉星坐命或照會命宮。"
+  },
+  {
+    "slug": "hoa-tham",
+    "combinationName": "Hỏa Tham",
+    "sourceDigest": "14c68f9f7bc470a5c7c1cd2e65f813cd86b7242bbf78a0c6e7986b011b2c4f5a",
+    "allowed": [
+      "palace_menh",
+      "star_tham_host",
+      "star_hoa_same"
+    ],
+    "anchor": "火貪格，貪狼星獨坐命宮",
+    "locator": "article/info/217"
+  },
+  {
+    "slug": "linh-tham",
+    "combinationName": "Linh Tham",
+    "sourceDigest": "d19d2e99c26babe651c9ecaef15ff88aed58c91217e6a365053578c2607fdd93",
+    "allowed": [
+      "palace_menh",
+      "star_tham_host",
+      "star_linh_same"
+    ],
+    "anchor": "鈴貪格，貪狼星獨坐命宮",
+    "locator": "article/info/217"
+  },
+  {
+    "slug": "song-loc-trieu-vien",
+    "combinationName": "Song Lộc Triều Viên",
+    "sourceDigest": "04983c9938258609dbc9d0e1d046114f78e45e8a2b501c4ea01781554300767a",
+    "allowed": [
+      "palace_menh",
+      "star_loc_not_host",
+      "star_loc_tam_hop"
+    ],
+    "anchor": "命宮無祿星坐守",
+    "locator": "pattern/34"
+  },
+  {
+    "slug": "hung-tu-trieu-vien",
+    "combinationName": "Hùng Tú Triều Viên",
+    "sourceDigest": "d3324ec07065e96f33f9650ba2dcdfa98b45d941058a6b07cb2c675b8851934b",
+    "allowed": [
+      "palace_menh",
+      "branch_dan_than",
+      "star_liem_host",
+      "star_tham_opposite"
+    ],
+    "anchor": "廉貞星坐命在寅位或申位",
+    "locator": "article/info/213"
+  },
+  {
+    "slug": "linh-xuong-da-vu",
+    "combinationName": "Linh Xương Đà Vũ",
+    "sourceDigest": "2b219bed52a438aae58bcdbf5b63c1332328e760d326aad5a89ee53e116ee9eb",
+    "allowed": [
+      "palace_menh",
+      "branch_thin_tuat",
+      "star_vu_host",
+      "star_linh_da_xuong"
+    ],
+    "anchor": "武曲星獨坐命宮在辰或戌位",
+    "locator": "article/info/205"
+  },
+  {
+    "slug": "hinh-ky-giap-an",
+    "combinationName": "Hình Kỵ Giáp Ấn",
+    "sourceDigest": "6dcd7372497707ab6ed7bfb40d8a431b999510ce3c649c77aaddf1432bc83cfe",
+    "allowed": [
+      "school_dependent",
+      "star_tuong_hoa_ky"
+    ],
+    "anchor": "對於刑忌夾印格，各門派的定義皆不盡相同",
+    "locator": "article/info/206"
+  },
+  {
+    "slug": "menh-ly-phung-khong",
+    "combinationName": "Mệnh Lý Phùng Không",
+    "sourceDigest": "edf1dede6b79dc0baf1a0da2ef79ce00ad453c8852094598f0918b451f47b503",
+    "allowed": [
+      "palace_menh",
+      "star_khong_kiep_host",
+      "branch_ty_hoi"
+    ],
+    "anchor": "坐命有地劫、地空",
+    "locator": "article/info/267"
+  },
+  {
+    "slug": "kinh-da-hiep-ky",
+    "combinationName": "Kình Đà Hiệp Kỵ",
+    "sourceDigest": "ded963e1cb4c27ff4a5f3aa68793130fd8119f08926fe41413389b7d5e8b6148",
+    "allowed": [
+      "palace_menh",
+      "star_loc_ton_host",
+      "star_kinh_da_flank",
+      "star_hoa_ky"
+    ],
+    "anchor": "命宮有祿存時，必定被擎羊、陀羅夾",
+    "locator": "article/info/248"
+  },
+  {
+    "slug": "phong-luu-thai-truong",
+    "combinationName": "Phong Lưu Thái Trượng",
+    "sourceDigest": "97ac7f01ccbc5f08dda47f223e6c2d33d451a4805267a0fa93a229dab8457be5",
+    "allowed": [
+      "palace_menh",
+      "branch_dan",
+      "star_tham_host",
+      "star_da_same"
+    ],
+    "anchor": "貪狼星獨坐命宮在寅位",
+    "locator": "article/info/220"
+  },
+  {
+    "slug": "thien-at-cung-menh",
+    "combinationName": "Thiên Ất Củng Mệnh",
+    "sourceDigest": "1b4b79c9790b7f498db1e4c262eabcca52b0320a7d428588ef7742ff1e74e975",
+    "allowed": [
+      "palace_menh",
+      "star_khoi_viet_aspect"
+    ],
+    "anchor": "天魁星、天鉞星，在命宮的三方四正照會命宮",
+    "locator": "article/info/262"
+  },
+  {
+    "slug": "van-tinh-cung-menh",
+    "combinationName": "Văn Tinh Củng Mệnh",
+    "sourceDigest": "6588d301c07c1f5548b49d7defad55b18e84191206f83ec82245411349c715a7",
+    "allowed": [
+      "palace_menh",
+      "star_xuong_khuc_aspect",
+      "avoid_sat"
+    ],
+    "anchor": "文昌、文曲在命宮三方四正",
+    "locator": "article/info/254"
+  },
+  {
+    "slug": "tho-tinh-nhap-mieu",
+    "combinationName": "Thọ Tinh Nhập Miếu",
+    "sourceDigest": "a739dd938d03c77cbce1ce0805068b95ebccb8300bb364bd6e3fe86c4f99a5c7",
+    "allowed": [
+      "palace_menh",
+      "branch_ty_ngo",
+      "star_luong_host",
+      "avoid_sat"
+    ],
+    "anchor": "天梁星在子位或午位坐命",
+    "locator": "article/info/236"
   }
 ]

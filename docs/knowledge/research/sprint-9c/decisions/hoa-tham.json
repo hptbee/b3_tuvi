@@ -1,0 +1,44 @@
+{
+  "decisionId": "hoa-tham-2026-10-13",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-9c-hoa-tham",
+  "schoolId": "unassigned-modern-article",
+  "variantType": "rule",
+  "variantId": "rule-not-runtime",
+  "sourceId": "xinglin-108s",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/217",
+  "sourceDigest": "14c68f9f7bc470a5c7c1cd2e65f813cd86b7242bbf78a0c6e7986b011b2c4f5a",
+  "sourceUrl": "https://www.108s.tw/article/info/217",
+  "retrievedAt": "2026-10-13",
+  "pdfTextChecked": false,
+  "binding": "webpage_excerpt",
+  "identity": "UNRESOLVED_IDENTITY",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "PARTIAL",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/hoa-tham/review-a.json",
+      "agentId": "bc-84130757-508c-5029-a804-ff899a1fc508",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "PARTIAL",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/hoa-tham/review-b.json",
+      "agentId": "bc-e8ed5e91-8d35-5cf4-9a5b-95f0f2ca6eda",
+      "available": true
+    }
+  ],
+  "decision": "UNRESOLVED",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "notes": "Comparator returned UNRESOLVED: quotation is not in the stored span. Catalog identity stays UNRESOLVED_IDENTITY. The runtime rule was not changed."
+}

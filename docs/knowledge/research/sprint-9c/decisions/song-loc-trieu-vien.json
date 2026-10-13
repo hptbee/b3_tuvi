@@ -1,0 +1,52 @@
+{
+  "decisionId": "song-loc-trieu-vien-2026-10-13",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-9c-song-loc-trieu-vien",
+  "schoolId": "unassigned-modern-article",
+  "variantType": "rule",
+  "variantId": "rule-not-runtime",
+  "sourceId": "com9-ziwei",
+  "editionId": "com9-2026-10-13",
+  "locator": "pattern/34",
+  "sourceDigest": "04983c9938258609dbc9d0e1d046114f78e45e8a2b501c4ea01781554300767a",
+  "sourceUrl": "https://ziweidoushu.com9.tw/pattern/34",
+  "retrievedAt": "2026-10-13",
+  "pdfTextChecked": false,
+  "binding": "webpage_excerpt",
+  "identity": "UNRESOLVED_IDENTITY",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "PARTIAL",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/song-loc-trieu-vien/review-a.json",
+      "agentId": "bc-3f1b1f00-4fe9-5651-a978-9a69007e1c82",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "PARTIAL",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/song-loc-trieu-vien/review-b.json",
+      "agentId": "bc-595f4c54-e3b1-5bbe-8a84-859cd324c124",
+      "available": true
+    }
+  ],
+  "decision": "AI_ACCEPTED",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "notes": "Comparator agreed on PARTIAL. Catalog identity stays UNRESOLVED_IDENTITY. The runtime rule was not changed.",
+  "crossReviewOutcome": "AI_CROSS_REVIEWED",
+  "formulaComparison": "PARTIAL",
+  "conditions": [
+    "palace_menh",
+    "star_loc_not_host",
+    "star_loc_tam_hop"
+  ],
+  "exceptions": []
+}

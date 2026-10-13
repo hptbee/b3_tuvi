@@ -1,0 +1,44 @@
+{
+  "decisionId": "linh-tham-2026-10-13",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-9c-linh-tham",
+  "schoolId": "unassigned-modern-article",
+  "variantType": "rule",
+  "variantId": "rule-not-runtime",
+  "sourceId": "xinglin-108s",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/217",
+  "sourceDigest": "d19d2e99c26babe651c9ecaef15ff88aed58c91217e6a365053578c2607fdd93",
+  "sourceUrl": "https://www.108s.tw/article/info/217",
+  "retrievedAt": "2026-10-13",
+  "pdfTextChecked": false,
+  "binding": "webpage_excerpt",
+  "identity": "UNRESOLVED_IDENTITY",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "PARTIAL",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/linh-tham/review-a.json",
+      "agentId": "bc-8fbb5196-8e01-5d05-bdc6-6ebb9ccf0e14",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "PARTIAL",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/linh-tham/review-b.json",
+      "agentId": "bc-a2a86cdc-f58e-5d98-89b7-2caa95779c94",
+      "available": true
+    }
+  ],
+  "decision": "UNRESOLVED",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "notes": "Comparator returned UNRESOLVED: quotation is not in the stored span. Catalog identity stays UNRESOLVED_IDENTITY. The runtime rule was not changed."
+}

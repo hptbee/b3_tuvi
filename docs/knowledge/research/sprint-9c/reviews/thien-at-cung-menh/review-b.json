@@ -1,0 +1,23 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/262",
+  "sourceDigest": "1b4b79c9790b7f498db1e4c262eabcca52b0320a7d428588ef7742ff1e74e975",
+  "claimId": "claim-9c-thien-at-cung-menh",
+  "variantType": "rule",
+  "formulaComparison": "MATCH",
+  "verdict": "MATCH",
+  "conditions": [
+    "palace_menh",
+    "star_khoi_viet_aspect"
+  ],
+  "exceptions": [],
+  "quotation": "天魁星、天鉞星，在命宮的三方四正照會命宮，就能構成此格局的基本條件。",
+  "uncertainties": [
+    "UNRESOLVED_IDENTITY"
+  ],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-e77e53b0-65e8-524e-9f57-f21c9f36b66c"
+}

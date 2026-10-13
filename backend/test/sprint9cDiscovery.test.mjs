@@ -36,7 +36,8 @@ for (const item of manifest) {
     const decision = JSON.parse(readFileSync(`${root}research/sprint-9c/decisions/${item.slug}.json`, 'utf8'));
     assert.strictEqual(decision.expertVerified, false, item.slug);
     assert.strictEqual(decision.runtimeRuleChangeApplied, false, item.slug);
-    assert.strictEqual(decision.identity, 'UNRESOLVED_IDENTITY', item.slug);
+    const expectedIdentity = item.slug === 'hung-tu-trieu-vien' ? 'NAME_MISMATCH' : 'UNRESOLVED_IDENTITY';
+    assert.strictEqual(decision.identity, expectedIdentity, item.slug);
     assert.strictEqual(decision.pdfTextChecked, false, item.slug);
     const required = sprint9cObligationIds(span, item.allowed);
     assert.ok(required.length > 0, item.slug);
@@ -68,8 +69,8 @@ for (const item of manifest) {
 const report = readFileSync(`${root}SPRINT_9C_SOURCE_DISCOVERY_REPORT.md`, 'utf8');
 assert.match(report, /Candidates examined: 39\/39/);
 assert.match(report, /URL validity checked: 39\/39/);
-assert.match(report, /Dual-AI reviewed: 8\/39/);
-assert.match(report, /REVIEW_NOT_EXECUTED`: 31/);
+assert.match(report, /Dual-AI reviewed: 20\/39/);
+assert.match(report, /REVIEW_NOT_EXECUTED`: 19/);
 
 assert.deepStrictEqual(sprint9cObligationIds(null, null), []);
 

@@ -1,0 +1,53 @@
+{
+  "decisionId": "kinh-da-hiep-ky-2026-10-13",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-9c-kinh-da-hiep-ky",
+  "schoolId": "unassigned-modern-article",
+  "variantType": "rule",
+  "variantId": "rule-not-runtime",
+  "sourceId": "xinglin-108s",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/248",
+  "sourceDigest": "ded963e1cb4c27ff4a5f3aa68793130fd8119f08926fe41413389b7d5e8b6148",
+  "sourceUrl": "https://www.108s.tw/article/info/248",
+  "retrievedAt": "2026-10-13",
+  "pdfTextChecked": false,
+  "binding": "webpage_excerpt",
+  "identity": "UNRESOLVED_IDENTITY",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "PARTIAL",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/kinh-da-hiep-ky/review-a.json",
+      "agentId": "bc-dadb851f-e1a1-5961-ba8f-0112bebe7150",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "PARTIAL",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/kinh-da-hiep-ky/review-b.json",
+      "agentId": "bc-a78dccad-fd1d-50fc-ad21-42879c05d483",
+      "available": true
+    }
+  ],
+  "decision": "AI_ACCEPTED",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "notes": "Comparator agreed on PARTIAL. Catalog identity stays UNRESOLVED_IDENTITY. The runtime rule was not changed.",
+  "crossReviewOutcome": "AI_CROSS_REVIEWED",
+  "formulaComparison": "PARTIAL",
+  "conditions": [
+    "palace_menh",
+    "star_hoa_ky",
+    "star_kinh_da_flank",
+    "star_loc_ton_host"
+  ],
+  "exceptions": []
+}

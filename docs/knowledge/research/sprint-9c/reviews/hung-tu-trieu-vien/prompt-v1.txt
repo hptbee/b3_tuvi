@@ -1,0 +1,35 @@
+promptVersion: dual-ai-source-review-v1-prompt-1
+policyVersion: dual-ai-source-review-v1
+editionId: xinglin-108s-2026-10-13
+sourceId: xinglin-108s
+schoolScope: unassigned-modern-article
+locator: article/info/213
+sourceDigest: d3324ec07065e96f33f9650ba2dcdfa98b45d941058a6b07cb2c675b8851934b
+retrievedAt: 2026-10-13
+sourceUrl: https://www.108s.tw/article/info/213
+
+Read only the span below. It is a short excerpt from a retrieved webpage, not a checked printed book. Do not add sentences that are not in the span. Do not look at another model's answer. Return one JSON object and no other text.
+
+The catalog name is Hùng Tú Triều Viên. Identity status recorded before this review: NAME_MISMATCH. Do not treat a Chinese title as proven identical to the Vietnamese catalog name unless the span itself says so.
+
+Compare this runtime rule to the span.
+Runtime rule JSON: {"id": "hung_tu_trieu_vien", "combination": "Hùng Tú Triều Viên", "target": "menh", "branches": ["Dần", "Thân"], "samePalace": ["Liêm Trinh"]}
+
+Select a condition id only when the span states that requirement.
+Allowed condition ids:
+palace_menh
+branch_dan_than
+star_liem_host
+star_tham_opposite
+
+verdict is MATCH only when the runtime rule states every selected condition. PARTIAL when it states some and omits others. CONFLICT when it contradicts the span. NOT_IMPLEMENTED when the runtime rule is null.
+
+quotation must be an exact contiguous substring of the span, at least 40 characters, and must include this anchor: 廉貞星坐命在寅位或申位
+
+JSON keys:
+schoolId, editionId, locator, sourceDigest, claimId, variantType, formulaComparison, verdict, conditions, exceptions, quotation, uncertainties
+
+Use schoolId unassigned-modern-article, editionId xinglin-108s-2026-10-13, locator "article/info/213", sourceDigest d3324ec07065e96f33f9650ba2dcdfa98b45d941058a6b07cb2c675b8851934b, claimId claim-9c-hung-tu-trieu-vien, variantType rule. formulaComparison must equal verdict. exceptions must be [].
+
+SPAN:
+廉貞星坐命在寅位或申位，對宮貪狼星，就能構成此格局的基本條件。貴格為有祿存或化祿同宮，三方四正無煞忌沖破。
