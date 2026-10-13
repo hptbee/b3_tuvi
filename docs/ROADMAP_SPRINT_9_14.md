@@ -137,6 +137,8 @@ Không nằm trong phạm vi khi chưa có quyết định sản phẩm mới: t
 
 **Sprint 9C (chưa đóng Sprint 9):** 39/39 ứng viên có dual-AI riêng dưới `docs/knowledge/research/sprint-9c/`. Số lần chạy model không phải danh tính đã kiểm. Ba `NAME_MISMATCH`: Hùng Tú Triều Viên, Bán Không Chiết Xỉ, Lưỡng Trùng Thiên Mã. Các quyết định 9C còn lại là `UNRESOLVED_IDENTITY`. 24 quyết định Tân Biên không bị ghi đè. Ma trận 21 xung đột nằm ở `docs/knowledge/SPRINT_9_ADJUDICATION_MATRIX.md` và không ghi đè quyết định cũ. Báo cáo: `docs/knowledge/SPRINT_9C_SOURCE_DISCOVERY_REPORT.md`. Trạng thái: `RESEARCH_PARTIAL_EVIDENCE_GAPS`.
 
+**Đóng tích hợp Sprint 9 (sau PR #25, `434345c`):** matcher và `interpretChart` cùng đọc Formula V1. `rulesV2.json` giữ nguyên như snapshot nghiên cứu. Lát cắt nội bộ Tử Phủ Đồng Cung trả công thức đã khớp, grade `not_certified`, và `interpretationEligibility.eligible: false`. `AI_ACCEPTED` / `MATCH` không mở lời luận. `expertVerified` vẫn false. Báo cáo: `docs/knowledge/SPRINT_9_CLOSURE_REPORT.md`. Sprint 10 chỉ được mở như công việc điều kiện có chứng cứ, không phải luận giải công khai.
+
 **Mục tiêu:** Xây quy trình **hai model kiểm chứng chéo** giúp chủ dự án không phải là chuyên gia Tử Vi vẫn nghiên cứu được sách, phân loại trường phái, đối chiếu công thức và tạo claim có căn cứ; sau đó chứng minh **một vertical slice** từ đoạn sách đến phân tích có điều kiện trong internal/research mode.
 
 **Kết quả chấp nhận theo policy là `AI_CROSS_REVIEWED`, không phải `EXPERT_VERIFIED` hoặc sự thật khoa học.** Hai model có thể cùng sai; chỉ chấp nhận những gì người khác có thể truy ngược và tự kiểm lại trên tài liệu.

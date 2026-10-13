@@ -1,10 +1,9 @@
-import rulesV2 from '../data/rulesV2.json' with { type: 'json' };
 import combinations from '../data/combinations.json' with { type: 'json' };
 import pilot from '../../../docs/knowledge/pilotClaims.json' with { type: 'json' };
 import sourcesDoc from '../../../docs/knowledge/sources.json' with { type: 'json' };
 import matrixDoc from '../../../docs/knowledge/combination-source-matrix.json' with { type: 'json' };
 import contract from '../../../docs/knowledge/provenance-contract.json' with { type: 'json' };
-import { evaluateRule } from '../engine/ruleEngine.js';
+import { evaluateNormalizedFormulas } from '../engine/combinationMatch.js';
 import { buildEvidenceV3 } from '../engine/evidenceV3.js';
 import { branchIndexRelations } from '../engine/palaceRelation.js';
 import { validateKnowledgeBundle } from '../knowledge/validateKnowledge.js';
@@ -137,6 +136,7 @@ function statementFor(chart, palace, spec, hits, claims) {
             giap: relations.giap,
             tamPhuongTuChinh: relations.tamPhuongTuChinh
         } : null,
+        formulaEvaluations: palaceHits.map((hit) => hit.formula).filter(Boolean),
         claimIds: applied.map((claim) => claim.claimId),
         claimApplicability: eligibility,
         ruleEvidence: palaceHits.map((hit) => hit.evidence),
@@ -176,18 +176,24 @@ export function interpretChart(chart, options = {}) {
     if (!chart || chart.ok === false || !Array.isArray(chart.palaces) || chart.palaces.length !== 12) {
         return { ok: false, error: 'malformed_chart', statements: [], usage: 'structured_analysis' };
     }
-    const rules = options.rules || rulesV2;
     const claims = catalogClaims(options.claims);
-    const hits = [];
-    for (const rule of rules) {
-        const hit = evaluateRule(chart, rule);
-        if (!hit?.evidence) continue;
-        hits.push({
-            ruleId: rule.id,
-            palaceId: String(hit.evidence.palaceId),
-            evidence: buildEvidenceV3(hit.evidence, options.evidenceContext || {})
-        });
-    }
+    const hits = evaluateNormalizedFormulas(chart, combinations, { profile: options.sourceProfile }).map((match) => ({
+        ruleId: match.evidence.ruleId,
+        palaceId: String(match.evidence.palaceId),
+        formula: {
+            catalogId: match.catalogId,
+            name: match.name,
+            sourceProfile: match.sourceProfile,
+            formulaVersion: match.formulaVersion,
+            formationStatus: match.formationStatus,
+            gradeStatus: match.gradeStatus,
+            identityStatus: match.identityStatus,
+            engineeringState: match.engineeringState,
+            publicInterpretationAllowed: false,
+            expertVerified: false
+        },
+        evidence: buildEvidenceV3(match.evidence, options.evidenceContext || {})
+    }));
     hits.sort((left, right) => left.ruleId.localeCompare(right.ruleId));
     const statements = PALACE_FUNCTIONS.map((functionId) => statementFor(chart, chart.palaces.find((palace) => palace.functionId === functionId), {
         statementId: `palace:${functionId}`,

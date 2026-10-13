@@ -238,41 +238,8 @@ export function matchCombinations(input = {}, catalog = [], options = {}) {
         const status = combo.verification_status || 'provisional';
         const formula = useV2 ? formulaByName(combo.name) : null;
         if (formula) {
-            const resolved = resolveRuntime(formula, options.profile);
-            if (!resolved.evaluable) continue;
-            if (!options.includeNonPublic && !resolved.publicInterpretationAllowed) continue;
-            const hit = evaluateRule(chart, resolved.rule);
-            if (!hit) continue;
-            const gradeStatus = gradeStatusFor(chart, resolved);
-            const verificationStatus = status === 'disabled' && resolved.publicInterpretationAllowed
-                ? 'provisional'
-                : status;
-            matched.push(toMatchDto(
-                combo,
-                placementFromRows(hit.rows),
-                {
-                    ...hit.evidence,
-                    sourceProfile: resolved.profile,
-                    formulaVersion: FORMULA_VERSION,
-                    sourceRef: resolved.sourceRef,
-                    identityStatus: resolved.identityStatus,
-                    engineeringState: resolved.engineeringState,
-                    displayIdentity: resolved.displayIdentity,
-                    ...(resolved.notASynonymOf ? { notASynonymOf: resolved.notASynonymOf } : {})
-                },
-                {
-                    catalogId: resolved.catalogId,
-                    sourceProfile: resolved.profile,
-                    formulaVersion: FORMULA_VERSION,
-                    gradeStatus,
-                    sourceRef: resolved.sourceRef,
-                    identityStatus: resolved.identityStatus,
-                    publicInterpretationAllowed: resolved.publicInterpretationAllowed,
-                    engineeringState: resolved.engineeringState,
-                    verificationStatus,
-                    expertVerified: false
-                }
-            ));
+            const recognized = recognizeFormula(chart, combo, formula, options);
+            if (recognized) matched.push(recognized);
             continue;
         }
         if (status === 'disabled') continue;
@@ -329,6 +296,57 @@ export function matchCombinations(input = {}, catalog = [], options = {}) {
 
 export function matchLegacyCombinations(input, catalog) {
     return matchCombinations(input, catalog, { useV2: false });
+}
+
+/** Formula V1 on a server-normalized chart. Does not read rulesV2 and does not move stars. */
+export function evaluateNormalizedFormulas(chart, catalog = [], options = {}) {
+    if (!chart?.ok || !Array.isArray(chart.palaces) || chart.palaces.length !== 12) return [];
+    if (!Array.isArray(catalog) || catalog.length === 0) return [];
+    const matched = [];
+    for (const combo of catalog) {
+        const formula = formulaByName(combo.name);
+        if (!formula) continue;
+        const recognized = recognizeFormula(chart, combo, formula, options);
+        if (recognized) matched.push(recognized);
+    }
+    return matched;
+}
+
+function recognizeFormula(chart, combo, formula, options) {
+    const resolved = resolveRuntime(formula, options.profile);
+    if (!resolved.evaluable) return null;
+    if (!options.includeNonPublic && !resolved.publicInterpretationAllowed) return null;
+    const hit = evaluateRule(chart, resolved.rule);
+    if (!hit) return null;
+    const gradeStatus = gradeStatusFor(chart, resolved);
+    const status = combo.verification_status || 'provisional';
+    const verificationStatus = status === 'disabled' && resolved.publicInterpretationAllowed ? 'provisional' : status;
+    return toMatchDto(
+        combo,
+        placementFromRows(hit.rows),
+        {
+            ...hit.evidence,
+            sourceProfile: resolved.profile,
+            formulaVersion: FORMULA_VERSION,
+            sourceRef: resolved.sourceRef,
+            identityStatus: resolved.identityStatus,
+            engineeringState: resolved.engineeringState,
+            displayIdentity: resolved.displayIdentity,
+            ...(resolved.notASynonymOf ? { notASynonymOf: resolved.notASynonymOf } : {})
+        },
+        {
+            catalogId: resolved.catalogId,
+            sourceProfile: resolved.profile,
+            formulaVersion: FORMULA_VERSION,
+            gradeStatus,
+            sourceRef: resolved.sourceRef,
+            identityStatus: resolved.identityStatus,
+            publicInterpretationAllowed: resolved.publicInterpretationAllowed,
+            engineeringState: resolved.engineeringState,
+            verificationStatus,
+            expertVerified: false
+        }
+    );
 }
 
 function gradeStatusFor(chart, resolved) {

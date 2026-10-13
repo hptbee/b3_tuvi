@@ -21,7 +21,9 @@ function chartFromBirth(value) {
         gender,
         lunar.isLeapMonth
     );
-    return normalizeChart({ tuviInfo, lunarInfo: lunar, input: {} });
+    const chart = normalizeChart({ tuviInfo, lunarInfo: lunar, input: {} });
+    if (chart?.ok) chart.chartSource = 'server';
+    return chart;
 }
 
 function responseFor(chart) {
