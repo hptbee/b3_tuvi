@@ -40,24 +40,7 @@ Re-attach after upgrading B3 (from your B3 clone):
 
 ## Codex
 
-- **Always-on map:** root `AGENTS.md` (prompt routing + constraints).
-- **Skills:** repo `.agents/skills` → `{B3_HOME}\.cursor\skills` (created by `install-product -HostName codex`; gitignored). After a fresh clone, run the codex install line above.
-- **No native slash commands.** Name the intent, then open the matching file:
-
-  | Say / intent | Open |
-  | --- | --- |
-  | autodev / full lifecycle | `.cursor/commands/autodev.md` |
-  | plan | `.cursor/commands/plan.md` |
-  | implement | `.cursor/commands/implement.md` |
-  | debug | `.cursor/commands/debug.md` |
-  | review | `.cursor/commands/review.md` |
-  | verify | `.cursor/commands/verify.md` |
-  | review loop | `.cursor/commands/review-loop.md` |
-
-- Optional **user-level** skills (all Codex projects on this machine):
-
-  `%USERPROFILE%\.agents\skills\b3-ai-engineering` → `{B3_HOME}\.cursor\skills`
-
-  Repo `.agents/skills` is enough when you work inside this product checkout.
-
-- If this folder is also opened in **Cursor**, both hosts may see the same skill tree via `.agents/skills`; avoid also copying skills under `.cursor/skills`.
+- **Always-on map:** root `AGENTS.md`.
+- **Skills:** gitignored `.agents/skills/<name>/SKILL.md` (one folder per skill, including **`$autodev`**). Recreate after a fresh clone with the codex install line above.
+- **No `/autodev` slash command.** In Codex type `$autodev` or `/skills` then pick `autodev`. Same for `$plan`, `$implement`, `$debug`, `$review`, `$verify`, `$review-loop`.
+- If this folder is also opened in **Cursor**, both hosts may see `.agents/skills`; avoid also copying skills under `.cursor/skills`.
