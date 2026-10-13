@@ -6,6 +6,7 @@ import matrixDoc from '../../docs/knowledge/combination-source-matrix.json' with
 import catalog from '../src/data/combinations.json' with { type: 'json' };
 import rules from '../src/data/rulesV2.json' with { type: 'json' };
 import pilot from '../../docs/knowledge/pilotClaims.json' with { type: 'json' };
+import passagesDoc from '../../docs/knowledge/combination-passages.json' with { type: 'json' };
 
 const masterPlan = readFileSync(
     fileURLToPath(new URL('../../docs/AUTODEV_MASTER_PLAN.md', import.meta.url)),
@@ -57,13 +58,17 @@ matrixDoc.rows.forEach((row, index) => {
     assert.strictEqual(row.verificationStatus, catalog[index].verification_status);
     assert.strictEqual(row.formulaCheckedAgainstSource, false);
     assert.strictEqual(row.interpretationSourced, false);
-    if (PILOT.has(row.name)) {
+    const passage = passagesDoc.entries.find((entry) => entry.combinationName === row.name);
+    assert.ok(passage, row.name);
+    if (passage.located === true) {
         assert.deepStrictEqual(row.sources, ['thai-thu-lang-tan-bien']);
         assert.strictEqual(row.sourceVerificationStatus, 'passage_located_owner_accepted_digital');
-        assert.ok(FORMULA.has(row.formulaComparisonStatus));
     } else {
         assert.deepStrictEqual(row.sources, []);
-        assert.strictEqual(row.sourceVerificationStatus, 'none');
+        assert.strictEqual(row.sourceVerificationStatus, 'passage_not_located_in_edition');
+    }
+    if (PILOT.has(row.name)) {
+        assert.ok(FORMULA.has(row.formulaComparisonStatus));
     }
     const rule = ruleBy.get(row.name);
     assert.strictEqual(row.executableV2, Boolean(rule));
