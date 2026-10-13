@@ -2,7 +2,7 @@ import { contentStore } from './content.js';
 
 export const PROFILE = Object.freeze({
     id: 'pythagorean-vn-v1',
-    version: '1.1.0',
+    version: '1.2.0',
     status: 'experimental',
     sourceStatus: 'product_specification_only',
     locale: 'vi-VN',
@@ -12,10 +12,11 @@ export const PROFILE = Object.freeze({
     yPolicy: 'consonant',
     vowels: 'AEIOU',
     cyclePolicy: 'calendar-year-v1',
-    birthGridPolicy: 'ddmmyyyy-zero-excluded-v1'
+    birthGridPolicy: 'ddmmyyyy-zero-excluded-v1',
+    pinnaclePolicy: 'component-reduce-root-age-v1'
 });
 
 export function publicProfile() {
     const { vowels, ...metadata } = PROFILE;
-    return { ...metadata, capabilities: { core: 'available', birthGrid: 'available', cycles: 'available', pinnacles: 'not_implemented', meanings: contentStore.contentVersion ? 'experimental_available' : 'withheld' } };
+    return { ...metadata, capabilities: { core: 'available', birthGrid: 'available', cycles: 'available', pinnacles: 'available', meanings: contentStore.contentVersion ? 'experimental_available' : 'withheld' } };
 }

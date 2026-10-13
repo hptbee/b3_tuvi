@@ -1,6 +1,6 @@
 {
   "fixtureClass": "independent_product_spec_arithmetic",
-  "profileVersion": "1.1.0",
+  "profileVersion": "1.2.0",
   "externallySourceVerified": false,
   "cases": [
     {
