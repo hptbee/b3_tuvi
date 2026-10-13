@@ -1,6 +1,25 @@
-# Numerology release readiness — 2026-10-13
+# Numerology release readiness — current gate and historical evidence
 
-Local evidence for the stacked branches ending at `cursor/numerology-release-hardening-2318`. This is not a production approval.
+> **Rebaseline:** 2026-10-14; `main ed31ad1cae7b2411029cccbe8c87da533a996800` after merged PR #24.
+> **Latest CI:** [38438302551](https://github.com/hptbee/b3_tuvi/actions/runs/38438302551) — backend/frontend/e2e all **PASS**.
+> **Gate:** `V1_FEATURE_COMPLETE` for scope; `PRODUCTION_READY=false`; `RELEASE_GATES_PASSED=false`.
+> **Version:** `pythagorean-vn-v1` `1.2.0`; catalog `1.2.0`; Challenge 0 and 33 interpretations withheld.
+
+## Live release blockers at current main
+
+1. **Staging not executed:** deployed frontend/backend/API, direct `/than-so-hoc` refresh, SPA rewrite, catalog/profile presence, mobile/print and API smoke remain unverified.
+2. **Shared rate limiting not deployed:** the in-process 120/60s window is per process/socket key. Reverse-proxy enforcement, forwarded client address and multiple-instance behavior require live validation.
+3. **Rollback not rehearsed:** revert build/backend/proxy configuration and capture evidence. Documentation alone is not a drill.
+4. **Release approval outstanding:** owner sign-off, scope/content limitations, agreed browser support, production monitoring and runbook are not confirmed.
+5. **Source verification independent:** book/edition and expert verification remain false. This does not turn code CI red or justify changing profile 1.2.0.
+
+The remaining tables and local probe measurements below are **historical evidence from the earlier stacked hardening branch**, not proof of staging/production at `ed31ad1`. Current task IDs: [master roadmap §15/§18](../ROADMAP_NUMEROLOGY_A_TO_Z.md) `NUM-R001–005`.
+
+---
+
+## Historical evidence — 2026-10-13
+
+Local evidence for the earlier stacked branches ending at `cursor/numerology-release-hardening-2318`. Not a production approval.
 
 ## Completion dimensions
 
