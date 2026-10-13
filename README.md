@@ -2,7 +2,7 @@
 
 Ứng dụng web giúp người dùng khám phá lá số Tử Vi và tìm hiểu các góc nhìn về bản thân. Giao diện theo hướng **landing page**, với menu ngang, phần giới thiệu, hai khu vực Tử Vi/Thần Số Học, form lập lá số và FAQ.
 
-**Tử Vi đã có công cụ tính. Thần Số Học hiện là trang giới thiệu, chưa có engine hoặc API tính toán.** Kế hoạch triển khai chi tiết nằm trong [Roadmap Thần Số Học từ A–Z](docs/ROADMAP_NUMEROLOGY_A_TO_Z.md).
+**Tử Vi đã có công cụ tính. Thần Số Học đã có MVP thử nghiệm tính 7 chỉ số từ ngày sinh/họ tên, kèm cách tính.** Chưa có lời luận đã đối chiếu nguồn hoặc các chức năng V1 nâng cao. Xem [trạng thái triển khai](docs/numerology/IMPLEMENTATION_STATUS.md) và [Roadmap Thần Số Học từ A–Z](docs/ROADMAP_NUMEROLOGY_A_TO_Z.md).
 
 > Dành cho developers/agents: đọc [AI Context](docs/AI_CONTEXT.md), [Agent Engineering](docs/AGENT_ENGINEERING.md) và [Contributing](docs/CONTRIBUTING.md). Trước khi sửa công thức Tử Vi, đọc thêm [Domain Knowledge](docs/DOMAIN_KNOWLEDGE.md). Test phần mềm đạt không đồng nghĩa công thức hoặc lời luận đã được đối chiếu nguồn.
 
@@ -16,7 +16,7 @@
 | Cách cục | Đối chiếu catalog JSON; hiển thị trạng thái và giới hạn | Khớp điều kiện runtime không tự chứng minh thành/phá cách theo nguồn |
 | Phân tích có cấu trúc | Cung, sao, quan hệ, rule và trạng thái chứng cứ | Chưa có lời luận tự do đã duyệt; hỏi đáp trả dữ liệu cấu trúc |
 | In / xuất JSON | In lá số, tải `la-so.json` | Không kèm luận giải đã duyệt |
-| Thần Số Học | Trang riêng, phong cách tím, thông báo đang phát triển | Chưa tính chỉ số từ ngày sinh/họ tên |
+| Thần Số Học | Landing tím, form ngày sinh/tên tùy chọn, 7 chỉ số, chuẩn hóa tên và từng bước tính | Profile thử nghiệm; lời luận withheld; chưa có biểu đồ, chu kỳ, đỉnh cao/thử thách hoặc export |
 | Nội dung khác | Các route Kiến thức, Tài liệu, Luận giải, Liên hệ | Nội dung vẫn còn sơ khai/placeholder |
 
 ### Luồng sử dụng
@@ -28,6 +28,14 @@
 
 Form đang sửa và dữ liệu lá số đã lập được tách riêng. Thay giờ sinh trong form chưa làm thay đổi lá số cho đến khi gửi lại. Request cũ bị hủy khi chuyển input/route; lỗi API có thông báo và thao tác thử lại.
 
+### Luồng Thần Số Học
+
+1. Chọn **Thần Số Học** trên menu, nhập ngày sinh dương lịch; họ tên khai sinh không bắt buộc. Không cần giờ sinh hoặc giới tính.
+2. Chọn **Xem kết quả**: Đường đời, Ngày sinh, Thái độ; thêm tên để tính Biểu đạt, Linh hồn, Nhân cách và Trưởng thành.
+3. Mở **Cách tính** hoặc phần chuẩn hóa tên để xem phép cộng/rút gọn. Sửa form giữ kết quả của dữ liệu đã gửi đến khi tính lại; thử lại dùng input của request lỗi.
+
+Quy ước `pythagorean-vn-v1` phiên bản `1.0.0`: Đường đời cộng tất cả chữ số ngày sinh; giữ 11/22/33 theo từng chỉ số, Thái độ rút gọn về 1–9. Tên tiếng Việt bỏ dấu, Đ → D, Y là phụ âm. Các ký tự ngoài bảng hỗ trợ bị từ chối; tên thiếu nguyên âm/phụ âm có trạng thái chưa đủ dữ liệu. Đây là quy ước sản phẩm thử nghiệm (`product_specification_only`), chưa phải công thức/nội dung được chuyên gia xác minh.
+
 ### Route giao diện
 
 | Route | Nội dung |
@@ -35,7 +43,7 @@ Form đang sửa và dữ liệu lá số đã lập được tách riêng. Thay
 | `/` | Landing page; `#hai-goc-nhin` và `#lap-la-so` là các vị trí cuộn trên trang |
 | `/la-so` | Form lập lá số; chưa có query thì chưa tính |
 | `/la-so?day=15&month=6&year=1990&hour=8&gender=1` | Tự lập lá số từ query |
-| `/than-so-hoc` | Trang giới thiệu Thần Số Học, chưa có công cụ tính |
+| `/than-so-hoc` | Landing và calculator Thần Số Học; không đưa dữ liệu sinh/tên vào query |
 | `/kien-thuc`, `/tai-lieu`, `/luan-giai`, `/lien-he` | Các trang nội dung hiện có |
 
 ## Kiến trúc
@@ -55,6 +63,7 @@ b3_tuvi/
 │   ├── src/App.css                # Lá số, panels và style hiện có
 │   ├── src/Landing.css            # Landing page và menu chung
 │   ├── src/components/            # Lá số, cách cục, chứng cứ, export
+│   ├── src/numerology/            # Landing/form, HTTP boundary và kết quả Thần Số Học
 │   ├── src/apiBase.js             # Gốc URL API
 │   └── e2e/                      # Luồng landing, lá số, lỗi và download
 ├── backend/
@@ -63,6 +72,7 @@ b3_tuvi/
 │   ├── data/tuvi.sqlite          # Sinh cục bộ sau seed; không commit
 │   └── src/
 │       ├── engine/               # Đổi lịch, an sao, normalize, rule engine
+│       ├── numerology/           # Profile, input và calculator thuần, có trace
 │       ├── routes/               # Charts, meanings, combinations, interpretations
 │       ├── interpretation/       # Phân tích cấu trúc, eligibility, tổng hợp
 │       ├── knowledge/            # Provenance và kiểm tra tri thức
@@ -161,6 +171,8 @@ Codex cloud không đăng ký B3 vào catalog chỉ bằng việc tạo liên k�
 | Method | Endpoint | Mô tả |
 |---|---|---|
 | `GET` | `/api/health` | Trạng thái ứng dụng và database |
+| `GET` | `/api/numerology/profiles` | Profile thử nghiệm và trạng thái capability |
+| `POST` | `/api/numerology/calculate` | Tính 7 chỉ số với trace; không lưu tên/ngày sinh; `no-store` |
 | `POST` | `/api/charts/generate` | Tính và trả `lunarInfo`, `tuviInfo`, `normalizedChart`; không lưu ngày giờ sinh |
 | `GET` | `/api/meanings/star/:name?palace=` | Ý nghĩa sao tại cung; dùng SQLite |
 | `GET` | `/api/meanings/palace/:name` | Ý nghĩa cung; hỗ trợ cung kép `Mệnh / Thân` |
@@ -187,7 +199,16 @@ curl --fail --silent http://127.0.0.1:5000/api/charts/generate \
   --data '{"day":15,"month":6,"year":1990,"hour":8,"gender":1}'
 ```
 
-API Thần Số Học trong roadmap là **đề xuất**, chưa tồn tại ở runtime.
+API Thần Số Học đang hoạt động:
+
+```bash
+curl --fail --silent http://127.0.0.1:5000/api/numerology/profiles
+curl --fail --silent http://127.0.0.1:5000/api/numerology/calculate \
+  -H 'Content-Type: application/json' \
+  --data '{"birthDate":{"year":1990,"month":6,"day":15},"fullName":"Nguyễn Văn An"}'
+```
+
+Chỉ `birthDate` bắt buộc; ngày phải tồn tại, năm 1200–2199 và không ở tương lai so với ngày tham chiếu Việt Nam. `fullName` tùy chọn; `profileId`, `profileVersion`, `locale` chỉ nhận các giá trị hiện được hỗ trợ. Không nhận chỉ số do client tính sẵn, giờ sinh, giới tính hoặc `referenceDate` do client gửi. Đường đời ví dụ trên là 4; Biểu đạt 3, Linh hồn 1, Nhân cách 11. Xem [API contract](docs/numerology/API_CONTRACT.md), [formula spec](docs/numerology/FORMULA_SPEC.md) và [fixtures](docs/numerology/FIXTURES.md). Không có endpoint lời luận/catalog nội dung.
 
 ## Kiểm thử
 
@@ -226,8 +247,11 @@ Các nhóm E2E hiện có:
 - `chart.spec.js`: lập lá số, chứng cứ, xử lý request chậm, input đã gửi, in bằng bàn phím và mobile.
 - `chart-errors.spec.js`: ngày sai, retry, lỗi cách cục và nội dung JSON download.
 - `landing.spec.js`: CTA desktop/mobile, navigation và FAQ.
+- `numerology.spec.js`: backend thật cho ngày/tên tiếng Việt, 11/22/33, lỗi validation; retry/snapshot/request chậm/navigation; keyboard, mobile và URL/storage riêng tư.
 
 Tại commit [`8fc5a01`](https://github.com/hptbee/b3_tuvi/commit/8fc5a01), **15 E2E đã đạt trên Chromium trong môi trường cloud**. Đây là kết quả của lần chạy đó, không phải trạng thái CI live hoặc bằng chứng đúng chuyên môn. Môi trường cloud này dùng cấu hình ignored `.b3/playwright.cloud.mjs` với Chromium hệ thống; CI dùng cấu hình Playwright được commit.
+
+Snapshot MVP Thần Số Học ngày 2026-10-13: **28 E2E (13 Thần Số Học + 15 regression) đạt** với Chromium hệ thống; 20 frontend tests, backend CI/coverage floor, lint/build đều đạt local. Chi tiết và giới hạn kiểm chứng ở [trạng thái triển khai](docs/numerology/IMPLEMENTATION_STATUS.md).
 
 GitHub Actions có ba job `backend`, `frontend`, `e2e`; xem [.github/workflows/ci.yml](.github/workflows/ci.yml).
 
@@ -246,6 +270,8 @@ npm run preview --prefix frontend
 
 ## Dữ liệu cá nhân và giới hạn diễn giải
 
+Thần Số Học gửi input bằng POST và không ghi tên/ngày sinh vào SQLite, URL hoặc browser storage; phản hồi (kể cả lỗi/preflight) có `Cache-Control: no-store`. Form và kết quả giữ trong bộ nhớ trang; reload/chuyển trang không khôi phục hồ sơ. Dữ liệu vẫn được gửi đến backend để tính; trace/tên chuẩn hóa trong phản hồi cũng là dữ liệu riêng tư.
+
 API lập lá số không ghi ngày giờ sinh vào SQLite. Tuy nhiên, **URL chia sẻ chứa dữ liệu nhập**, có thể xuất hiện trong lịch sử trình duyệt, screenshot hoặc hệ thống log bên ngoài. File JSON/in cũng là dữ liệu người dùng chủ động xuất; không đồng nhất “không lưu database” với “không có dữ liệu nhạy cảm”. Bảng `horoscopes` từ phiên bản cũ, nếu có, vẫn tồn tại.
 
 Tử Vi và Thần Số Học là các hệ thống diễn giải mang tính tham khảo. Runtime match, kết quả tính số, nguồn công thức và nội dung đã được duyệt là các trạng thái khác nhau. Không tự nâng trạng thái nguồn hoặc thêm lời luận chỉ vì test xanh.
@@ -254,6 +280,7 @@ Tử Vi và Thần Số Học là các hệ thống diễn giải mang tính tha
 
 | Tài liệu | Phạm vi |
 |---|---|
+| [Trạng thái Thần Số Học](docs/numerology/IMPLEMENTATION_STATUS.md) | Năng lực MVP hiện có, test evidence và backlog kế tiếp |
 | [Roadmap Thần Số Học A–Z](docs/ROADMAP_NUMEROLOGY_A_TO_Z.md) | Kế hoạch mới: công thức, chuẩn hóa tên, engine, API, nội dung, UX, tests và phát hành |
 | [Roadmap Tử Vi Sprint 9–14](docs/ROADMAP_SPRINT_9_14.md) | Tri thức Tử Vi, đối chiếu nguồn, vận hạn và AI có chứng cứ |
 | [Autodev Master Plan V2](docs/AUTODEV_MASTER_PLAN_V2.md) | Kế hoạch/điều phối hiện có; không thay bằng roadmap Thần Số Học |
@@ -263,4 +290,4 @@ Tử Vi và Thần Số Học là các hệ thống diễn giải mang tính tha
 | [Domain Knowledge](docs/DOMAIN_KNOWLEDGE.md) | Thuật ngữ và quy tắc Tử Vi |
 | [Remaining Coverage Gaps](docs/quality/REMAINING_COVERAGE_GAPS.md) | Gaps của báo cáo Sprint 8; cần đối chiếu với tests mới |
 
-Roadmap mô tả công việc dự kiến, không xác nhận tính năng đã được triển khai hoặc nguồn đã được duyệt. Bắt đầu Thần Số Học bằng việc chốt rule profile và bộ fixture độc lập trước khi viết engine.
+Roadmap giữ backlog A–Z và snapshot triển khai thực tế. MVP thử nghiệm đã có profile/spec và fixture tính tay độc lập; nguồn bên ngoài, nội dung diễn giải, V1 nâng cao và release gates còn riêng biệt, chưa được đánh dấu hoàn thành.

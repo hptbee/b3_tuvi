@@ -1,7 +1,7 @@
 # Roadmap Thần Số Học từ A–Z
 
-> **Phiên bản:** 1.0 · **Ngày:** 2026-10-12  
-> **Trạng thái:** `PROPOSED` — kế hoạch triển khai, chưa phải đặc tả công thức đã đối chiếu nguồn.  
+> **Phiên bản:** 1.1 · **Ngày cập nhật:** 2026-10-13
+> **Trạng thái:** backlog `PROPOSED`, có MVP số học thử nghiệm — xem snapshot §17; chưa phải công thức đã đối chiếu nguồn.
 > **Baseline mã nguồn:** `8fc5a01`; phải kiểm kê lại khi kickoff.  
 > **Mục tiêu:** triển khai một lĩnh vực Thần Số Học độc lập trong `b3_tuvi`, từ engine đến trải nghiệm landing, có thể giải thích cách tính và kiểm thử được.  
 > **Không ấn định ngày phát hành.** Sprint bên dưới là giai đoạn theo dependency, không phải cam kết thời gian.
@@ -40,7 +40,7 @@ Thần Số Học giữ phong cách riêng, dự kiến tím/kem; dùng chung lo
 
 | Mức | Phạm vi | Điều kiện phát hành |
 |---|---|---|
-| Preview hiện tại | Trang `/than-so-hoc`, giới thiệu và thông báo đang phát triển | Đã có, chưa phải công cụ tính |
+| Preview tại baseline 1.0 | Trang `/than-so-hoc`, giới thiệu và thông báo đang phát triển | Đã có, chưa phải công cụ tính |
 | MVP tính toán | Ngày sinh, tên, chỉ số cốt lõi, trace, nội dung đủ điều kiện, UI kết quả | Profile + fixtures + API + UX + tests đạt; thiếu nội dung thì hiển thị số/cách tính |
 | V1 đầy đủ | Biểu đồ ngày sinh, chu kỳ cá nhân, đỉnh cao/thử thách, export và nội dung rộng hơn | Mỗi nhóm công thức/nội dung qua gate riêng |
 | V1.1 mở rộng | Nhiều rule profile, các chỉ số bổ sung có nguồn | Versioning và kiểm tra dị bản rõ ràng |
@@ -911,4 +911,25 @@ Lần triển khai đầu tiên nên tập trung `NUM-001`–`NUM-005` rồi `NU
 4. Làm vertical slice **date-only calculate → API → result/cách tính**; name-based metrics nối tiếp theo contract đã chốt.
 5. Giữ trang preview cho những capability chưa ready. Chỉ sau core ổn định mới triển khai grid/cycles/pinnacles, export và AI tùy chọn.
 
-**Trạng thái tại thời điểm viết:** preview/navigation đã có; các task `NUM-*` còn lại là backlog đề xuất. Roadmap này được lưu không có nghĩa engine, API, nguồn, nội dung hoặc release gate đã hoàn thành.
+**Trạng thái lịch sử tại phiên bản 1.0 (2026-10-12):** preview/navigation đã có; các task `NUM-*` còn lại là backlog đề xuất. Roadmap này được lưu không có nghĩa engine, API, nguồn, nội dung hoặc release gate đã hoàn thành.
+
+
+## 17. Snapshot triển khai — 2026-10-13
+
+MVP số học thử nghiệm đã thay preview ở `/than-so-hoc`. Chi tiết runtime, evidence và giới hạn ở [IMPLEMENTATION_STATUS](numerology/IMPLEMENTATION_STATUS.md). Các bảng baseline §3 vẫn mô tả `8fc5a01`, không phải HEAD hiện tại.
+
+| Giai đoạn / task | Trạng thái thực tế | Phần còn lại |
+|---|---|---|
+| N0; NUM-001/003/004/005 | Baseline kiểm kê; quyết định/spec profile thử nghiệm, fixture độc lập và API contract đã có | NUM-002 source dossier chưa xác minh; không tuyên bố G0 nghiên cứu nguồn hoàn tất |
+| N1; NUM-010–017 | 7 metric, date-only, Unicode tiếng Việt, Y, master/root, unavailable states, trace và unit runner đã triển khai | Chứng cứ đúng theo quy ước sản phẩm; không tự nâng status nguồn |
+| N2; NUM-020/021/026 | API calculate/profiles, typed errors, contract/integration tests | Chưa có catalog/meaning endpoint hay validator nội dung NUM-022–024 |
+| N2; NUM-025 | No-store (cả lỗi/preflight), logger không body/query, không persist; parser limit 256kb | Rate limiting và hardening production còn pending |
+| N3; NUM-030–035 | Landing/form/result, snapshot/retry/abort, disclosure và browser tests đã có | Disclosure là quy ước thử nghiệm, không là citation đã xác minh |
+| N3; NUM-036 | Probe keyboard/focus và mobile320/390, desktop1440 | Chưa audit WCAG đầy đủ, metadata/noindex/SEO production hoặc cross-browser |
+| N4; NUM-040–047 | Pending toàn bộ | Grid, cycles, pinnacle/challenge cần source/spec/engine/UI/tests riêng |
+| N5; NUM-050–057 | Docs runtime và local CI checks đã có | Export/import/print Thần Số Học, benchmark, staging, rollback và phê duyệt release còn pending |
+| N6 | Pending, không chặn MVP numeric | Profiles bổ sung, nội dung, AI và cross-browser theo gate riêng |
+
+Không đánh dấu các checklist phát hành §15 hoặc toàn bộ task đã xong chỉ vì vertical slice chạy được. `sourceStatus=product_specification_only`, `status=experimental`, `contentVersion=null`, mọi metric `meaning=null` và `meaningStatus=withheld`. Source registry hiện ghi rõ thiếu dossier; không có nguồn bên ngoài được fabricated hoặc tự approved.
+
+Thứ tự kế tiếp: (1) nghiên cứu và xác minh source dossier/D01–D12, (2) thiết kế catalog/content eligibility có review thật, (3) chọn một capability V1 và đi trọn spec→fixture→engine→API→UI→tests, (4) export/import/print, (5) hardening/staging/rollback trước release. Nếu source review làm đổi quy ước, tạo profile/version mới và fixture trước khi mở capability.
