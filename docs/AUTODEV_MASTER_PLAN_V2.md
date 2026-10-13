@@ -314,3 +314,7 @@ Nhánh `autodev/v2-sprint-8` từ `2ca0186`. Đo coverage trước khi thêm tes
 
 Không sửa `tuviRules.mjs`, `rulesV2.json`, hoặc `docs/AUTODEV_MASTER_PLAN.md`. Không duyệt claim. Không mở vận hạn hay AI public.
 
+## 21. Sprint 9B status
+
+Đo trên nhánh research sau integrity gate `69f7f86`. Research dossier 63/63. Nguồn đọc được trong span Tân Biên: 24/63. Trang PDF kiểm chữ: 0. Dual-AI: 24. `MATCH` không bị ép. 39 cách `SOURCE_INACCESSIBLE`. `expertVerified` vẫn false. Runtime rules không đổi. Báo cáo: `docs/knowledge/SPRINT_9B_COMPLETION_REPORT.md`.
+
