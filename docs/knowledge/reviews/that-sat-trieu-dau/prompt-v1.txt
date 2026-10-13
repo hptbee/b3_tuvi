@@ -1,0 +1,46 @@
+promptVersion: dual-ai-source-review-v1-prompt-1
+policyVersion: dual-ai-source-review-v1
+editionId: tan-bien-retypeset-277-cover-1956
+sourceId: thai-thu-lang-tan-bien
+schoolScope: vn-tam-hop-default
+locator: 19.2.8+19.5
+sourceDigest: d12a6735c86037ff271cea98193769dbd9f405f398e459b281e126c8ef0f84ee
+fileSha256: 941b104504dd552fe967354759da1683dda30a529aa59a8e570b05727f5b4458
+
+Read only the span below. Do not use memory of the book to add sentences that are not in the span. Do not look at another model's answer. Return one JSON object and no other text.
+
+Compare this runtime rule to the span.
+Catalog mapping, not a sentence from the book: Sát = Thất Sát; Tử = Tử Vi; Phủ = Thiên Phủ; Khoa = Hóa Khoa; Quyền = Hóa Quyền; Lộc = Lộc Tồn or Hóa Lộc, as the span names them.
+Runtime rule JSON: {"id":"that_sat_trieu_dau","combination":"Thất Sát Triều Đẩu","target":"menh","branches":["Dần","Thân","Tí","Ngọ"],"samePalace":["Thất Sát"]}
+
+Select a condition id only when the span states that requirement for this pattern.
+Allowed condition ids:
+palace_menh_or_quan_loc
+palace_menh
+branch_dan_than
+avoid_tuan
+avoid_tuan_triet
+avoid_sat
+avoid_bai
+strengthened_by_khoa_quyen_loc
+star_sat_toa_thu
+star_tu_phu_opposite
+
+Allowed exception id, include it only if the span exempts this section from Sát tinh: sat_does_not_reduce
+This section is not 19.2.9, 19.2.16, or 19.2.22.
+
+verdict is MATCH only when the runtime rule states every selected condition and exception. PARTIAL when it states some and omits others. CONFLICT when it contradicts the span. NOT_IMPLEMENTED when the runtime rule is null.
+
+quotation must be an exact contiguous substring of the span, at least 40 characters, and must include this anchor: Cung Mệnh hay Quan Lộc an tại Dần, Thân có Sát tọa thủ và có Tử, Phủ (đồng cung)
+
+JSON keys:
+schoolId, editionId, locator, sourceDigest, claimId, variantType, formulaComparison, verdict, conditions, exceptions, quotation, uncertainties
+
+Use schoolId vn-tam-hop-default, editionId tan-bien-retypeset-277-cover-1956, locator "19.2.8+19.5", sourceDigest d12a6735c86037ff271cea98193769dbd9f405f398e459b281e126c8ef0f84ee, claimId claim-that-sat-trieu-dau, variantType rule. formulaComparison must equal verdict.
+
+SPAN:
+19.2.8. Thất Sát Triều Đấu
+Cung Mệnh hay Quan Lộc an tại Dần, Thân có Sát tọa thủ và có Tử, Phủ (đồng cung) xung chiếu.
+19.5. Phụ luận
+Phú cục và Qúy cục trình bày sơ lược ở trên rất cần phải xa lánh Tuần, Triệt, Sát tinh và Bại tinh. Ngoại trừ Qúy cục 19.2.9 - 19.2.16 - 19.2.22 gặp Sát tinh cũng không bị chiết giảm mất sự tốt đẹp. Nếu Sát tinh sáng sủa, dĩ nhiên lại càng thêm rực rỡ.
+Phú cục và Qúy cục rất cần gặp Khoa, Quyền, Lộc hội hợp, như vậy mới được toàn mỹ.

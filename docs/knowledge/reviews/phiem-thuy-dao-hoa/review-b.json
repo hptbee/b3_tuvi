@@ -1,0 +1,26 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "phu-giai/84",
+  "sourceDigest": "82b1bb7a381221602ea04155878d91d722117636feba4561f3a31168a3a48d7d",
+  "claimId": "claim-phiem-thuy-dao-hoa",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "palace_menh",
+    "branch_hoi_ty",
+    "star_tham_host",
+    "star_kinh_same_palace",
+    "star_da_same_palace"
+  ],
+  "exceptions": [],
+  "quotation": "Cung Mệnh an tại Hợi, Tý có Tham tọa thủ, gặp Kình đồng cung, hay gặp Đà đồng cung, nên rất mờ ám xấu xa.",
+  "uncertainties": [
+    "Span states Kình or Đà as alternatives; the allowed condition ids do not encode that disjunction."
+  ],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-64e85897-993b-5f11-8dc7-88759e887b5a"
+}

@@ -1,0 +1,49 @@
+{
+  "decisionId": "tu-phu-dong-cung-2026-10-12",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-tu-phu-dong-cung",
+  "schoolId": "vn-tam-hop-default",
+  "variantType": "rule",
+  "variantId": "rule-pilot-not-runtime",
+  "sourceId": "thai-thu-lang-tan-bien",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "phu-giai/57",
+  "sourceDigest": "f58dc4692312e3b8e17dedf7ce2bc33b540716fdc4c72959d47be3572e80f384",
+  "fileSha256": "941b104504dd552fe967354759da1683dda30a529aa59a8e570b05727f5b4458",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "MATCH",
+      "reviewRef": "docs/knowledge/reviews/tu-phu-dong-cung/review-a.json",
+      "agentId": "bc-89a56a3c-f7b9-5f42-8c6b-7c127975487f",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "MATCH",
+      "reviewRef": "docs/knowledge/reviews/tu-phu-dong-cung/review-b.json",
+      "agentId": "bc-e27de307-fbfd-5a03-a0b2-83416d3d121c",
+      "available": true
+    }
+  ],
+  "decision": "AI_ACCEPTED",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "hostModelBuildId": null,
+  "notes": "Both requested model slugs agreed on MATCH. The host did not return a separate build id. The runtime rule was not changed.",
+  "crossReviewOutcome": "AI_CROSS_REVIEWED",
+  "formulaComparison": "MATCH",
+  "conditions": [
+    "branch_dan_than",
+    "palace_menh",
+    "star_tu_phu_same_palace"
+  ],
+  "exceptions": []
+}

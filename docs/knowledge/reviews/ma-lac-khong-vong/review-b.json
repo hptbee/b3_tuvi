@@ -1,0 +1,23 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "19.3.8+19.5",
+  "sourceDigest": "f137f8ad547c20bed29634097b9520b3e880cb72a49b03e03671dd7bfcd48652",
+  "claimId": "claim-ma-lac-khong-vong",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "avoid_tuan_triet",
+    "bright",
+    "star_ma",
+    "star_ma_host"
+  ],
+  "exceptions": [],
+  "quotation": "Mã thủ Mệnh gặp Tuần, Triệt án ngữ.\n19.5. Phụ luận\nBần tiện cục trình bày sơ lược ở trên, nếu gặp Tuần, Triệt án ngữ (không kể Bần Tiện Cục 19.3.1 -19.3.3) cũng đỡ xấu xa, và nếu gặp chêm nhiều sao sáng sủa tốt đẹp, chắc chắn là trở lại tốt đẹp.",
+  "uncertainties": [],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-2b07f0b9-1a21-5447-a5e1-067cd520bf4d"
+}

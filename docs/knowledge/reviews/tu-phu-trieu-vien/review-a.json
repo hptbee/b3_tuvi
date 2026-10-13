@@ -1,0 +1,30 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "19.2.2+19.5",
+  "sourceDigest": "9045f8516a9d0b1e5ead4aaeb4ea527c28aebddd68f2a760243e43499d34f6c2",
+  "claimId": "claim-tu-phu-trieu-vien",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "palace_menh_or_quan_loc",
+    "avoid_tuan_triet",
+    "avoid_sat",
+    "avoid_bai",
+    "strengthened_by_khoa_quyen_loc",
+    "star_tu_bright_host",
+    "star_phu_opposite",
+    "star_phu_bright_host"
+  ],
+  "exceptions": [],
+  "quotation": "Cung Mệnh hay Quan Lộc có Tử sáng sủa tốt đẹp tọa thủ và có Phủ chiếu, hay có Phủ sáng sủa tốt đẹp tọa thủ và có Tử chiếu.",
+  "uncertainties": [
+    "The second disjunct requires Tử chiếu, and no allowed condition id names that placement.",
+    "19.5 attaches Tuần, Triệt, Sát tinh, Bại tinh, and Khoa Quyền Lộc to the Phú cục and Qúy cục above without naming 19.2.2."
+  ],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-c18d0a27-3698-5cd6-9e3a-3cbdf17db482"
+}

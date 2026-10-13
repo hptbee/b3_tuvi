@@ -1,0 +1,33 @@
+promptVersion: dual-ai-source-review-v1-prompt-1
+policyVersion: dual-ai-source-review-v1
+editionId: tan-bien-retypeset-277-cover-1956
+sourceId: thai-thu-lang-tan-bien
+schoolScope: vn-tam-hop-default
+locator: dai-cuong/31
+sourceDigest: 4263a08821c9956bbfb370bc450dacaaa61cad744effa7124a13a8e611628c0b
+fileSha256: 941b104504dd552fe967354759da1683dda30a529aa59a8e570b05727f5b4458
+
+Read only the span below. Do not use memory of the book to add sentences that are not in the span. Do not look at another model's answer. Return one JSON object and no other text.
+
+Compare this runtime rule to the span.
+No catalog mapping.
+Runtime rule JSON: {"id":"menh_vo_chinh_dieu","combination":"Mệnh Vô Chính Diệu","target":"menh","noMajor":true}
+
+Select a condition id only when the span states that requirement for this pattern.
+Allowed condition ids:
+no_major_star
+
+Allowed exception id, include it only if the span exempts this section from Sát tinh: sat_does_not_reduce
+This section is not 19.2.9, 19.2.16, or 19.2.22.
+
+verdict is MATCH only when the runtime rule states every selected condition and exception. PARTIAL when it states some and omits others. CONFLICT when it contradicts the span. NOT_IMPLEMENTED when the runtime rule is null.
+
+quotation must be an exact contiguous substring of the span, at least 40 characters, and must include this anchor: Nếu cung an Mệnh không có Chính diệu, gọi là Mệnh vô Chính diệu
+
+JSON keys:
+schoolId, editionId, locator, sourceDigest, claimId, variantType, formulaComparison, verdict, conditions, exceptions, quotation, uncertainties
+
+Use schoolId vn-tam-hop-default, editionId tan-bien-retypeset-277-cover-1956, locator "dai-cuong/31", sourceDigest 4263a08821c9956bbfb370bc450dacaaa61cad744effa7124a13a8e611628c0b, claimId claim-menh-vo-chinh-dieu, variantType rule. formulaComparison must equal verdict.
+
+SPAN:
+Nếu cung an Mệnh không có Chính diệu, gọi là Mệnh vô Chính diệu

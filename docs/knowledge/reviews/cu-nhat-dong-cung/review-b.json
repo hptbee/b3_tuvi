@@ -1,0 +1,22 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "phu-giai/88",
+  "sourceDigest": "92f5e2400be292d5b760020719797ed802624e53327982e3f30d3d284958b550",
+  "claimId": "claim-cu-nhat-dong-cung",
+  "variantType": "rule",
+  "formulaComparison": "MATCH",
+  "verdict": "MATCH",
+  "conditions": [
+    "palace_menh",
+    "star_nhat_toa_thu",
+    "star_cu_nhat_same_palace"
+  ],
+  "exceptions": [],
+  "quotation": "Cung Mệnh có Cự, Nhật tọa thủ đồng cung, tất từ đời ông đời cha đã vinh hiển và liên tục ba đời đều có danh giá.",
+  "uncertainties": [],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-55cb1f00-118f-51e9-a68b-b384b1ba4b27"
+}

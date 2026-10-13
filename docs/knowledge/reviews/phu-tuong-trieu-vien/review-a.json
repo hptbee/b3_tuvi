@@ -1,0 +1,31 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "19.2.5+19.5",
+  "sourceDigest": "e4c1cfdead3bfe5a369a50e9a2fd0c61ffd848670b777b038b834ed4b3e1d297",
+  "claimId": "claim-phu-tuong-trieu-vien",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "palace_menh_or_quan_loc",
+    "bright",
+    "star_phu_bright_host",
+    "star_tuong_opposite",
+    "star_tuong_bright_host",
+    "star_phu_opposite",
+    "avoid_tuan_triet",
+    "avoid_sat",
+    "avoid_bai",
+    "strengthened_by_khoa_quyen_loc"
+  ],
+  "exceptions": [],
+  "quotation": "Cung Mệnh hay Quan Lộc có Phủ sáng sủa tốt đẹp tọa thủ và có Tướng chiếu hay có Tướng sáng sủa tốt đẹp tọa thủ và có Phủ chiếu.",
+  "uncertainties": [
+    "Span pairs are alternatives: Phủ sáng tọa thủ with Tướng chiếu, or Tướng sáng tọa thủ with Phủ chiếu. Runtime target menh drops Quan Lộc, and both stars at tam_hop_partners conflicts with one star tọa thủ in that palace."
+  ],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-bb90dd5b-77a9-5c4c-947a-7d5850af27e5"
+}

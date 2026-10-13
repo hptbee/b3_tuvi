@@ -1,0 +1,26 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "phu-giai/109",
+  "sourceDigest": "7a9bc916e869db67b39a963ffd8e1dc965b3bd4cadbbf3bbec1b6e35ce56ee2b",
+  "claimId": "claim-ta-huu-dong-cung",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "palace_menh",
+    "branch_suu_mui",
+    "star_ta_huu_same_palace",
+    "bright",
+    "strengthened_by_khoa_quyen_loc"
+  ],
+  "exceptions": [],
+  "quotation": "Cung Mệnh an tại Sửu, Mùi, có Tả, Hữu tọa thủ đồng cung, lại gặp nhiều sao sáng sủa tốt đẹp hội hợp, nhất là Khoa, Quyền, Lộc tất được hưởng phú qúy song toàn, ví như người mặc áo gấm tía.",
+  "uncertainties": [
+    "Runtime samePalace writes Tả Phù; the catalog mapping equates Tả with Tả Phụ. The span names Lộc without distinguishing Lộc Tồn from Hóa Lộc."
+  ],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-d246c472-f414-5b88-b10e-3f57597833b6"
+}

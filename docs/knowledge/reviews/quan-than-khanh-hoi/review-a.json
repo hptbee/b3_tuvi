@@ -1,0 +1,33 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "19.2.3+19.2.4+19.5",
+  "sourceDigest": "56f853f9f34d622075312af673416400bc7ce8aace930e6f06980ba66c063996",
+  "claimId": "claim-quan-than-khanh-hoi",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "palace_menh_or_quan_loc",
+    "bright",
+    "star_tu_bright_host",
+    "star_phu_bat_opposite",
+    "star_xuong_khuc_khoi_viet_long",
+    "star_phuong",
+    "avoid_tuan_triet",
+    "avoid_sat",
+    "avoid_bai",
+    "strengthened_by_khoa_quyen_loc"
+  ],
+  "exceptions": [],
+  "quotation": "Cung Mệnh hay Quan Lộc có Tử sáng sủa tốt đẹp tọa thủ có Phụ - Bật hợp chiếu.\n19.2.4. Quân Thần Khánh Hội\nCùng như trên, nhưng có thêm đủ bộ Xương, Khúc, Khôi, Việt, Long, Phượng hội hợp.\n19.5. Phụ luận\nPhú cục và Qúy cục trình bày sơ lược ở trên rất cần phải xa lánh Tuần, Triệt, Sát tinh và Bại tinh. Ngoại trừ Qúy cục 19.2.9 - 19.2.16 - 19.2.22 gặp Sát tinh cũng không bị chiết giảm mất sự tốt đẹp. Nếu Sát tinh sáng sủa, dĩ nhiên lại càng thêm rực rỡ.\nPhú cục và Qúy cục rất cần gặp Khoa, Quyền, Lộc hội hợp, như vậy mới được toàn mỹ.",
+  "uncertainties": [
+    "Strict target menh covers only one side of Mệnh hay Quan Lộc, so it is an omission rather than a contradiction.",
+    "Tả Phù and Hữu Bật at tam_phuong_tu_chinh do not state Phụ - Bật hợp chiếu.",
+    "The span names Lộc without distinguishing Lộc Tồn from Hóa Lộc."
+  ],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-7657680c-86c1-5864-a7d6-b917c9a91d03"
+}

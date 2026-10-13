@@ -1,0 +1,36 @@
+promptVersion: dual-ai-source-review-v1-prompt-1
+policyVersion: dual-ai-source-review-v1
+editionId: tan-bien-retypeset-277-cover-1956
+sourceId: thai-thu-lang-tan-bien
+schoolScope: vn-tam-hop-default
+locator: phu-giai/90
+sourceDigest: de4d59465bb2119539df09a1e64e1e8b788c90dcc67c70b38cc1f309c8aa13ad
+fileSha256: 941b104504dd552fe967354759da1683dda30a529aa59a8e570b05727f5b4458
+
+Read only the span below. Do not use memory of the book to add sentences that are not in the span. Do not look at another model's answer. Return one JSON object and no other text.
+
+Compare this runtime rule to the span.
+Catalog mapping, not a sentence from the book: Cự = Cự Môn; Kình = Kình Dương; Đà = Đà La; Hỏa = Hỏa Tinh.
+Runtime rule JSON: {"id":"cu_hoa_kinh_duong","combination":"Cự Hỏa Kình Dương","target":"menh","clauses":[{"stars":["Cự Môn","Hỏa Tinh","Kình Dương"],"at":"tam_phuong_tu_chinh"}]}
+
+Select a condition id only when the span states that requirement for this pattern.
+Allowed condition ids:
+palace_menh
+star_cu_host
+star_hoa_kinh_da
+
+Allowed exception id, include it only if the span exempts this section from Sát tinh: sat_does_not_reduce
+This section is not 19.2.9, 19.2.16, or 19.2.22.
+
+verdict is MATCH only when the runtime rule states every selected condition and exception. PARTIAL when it states some and omits others. CONFLICT when it contradicts the span. NOT_IMPLEMENTED when the runtime rule is null.
+
+quotation must be an exact contiguous substring of the span, at least 40 characters, and must include this anchor: Cung Mệnh có Cự tọa thủ, gặp Hỏa, Kình, Đà hội hợp, cùng với nhiều sao xấu xa ác
+
+JSON keys:
+schoolId, editionId, locator, sourceDigest, claimId, variantType, formulaComparison, verdict, conditions, exceptions, quotation, uncertainties
+
+Use schoolId vn-tam-hop-default, editionId tan-bien-retypeset-277-cover-1956, locator "phu-giai/90", sourceDigest de4d59465bb2119539df09a1e64e1e8b788c90dcc67c70b38cc1f309c8aa13ad, claimId claim-cu-hoa-kinh-duong, variantType rule. formulaComparison must equal verdict.
+
+SPAN:
+Cự, Hỏa, Kình, Dương, Đà La phùng ác diệu, ải tử đầu hà
+Cung Mệnh có Cự tọa thủ, gặp Hỏa, Kình, Đà hội hợp, cùng với nhiều sao xấu xa ác độc, tất thắt cổ hay đâm đầu xuống sông mà chết.

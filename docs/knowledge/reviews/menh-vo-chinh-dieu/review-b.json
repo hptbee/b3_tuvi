@@ -1,0 +1,20 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "dai-cuong/31",
+  "sourceDigest": "4263a08821c9956bbfb370bc450dacaaa61cad744effa7124a13a8e611628c0b",
+  "claimId": "claim-menh-vo-chinh-dieu",
+  "variantType": "rule",
+  "formulaComparison": "MATCH",
+  "verdict": "MATCH",
+  "conditions": [
+    "no_major_star"
+  ],
+  "exceptions": [],
+  "quotation": "Nếu cung an Mệnh không có Chính diệu, gọi là Mệnh vô Chính diệu",
+  "uncertainties": [],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-189b7d65-4190-5cd1-a330-ff8e82eedacd"
+}

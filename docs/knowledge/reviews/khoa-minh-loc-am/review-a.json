@@ -1,0 +1,31 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "19.2.25+19.5",
+  "sourceDigest": "8bf75a720401adf6633278a514636db453d887e51c548459681d48f7b654fd95",
+  "claimId": "claim-khoa-minh-loc-am",
+  "variantType": "rule",
+  "formulaComparison": "NOT_IMPLEMENTED",
+  "verdict": "NOT_IMPLEMENTED",
+  "conditions": [
+    "palace_menh_or_quan_loc",
+    "avoid_tuan_triet",
+    "avoid_sat",
+    "avoid_bai",
+    "strengthened_by_khoa_quyen_loc",
+    "star_loc_host",
+    "star_khoa_host",
+    "star_loc_nhi_hop",
+    "star_nhi_hop"
+  ],
+  "exceptions": [],
+  "quotation": "Cung Mệnh hay Quan Lộc có Khoa tọa thủ và có Lộc nhị hợp hay có Lộc tọa thủ và có Khoa nhị hợp.",
+  "uncertainties": [
+    "The pattern states two alternatives: Khoa tọa thủ with Lộc nhị hợp, or Lộc tọa thủ with Khoa nhị hợp. star_nhi_hop is the allowed id for the Khoa nhị hợp branch.",
+    "19.5 requires the Phú cục and Qúy cục above to avoid Tuần, Triệt, Sát tinh, and Bại tinh and to meet Khoa, Quyền, Lộc hội. Those conditions apply to 19.2.25 as one cục in that series. The Sát exemption names only 19.2.9, 19.2.16, and 19.2.22."
+  ],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-a9595b1c-4354-5df3-b1d6-437790369870"
+}

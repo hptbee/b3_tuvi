@@ -1,0 +1,31 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "19.2.3+19.2.4+19.5",
+  "sourceDigest": "56f853f9f34d622075312af673416400bc7ce8aace930e6f06980ba66c063996",
+  "claimId": "claim-quan-than-khanh-hoi",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "palace_menh_or_quan_loc",
+    "avoid_tuan_triet",
+    "avoid_sat",
+    "avoid_bai",
+    "strengthened_by_khoa_quyen_loc",
+    "bright",
+    "star_tu_bright_host",
+    "star_phu_bat_opposite",
+    "star_xuong_khuc_khoi_viet_long",
+    "star_phuong"
+  ],
+  "exceptions": [],
+  "quotation": "Cung Mệnh hay Quan Lộc có Tử sáng sủa tốt đẹp tọa thủ có Phụ - Bật hợp chiếu.\n19.2.4. Quân Thần Khánh Hội\nCùng như trên, nhưng có thêm đủ bộ Xương, Khúc, Khôi, Việt, Long, Phượng hội hợp.",
+  "uncertainties": [
+    "Các điều kiện ở 19.5 được diễn đạt chung cho Phú cục và Quý cục."
+  ],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-75f79987-8468-583d-830c-9e3d1ad8e89e"
+}
