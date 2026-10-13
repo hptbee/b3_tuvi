@@ -50,7 +50,7 @@ try {
     assert.equal(result.metrics.lifePath.value, 4);
     assert.equal(result.metrics.personality.value, 11);
     assert.equal(result.nameAnalysis.normalized, 'NGUYEN VAN AN');
-    assert.equal(result.contentVersion, '1.1.0');
+    assert.equal(result.contentVersion, '1.2.0');
     assert.equal(result.metrics.lifePath.meaningStatus, 'experimental_editorial');
     assert.equal(result.metrics.lifePath.meaning.expertVerified, false);
     assert.equal(result.metrics.lifePath.meaning.value, 4);
@@ -92,7 +92,17 @@ try {
     assert.equal(unsupportedMeaning.meaning, null);
     assert.equal(unsupportedMeaning.meaningStatus, 'withheld');
     assert.equal(unsupportedMeaning.meaningReason, 'source_unavailable');
-    assert.equal(meaningBody.contentVersion, '1.1.0');
+    assert.equal(meaningBody.contentVersion, '1.2.0');
+    const pinnacleMeaning = await (await fetch(`${base}/api/numerology/meanings/p1/4`)).json();
+    assert.equal(pinnacleMeaning.meaningStatus, 'experimental_editorial');
+    assert.notEqual(pinnacleMeaning.meaning.summary, meaningBody.meaning.summary);
+    const challengeMeaning = await (await fetch(`${base}/api/numerology/meanings/challenge/1`)).json();
+    assert.equal(challengeMeaning.meaning.metricId, 'challenge');
+    for (const path of ['/meanings/challenge/0', '/meanings/challenge/9', '/meanings/p4/33']) {
+        const missing = await fetch(`${base}/api/numerology${path}`);
+        assert.equal(missing.status, 404);
+        assert.equal((await missing.json()).error.code, 'MEANING_NOT_FOUND');
+    }
     const unnamed = await (await post(JSON.stringify({ birthDate: birth.birthDate }))).json();
     assert.equal(unnamed.metrics.expression.status, 'unavailable');
     assert.equal(unnamed.metrics.expression.value, null);

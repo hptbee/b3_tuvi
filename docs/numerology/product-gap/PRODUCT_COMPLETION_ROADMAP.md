@@ -80,6 +80,20 @@ Lý do gói này đứng trước:
 
 Việc không nhét vào gói đầu: tên mũi tên, lưới tên, chín năm nếu chưa kịp kiểm mobile, mọi chỉ số E01–E12, mọi mục O01–O08.
 
+## Trạng thái sau nhánh `cursor/numerology-complete-experience-2318`
+
+Audit phía trên mô tả sản phẩm tại `f709e42`. Nhánh triển khai xếp trên `5b15f30` đã làm các phần sau. Ma trận chi tiết nằm ở `docs/numerology/implementation/COMPLETION_MATRIX.md`.
+
+| Gói | Trạng thái | Ghi chú |
+|---|---|---|
+| P0a hình | Đã có trên trang | Tháp, trục thử thách, tuyến lưới, tổng quan sự kiện. 320px và 390px không tràn ngang. |
+| P0b chữ | Một phần | Catalog `1.2.0`: đỉnh 1–4 cho số 1–9, 11, 22 và thử thách 1–8. Thử thách 0 và số 33 vẫn không có bài. Tên tuyến là lớp `arrow-labels-vn-v1`, không thuộc phép Pythagorean. |
+| P1 báo cáo | Đã có trên trang | Mục lục, biểu đồ tên, biểu đồ ghép, chín năm, mười hai tháng, mối nối đúng phép tính, in A4 và JSON. Chín năm do server tính. |
+| P2 chỉ số thêm | Chưa làm | Hidden Passion, Karmic Lessons, Balance, Rational Thought, Bridge vẫn `REQUIRES_SPEC`. Xem `P2_INDICATOR_GATE.md`. |
+| P3 | Ngoài phạm vi | Tương hợp, đặt tên trẻ, lưu lịch sử, AI, color chart, period cycle kiểu Decoz. |
+
+Profile `pythagorean-vn-v1` vẫn `1.2.0`. Chưa phát hành production.
+
 ## Rủi ro cần ghi trên PR triển khai sau này
 
 - Sửa nhãn cho giống Decoz trong khi số components khác.

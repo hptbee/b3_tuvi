@@ -1,0 +1,115 @@
+{
+  "contexts": {
+    "p1": {
+      "label": "Đỉnh 1",
+      "opening": "Đỉnh 1 là cửa sổ từ lúc sinh đến hết tuổi 36 trừ gốc Đường đời. Hãy đọc số này như bối cảnh những năm đầu, không phải như Đường đời.",
+      "application": "Cửa sổ tuổi là quy ước của hồ sơ. Bài này không dự báo việc sẽ xảy ra trong những năm đó.",
+      "prompt": "Trong giai đoạn đầu này, chủ đề nào đáng thử bằng một việc nhỏ?",
+      "values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22],
+      "readings": {
+        "1": "Những năm đầu mang số 1 hỏi việc nào bạn muốn tự bắt đầu, khi còn dễ làm để được khen.",
+        "2": "Những năm đầu mang số 2 hỏi bạn nói nhu cầu của mình thế nào khi vẫn đang học cách ở cạnh người khác.",
+        "3": "Những năm đầu mang số 3 hỏi ý nào bạn dám đưa ra dù còn vụng, không phải để gây chú ý.",
+        "4": "Những năm đầu mang số 4 hỏi thói quen nào đang giúp bạn đứng vững, và quy tắc nào còn quá cứng với tuổi này.",
+        "5": "Những năm đầu mang số 5 hỏi bạn muốn thử điều gì mới trong một giới hạn an toàn, không phải đổi cho hết nhàm.",
+        "6": "Những năm đầu mang số 6 hỏi phần chăm sóc nào là của bạn, và phần nào bạn chưa cần gánh.",
+        "7": "Những năm đầu mang số 7 hỏi câu nào bạn muốn tìm hiểu thêm trước khi kết luận về mình.",
+        "8": "Những năm đầu mang số 8 hỏi việc chung nào cần phân vai rõ, không phải để nắm quyền.",
+        "9": "Những năm đầu mang số 9 hỏi điều gì đáng khép lại hoặc chia sẻ vừa sức, không phải làm cho hết.",
+        "11": "Những năm đầu giữ số 11: hãy kiểm tra một cảm nhận trước khi hành động. Không đổi 11 thành 2 và không xem đó là năng lực đặc biệt.",
+        "22": "Những năm đầu giữ số 22: một ý lớn cần một bước làm được ngay. Không đổi 22 thành 4 và không hứa kết quả."
+      }
+    },
+    "p2": {
+      "label": "Đỉnh 2",
+      "opening": "Đỉnh 2 là chín năm liền sau cửa sổ đầu. Số này mô tả bối cảnh của chín năm đó, không lặp lại bài Đường đời.",
+      "application": "Chín năm là quy ước tuổi của hồ sơ. Bài không chỉ việc nào sẽ đến.",
+      "prompt": "Trong chín năm này, bạn muốn giữ thói quen nào và sửa thói quen nào?",
+      "values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22],
+      "readings": {
+        "1": "Chín năm của đỉnh 2 mang số 1 hỏi bạn đang tự quyết điều gì trong việc đã bắt đầu, không còn là lần thử đầu.",
+        "2": "Chín năm của đỉnh 2 mang số 2 hỏi sự hợp tác nào cần nói rõ phần của từng người, khi quan hệ đã có thời gian.",
+        "3": "Chín năm của đỉnh 2 mang số 3 hỏi cách diễn đạt nào bạn muốn sửa cho người khác hiểu, không phải làm mới cho vui.",
+        "4": "Chín năm của đỉnh 2 mang số 4 hỏi nền nào đã dựng xong và chỗ nào cần nới quy tắc để khỏi kẹt.",
+        "5": "Chín năm của đỉnh 2 mang số 5 hỏi thay đổi nào còn đáng giữ, và thay đổi nào chỉ làm gián đoạn việc đang dở.",
+        "6": "Chín năm của đỉnh 2 mang số 6 hỏi trách nhiệm nào đã thành thói quen và chỗ nào bạn cần trả lại cho người khác.",
+        "7": "Chín năm của đỉnh 2 mang số 7 hỏi câu hỏi nào còn thiếu dữ kiện sau khi bạn đã sống với nó một thời gian.",
+        "8": "Chín năm của đỉnh 2 mang số 8 hỏi cách điều phối nào cần viết rõ hơn, khi đã có người cùng làm.",
+        "9": "Chín năm của đỉnh 2 mang số 9 hỏi việc nào đến lúc tổng kết, để chỗ cho một đóng góp nhỏ hơn và rõ hơn.",
+        "11": "Chín năm của đỉnh 2 giữ số 11. Cảm nhận nhạy cần được đối chiếu với việc đang xảy ra, không được rút thành 2.",
+        "22": "Chín năm của đỉnh 2 giữ số 22. Ý lớn của giai đoạn này cần lịch từng bước, không được rút thành 4 và không bảo đảm xong."
+      }
+    },
+    "p3": {
+      "label": "Đỉnh 3",
+      "opening": "Đỉnh 3 là chín năm sau đỉnh 2. Con số là tổng của đỉnh 1 và đỉnh 2 trong hồ sơ này. Tổng đó không chứng minh một tính cách mới.",
+      "application": "Đọc số này cùng với hai đỉnh trước chỉ để nhớ phép cộng, không phải để cộng ý nghĩa tâm lý.",
+      "prompt": "Nhìn lại hai giai đoạn trước, chủ đề của chín năm này gợi việc gì cần chỉnh?",
+      "values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22],
+      "readings": {
+        "1": "Đỉnh 3 mang số 1, là tổng hai đỉnh trước. Chín năm này hỏi việc nào bạn muốn tự quyết sau khi đã đi qua hai bối cảnh kia.",
+        "2": "Đỉnh 3 mang số 2, là tổng hai đỉnh trước. Chín năm này hỏi chỗ nào cần thỏa thuận lại sau hai giai đoạn đã qua.",
+        "3": "Đỉnh 3 mang số 3, là tổng hai đỉnh trước. Chín năm này hỏi điều gì bạn muốn nói rõ hơn nhờ những gì hai giai đoạn trước đã cho thấy.",
+        "4": "Đỉnh 3 mang số 4, là tổng hai đỉnh trước. Chín năm này hỏi phần nào của nếp cũ còn đáng giữ sau hai cửa sổ đầu.",
+        "5": "Đỉnh 3 mang số 5, là tổng hai đỉnh trước. Chín năm này hỏi thử nghiệm nào còn hợp sau khi hai giai đoạn trước đã diễn ra.",
+        "6": "Đỉnh 3 mang số 6, là tổng hai đỉnh trước. Chín năm này hỏi trách nhiệm nào cần giới hạn lại, không phải gánh thêm vì đã quen gánh.",
+        "7": "Đỉnh 3 mang số 7, là tổng hai đỉnh trước. Chín năm này hỏi điều gì bạn cần tìm hiểu lại thay vì giữ kết luận của hai giai đoạn trước.",
+        "8": "Đỉnh 3 mang số 8, là tổng hai đỉnh trước. Chín năm này hỏi việc chung nào cần phân vai lại cho khỏi dồn về một người.",
+        "9": "Đỉnh 3 mang số 9, là tổng hai đỉnh trước. Chín năm này hỏi điều gì đã đủ để khép, để đóng góp còn lại nhỏ và cụ thể.",
+        "11": "Đỉnh 3 giữ số 11 vì tổng hai đỉnh trước ra 11. Giữ nguyên 11. Hãy kiểm tra cảm nhận bằng một việc quan sát được.",
+        "22": "Đỉnh 3 giữ số 22 vì tổng hai đỉnh trước ra 22. Giữ nguyên 22. Hãy tách ý lớn thành một bước trong chín năm này."
+      }
+    },
+    "p4": {
+      "label": "Đỉnh 4",
+      "opening": "Đỉnh 4 là giai đoạn mở sau ba cửa sổ trước. Số này cộng tháng và năm đã rút gọn. Nó không được suy ra từ đỉnh 3.",
+      "application": "Giai đoạn không có tuổi kết thúc trong hồ sơ. Bài không mô tả tuổi già hay kết cục.",
+      "prompt": "Ở chặng dài còn lại, chủ đề này gợi một việc bạn muốn giữ cho đơn giản thế nào?",
+      "values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22],
+      "readings": {
+        "1": "Đỉnh 4 mang số 1 từ tháng cộng năm. Chặng dài này hỏi việc nào bạn vẫn muốn tự làm, với nhịp chậm hơn các cửa sổ trước.",
+        "2": "Đỉnh 4 mang số 2 từ tháng cộng năm. Chặng dài này hỏi quan hệ nào cần lời nói đều, không phải lúc nào cũng nhường.",
+        "3": "Đỉnh 4 mang số 3 từ tháng cộng năm. Chặng dài này hỏi cách biểu đạt nào còn đáng giữ khi không cần chứng minh nữa.",
+        "4": "Đỉnh 4 mang số 4 từ tháng cộng năm. Chặng dài này hỏi nếp nào còn phục vụ bạn, và nếp nào đã thành gánh.",
+        "5": "Đỉnh 4 mang số 5 từ tháng cộng năm. Chặng dài này hỏi sự linh hoạt nào còn cần, trong một biên độ hẹp hơn.",
+        "6": "Đỉnh 4 mang số 6 từ tháng cộng năm. Chặng dài này hỏi sự chăm sóc nào còn vừa sức, và việc nào nên dừng gánh.",
+        "7": "Đỉnh 4 mang số 7 từ tháng cộng năm. Chặng dài này hỏi câu hỏi nào bạn muốn giữ mở, không cần trả lời cho xong.",
+        "8": "Đỉnh 4 mang số 8 từ tháng cộng năm. Chặng dài này hỏi việc chung nào cần giao rõ để bạn không ôm hết.",
+        "9": "Đỉnh 4 mang số 9 từ tháng cộng năm. Chặng dài này hỏi điều gì đáng để lại vừa sức, không phải khép mọi việc.",
+        "11": "Đỉnh 4 giữ số 11 từ tháng cộng năm. Không rút thành 2. Chặng dài này chỉ cần kiểm tra cảm nhận bằng việc nhỏ.",
+        "22": "Đỉnh 4 giữ số 22 từ tháng cộng năm. Không rút thành 4. Chặng dài này chỉ cần một bước thực hiện, không cần hoàn tất ý lớn."
+      }
+    },
+    "challenge": {
+      "label": "Thử thách",
+      "opening": "Thử thách là hiệu tuyệt đối của một cặp số trong hồ sơ. Nó ngồi cùng cửa sổ tuổi với đỉnh, nhưng không phải nửa ý nghĩa của đỉnh.",
+      "application": "Số 0 nghĩa là hai số bằng nhau. Hồ sơ không đổi 0 thành 9 và không gọi thử thách thứ ba là thử thách chính.",
+      "prompt": "Hiệu số này gợi một chỗ cần chú ý trong đúng giai đoạn tuổi của nó, không phải một lỗi cố định.",
+      "values": [1, 2, 3, 4, 5, 6, 7, 8],
+      "readings": {
+        "1": "Hiệu 1 hỏi chỗ nào bạn muốn tự quyết hơn, trong đúng cửa sổ tuổi của giai đoạn này.",
+        "2": "Hiệu 2 hỏi chỗ nào cuộc trao đổi đang lệch, nên nói rõ nhu cầu thay vì đoán ý.",
+        "3": "Hiệu 3 hỏi điều gì chưa được nói thành lời, nên thử một cách diễn đạt ngắn.",
+        "4": "Hiệu 4 hỏi nếp nào đang quá cứng hoặc quá lỏng trong giai đoạn này.",
+        "5": "Hiệu 5 hỏi sự xê dịch nào cần một biên độ, để khỏi đổi chỉ vì sốt ruột.",
+        "6": "Hiệu 6 hỏi trách nhiệm nào đang quá rộng so với sức của giai đoạn này.",
+        "7": "Hiệu 7 hỏi kết luận nào cần thêm một dữ kiện trước khi giữ.",
+        "8": "Hiệu 8 hỏi việc chung nào chưa có người phụ trách rõ."
+      }
+    }
+  },
+  "lines": {
+    "version": "arrow-labels-vn-v1",
+    "disclaimer": "Tên dưới đây là lớp trình bày thường gặp trong thần số học tiếng Việt cho tám tuyến của lưới 3-6-9. Tên không thuộc phép tính Pythagorean của hồ sơ pythagorean-vn-v1. Tuyến trống hoặc thiếu số không phải điểm yếu.",
+    "items": {
+      "1-2-3": "Tuyến 1-2-3 đủ số thì một số bài tiếng Việt gọi là mũi tên kế hoạch. Câu hỏi gợi ý: việc nào cần xếp thứ tự trước khi bắt đầu?",
+      "4-5-6": "Tuyến 4-5-6 đủ số thì một số bài tiếng Việt gọi là mũi tên ý chí. Câu hỏi gợi ý: giới hạn nào giúp bạn tiếp tục việc đang dở?",
+      "7-8-9": "Tuyến 7-8-9 đủ số thì một số bài tiếng Việt gọi là mũi tên hành động. Câu hỏi gợi ý: việc nhỏ nào làm được trong tuần này?",
+      "1-4-7": "Tuyến 1-4-7 đủ số thì một số bài tiếng Việt gọi là mũi tên thực tế. Câu hỏi gợi ý: bước cụ thể nào thay cho một ý còn chung?",
+      "2-5-8": "Tuyến 2-5-8 đủ số thì một số bài tiếng Việt gọi là mũi tên cảm xúc. Câu hỏi gợi ý: khi cảm xúc lên, bạn cần khoảng nào trước khi trả lời?",
+      "3-6-9": "Tuyến 3-6-9 đủ số thì một số bài tiếng Việt gọi là mũi tên trí tuệ. Câu hỏi gợi ý: câu hỏi nào cần thêm dữ kiện trước khi kết luận?",
+      "1-5-9": "Tuyến 1-5-9 đủ số thì một số bài tiếng Việt gọi là mũi tên quyết tâm. Câu hỏi gợi ý: việc nào bạn muốn giữ đủ lâu để thấy kết quả?",
+      "3-5-7": "Tuyến 3-5-7 đủ số thì một số bài tiếng Việt gọi là mũi tên tâm linh. Câu hỏi gợi ý: bạn muốn dành khoảng yên cho câu hỏi nào, mà không biến nó thành kết luận?"
+    }
+  }
+}

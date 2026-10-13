@@ -14,14 +14,27 @@ function samplePinnacles(asOf = '2026-10-13') {
     components: { month: metric(6, false), day: metric(6, false), year: metric(1, false) },
     periods: [period('p1', 3, 0, 0, 32, false), period('p2', 7, 5, 33, 41, true), period('p3', 1, 5, 42, 50, false, [0, 5]), period('p4', 7, 5, 51, null, false)] };
 }
+function cycleValue(number) {
+  return { status: 'available', value: number, rootValue: number, isMaster: false, keepMasters: false,
+    meaning: null, meaningStatus: 'withheld', parts: [{ label: 'day', values: [1, 5], total: 6 }], steps: [] };
+}
 function result(value = 4, normalized = null) {
   const available = number => ({ status: 'available', value: number, rootValue: number, isMaster: false, keepMasters: true,
     meaning: null, meaningStatus: 'withheld', parts: [{ label: 'day', values: [1, 5], total: 6 }], steps: [] });
+  const counts = { 1: 2, 2: 0, 3: 0, 4: 0, 5: 1, 6: 1, 7: 0, 8: 0, 9: 2 };
+  const nameCounts = { 1: 1, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0 };
+  const nameChart = normalized ? { status: 'available', version: '1.0.0', policy: 'pythagorean-letter-count-v1', normalized, counts: nameCounts, letters: [{ letter: 'A', value: 1 }], layout: [[3, 6, 9], [2, 5, 8], [1, 4, 7]] }
+    : { status: 'unavailable', reason: 'missing_name', version: '1.0.0', policy: 'pythagorean-letter-count-v1', counts: null };
+  const combinedChart = normalized ? { status: 'available', version: '1.0.0', policy: 'birth-name-presence-v1', digits: [1, 2, 3, 4, 5, 6, 7, 8, 9].map(digit => ({ digit, birth: counts[digit], name: nameCounts[digit], presence: counts[digit] > 0 && nameCounts[digit] > 0 ? 'both' : counts[digit] > 0 ? 'birth' : nameCounts[digit] > 0 ? 'name' : 'neither' })) }
+    : { status: 'unavailable', reason: 'missing_name', version: '1.0.0', policy: 'birth-name-presence-v1' };
   return { ok: true, schemaVersion: '1.2.0', contentVersion: null, referenceDate: '2026-10-13', profile: { id: 'pythagorean-vn-v1', version: '1.2.0' },
-    birthGrid: { layoutVersion: '3-6-9-v1', layout: [[3,6,9],[2,5,8],[1,4,7]], counts: {1:2,2:0,3:0,4:0,5:1,6:1,7:0,8:0,9:2}, ignoredZeroCount: 2,
+    birthGrid: { layoutVersion: '3-6-9-v1', layout: [[3,6,9],[2,5,8],[1,4,7]], counts, ignoredZeroCount: 2,
       lines: ['1-2-3','4-5-6','7-8-9','1-4-7','2-5-8','3-6-9','1-5-9','3-5-7'].map(id => ({ id, digits: id.split('-').map(Number), state: id === '1-5-9' ? 'present' : 'partial' })) },
-    cycles: { policy: 'calendar-year-v1', targetDate: '2026-10-13', year: 2026,
-      personalYear: { ...available(4), keepMasters: false }, personalMonth: { ...available(5), keepMasters: false }, personalDay: { ...available(9), keepMasters: false } },
+    nameChart, combinedChart,
+    cycles: { policy: 'calendar-year-v1', bandPolicy: 'personal-year-cycle-containing-target-v1', targetDate: '2026-10-13', year: 2026, month: 10, day: 13,
+      personalYear: cycleValue(4), personalMonth: cycleValue(5), personalDay: cycleValue(9),
+      yearBand: [1, 2, 3, 4, 5, 6, 7, 8, 9].map((personal, index) => ({ year: 2023 + index, personalYear: cycleValue(personal), selected: personal === 4, viewDate: `${2023 + index}-10-01` })),
+      months: Array.from({ length: 12 }, (_, index) => ({ month: index + 1, personalMonth: cycleValue(index === 9 ? 5 : 1), selected: index === 9, viewDate: `2026-${String(index + 1).padStart(2, '0')}-01` })) },
     pinnacles: samplePinnacles(),
     nameAnalysis: normalized ? { normalized, letters: [{ letter: 'A', value: 1 }] } : null,
     metrics: {
@@ -177,7 +190,9 @@ it('rejects an incomplete successful response and aborts requests on unmount', a
 
 
 it('submits an explicit target date and retains its result while editing', async () => {
-  const body = result(); body.cycles.targetDate = '2027-01-01'; body.cycles.year = 2027; body.pinnacles.asOf = '2027-01-01';
+  const body = result(); body.cycles.targetDate = '2027-01-01'; body.cycles.year = 2027; body.cycles.month = 1; body.cycles.day = 1; body.pinnacles.asOf = '2027-01-01';
+  body.cycles.yearBand.forEach(item => { item.selected = item.year === 2027; if (item.year === 2027) item.personalYear.value = 4; });
+  body.cycles.months.forEach(item => { item.selected = item.month === 1; if (item.month === 1) item.personalMonth.value = 5; });
   const fetch = vi.fn(async () => success(body)); vi.stubGlobal('fetch', fetch);
   const user = userEvent.setup(); render(<NumerologyPage />); await fillDate(user);
   const target = screen.getByLabelText(/Ngày xem chu kỳ/);
@@ -243,9 +258,8 @@ it('expands original reflective reading, questions, source and limits', async ()
   const user = userEvent.setup(); render(<NumerologyPage />); await fillDate(user);
   await user.click(screen.getByRole('button', { name: 'Xem kết quả' }));
   await screen.findByRole('status', { name: 'Đường đời', exact: true });
-  const summary = screen.getByText('Lời luận tham khảo · Đường đời');
-  expect(screen.getByText('Gợi ý nhìn lại một thói quen đang giúp bạn tiến lên.')).not.toBeVisible();
-  await user.click(summary);
+  expect(screen.getByText('Lời luận tham khảo · Đường đời')).toBeVisible();
+  expect(screen.getByText('Gợi ý nhìn lại một thói quen đang giúp bạn tiến lên.')).toBeVisible();
   expect(screen.getByText('Thói quen nào bạn muốn giữ?')).toBeVisible();
   await user.click(screen.getByText('Nguồn và giới hạn của lời luận'));
   const source = screen.getByRole('link', { name: 'Nguồn cộng đồng để tham khảo' });
@@ -280,10 +294,42 @@ it('exports the report without the raw name until the user opts in', async () =>
   expect(hidden.nameAnalysis).toBeUndefined();
   expect(hidden.metrics.lifePath.value).toBe(4);
   expect(hidden.exportVersion).toBe('1.0.0');
+  expect(document.querySelector('#bieu-do-ten p')).toHaveClass('num-omit-print');
+  expect(document.querySelector('.num-name-trace')).toHaveClass('num-omit-print');
   await user.click(screen.getByRole('checkbox', { name: /Kèm họ tên/ }));
   expect(screen.getByText('An · 15/6/1990')).not.toHaveClass('num-omit-print');
+  expect(document.querySelector('#bieu-do-ten p')).not.toHaveClass('num-omit-print');
+  expect(document.querySelector('.num-name-trace')).not.toHaveClass('num-omit-print');
   await user.click(screen.getByRole('button', { name: 'Tải JSON' }));
   expect(JSON.parse(await blobText(blobs[1])).fullName).toBe('An');
+});
+
+it('follows the server view date and keeps focus on the selected year', async () => {
+  const first = result();
+  first.cycles.yearBand[0].year = 1987;
+  first.cycles.yearBand[0].viewDate = null;
+  const second = result();
+  second.cycles.targetDate = '2027-10-01';
+  second.cycles.year = 2027;
+  second.cycles.personalYear.value = 5;
+  second.pinnacles.asOf = '2027-10-01';
+  second.cycles.yearBand.forEach(item => { item.selected = item.year === 2027; });
+  let call = 0;
+  const fetch = vi.fn(async () => success(call++ === 0 ? first : second));
+  vi.stubGlobal('fetch', fetch);
+  const user = userEvent.setup();
+  render(<NumerologyPage />);
+  await fillDate(user);
+  await user.click(screen.getByRole('button', { name: 'Xem kết quả' }));
+  await screen.findByRole('heading', { name: 'Các chỉ số của bạn' });
+  const earlyYear = document.querySelector('.num-year-band button');
+  expect(earlyYear).toHaveTextContent('1987');
+  expect(earlyYear).toBeDisabled();
+  await user.click(screen.getByRole('button', { name: /^2027/ }));
+  await waitFor(() => expect(fetch).toHaveBeenCalledTimes(2));
+  expect(JSON.parse(fetch.mock.calls[1][1].body).targetDate).toBe('2027-10-01');
+  expect(screen.getByRole('heading', { name: 'Các chỉ số của bạn' })).not.toHaveFocus();
+  expect(screen.getByRole('button', { name: /^2027/ })).toHaveFocus();
 });
 
 it('rejects an oversized import before sending it', async () => {

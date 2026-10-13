@@ -48,13 +48,40 @@
 .num-actions button { min-height: 40px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 8px; background: white; cursor: pointer; }
 .num-actions button:focus-visible, .num-include-name input:focus-visible { outline: 2px solid #6d528e; outline-offset: 2px; }
 @page { size: A4; margin: 14mm; }
+.num-toc { display: flex; flex-wrap: wrap; gap: 8px 14px; margin: 8px 0 28px; }
+.num-toc a { font-size: 13px; color: #61447b; text-decoration: underline; }
+.num-overview ul, .num-relations { padding-left: 18px; }
+.num-overview li, .num-relations li { margin-top: 8px; line-height: 1.7; }
+.num-chapter { margin-top: 36px; }
+.num-chapter > h2 { font: 34px Georgia, serif; }
+.num-lines button { width: 100%; text-align: left; background: transparent; border: 0; padding: 6px 0; cursor: pointer; }
+.num-lines button[aria-pressed=true] strong { text-decoration: underline; }
+.num-cell-present.is-lit { outline: 2px solid #61447b; }
+.num-cell-present.is-repeat b { text-decoration: underline; }
+.num-year-band, .num-month-band, .num-challenge { display: grid; grid-template-columns: repeat(auto-fit, minmax(88px, 1fr)); gap: 8px; margin: 16px 0 24px; }
+.num-year-band button, .num-month-band button, .num-challenge button, .num-peak { border: 1px solid #d9cce4; border-radius: 8px; background: #fff; padding: 10px 8px; cursor: pointer; }
+.num-year-band button[aria-pressed=true], .num-month-band button[aria-pressed=true], .num-challenge button[aria-pressed=true], .num-peak.is-selected { background: #eee5f6; }
+.num-year-band strong, .num-month-band strong, .num-challenge strong, .num-peak strong { display: block; font: 28px Georgia, serif; }
+.num-pyramid { display: grid; justify-items: center; gap: 12px; margin-top: 20px; }
+.num-pyramid-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; width: 100%; }
+.num-peak { width: min(220px, 100%); }
+.num-peak small, .num-challenge small, .num-year-band span, .num-month-band span { display: block; font-size: 12px; color: var(--muted); }
+.num-pyramid-base { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; width: min(100%, 640px); }
+.num-pyramid-base span { text-align: center; padding: 12px 6px; border: 1px dashed #d9cce4; border-radius: 8px; font-size: 13px; }
+.num-combined { width: 100%; border-collapse: collapse; margin-top: 16px; }
+.num-combined th, .num-combined td { border-bottom: 1px solid var(--line); text-align: left; padding: 8px; font-size: 14px; }
+.num-reading-title { font-weight: 600; }
+@media (prefers-reduced-motion: reduce) { .num-peak, .num-year-band button, .num-month-band button { transition: none; } }
 @media print {
+  .num-toc { display: none !important; }
   .site-nav, .app-footer, .skip-link, .num-hero, .num-start, .num-request-status, .num-error, .num-actions, .num-draft-note, .num-omit-print { display: none !important; }
   .num-print-only { display: block; }
   .num-results { border: 0; padding-top: 0; }
   .num-metric-grid, .num-cycle-grid, .num-grid-layout, .num-pinnacle-values { grid-template-columns: 1fr 1fr; }
-  .num-metric, .num-pinnacle-period, .num-reading, .num-birth-grid, .num-name-trace { break-inside: avoid; page-break-inside: avoid; }
-  .num-results-heading { break-after: avoid; page-break-after: avoid; }
+  .num-metric, .num-pinnacle-period, .num-reading, .num-birth-grid, .num-name-trace, .num-pyramid, .num-year-band, .num-month-band, .num-combined { break-inside: avoid; page-break-inside: avoid; }
+  .num-chapter { break-before: page; page-break-before: always; }
+  #tong-quan { break-before: auto; page-break-before: auto; }
+  .num-chapter > h2, .num-chapter > h3, .num-results-heading { break-after: avoid; page-break-after: avoid; }
   details > *:not(summary) { display: block !important; }
   .num-page, .num-page * { color: #000; overflow: visible; }
 }

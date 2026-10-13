@@ -1,10 +1,16 @@
 import catalogData from './data/catalog.vi.json' with { type: 'json' };
 import sourceData from './data/sources.json' with { type: 'json' };
+import stageCopy from './data/stageCopy.vi.json' with { type: 'json' };
 
-export const CONTENT_METRICS = ['lifePath', 'birthday', 'attitude', 'expression', 'soulUrge', 'personality', 'maturity', 'personalYear', 'personalMonth', 'personalDay'];
+export const CONTENT_METRICS = ['lifePath', 'birthday', 'attitude', 'expression', 'soulUrge', 'personality', 'maturity', 'personalYear', 'personalMonth', 'personalDay', 'p1', 'p2', 'p3', 'p4', 'challenge'];
 export function supportedMeaningValue(metricId, value) {
-    return CONTENT_METRICS.includes(metricId) && Number.isInteger(value)
-        && ((value >= 1 && value <= 9) || (![ 'attitude', 'personalYear', 'personalMonth', 'personalDay'].includes(metricId) && [11, 22, ...(metricId === 'birthday' ? [] : [33])].includes(value)));
+    if (!CONTENT_METRICS.includes(metricId) || !Number.isInteger(value)) return false;
+    if (metricId === 'challenge') return value >= 1 && value <= 8;
+    const singleOnly = ['attitude', 'personalYear', 'personalMonth', 'personalDay'].includes(metricId);
+    if (value >= 1 && value <= 9) return true;
+    if (singleOnly) return false;
+    if (value === 11 || value === 22) return true;
+    return value === 33 && ['lifePath', 'expression', 'soulUrge', 'personality', 'maturity'].includes(metricId);
 }
 const requireValid = condition => { if (!condition) throw new TypeError('Invalid numerology content catalog'); };
 const text = value => typeof value === 'string' && value.trim().length > 0 && value.length <= 1500;
@@ -14,6 +20,7 @@ const strings = value => Array.isArray(value) && value.length > 0 && value.lengt
 
 export function createContentStore(catalogInput, sourceInput) {
     const catalog = structuredClone(catalogInput), manifest = structuredClone(sourceInput);
+    for (const [id, context] of Object.entries(stageCopy.contexts)) if (!catalog.contexts[id]) catalog.contexts[id] = structuredClone(context);
     requireValid(shape(catalog, ['version', 'locale', 'profileId', 'compatibleProfileVersions', 'review', 'themes', 'contexts']));
     requireValid(/^\d+\.\d+\.\d+$/.test(catalog.version) && catalog.locale === 'vi-VN' && catalog.profileId === 'pythagorean-vn-v1' && strings(catalog.compatibleProfileVersions));
     requireValid(shape(catalog.review, ['status', 'approvedForPublic', 'reviewerRole', 'evidenceId']));

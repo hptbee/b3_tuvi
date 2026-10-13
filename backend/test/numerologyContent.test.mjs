@@ -6,7 +6,7 @@ import { CONTENT_METRICS, createContentStore, supportedMeaningValue } from '../s
 const approved = structuredClone(catalog);
 approved.review = { status: 'editorial_reviewed', approvedForPublic: true, reviewerRole: 'independent_editorial_reviewer', evidenceId: 'test-only-fixture-approval' };
 const store = createContentStore(approved, sources);
-assert.equal(store.contentVersion, '1.1.0');
+assert.equal(store.contentVersion, '1.2.0');
 let published = 0;
 for (const metricId of CONTENT_METRICS) for (const value of [1,2,3,4,5,6,7,8,9,11,22,33]) {
     const result = store.getMeaning(metricId, value);
@@ -24,7 +24,10 @@ for (const metricId of CONTENT_METRICS) for (const value of [1,2,3,4,5,6,7,8,9,1
         assert.ok(result.meaning.sourceReferences[0].url.includes('c0535c9c9e7bcdc340b7eed255f89f64146dd8d5'));
     } else assert.equal(result.meaning, null);
 }
-assert.equal(published, 102);
+assert.equal(published, 154);
+assert.equal(store.getMeaning('challenge', 0).meaning, null);
+assert.notEqual(store.getMeaning('p1', 4).meaning.summary, store.getMeaning('lifePath', 4).meaning.summary);
+assert.match(store.getMeaning('p4', 1).meaning.summary, /không được suy/);
 assert.equal(store.getMeaning('lifePath', 33).meaningReason, 'source_unavailable');
 assert.equal(store.getMeaning('lifePath', 33).meaning, null); // Never replace master33 by root6 text.
 assert.notEqual(store.getMeaning('lifePath', 4).meaning.summary, store.getMeaning('soulUrge', 4).meaning.summary);
@@ -75,4 +78,4 @@ assert.ok(store.getMeaning('lifePath', 4).meaning.sourceReferences[0].url.starts
 assert.equal(store.getMeaning('lifePath', 4).meaning.reflectionPrompts.length, 2);
 approved.themes['4'].body = 'changed after creating store';
 assert.ok(!store.getMeaning('lifePath', 4).meaning.summary.includes('changed after creating store'));
-console.log('numerology content: 102 distinct-context original editorial entries, draft/source/version gates, immutable DTOs and no master33 fallback passed');
+console.log('numerology content: 154 distinct-context original editorial entries, draft/source/version gates, immutable DTOs and no master33 fallback passed');
