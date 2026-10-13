@@ -27,25 +27,47 @@ In cloud sessions use the resolved absolute path as `B3_HOME` when following a c
 
 Product files and Git commits stay in this repository. Checkpoints go under `.b3/autodev/` (gitignored).
 
-## Codex invocation
+## Codex cloud invocation: plain-text routing
 
-Codex does **not** load `.cursor/commands/` as slash commands (`/autodev` is Cursor-only). Use **skills**:
+Codex cloud's supplied skill catalog is separate from repository files. Readable
+`.agents/skills` links do not register B3 in that catalog. Do not require `$skill`,
+`/skills`, or a Cursor slash command before carrying out a B3 request. Do not
+suggest restarting/publishing as proof that native discovery will work.
 
-| Intent | Invoke |
+When the user sends a plain-text request such as `B3: autodev <requirement>`,
+`B3: autodev status`, or `B3: plan <requirement>`:
+
+1. Resolve B3 using the map above; bootstrap if absent.
+2. Run `bash scripts/b3-paths.sh <action>` to locate canonical instructions.
+3. Read the emitted `SKILL` and `COMMAND` files. For autodev also read the emitted
+   `WORKFLOW`; for review-loop read its strategy/spec. Treat the resolved absolute
+   root as `B3_HOME` in these instructions even if the committed pointer is Windows-specific.
+4. Follow the canonical procedure with the user's argument in this product
+   checkout. **Reading instructions is not completing the requested action.**
+   Continue execution to the procedure's outcome; for `status`, inspect checkpoint
+   and Git only, without starting or resuming implementation.
+5. Report the outcome and evidence. Do not describe this as native skill activation.
+
+| Plain-text request | Canonical action |
 | --- | --- |
-| Autonomous lifecycle | `$autodev` (also `/skills` → autodev) |
-| Plan only | `$plan` |
-| Implement | `$implement` |
-| Debug | `$debug` |
-| Review | `$review` |
-| Verify | `$verify` |
-| Review loop | `$review-loop` |
+| `B3: autodev <requirement or plan path>` | Full autonomous lifecycle; do not stop at the plan |
+| `B3: autodev resume` | Reconcile checkpoint and Git, then continue |
+| `B3: autodev status` | Read-only checkpoint/Git report |
+| `B3: plan <requirement>` | Plan only |
+| `B3: implement <plan or change>` | Execute the specified change |
+| `B3: debug <failure>` | Diagnose before fixing |
+| `B3: review <target>` | One evidence-based review |
+| `B3: verify <claim>` | Verification with actual evidence |
+| `B3: review-loop <target>` | Independent iterative review/fix procedure |
 
-When the user asks to execute “autodev”, “run autodev”, or `$autodev`, **read and follow** `.agents/skills/autodev/SKILL.md`, then `{B3_HOME}/workflows/autonomous-development.md`. Do not stop after the plan. Installation/troubleshooting requests are not instructions to launch development of unrelated backlog items.
+Equivalent plain-language requests naming the B3 action route the same way.
+If a host actually exposes `$autodev` or another B3 skill, its body is the same
+canonical source. Installation/troubleshooting mentions are not requests to
+launch unrelated autodev backlog work.
 
-A running cloud chat may not refresh its skill picker after installation. If `$autodev` is absent from the host catalog, follow the same local `SKILL.md` and canonical workflow by explicit file path; do not claim picker discovery was verified. A fresh task may be required for native discovery.
-
-For review-loop delegation, send `{B3_HOME}/.cursor/agents/reviewer.md`, `fixer.md`, `security-reviewer.md`, or `architecture-reviewer.md` to an isolated agent when available. The parent owns `PASS`, `FAIL`, and `UNKNOWN / INCOMPLETE`.
+For review-loop delegation, read canonical role files at
+`{B3_HOME}/.cursor/agents/` before sending isolated tasks. The parent owns
+`PASS`, `FAIL`, and `UNKNOWN / INCOMPLETE`.
 
 ## Operating constraints
 

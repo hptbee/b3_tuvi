@@ -38,11 +38,11 @@ Re-attach after upgrading B3 (from your B3 clone):
 
 ---
 
-## Codex
+## Codex CLI / hosts with repository skill discovery
 
 - **Always-on map:** root `AGENTS.md`.
 - **Skills:** gitignored `.agents/skills/<name>/SKILL.md` (one folder per skill, including **`$autodev`**). Recreate after a fresh clone with the codex install line above.
-- **No `/autodev` slash command.** In Codex type `$autodev` or `/skills` then pick `autodev`. Same for `$plan`, `$implement`, `$debug`, `$review`, `$verify`, `$review-loop`.
+- **No Cursor `/autodev` slash command.** Use `$autodev` only when that host has actually discovered it. This does not imply that Codex cloud registers repository skills.
 - If this folder is also opened in **Cursor**, both hosts may see `.agents/skills`; avoid also copying skills under `.cursor/skills`.
 
 ## Codex cloud / Linux
@@ -71,8 +71,24 @@ script and verify it in startup instructions. Export the resolved `B3_HOME`
 when running shell commands that need B3. Publish the prepared environment
 through the UI after reviewing saved configuration.
 
-Installation proves readable files, not that an already running chat has
-refreshed its skill catalog. If needed start a new task; the root `AGENTS.md`
-also provides explicit-path routing to the same canonical workflow. You can
-request: `Read .agents/skills/autodev/SKILL.md and run autodev status using the
-B3 path in .b3/cloud-home.` This status request must not implement backlog work.
+Installation proves readable files, **not registration in Codex cloud's skill
+catalog**. Restarting a task or publishing an environment is not a verified
+remedy for catalog registration. In the cloud session inspected here, the
+catalog contained the onboarding plugin only, while executor skills were empty.
+
+Use ordinary chat messages, without `/` or `$`:
+
+```text
+B3: autodev status
+B3: plan docs/ROADMAP_NUMEROLOGY_A_TO_Z.md
+B3: autodev <specific requirement or accepted plan>
+B3: debug <failure>
+B3: review <target>
+B3: verify <claim>
+B3: review-loop <target>
+```
+
+`AGENTS.md` routes these messages to the canonical B3 instructions. The helper
+`bash scripts/b3-paths.sh autodev` prints source paths only; it does not execute
+an AI lifecycle. The agent must read those files and perform the procedure.
+See [Codex cloud B3 guide](../docs/CODEX_CLOUD_B3.md) for all actions and limits.

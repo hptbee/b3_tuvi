@@ -40,3 +40,15 @@ B3_HOME= bash "$installer" --product-root "$scratch/fresh" --verify > /dev/null
 cmp "$scratch/windows-home" "$scratch/fresh/.b3/home"
 [[ "$(git -C "$scratch/fresh/.b3/runtime/b3_ai-engineering" rev-parse HEAD)" == 443443094192c3c062a5164aa46ced8577dd1efd ]]
 printf 'PASS: fresh cloud bootstrap clones pinned dependency and resolves its local pointer\n'
+for action in autodev plan implement debug review verify review-loop; do
+  paths="$(B3_HOME="$b3_root" bash "$product_root/scripts/b3-paths.sh" "$action")"
+  while IFS='=' read -r kind path; do
+    case "$kind" in
+      SKILL|COMMAND|WORKFLOW) [[ -r "$path" ]] || { printf 'FAIL: missing %s for %s\n' "$kind" "$action" >&2; exit 1; } ;;
+    esac
+  done <<< "$paths"
+done
+if bash "$product_root/scripts/b3-paths.sh" not-a-command > /dev/null 2>&1; then
+  printf 'FAIL: unsupported B3 action accepted\n' >&2; exit 1
+fi
+printf 'PASS: all seven cloud actions resolve readable canonical instructions; unknown action rejected\n'

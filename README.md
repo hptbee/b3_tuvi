@@ -154,7 +154,7 @@ Bootstrap cài nguồn B3 được pin và dùng installer chính thức để t
 
 Kiểm tra hồi quy installer: `bash scripts/test-b3-cloud.sh` (có kiểm tra clone mới, cần mạng). Xem thêm [hướng dẫn Codex cloud](.cursor/README.md#codex-cloud--linux).
 
-Chat đang mở có thể chưa cập nhật danh sách skill. Khi đó dùng yêu cầu đọc `.agents/skills/autodev/SKILL.md` và workflow B3 theo `.b3/cloud-home`, hoặc bắt đầu task mới để kiểm tra discovery. Việc file/link đọc được không chứng minh skill picker đã nhận `$autodev`.
+Codex cloud không đăng ký B3 vào catalog chỉ bằng việc tạo liên kết trên filesystem. Dùng tin nhắn thường: **`B3: autodev status`**, **`B3: plan <yêu cầu>`**, **`B3: autodev <yêu cầu hoặc plan>`**. `AGENTS.md` hướng dẫn agent đọc và thực hiện thủ tục B3 gốc; không cần menu `$skill` hoặc slash command. Xem [hướng dẫn B3 trên Codex cloud](docs/CODEX_CLOUD_B3.md). Không coi restart/Publish là bằng chứng native discovery hoạt động.
 
 ## API hiện có
 

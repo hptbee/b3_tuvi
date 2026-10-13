@@ -78,4 +78,4 @@ fi
 [[ -f "$index/autodev/SKILL.md" ]] || { printf 'autodev is not readable.\n' >&2; exit 1; }
 printf 'B3 skill links verified (%s); canonical workflow readable.\n' "$b3_root"
 printf 'For shell commands: export B3_HOME="$(cat .b3/cloud-home)"\n'
-printf 'Filesystem verification only; host discovery may require a new Codex task.\n'
+printf 'Filesystem verification only; this does not register Codex cloud skills. Use plain-text B3 routing in AGENTS.md.\n'
