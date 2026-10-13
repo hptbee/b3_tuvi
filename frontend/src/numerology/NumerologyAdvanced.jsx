@@ -27,7 +27,7 @@ export default function NumerologyAdvanced({ birthGrid, cycles, pinnacles }) {
     <section className="num-pinnacle-section" aria-labelledby="num-pinnacle-heading">
       <div className="section-kicker">BỐN GIAI ĐOẠN TUỔI</div><h2 id="num-pinnacle-heading">Đỉnh cao và thử thách</h2>
       <p>Tuổi tính đến {pinnacles.asOf.split('-').reverse().join('/')}: <strong>{pinnacles.completedAge}</strong>. Giai đoạn đầu kết thúc ở tuổi {pinnacles.firstCycleEndAge}, vì gốc Đường đời là {pinnacles.lifePathRoot}. Sinh ngày 29/02 dùng 01/03 trong năm không nhuận.</p>
-      <p>Số 0 là một thử thách hợp lệ. Nó không có nghĩa là giai đoạn đó không có thử thách. Nhóm này chưa có lời luận.</p>
+      <p>Thử thách dùng cùng cửa sổ tuổi với đỉnh cao theo quy ước của hồ sơ này. Một số tài liệu khác chỉ ước lượng thời lượng thử thách và để các giai đoạn chồng lên nhau. Số 0 là một thử thách hợp lệ, không có nghĩa là giai đoạn đó không có gì để để ý. Nhóm này chưa có lời luận.</p>
       <ol className="num-pinnacle-list">{pinnacles.periods.map((period, index) => {
         const label = `Giai đoạn ${index + 1}`;
         const range = period.endAgeInclusive === null ? `Từ ${period.startAgeInclusive} tuổi` : `${period.startAgeInclusive}–${period.endAgeInclusive} tuổi`;

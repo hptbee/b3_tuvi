@@ -38,26 +38,32 @@ export function createContentStore(catalogInput, sourceInput) {
     }
     requireValid(catalog.contexts !== null && typeof catalog.contexts === 'object' && !Array.isArray(catalog.contexts) && Object.keys(catalog.contexts).length > 0 && Object.keys(catalog.contexts).length <= CONTENT_METRICS.length);
     const entries = new Map();
+    const readingTexts = [];
     for (const [metricId, context] of Object.entries(catalog.contexts)) {
-        requireValid(CONTENT_METRICS.includes(metricId) && shape(context, ['label', 'opening', 'application', 'prompt', 'values']) && [context.label, context.opening, context.application, context.prompt].every(text));
+        requireValid(CONTENT_METRICS.includes(metricId) && shape(context, ['label', 'opening', 'application', 'prompt', 'values', 'readings']) && [context.label, context.opening, context.application, context.prompt].every(text));
         requireValid(Array.isArray(context.values) && context.values.length > 0 && context.values.length <= 12 && new Set(context.values).size === context.values.length);
+        requireValid(context.readings !== null && typeof context.readings === 'object' && !Array.isArray(context.readings) && Object.keys(context.readings).length === context.values.length);
         for (const value of context.values) {
             requireValid(supportedMeaningValue(metricId, value) && catalog.themes[value]);
             const theme = catalog.themes[value], source = sources.get(theme.sourceId);
+            const reading = context.readings[String(value)];
+            requireValid(text(reading) && reading !== theme.body && !readingTexts.includes(reading) && !entries.has(`${metricId}/${value}`));
+            readingTexts.push(reading);
             entries.set(`${metricId}/${value}`, {
-                contentId: `${metricId}-${value}-vi-v1`, metricId, value, kind: 'original_editorial',
-                title: `${context.label} ${value} · ${theme.title}`, summary: `${context.opening} ${theme.body}`,
+                contentId: `${metricId}-${value}-vi-v2`, metricId, value, kind: 'original_editorial',
+                title: `${context.label} ${value} · ${theme.title}`, summary: `${context.opening} ${reading} ${theme.body}`,
                 reflectionPrompts: [context.prompt, theme.prompt], limitations: [context.application, 'Góc nhìn biểu tượng để suy ngẫm; không phải kết luận khoa học hoặc dự báo.'],
                 sourceReferences: [{ id: source.id, title: source.title, url: source.locator, evidenceClass: source.evidenceClass, relationship: source.relationship, section: theme.sourceSection }],
                 reviewStatus: 'editorial_reviewed', evidenceStatus: 'community_reference', expertVerified: false
             });
         }
     }
+    requireValid(readingTexts.length === entries.size);
     const reviewed = catalog.review.status === 'editorial_reviewed' && catalog.review.approvedForPublic && [...sources.values()].every(source => source.status === 'reference_checked');
     const publishedVersion = reviewed ? catalog.version : null;
     return {
         contentVersion: publishedVersion,
-        getMeaning(metricId, value, { profileId = catalog.profileId, profileVersion = '1.1.0', locale = catalog.locale } = {}) {
+        getMeaning(metricId, value, { profileId = catalog.profileId, profileVersion = '1.2.0', locale = catalog.locale } = {}) {
             const compatible = profileId === catalog.profileId && catalog.compatibleProfileVersions.includes(profileVersion) && locale === catalog.locale;
             const entry = entries.get(`${metricId}/${value}`);
             if (!reviewed || !compatible || !entry) return { meaning: null, meaningStatus: 'withheld', meaningReason: !compatible ? 'profile_mismatch' : !reviewed ? 'content_unreviewed' : 'source_unavailable' };

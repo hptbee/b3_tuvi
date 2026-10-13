@@ -6,7 +6,7 @@ import { CONTENT_METRICS, createContentStore, supportedMeaningValue } from '../s
 const approved = structuredClone(catalog);
 approved.review = { status: 'editorial_reviewed', approvedForPublic: true, reviewerRole: 'independent_editorial_reviewer', evidenceId: 'test-only-fixture-approval' };
 const store = createContentStore(approved, sources);
-assert.equal(store.contentVersion, '1.0.0');
+assert.equal(store.contentVersion, '1.1.0');
 let published = 0;
 for (const metricId of CONTENT_METRICS) for (const value of [1,2,3,4,5,6,7,8,9,11,22,33]) {
     const result = store.getMeaning(metricId, value);
@@ -28,6 +28,16 @@ assert.equal(published, 102);
 assert.equal(store.getMeaning('lifePath', 33).meaningReason, 'source_unavailable');
 assert.equal(store.getMeaning('lifePath', 33).meaning, null); // Never replace master33 by root6 text.
 assert.notEqual(store.getMeaning('lifePath', 4).meaning.summary, store.getMeaning('soulUrge', 4).meaning.summary);
+assert.ok(store.getMeaning('lifePath', 4).meaning.summary.includes('nhiều năm'));
+assert.ok(store.getMeaning('personalDay', 4).meaning.summary.includes('một ngày'));
+assert.ok(store.getMeaning('lifePath', 11).meaning.summary.includes('không luận bằng gốc 2'));
+assert.equal(store.getMeaning('lifePath', 4).meaning.contentId, 'lifePath-4-vi-v2');
+const risky = /(bạn sẽ|chắc chắn|định mệnh|chẩn đoán|sự nghiệp|kết hôn|giàu có)/iu;
+for (const metricId of CONTENT_METRICS) for (const value of [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22]) {
+    const meaning = store.getMeaning(metricId, value).meaning;
+    if (!meaning) continue;
+    assert.equal(risky.test(meaning.summary), false, `${metricId}/${value}`);
+}
 assert.notDeepEqual(store.getMeaning('personalYear', 4).meaning.reflectionPrompts, store.getMeaning('personalDay', 4).meaning.reflectionPrompts);
 for (const selector of [{ profileVersion: '1.0.0' }, { profileId: 'fake' }, { locale: 'en-US' }]) {
     assert.equal(store.getMeaning('lifePath', 4, selector).meaning, null);

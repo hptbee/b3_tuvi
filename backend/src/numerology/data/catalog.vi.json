@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "locale": "vi-VN",
   "profileId": "pythagorean-vn-v1",
   "compatibleProfileVersions": [
@@ -10,82 +10,82 @@
     "status": "editorial_reviewed",
     "approvedForPublic": true,
     "reviewerRole": "independent_editorial_reviewer",
-    "evidenceId": "autodev-T008-editorial-review-1"
+    "evidenceId": "editorial-content-1.1.0-2026-10-13"
   },
   "themes": {
     "1": {
       "title": "Tự chủ và khởi đầu",
-      "body": "Hãy thử dùng chủ đề tự chủ để nhìn lại một lựa chọn đang chờ bạn quyết định. Một bước nhỏ có lý do rõ ràng có thể hữu ích hơn việc cố chứng minh mình phải dẫn đầu.",
+      "body": "Chủ đề số 1 là tự chủ: một bước có lý do rõ, không phải chứng minh mình phải dẫn đầu.",
       "prompt": "Đâu là một việc bạn có thể chủ động bắt đầu, và khi nào bạn cần nhờ hỗ trợ?",
       "sourceId": "motivational-community-c0535c9",
       "sourceSection": "destiny.1"
     },
     "2": {
       "title": "Lắng nghe và hợp tác",
-      "body": "Chủ đề hợp tác gợi một cách nhìn về sự cân bằng giữa tiếng nói của mình và người khác. Lắng nghe có thể đi cùng việc nói rõ nhu cầu; không cần giữ hòa khí bằng mọi giá.",
+      "body": "Chủ đề số 2 là hợp tác: lắng nghe đi cùng việc nói rõ nhu cầu của mình.",
       "prompt": "Bạn muốn trao đổi điều gì để hai bên hiểu nhau hơn?",
       "sourceId": "motivational-community-c0535c9",
       "sourceSection": "destiny.2"
     },
     "3": {
       "title": "Biểu đạt và sáng tạo",
-      "body": "Bạn có thể dùng chủ đề biểu đạt để thử một cách trình bày mới cho điều mình nghĩ. Sáng tạo không chỉ là nghệ thuật; đôi khi đó là tìm một lời giải dễ hiểu hoặc chia sẻ một ý tưởng chưa hoàn chỉnh.",
+      "body": "Chủ đề số 3 là biểu đạt: một ý chưa hoàn chỉnh vẫn có thể được đưa ra cho người khác xem.",
       "prompt": "Ý tưởng nào bạn muốn thử diễn đạt bằng lời, hình ảnh hoặc một việc làm nhỏ?",
       "sourceId": "motivational-community-c0535c9",
       "sourceSection": "destiny.3"
     },
     "4": {
       "title": "Nền tảng và sự đều đặn",
-      "body": "Chủ đề nền tảng gợi việc xem lại những thói quen đang giúp bạn tiến lên. Sự đều đặn hữu ích khi còn chỗ cho nghỉ ngơi và điều chỉnh, thay vì biến mọi việc thành một quy tắc cứng.",
+      "body": "Chủ đề số 4 là nền tảng: sự đều đặn có ích khi còn chỗ để nghỉ và sửa quy tắc.",
       "prompt": "Thói quen nào cần giữ, và quy tắc nào đã đến lúc linh hoạt hơn?",
       "sourceId": "motivational-community-c0535c9",
       "sourceSection": "destiny.4"
     },
     "5": {
       "title": "Khám phá và linh hoạt",
-      "body": "Bạn có thể xem chủ đề khám phá như lời mời thử một góc nhìn khác. Trải nghiệm mới sẽ có ý nghĩa hơn khi bạn chọn điều muốn học và giới hạn phù hợp, thay vì thay đổi chỉ để tránh sự nhàm chán.",
+      "body": "Chủ đề số 5 là khám phá: trải nghiệm mới cần một giới hạn, không phải đổi chỉ để qua sự nhàm chán.",
       "prompt": "Bạn muốn thử điều gì mới trong phạm vi mình có thể kiểm soát?",
       "sourceId": "motivational-community-c0535c9",
       "sourceSection": "destiny.5"
     },
     "6": {
       "title": "Chăm sóc và trách nhiệm",
-      "body": "Chủ đề chăm sóc gợi việc nhìn lại cách bạn dành thời gian cho những điều quan trọng. Trách nhiệm cũng bao gồm việc nhận ra giới hạn của mình và cho người khác cơ hội tự quyết định.",
+      "body": "Chủ đề số 6 là chăm sóc: trách nhiệm gồm cả việc thấy giới hạn của mình.",
       "prompt": "Bạn có thể quan tâm đến người khác mà vẫn giữ một khoảng dành cho bản thân như thế nào?",
       "sourceId": "motivational-community-c0535c9",
       "sourceSection": "destiny.6"
     },
     "7": {
       "title": "Tìm hiểu và chiêm nghiệm",
-      "body": "Bạn có thể dùng chủ đề tìm hiểu để đặt câu hỏi sâu hơn trước khi kết luận. Khoảng lặng có thể giúp suy nghĩ rõ, nhưng trải nghiệm và phản hồi thực tế cũng là cách kiểm tra điều mình tin.",
+      "body": "Chủ đề số 7 là tìm hiểu: câu hỏi cần dữ kiện hoặc một người để đối chiếu, chưa phải kết luận.",
       "prompt": "Bạn cần tìm thêm dữ kiện hay trò chuyện với ai để hiểu vấn đề này?",
       "sourceId": "motivational-community-c0535c9",
       "sourceSection": "destiny.7"
     },
     "8": {
       "title": "Điều phối và trách nhiệm chung",
-      "body": "Chủ đề điều phối gợi việc sắp xếp nguồn lực và xem ảnh hưởng của quyết định lên người khác. Điều đáng quan sát là cách bạn làm việc có trách nhiệm, không phải một lời hứa về quyền lực hoặc thành công.",
+      "body": "Chủ đề số 8 là điều phối: đáng xem cách làm việc có trách nhiệm, không phải lời hứa về quyền lực.",
       "prompt": "Bạn muốn tổ chức việc gì rõ ràng hơn, và ai cần được tham gia quyết định?",
       "sourceId": "motivational-community-c0535c9",
       "sourceSection": "destiny.8"
     },
     "9": {
       "title": "Đóng góp và nhìn rộng",
-      "body": "Bạn có thể dùng chủ đề đóng góp để nhìn lại điều mình đã học và muốn chia sẻ. Giúp đỡ có thể bắt đầu rất nhỏ; lựa chọn phù hợp với khả năng hiện tại thường bền vững hơn kỳ vọng phải làm được tất cả.",
+      "body": "Chủ đề số 9 là đóng góp vừa sức: việc nhỏ và có giới hạn thường bền hơn kỳ vọng phải làm hết.",
       "prompt": "Điều gì đáng tổng kết hoặc chia sẻ, và bạn cần đặt giới hạn ở đâu?",
       "sourceId": "motivational-community-c0535c9",
       "sourceSection": "destiny.9"
     },
     "11": {
       "title": "Lắng nghe tinh tế",
-      "body": "Chủ đề của số 11 trong nguồn tham khảo gợi việc chú ý đến trải nghiệm và đối thoại. Bạn có thể ghi nhận cảm nhận của mình rồi kiểm tra bằng trao đổi và dữ kiện; con số không chứng minh một khả năng đặc biệt.",
+      "body": "Chủ đề số 11 là chú ý cảm nhận rồi kiểm tra lại. Giữ nguyên 11, không thay bằng gốc 2, và con số không chứng minh một khả năng đặc biệt.",
       "prompt": "Cảm nhận nào bạn muốn kiểm tra lại trước khi hành động?",
       "sourceId": "motivational-community-c0535c9",
       "sourceSection": "destiny.11"
     },
     "22": {
       "title": "Ý tưởng và cách thực hiện",
-      "body": "Chủ đề số 22 gợi việc nối một ý tưởng lớn với các bước có thể làm được. Có thể bắt đầu bằng việc xác định mục tiêu, nguồn lực và một thử nghiệm nhỏ; con số không bảo đảm kết quả hay vị thế.",
+      "body": "Chủ đề số 22 là nối một ý lớn với bước làm được. Giữ nguyên 22, không thay bằng gốc 4, và con số không bảo đảm kết quả.",
       "prompt": "Bạn muốn chia một kế hoạch thành bước đầu tiên cụ thể nào?",
       "sourceId": "motivational-community-c0535c9",
       "sourceSection": "destiny.22"
@@ -109,7 +109,20 @@
         9,
         11,
         22
-      ]
+      ],
+      "readings": {
+        "1": "Ở đường đời, số 1 là câu hỏi cho một hướng đi nhiều năm: việc nào bạn thực sự tự quyết, việc nào chỉ để chứng tỏ.",
+        "2": "Đường đời 2 nhìn những chặng dài cần người đi cùng. Việc đáng xét là mối hợp tác nào còn chỗ cho nhu cầu của bạn.",
+        "3": "Đường đời 3 xem cách một ý tưởng được nuôi trong nhiều năm. Hướng đi bền thường bắt đầu bằng việc nói rõ một ý rồi làm đến nơi.",
+        "4": "Đường đời 4 hỏi bạn đang dựng điều gì còn đứng được sau nhiều năm. Nhịp đều chỉ có ích khi quy tắc lỗi thời vẫn sửa được.",
+        "5": "Đường đời 5 không bắt bạn đổi chỗ ở hay việc làm. Một hướng dài cần vài lần thử có giới hạn, rồi giữ lại phần đã học.",
+        "6": "Đường đời 6 hay xoay quanh việc chăm người và việc chung. Câu hỏi dài hạn là bạn gánh phần nào, và phần nào trả lại cho người có quyền tự quyết.",
+        "7": "Đường đời 7 hợp những chặng cần hiểu trước khi chọn. Khoảng lặng chỉ có ích khi sau đó bạn đối chiếu điều mình tin với việc đang xảy ra.",
+        "8": "Đường đời 8 đặt trọng tâm vào cách điều phối nguồn lực qua nhiều năm. Không có lời hứa về quyền lực; chỉ có câu hỏi bạn đang phụ trách điều gì và ai chịu ảnh hưởng.",
+        "9": "Đường đời 9 gợi việc khép một chặng và chia sẻ phần đã học. Bạn có thể kết thúc cho gọn mà không ôm việc của tất cả mọi người.",
+        "11": "Đường đời 11 giữ nguyên số 11, không luận bằng gốc 2. Chủ đề là ghi nhận cảm nhận rồi kiểm tra; con số không chứng minh khả năng đặc biệt.",
+        "22": "Đường đời 22 giữ nguyên số 22, không luận bằng gốc 4. Ý lớn cần một bước làm được trong quãng đời này; số này không bảo đảm kết quả."
+      }
     },
     "birthday": {
       "label": "Ngày sinh",
@@ -128,7 +141,20 @@
         9,
         11,
         22
-      ]
+      ],
+      "readings": {
+        "1": "Ngày sinh 1 chỉ nói về nhịp mở việc: bạn có thể tự bắt đầu khi mục tiêu đã rõ, không cần đợi đủ tự tin mới viết dòng đầu.",
+        "2": "Ngày sinh 2 gợi cách mở đầu bằng một câu hỏi cho người cùng làm. Bắt đầu không có nghĩa là nhường hết quyền quyết.",
+        "3": "Ngày sinh 3 thường khởi động bằng một ý còn thô. Bạn có thể gửi bản nháp trước khi nó đẹp.",
+        "4": "Ngày sinh 4 bắt đầu bằng một khung nhỏ: việc hôm nay, giờ làm, điểm dừng. Khung đó là cách vào việc, không phải nhận xét về tính cách.",
+        "5": "Ngày sinh 5 dễ mở bằng một thử nghiệm ngắn. Chọn một điều bạn muốn học, rồi dừng khi đủ dữ kiện.",
+        "6": "Ngày sinh 6 hay bắt đầu từ việc ai đang cần. Trước khi nhận, hỏi phần này có phải của bạn không.",
+        "7": "Ngày sinh 7 khởi động chậm vì cần một câu hỏi đúng. Viết câu hỏi đó ra cũng là đã bắt đầu.",
+        "8": "Ngày sinh 8 mở việc bằng cách chia phần: ai làm, hạn nào, xong thì trông như thế nào. Đó là cách vào việc, không phải lời hứa thành quả.",
+        "9": "Ngày sinh 9 có khi bắt đầu bằng việc dọn một đầu việc còn dang dở. Khép việc cũ cũng là một cách khởi động.",
+        "11": "Ngày sinh 11 là chính ngày 11, giữ số master, không rút thành 2. Cảm nhận lúc bắt đầu cần được ghi lại rồi hỏi thêm một người.",
+        "22": "Ngày sinh 22 là chính ngày 22, giữ số master, không rút thành 4. Hãy bắt bằng bước nhỏ nhất của kế hoạch, không bằng một tuyên bố."
+      }
     },
     "attitude": {
       "label": "Thái độ",
@@ -145,7 +171,18 @@
         7,
         8,
         9
-      ]
+      ],
+      "readings": {
+        "1": "Thái độ 1 là phản ứng đầu khi có việc mới: muốn tự nắm. Hữu ích hơn nếu bạn nói mình cần gì, thay vì tranh vai.",
+        "2": "Thái độ 2 là phản ứng đầu nghiêng về giữ nhịp với người kia. Bạn vẫn có thể nói một nhu cầu mà không làm hỏng cuộc trò chuyện.",
+        "3": "Thái độ 3 phản ứng bằng lời, một câu đùa hoặc một ý. Hãy kiểm tra người kia đã hiểu việc chính chưa.",
+        "4": "Thái độ 4 phản ứng bằng cách tìm quy tắc. Hỏi quy tắc nào đang giúp, quy tắc nào chỉ làm bạn cứng lại trong tình huống này.",
+        "5": "Thái độ 5 phản ứng bằng muốn đổi ngay. Khoanh một thứ được phép đổi và một thứ cần giữ.",
+        "6": "Thái độ 6 phản ứng bằng muốn lo liệu. Dừng một nhịp để xem người kia có nhờ bạn không.",
+        "7": "Thái độ 7 phản ứng bằng im và quan sát. Sau đó nói điều bạn còn thiếu, đừng kết luận sớm.",
+        "8": "Thái độ 8 phản ứng bằng muốn xếp việc cho xong. Nói hạn và người chịu ảnh hưởng, đừng biến phản ứng thành lệnh.",
+        "9": "Thái độ 9 phản ứng bằng muốn thu lại bức tranh lớn. Một câu về điều đã học thường đủ, chưa cần giải quyết hết."
+      }
     },
     "expression": {
       "label": "Biểu đạt",
@@ -164,7 +201,20 @@
         9,
         11,
         22
-      ]
+      ],
+      "readings": {
+        "1": "Biểu đạt 1 là cách một ý của bạn trở thành việc người khác thấy được. Chọn một việc bạn đứng tên, và một việc bạn cần người hỗ trợ.",
+        "2": "Biểu đạt 2 hiện ra khi bạn đưa ý qua đối thoại. Viết giúp người kia biết bạn đang đề nghị gì, không chỉ đang lắng nghe.",
+        "3": "Biểu đạt 3 đưa suy nghĩ thành lời, nét hoặc một bản thử. Chọn một dạng rồi làm đến điểm người khác xem được.",
+        "4": "Biểu đạt 4 biến ý tưởng thành một trình tự. Người xem cần thấy bước một và điểm dừng, không cần một hệ thống hoàn chỉnh.",
+        "5": "Biểu đạt 5 thử một cách trình bày khác cách bạn hay dùng. Giữ nguyên nội dung, chỉ đổi hình thức trong một lần.",
+        "6": "Biểu đạt 6 chú ý lời bạn nói đang đỡ người nhận hay vô tình quyết định thay họ. Sửa một câu cho đúng phần của bạn.",
+        "7": "Biểu đạt 7 cần một lập luận người khác kiểm được. Đưa dữ kiện hoặc ví dụ, không chỉ kết luận.",
+        "8": "Biểu đạt 8 sắp ý thành việc giao được. Nói ai cần biết, trước hạn nào, và bạn không hứa kết quả thay cho cả nhóm.",
+        "9": "Biểu đạt 9 gom những gì đã hiểu thành một điều đáng chia sẻ. Cắt phần không còn cần.",
+        "11": "Biểu đạt 11 giữ số 11. Hãy diễn một cảm nhận thành câu có thể kiểm, đừng để số 11 bị đọc thành trực giác đã được chứng minh.",
+        "22": "Biểu đạt 22 giữ số 22. Chia một ý lớn thành sản phẩm nhỏ nhất mà người khác dùng thử được."
+      }
     },
     "soulUrge": {
       "label": "Linh hồn",
@@ -183,7 +233,20 @@
         9,
         11,
         22
-      ]
+      ],
+      "readings": {
+        "1": "Linh hồn 1 hỏi điều gì làm bạn thấy đáng được tự quyết. Ghi một việc bạn muốn giữ quyền chọn trong thời gian này.",
+        "2": "Linh hồn 2 hỏi sự kết nối nào còn đúng với bạn. Nói một nhu cầu trước khi lo giữ hòa khí.",
+        "3": "Linh hồn 3 hỏi ý nào bạn muốn được thốt ra. Chọn một ý còn dang dở và cho nó một câu.",
+        "4": "Linh hồn 4 hỏi nhịp sống nào làm bạn yên. Giữ một thói quen còn giúp, bỏ một quy tắc chỉ vì đã quen.",
+        "5": "Linh hồn 5 hỏi trải nghiệm nào bạn thật sự muốn hiểu. Chọn một cuộc thử có điểm dừng.",
+        "6": "Linh hồn 6 hỏi bạn đang chăm điều gì vì thấy đáng, và điều gì vì ngại từ chối.",
+        "7": "Linh hồn 7 hỏi câu hỏi nào bạn chưa chịu bỏ. Dành thời gian tìm một nguồn để kiểm nó.",
+        "8": "Linh hồn 8 hỏi trách nhiệm nào bạn muốn nhận vì thấy có nghĩa. Viết luôn giới hạn của trách nhiệm đó.",
+        "9": "Linh hồn 9 hỏi điều bạn muốn khép lại để còn chỗ cho việc khác.",
+        "11": "Linh hồn 11 giữ số 11, không phải gốc 2. Cảm nhận mạnh chưa phải nhu cầu đã được kiểm; hãy nói nó với một người bạn tin.",
+        "22": "Linh hồn 22 giữ số 22. Ước muốn làm điều lớn cần một lý do của riêng bạn, không phải một vị thế được hứa trước."
+      }
     },
     "personality": {
       "label": "Nhân cách",
@@ -202,7 +265,20 @@
         9,
         11,
         22
-      ]
+      ],
+      "readings": {
+        "1": "Nhân cách 1 là ấn tượng lúc mới gặp: bạn có vẻ tự lo được việc. Nếu đó không phải điều bạn muốn người kia hiểu, hãy nói thêm một câu.",
+        "2": "Nhân cách 2 dễ để người khác thấy bạn dễ bàn. Hãy chủ động nói một điểm bạn không nhường.",
+        "3": "Nhân cách 3 thường lộ ra bằng cách nói. Hỏi người đối diện đã nhận đúng ý chính chưa.",
+        "4": "Nhân cách 4 có thể trông như người thích ngăn nắp. Đó là vẻ của lần gặp này, không phải mô tả cả con người bạn.",
+        "5": "Nhân cách 5 có thể trông linh hoạt hoặc khó đoán. Bạn muốn người kia hiểu giới hạn nào của mình?",
+        "6": "Nhân cách 6 dễ bị đọc là người hay lo. Bạn có thể nói rõ mình sẵn sàng giúp đến đâu.",
+        "7": "Nhân cách 7 có khi trông kín. Một câu về điều bạn đang tìm hiểu giúp người kia khỏi đoán thay.",
+        "8": "Nhân cách 8 có thể bị đọc thành người muốn cầm trịch. Nói mục tiêu cuộc gặp và phần bạn không quyết định một mình.",
+        "9": "Nhân cách 9 có thể trông như người đứng xa một chút. Nếu bạn muốn gần hơn, hãy nói điều đó.",
+        "11": "Nhân cách 11 giữ số 11. Vẻ trầm hoặc nhạy lúc gặp mặt không chứng minh một năng lực đặc biệt.",
+        "22": "Nhân cách 22 giữ số 22. Người kia có thể thấy bạn nói việc lớn; hãy chỉ cho họ bước trước mắt."
+      }
     },
     "maturity": {
       "label": "Trưởng thành",
@@ -221,7 +297,20 @@
         9,
         11,
         22
-      ]
+      ],
+      "readings": {
+        "1": "Trưởng thành 1 nối việc bạn đã tự làm được với bước tiếp theo. Chọn một kinh nghiệm cũ còn dùng được, và một chỗ cần nhờ người khác.",
+        "2": "Trưởng thành 2 nhìn lại những lần hợp tác đã dạy bạn nói nhu cầu. Mang một bài học đó vào mục tiêu hiện tại.",
+        "3": "Trưởng thành 3 hỏi cách trình bày nào bạn đã thử và muốn giữ. Không có lịch tuổi nào bắt bạn phải sáng tạo theo một kiểu cố định.",
+        "4": "Trưởng thành 4 gom thói quen đã cứu bạn và quy tắc đã lỗi thời. Giữ phần còn giúp cho mục tiêu tới.",
+        "5": "Trưởng thành 5 hỏi lần đổi nào thật sự dạy bạn điều gì. Mang giới hạn đó sang việc đang làm, không đổi cho có.",
+        "6": "Trưởng thành 6 nhìn lại cách bạn từng chăm người khác. Mục tiêu mới cần một khoảng bạn không giao hết cho việc của người kia.",
+        "7": "Trưởng thành 7 dùng những câu hỏi cũ đã được kiểm. Việc tới cần một dữ kiện mới, không cần một lời tiên đoán theo tuổi.",
+        "8": "Trưởng thành 8 nhìn lại lần bạn đã điều phối và lần bạn đã ôm quá phần. Mục tiêu tới cần danh sách người cùng quyết.",
+        "9": "Trưởng thành 9 là chỗ tổng kết. Viết điều đã xong và điều bạn không còn nhận.",
+        "11": "Trưởng thành 11 giữ số 11, không rút thành 2 rồi mới luận. Kinh nghiệm đã có dùng để kiểm cảm nhận, không để chứng minh bạn đặc biệt.",
+        "22": "Trưởng thành 22 giữ số 22. Kế hoạch lớn lấy từ việc bạn đã làm được một phần; không có mốc tuổi bắt buộc."
+      }
     },
     "personalYear": {
       "label": "Năm cá nhân",
@@ -238,7 +327,18 @@
         7,
         8,
         9
-      ]
+      ],
+      "readings": {
+        "1": "Năm cá nhân 1 là một năm lịch để chọn một việc tự bắt đầu trong năm đó. Con số không dự báo năm đó thuận hay nghịch.",
+        "2": "Năm cá nhân 2 gợi dành sự chú ý cho một cuộc trao đổi còn nợ trong năm dương lịch đang xem. Chọn người và việc cần nói.",
+        "3": "Năm cá nhân 3 hỏi bạn muốn đưa ý nào ra ngoài trong năm đang xem. Một sản phẩm nhỏ là đủ.",
+        "4": "Năm cá nhân 4 không phải đường đời 4: đây là nhịp của một năm, không phải hướng cả đời. Chọn một thói quen giữ đến hết năm lịch và một quy tắc sẽ nới.",
+        "5": "Năm cá nhân 5 mời một thử nghiệm có ngày kết thúc trong năm đang xem. Viết điều bạn muốn học, không đổi cả kế hoạch sống.",
+        "6": "Năm cá nhân 6 hỏi việc chăm sóc nào thuộc năm nay. Ghi giới hạn thời gian bạn thực sự có.",
+        "7": "Năm cá nhân 7 dành một phần năm lịch để kiểm một câu hỏi. Chọn nguồn cần đọc hoặc người cần hỏi.",
+        "8": "Năm cá nhân 8 là năm nhìn lại cách phân việc và nguồn lực. Không có cam kết tiền bạc nào đi kèm con số.",
+        "9": "Năm cá nhân 9 hợp việc kết sổ những gì còn mở trong năm dương lịch. Liệt kê thứ sẽ đóng trước ngày cuối năm."
+      }
     },
     "personalMonth": {
       "label": "Tháng cá nhân",
@@ -255,7 +355,18 @@
         7,
         8,
         9
-      ]
+      ],
+      "readings": {
+        "1": "Tháng cá nhân 1 chỉ là ưu tiên gần: một việc bạn mở trong tháng đang chọn. Sang tháng sau câu hỏi sẽ khác.",
+        "2": "Tháng cá nhân 2 gợi một cuộc hẹn hoặc một tin nhắn còn thiếu trong tháng này. Con số không kết luận tháng đó dễ hay khó.",
+        "3": "Tháng cá nhân 3 hỏi cái gì đáng cho người khác xem trước khi tháng hết. Một bản nháp là đủ.",
+        "4": "Tháng cá nhân 4 không lặp lời đường đời. Trong tháng này, việc đều đặn là một lịch nhỏ: ngày nào làm, ngày nào nghỉ.",
+        "5": "Tháng cá nhân 5 thử một thay đổi có thể đảo lại trước cuối tháng. Giữ nguyên những việc không nằm trong thử nghiệm.",
+        "6": "Tháng cá nhân 6 hỏi một người hoặc một việc nhà đáng chăm trong tháng, và việc nào không nhận thêm.",
+        "7": "Tháng cá nhân 7 dành vài buổi trong tháng để tìm dữ kiện cho một quyết định đang chờ. Chưa cần chốt nếu còn thiếu.",
+        "8": "Tháng cá nhân 8 dùng để chốt ai phụ trách một việc trong tháng. Không biến con số thành kế hoạch tiền bạc.",
+        "9": "Tháng cá nhân 9 là tháng gói những đầu việc nhỏ còn mở. Cái chưa xong thì chuyển có chủ, không bỏ im."
+      }
     },
     "personalDay": {
       "label": "Ngày cá nhân",
@@ -272,7 +383,18 @@
         7,
         8,
         9
-      ]
+      ],
+      "readings": {
+        "1": "Ngày cá nhân 1 chỉ nhắc một việc nhỏ bạn có thể tự bắt trong ngày đang xem. Ngày mai là một số khác; hôm nay không tốt hay xấu.",
+        "2": "Ngày cá nhân 2 nhắc một câu bạn muốn nói với một người trong ngày này. Xong việc đó là đủ.",
+        "3": "Ngày cá nhân 3 nhắc viết, vẽ hoặc nói một ý còn kẹt trong hôm nay. Không cần hoàn chỉnh.",
+        "4": "Ngày cá nhân 4 khác hẳn đường đời 4: chỉ là cách dùng một ngày. Chọn một khối giờ và một điểm dừng, rồi thôi.",
+        "5": "Ngày cá nhân 5 nhắc thử một cách làm khác trong một việc nhỏ hôm nay. Giữ phần còn lại như cũ.",
+        "6": "Ngày cá nhân 6 nhắc một việc chăm sóc vừa sức trong ngày, kèm một việc không nhận thêm.",
+        "7": "Ngày cá nhân 7 nhắc ghi một câu hỏi và một chỗ để tra trong hôm nay. Đừng kết luận trước buổi tối.",
+        "8": "Ngày cá nhân 8 nhắc sắp một việc: ai cần biết, trước giờ nào. Không phải một ngày hứa hẹn thành quả.",
+        "9": "Ngày cá nhân 9 nhắc đóng một việc nhỏ trước khi ngày hết. Phần còn lại để ngày khác."
+      }
     }
   }
 }
