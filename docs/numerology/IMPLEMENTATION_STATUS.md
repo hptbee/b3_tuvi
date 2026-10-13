@@ -23,7 +23,7 @@ Frontend chỉ hiển thị kết quả server, không copy công thức. Engine
 - Đường đời cộng tất cả chữ số ngày sinh, khác phương pháp rút gọn từng thành phần.
 - Giữ 11/22/33 cho Đường đời, Ngày sinh, Biểu đạt, Linh hồn, Nhân cách, Trưởng thành; Thái độ về 1–9. Master vẫn có `rootValue`.
 - Tên: NFC/NFD tương đương, accent whitelist Latin/tiếng Việt, Đ → D, A–Z → 1–9, nguyên âm AEIOU, Y là phụ âm. Cho phép khoảng trắng/gạch nối/apostrophe như spec; từ chối ký tự ẩn, unsupported script/mark/ligature thay vì bỏ âm thầm. Tên rỗng/whitespace thường là không có tên.
-- `status=experimental`, `sourceStatus=product_specification_only`. Catalog `1.1.0` xuất lời `experimental_editorial` cho bảy chỉ số cốt lõi và ba chu kỳ (102 mục). Mỗi mục có đoạn riêng theo chỉ số, cộng một motif số ngắn. Đỉnh cao và thử thách giữ `meaning=null`, lý do `content_not_in_scope`. Số 33 không có bài. Review: [CONTENT_1_1_REVIEW.md](reviews/CONTENT_1_1_REVIEW.md).
+- `status=experimental`, `sourceStatus=product_specification_only`. Catalog `1.2.0` giữ 102 bài cốt lõi và chu kỳ của `1.1.0`, rồi thêm 44 bài đỉnh theo giai đoạn và 8 bài thử thách. Thử thách 0 và số 33 không có bài. Review: [CONTENT_1_1_REVIEW.md](reviews/CONTENT_1_1_REVIEW.md), [CONTENT_1_2_REVIEW.md](reviews/CONTENT_1_2_REVIEW.md). Hai lượt review không phải xác minh chuyên gia.
 
 [Formula spec](FORMULA_SPEC.md), [decision register](DECISIONS.md), [source registry](SOURCE_REGISTRY.md), [fixture handbook](FIXTURES.md) và [API contract](API_CONTRACT.md) ghi quy ước thực tế. Fixture số học được tính độc lập với mã engine. Chúng kiểm chứng đúng theo quy ước sản phẩm, không chứng minh một ấn bản sách đã được đối chiếu. Kiểm toán 2026-10-13 đọc được các trang công thức trên worldnumerology.com; bậc là `source_read`, không phải `edition_verified`. Xem [báo cáo kiểm toán](audits/DEEP_AUDIT_REPORT.md).
 
@@ -70,7 +70,7 @@ T005 thêm tài liệu này và integrated E2E; tìm commit bằng lịch sử G
 ## Chưa triển khai và trình tự tiếp theo
 
 1. **Nguồn/công thức:** profile 1.2.0 khớp fixture của chính nó. Kiểm toán đã đọc các trang công thức Decoz và ghi conflict (Đường đời mọi chữ số, đỉnh không giữ master ở thành phần, Y phụ âm). Chưa có ấn bản sách. Nếu đổi quy ước thì tạo profile/version và fixture mới; không sửa số của 1.2.0.
-2. **Nội dung:** catalog `1.1.0` đã qua review biên tập cho 102 mục chỉ số cốt lõi và chu kỳ. Không có lời 33, đỉnh hoặc thử thách. Review không phải xác minh chuyên gia.
-3. **V1 tính năng:** biểu đồ, chu kỳ, đỉnh cao/thử thách, xuất JSON, nhập JSON (tính lại) và in A4 đã có trên nhánh tính năng. Họ tên ra khỏi tệp và bản in trừ khi người dùng chọn.
+2. **Nội dung:** catalog `1.2.0` đã qua review biên tập cho 102 mục cũ cộng bài đỉnh và thử thách 1–8. Không có lời 33 hoặc thử thách 0. Review không phải xác minh chuyên gia hoặc đối chiếu sách.
+3. **Báo cáo:** sơ đồ bốn đỉnh có cạnh đúng phép tính (đỉnh 4 nối tháng và năm), trục tuổi thử thách theo số năm của giai đoạn đã kết thúc, lưới ngày sinh có nét tuyến đang chọn, biểu đồ tên, lưới ghép ngày sinh và tên, chín năm, mười hai tháng, mối nối đúng phép tính, xuất JSON, nhập JSON (tính lại) và in A4 đã có trên nhánh báo cáo. Họ tên ra khỏi tệp và bản in trừ khi người dùng chọn. Năm hoặc tháng trước ngày sinh không gửi ngày xem.
 4. **Release:** limiter trong một process, metadata/`noindex` cho `/la-so`, và checklist staging nằm ở [RELEASE_READINESS.md](RELEASE_READINESS.md). Chưa diễn tập staging, chưa phê duyệt phát hành, và limiter một process không thay proxy khi có nhiều instance.
 6. **Tùy chọn:** nhiều profile, AI, cross-browser; không bắt buộc để chạy calculator hiện tại.

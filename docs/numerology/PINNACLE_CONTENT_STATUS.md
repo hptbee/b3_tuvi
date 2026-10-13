@@ -4,7 +4,7 @@ Ngày: 2026-10-13. Profile `pythagorean-vn-v1` `1.2.0` không đổi phép tính
 
 ## Quyết định
 
-`meaning` của đỉnh và thử thách tiếp tục là `null`, lý do `content_not_in_scope`.
+Catalog `1.2.0` xuất bài riêng cho đỉnh 1–4 (số 1–9, 11, 22) và thử thách 1–8. Thử thách 0 vẫn `content_not_in_scope`: hai thành phần bằng nhau, không đổi thành 9. Số 33 vẫn không có bài.
 
 ## Khoảng trống nguồn
 
@@ -14,6 +14,6 @@ Ngày: 2026-10-13. Profile `pythagorean-vn-v1` `1.2.0` không đổi phép tính
 - Thử thách 0 trên trang Decoz được diễn giải như mang tính chất của số 9 và gắn với nghề. Diễn giải đó không đủ điều kiện để đăng.
 - Profile gắn mỗi thử thách vào đúng cửa sổ tuổi của đỉnh. Trang Decoz nói thời lượng thử thách là ước lượng và có chồng lấn. Đó là `SOURCE_VARIANT` của cách trình bày thời gian, không phải lý do bịa lời mới.
 
-Hai review catalog 1.1.0 cùng nói lời đỉnh và thử thách nên ở ngoài tập đang xuất bản. Xem `docs/numerology/reviews/CONTENT_1_1_REVIEW.md`.
+Catalog 1.1.0 để đỉnh và thử thách ngoài tập xuất bản. Xem `docs/numerology/reviews/CONTENT_1_1_REVIEW.md`.
 
-Khi có nguồn đọc được và một review riêng cho từng số, mới xét catalog mới. Không lấy gốc của master để điền chỗ trống.
+Catalog 1.2.0 xuất bài giai đoạn sau hai review biên tập ghi ở `docs/numerology/reviews/CONTENT_1_2_REVIEW.md`. Bài dùng motif số đã có và đoạn riêng theo cửa sổ tuổi. Không lấy gốc của master để điền chỗ trống. Không có bài cho thử thách 0 hay số 33. Review mô hình không phải xác minh chuyên gia hoặc đối chiếu sách.

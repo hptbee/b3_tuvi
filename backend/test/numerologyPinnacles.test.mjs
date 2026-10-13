@@ -50,9 +50,11 @@ assert.equal(JSON.parse(JSON.stringify(zero)).periods[0].challenge.value, 0);
 assert.equal(zero.periods[0].challenge.operands[0] - zero.periods[0].challenge.operands[1], 0);
 for (const period of zero.periods) {
     assert.equal(period.challenge.value, 0);
-    assert.equal(period.pinnacle.meaning, null);
+    assert.equal(period.challenge.meaning, null);
     assert.equal(period.challenge.meaningStatus, 'withheld');
-    assert.equal(period.pinnacle.meaningReason, 'content_not_in_scope');
+    assert.equal(period.challenge.meaningReason, 'content_not_in_scope');
+    assert.equal(period.pinnacle.meaningStatus, 'experimental_editorial');
+    assert.equal(period.pinnacle.meaning.metricId, period.id);
 }
 
 const baseline = calculateNumerology({ birthDate: { year: 1990, month: 6, day: 15 } }, today);

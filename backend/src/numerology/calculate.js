@@ -6,6 +6,7 @@ import { digitSum, reduceNumber } from './reduction.js';
 import { buildBirthGrid } from './birthGrid.js';
 import { calculateCycles } from './cycles.js';
 import { calculatePinnacles } from './pinnacles.js';
+import { buildCombinedChart, buildNameChart } from './charts.js';
 export { digitSum, reduceNumber } from './reduction.js';
 
 const missing = reason => ({ status: 'unavailable', reason, value: null, meaning: null, meaningStatus: 'withheld' });
@@ -37,18 +38,31 @@ export function calculateNumerology(body, referenceDate) {
             { label: 'lifePath', values: [metrics.lifePath.value], total: metrics.lifePath.value },
             { label: 'expression', values: [metrics.expression.value], total: metrics.expression.value }
         ]) : missing('missing_name');
+    const meaningOptions = { profileId: PROFILE.id, profileVersion: PROFILE.version, locale: PROFILE.locale };
     const cycles = calculateCycles(birthDate, targetDate);
     for (const [id, value] of Object.entries(metrics)) {
-        if (value.status === 'available') Object.assign(value, contentStore.getMeaning(id, value.value, { profileId: PROFILE.id, profileVersion: PROFILE.version, locale: PROFILE.locale }));
+        if (value.status === 'available') Object.assign(value, contentStore.getMeaning(id, value.value, meaningOptions));
     }
     for (const id of ['personalYear', 'personalMonth', 'personalDay']) {
-        Object.assign(cycles[id], contentStore.getMeaning(id, cycles[id].value, { profileId: PROFILE.id, profileVersion: PROFILE.version, locale: PROFILE.locale }));
+        Object.assign(cycles[id], contentStore.getMeaning(id, cycles[id].value, meaningOptions));
+    }
+    for (const item of cycles.yearBand) Object.assign(item.personalYear, contentStore.getMeaning('personalYear', item.personalYear.value, meaningOptions));
+    for (const item of cycles.months) Object.assign(item.personalMonth, contentStore.getMeaning('personalMonth', item.personalMonth.value, meaningOptions));
+    const birthGrid = buildBirthGrid(birthDate);
+    const nameChart = buildNameChart(name);
+    const pinnacles = calculatePinnacles(birthDate, targetDate, metrics.lifePath.rootValue);
+    const publish = (target, metricId, value) => {
+        const editorial = contentStore.getMeaning(metricId, value, meaningOptions);
+        if (editorial.meaningStatus === 'experimental_editorial') Object.assign(target, editorial);
+    };
+    for (const period of pinnacles.periods) {
+        publish(period.pinnacle, period.id, period.pinnacle.value);
+        if (period.challenge.value > 0) publish(period.challenge, 'challenge', period.challenge.value);
     }
     return {
         ok: true, schemaVersion: '1.2.0', profile: publicProfile(), referenceDate,
         contentVersion: contentStore.contentVersion, metrics, nameAnalysis: name,
-        birthGrid: buildBirthGrid(birthDate), cycles,
-        pinnacles: calculatePinnacles(birthDate, targetDate, metrics.lifePath.rootValue),
+        birthGrid, nameChart, combinedChart: buildCombinedChart(birthGrid, nameChart), cycles, pinnacles,
         capabilities: publicProfile().capabilities,
         warnings: name?.letters.some(letter => letter.letter === 'Y') ? [{ code: 'Y_AS_CONSONANT', field: 'fullName' }] : []
     };

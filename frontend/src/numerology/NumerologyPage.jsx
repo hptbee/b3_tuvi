@@ -44,6 +44,7 @@ export default function NumerologyPage() {
   const targetInput = useRef(null);
   const errorBox = useRef(null);
   const resultHeading = useRef(null);
+  const focusResult = useRef(true);
   const fileInput = useRef(null);
   const [includeName, setIncludeName] = useState(false);
   const [importError, setImportError] = useState('');
@@ -59,8 +60,22 @@ export default function NumerologyPage() {
     };
   }, []);
   useEffect(() => {
-    if (request.status === 'ready') resultHeading.current?.focus();
+    if (request.status === 'ready' && focusResult.current) resultHeading.current?.focus();
     if (request.status === 'error' && !request.error.fields.length) errorBox.current?.focus();
+  }, [request]);
+  useEffect(() => {
+    if (request.status !== 'ready' || typeof IntersectionObserver === 'undefined') return undefined;
+    const nav = document.querySelector('.num-toc');
+    if (!nav) return undefined;
+    const links = [...nav.querySelectorAll('a[href^="#"]')];
+    const sections = links.map(link => document.getElementById(link.getAttribute('href').slice(1))).filter(Boolean);
+    const mark = id => links.forEach(link => (link.getAttribute('href') === `#${id}` ? link.setAttribute('aria-current', 'true') : link.removeAttribute('aria-current')));
+    const observer = new IntersectionObserver(entries => {
+      const visible = entries.filter(entry => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visible) mark(visible.target.id);
+    }, { rootMargin: '-15% 0px -55% 0px', threshold: [0.15, 0.4, 0.75] });
+    sections.forEach(section => observer.observe(section));
+    return () => observer.disconnect();
   }, [request]);
   const currentPayload = payload(draft);
   const sameInput = request.input && JSON.stringify(request.input) === JSON.stringify(currentPayload);
@@ -69,19 +84,20 @@ export default function NumerologyPage() {
   const nameError = fields.find(field => field.path === 'fullName');
   const targetError = fields.find(field => field.path === 'targetDate');
   const change = event => setDraft(current => ({ ...current, [event.target.name]: event.target.value }));
-  const run = async input => {
+  const run = async (input, { focus = true, keepResult = false } = {}) => {
+    focusResult.current = focus;
     controller.current?.abort();
     const next = new AbortController();
     controller.current = next;
     const id = ++sequence.current;
-    setRequest({ status: 'loading', result: null, input, error: null });
+    setRequest(current => ({ status: 'loading', result: keepResult ? current.result : null, input, error: null }));
     try {
       const result = await calculateRequest(input, next.signal);
       if (next.signal.aborted || id !== sequence.current) return;
       setRequest({ status: 'ready', result, input, error: null });
     } catch (error) {
       if (next.signal.aborted || id !== sequence.current || error.name === 'AbortError') return;
-      setRequest({ status: 'error', result: null, input, error });
+      setRequest(current => ({ status: 'error', result: keepResult ? current.result : null, input, error }));
       if (error.fields?.some(field => field.path === 'targetDate')) targetInput.current?.focus();
       else if (error.fields?.some(field => field.path === 'fullName')) nameInput.current?.focus();
       else if (error.fields?.some(field => field.path === 'birthDate')) dayInput.current?.focus();
@@ -170,11 +186,46 @@ export default function NumerologyPage() {
       </div>
       {importError && <p className="num-field-error" role="alert">{importError}</p>}
       {!sameInput && <p className="num-draft-note" role="status">Bạn đang chỉnh sửa thông tin. Kết quả vẫn thuộc dữ liệu đã gửi; chọn “Xem kết quả” để tính lại.</p>}
-      {result.contentVersion && <aside className="num-content-notice" aria-label="Lời luận thử nghiệm"><h3>Một lời gợi mở, để bạn tự suy ngẫm</h3><p>Mở lời luận ở từng chỉ số để xem góc nhìn và câu hỏi tham khảo. Chủ đề số được đối chiếu nguồn cộng đồng; nội dung và ngữ cảnh do ứng dụng biên tập, không quyết định tính cách hoặc tương lai của bạn.</p><p>Phiên bản nội dung {result.contentVersion} · biên tập thử nghiệm</p></aside>}
-      <div className="num-metric-grid">{METRIC_IDS.map(id => <MetricSection key={id} id={id} metric={result.metrics[id]} />)}</div>
-      {result.nameAnalysis && <details className="num-name-trace"><summary>Tên được chuyển sang chữ số như thế nào?</summary><p>Tên chuẩn hóa: <strong>{result.nameAnalysis.normalized}</strong></p><p>Đ → D · bỏ dấu · A, E, I, O, U là nguyên âm · Y là phụ âm.</p><div className="num-letter-list">{result.nameAnalysis.letters.map((item, index) => <span key={index} aria-label={`${item.letter} bằng ${item.value}`}>{item.letter}<b>{item.value}</b></span>)}</div></details>}
-      <NumerologyAdvanced birthGrid={result.birthGrid} cycles={result.cycles} pinnacles={result.pinnacles} />
-      <p className="num-disclaimer">Các con số không phải đánh giá khoa học về tính cách hoặc tương lai. Đỉnh cao và thử thách theo quy ước tuổi của bản thử nghiệm; nhóm này chưa có lời luận.</p>
+      {result.contentVersion && <aside className="num-content-notice" aria-label="Lời luận thử nghiệm"><h3>Một lời gợi mở, để bạn tự suy ngẫm</h3><p>Lời luận hiện ngay dưới mỗi chỉ số đã có bài. Chủ đề số được đối chiếu nguồn cộng đồng; nội dung và ngữ cảnh do ứng dụng biên tập, không quyết định tính cách hoặc tương lai của bạn.</p><p>Phiên bản nội dung {result.contentVersion} · biên tập thử nghiệm</p></aside>}
+      <nav className="num-toc" aria-label="Mục lục lá số">
+        {[['#tong-quan', 'Tổng quan'], ['#chi-so-cot-loi', 'Chỉ số cốt lõi'], ['#bieu-do-ngay-sinh', 'Biểu đồ ngày sinh'], ['#bieu-do-ten', 'Biểu đồ tên'], ['#bieu-do-gop', 'Ngày sinh và tên'], ['#dinh-cao', 'Đỉnh cao và thử thách'], ['#chu-ky', 'Chu kỳ'], ['#quan-he', 'Mối nối'], ['#nguon', 'Nguồn']].map(([href, label]) => <a key={href} href={href}>{label}</a>)}
+      </nav>
+      <section className="num-chapter num-overview" id="tong-quan" aria-labelledby="num-overview-heading">
+        <h3 id="num-overview-heading">Tổng quan</h3>
+        {(() => {
+          const active = result.pinnacles.periods.find(period => period.active);
+          const birthLabel = `${request.input.birthDate.day}/${request.input.birthDate.month}/${request.input.birthDate.year}`;
+          const facts = [
+            ['Đường đời', result.metrics.lifePath.value, result.metrics.lifePath.isMaster ? `Số đặc biệt, gốc ${result.metrics.lifePath.rootValue}` : 'Từ ngày sinh'],
+            ['Ngày sinh', result.metrics.birthday.value, 'Từ số ngày'],
+            ['Thái độ', result.metrics.attitude.value, 'Từ ngày và tháng'],
+            ['Năm cá nhân', result.cycles.personalYear.value, `Ngày xem ${result.cycles.targetDate.split('-').reverse().join('/')}`],
+            ['Đỉnh đang diễn ra', active.pinnacle.value, 'Cùng cửa sổ tuổi với thử thách'],
+            ['Thử thách cùng giai đoạn', active.challenge.value, active.challenge.value === 0 ? 'Hiệu 0, không đổi thành 9' : 'Hiệu tuyệt đối']
+          ];
+          const named = result.metrics.expression.status === 'available';
+          return <>
+            <p className="num-dash-identity">{birthLabel}{request.input.fullName ? ' · Tên đã nhập được chuẩn hóa khi tính các chỉ số từ tên.' : ' · Chưa nhập tên. Nhóm chỉ số từ tên không được tính.'}</p>
+            <div className="num-dash-grid">
+              {facts.map(([label, value, note]) => <article key={label}><span>{label}</span><strong>{value}</strong><small>{note}</small></article>)}
+              {named ? [['Biểu đạt', result.metrics.expression.value], ['Linh hồn', result.metrics.soulUrge.value], ['Nhân cách', result.metrics.personality.value], ['Trưởng thành', result.metrics.maturity.value]].map(([label, value]) => <article key={label}><span>{label}</span><strong>{value}</strong><small>Từ tên</small></article>) : <article className="num-dash-missing"><span>Chỉ số từ tên</span><strong>—</strong><small>Biểu đạt, Linh hồn, Nhân cách và Trưởng thành chưa có vì thiếu tên.</small></article>}
+            </div>
+            <p className="num-disclaimer">Quy ước {result.profile.id} {result.profile.version}. Các con số là quy ước biểu tượng của hồ sơ này, không phải đánh giá khoa học hay lời đã được chuyên gia xác minh.</p>
+          </>;
+        })()}
+      </section>
+      <div className="num-metric-grid" id="chi-so-cot-loi">{METRIC_IDS.map(id => <MetricSection key={id} id={id} metric={result.metrics[id]} />)}</div>
+      {result.nameAnalysis && <details className={includeName ? 'num-name-trace' : 'num-name-trace num-omit-print'}><summary>Tên được chuyển sang chữ số như thế nào?</summary><p>Tên chuẩn hóa: <strong>{result.nameAnalysis.normalized}</strong></p><p>Đ → D · bỏ dấu · A, E, I, O, U là nguyên âm · Y là phụ âm.</p><div className="num-letter-list">{result.nameAnalysis.letters.map((item, index) => <span key={index} aria-label={`${item.letter} bằng ${item.value}`}>{item.letter}<b>{item.value}</b></span>)}</div></details>}
+      <NumerologyAdvanced birthGrid={result.birthGrid} nameChart={result.nameChart} combinedChart={result.combinedChart} cycles={result.cycles} pinnacles={result.pinnacles} metrics={result.metrics} includeName={includeName} onViewDate={iso => {
+        const next = { birthDate: request.input.birthDate, ...(request.input.fullName ? { fullName: request.input.fullName } : {}), targetDate: iso };
+        setDraft(current => ({ ...current, targetDate: iso }));
+        run(next, { focus: false, keepResult: true });
+      }} />
+      <section className="num-chapter" id="nguon" aria-labelledby="num-source-heading">
+        <h2 id="num-source-heading">Cách tính và nguồn</h2>
+        <p>Hồ sơ {result.profile.id} {result.profile.version}. Đường đời cộng mọi chữ số của ngày sinh và có thể giữ 11, 22, 33. Tên bỏ dấu, Đ thành D, Y là phụ âm. Biểu đồ tên chỉ đếm các chữ đó. Đỉnh dùng tháng, ngày, năm đã rút gọn với master tắt, rồi giữ master ở tổng. Thử thách là hiệu tuyệt đối và dùng cùng cửa sổ tuổi.</p>
+        <p className="num-disclaimer">Các con số không phải đánh giá khoa học về tính cách hoặc tương lai. Lời nào chưa có bài đã duyệt thì được ghi là chưa đủ căn cứ, không mượn bài của chỉ số khác.</p>
+      </section>
     </section>}
   </div>;
 }

@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "locale": "vi-VN",
   "profileId": "pythagorean-vn-v1",
   "compatibleProfileVersions": [
@@ -10,7 +10,7 @@
     "status": "editorial_reviewed",
     "approvedForPublic": true,
     "reviewerRole": "independent_editorial_reviewer",
-    "evidenceId": "editorial-content-1.1.0-2026-10-13"
+    "evidenceId": "editorial-content-1.2.0-2026-10-13"
   },
   "themes": {
     "1": {
