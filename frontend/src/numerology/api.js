@@ -77,7 +77,25 @@ function validAdvanced(body) {
     && cycle.months.every((item, index) => item.month === index + 1 && validMetric(item.personalMonth, 'personalMonth') && item.personalMonth.keepMasters === false && (item.viewDate === null || typeof item.viewDate === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(item.viewDate)))
     && cycle.months.find(item => item.selected).month === cycle.month
     && cycle.months.find(item => item.selected).personalMonth.value === cycle.personalMonth.value
-    && validCharts(body);
+    && validCharts(body) && validIndicators(body);
+}
+function validIndicators(body) {
+  const item = body.indicators;
+  const withheld = value => value?.meaning === null && value?.meaningStatus === 'withheld';
+  const digits = value => Array.isArray(value) && value.every(number => Number.isInteger(number) && number >= 1 && number <= 9);
+  if (item?.version !== '1.0.0' || item.policy !== 'decoz-frequency-initials-bridge-v1') return false;
+  const named = body.nameAnalysis !== null;
+  if (!named) {
+    if (!['hiddenPassion', 'karmicLessons', 'balance', 'rationalThought'].every(id => item[id]?.status === 'unavailable' && item[id].reason === 'missing_name' && item[id].value === null && withheld(item[id]))) return false;
+  } else if (!(item.hiddenPassion?.status === 'available' && digits(item.hiddenPassion.values) && item.hiddenPassion.values.length > 0 && Number.isInteger(item.hiddenPassion.count) && item.hiddenPassion.count >= 1 && withheld(item.hiddenPassion)
+    && item.karmicLessons?.status === 'available' && digits(item.karmicLessons.values) && withheld(item.karmicLessons)
+    && item.balance?.status === 'available' && item.balance.keepMasters === false && item.balance.isMaster === false && item.balance.value >= 1 && item.balance.value <= 9 && withheld(item.balance)
+    && item.rationalThought?.status === 'available' && item.rationalThought.keepMasters === false && item.rationalThought.value >= 1 && item.rationalThought.value <= 9 && withheld(item.rationalThought))) return false;
+  const ids = ['lifePath-expression', 'soulUrge-personality', 'lifePath-birthday'];
+  return Array.isArray(item.bridges) && item.bridges.length === 3 && item.bridges.every((entry, index) => entry?.id === ids[index] && withheld(entry) && (
+    entry.status === 'unavailable' ? entry.value === null : entry.status === 'available' && Number.isInteger(entry.value) && entry.value >= 0 && entry.value <= 32
+      && Array.isArray(entry.operands) && entry.operands.length === 2 && Math.abs(entry.operands[0] - entry.operands[1]) === entry.value
+  ));
 }
 function validCharts(body) {
   const name = body.nameChart;

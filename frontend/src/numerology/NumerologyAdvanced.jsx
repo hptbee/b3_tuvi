@@ -15,7 +15,7 @@ const yearsOf = period => period.endDate ? `${period.startDate.slice(0, 4)}–${
 const closedYears = periods => periods.reduce((sum, period) => sum + (period.endAgeInclusive === null ? 0 : period.endAgeInclusive - period.startAgeInclusive + 1), 0);
 const trackGrow = (period, total) => (period.endAgeInclusive === null ? Math.max(1, total * 0.22) : period.endAgeInclusive - period.startAgeInclusive + 1);
 
-export default function NumerologyAdvanced({ birthGrid, nameChart, combinedChart, cycles, pinnacles, metrics, onViewDate, includeName = false }) {
+export default function NumerologyAdvanced({ birthGrid, nameChart, combinedChart, cycles, pinnacles, metrics, indicators, onViewDate, includeName = false }) {
   const [lineId, setLineId] = useState(null);
   const [periodId, setPeriodId] = useState(pinnacles.periods.find(period => period.active).id);
   const selectedLine = birthGrid.lines.find(line => line.id === lineId);
@@ -157,10 +157,26 @@ export default function NumerologyAdvanced({ birthGrid, nameChart, combinedChart
           <p>{range} · {dates}</p>
           <div className="num-pinnacle-values">
             <div><h4>Đỉnh cao</h4><output className="num-value" aria-label={`Đỉnh cao giai đoạn ${index + 1}`}>{period.pinnacle.value}</output>{period.pinnacle.isMaster && <p className="num-master">Số đặc biệt · Gốc {period.pinnacle.rootValue}</p>}<CalculationTrace label={`Đỉnh cao giai đoạn ${index + 1}`} metric={period.pinnacle} /><MetricMeaning label={`Đỉnh cao giai đoạn ${index + 1}`} metric={period.pinnacle} /></div>
-            <div><h4>Thử thách</h4><output className="num-value" aria-label={`Thử thách giai đoạn ${index + 1}`}>{period.challenge.value}</output><p>Hiệu tuyệt đối của {period.challenge.operands[0]} và {period.challenge.operands[1]}.</p>{period.challenge.value === 0 && <p>Hai thành phần bằng nhau nên hiệu là 0. Số 0 được giữ nguyên, không đổi thành 9.</p>}<MetricMeaning label={`Thử thách giai đoạn ${index + 1}`} metric={period.challenge} /></div>
+            <div><h4>Thử thách</h4><output className="num-value" aria-label={`Thử thách giai đoạn ${index + 1}`}>{period.challenge.value}</output><p>Hiệu tuyệt đối của {period.challenge.operands[0]} và {period.challenge.operands[1]}.</p>{period.challenge.value === 0 && <p>Hai thành phần bằng nhau nên hiệu là 0. Số 0 được giữ nguyên, không đổi thành 9. Chưa có bài đã duyệt: một tài liệu gắn chủ đề rộng của số 9 cho hiệu bằng 0, tài liệu khác nói là không có một thử thách riêng. Hai cách đọc khác nhau.</p>}<MetricMeaning label={`Thử thách giai đoạn ${index + 1}`} metric={period.challenge} /></div>
           </div>
         </li>;
       })}</ol>
+    </section>
+
+    <section className="num-chapter" id="chi-so-bo-sung" aria-labelledby="num-indicators-heading">
+      <div className="section-kicker">CÔNG THỨC ĐÃ ĐỐI CHIẾU NGUỒN</div><h2 id="num-indicators-heading">Chỉ số bổ sung</h2>
+      <p>Nhóm này dùng quy ước Hans Decoz đã công bố trên worldnumerology.com, phiên bản {indicators?.version || '1.0.0'}. Không đổi các số của hồ sơ pythagorean-vn-v1 1.2.0. Chưa có bài luận đã duyệt cho các số này.</p>
+      {!indicators || indicators.hiddenPassion?.status !== 'available' ? <p>Chưa có tên nên không tính các chỉ số bổ sung từ tên.</p> : <>
+        <div className="num-dash-grid">
+          <article><span>Đam mê ẩn</span><strong>{indicators.hiddenPassion.values.join(', ')}</strong><small>Giá trị chữ xuất hiện nhiều nhất: {indicators.hiddenPassion.count} lần. Hòa thì giữ mọi giá trị.</small><details className="num-trace"><summary>Cách tính Đam mê ẩn</summary><p>{[1, 2, 3, 4, 5, 6, 7, 8, 9].map(digit => `${digit}: ${indicators.hiddenPassion.counts[digit]}`).join(' · ')}</p></details></article>
+          <article><span>Bài học từ tên</span><strong>{indicators.karmicLessons.values.length ? indicators.karmicLessons.values.join(', ') : 'Không thiếu'}</strong><small>Số 1–9 không có trong tên. Khác với ô trống của ngày sinh.</small></article>
+          <article><span>Cân bằng</span><strong>{indicators.balance.value}</strong><small>Tổng chữ cái đầu mỗi phần tên, rút gọn, không giữ master.</small><CalculationTrace label="Cân bằng" metric={indicators.balance} /></article>
+          <article><span>Tư duy</span><strong>{indicators.rationalThought.value}</strong><small>Phần tên đứng đầu <span className={includeName ? 'num-indicator-token' : 'num-indicator-token num-omit-print'}>“{indicators.rationalThought.token}”</span> đã rút, cộng ngày dương lịch {indicators.rationalThought.calendarDay}, không giữ master.</small><CalculationTrace label="Tư duy" metric={indicators.rationalThought} /></article>
+        </div>
+        <p className="num-disclaimer">“Phần tên đứng đầu” là token đầu sau khi chuẩn hóa. Với họ tên Việt ghi họ trước, đó là họ, không phải tên gọi. Decoz dùng first name kiểu phương Tây.</p>
+      </>}
+      {indicators && <ul className="num-relations">{indicators.bridges.map(item => <li key={item.id}>{item.status === 'available' ? `Cầu ${item.id}: hiệu tuyệt đối của ${item.operands[0]} và ${item.operands[1]} là ${item.value}.` : 'Cầu này cần đủ hai số đã tính.'}</li>)}</ul>}
+      <p className="num-disclaimer">Cầu lấy đúng số đã công bố, kể cả 11, 22, 33, và không rút tiếp. Hiệu 0 nghĩa là hai số bằng nhau. Hiệu lớn hơn 9 chưa có bài số đơn.</p>
     </section>
 
     <section className="num-chapter" id="quan-he" aria-labelledby="num-relations-heading">
@@ -171,6 +187,8 @@ export default function NumerologyAdvanced({ birthGrid, nameChart, combinedChart
         {metrics.maturity.status === 'available' && <li>Trưởng thành = Đường đời {metrics.lifePath.value} + Biểu đạt {metrics.expression.value}.</li>}
         {metrics.lifePath.isMaster && <li>Đường đời giữ số đặc biệt {metrics.lifePath.value}. Gốc dùng cho tuổi đỉnh là {metrics.lifePath.rootValue}.</li>}
         <li>Đỉnh 1 = tháng {month} + ngày {day}. Đỉnh 2 = ngày {day} + năm {year}. Đỉnh 3 = đỉnh 1 + đỉnh 2. Đỉnh 4 = tháng {month} + năm {year}.</li>
+        {indicators?.hiddenPassion?.status === 'available' && <li>Đam mê ẩn là giá trị chữ xuất hiện nhiều nhất trong tên: {indicators.hiddenPassion.values.join(', ')}. Bài học từ tên là số vắng trong tên, không phải ô trống của ngày sinh.</li>}
+        {indicators?.bridges?.filter(item => item.status === 'available').map(item => <li key={item.id}>Cầu {item.id} = |{item.operands[0]} − {item.operands[1]}| = {item.value}.</li>)}
         <li>Thử thách là hiệu tuyệt đối của cùng các cặp đó. Thử thách 3 là hiệu của thử thách 1 và thử thách 2.</li>
         <li>Năm cá nhân dùng ngày sinh và năm xem. Tháng cá nhân cộng thêm tháng xem. Ngày cá nhân cộng thêm ngày xem.</li>
       </ul>
