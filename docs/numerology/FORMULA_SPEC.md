@@ -32,6 +32,14 @@ Optional strict ISO `targetDate`, validated Gregorian1200–2199 and not before 
 
 Year = reduce(digitSum(birthDay)+digitSum(birthMonth)+digitSum(targetYear),false). Month = reduce(personalYear.value+digitSum(targetMonth),false). Day = reduce(personalMonth.value+digitSum(targetDay),false). **All three reduce to1–9, including totals11/22/33.** Periods follow calendar year January1–December31, month and day; no birthday rollover. Parts/reduction traces are serialized exactly like core metrics. No implicit clock or inferred astrology.
 
+Capability version 1.1.0 adds two views that reuse those formulas. `yearBand` is nine calendar years. It starts at the year whose personal year is 1 and that contains the selected year. If that window would leave 1200–2199, it shifts so all nine years stay inside the range. `months` is January–December of the selected personal year. The selected year and month match `personalYear` and `personalMonth`. The client must not recompute either list.
+
+## Name chart and combined chart — capability version 1.0.0
+
+`pythagorean-letter-count-v1` counts the same normalized letters used by Expression. Each letter value 1–9 increments one cell. The layout is the birth-grid layout so the two charts can be compared. It does not reduce to a single number and it does not assign arrow meanings. Missing name returns `unavailable`, not an empty zero grid.
+
+`birth-name-presence-v1` pairs each digit 1–9 with `birth` count, `name` count, and `presence`: `both`, `birth`, `name`, or `neither`. A name that contains a digit absent from the date does not “fill” or repair that cell. Missing name leaves the combined chart unavailable.
+
 Active profile/schema1.2.0 adds pinnacles and challenges without changing the seven core numeric formulas, the birth grid, or personal cycles. Explicit requests for inactive profile1.1.0 or1.0.0 return404; no silent version substitution. Original fixtures retain their expected core numbers. These are product conventions, not externally verified school claims.
 
 ## Pinnacles and challenges — capability version1.0.0

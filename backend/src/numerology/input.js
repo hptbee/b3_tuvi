@@ -57,7 +57,7 @@ export function parseInput(body, referenceDate) {
     const allowed = ['birthDate', 'fullName', 'profileId', 'profileVersion', 'locale', 'targetDate'];
     for (const key of Object.keys(body)) {
         if (!allowed.includes(key)) {
-            const computed = ['metrics', 'analysis', 'normalizedName', 'profile', 'birthGrid', 'cycles', 'pinnacles'].includes(key);
+            const computed = ['metrics', 'analysis', 'normalizedName', 'profile', 'birthGrid', 'cycles', 'pinnacles', 'nameChart', 'combinedChart'].includes(key);
             invalid(computed ? 'CLIENT_RESULT_REJECTED' : 'UNKNOWN_FIELD', 'Request chứa trường không được hỗ trợ.', key);
         }
     }
