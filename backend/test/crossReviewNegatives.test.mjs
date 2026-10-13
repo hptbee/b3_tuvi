@@ -68,6 +68,39 @@ const cases = {
     }),
     disagreement: packet({
         reviews: [review(), review({ verdict: 'MATCH', formulaComparison: 'MATCH' })]
+    }),
+    wrong_school: packet({
+        schoolId: 'vn-tam-hop-default',
+        reviews: [
+            review({ model: 'a', schoolId: 'other-school' }),
+            review({ model: 'b', schoolId: 'other-school' })
+        ]
+    }),
+    wrong_locator: packet({
+        locator: '19.2.11+19.5',
+        reviews: [
+            review({ model: 'a', locator: 'other-page' }),
+            review({ model: 'b', locator: 'other-page' })
+        ]
+    }),
+    verdict_mismatch: packet({
+        reviews: [
+            review({ model: 'a', verdict: 'MATCH', formulaComparison: 'PARTIAL' }),
+            review({ model: 'b', verdict: 'MATCH', formulaComparison: 'PARTIAL' })
+        ]
+    }),
+    unsupported_condition: packet({
+        allowedConditions: ['palace_menh_or_quan_loc', 'avoid_tuan'],
+        reviews: [
+            review({ model: 'a', conditions: ['palace_menh_or_quan_loc', 'avoid_tuan', 'invented'] }),
+            review({ model: 'b', conditions: ['palace_menh_or_quan_loc', 'avoid_tuan', 'invented'] })
+        ]
+    }),
+    exception_disagreement: packet({
+        reviews: [
+            review({ model: 'a', exceptions: ['xa_tuan_triet'] }),
+            review({ model: 'b', exceptions: [] })
+        ]
     })
 };
 
@@ -77,9 +110,32 @@ assert.strictEqual(compareReviews(cases.long_quotation_outside_span).decision, '
 assert.notStrictEqual(compareReviews(cases.long_quotation_outside_span).decision, 'AI_ACCEPTED');
 assert.notStrictEqual(compareReviews(cases.wrong_edition).decision, 'AI_ACCEPTED');
 assert.strictEqual(compareReviews(cases.missing_source).decision, 'SOURCE_INACCESSIBLE');
+assert.strictEqual(compareReviews(null).decision, 'SOURCE_INACCESSIBLE');
+assert.strictEqual(compareReviews({ sourceAvailable: true, storedSpan: '   ' }).decision, 'SOURCE_INACCESSIBLE');
+assert.strictEqual(compareReviews(packet({ sourceDigest: 'zz' })).decision, 'UNRESOLVED');
 assert.strictEqual(compareReviews(cases.dropped_condition).decision, 'UNRESOLVED');
 assert.strictEqual(compareReviews(cases.ignored_exception).decision, 'UNRESOLVED');
 assert.strictEqual(compareReviews(cases.unavailable_model).decision, 'REVIEW_NOT_EXECUTED');
+assert.strictEqual(compareReviews(cases.wrong_school).decision, 'UNRESOLVED');
+assert.strictEqual(compareReviews(cases.wrong_locator).decision, 'UNRESOLVED');
+assert.strictEqual(compareReviews(cases.verdict_mismatch).decision, 'UNRESOLVED');
+assert.strictEqual(compareReviews(cases.unsupported_condition).decision, 'UNRESOLVED');
+assert.strictEqual(compareReviews(cases.exception_disagreement).decision, 'CONFLICT');
+assert.strictEqual(compareReviews(packet({
+    reviews: [
+        review({ model: 'a', claimId: '' }),
+        review({ model: 'b', claimId: '' })
+    ]
+})).decision, 'UNRESOLVED');
+assert.strictEqual(compareReviews(packet({
+    requiredAnchors: ['ab']
+})).decision, 'UNRESOLVED');
+assert.strictEqual(compareReviews(packet({
+    reviews: [
+        review({ model: 'a', exceptions: [] }),
+        review({ model: 'b', exceptions: [] })
+    ]
+})).reason, 'an exception is missing');
 const disagreement = compareReviews(cases.disagreement).decision;
 assert.ok(disagreement === 'CONFLICT' || disagreement === 'UNRESOLVED');
 for (const [name, body] of Object.entries(cases)) {

@@ -2,6 +2,8 @@ import { createHash } from 'crypto';
 import { readFileSync, readdirSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { validateDecisionRecord } from './decisionRegistry.js';
+import { verifyDecisionBinding } from './decisionIntegrity.js';
+import { reviewBaseline } from './extractionBaseline.js';
 
 const KNOWLEDGE = fileURLToPath(new URL('../../../docs/knowledge/', import.meta.url));
 
@@ -39,7 +41,7 @@ export function buildCombinationBatch({ catalog, passages, decisions }) {
             return row(passage, { batchStatus: 'REVIEW_NOT_EXECUTED' });
         }
         const checked = validateDecisionRecord(decision);
-        if (!checked.ok || decision.sourceDigest !== passage.sourceDigest || decision.expertVerified !== false) {
+        if (!checked.ok || decision.sourceDigest !== passage.sourceDigest || decision.expertVerified !== false || decision.bindingOk !== true) {
             return row(passage, { batchStatus: 'UNRESOLVED' });
         }
         return row(passage, {
@@ -47,6 +49,51 @@ export function buildCombinationBatch({ catalog, passages, decisions }) {
             formulaComparison: decision.formulaComparison || null,
             crossReviewOutcome: decision.crossReviewOutcome || null
         });
+    });
+}
+
+const NGUYET_ANCHORS = [
+    'Cung Mệnh hay Quan Lộc an tại Hợi có Nguyệt tọa thủ',
+    'xa lánh Tuần',
+    'Sát tinh và Bại tinh',
+    'Khoa, Quyền, Lộc'
+];
+
+function reviewFromRef(ref) {
+    if (typeof ref !== 'string' || !ref.startsWith('docs/knowledge/reviews/') || ref.includes('..')) return null;
+    try {
+        return JSON.parse(readFileSync(`${KNOWLEDGE}${ref.slice('docs/knowledge/'.length)}`, 'utf8'));
+    } catch {
+        return null;
+    }
+}
+
+export function bindStoredDecision(record, passage) {
+    const refs = (record.reviewers || []).map((reviewer) => reviewer?.reviewRef);
+    const reviews = refs.map(reviewFromRef);
+    if (reviews.some((review) => !review) || typeof passage.span !== 'string') {
+        return { ok: false, reason: 'binding_evidence_missing' };
+    }
+    const slug = passage.spanFile.split('/').at(-2);
+    let prompt = '';
+    try {
+        prompt = readFileSync(`${KNOWLEDGE}reviews/${slug}/prompt-v1.txt`, 'utf8');
+    } catch {
+        return { ok: false, reason: 'binding_evidence_missing' };
+    }
+    return verifyDecisionBinding({
+        record,
+        reviews,
+        storedSpan: passage.span,
+        baseline: reviewBaseline({
+            span: passage.span,
+            prompt,
+            editionId: passage.editionId,
+            schoolId: passage.schoolId,
+            locator: passage.locator,
+            sourceDigest: passage.sourceDigest,
+            fallbackAnchors: NGUYET_ANCHORS
+        })
     });
 }
 
@@ -63,9 +110,14 @@ export function loadCombinationBatch() {
         const span = readSpan(KNOWLEDGE, entry.spanFile);
         return { ...entry, sourceDigest: digestOf(span), span };
     });
+    const byClaimPassage = new Map(passages.filter((passage) => passage.located === true).map((passage) => [passage.claimId, passage]));
     const decisions = readdirSync(`${KNOWLEDGE}decisions`)
         .filter((name) => name.endsWith('.json'))
-        .map((name) => JSON.parse(readFileSync(`${KNOWLEDGE}decisions/${name}`, 'utf8')));
+        .map((name) => {
+            const record = JSON.parse(readFileSync(`${KNOWLEDGE}decisions/${name}`, 'utf8'));
+            const passage = byClaimPassage.get(record.subjectId);
+            return { ...record, bindingOk: passage ? bindStoredDecision(record, passage).ok === true : false };
+        });
     return {
         catalog,
         passages,

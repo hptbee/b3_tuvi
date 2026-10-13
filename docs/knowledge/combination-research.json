@@ -1,0 +1,4838 @@
+{
+  "version": 1,
+  "measuredFrom": "69f7f863b17be4261476e886b6d5524031207b94",
+  "readableCorpus": "docs/knowledge span files from tan-bien-retypeset-277-cover-1956",
+  "pdfFilePresent": false,
+  "entries": [
+    {
+      "combinationId": "combo_01",
+      "combinationName": "Tử Phủ Đồng Cung",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_LOCATED",
+      "verificationStatus": "AI_CROSS_REVIEWED",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "MATCH",
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "tu_phu_dong_cung",
+      "runtimeGap": "agreed_match_runtime_unchanged",
+      "recommendedAction": "hold_runtime_change_for_separate_reviewed_pr",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Tử Phủ Đồng Cung",
+          "result": "defining span phu-giai/57"
+        },
+        {
+          "corpus": "source-registry",
+          "query": "Tử Phủ Đồng Cung",
+          "result": "other listed books have no full text in this workspace and were not used as evidence"
+        }
+      ],
+      "evidence": {
+        "sourceId": "thai-thu-lang-tan-bien",
+        "editionId": "tan-bien-retypeset-277-cover-1956",
+        "locator": "phu-giai/57",
+        "passageDigest": "f58dc4692312e3b8e17dedf7ce2bc33b540716fdc4c72959d47be3572e80f384",
+        "pdfTextChecked": false,
+        "binding": "passage_hash_only"
+      },
+      "limitations": [
+        "Passage hash is not a PDF page check. The edition file is not in the repository."
+      ]
+    },
+    {
+      "combinationId": "combo_02",
+      "combinationName": "Tử Phủ Vũ Tướng",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "tu_phu_vu_tuong",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Tử Phủ Vũ Tướng",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "the name occurs inside the Quân Thần paragraph, not as this formula"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_03",
+      "combinationName": "Cơ Nguyệt Đồng Lương",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_LOCATED",
+      "verificationStatus": "AI_CROSS_REVIEWED",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "MATCH",
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "co_nguyet_dong_luong",
+      "runtimeGap": "agreed_match_runtime_unchanged",
+      "recommendedAction": "hold_runtime_change_for_separate_reviewed_pr",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Cơ Nguyệt Đồng Lương",
+          "result": "defining span phu-giai/76"
+        },
+        {
+          "corpus": "source-registry",
+          "query": "Cơ Nguyệt Đồng Lương",
+          "result": "other listed books have no full text in this workspace and were not used as evidence"
+        }
+      ],
+      "evidence": {
+        "sourceId": "thai-thu-lang-tan-bien",
+        "editionId": "tan-bien-retypeset-277-cover-1956",
+        "locator": "phu-giai/76",
+        "passageDigest": "2bec18168b5c9ed8f3f2ce3603711ce298986b39f79266e0123cdb5c1cda2dee",
+        "pdfTextChecked": false,
+        "binding": "passage_hash_only"
+      },
+      "limitations": [
+        "Passage hash is not a PDF page check. The edition file is not in the repository."
+      ]
+    },
+    {
+      "combinationId": "combo_04",
+      "combinationName": "Sát Phá Tham",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "sat_pha_tham",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Sát Phá Tham",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "the name occurs in another verse and a hạn note, not as this formula"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_05",
+      "combinationName": "Nhật Nguyệt Tịnh Minh",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_LOCATED",
+      "verificationStatus": "CROSS_REVIEW_RECORDED",
+      "decision": "CONFLICT",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "nhat_nguyet_tinh_minh",
+      "runtimeGap": "cross_review_disagreement",
+      "recommendedAction": "hold_runtime_change_for_separate_reviewed_pr",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Nhật Nguyệt Tịnh Minh",
+          "result": "defining span 19.2.15+19.5"
+        },
+        {
+          "corpus": "source-registry",
+          "query": "Nhật Nguyệt Tịnh Minh",
+          "result": "other listed books have no full text in this workspace and were not used as evidence"
+        }
+      ],
+      "evidence": {
+        "sourceId": "thai-thu-lang-tan-bien",
+        "editionId": "tan-bien-retypeset-277-cover-1956",
+        "locator": "19.2.15+19.5",
+        "passageDigest": "9a25d0c9264bdb03790256f8117f78975c9d56ca48e83a084b285ca049b0a519",
+        "pdfTextChecked": false,
+        "binding": "passage_hash_only"
+      },
+      "limitations": [
+        "Passage hash is not a PDF page check. The edition file is not in the repository."
+      ]
+    },
+    {
+      "combinationId": "combo_06",
+      "combinationName": "Minh Châu Xuất Hải",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_LOCATED",
+      "verificationStatus": "AI_CROSS_REVIEWED",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "CONFLICT",
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "minh_chau_xuat_hai",
+      "runtimeGap": "rule_conflicts_with_span",
+      "recommendedAction": "hold_runtime_change_for_separate_reviewed_pr",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Minh Châu Xuất Hải",
+          "result": "defining span 19.2.12+19.2.13+19.5"
+        },
+        {
+          "corpus": "source-registry",
+          "query": "Minh Châu Xuất Hải",
+          "result": "other listed books have no full text in this workspace and were not used as evidence"
+        }
+      ],
+      "evidence": {
+        "sourceId": "thai-thu-lang-tan-bien",
+        "editionId": "tan-bien-retypeset-277-cover-1956",
+        "locator": "19.2.12+19.2.13+19.5",
+        "passageDigest": "80539f3dfae40951f28fbd662d63b2d0966d05a6eb1dcb4b07ad03af25d4c5e2",
+        "pdfTextChecked": false,
+        "binding": "passage_hash_only"
+      },
+      "limitations": [
+        "Passage hash is not a PDF page check. The edition file is not in the repository."
+      ]
+    },
+    {
+      "combinationId": "combo_07",
+      "combinationName": "Cự Nhật Đồng Cung",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_LOCATED",
+      "verificationStatus": "CROSS_REVIEW_RECORDED",
+      "decision": "CONFLICT",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "cu_nhat_dong_cung",
+      "runtimeGap": "cross_review_disagreement",
+      "recommendedAction": "hold_runtime_change_for_separate_reviewed_pr",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Cự Nhật Đồng Cung",
+          "result": "defining span phu-giai/88"
+        },
+        {
+          "corpus": "source-registry",
+          "query": "Cự Nhật Đồng Cung",
+          "result": "other listed books have no full text in this workspace and were not used as evidence"
+        }
+      ],
+      "evidence": {
+        "sourceId": "thai-thu-lang-tan-bien",
+        "editionId": "tan-bien-retypeset-277-cover-1956",
+        "locator": "phu-giai/88",
+        "passageDigest": "92f5e2400be292d5b760020719797ed802624e53327982e3f30d3d284958b550",
+        "pdfTextChecked": false,
+        "binding": "passage_hash_only"
+      },
+      "limitations": [
+        "Passage hash is not a PDF page check. The edition file is not in the repository."
+      ]
+    },
+    {
+      "combinationId": "combo_08",
+      "combinationName": "Dương Lương Xương Lộc",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "duong_luong_xuong_loc",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Dương Lương Xương Lộc",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_09",
+      "combinationName": "Nguyệt Lãng Thiên Môn",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_LOCATED",
+      "verificationStatus": "AI_CROSS_REVIEWED",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "PARTIAL",
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "nguyet_lang_thien_mon",
+      "runtimeGap": "partial_gap",
+      "recommendedAction": "hold_runtime_change_for_separate_reviewed_pr",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Nguyệt Lãng Thiên Môn",
+          "result": "defining span 19.2.11+19.5"
+        },
+        {
+          "corpus": "source-registry",
+          "query": "Nguyệt Lãng Thiên Môn",
+          "result": "other listed books have no full text in this workspace and were not used as evidence"
+        }
+      ],
+      "evidence": {
+        "sourceId": "thai-thu-lang-tan-bien",
+        "editionId": "tan-bien-retypeset-277-cover-1956",
+        "locator": "19.2.11+19.5",
+        "passageDigest": "950bae3902afe40ca2d65daff0e20bab3fdd0e8fe9667a4804f84d45c276ee3e",
+        "pdfTextChecked": false,
+        "binding": "passage_hash_only"
+      },
+      "limitations": [
+        "Passage hash is not a PDF page check. The edition file is not in the repository."
+      ]
+    },
+    {
+      "combinationId": "combo_10",
+      "combinationName": "Nhật Chiếu Lôi Môn",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "nhat_chieu_loi_mon",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Nhật Chiếu Lôi Môn",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_11",
+      "combinationName": "Thất Sát Triều Đẩu",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_LOCATED",
+      "verificationStatus": "CROSS_REVIEW_RECORDED",
+      "decision": "CONFLICT",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "that_sat_trieu_dau",
+      "runtimeGap": "cross_review_disagreement",
+      "recommendedAction": "hold_runtime_change_for_separate_reviewed_pr",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Thất Sát Triều Đẩu",
+          "result": "defining span 19.2.8+19.5"
+        },
+        {
+          "corpus": "source-registry",
+          "query": "Thất Sát Triều Đẩu",
+          "result": "other listed books have no full text in this workspace and were not used as evidence"
+        }
+      ],
+      "evidence": {
+        "sourceId": "thai-thu-lang-tan-bien",
+        "editionId": "tan-bien-retypeset-277-cover-1956",
+        "locator": "19.2.8+19.5",
+        "passageDigest": "d12a6735c86037ff271cea98193769dbd9f405f398e459b281e126c8ef0f84ee",
+        "pdfTextChecked": false,
+        "binding": "passage_hash_only"
+      },
+      "limitations": [
+        "Passage hash is not a PDF page check. The edition file is not in the repository."
+      ]
+    },
+    {
+      "combinationId": "combo_12",
+      "combinationName": "Tham Vũ Đồng Hành",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_LOCATED",
+      "verificationStatus": "CROSS_REVIEW_RECORDED",
+      "decision": "CONFLICT",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "tham_vu_dong_hanh",
+      "runtimeGap": "cross_review_disagreement",
+      "recommendedAction": "hold_runtime_change_for_separate_reviewed_pr",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Tham Vũ Đồng Hành",
+          "result": "defining span phu-giai/83"
+        },
+        {
+          "corpus": "source-registry",
+          "query": "Tham Vũ Đồng Hành",
+          "result": "other listed books have no full text in this workspace and were not used as evidence"
+        }
+      ],
+      "evidence": {
+        "sourceId": "thai-thu-lang-tan-bien",
+        "editionId": "tan-bien-retypeset-277-cover-1956",
+        "locator": "phu-giai/83",
+        "passageDigest": "d984566cbce8d7ed26acc141c078fc30557f1dc54b0aaa6ccd938fe1e1192786",
+        "pdfTextChecked": false,
+        "binding": "passage_hash_only"
+      },
+      "limitations": [
+        "Passage hash is not a PDF page check. The edition file is not in the repository."
+      ]
+    },
+    {
+      "combinationId": "combo_13",
+      "combinationName": "Hỏa Tham",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "hoa_tham",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Hỏa Tham",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_14",
+      "combinationName": "Linh Tham",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "linh_tham",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Linh Tham",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_15",
+      "combinationName": "Thạch Trung Ẩn Ngọc",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "thach_trung_an_ngoc",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Thạch Trung Ẩn Ngọc",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_16",
+      "combinationName": "Tam Kỳ Gia Hội",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "tam_ky_gia_hoi",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Tam Kỳ Gia Hội",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_17",
+      "combinationName": "Song Lộc Triều Viên",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "song_loc_trieu_vien",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Song Lộc Triều Viên",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_18",
+      "combinationName": "Khoa Minh Lộc Ám",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_LOCATED",
+      "verificationStatus": "AI_CROSS_REVIEWED",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "NOT_IMPLEMENTED",
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": null,
+      "runtimeGap": "not_implemented",
+      "recommendedAction": "hold_runtime_change_for_separate_reviewed_pr",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Khoa Minh Lộc Ám",
+          "result": "defining span 19.2.25+19.5"
+        },
+        {
+          "corpus": "source-registry",
+          "query": "Khoa Minh Lộc Ám",
+          "result": "other listed books have no full text in this workspace and were not used as evidence"
+        }
+      ],
+      "evidence": {
+        "sourceId": "thai-thu-lang-tan-bien",
+        "editionId": "tan-bien-retypeset-277-cover-1956",
+        "locator": "19.2.25+19.5",
+        "passageDigest": "8bf75a720401adf6633278a514636db453d887e51c548459681d48f7b654fd95",
+        "pdfTextChecked": false,
+        "binding": "passage_hash_only"
+      },
+      "limitations": [
+        "Passage hash is not a PDF page check. The edition file is not in the repository."
+      ]
+    },
+    {
+      "combinationId": "combo_19",
+      "combinationName": "Lộc Mã Giao Trì",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_LOCATED",
+      "verificationStatus": "AI_CROSS_REVIEWED",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "PARTIAL",
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "loc_ma_giao_tri",
+      "runtimeGap": "partial_gap",
+      "recommendedAction": "hold_runtime_change_for_separate_reviewed_pr",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Lộc Mã Giao Trì",
+          "result": "defining span phu-giai/42"
+        },
+        {
+          "corpus": "source-registry",
+          "query": "Lộc Mã Giao Trì",
+          "result": "other listed books have no full text in this workspace and were not used as evidence"
+        }
+      ],
+      "evidence": {
+        "sourceId": "thai-thu-lang-tan-bien",
+        "editionId": "tan-bien-retypeset-277-cover-1956",
+        "locator": "phu-giai/42",
+        "passageDigest": "b9db6f04daeb0cc649911650b17e991665d7eb7659fb4942b9ea9ecd0c90a044",
+        "pdfTextChecked": false,
+        "binding": "passage_hash_only"
+      },
+      "limitations": [
+        "Passage hash is not a PDF page check. The edition file is not in the repository."
+      ]
+    },
+    {
+      "combinationId": "combo_20",
+      "combinationName": "Hùng Tú Triều Viên",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "hung_tu_trieu_vien",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Hùng Tú Triều Viên",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_21",
+      "combinationName": "Linh Xương Đà Vũ",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "linh_xuong_da_vu",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Linh Xương Đà Vũ",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_22",
+      "combinationName": "Hình Kỵ Giáp Ấn",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "hinh_ky_giap_an",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Hình Kỵ Giáp Ấn",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_23",
+      "combinationName": "Mệnh Lý Phùng Không",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "menh_ly_phung_khong",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Mệnh Lý Phùng Không",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_24",
+      "combinationName": "Kình Đà Hiệp Kỵ",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "kinh_da_hiep_ky",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Kình Đà Hiệp Kỵ",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_25",
+      "combinationName": "Lộc Phùng Xung Phá",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_LOCATED",
+      "verificationStatus": "AI_CROSS_REVIEWED",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "CONFLICT",
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "loc_phung_xung_pha",
+      "runtimeGap": "rule_conflicts_with_span",
+      "recommendedAction": "hold_runtime_change_for_separate_reviewed_pr",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Lộc Phùng Xung Phá",
+          "result": "defining span phu-giai/107"
+        },
+        {
+          "corpus": "source-registry",
+          "query": "Lộc Phùng Xung Phá",
+          "result": "other listed books have no full text in this workspace and were not used as evidence"
+        }
+      ],
+      "evidence": {
+        "sourceId": "thai-thu-lang-tan-bien",
+        "editionId": "tan-bien-retypeset-277-cover-1956",
+        "locator": "phu-giai/107",
+        "passageDigest": "dde88f71670dd942f697c658538818d54dbcd4117057e21bc4f963a94f803690",
+        "pdfTextChecked": false,
+        "binding": "passage_hash_only"
+      },
+      "limitations": [
+        "Passage hash is not a PDF page check. The edition file is not in the repository."
+      ]
+    },
+    {
+      "combinationId": "combo_26",
+      "combinationName": "Mã Lạc Không Vong",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_LOCATED",
+      "verificationStatus": "CROSS_REVIEW_RECORDED",
+      "decision": "CONFLICT",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "ma_lac_khong_vong",
+      "runtimeGap": "cross_review_disagreement",
+      "recommendedAction": "hold_runtime_change_for_separate_reviewed_pr",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Mã Lạc Không Vong",
+          "result": "defining span 19.3.8+19.5"
+        },
+        {
+          "corpus": "source-registry",
+          "query": "Mã Lạc Không Vong",
+          "result": "other listed books have no full text in this workspace and were not used as evidence"
+        }
+      ],
+      "evidence": {
+        "sourceId": "thai-thu-lang-tan-bien",
+        "editionId": "tan-bien-retypeset-277-cover-1956",
+        "locator": "19.3.8+19.5",
+        "passageDigest": "f137f8ad547c20bed29634097b9520b3e880cb72a49b03e03671dd7bfcd48652",
+        "pdfTextChecked": false,
+        "binding": "passage_hash_only"
+      },
+      "limitations": [
+        "Passage hash is not a PDF page check. The edition file is not in the repository."
+      ]
+    },
+    {
+      "combinationId": "combo_27",
+      "combinationName": "Cự Hỏa Kình Dương",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_LOCATED",
+      "verificationStatus": "AI_CROSS_REVIEWED",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "PARTIAL",
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "cu_hoa_kinh_duong",
+      "runtimeGap": "partial_gap",
+      "recommendedAction": "hold_runtime_change_for_separate_reviewed_pr",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Cự Hỏa Kình Dương",
+          "result": "defining span phu-giai/90"
+        },
+        {
+          "corpus": "source-registry",
+          "query": "Cự Hỏa Kình Dương",
+          "result": "other listed books have no full text in this workspace and were not used as evidence"
+        }
+      ],
+      "evidence": {
+        "sourceId": "thai-thu-lang-tan-bien",
+        "editionId": "tan-bien-retypeset-277-cover-1956",
+        "locator": "phu-giai/90",
+        "passageDigest": "de4d59465bb2119539df09a1e64e1e8b788c90dcc67c70b38cc1f309c8aa13ad",
+        "pdfTextChecked": false,
+        "binding": "passage_hash_only"
+      },
+      "limitations": [
+        "Passage hash is not a PDF page check. The edition file is not in the repository."
+      ]
+    },
+    {
+      "combinationId": "combo_28",
+      "combinationName": "Phiếm Thủy Đào Hoa",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_LOCATED",
+      "verificationStatus": "AI_CROSS_REVIEWED",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "PARTIAL",
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "phiem_thuy_dao_hoa",
+      "runtimeGap": "partial_gap",
+      "recommendedAction": "hold_runtime_change_for_separate_reviewed_pr",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Phiếm Thủy Đào Hoa",
+          "result": "defining span phu-giai/84"
+        },
+        {
+          "corpus": "source-registry",
+          "query": "Phiếm Thủy Đào Hoa",
+          "result": "other listed books have no full text in this workspace and were not used as evidence"
+        }
+      ],
+      "evidence": {
+        "sourceId": "thai-thu-lang-tan-bien",
+        "editionId": "tan-bien-retypeset-277-cover-1956",
+        "locator": "phu-giai/84",
+        "passageDigest": "82b1bb7a381221602ea04155878d91d722117636feba4561f3a31168a3a48d7d",
+        "pdfTextChecked": false,
+        "binding": "passage_hash_only"
+      },
+      "limitations": [
+        "Passage hash is not a PDF page check. The edition file is not in the repository."
+      ]
+    },
+    {
+      "combinationId": "combo_29",
+      "combinationName": "Phong Lưu Thái Trượng",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "phong_luu_thai_truong",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Phong Lưu Thái Trượng",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_30",
+      "combinationName": "Nhật Nguyệt Tàng Huy",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "nhat_nguyet_tang_huy",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Nhật Nguyệt Tàng Huy",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_31",
+      "combinationName": "Bán Không Chiết Xỉ",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "ban_khong_chiet_xi",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Bán Không Chiết Xỉ",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_32",
+      "combinationName": "Mệnh Vô Chính Diệu",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_LOCATED",
+      "verificationStatus": "AI_CROSS_REVIEWED",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "MATCH",
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "menh_vo_chinh_dieu",
+      "runtimeGap": "agreed_match_runtime_unchanged",
+      "recommendedAction": "hold_runtime_change_for_separate_reviewed_pr",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Mệnh Vô Chính Diệu",
+          "result": "defining span dai-cuong/31"
+        },
+        {
+          "corpus": "source-registry",
+          "query": "Mệnh Vô Chính Diệu",
+          "result": "other listed books have no full text in this workspace and were not used as evidence"
+        }
+      ],
+      "evidence": {
+        "sourceId": "thai-thu-lang-tan-bien",
+        "editionId": "tan-bien-retypeset-277-cover-1956",
+        "locator": "dai-cuong/31",
+        "passageDigest": "4263a08821c9956bbfb370bc450dacaaa61cad744effa7124a13a8e611628c0b",
+        "pdfTextChecked": false,
+        "binding": "passage_hash_only"
+      },
+      "limitations": [
+        "Passage hash is not a PDF page check. The edition file is not in the repository."
+      ]
+    },
+    {
+      "combinationId": "combo_33",
+      "combinationName": "Ám Lộc",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_LOCATED",
+      "verificationStatus": "AI_CROSS_REVIEWED",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "NOT_IMPLEMENTED",
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": null,
+      "runtimeGap": "not_implemented",
+      "recommendedAction": "hold_runtime_change_for_separate_reviewed_pr",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Ám Lộc",
+          "result": "defining span phu-giai/108"
+        },
+        {
+          "corpus": "source-registry",
+          "query": "Ám Lộc",
+          "result": "other listed books have no full text in this workspace and were not used as evidence"
+        }
+      ],
+      "evidence": {
+        "sourceId": "thai-thu-lang-tan-bien",
+        "editionId": "tan-bien-retypeset-277-cover-1956",
+        "locator": "phu-giai/108",
+        "passageDigest": "36f820279d7749885fea12f70fea6c3db8d6b87da57e66756b2509112eee7917",
+        "pdfTextChecked": false,
+        "binding": "passage_hash_only"
+      },
+      "limitations": [
+        "Passage hash is not a PDF page check. The edition file is not in the repository."
+      ]
+    },
+    {
+      "combinationId": "combo_34",
+      "combinationName": "Tử Phủ Triều Viên",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_LOCATED",
+      "verificationStatus": "CROSS_REVIEW_RECORDED",
+      "decision": "CONFLICT",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "tu_phu_trieu_vien",
+      "runtimeGap": "cross_review_disagreement",
+      "recommendedAction": "hold_runtime_change_for_separate_reviewed_pr",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Tử Phủ Triều Viên",
+          "result": "defining span 19.2.2+19.5"
+        },
+        {
+          "corpus": "source-registry",
+          "query": "Tử Phủ Triều Viên",
+          "result": "other listed books have no full text in this workspace and were not used as evidence"
+        }
+      ],
+      "evidence": {
+        "sourceId": "thai-thu-lang-tan-bien",
+        "editionId": "tan-bien-retypeset-277-cover-1956",
+        "locator": "19.2.2+19.5",
+        "passageDigest": "9045f8516a9d0b1e5ead4aaeb4ea527c28aebddd68f2a760243e43499d34f6c2",
+        "pdfTextChecked": false,
+        "binding": "passage_hash_only"
+      },
+      "limitations": [
+        "Passage hash is not a PDF page check. The edition file is not in the repository."
+      ]
+    },
+    {
+      "combinationId": "combo_35",
+      "combinationName": "Thiên Ất Củng Mệnh",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "thien_at_cung_menh",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Thiên Ất Củng Mệnh",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_36",
+      "combinationName": "Tả Hữu Đồng Cung",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_LOCATED",
+      "verificationStatus": "AI_CROSS_REVIEWED",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "PARTIAL",
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "ta_huu_dong_cung",
+      "runtimeGap": "partial_gap",
+      "recommendedAction": "hold_runtime_change_for_separate_reviewed_pr",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Tả Hữu Đồng Cung",
+          "result": "defining span phu-giai/109"
+        },
+        {
+          "corpus": "source-registry",
+          "query": "Tả Hữu Đồng Cung",
+          "result": "other listed books have no full text in this workspace and were not used as evidence"
+        }
+      ],
+      "evidence": {
+        "sourceId": "thai-thu-lang-tan-bien",
+        "editionId": "tan-bien-retypeset-277-cover-1956",
+        "locator": "phu-giai/109",
+        "passageDigest": "7a9bc916e869db67b39a963ffd8e1dc965b3bd4cadbbf3bbec1b6e35ce56ee2b",
+        "pdfTextChecked": false,
+        "binding": "passage_hash_only"
+      },
+      "limitations": [
+        "Passage hash is not a PDF page check. The edition file is not in the repository."
+      ]
+    },
+    {
+      "combinationId": "combo_37",
+      "combinationName": "Văn Tinh Củng Mệnh",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "van_tinh_cung_menh",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Văn Tinh Củng Mệnh",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_38",
+      "combinationName": "Nhật Nguyệt Đồng Lâm",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_LOCATED",
+      "verificationStatus": "CROSS_REVIEW_RECORDED",
+      "decision": "CONFLICT",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "nhat_nguyet_dong_lam",
+      "runtimeGap": "cross_review_disagreement",
+      "recommendedAction": "hold_runtime_change_for_separate_reviewed_pr",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Nhật Nguyệt Đồng Lâm",
+          "result": "defining span 19.2.14+19.5"
+        },
+        {
+          "corpus": "source-registry",
+          "query": "Nhật Nguyệt Đồng Lâm",
+          "result": "other listed books have no full text in this workspace and were not used as evidence"
+        }
+      ],
+      "evidence": {
+        "sourceId": "thai-thu-lang-tan-bien",
+        "editionId": "tan-bien-retypeset-277-cover-1956",
+        "locator": "19.2.14+19.5",
+        "passageDigest": "772523f5fecb776b9c291b82447b1099ddbec216755396c9a054898a433010c4",
+        "pdfTextChecked": false,
+        "binding": "passage_hash_only"
+      },
+      "limitations": [
+        "Passage hash is not a PDF page check. The edition file is not in the repository."
+      ]
+    },
+    {
+      "combinationId": "combo_39",
+      "combinationName": "Thọ Tinh Nhập Miếu",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "tho_tinh_nhap_mieu",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Thọ Tinh Nhập Miếu",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_40",
+      "combinationName": "Anh Tinh Nhập Miếu",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "anh_tinh_nhap_mieu",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Anh Tinh Nhập Miếu",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_41",
+      "combinationName": "Kình Dương Nhập Miếu (Mã Đầu Đới Tiễn)",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_LOCATED",
+      "verificationStatus": "CROSS_REVIEW_RECORDED",
+      "decision": "UNRESOLVED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "kinh_duong_nhap_mieu",
+      "runtimeGap": "unresolved",
+      "recommendedAction": "hold_runtime_change_for_separate_reviewed_pr",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Kình Dương Nhập Miếu (Mã Đầu Đới Tiễn)",
+          "result": "defining span phu-giai/111"
+        },
+        {
+          "corpus": "source-registry",
+          "query": "Kình Dương Nhập Miếu (Mã Đầu Đới Tiễn)",
+          "result": "other listed books have no full text in this workspace and were not used as evidence"
+        }
+      ],
+      "evidence": {
+        "sourceId": "thai-thu-lang-tan-bien",
+        "editionId": "tan-bien-retypeset-277-cover-1956",
+        "locator": "phu-giai/111",
+        "passageDigest": "4e4678d385ab38aca3569f5dcfd16bada4fe5393b57da9b7ebfd741645154721",
+        "pdfTextChecked": false,
+        "binding": "passage_hash_only"
+      },
+      "limitations": [
+        "Passage hash is not a PDF page check. The edition file is not in the repository."
+      ]
+    },
+    {
+      "combinationId": "combo_42",
+      "combinationName": "Tài Ấn Giao Trì",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "tai_an_giao_tri",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Tài Ấn Giao Trì",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_43",
+      "combinationName": "Giáp Đệ Đăng Khoa",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "giap_de_dang_khoa",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Giáp Đệ Đăng Khoa",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_44",
+      "combinationName": "Đế Ngộ Hung Đồ",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "de_ngo_hung_do",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Đế Ngộ Hung Đồ",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_45",
+      "combinationName": "Nhật Nguyệt Tật Ách",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "nhat_nguyet_tat_ach",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Nhật Nguyệt Tật Ách",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_46",
+      "combinationName": "Khúc Ám Đồng Cung",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "khuc_am_dong_cung",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Khúc Ám Đồng Cung",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_47",
+      "combinationName": "Thiên Cơ Tỵ Hợi",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": null,
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Thiên Cơ Tỵ Hợi",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_48",
+      "combinationName": "Hình Tù Giáp Ấn",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_LOCATED",
+      "verificationStatus": "CROSS_REVIEW_RECORDED",
+      "decision": "CONFLICT",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "hinh_tu_giap_an",
+      "runtimeGap": "cross_review_disagreement",
+      "recommendedAction": "hold_runtime_change_for_separate_reviewed_pr",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Hình Tù Giáp Ấn",
+          "result": "defining span 19.2.18+19.5"
+        },
+        {
+          "corpus": "source-registry",
+          "query": "Hình Tù Giáp Ấn",
+          "result": "other listed books have no full text in this workspace and were not used as evidence"
+        }
+      ],
+      "evidence": {
+        "sourceId": "thai-thu-lang-tan-bien",
+        "editionId": "tan-bien-retypeset-277-cover-1956",
+        "locator": "19.2.18+19.5",
+        "passageDigest": "bce5f042964ab0ae3a2afde54e334c6b09eb5207a85bf0225ca064f3f92bcb98",
+        "pdfTextChecked": false,
+        "binding": "passage_hash_only"
+      },
+      "limitations": [
+        "Passage hash is not a PDF page check. The edition file is not in the repository."
+      ]
+    },
+    {
+      "combinationId": "combo_49",
+      "combinationName": "Cự Phùng Tứ Sát",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "cu_phung_tu_sat",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Cự Phùng Tứ Sát",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_50",
+      "combinationName": "Lộ Bàng Mai Thi",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "lo_bang_mai_thi",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Lộ Bàng Mai Thi",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_51",
+      "combinationName": "Hoa Cái Cư Phu Thê",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "hoa_cai_cu_phu_the",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Hoa Cái Cư Phu Thê",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_52",
+      "combinationName": "Lưỡng Trùng Thiên Mã",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": null,
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Lưỡng Trùng Thiên Mã",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_53",
+      "combinationName": "Cát Xứ Tàng Hung",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": null,
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Cát Xứ Tàng Hung",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_54",
+      "combinationName": "Phủ Tướng Triều Viên",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_LOCATED",
+      "verificationStatus": "AI_CROSS_REVIEWED",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "CONFLICT",
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "phu_tuong_trieu_vien",
+      "runtimeGap": "rule_conflicts_with_span",
+      "recommendedAction": "hold_runtime_change_for_separate_reviewed_pr",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Phủ Tướng Triều Viên",
+          "result": "defining span 19.2.5+19.5"
+        },
+        {
+          "corpus": "source-registry",
+          "query": "Phủ Tướng Triều Viên",
+          "result": "other listed books have no full text in this workspace and were not used as evidence"
+        }
+      ],
+      "evidence": {
+        "sourceId": "thai-thu-lang-tan-bien",
+        "editionId": "tan-bien-retypeset-277-cover-1956",
+        "locator": "19.2.5+19.5",
+        "passageDigest": "e4c1cfdead3bfe5a369a50e9a2fd0c61ffd848670b777b038b834ed4b3e1d297",
+        "pdfTextChecked": false,
+        "binding": "passage_hash_only"
+      },
+      "limitations": [
+        "Passage hash is not a PDF page check. The edition file is not in the repository."
+      ]
+    },
+    {
+      "combinationId": "combo_55",
+      "combinationName": "Nhật Lệ Trung Thiên",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_LOCATED",
+      "verificationStatus": "CROSS_REVIEW_RECORDED",
+      "decision": "CONFLICT",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "nhat_le_trung_thien",
+      "runtimeGap": "cross_review_disagreement",
+      "recommendedAction": "hold_runtime_change_for_separate_reviewed_pr",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Nhật Lệ Trung Thiên",
+          "result": "defining span phu-giai/70"
+        },
+        {
+          "corpus": "source-registry",
+          "query": "Nhật Lệ Trung Thiên",
+          "result": "other listed books have no full text in this workspace and were not used as evidence"
+        }
+      ],
+      "evidence": {
+        "sourceId": "thai-thu-lang-tan-bien",
+        "editionId": "tan-bien-retypeset-277-cover-1956",
+        "locator": "phu-giai/70",
+        "passageDigest": "54375e708b99f295a6700aca5548bff97fe8a558e4a0a04626353761e36cc265",
+        "pdfTextChecked": false,
+        "binding": "passage_hash_only"
+      },
+      "limitations": [
+        "Passage hash is not a PDF page check. The edition file is not in the repository."
+      ]
+    },
+    {
+      "combinationId": "combo_56",
+      "combinationName": "Chúng Thủy Triều Đông",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "chung_thuy_trieu_dong",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Chúng Thủy Triều Đông",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_57",
+      "combinationName": "Không Kiếp Giáp Mệnh",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "khong_kiep_giap_menh",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Không Kiếp Giáp Mệnh",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_58",
+      "combinationName": "Kình Đà Giáp Mệnh",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "kinh_da_giap_menh",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Kình Đà Giáp Mệnh",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_59",
+      "combinationName": "Quân Thần Khánh Hội",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_LOCATED",
+      "verificationStatus": "AI_CROSS_REVIEWED",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "PARTIAL",
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "quan_than_khanh_hoi",
+      "runtimeGap": "partial_gap",
+      "recommendedAction": "hold_runtime_change_for_separate_reviewed_pr",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Quân Thần Khánh Hội",
+          "result": "defining span 19.2.3+19.2.4+19.5"
+        },
+        {
+          "corpus": "source-registry",
+          "query": "Quân Thần Khánh Hội",
+          "result": "other listed books have no full text in this workspace and were not used as evidence"
+        }
+      ],
+      "evidence": {
+        "sourceId": "thai-thu-lang-tan-bien",
+        "editionId": "tan-bien-retypeset-277-cover-1956",
+        "locator": "19.2.3+19.2.4+19.5",
+        "passageDigest": "56f853f9f34d622075312af673416400bc7ce8aace930e6f06980ba66c063996",
+        "pdfTextChecked": false,
+        "binding": "passage_hash_only"
+      },
+      "limitations": [
+        "Passage hash is not a PDF page check. The edition file is not in the repository."
+      ]
+    },
+    {
+      "combinationId": "combo_60",
+      "combinationName": "Cơ Cự Đồng Lâm",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "co_cu_dong_lam",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Cơ Cự Đồng Lâm",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_61",
+      "combinationName": "Thủy Trừng Quế Ngạc",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "thuy_trung_que_ngac",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Thủy Trừng Quế Ngạc",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_62",
+      "combinationName": "Đồng Lương Tỵ Hợi",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "dong_luong_ty_hoi",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Đồng Lương Tỵ Hợi",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    },
+    {
+      "combinationId": "combo_63",
+      "combinationName": "Mệnh VCD Đắc Tam Không",
+      "researchStatus": "RESEARCH_COMPLETE",
+      "sourceStatus": "SOURCE_INACCESSIBLE",
+      "verificationStatus": "NOT_REVIEWED",
+      "decision": "PASSAGE_NOT_LOCATED",
+      "formulaComparison": null,
+      "expertVerified": false,
+      "chineseName": null,
+      "chineseNameEvidence": "no checked edition states a Chinese form",
+      "aliases": [],
+      "schoolId": "vn-tam-hop-default",
+      "variantType": "rule",
+      "otherSchoolVariantCreated": false,
+      "ruleId": "menh_vcd_tam_khong",
+      "runtimeGap": "no_source_in_readable_corpus",
+      "recommendedAction": "obtain_readable_edition_before_review",
+      "searchAttempts": [
+        {
+          "corpus": "local-tan-bien-spans",
+          "query": "Mệnh VCD Đắc Tam Không",
+          "result": "no hit in extracted spans",
+          "rejectedAsDefiningPassage": true,
+          "manifestReason": "no defining paragraph of this name in this edition"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "ziwei-quanshu-tradition",
+          "title": "紫微斗數全書 / Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "vu-tai-luc-toan-thu",
+          "title": "Tử Vi Đẩu Số Toàn Thư",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thai-thu-lang-tan-bien",
+          "title": "Tử Vi Đẩu Số Tân Biên",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-ham-so",
+          "title": "Tử Vi Hàm Số",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "nguyen-phat-loc-tong-hop",
+          "title": "Tử Vi Tổng Hợp",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "thien-luong-nghiem-ly",
+          "title": "Tử Vi Nghiệm Lý",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "trung-chau-wang-tingzhi",
+          "title": null,
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "kabala-an-sao",
+          "title": "Kabala — bài an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "hocvienlyso-chi-nam",
+          "title": "Học viện lý số — sao theo chi năm",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "tuvisonkhiem-pha-toai",
+          "title": "Tử Vi Sơn Khiêm — Phá Toái",
+          "result": "full text is not in the workspace"
+        },
+        {
+          "corpus": "source-registry",
+          "sourceId": "xemsomenh-an-sao",
+          "title": "Xem số mệnh — an sao Tử Vi",
+          "result": "full text is not in the workspace"
+        }
+      ],
+      "evidence": null,
+      "limitations": [
+        "No defining paragraph in the readable Tân Biên spans. Other named books were not readable here, so no formula was extracted."
+      ]
+    }
+  ]
+}

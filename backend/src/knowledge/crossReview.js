@@ -77,11 +77,20 @@ export function compareReviews(input) {
     if (disagreements.length > 0) {
         return decision({ decision: 'CONFLICT', reason: 'reviews disagree', disagreements });
     }
+    if (text(input.schoolId) && left.schoolId !== input.schoolId) {
+        return decision({ decision: 'UNRESOLVED', reason: 'school does not match the stored school' });
+    }
+    if (text(input.locator) && left.locator !== input.locator) {
+        return decision({ decision: 'UNRESOLVED', reason: 'locator does not match the stored locator' });
+    }
     if (!text(left.model) || !text(right.model) || left.model.trim() !== left.model || right.model.trim() !== right.model || left.model.trim() === right.model.trim()) {
         return decision({ decision: 'UNRESOLVED', reason: 'reviews are not from two models' });
     }
     if (['schoolId', 'editionId', 'locator', 'claimId'].some((field) => !text(left[field])) || !FORMULA.has(left.formulaComparison)) {
         return decision({ decision: 'UNRESOLVED', reason: 'agreed identity or formula status is incomplete' });
+    }
+    if (left.formulaComparison !== left.verdict || right.formulaComparison !== right.verdict) {
+        return decision({ decision: 'UNRESOLVED', reason: 'verdict does not match formulaComparison' });
     }
     if (!spanContains(input.storedSpan, left.quotation) || !spanContains(input.storedSpan, right.quotation)) {
         return decision({ decision: 'UNRESOLVED', reason: 'quotation is not in the stored span' });
@@ -89,11 +98,20 @@ export function compareReviews(input) {
     if (!sameList(left.conditions, right.conditions)) {
         return decision({ decision: 'CONFLICT', reason: 'reviews disagree on conditions' });
     }
+    if (Array.isArray(input.allowedConditions) && input.allowedConditions.length > 0) {
+        const allowed = new Set(input.allowedConditions);
+        if ((listOf(left.conditions) || []).some((item) => !allowed.has(item))) {
+            return decision({ decision: 'UNRESOLVED', reason: 'reviews add a condition outside the allowed set' });
+        }
+    }
     if (missingRequired(input.requiredConditions, left.conditions)) {
         return decision({ decision: 'UNRESOLVED', reason: 'a stored condition is missing from the reviews' });
     }
-    if (!sameList(left.exceptions || [], right.exceptions || []) || missingRequired(input.requiredExceptions, left.exceptions || [])) {
-        return decision({ decision: 'UNRESOLVED', reason: 'an exception is missing or disputed' });
+    if (!sameList(left.exceptions || [], right.exceptions || [])) {
+        return decision({ decision: 'CONFLICT', reason: 'reviews disagree on exceptions' });
+    }
+    if (missingRequired(input.requiredExceptions, left.exceptions || [])) {
+        return decision({ decision: 'UNRESOLVED', reason: 'an exception is missing' });
     }
     if (input.requiredAnchors.some((anchor) => typeof anchor !== 'string' || anchor.length < 4 || !left.quotation.includes(anchor) || !right.quotation.includes(anchor))) {
         return decision({ decision: 'UNRESOLVED', reason: 'quotation does not contain a required anchor' });

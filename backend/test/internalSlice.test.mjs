@@ -30,7 +30,13 @@ const structural = {
     ...decision,
     conditions: ['palace_menh_or_quan_loc', 'branch_hoi', 'star_nguyet_toa_thu', 'avoid_tuan', 'avoid_triet']
 };
-const matched = evaluateInternalSlice(chart(), structural);
+const bound = { ok: true };
+const unbound = evaluateInternalSlice(chart(), structural);
+assert.strictEqual(unbound.availabilityStatus, 'insufficient_evidence');
+assert.strictEqual(unbound.reason, 'binding_not_verified');
+assert.strictEqual(unbound.prose, null);
+
+const matched = evaluateInternalSlice(chart(), structural, bound);
 assert.strictEqual(matched.availabilityStatus, 'conditional_match');
 assert.strictEqual(matched.prose, null);
 assert.strictEqual(matched.expertVerified, false);
@@ -41,24 +47,36 @@ assert.strictEqual(matched.locator, decision.locator);
 
 const blocked = evaluateInternalSlice(chart({
     palaces: [{ functionId: 'menh', branchName: 'Hợi', isTuan: true, isTriet: false, stars: [{ starId: nguyet }] }]
-}), structural);
+}), structural, bound);
 assert.strictEqual(blocked.availabilityStatus, 'insufficient_evidence');
 assert.strictEqual(blocked.prose, null);
 
-const stored = evaluateInternalSlice(chart(), decision);
+const stored = evaluateInternalSlice(chart(), decision, bound);
 assert.strictEqual(stored.availabilityStatus, 'not_implemented');
 assert.strictEqual(stored.prose, null);
 assert.ok(stored.conditionResults.some((item) => item.conditionId === 'avoid_sat' && item.status === 'not_implemented'));
 
-const noEdition = evaluateInternalSlice(chart(), { ...structural, editionId: '' });
+const noEdition = evaluateInternalSlice(chart(), { ...structural, editionId: '' }, bound);
 assert.strictEqual(noEdition.availabilityStatus, 'insufficient_evidence');
 assert.notStrictEqual(noEdition.availabilityStatus, 'conditional_match');
 
-const noConditions = evaluateInternalSlice(chart(), { ...structural, conditions: [] });
+const noConditions = evaluateInternalSlice(chart(), { ...structural, conditions: [] }, bound);
 assert.strictEqual(noConditions.availabilityStatus, 'insufficient_evidence');
 assert.notStrictEqual(noConditions.availabilityStatus, 'conditional_match');
 
-const otherSchool = evaluateInternalSlice(chart({ schoolId: 'trung-chau' }), structural);
+const noHost = evaluateInternalSlice(chart({
+    palaces: [{ functionId: 'tai', branchName: 'Tý', stars: [] }]
+}), structural, bound);
+assert.strictEqual(noHost.availabilityStatus, 'insufficient_evidence');
+const trietBlocked = evaluateInternalSlice(chart({
+    palaces: [{ functionId: 'menh', branchName: 'Hợi', isTuan: false, isTriet: true, stars: [{ starId: nguyet }] }]
+}), { ...structural, conditions: ['avoid_triet'] }, bound);
+assert.strictEqual(trietBlocked.availabilityStatus, 'insufficient_evidence');
+const bare = evaluateInternalSlice(chart(), { decision: 'AI_ACCEPTED', conditions: ['branch_hoi'], schoolId: 'vn-tam-hop-default' }, bound);
+assert.strictEqual(bare.prose, null);
+assert.strictEqual(bare.claimId, null);
+
+const otherSchool = evaluateInternalSlice(chart({ schoolId: 'trung-chau' }), structural, bound);
 assert.strictEqual(otherSchool.availabilityStatus, 'insufficient_evidence');
 assert.strictEqual(otherSchool.reason, 'school_mismatch');
 
@@ -80,6 +98,7 @@ assert.ok(decisionFiles.includes('menh-vo-chinh-dieu.json'));
 for (const file of decisionFiles) {
     const storedDecision = JSON.parse(readFileSync(`${knowledgeRoot}decisions/${file}`, 'utf8'));
     const slice = evaluateInternalSlice(chart(), storedDecision);
+    assert.strictEqual(slice.reason, 'binding_not_verified', file);
     assert.strictEqual(slice.prose, null, file);
     assert.strictEqual(slice.expertVerified, false, file);
     const asClaim = {
@@ -99,7 +118,7 @@ for (const file of decisionFiles) {
 const matchedDecision = JSON.parse(readFileSync(`${knowledgeRoot}decisions/menh-vo-chinh-dieu.json`, 'utf8'));
 assert.strictEqual(matchedDecision.decision, 'AI_ACCEPTED');
 assert.strictEqual(matchedDecision.formulaComparison, 'MATCH');
-const matchedSlice = evaluateInternalSlice(chart(), matchedDecision);
+const matchedSlice = evaluateInternalSlice(chart(), matchedDecision, bound);
 assert.strictEqual(matchedSlice.availabilityStatus, 'not_implemented');
 assert.strictEqual(matchedSlice.prose, null);
 
