@@ -5,6 +5,7 @@ import { contentStore } from './content.js';
 import { digitSum, reduceNumber } from './reduction.js';
 import { buildBirthGrid } from './birthGrid.js';
 import { calculateCycles } from './cycles.js';
+import { calculatePinnacles } from './pinnacles.js';
 export { digitSum, reduceNumber } from './reduction.js';
 
 const missing = reason => ({ status: 'unavailable', reason, value: null, meaning: null, meaningStatus: 'withheld' });
@@ -44,9 +45,10 @@ export function calculateNumerology(body, referenceDate) {
         Object.assign(cycles[id], contentStore.getMeaning(id, cycles[id].value, { profileId: PROFILE.id, profileVersion: PROFILE.version, locale: PROFILE.locale }));
     }
     return {
-        ok: true, schemaVersion: '1.1.0', profile: publicProfile(), referenceDate,
+        ok: true, schemaVersion: '1.2.0', profile: publicProfile(), referenceDate,
         contentVersion: contentStore.contentVersion, metrics, nameAnalysis: name,
         birthGrid: buildBirthGrid(birthDate), cycles,
+        pinnacles: calculatePinnacles(birthDate, targetDate, metrics.lifePath.rootValue),
         capabilities: publicProfile().capabilities,
         warnings: name?.letters.some(letter => letter.letter === 'Y') ? [{ code: 'Y_AS_CONSONANT', field: 'fullName' }] : []
     };

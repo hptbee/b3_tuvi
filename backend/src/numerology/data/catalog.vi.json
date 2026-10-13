@@ -3,7 +3,8 @@
   "locale": "vi-VN",
   "profileId": "pythagorean-vn-v1",
   "compatibleProfileVersions": [
-    "1.1.0"
+    "1.1.0",
+    "1.2.0"
   ],
   "review": {
     "status": "editorial_reviewed",

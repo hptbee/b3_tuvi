@@ -250,6 +250,28 @@ test('birth grid and calendar cycles match real server fixtures for selected and
   await expect(page).toHaveURL(/\/than-so-hoc$/);
 });
 
+test('pinnacle timeline keeps challenge zero and follows the selected age', async ({ page }) => {
+  await page.goto('/than-so-hoc');
+  await fill(page);
+  await page.locator('#num-target').fill('2026-10-13');
+  await submit(page);
+  await expect(page.getByRole('heading', { name: 'Đỉnh cao và thử thách' })).toBeVisible();
+  await expect(output(page, 'Đỉnh cao giai đoạn 1')).toHaveText('3');
+  await expect(output(page, 'Thử thách giai đoạn 1')).toHaveText('0');
+  await expect(page.getByRole('listitem', { name: 'Giai đoạn 3' })).toContainText('Hiệu tuyệt đối của 0 và 5');
+  await expect(output(page, 'Đỉnh cao giai đoạn 2')).toHaveText('7');
+  await expect(output(page, 'Đỉnh cao giai đoạn 3')).toHaveText('1');
+  await expect(output(page, 'Đỉnh cao giai đoạn 4')).toHaveText('7');
+  await expect(page.getByRole('listitem', { name: 'Giai đoạn 2' })).toContainText('Đang trong giai đoạn này');
+  await page.getByText('Cách tính Đỉnh cao giai đoạn 1', { exact: true }).click();
+  await expect(page.locator('.num-pinnacle-period').first()).toContainText('12 → 1 + 2 = 3');
+  await page.locator('#num-target').fill('1990-06-15');
+  await submit(page);
+  await expect(page.getByRole('listitem', { name: 'Giai đoạn 1' })).toContainText('Đang trong giai đoạn này');
+  await expect(page.getByRole('listitem', { name: 'Giai đoạn 2' })).not.toContainText('Đang trong giai đoạn này');
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+});
+
 
 test('original reflective reading and source disclosure open by keyboard', async ({ page }) => {
   await page.goto('/than-so-hoc'); await fill(page, { name: 'Nguyễn Văn An' }); await submit(page);

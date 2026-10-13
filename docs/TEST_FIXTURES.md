@@ -32,6 +32,8 @@ Giữ hành vi đã có của engine, API, hoặc chuẩn hóa. Kết quả kỳ
 
 - `numerologyAdvanced.test.mjs`: independent grid/calendar-cycle arithmetic, line states, target validation and date boundaries; experimental product convention.
 
+- `numerologyPinnacles.test.mjs`: hand-derived pinnacle and challenge timelines, challenge 0, life-path-root ages and 29 February anniversaries. Experimental product convention, not an externally verified school.
+
 - `numerologyCore.test.mjs`: independent hand-derived product-spec arithmetic fixtures, Unicode/calendar negatives and invariants. Experimental Pythagorean convention; not an externally verified domain reference.
 
 Dữ liệu dựng trong test, database tạm, hoặc lỗi giả. Không dùng cho luận giải người dùng.

@@ -7,13 +7,13 @@ Snapshot phát triển ngày **2026-10-13**. Đã có **MVP số học thử ngh
 | Phần | Đã triển khai |
 |---|---|
 | Input | Ngày sinh dương lịch, năm 1200–2199, không ở tương lai; họ tên khai sinh tùy chọn; không yêu cầu giờ/giới tính |
-| Profile | `pythagorean-vn-v1`, phiên bản `1.0.0`; một quy ước sản phẩm rõ ràng, không silent fallback |
+| Profile | `pythagorean-vn-v1`, phiên bản `1.2.0`; một quy ước sản phẩm rõ ràng, không silent fallback |
 | Chỉ số ngày | Đường đời, Ngày sinh, Thái độ |
 | Chỉ số tên | Biểu đạt, Linh hồn, Nhân cách; Trưởng thành từ Đường đời + Biểu đạt |
 | Trace | Thành phần phép cộng, từng bước rút gọn, master/root; tên chuẩn hóa và giá trị từng chữ |
 | Trạng thái thiếu dữ liệu | Không có tên → bốn chỉ số tên unavailable; thiếu nguyên âm/phụ âm → chỉ nhóm tương ứng unavailable |
 | API | `GET /api/numerology/profiles`, `POST /api/numerology/calculate`; typed errors, scoped parser boundary, schema/profile/referenceDate |
-| UI | Landing tím với menu trên cùng; validation/focus, loading, retry, input snapshot, abort/sequence guard, trace bằng bàn phím và mobile |
+| UI | Landing tím với menu trên cùng; validation/focus, loading, retry, input snapshot, abort/sequence guard, trace bằng bàn phím và mobile; biểu đồ ngày sinh, chu kỳ và bốn giai đoạn đỉnh cao/thử thách |
 | Riêng tư | POST, no-store kể cả lỗi/preflight; không thêm persistence/URL/browser storage; không log tên/body/query |
 
 Frontend chỉ hiển thị kết quả server, không copy công thức. Engine thuần nhận ngày tham chiếu được inject; API chụp ngày một lần theo `Asia/Ho_Chi_Minh`. Không thay công thức Tử Vi, không migration SQLite, không thêm dependency hoặc tài khoản.
@@ -23,7 +23,7 @@ Frontend chỉ hiển thị kết quả server, không copy công thức. Engine
 - Đường đời cộng tất cả chữ số ngày sinh, khác phương pháp rút gọn từng thành phần.
 - Giữ 11/22/33 cho Đường đời, Ngày sinh, Biểu đạt, Linh hồn, Nhân cách, Trưởng thành; Thái độ về 1–9. Master vẫn có `rootValue`.
 - Tên: NFC/NFD tương đương, accent whitelist Latin/tiếng Việt, Đ → D, A–Z → 1–9, nguyên âm AEIOU, Y là phụ âm. Cho phép khoảng trắng/gạch nối/apostrophe như spec; từ chối ký tự ẩn, unsupported script/mark/ligature thay vì bỏ âm thầm. Tên rỗng/whitespace thường là không có tên.
-- `status=experimental`, `sourceStatus=product_specification_only`, `contentVersion=null`. Tất cả metric có `meaning=null`, `meaningStatus=withheld`.
+- `status=experimental`, `sourceStatus=product_specification_only`. Lời luận gốc đã duyệt vẫn là `experimental_editorial` cho các chỉ số cốt lõi và chu kỳ. Đỉnh cao và thử thách giữ `meaning=null`, `meaningStatus=withheld`, vì nhóm này chưa có bài biên tập.
 
 [Formula spec](FORMULA_SPEC.md), [decision register](DECISIONS.md), [source registry](SOURCE_REGISTRY.md), [fixture handbook](FIXTURES.md) và [API contract](API_CONTRACT.md) ghi quy ước thực tế. Tám fixture số học được tính độc lập với mã engine, có derivation; chúng kiểm chứng đúng theo quy ước sản phẩm, không chứng minh nguồn bên ngoài đã xác minh hoặc tính đúng chuyên môn. Chưa có source dossier bên ngoài hoặc lời luận đủ điều kiện.
 
@@ -60,6 +60,7 @@ Bằng chứng local ở snapshot này:
 |---|---|---|
 | T001 | `9849b55169e7ec9ba9436c13fe2993ae907d8dc6` | Routing prompt B3 cloud; readable skill links không tự đăng ký native catalog |
 | T002 | `c9e0903effa372f48cc0f1ef8f11b6be0ecfffd7` | Profile/spec, pure core, fixtures/validation |
+| Engine đỉnh cao | `1570d7eb8ea962b5ddf75e9b9b14feaf36c0ff17` | Bốn giai đoạn, thử thách 0, tuổi gốc Đường đời, năm nhuận |
 | T003 | `b91fd75d7e08bfc313b1af50ff75131159df0bb2` | API và privacy/error boundary |
 | T004 | `3cc3496` | Public landing/form/kết quả và frontend regressions |
 
@@ -69,7 +70,7 @@ T005 thêm tài liệu này và integrated E2E; tìm commit bằng lịch sử G
 
 1. **Nguồn/công thức:** tìm source dossier có locator/edition và conflict matrix, review các quyết định; nếu thay quy ước thì tạo profile/version và fixture mới.
 2. **Nội dung:** schema/catalog validator, eligibility, lời luận có nguồn và trạng thái review; hiện không có catalog/meaning endpoint.
-3. **V1:** biểu đồ ngày sinh, cycles, pinnacles/challenges; từng nhóm cần source/spec/fixtures/API/UI và tests. API trả capability `not_implemented`, không dữ liệu giả.
+3. **V1 còn lại:** biểu đồ, chu kỳ và đỉnh cao/thử thách đã có theo quy ước thử nghiệm profile 1.2.0. Chưa có lời luận cho đỉnh cao/thử thách. Export/import/print vẫn chưa có.
 4. **Export/import/print riêng:** opt-in tên, kiểm tra version và recalculate, print layout/E2E. Tử Vi export sẵn có không đồng nghĩa Thần Số Học đã hỗ trợ.
 5. **Release:** production rate limit, benchmark thực tế, metadata/noindex, staging SPA rewrite/refresh, logging/monitoring, rollback và các gate §15 roadmap. Không đánh dấu checklist release hoàn tất từ tests local.
 6. **Tùy chọn:** nhiều profile, AI, cross-browser; không bắt buộc để chạy calculator hiện tại.

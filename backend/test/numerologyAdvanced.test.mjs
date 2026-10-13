@@ -12,7 +12,7 @@ for (const fixture of fixtures.cases) {
     const result = calculateNumerology(input, today);
     const { birthGrid: grid, cycles } = result;
     assert.equal(result.profile.version, fixtures.profileVersion);
-    assert.equal(result.schemaVersion, '1.1.0');
+    assert.equal(result.schemaVersion, '1.2.0');
     if (fixture.counts) assert.deepEqual(grid.counts, fixture.counts, fixture.id);
     if (fixture.zeros !== undefined) assert.equal(grid.ignoredZeroCount, fixture.zeros, fixture.id);
     assert.deepEqual([cycles.personalYear.value, cycles.personalMonth.value, cycles.personalDay.value], fixture.cycles, fixture.id);
@@ -43,7 +43,7 @@ assert.equal(isoDateOnly('2000-02-29'), '2000-02-29');
 for (const bad of [null, 1, {}, '', '2026-1-01', '2026-02-30', '1900-02-29', '1990-06-14', '2200-01-01', '2026-10-13T00:00:00Z', '2026-10-13 ']) {
     assert.throws(() => calculateNumerology({ ...base, targetDate: bad }, today), error => error instanceof NumerologyInputError && error.code === 'INVALID_TARGET_DATE' && error.fields[0].path === 'targetDate');
 }
-for (const field of ['birthGrid', 'cycles']) {
+for (const field of ['birthGrid', 'cycles', 'pinnacles']) {
     assert.throws(() => calculateNumerology({ ...base, [field]: {} }, today), error => error.code === 'CLIENT_RESULT_REJECTED');
 }
 assert.throws(() => calculateNumerology({ ...base, profileVersion: '1.0.0' }, today), error => error.code === 'PROFILE_NOT_FOUND');

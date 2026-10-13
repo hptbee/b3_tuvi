@@ -29,6 +29,30 @@ function validMetric(metric, metricId) {
     && metric.parts.every(part => typeof part?.label === 'string' && Array.isArray(part.values) && part.values.every(Number.isFinite) && Number.isFinite(part.total))
     && Array.isArray(metric.steps) && metric.steps.every(step => Array.isArray(step?.digits) && step.digits.every(Number.isFinite) && Number.isFinite(step.input) && Number.isFinite(step.output)) && validMeaning(metric, metricId);
 }
+function validPinnacles(body) {
+  const item = body.pinnacles;
+  const allowed = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22];
+  const iso = value => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value);
+  if (item?.version !== '1.0.0' || item.policy !== 'component-reduce-root-age-v1' || item.anniversaryPolicy !== 'feb29-mar1-nonleap-v1') return false;
+  if (item.asOf !== body.cycles?.targetDate || !Number.isInteger(item.completedAge) || item.completedAge < 0) return false;
+  if (!Number.isInteger(item.lifePathRoot) || item.lifePathRoot < 1 || item.lifePathRoot > 9 || item.firstCycleEndAge !== 36 - item.lifePathRoot) return false;
+  if (!['month', 'day', 'year'].every(id => validMetric(item.components?.[id], id) && item.components[id].keepMasters === false && item.components[id].value >= 1 && item.components[id].value <= 9)) return false;
+  if (!Array.isArray(item.periods) || item.periods.length !== 4 || item.periods.filter(period => period?.active === true).length !== 1) return false;
+  const starts = [0, item.firstCycleEndAge + 1, item.firstCycleEndAge + 10, item.firstCycleEndAge + 19];
+  const ends = [item.firstCycleEndAge, item.firstCycleEndAge + 9, item.firstCycleEndAge + 18, null];
+  return item.periods.every((period, index) => {
+    const challenge = period?.challenge;
+    const inRange = item.completedAge >= period?.startAgeInclusive && (period?.endAgeInclusive === null || item.completedAge <= period?.endAgeInclusive);
+    return period?.id === `p${index + 1}` && period.startAgeInclusive === starts[index] && period.endAgeInclusive === ends[index]
+      && validMetric(period.pinnacle, period.id) && period.pinnacle.keepMasters === true && allowed.includes(period.pinnacle.value)
+      && challenge?.status === 'available' && Number.isInteger(challenge.value) && challenge.value >= 0 && challenge.value <= 8
+      && challenge.meaning === null && challenge.meaningStatus === 'withheld'
+      && Array.isArray(challenge.operands) && challenge.operands.length === 2 && challenge.operands.every(Number.isInteger)
+      && Math.abs(challenge.operands[0] - challenge.operands[1]) === challenge.value
+      && iso(period.startDate) && (period.endAgeInclusive === null ? period.endDate === null : iso(period.endDate))
+      && period.active === inRange;
+  });
+}
 function validAdvanced(body) {
   const grid = body.birthGrid;
   const cycle = body.cycles;
@@ -63,7 +87,7 @@ export async function calculateRequest(input, signal) {
   if (body?.ok !== true || typeof body.profile?.id !== 'string' || typeof body.profile?.version !== 'string'
     || (body.contentVersion !== null && (typeof body.contentVersion !== 'string' || !/^\d+\.\d+\.\d+$/.test(body.contentVersion)))
     || (Object.values(body.metrics || {}).concat(Object.values(body.cycles || {})).some(metric => metric?.meaningStatus === 'experimental_editorial') && body.contentVersion === null)
-    || typeof body.referenceDate !== 'string' || !validAdvanced(body) || !METRIC_IDS.every(id => validMetric(body.metrics?.[id], id))
+    || typeof body.referenceDate !== 'string' || !validAdvanced(body) || !validPinnacles(body) || !METRIC_IDS.every(id => validMetric(body.metrics?.[id], id))
     || (body.nameAnalysis !== null && (typeof body.nameAnalysis?.normalized !== 'string' || !Array.isArray(body.nameAnalysis?.letters)
       || !body.nameAnalysis.letters.every(item => typeof item?.letter === 'string' && Number.isFinite(item.value))))) {
     throw new NumerologyRequestError('Phản hồi chưa đầy đủ. Vui lòng thử lại.', [], true);

@@ -54,9 +54,12 @@ try {
     assert.equal(result.metrics.lifePath.meaningStatus, 'experimental_editorial');
     assert.equal(result.metrics.lifePath.meaning.expertVerified, false);
     assert.equal(result.metrics.lifePath.meaning.value, 4);
-    assert.equal(result.profile.version, '1.1.0');
+    assert.equal(result.profile.version, '1.2.0');
+    assert.equal(result.schemaVersion, '1.2.0');
     assert.equal(result.capabilities.birthGrid, 'available');
     assert.equal(result.capabilities.cycles, 'available');
+    assert.equal(result.capabilities.pinnacles, 'available');
+    assert.equal(result.pinnacles.periods[0].challenge.value, 0);
     assert.equal(result.cycles.targetDate, result.referenceDate);
     assert.deepEqual(result.birthGrid.counts, { 1: 2, 2: 0, 3: 0, 4: 0, 5: 1, 6: 1, 7: 0, 8: 0, 9: 2 });
     const selected = await post(JSON.stringify({ ...birth, targetDate: '2027-01-01' }));
@@ -108,6 +111,8 @@ try {
         [{ ...birth, targetDate: null }, 400, 'INVALID_TARGET_DATE'],
         [{ ...birth, cycles: { personalYear: 1 } }, 400, 'CLIENT_RESULT_REJECTED'],
         [{ ...birth, birthGrid: {} }, 400, 'CLIENT_RESULT_REJECTED'],
+        [{ ...birth, pinnacles: { periods: [] } }, 400, 'CLIENT_RESULT_REJECTED'],
+        [{ ...birth, profileVersion: '1.1.0' }, 404, 'PROFILE_NOT_FOUND'],
         [{ ...birth, profileVersion: '1.0.0' }, 404, 'PROFILE_NOT_FOUND']
     ];
     for (const [body, status, code] of cases) {
