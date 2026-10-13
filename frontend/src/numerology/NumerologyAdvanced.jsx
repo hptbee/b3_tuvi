@@ -1,4 +1,5 @@
 import CalculationTrace from './CalculationTrace';
+import MetricMeaning from './MetricMeaning';
 
 const STATES = { present: 'Đủ 3 số', partial: 'Có một phần', absent: 'Không có số nào' };
 export default function NumerologyAdvanced({ birthGrid, cycles }) {
@@ -20,7 +21,7 @@ export default function NumerologyAdvanced({ birthGrid, cycles }) {
       <p className="num-cycle-date">Ngày xem: <strong>{cycles.targetDate.split('-').reverse().join('/')}</strong> · Năm {cycles.year}</p>
       <p>Quy ước năm dương lịch từ 01/01 đến 31/12, không đổi vào sinh nhật. Các chu kỳ rút gọn về 1–9.</p>
       <div className="num-cycle-grid">{[['personalYear', 'Năm cá nhân'], ['personalMonth', 'Tháng cá nhân'], ['personalDay', 'Ngày cá nhân']].map(([id, label]) => <article key={id} className="num-metric" aria-labelledby={`cycle-${id}`}>
-        <h3 id={`cycle-${id}`}>{label}</h3><output className="num-value" aria-label={label}>{cycles[id].value}</output><CalculationTrace label={label} metric={cycles[id]} />
+        <h3 id={`cycle-${id}`}>{label}</h3><output className="num-value" aria-label={label}>{cycles[id].value}</output><CalculationTrace label={label} metric={cycles[id]} /><MetricMeaning label={label} metric={cycles[id]} />
       </article>)}</div>
     </section>
   </div>;

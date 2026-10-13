@@ -75,7 +75,7 @@ for (const fixture of [
     await expect(output(page, 'Đường đời')).toHaveText(String(fixture.value));
     const card = page.getByRole('article', { name: 'Đường đời', exact: true });
     await expect(card).toContainText(`Số đặc biệt · Gốc ${fixture.root}`);
-    await card.locator('summary').click();
+    await card.getByText('Cách tính Đường đời', { exact: true }).click();
     await expect(card).toContainText('Giữ 11, 22, 33');
   });
 }
@@ -248,4 +248,33 @@ test('birth grid and calendar cycles match real server fixtures for selected and
   await expect(page.locator('.num-cycle-date')).toContainText(body.referenceDate.split('-').reverse().join('/'));
   expect(body.cycles.targetDate).toBe(body.referenceDate);
   await expect(page).toHaveURL(/\/than-so-hoc$/);
+});
+
+
+test('original reflective reading and source disclosure open by keyboard', async ({ page }) => {
+  await page.goto('/than-so-hoc'); await fill(page, { name: 'Nguyễn Văn An' }); await submit(page);
+  await expect(output(page, 'Đường đời')).toHaveText('4');
+  const card = page.getByRole('article', { name: 'Đường đời', exact: true });
+  const reading = card.locator('.num-reading');
+  await expect(reading.locator('h4')).toBeHidden();
+  await card.getByText('Lời luận tham khảo · Đường đời', { exact: true }).focus();
+  await page.keyboard.press('Enter');
+  await expect(reading.locator('h4')).toContainText('Đường đời 4');
+  await expect(reading).toContainText('khung suy ngẫm về hướng đi dài hạn');
+  await expect(reading.getByRole('heading', { name: 'Câu hỏi để tự suy ngẫm' })).toBeVisible();
+  const source = reading.locator('.num-reading-source');
+  await source.locator('summary').focus(); await page.keyboard.press('Enter');
+  await expect(source).toContainText('không phải lời luận đã được chuyên gia xác minh');
+  await expect(source.getByRole('link')).toHaveAttribute('href', 'https://github.com/evoluteur/motivational-numerology/blob/c0535c9c9e7bcdc340b7eed255f89f64146dd8d5/i18n/meaning_en.js');
+  await expect(source.getByRole('link')).toHaveAttribute('rel', 'noopener noreferrer');
+  await expect(page).toHaveURL(/\/than-so-hoc$/);
+});
+
+test('master33 stays numeric with a clear unavailable-reading reason', async ({ page }) => {
+  await page.goto('/than-so-hoc'); await fill(page, { day: 29, month: 3, year: 1990 }); await submit(page);
+  const card = page.getByRole('article', { name: 'Đường đời', exact: true });
+  await expect(output(page, 'Đường đời')).toHaveText('33');
+  await expect(card).toContainText('Số đặc biệt · Gốc 6');
+  await expect(card).toContainText('Chưa có lời luận đủ căn cứ cho số 33.');
+  await expect(card.locator('.num-reading')).toHaveCount(0);
 });

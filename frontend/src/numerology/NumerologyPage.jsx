@@ -3,6 +3,7 @@ import { calculateRequest, METRIC_IDS } from './api';
 import './numerology.css';
 import CalculationTrace from './CalculationTrace';
 import NumerologyAdvanced from './NumerologyAdvanced';
+import MetricMeaning from './MetricMeaning';
 
 const LABELS = {
   lifePath: ['Đường đời', 'Từ tổng các chữ số trong ngày sinh.'],
@@ -28,7 +29,7 @@ function MetricSection({ id, metric }) {
     {metric.status === 'available' ? <>
       <output className="num-value" aria-label={label}>{metric.value}</output>
       {metric.isMaster && <p className="num-master">Số đặc biệt · Gốc {metric.rootValue}</p>}
-      <CalculationTrace label={label} metric={metric} />
+      <CalculationTrace label={label} metric={metric} /><MetricMeaning label={label} metric={metric} />
     </> : <p className="num-unavailable">{UNAVAILABLE[metric.reason] || 'Chưa đủ thông tin để tính.'}</p>}
   </article>;
 }
@@ -85,7 +86,7 @@ export default function NumerologyPage() {
       <div className="num-start-copy"><div className="section-kicker">BẮT ĐẦU TỪ NGÀY SINH</div><h2>Một vài thông tin.<br />Bảy chỉ số để khám phá.</h2>
         <p>Chỉ ngày sinh đã đủ để xem Đường đời, Ngày sinh và Thái độ. Thêm họ tên khai sinh nếu bạn muốn tính nhóm chỉ số từ tên.</p>
         <div className="num-method"><h3>Quy ước đang sử dụng</h3><p>Pythagorean · tổng tất cả chữ số ngày sinh · giữ 11/22/33 theo từng chỉ số.</p><p>Tên tiếng Việt được bỏ dấu và chuyển Đ thành D; Y luôn được tính là phụ âm. Các phương pháp khác có thể cho kết quả khác.</p></div>
-        <p className="num-disclaimer">Bản thử nghiệm chỉ hiển thị con số và cách tính theo quy ước đã chọn. Chưa có nội dung diễn giải đã đối chiếu nguồn.</p>
+        <p className="num-disclaimer">Bản thử nghiệm có con số, cách tính và lời luận gợi suy ngẫm. Nội dung biên tập tham khảo nguồn cộng đồng, chưa phải đánh giá khoa học hay lời luận được chuyên gia xác minh.</p>
       </div>
       <section className="form-container num-form" aria-labelledby="num-form-heading"><h2 id="num-form-heading">Tính chỉ số của bạn</h2>
         <form className="tuviform" onSubmit={submit} aria-busy={request.status === 'loading'}>
@@ -107,8 +108,9 @@ export default function NumerologyPage() {
     {request.status === 'loading' && <div className="num-request-status" role="status">Đang tính các chỉ số theo thông tin bạn đã gửi…</div>}
     {request.status === 'error' && <div className="num-error" role="alert" ref={errorBox} tabIndex={-1}><h2>Chưa thể tính chỉ số</h2><p>{request.error.message}</p>{request.error.retryable && <button className="primary-button" onClick={() => run(request.input)}>Thử lại</button>}</div>}
     {result && <section className="num-results" aria-labelledby="num-results-heading">
-      <div className="num-results-heading"><div><div className="section-kicker">KẾT QUẢ CỦA BẠN</div><h2 id="num-results-heading" ref={resultHeading} tabIndex={-1}>Các chỉ số của bạn</h2><p>{request.input.fullName?.trim() || 'Theo ngày sinh'} · {request.input.birthDate.day}/{request.input.birthDate.month}/{request.input.birthDate.year}</p></div><p>Quy ước Pythagorean {result.profile.version}<br />Bản thử nghiệm · chưa phải lời luận</p></div>
+      <div className="num-results-heading"><div><div className="section-kicker">KẾT QUẢ CỦA BẠN</div><h2 id="num-results-heading" ref={resultHeading} tabIndex={-1}>Các chỉ số của bạn</h2><p>{request.input.fullName?.trim() || 'Theo ngày sinh'} · {request.input.birthDate.day}/{request.input.birthDate.month}/{request.input.birthDate.year}</p></div><p>Quy ước Pythagorean {result.profile.version}<br />Bản thử nghiệm · lời luận tham khảo</p></div>
       {!sameInput && <p className="num-draft-note" role="status">Bạn đang chỉnh sửa thông tin. Kết quả vẫn thuộc dữ liệu đã gửi; chọn “Xem kết quả” để tính lại.</p>}
+      {result.contentVersion && <aside className="num-content-notice" aria-label="Lời luận thử nghiệm"><h3>Một lời gợi mở, để bạn tự suy ngẫm</h3><p>Mở lời luận ở từng chỉ số để xem góc nhìn và câu hỏi tham khảo. Chủ đề số được đối chiếu nguồn cộng đồng; nội dung và ngữ cảnh do ứng dụng biên tập, không quyết định tính cách hoặc tương lai của bạn.</p><p>Phiên bản nội dung {result.contentVersion} · biên tập thử nghiệm</p></aside>}
       <div className="num-metric-grid">{METRIC_IDS.map(id => <MetricSection key={id} id={id} metric={result.metrics[id]} />)}</div>
       {result.nameAnalysis && <details className="num-name-trace"><summary>Tên được chuyển sang chữ số như thế nào?</summary><p>Tên chuẩn hóa: <strong>{result.nameAnalysis.normalized}</strong></p><p>Đ → D · bỏ dấu · A, E, I, O, U là nguyên âm · Y là phụ âm.</p><div className="num-letter-list">{result.nameAnalysis.letters.map((item, index) => <span key={index} aria-label={`${item.letter} bằng ${item.value}`}>{item.letter}<b>{item.value}</b></span>)}</div></details>}
       <NumerologyAdvanced birthGrid={result.birthGrid} cycles={result.cycles} />

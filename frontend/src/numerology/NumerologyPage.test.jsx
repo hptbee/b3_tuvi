@@ -4,8 +4,8 @@ import NumerologyPage from './NumerologyPage';
 
 function result(value = 4, normalized = null) {
   const available = number => ({ status: 'available', value: number, rootValue: number, isMaster: false, keepMasters: true,
-    parts: [{ label: 'day', values: [1, 5], total: 6 }], steps: [] });
-  return { ok: true, referenceDate: '2026-10-13', profile: { id: 'pythagorean-vn-v1', version: '1.1.0' },
+    meaning: null, meaningStatus: 'withheld', parts: [{ label: 'day', values: [1, 5], total: 6 }], steps: [] });
+  return { ok: true, contentVersion: null, referenceDate: '2026-10-13', profile: { id: 'pythagorean-vn-v1', version: '1.1.0' },
     birthGrid: { layoutVersion: '3-6-9-v1', layout: [[3,6,9],[2,5,8],[1,4,7]], counts: {1:2,2:0,3:0,4:0,5:1,6:1,7:0,8:0,9:2}, ignoredZeroCount: 2,
       lines: ['1-2-3','4-5-6','7-8-9','1-4-7','2-5-8','3-6-9','1-5-9','3-5-7'].map(id => ({ id, digits: id.split('-').map(Number), state: id === '1-5-9' ? 'present' : 'partial' })) },
     cycles: { policy: 'calendar-year-v1', targetDate: '2026-10-13', year: 2026,
@@ -13,10 +13,10 @@ function result(value = 4, normalized = null) {
     nameAnalysis: normalized ? { normalized, letters: [{ letter: 'A', value: 1 }] } : null,
     metrics: {
       lifePath: available(value), birthday: available(6), attitude: available(3),
-      expression: { status: 'unavailable', value: null, reason: 'missing_name' },
-      soulUrge: { status: 'unavailable', value: null, reason: 'missing_name' },
-      personality: { status: 'unavailable', value: null, reason: 'missing_name' },
-      maturity: { status: 'unavailable', value: null, reason: 'missing_name' }
+      expression: { status: 'unavailable', value: null, reason: 'missing_name', meaning: null, meaningStatus: 'withheld' },
+      soulUrge: { status: 'unavailable', value: null, reason: 'missing_name', meaning: null, meaningStatus: 'withheld' },
+      personality: { status: 'unavailable', value: null, reason: 'missing_name', meaning: null, meaningStatus: 'withheld' },
+      maturity: { status: 'unavailable', value: null, reason: 'missing_name', meaning: null, meaningStatus: 'withheld' }
     }
   };
 }
@@ -200,4 +200,60 @@ it.each([
   await user.click(screen.getByRole('button', { name: 'Xem kết quả' }));
   expect(await screen.findByRole('alert')).toHaveTextContent('Phản hồi chưa đầy đủ');
   expect(screen.queryByRole('heading', { name: 'Biểu đồ ngày sinh' })).not.toBeInTheDocument();
+});
+
+
+function readingResult() {
+  const body = result(); body.contentVersion = '1.0.0';
+  body.metrics.lifePath.meaningStatus = 'experimental_editorial';
+  body.metrics.lifePath.meaning = {
+    metricId: 'lifePath', value: 4, kind: 'original_editorial', title: 'Đường đời 4 · Nền tảng', summary: 'Gợi ý nhìn lại một thói quen đang giúp bạn tiến lên.',
+    reflectionPrompts: ['Thói quen nào bạn muốn giữ?'], limitations: ['Không quyết định tính cách hoặc tương lai.'],
+    reviewStatus: 'editorial_reviewed', expertVerified: false, evidenceStatus: 'community_reference',
+    sourceReferences: [{ id: 'community', title: 'Nguồn cộng đồng để tham khảo', url: 'https://github.com/evoluteur/motivational-numerology/blob/c0535c9c9e7bcdc340b7eed255f89f64146dd8d5/i18n/meaning_en.js', evidenceClass: 'community_reference', relationship: 'general_number_theme' }]
+  };
+  return body;
+}
+
+it('expands original reflective reading, questions, source and limits', async () => {
+  vi.stubGlobal('fetch', vi.fn(async () => success(readingResult())));
+  const user = userEvent.setup(); render(<NumerologyPage />); await fillDate(user);
+  await user.click(screen.getByRole('button', { name: 'Xem kết quả' }));
+  await screen.findByRole('status', { name: 'Đường đời', exact: true });
+  const summary = screen.getByText('Lời luận tham khảo · Đường đời');
+  expect(screen.getByText('Gợi ý nhìn lại một thói quen đang giúp bạn tiến lên.')).not.toBeVisible();
+  await user.click(summary);
+  expect(screen.getByText('Thói quen nào bạn muốn giữ?')).toBeVisible();
+  await user.click(screen.getByText('Nguồn và giới hạn của lời luận'));
+  const source = screen.getByRole('link', { name: 'Nguồn cộng đồng để tham khảo' });
+  expect(source).toHaveAttribute('href', expect.stringContaining('/blob/c0535c9'));
+  expect(source).toHaveAttribute('rel', 'noopener noreferrer');
+  expect(screen.getByText(/đây không phải lời luận đã được chuyên gia xác minh/)).toBeVisible();
+});
+
+it('shows master33 withholding without displaying a root6 substitute', async () => {
+  const body = result(33); body.metrics.lifePath.rootValue = 6; body.metrics.lifePath.isMaster = true;
+  body.metrics.lifePath.meaningReason = 'source_unavailable';
+  vi.stubGlobal('fetch', vi.fn(async () => success(body)));
+  const user = userEvent.setup(); render(<NumerologyPage />); await fillDate(user);
+  await user.click(screen.getByRole('button', { name: 'Xem kết quả' }));
+  expect(await screen.findByText('Chưa có lời luận đủ căn cứ cho số 33.')).toBeVisible();
+  expect(screen.queryByText('Lời luận tham khảo · Đường đời')).not.toBeInTheDocument();
+});
+
+it.each([
+  ['unsafe source', body => { body.metrics.lifePath.meaning.sourceReferences[0].url = 'javascript:alert(1)'; }],
+  ['expert flag', body => { body.metrics.lifePath.meaning.expertVerified = true; }],
+  ['wrong metric', body => { body.metrics.lifePath.meaning.metricId = 'soulUrge'; }],
+  ['wrong number', body => { body.metrics.lifePath.meaning.value = 6; }],
+  ['unreviewed status', body => { body.metrics.lifePath.meaning.reviewStatus = 'draft'; }],
+  ['missing prompts', body => { body.metrics.lifePath.meaning.reflectionPrompts = []; }],
+  ['missing content version', body => { body.contentVersion = null; }],
+  ['withheld but nonnull', body => { body.metrics.lifePath.meaningStatus = 'withheld'; }]
+])('rejects malformed or ineligible reading: %s', async (_, corrupt) => {
+  const body = readingResult(); corrupt(body); vi.stubGlobal('fetch', vi.fn(async () => success(body)));
+  const user = userEvent.setup(); render(<NumerologyPage />); await fillDate(user);
+  await user.click(screen.getByRole('button', { name: 'Xem kết quả' }));
+  expect(await screen.findByRole('alert')).toHaveTextContent('Phản hồi chưa đầy đủ');
+  expect(screen.queryByText('Lời luận tham khảo · Đường đời')).not.toBeInTheDocument();
 });
