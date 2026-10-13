@@ -2,7 +2,7 @@
 
 This report is the engineering ledger for formula version `s9-v1`. It is not a claim that 63 formations are historically authenticated, expert-verified, or predictively validated. `expertVerified` stays false. Research decisions, spans, and model reviews were not rewritten.
 
-COUNTS active=29 variant=24 internal_only=2 disabled=8 sum=63 public_default=50 executable=55 variant_implementations=68 unimplemented_supported=0 rules_v2_rows=58 missing_rules=5
+COUNTS active=29 variant=24 internal_only=2 disabled=8 sum=63 public_default=50 executable=55 variant_implementations=67 unimplemented_supported=0 rules_v2_rows=58 missing_rules=5
 
 ACTIVE + VARIANT + INTERNAL_ONLY + DISABLED = 29 + 24 + 2 + 8 = 63.
 
@@ -17,7 +17,7 @@ ACTIVE + VARIANT + INTERNAL_ONLY + DISABLED = 29 + 24 + 2 + 8 = 63.
 | DISABLED | 8 |
 | Source-backed executable formations | 55 |
 | Disabled patterns | 8 |
-| Implemented source-variant formulas | 68 |
+| Implemented source-variant formulas | 67 |
 | Public on the default profile | 50 |
 | Supported non-disabled predicates still unimplemented | 0 |
 | Prior rulesV2 rows | 58 |
@@ -71,7 +71,7 @@ Hùng Tú Triều Viên, Lộc Phùng Xung Phá, Bán Không Chiết Xỉ, Tài 
 | 19 | Lộc Mã Giao Trì | `loc_ma_giao_tri` | VARIANT | tan-bien-xung | tan-bien-xung: Tân Biên Lộc Tồn xung chiếu, Mã gặp tại Mệnh hoặc đối cung<br>same-palace: same-palace variant<br>hoi-chieu: hội chiếu variant | none | SOURCE_SCOPED | implemented | yes | formulaV1.test.mjs | — | replaced |
 | 20 | Hùng Tú Triều Viên | `hung_tu_trieu_vien` | DISABLED | — | no executable predicate | none | NAME_MISMATCH | disabled | no | formulaV1.test.mjs | The Liêm Trinh Dần/Thân predicate is not kept under this title. A modern 雄宿朝垣 formula would need a distinct id and display name. | disabled |
 | 21 | Linh Xương Đà Vũ | `linh_xuong_da_vu` | VARIANT | modern-108s | modern-108s: https://www.108s.tw/article/info/205 | none | MODERN_VARIANT | implemented | yes | formulaV1.test.mjs | — | replaced |
-| 22 | Hình Kỵ Giáp Ấn | `hinh_ky_giap_an` | VARIANT | — | school-kinh-da-flank: school: Kình Dương and Đà La flank Thiên Tướng<br>school-tuong-hoa-ky: school: Thiên Tướng meets Hóa Kỵ and Kình Dương | none | SCHOOL_GATED | school-gated; no default profile | no default; yes for a selected school profile | formulaV1.test.mjs | No unqualified default. Enabled only for a selected school profile. Distinct from Hình Tù Giáp Ấn. | gated |
+| 22 | Hình Kỵ Giáp Ấn | `hinh_ky_giap_an` | VARIANT | — | school-kinh-da-flank: Kình Dương and Đà La flank Thiên Tướng<br>school-tuong-hoa-ky: not executed; registered tứ hóa table does not assign Hóa Kỵ to Thiên Tướng | none | SCHOOL_GATED | school-gated; no default profile | flank school only; hóa Kỵ school does not match | formulaV1.test.mjs | Same-palace Hóa Kỵ is not used as the hóa Kỵ school. Distinct from Hình Tù Giáp Ấn. | gated |
 | 23 | Mệnh Lý Phùng Không | `menh_ly_phung_khong` | VARIANT | modern-108s | modern-108s: 108s encounter at Mệnh; no Mệnh–Thân link<br>ty-hoi-vcd: more specific Tỵ/Hợi vô chính diệu form | none | MODERN_VARIANT | implemented | yes | formulaV1.test.mjs | — | replaced |
 | 24 | Kình Đà Hiệp Kỵ | `kinh_da_hiep_ky` | VARIANT | modern-108s | modern-108s: https://www.108s.tw/article/info/248 | none | MODERN_VARIANT | implemented | yes | formulaV1.test.mjs | — | replaced |
 | 25 | Lộc Phùng Xung Phá | `loc_phung_xung_pha` | DISABLED | — | no executable predicate | none | STAR_ALIAS_UNRESOLVED | disabled | no | formulaV1.test.mjs | The star-alias map does not establish which Phá is meant. Không, Kiếp, Hóa Kỵ, Tuần and Triệt are not substituted. | disabled |

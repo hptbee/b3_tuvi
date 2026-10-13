@@ -51,6 +51,16 @@ async function testRouteMatchesPureMatcher() {
         });
         const emptyPayload = await empty.json();
         assert.deepStrictEqual(emptyPayload, { count: 0, combinations: [] });
+        const profileBody = { ...body, sourceProfile: 'modern-108s' };
+        const profileResponse = await fetch(`http://127.0.0.1:${port}/api/combinations/match`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(profileBody)
+        });
+        const profilePayload = await profileResponse.json();
+        const profilePure = matchCombinations(body, catalog, { profile: 'modern-108s' });
+        assert.deepStrictEqual(profilePayload.combinations.map((item) => item.name), profilePure.map((item) => item.name));
+        assert.deepStrictEqual(chart.boxes, calculateTuVi(2, 3, 12, 6, 4, 1).boxes);
         console.log('POST /match equals pure matcher passed');
     } finally {
         await new Promise((resolve, reject) => server.close((err) => (err ? reject(err) : resolve())));

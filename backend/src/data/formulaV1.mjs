@@ -519,7 +519,7 @@ export const FORMULAS = [
         rulesV2Disposition: 'gated',
         defaultProfile: null,
         sourceRef: 'https://www.108s.tw/article/info/206',
-        limitation: 'No unqualified default. Enabled only for a selected school profile. Distinct from Hình Tù Giáp Ấn.',
+        limitation: 'No unqualified default. The Kình–Đà flank school can be selected. The Thiên Tướng hóa Kỵ school is not executed: the registered tứ hóa table has no such assignment, and same-palace Hóa Kỵ is not used as a substitute. Distinct from Hình Tù Giáp Ấn.',
         variants: [
             one('school-kinh-da-flank', {
                 id: 'hinh_ky_kinh_da_flank',
@@ -533,7 +533,9 @@ export const FORMULAS = [
                     clause(['Thiên Tướng', 'Hóa Kỵ'], 'target'),
                     clause(['Kình Dương'], 'tam_phuong_tu_chinh')
                 ]
-            }, 'school: Thiên Tướng meets Hóa Kỵ and Kình Dương')
+            }, 'school: Thiên Tướng hóa Kỵ meets Kình Dương', {
+                unsupported: 'The registered tứ hóa table never assigns Hóa Kỵ to Thiên Tướng. Same-palace Hóa Kỵ is not that school rule.'
+            })
         ]
     }),
     row({
@@ -1322,8 +1324,14 @@ export function resolveRuntime(entry, profile) {
         return { ...base, evaluable: false, publicInterpretationAllowed: false, reason: 'no_default_profile' };
     }
     const variant = entry.variants.find((item) => item.profile === selected);
-    if (!variant?.rule) {
-        return { ...base, evaluable: false, publicInterpretationAllowed: false, profile: selected, reason: 'profile_unavailable' };
+    if (!variant?.rule || variant.unsupported) {
+        return {
+            ...base,
+            evaluable: false,
+            publicInterpretationAllowed: false,
+            profile: selected,
+            reason: variant?.unsupported || 'profile_unavailable'
+        };
     }
     const namedOff = entry.namedPublicEligible === false || entry.engineeringState === 'INTERNAL_ONLY';
     return {
@@ -1349,7 +1357,7 @@ export function formulaInventory() {
         rulesV2[entry.rulesV2Disposition] = (rulesV2[entry.rulesV2Disposition] || 0) + 1;
         const resolved = resolveRuntime(entry);
         if (resolved.publicInterpretationAllowed) publicEligible += 1;
-        const runnable = entry.variants?.filter((item) => item.rule) || [];
+        const runnable = entry.variants?.filter((item) => item.rule && !item.unsupported) || [];
         variantImplementations += runnable.length;
         if (entry.engineeringState !== 'DISABLED' && runnable.length > 0) executable += 1;
         if (entry.engineeringState !== 'DISABLED' && runnable.length === 0) unimplementedSupported += 1;

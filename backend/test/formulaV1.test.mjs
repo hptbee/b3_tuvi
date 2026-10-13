@@ -3,6 +3,7 @@ import { readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { calculateTuVi } from '../src/engine/tuviRules.mjs';
 import { matchCombinations } from '../src/engine/combinationMatch.js';
+import { nhiHop as relationNhiHop } from '../src/engine/palaceRelation.js';
 import { normalizeChi } from '../src/engine/starNames.js';
 import {
     branchIn,
@@ -691,11 +692,74 @@ function testCoverageClosed() {
     console.log('all 63 catalog entries covered');
 }
 
+function natalChart(can, chi, day, month, hour) {
+    const tv = calculateTuVi(can, chi, day, month, hour, 1, false);
+    return {
+        boxes: tv.boxes,
+        menhIndex: tv.menh,
+        menhChi: tv.boxes[tv.menh].chiName
+    };
+}
+
+function testIndependentNatalFixtures() {
+    const editorial = natalChart(0, 0, 14, 1, 2);
+    assert.strictEqual(editorial.menhChi, 'Sửu');
+    must(editorial, 'Nhật Nguyệt Tịnh Minh');
+    const unpaired = natalChart(3, 1, 14, 1, 8);
+    assert.strictEqual(unpaired.menhChi, 'Mùi');
+    miss(unpaired, 'Nhật Nguyệt Tịnh Minh');
+    const samePalace = natalChart(0, 0, 6, 3, 4);
+    assert.strictEqual(samePalace.menhChi, 'Sửu');
+    miss(samePalace, 'Nhật Nguyệt Đồng Lâm');
+    must(samePalace, 'Nhật Nguyệt Đồng Lâm', { profile: 'modern-108s' });
+    const before = JSON.stringify(samePalace.boxes);
+    matchCombinations(samePalace, catalog, { profile: 'modern-108s' });
+    matchCombinations(samePalace, catalog, { profile: 'tan-bien-editorial' });
+    assert.strictEqual(JSON.stringify(samePalace.boxes), before);
+
+    const thach = natalChart(2, 0, 9, 1, 9);
+    assert.strictEqual(thach.menhChi, 'Ngọ');
+    const thachHit = must(thach, 'Thạch Trung Ẩn Ngọc');
+    assert.strictEqual(thachHit.gradeStatus, 'not_met');
+    const satNgo = natalChart(0, 0, 3, 2, 10);
+    assert.strictEqual(satNgo.menhChi, 'Ngọ');
+    miss(satNgo, 'Thất Sát Triều Đẩu');
+
+    const both = chart(3);
+    both.boxes[3].majorStars = ['Tử Vi (M)', 'Thiên Phủ (M)'];
+    must(both, 'Tử Phủ Đồng Cung');
+    miss(both, 'Tử Phủ Triều Viên');
+
+    const quan = chart(3);
+    label(quan, 9, 'QUAN LỘC');
+    const partner = relationNhiHop(9);
+    quan.boxes[9].goodStars = ['Hóa Khoa'];
+    quan.boxes[partner].goodStars = ['Lộc Tồn'];
+    must(quan, 'Khoa Minh Lộc Ám');
+    quan.boxes[partner].goodStars = [];
+    miss(quan, 'Khoa Minh Lộc Ám');
+
+    const hoaKy = chart(5);
+    hoaKy.boxes[5].majorStars = ['Thiên Tướng (M)'];
+    hoaKy.boxes[5].badStars = ['Hóa Kỵ', 'Kình Dương'];
+    miss(hoaKy, 'Hình Kỵ Giáp Ấn', { profile: 'school-tuong-hoa-ky', includeNonPublic: true });
+    miss(hoaKy, 'Hình Tù Giáp Ấn');
+    const leaked = matchCombinations(unpaired, catalog);
+    leaked.forEach((hit) => {
+        assert.notStrictEqual(hit.engineeringState, 'DISABLED');
+        assert.notStrictEqual(hit.engineeringState, 'INTERNAL_ONLY');
+        assert.strictEqual(hit.publicInterpretationAllowed, true);
+        assert.strictEqual(hit.expertVerified, false);
+    });
+    console.log('independent natal fixtures passed');
+}
+
 testInventory();
 testBranchHelpers();
 testMajorFormations();
 testLocAndSpecial();
 testCourtyardAndRest();
 testCounterexamples();
+testIndependentNatalFixtures();
 testCoverageClosed();
 console.log('formula V1 tests passed');
