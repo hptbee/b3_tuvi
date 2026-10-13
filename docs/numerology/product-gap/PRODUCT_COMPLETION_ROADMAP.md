@@ -1,103 +1,78 @@
-# Lộ trình hoàn thiện sản phẩm
+# Lộ trình hoàn thiện sản phẩm Thần số học
 
-Ngày: 2026-10-13. SHA xuất phát: `f709e42`.  
-Không gắn ngày tháng. Mỗi giai đoạn là một gói phụ thuộc. Không triển khai trong audit này.
+> **Rebaseline:** 2026-10-14 · `main ed31ad1` · Profile `pythagorean-vn-v1` `1.2.0` · Catalog `1.2.0`.
+> **Nguồn roadmap chính:** [ROADMAP_NUMEROLOGY_A_TO_Z.md](../../ROADMAP_NUMEROLOGY_A_TO_Z.md) §12.9, §15–18.
+> **Điểm xuất phát lịch sử:** product gap audit tại `f709e42`, PR #24 và ảnh `screenshots/`. Kế hoạch P0/P1 khi đó đã được triển khai, không còn là backlog chưa làm.
 
-Nguyên tắc: thêm hình và chương trước khi thêm chỉ số. Không sửa `pythagorean-vn-v1` 1.2.0 để giống một trang khác. Không gọi nhiều mục là xong.
+## Phạm vi và cách đọc
 
-## P0 — Lá số nhìn được
+Audit ban đầu ghi **90 mục** thuộc 9 nhóm (49 MISSING, 27 BASIC, 4 PARTIAL, 2 NUMBER_ONLY, 2 DATA_ONLY, 3 COMPLETE, 3 NOT_APPLICABLE). Các số này là **snapshot tại `f709e42`**, tuyệt đối không dùng làm phần trăm hoàn thành sản phẩm sau merge PR #24. Hiện tại có báo cáo nhiều chương nhưng chưa phải toàn bộ mọi trường phái/chỉ số hoặc report luận sâu.
 
-Máy tính đã chạy. Thiếu hình và thiếu chỗ đọc tổng. Gói này chia hai, vì hình không được chờ chữ bịa.
-
-### P0a. Hình từ dữ liệu sẵn
-
-Gồm:
-
-- Tháp bốn đỉnh, đáy là `components`, nhãn thành phần master tắt.
-- Trục thử thách cùng cửa sổ tuổi, số 0 giữ nguyên, không nhãn thử thách chính.
-- Nét tám tuyến trên lưới theo present / partial / absent.
-- Khối mở đầu chỉ gồm sự kiện đã tính và câu giới hạn đã có.
-- Trên mobile 390px và bản in, các hình còn đọc được.
-
-Không gồm lời đỉnh, tên mũi tên, lưới tên, chỉ số mới.
-
-Phụ thuộc: không có. API hiện đủ cho tháp, trục và nét tuyến. Dải chín năm không bắt buộc trong P0a; nếu đưa vào thì vẫn dùng phép chu kỳ cũ và không tính trên client.
-
-Xong khi:
-
-- Ca 15/6/1990 có tên, ca không tên, và ca 29/3/1990 đều hiện đúng số như trang hiện tại.
-- Đỉnh active trùng ngày xem.
-- Không có đường đời nào đổi so với fixture 1.2.0.
-- Hình không gọi components là period cycle.
-- Ô trống không bị màu “yếu”.
-
-### P0b. Chữ cho đỉnh, thử thách và tuyến
-
-Chặn bởi nguồn. `PINNACLE_CONTENT_STATUS.md` vẫn đúng sau audit này: chưa có bài đủ điều kiện.
-
-Xong khi mỗi số được đăng có review biên tập riêng, giới hạn nguồn, và không chép Decoz hay bảng mũi tên đang có trên web. Nếu nguồn không đủ, hình P0a tiếp tục hiện câu “chưa có lời”. Đó là trạng thái đạt, không phải lỗi.
-
-Tên tám tuyến, nếu làm, là version nội dung mới. Không sửa rule tuyến trong profile tính toán.
-
-## P1 — Bài đọc có chương
-
-Sau P0a. Một phần có thể song song với việc chờ nguồn P0b.
-
-- Mở 102 bài hiện có ngay trên thẻ, không thêm chữ.
-- Hàng chín năm và mười hai tháng, số thôi, cộng bài đã có khi chọn đúng ô.
-- Lưới tên chỉ sau một đoạn đặc tả đếm chữ vào ô. Lưới ghép chỉ sau lưới tên, và chỉ nói “có trong tên / có trong ngày”.
-- Chương “những gì nối được” bản sự kiện trước, bản diễn giải sau khi có bảng quan hệ đã duyệt.
-- In và JSON đi theo chương. JSON không bắt đầu tin số lưu trong file.
-- Thuật ngữ ngắn do B3 viết.
-
-Xong khi một người đọc từ mở đầu tới nguồn mà không gặp câu tâm lý không trỏ về số đã tính, và bản in không còn là danh sách thẻ như `print-named-1990-06-15.png`.
-
-## P2 — Profile khác, chỉ số khác
-
-Chỉ khi P0a đã xong và có đặc tả riêng. Mỗi mục là một profile hoặc một capability version, không vá vào 1.2.0.
-
-Ứng viên, theo giá trị đã chấm: tên đang dùng (minor numbers), bridge, hidden passion, karmic lessons, balance, rational thought, period cycle đúng kiểu giữ master. Karmic debt và planes đứng sau. Transit và essence đứng cuối nhóm này vì phụ thuộc cả một lớp chu kỳ.
-
-Xong từng mục khi: công thức ghi trong đặc tả, fixture riêng, dị bản với 1.2.0 được nêu trên trang, lời không đi trước số.
-
-## P3 — Không làm để coi là đủ
-
-Tương hợp, so hai người, đặt tên trẻ, AI dẫn đọc, thẻ ảnh, color chart, proportional chart. Roadmap A–Z đã loại tương hợp, tên trẻ và dự báo chắc chắn khỏi điều kiện V1. Audit này không nâng chúng lên.
-
-Lưu lịch sử ngày sinh và báo cáo nghề/tiền/sức khỏe ở mức không làm.
-
-## Gói làm đầu tiên
-
-P0a, cộng một việc chữ không cần nguồn mới: đưa câu giới hạn và tóm tắt sự kiện lên đầu kết quả, và mở sẵn bài catalog hiện có trên thẻ chỉ số lõi và chu kỳ.
-
-Lý do gói này đứng trước:
-
-- Hết dữ liệu đã tính, không đụng công thức.
-- Khắc đúng chỗ các trang Việt Nam tạo cảm giác “có tháp, có biểu đồ” trong khi B3 mới có danh sách.
-- Không trộn Lo Shu với Pythagorean.
-- Không tạo 102 đoạn mới cho dài.
-- Lời đỉnh có thể đến sau mà hình không nói dối.
-
-Việc không nhét vào gói đầu: tên mũi tên, lưới tên, chín năm nếu chưa kịp kiểm mobile, mọi chỉ số E01–E12, mọi mục O01–O08.
-
-## Trạng thái sau nhánh `cursor/numerology-complete-experience-2318`
-
-Audit phía trên mô tả sản phẩm tại `f709e42`. Nhánh triển khai xếp trên `5b15f30` đã làm các phần sau. Ma trận chi tiết nằm ở `docs/numerology/implementation/COMPLETION_MATRIX.md`.
-
-| Gói | Trạng thái | Ghi chú |
+| Chiều | Trạng thái | Điều chưa được suy ra |
 |---|---|---|
-| P0a hình | Đã có trên trang | Tháp, trục thử thách, tuyến lưới, tổng quan sự kiện. 320px và 390px không tràn ngang. |
-| P0b chữ | Một phần | Catalog `1.2.0`: đỉnh 1–4 cho số 1–9, 11, 22 và thử thách 1–8. Thử thách 0 và số 33 vẫn không có bài. Tên tuyến là lớp `arrow-labels-vn-v1`, không thuộc phép Pythagorean. |
-| P1 báo cáo | Đã có trên trang | Mục lục, biểu đồ tên, biểu đồ ghép, chín năm, mười hai tháng, mối nối đúng phép tính, in A4 và JSON. Chín năm do server tính. |
-| P2 chỉ số thêm | Chưa làm | Hidden Passion, Karmic Lessons, Balance, Rational Thought, Bridge vẫn `REQUIRES_SPEC`. Xem `P2_INDICATOR_GATE.md`. |
-| P3 | Ngoài phạm vi | Tương hợp, đặt tên trẻ, lưu lịch sử, AI, color chart, period cycle kiểu Decoz. |
+| Calculation consistency | `FORMULA_PROFILE_CONSISTENT` | Không phải school/source authentication |
+| Report experience | `V1_FEATURE_COMPLETE` cho scope đã chọn | Không phải đầy đủ 90 mục product audit |
+| Visualization | Đã có hình đỉnh/cạnh/trục tuổi/grid tên/ngày sinh/ghép/chu kỳ | Không có suy diễn tâm lý ở lưới tên |
+| Interpretation | 154 bài experimental-editorial eligible, còn 33/Challenge 0 withheld | Không phải expert/book verified |
+| Release | CI trên `ed31ad1` PASS | Chưa staging, rollback, owner approval |
 
-Profile `pythagorean-vn-v1` vẫn `1.2.0`. Chưa phát hành production.
+## P0 — Lá số nhìn được và đọc được
 
-## Rủi ro cần ghi trên PR triển khai sau này
+### P0a — DONE (đã merge PR #24)
 
-- Sửa nhãn cho giống Decoz trong khi số components khác.
-- Tô màu ô trống.
-- Mượn lời đường đời cho đỉnh.
-- Tính chín năm trên trình duyệt.
-- Coi PDF dài của site khác là chuẩn độ sâu.
+- Kim tự tháp bốn đỉnh có cạnh toán học chính xác: P1=tháng+ngày; P2=ngày+năm; P3=P1+P2; P4=tháng+năm. Đáy là reduced components với master tắt, không gọi là Decoz Period Cycle.
+- Challenge age timeline có giai đoạn mở, không gán độ dài giả; Challenge 0 giữ nguyên.
+- Lưới ngày sinh 3×3 vẽ một tuyến được chọn, phân biệt present/partial/absent và có text alternative; ô trống không phải điểm yếu.
+- Fact-only overview, responsive desktop/320px/390px/A4 print.
+- Tên + ngày sinh: biểu đồ 3×3 dual source, đếm riêng hai lớp, bảng chi tiết vẫn có.
+
+**Evidence:** [VISUAL_ACCEPTANCE](../implementation/VISUAL_ACCEPTANCE.md), [ảnh after](../implementation/screenshots/after/), [CI main](https://github.com/hptbee/b3_tuvi/actions/runs/38438302551).
+
+### P0b — PARTIAL CONTENT
+
+- **Đã công bố:** 44 bài đỉnh (4 giai đoạn × 11 giá trị 1–9/11/22), 8 bài thử thách 1–8; lớp tên tuyến `arrow-labels-vn-v1` chỉ dùng đúng điều kiện.
+- **Chưa có:** Challenge 0 và Master 33; lời sâu cho repeated/missing digits, partial lines và name/combined chart chưa xác lập lớp diễn giải riêng.
+- **Evidence gate:** original Vietnamese, source scoped, model editorial review có thật; `expertVerified=false`, `bookVerified=false`. Không fallback 0→9 hoặc 33→6.
+
+**Next:** `NUM-K004`, `NUM-K005`, `NUM-K006` theo master roadmap. Không xem việc withholding là lỗi tính toán.
+
+## P1 — Báo cáo nhiều chương — DONE for scoped interactions
+
+Các mục đã triển khai:
+
+- 102 lời core/chu kỳ có thể đọc ngay trên thẻ; nguồn/method mở riêng.
+- 9 năm và 12 tháng tính **backend**, có `viewDate` hợp lệ, ô trước ngày sinh disabled.
+- Name Chart, Combined Birth+Name Chart, tính số từ chữ Pythagorean, không suy tên bù ô trống.
+- Các mối nối **đúng phép tính** (maturity, master/root, thành phần đỉnh, hiệu thử thách, chu kỳ), không gắn điểm harmony/conflict.
+- Mục lục chương, JSON export/import có recalculation, print A4 và opt-in họ tên.
+
+**Còn cải thiện chất lượng:** đọc sâu theo metric, tổng hợp đa chỉ số được định nghĩa và review, progressive disclosure, ngắt trang A4; không cần làm lại giao diện từ đầu. Gắn `NUM-K005`–`NUM-K008`.
+
+## P2 — Knowledge Expansion — NEXT / REQUIRE SOURCE
+
+| Ưu tiên | Candidate | Hiện trạng | Điều kiện cho public |
+|---|---|---|---|
+| P0 | Hidden Passion | `REQUIRES_SPEC` | Frequency/tie/name/master rule + source + >=3 fixtures |
+| P0 | Karmic Lessons | `REQUIRES_SPEC` | Quy tắc thiếu **trong tên**, không đồng nhất thiếu ở birth grid |
+| P0 | Balance | `REQUIRES_SPEC` | Initials, tên ghép/hyphen, master reduction |
+| P0 | Rational Thought | `REQUIRES_SPEC` | Chọn birthday/original day vs expression policy có nguồn |
+| P0 | Bridge Numbers | `REQUIRES_SPEC` | Root/master difference, zero và defined bridge types |
+| P1 | 33 + Challenge 0 interpretation | `SOURCE_GAP` | Independent source-specific editorial decisions; không đổi phép tính |
+| P1 | Defined combined interpretation | `NEEDS RULE REGISTRY` | Separate formula fact / scoped symbolic reading / original reflective synthesis |
+| P2 | Alternate profiles, Minor numbers, Period Cycle | `OPTIONAL` | Profile/capability version và variant transparency |
+
+Các mục này **không được tự hiện số trong UI** khi chỉ mới có tên gọi trên competitor landing. Ưu tiên nguồn tác giả, phép tính rõ và fixtures độc lập. Không dừng cả package khi một ứng viên thiếu nguồn; ghi blocker và tiếp tục.
+
+**Execution:** một AutoDev có Master Plan duy nhất, work packages `NUM-K001`–`NUM-K009`, research có giới hạn; xem [master roadmap §18](../../ROADMAP_NUMEROLOGY_A_TO_Z.md).
+
+## P3 — Optional / không thành điều kiện V1
+
+Tương hợp cặp đôi, luận tên trẻ, saved birth history, career/wealth/health certainty, color/proportional score, AI narration, transits/essence phức tạp. Không thêm điểm hay lời dự đoán chỉ để giống competitor. Nếu về sau chọn một tính năng, cần spec, source, test, privacy và review độc lập.
+
+## Release validation — track tách biệt
+
+`NUM-R001` staging deploy/API/SPA; `NUM-R002` shared proxy rate limit; `NUM-R003` rollback rehearsal; `NUM-R004` cross-browser/a11y; `NUM-R005` release owner approval. **Chưa hoàn thành**, không tự gộp vào Knowledge Expansion và không suy production-ready từ CI.
+
+## Đợt thực thi tiếp theo
+
+Một AutoDev từ `main`: **K0 nghiên cứu 5 ứng viên → K1 quyết định 33/0 → K2 tăng chiều sâu nội dung và biểu đồ → K3 relationship registry → K4 cải thiện trải nghiệm đọc → integration review**. Formula 1.2.0 phải bất biến. Mỗi capability báo riêng formula, visualization, interpretation, source, review và public eligibility. Draft PR; không auto merge/deploy.
