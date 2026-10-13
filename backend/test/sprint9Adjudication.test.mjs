@@ -2,6 +2,7 @@ import assert from 'assert';
 import { readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { compareReviews } from '../src/knowledge/crossReview.js';
+import { calculateTuVi } from '../src/engine/tuviRules.mjs';
 
 const root = fileURLToPath(new URL('../../', import.meta.url));
 const matrix = JSON.parse(readFileSync(`${root}docs/knowledge/research/sprint-9-adjudication-matrix.json`, 'utf8'));
@@ -64,5 +65,38 @@ assert.strictEqual(compareReviews({
     requiredExceptions: [],
     requiredAnchors: ['太陽居午']
 }).decision, 'UNRESOLVED');
+
+const seven = JSON.parse(readFileSync(`${root}docs/knowledge/research/sprint-9d-seven-cases.json`, 'utf8'));
+assert.strictEqual(seven.modelsRerun, false);
+assert.strictEqual(seven.pdfPageChecked, false);
+assert.strictEqual(seven.cases.length, 7);
+const tinhSpan = readFileSync(`${root}docs/knowledge/passages/nhat-nguyet-tinh-minh/span.txt`, 'utf8');
+assert.ok(tinhSpan.includes('Tý'));
+assert.ok(!tinhSpan.includes('Tỵ'));
+const thamSpan = readFileSync(`${root}docs/knowledge/passages/tham-vu-dong-hanh/span.txt`, 'utf8');
+assert.ok(thamSpan.includes('Sửu, Mùi'));
+const boxes = (chart) => Object.values(chart.boxes);
+const has = (box, name) => (box.majorStars || []).some((star) => String(star).startsWith(name));
+const menh = (chart) => boxes(chart).find((box) => (box.cungName || '').includes('MỆNH'));
+const opposite = (chart, box) => {
+    const list = boxes(chart);
+    return list[(list.indexOf(box) + 6) % 12];
+};
+const satOutside = calculateTuVi(0, 0, 3, 2, 10, 1, false);
+const satMenh = menh(satOutside);
+assert.strictEqual(satMenh.chiName, 'Ngọ');
+assert.ok(has(satMenh, 'Thất Sát'));
+const satOpp = opposite(satOutside, satMenh);
+assert.ok(!(has(satOpp, 'Tử Vi') && has(satOpp, 'Thiên Phủ')));
+const samePalace = calculateTuVi(0, 0, 6, 3, 4, 1, false);
+const sameMenh = menh(samePalace);
+assert.strictEqual(sameMenh.chiName, 'Sửu');
+assert.ok(has(sameMenh, 'Thái Dương') && has(sameMenh, 'Thái Âm'));
+const oppositeLuminaries = calculateTuVi(0, 0, 3, 3, 10, 1, false);
+const oppositeMenh = menh(oppositeLuminaries);
+assert.strictEqual(oppositeMenh.chiName, 'Mùi');
+const suu = boxes(oppositeLuminaries).find((box) => box.chiName === 'Sửu');
+assert.ok(has(suu, 'Thái Dương') && has(suu, 'Thái Âm'));
+assert.ok(!(has(oppositeMenh, 'Thái Dương') && has(oppositeMenh, 'Thái Âm')));
 
 console.log('sprint 9 adjudication keeps the stored decisions and separates scope from match');

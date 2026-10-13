@@ -22,3 +22,12 @@ These notes separate recognition, quý grade, breaking conditions, and the curre
 - Kình Dương Nhập Miếu, 馬頭帶箭, and 馬頭帶劍 are not synonyms. info/265 is Kình alone at the four tomb branches. info/219 is a different Ngọ pattern. The stored Tân Biên decision stays `UNRESOLVED` because the review digest does not match the span.
 - Lộ Bàng Mai Thi: the bound sentence is Liêm and Thất Sát together and 路上埋屍. Sửu/Mùi and Hóa Kỵ are not in that sentence. The xingge note treats Hóa Kỵ as a worsening comment.
 - Mệnh VCD Đắc Tam Không: the bound sentence and `rulesV2` `noMajor: true` disagree with catalog `require_no_major_at_menh: false`. Địa Không is in the runtime count and not in that sentence.
+
+## Seven Tân Biên rows rechecked on 2026-10-13
+
+- Cự Nhật Đồng Cung: the span states no branch. `cu_nhat_dong_cung` adds Dần and Thân. The placer produced that pair only at those branches. 108s info/223 says 寅 or 未, then compares 寅 with 申.
+- Thất Sát Triều Đẩu: the span requires Dần/Thân and opposite Tử Vi with Thiên Phủ. `that_sat_trieu_dau` also allows Tí and Ngọ and does not require the opposite pair.
+- Tham Vũ Đồng Hành: the span and `tham_vu_dong_hanh` use Sửu or Mùi. `branch_suu` is not a further requirement. 108s info/197 also accepts 辰/戌 opposition.
+- Mã Lạc Không Vong: the span is Thiên Mã at Mệnh with Tuần or Triệt. 108s info/268 uses Địa Không or Địa Kiếp. `ma_lac_khong_vong` uses tam phương tứ chính.
+- Tử Phủ Triều Viên: the span is a bright disjunction at Mệnh or Quan. `tu_phu_trieu_vien` requires the two stars in tam phương tứ chính.
+- Nhật Nguyệt Tịnh Minh and Nhật Nguyệt Đồng Lâm: the stored coordinates and the modern same-palace or bright-aspect pages are different formulas. The printed pages were not opened.

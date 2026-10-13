@@ -1,8 +1,8 @@
 # Sprint 9 adjudication matrix
 
-Sprint 9 stays open. The 24 Tân Biên decisions and 39 Sprint 9C decisions were not rewritten. The two models were not rerun. A row here is a scoped research record, not a new `MATCH`.
+Sprint 9 stays open. The 24 Tân Biên decisions and 39 Sprint 9C decisions were not rewritten. The two models were not rerun for the seven Tân Biên rows. A row here is a scoped research record, not a new `MATCH`.
 
-Baseline: `7a4504c580dbafcabdd904b3fec0d08cf5f7a02b`. Records: 21.
+Baseline of the prior matrix: `7a4504c580dbafcabdd904b3fec0d08cf5f7a02b`. Seven-case update: `sprint9d-seven-v1`. Records: 21.
 
 | Combination | Stored decision | Disagreement | Disposition | Identity |
 | --- | --- | --- | --- | --- |
@@ -18,11 +18,11 @@ Baseline: `7a4504c580dbafcabdd904b3fec0d08cf5f7a02b`. Records: 21.
 | Lộ Bàng Mai Thi | `CONFLICT` | CONDITION_LIST | `DOCUMENTED_SOURCE_VARIANT` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
 | Mệnh VCD Đắc Tam Không | `CONFLICT` | CONDITION_LIST | `SOURCE_CONTRADICTION` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
 | Nhật Nguyệt Tịnh Minh | `CONFLICT` | CONDITION_LIST | `INSUFFICIENT_EVIDENCE` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
-| Cự Nhật Đồng Cung | `CONFLICT` | RUBRIC_SCOPE | `INSUFFICIENT_EVIDENCE` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
-| Thất Sát Triều Đẩu | `CONFLICT` | RUBRIC_SCOPE | `INSUFFICIENT_EVIDENCE` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
-| Tham Vũ Đồng Hành | `CONFLICT` | CONDITION_LIST | `INSUFFICIENT_EVIDENCE` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
-| Mã Lạc Không Vong | `CONFLICT` | CONDITION_LIST | `INSUFFICIENT_EVIDENCE` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
-| Tử Phủ Triều Viên | `CONFLICT` | CONDITION_LIST | `INSUFFICIENT_EVIDENCE` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
+| Cự Nhật Đồng Cung | `CONFLICT` | RUBRIC_SCOPE | `DOCUMENTED_SOURCE_VARIANT` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
+| Thất Sát Triều Đẩu | `CONFLICT` | RUBRIC_SCOPE | `DOCUMENTED_SOURCE_VARIANT` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
+| Tham Vũ Đồng Hành | `CONFLICT` | CONDITION_ID_REDUNDANCY | `DOCUMENTED_SOURCE_VARIANT` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
+| Mã Lạc Không Vong | `CONFLICT` | CONDITION_LIST | `SOURCE_CONTRADICTION` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
+| Tử Phủ Triều Viên | `CONFLICT` | CONDITION_ID_REDUNDANCY | `DOCUMENTED_SOURCE_VARIANT` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
 | Nhật Nguyệt Đồng Lâm | `CONFLICT` | CONDITION_LIST | `INSUFFICIENT_EVIDENCE` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
 | Hình Tù Giáp Ấn | `CONFLICT` | CONDITION_LIST | `DOCUMENTED_SOURCE_VARIANT` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
 | Nhật Lệ Trung Thiên | `CONFLICT` | RUBRIC_SCOPE | `DOCUMENTED_SOURCE_VARIANT` | `HISTORICAL_NAME_NOT_ESTABLISHED` |
@@ -98,45 +98,45 @@ Baseline: `7a4504c580dbafcabdd904b3fec0d08cf5f7a02b`. Records: 21.
 
 ### Nhật Nguyệt Tịnh Minh
 
-- Recognition: `UNRESOLVED`. Full grade: `UNRESOLVED`.
-- Runtime: Stored Tân Biên reviews disagree on condition ids, including an extra avoid_tuan and branch_ty on the Grok side. The Tân Biên PDF page was not reopened. The 108s lead was not re-fetched in this pass, so it is not accepted as a replacement source.
-- Fetch: 108s info/250 not re-fetched
+- Recognition: `DISJOINT_FROM_RUNTIME`. Full grade: `PHU_LUAN_SEPARATE`.
+- Runtime: Stored span: Mệnh or Quan at Sửu with Thái Dương at Tý and Thái Âm at Hợi, or at Mùi with Thái Dương at Mão and Thái Âm at Hợi. The current placer produces Sun/Moon pairs Tí/Dần and Mão/Hợi, not Tí/Hợi, so the first clause had no chart in a year-month-day-hour search. rulesV2 instead wants Mệnh Sửu or Mùi, Sun at Tị or Ngọ, Moon at Dậu or Tí. A reachable example is can=0,chi=0,day=14,month=1,hour=2 (Mệnh Sửu, Sun Tị, Moon Dậu). 108s info/250 is another formula: both luminaries bright in the Mệnh 三方四正. Grok lists branch_ty for the span word Tý; the span does not contain Tỵ. avoid_tuan is redundant with avoid_tuan_triet in the phrase floor. PDF page not verified, so the stored coordinates were not corrected.
+- Fetch: 108s info/250 HTTP 200; placer search found no Tí/Hợi pair
 
 ### Cự Nhật Đồng Cung
 
-- Recognition: `UNRESOLVED`. Full grade: `UNRESOLVED`.
-- Runtime: Same extracted conditions, PARTIAL versus MATCH. The Tân Biên span was not reopened, and the 108s branch wording was not re-fetched, so the branch dispute stays unresolved.
-- Fetch: 108s info/223 not re-fetched
+- Recognition: `RUNTIME_NARROWER_THAN_SILENT_SPAN`. Full grade: `NOT_IN_TAN_BIEN_SPAN`.
+- Runtime: Stored Tân Biên span requires Cự Môn and Thái Dương together at Mệnh and states no branch. rulesV2 adds branches Dần and Thân. A placement search of the current engine found that same-palace pair only at Dần and Thân, so no reachable chart was excluded. 108s info/223, retrieved 2026-10-13, says the basic seat is 寅 or 未, then later says 寅 is better than 申. Those two sentences were not collapsed. PDF page not verified.
+- Fetch: 108s info/223 HTTP 200; Wikisource oldid 7913704 names 巨日同宫 without the branch sentence
 
 ### Thất Sát Triều Đẩu
 
-- Recognition: `UNRESOLVED`. Full grade: `UNRESOLVED`.
-- Runtime: Same extracted conditions, CONFLICT versus PARTIAL. The Tân Biên page was not reopened and 108s info/207 was not re-fetched.
-- Fetch: 108s info/207 not re-fetched
+- Recognition: `OVERLAPPING_DIFFERENT`. Full grade: `GRADE_ONLY_ON_108S`.
+- Runtime: Stored Tân Biên span: Mệnh or Quan at Dần/Thân, Thất Sát there, Tử Vi and Thiên Phủ together opposite. rulesV2 allows Thất Sát at Mệnh Dần, Thân, Tí, or Ngọ and does not require the opposite pair. Reachable chart can=0,chi=0,day=4,month=1,hour=7 has Mệnh Thân and the opposite pair. Reachable chart can=0,chi=0,day=3,month=2,hour=10 has Mệnh Ngọ and the opposite palace does not hold both Tử Vi and Thiên Phủ. 108s info/207 basic sentence matches the Dần/Thân plus opposite pair and keeps auxiliaries as quý grade. PDF page not verified.
+- Fetch: 108s info/207 HTTP 200
 
 ### Tham Vũ Đồng Hành
 
-- Recognition: `UNRESOLVED`. Full grade: `UNRESOLVED`.
-- Runtime: Both formula labels are MATCH, but Terra adds branch_suu beside the shared branch_suu_mui. The comparator records CONFLICT. The Tân Biên page was not reopened, so neither condition list is selected.
-- Fetch: 108s info/22 not re-fetched
+- Recognition: `EQUIVALENT_ON_BASIC_SPAN`. Full grade: `MODERN_PAGE_ADDS_CHEN_TUAT`.
+- Runtime: Stored span: Tham Lang and Vũ Khúc together at Mệnh Sửu or Mùi. Both reviews say MATCH. Terra also lists branch_suu, which the span does not require by itself. rulesV2 uses branches Sửu and Mùi and samePalace of those two stars. 108s info/197 also treats 辰/戌 opposition as basic and 丑 as the quý seat. That expansion is not the Tân Biên sentence. Original decision stays CONFLICT. PDF page not verified.
+- Fetch: 108s info/197 HTTP 200
 
 ### Mã Lạc Không Vong
 
-- Recognition: `PARTIAL`. Full grade: `NOT_APPLICABLE`.
-- Runtime: The stored Cát Xứ Wikisource span already contains 馬遇空亡，終身奔走. That aphorism does not state same-palace Địa Không. rulesV2 looks for Thiên Mã in tam phương tứ chính with Địa Không or Tuần/Triệt. 108s info/268 was not re-fetched. The operational formula is not equated with the aphorism.
-- Fetch: 108s info/268 not re-fetched
+- Recognition: `OVERLAPPING_DIFFERENT`. Full grade: `MITIGATION_SEPARATE`.
+- Runtime: Stored span: Thiên Mã at Mệnh meets Tuần or Triệt. The following phụ luận is mitigation, not the formation. Grok omits Tuần/Triệt; Terra adds avoid_tuan_triet and bright. rulesV2 allows Thiên Mã in tam phương tứ chính with Địa Không or Tuần/Triệt. 108s info/268 requires Thiên Mã with Địa Không or Địa Kiếp in the same palace or opposite, and does not require Tuần/Triệt. Wikisource oldid 7913704 says 马落空亡 is 马既落亡 and separately has 馬遇空亡 in another transcription already stored. These formulas were not merged. PDF page not verified.
+- Fetch: 108s info/268 HTTP 200; Wikisource oldid 7913704
 
 ### Tử Phủ Triều Viên
 
-- Recognition: `UNRESOLVED`. Full grade: `UNRESOLVED`.
-- Runtime: Condition lists differ by a bright id. The Tân Biên page was not reopened. 108s info/196 was not re-fetched. It stays distinct from Tử Phủ Vũ Tướng.
-- Fetch: 108s info/196 not re-fetched
+- Recognition: `OVERLAPPING_DIFFERENT`. Full grade: `BRIGHTNESS_IN_SPAN`.
+- Runtime: Stored span is a disjunction: bright Tử Vi at Mệnh or Quan with Thiên Phủ opposite, or bright Thiên Phủ at Mệnh or Quan with Tử Vi opposite. Terra adds a general bright id beside the star-specific bright ids. rulesV2 only requires Tử Vi and Thiên Phủ somewhere in tam phương tứ chính of Mệnh, with no brightness and no Quan target. 108s info/196 describes eight configurations in 三方四正. That modern page was not substituted for the Tân Biên sentence. PDF page not verified.
+- Fetch: 108s info/196 HTTP 200
 
 ### Nhật Nguyệt Đồng Lâm
 
-- Recognition: `UNRESOLVED`. Full grade: `UNRESOLVED`.
-- Runtime: Grok includes extra branches that Terra omits. The Tân Biên locator 19.2.14 was not reopened. 108s info/222 was not re-fetched.
-- Fetch: 108s info/222 not re-fetched
+- Recognition: `OVERLAPPING_DIFFERENT`. Full grade: `GRADE_ONLY_ON_108S`.
+- Runtime: Stored span first clause uses Sun at Tý and Moon at Hợi, a pair the current placer did not produce. The second clause, Mệnh at Mùi with both luminaries together at Sửu, is reachable at can=0,chi=0,day=3,month=3,hour=10. rulesV2 and 108s info/222 require both luminaries in the same palace at Sửu or Mùi. A reachable same-palace example is can=0,chi=0,day=6,month=3,hour=4, Mệnh Sửu. That matches the modern page and the runtime, not the stored opposite-palace clause. PDF page not verified.
+- Fetch: 108s info/222 HTTP 200
 
 ### Hình Tù Giáp Ấn
 

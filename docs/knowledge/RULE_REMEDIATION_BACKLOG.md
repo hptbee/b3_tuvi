@@ -2,7 +2,7 @@
 
 No runtime rule was changed in this batch. Each gap below needs its own reviewed implementation PR after a readable source is in hand.
 
-The 21 stored conflicts are scoped in `docs/knowledge/SPRINT_9_ADJUDICATION_MATRIX.md`. That matrix does not replace the original decisions. Recognition, quý grade, school variant, and identity stay separate. `rulesV2.json` was not edited.
+The 21 stored conflicts are scoped in `docs/knowledge/SPRINT_9_ADJUDICATION_MATRIX.md`. The seven Tân Biên rows are detailed in `docs/knowledge/SPRINT_9D_SEVEN_CASE_ADJUDICATION.md`. Those records do not replace the original decisions. Recognition, quý grade, school variant, and identity stay separate. `rulesV2.json` was not edited.
 
 ## Sprint 9C formula gaps
 
