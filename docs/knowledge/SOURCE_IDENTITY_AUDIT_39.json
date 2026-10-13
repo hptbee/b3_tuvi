@@ -1,0 +1,288 @@
+{
+  "asOf": "2026-10-13",
+  "baselineCommit": "7a4504c580dbafcabdd904b3fec0d08cf5f7a02b",
+  "count": 39,
+  "nameMismatch": [
+    "Bán Không Chiết Xỉ",
+    "Hùng Tú Triều Viên",
+    "Lưỡng Trùng Thiên Mã"
+  ],
+  "unresolvedIdentity": 36,
+  "promotedToExactIdentity": [],
+  "rows": [
+    {
+      "slug": "anh-tinh-nhap-mieu",
+      "name": "Anh Tinh Nhập Miếu",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "CONFLICT",
+      "formulaComparison": null
+    },
+    {
+      "slug": "ban-khong-chiet-xi",
+      "name": "Bán Không Chiết Xỉ",
+      "identity": "NAME_MISMATCH",
+      "decision": "CONFLICT",
+      "formulaComparison": null
+    },
+    {
+      "slug": "cat-xu-tang-hung",
+      "name": "Cát Xứ Tàng Hung",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "NOT_IMPLEMENTED"
+    },
+    {
+      "slug": "chung-thuy-trieu-dong",
+      "name": "Chúng Thủy Triều Đông",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "PARTIAL"
+    },
+    {
+      "slug": "co-cu-dong-lam",
+      "name": "Cơ Cự Đồng Lâm",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "MATCH"
+    },
+    {
+      "slug": "cu-phung-tu-sat",
+      "name": "Cự Phùng Tứ Sát",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "CONFLICT"
+    },
+    {
+      "slug": "de-ngo-hung-do",
+      "name": "Đế Ngộ Hung Đồ",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "CONFLICT"
+    },
+    {
+      "slug": "dong-luong-ty-hoi",
+      "name": "Đồng Lương Tỵ Hợi",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "CONFLICT"
+    },
+    {
+      "slug": "duong-luong-xuong-loc",
+      "name": "Dương Lương Xương Lộc",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "MATCH"
+    },
+    {
+      "slug": "giap-de-dang-khoa",
+      "name": "Giáp Đệ Đăng Khoa",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "MATCH"
+    },
+    {
+      "slug": "hinh-ky-giap-an",
+      "name": "Hình Kỵ Giáp Ấn",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "CONFLICT",
+      "formulaComparison": null
+    },
+    {
+      "slug": "hoa-cai-cu-phu-the",
+      "name": "Hoa Cái Cư Phu Thê",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "CONFLICT"
+    },
+    {
+      "slug": "hoa-tham",
+      "name": "Hỏa Tham",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "PARTIAL"
+    },
+    {
+      "slug": "hung-tu-trieu-vien",
+      "name": "Hùng Tú Triều Viên",
+      "identity": "NAME_MISMATCH",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "PARTIAL"
+    },
+    {
+      "slug": "khong-kiep-giap-menh",
+      "name": "Không Kiếp Giáp Mệnh",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "MATCH"
+    },
+    {
+      "slug": "khuc-am-dong-cung",
+      "name": "Khúc Ám Đồng Cung",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "CONFLICT"
+    },
+    {
+      "slug": "kinh-da-giap-menh",
+      "name": "Kình Đà Giáp Mệnh",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "PARTIAL"
+    },
+    {
+      "slug": "kinh-da-hiep-ky",
+      "name": "Kình Đà Hiệp Kỵ",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "PARTIAL"
+    },
+    {
+      "slug": "linh-tham",
+      "name": "Linh Tham",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "PARTIAL"
+    },
+    {
+      "slug": "linh-xuong-da-vu",
+      "name": "Linh Xương Đà Vũ",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "CONFLICT"
+    },
+    {
+      "slug": "lo-bang-mai-thi",
+      "name": "Lộ Bàng Mai Thi",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "CONFLICT",
+      "formulaComparison": null
+    },
+    {
+      "slug": "luong-trung-thien-ma",
+      "name": "Lưỡng Trùng Thiên Mã",
+      "identity": "NAME_MISMATCH",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "NOT_IMPLEMENTED"
+    },
+    {
+      "slug": "menh-ly-phung-khong",
+      "name": "Mệnh Lý Phùng Không",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "PARTIAL"
+    },
+    {
+      "slug": "menh-vcd-dac-tam-khong",
+      "name": "Mệnh VCD Đắc Tam Không",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "CONFLICT",
+      "formulaComparison": null
+    },
+    {
+      "slug": "nhat-chieu-loi-mon",
+      "name": "Nhật Chiếu Lôi Môn",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "PARTIAL"
+    },
+    {
+      "slug": "nhat-nguyet-tang-huy",
+      "name": "Nhật Nguyệt Tàng Huy",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "CONFLICT"
+    },
+    {
+      "slug": "nhat-nguyet-tat-ach",
+      "name": "Nhật Nguyệt Tật Ách",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "CONFLICT",
+      "formulaComparison": null
+    },
+    {
+      "slug": "phong-luu-thai-truong",
+      "name": "Phong Lưu Thái Trượng",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "MATCH"
+    },
+    {
+      "slug": "sat-pha-tham",
+      "name": "Sát Phá Tham",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "CONFLICT",
+      "formulaComparison": null
+    },
+    {
+      "slug": "song-loc-trieu-vien",
+      "name": "Song Lộc Triều Viên",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "PARTIAL"
+    },
+    {
+      "slug": "tai-an-giao-tri",
+      "name": "Tài Ấn Giao Trì",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "CONFLICT"
+    },
+    {
+      "slug": "tam-ky-gia-hoi",
+      "name": "Tam Kỳ Gia Hội",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "PARTIAL"
+    },
+    {
+      "slug": "thach-trung-an-ngoc",
+      "name": "Thạch Trung Ẩn Ngọc",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "CONFLICT",
+      "formulaComparison": null
+    },
+    {
+      "slug": "thien-at-cung-menh",
+      "name": "Thiên Ất Củng Mệnh",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "CONFLICT",
+      "formulaComparison": null
+    },
+    {
+      "slug": "thien-co-ty-hoi",
+      "name": "Thiên Cơ Tỵ Hợi",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "NOT_IMPLEMENTED"
+    },
+    {
+      "slug": "tho-tinh-nhap-mieu",
+      "name": "Thọ Tinh Nhập Miếu",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "PARTIAL"
+    },
+    {
+      "slug": "thuy-trung-que-ngac",
+      "name": "Thủy Trừng Quế Ngạc",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "AI_ACCEPTED",
+      "formulaComparison": "CONFLICT"
+    },
+    {
+      "slug": "tu-phu-vu-tuong",
+      "name": "Tử Phủ Vũ Tướng",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "CONFLICT",
+      "formulaComparison": null
+    },
+    {
+      "slug": "van-tinh-cung-menh",
+      "name": "Văn Tinh Củng Mệnh",
+      "identity": "UNRESOLVED_IDENTITY",
+      "decision": "CONFLICT",
+      "formulaComparison": null
+    }
+  ],
+  "note": "No 9C identity was promoted. A modern page title is not a checked historical edition."
+}

@@ -2,6 +2,8 @@
 
 No runtime rule was changed in this batch. Each gap below needs its own reviewed implementation PR after a readable source is in hand.
 
+The 21 stored conflicts are scoped in `docs/knowledge/SPRINT_9_ADJUDICATION_MATRIX.md`. That matrix does not replace the original decisions. Recognition, quý grade, school variant, and identity stay separate. `rulesV2.json` was not edited.
+
 ## Sprint 9C formula gaps
 
 These notes cite a bound 9C span or a catalog field. They are not runtime edits.
