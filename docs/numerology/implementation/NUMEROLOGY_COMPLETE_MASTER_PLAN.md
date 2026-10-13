@@ -47,7 +47,7 @@ Tên tám tuyến là lớp `arrow-labels-vn-v1`, tách khỏi phép đếm lư�
 
 ### T001 — Kế hoạch và cổng P2
 
-- status: pending
+- status: completed
 - depends_on: []
 - scope: `docs/numerology/implementation/`
 - acceptance_criteria:
@@ -57,7 +57,7 @@ Tên tám tuyến là lớp `arrow-labels-vn-v1`, tách khỏi phép đếm lư�
 
 ### T002 — Chu kỳ nhiều năm, biểu đồ tên, biểu đồ ghép
 
-- status: pending
+- status: completed
 - depends_on: []
 - scope: backend numerology engine, tests, formula spec, API contract
 - acceptance_criteria:
@@ -71,7 +71,7 @@ Tên tám tuyến là lớp `arrow-labels-vn-v1`, tách khỏi phép đếm lư�
 
 ### T003 — Báo cáo trên trang
 
-- status: pending
+- status: completed
 - depends_on: [T002]
 - scope: `frontend/src/numerology/`, e2e liên quan
 - acceptance_criteria:
@@ -87,7 +87,7 @@ Tên tám tuyến là lớp `arrow-labels-vn-v1`, tách khỏi phép đếm lư�
 
 ### T004 — Lời đỉnh, thử thách và chú thích tuyến
 
-- status: pending
+- status: completed
 - depends_on: [T002]
 - scope: catalog, content gate, review record
 - acceptance_criteria:
@@ -101,7 +101,7 @@ Tên tám tuyến là lớp `arrow-labels-vn-v1`, tách khỏi phép đếm lư�
 
 ### T005 — Ảnh, lộ trình, kiểm thử tích hợp
 
-- status: pending
+- status: completed
 - depends_on: [T003, T004]
 - scope: screenshots, roadmap, test suite còn lại của numerology
 - acceptance_criteria:
@@ -116,4 +116,4 @@ Người dùng đọc được tổng quan, bảy chỉ số, lưới, tháp, th
 
 ## Plan changes
 
-Chưa có.
+Sau review tích hợp, mỗi ô năm và tháng có `viewDate` do server tính. Ô trước ngày sinh là `null` và không bấm được. Bản in giấu tên đã chuẩn hóa và danh sách chữ cái trừ khi người dùng chọn kèm họ tên.

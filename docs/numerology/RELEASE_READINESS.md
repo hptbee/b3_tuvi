@@ -9,7 +9,7 @@ Local evidence for the stacked branches ending at `cursor/numerology-release-har
 | `CALCULATION_FEATURE_COMPLETE` | Met for the published calculator | Profile `pythagorean-vn-v1` `1.2.0` still calculates the seven metrics, birth grid, personal cycles, and four pinnacle/challenge periods. |
 | `FORMULA_PROFILE_CONSISTENT` | Met | No calculation file changed in the content, feature, or hardening commits. Existing fixtures still pass. |
 | `FORMULA_SOURCE_VERIFIED` | Not met | Web pages read in the audit stay `source_read`. `editionVerificationStatus` and `expertVerificationStatus` stay unverified. |
-| `CONTENT_REVIEWED` | Met only for catalog `1.1.0` | Two independent editorial reviews passed before publication. Pinnacle and challenge meanings stay null. Number 33 stays withheld. The five wording edits after that pass were not sent through a second review. |
+| `CONTENT_REVIEWED` | Met for catalog `1.1.0`, then for the added `1.2.0` stage copy | `1.1.0` had two editorial passes. `1.2.0` adds pinnacle-stage and challenge 1–8 readings after two further passes in `reviews/CONTENT_1_2_REVIEW.md`. Challenge 0 and number 33 stay withheld. Neither pass is expert or book verification. |
 | `V1_FEATURE_COMPLETE` | Met for the named V1 interactions | Export, import-with-recalculate, and A4 print are implemented and covered by unit and Playwright tests. |
 | `RELEASE_GATES_PASSED` | Not met | Local commands below passed. GitHub Actions for this branch is recorded only after the push. Staging was not executed. No release owner has approved. |
 | `PRODUCTION_READY` | Not met | The in-process limiter does not coordinate multiple instances. Live staging, rollback rehearsal, and release approval are absent. |
@@ -93,7 +93,7 @@ Live staging was not executed. No deployment credentials or staging host were av
 | API base URL | Playwright uses the Vite dev server and `127.0.0.1:5000` | Set the deployed frontend to the deployed API origin. Not executed |
 | `/than-so-hoc` open and refresh | Playwright navigation and the existing reload assertion | Not executed on a static host. The host must use `try_files` or an equivalent SPA fallback |
 | Profiles, calculate, meanings | Backend API tests | Not executed |
-| Meaning eligibility | Content tests withhold 33 and pinnacle prose | Not executed |
+| Meaning eligibility | Content tests publish catalog 1.2.0 stage readings, withhold 33, and withhold challenge 0 | Not executed |
 | Export, import, print | Unit tests and the numerology Playwright print/import test | Not executed |
 | Mobile 320 and 390 | Playwright | Not executed |
 | `Cache-Control: no-store` | API test and the probe | Not executed |
