@@ -1,0 +1,26 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "19.2.12+19.2.13+19.5",
+  "sourceDigest": "80539f3dfae40951f28fbd662d63b2d0966d05a6eb1dcb4b07ad03af25d4c5e2",
+  "claimId": "claim-minh-chau-xuat-hai",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "palace_menh_or_quan_loc",
+    "branch_ty",
+    "star_nguyet_toa_thu",
+    "avoid_tuan_triet",
+    "avoid_sat",
+    "avoid_bai",
+    "strengthened_by_khoa_quyen_loc"
+  ],
+  "exceptions": [],
+  "quotation": "Cung Mệnh hay Quan Lộc an tại Tý, có Nguyệt tọa thủ (Tý thuộc que Khảm là biểu tượng của nước, của biển cá, nên gọi là Thương hải).",
+  "uncertainties": [],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-b68b1980-07aa-5169-9d82-b9aeed186ed4"
+}

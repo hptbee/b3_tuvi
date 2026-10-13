@@ -1,0 +1,56 @@
+{
+  "decisionId": "quan-than-khanh-hoi-2026-10-12",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-quan-than-khanh-hoi",
+  "schoolId": "vn-tam-hop-default",
+  "variantType": "rule",
+  "variantId": "rule-pilot-not-runtime",
+  "sourceId": "thai-thu-lang-tan-bien",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "19.2.3+19.2.4+19.5",
+  "sourceDigest": "56f853f9f34d622075312af673416400bc7ce8aace930e6f06980ba66c063996",
+  "fileSha256": "941b104504dd552fe967354759da1683dda30a529aa59a8e570b05727f5b4458",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "PARTIAL",
+      "reviewRef": "docs/knowledge/reviews/quan-than-khanh-hoi/review-a.json",
+      "agentId": "bc-7657680c-86c1-5864-a7d6-b917c9a91d03",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "PARTIAL",
+      "reviewRef": "docs/knowledge/reviews/quan-than-khanh-hoi/review-b.json",
+      "agentId": "bc-75f79987-8468-583d-830c-9e3d1ad8e89e",
+      "available": true
+    }
+  ],
+  "decision": "AI_ACCEPTED",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "hostModelBuildId": null,
+  "notes": "Both requested model slugs agreed on PARTIAL. The host did not return a separate build id. The runtime rule was not changed.",
+  "crossReviewOutcome": "AI_CROSS_REVIEWED",
+  "formulaComparison": "PARTIAL",
+  "conditions": [
+    "avoid_bai",
+    "avoid_sat",
+    "avoid_tuan_triet",
+    "bright",
+    "palace_menh_or_quan_loc",
+    "star_phu_bat_opposite",
+    "star_phuong",
+    "star_tu_bright_host",
+    "star_xuong_khuc_khoi_viet_long",
+    "strengthened_by_khoa_quyen_loc"
+  ],
+  "exceptions": []
+}

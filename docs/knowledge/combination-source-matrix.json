@@ -27,7 +27,7 @@
       "implementationGaps": [],
       "absoluteClaimReview": false,
       "recommendedAction": "hold_until_edition_checked",
-      "batchStatus": "REVIEW_NOT_EXECUTED"
+      "batchStatus": "AI_ACCEPTED"
     },
     {
       "combinationId": "combo_02",
@@ -79,7 +79,7 @@
       "implementationGaps": [],
       "absoluteClaimReview": false,
       "recommendedAction": "hold_until_edition_checked",
-      "batchStatus": "REVIEW_NOT_EXECUTED"
+      "batchStatus": "AI_ACCEPTED"
     },
     {
       "combinationId": "combo_04",
@@ -132,7 +132,7 @@
       "absoluteClaimReview": false,
       "recommendedAction": "do_not_change_runtime_until_authenticated_edition",
       "formulaComparisonStatus": "CONFLICT",
-      "batchStatus": "REVIEW_NOT_EXECUTED"
+      "batchStatus": "CONFLICT"
     },
     {
       "combinationId": "combo_06",
@@ -161,7 +161,7 @@
       "absoluteClaimReview": false,
       "recommendedAction": "do_not_change_runtime_until_authenticated_edition",
       "formulaComparisonStatus": "CONFLICT",
-      "batchStatus": "REVIEW_NOT_EXECUTED"
+      "batchStatus": "AI_ACCEPTED"
     },
     {
       "combinationId": "combo_07",
@@ -187,7 +187,7 @@
       "implementationGaps": [],
       "absoluteClaimReview": false,
       "recommendedAction": "hold_until_edition_checked",
-      "batchStatus": "REVIEW_NOT_EXECUTED"
+      "batchStatus": "CONFLICT"
     },
     {
       "combinationId": "combo_08",
@@ -291,7 +291,7 @@
       "absoluteClaimReview": false,
       "recommendedAction": "do_not_change_runtime_until_authenticated_edition",
       "formulaComparisonStatus": "CONFLICT",
-      "batchStatus": "REVIEW_NOT_EXECUTED"
+      "batchStatus": "CONFLICT"
     },
     {
       "combinationId": "combo_12",
@@ -317,7 +317,7 @@
       "implementationGaps": [],
       "absoluteClaimReview": false,
       "recommendedAction": "hold_until_edition_checked",
-      "batchStatus": "REVIEW_NOT_EXECUTED"
+      "batchStatus": "CONFLICT"
     },
     {
       "combinationId": "combo_13",
@@ -472,7 +472,7 @@
       "absoluteClaimReview": false,
       "recommendedAction": "remain_disabled",
       "formulaComparisonStatus": "NOT_IMPLEMENTED",
-      "batchStatus": "REVIEW_NOT_EXECUTED"
+      "batchStatus": "AI_ACCEPTED"
     },
     {
       "combinationId": "combo_19",
@@ -500,7 +500,7 @@
       ],
       "absoluteClaimReview": false,
       "recommendedAction": "hold_until_edition_checked",
-      "batchStatus": "REVIEW_NOT_EXECUTED"
+      "batchStatus": "AI_ACCEPTED"
     },
     {
       "combinationId": "combo_20",
@@ -656,7 +656,7 @@
       ],
       "absoluteClaimReview": false,
       "recommendedAction": "hold_until_edition_checked",
-      "batchStatus": "REVIEW_NOT_EXECUTED"
+      "batchStatus": "AI_ACCEPTED"
     },
     {
       "combinationId": "combo_26",
@@ -685,7 +685,7 @@
       "absoluteClaimReview": false,
       "recommendedAction": "do_not_change_runtime_until_authenticated_edition",
       "formulaComparisonStatus": "CONFLICT",
-      "batchStatus": "REVIEW_NOT_EXECUTED"
+      "batchStatus": "CONFLICT"
     },
     {
       "combinationId": "combo_27",
@@ -711,7 +711,7 @@
       "implementationGaps": [],
       "absoluteClaimReview": false,
       "recommendedAction": "hold_until_edition_checked",
-      "batchStatus": "REVIEW_NOT_EXECUTED"
+      "batchStatus": "AI_ACCEPTED"
     },
     {
       "combinationId": "combo_28",
@@ -737,7 +737,7 @@
       "implementationGaps": [],
       "absoluteClaimReview": false,
       "recommendedAction": "hold_until_edition_checked",
-      "batchStatus": "REVIEW_NOT_EXECUTED"
+      "batchStatus": "AI_ACCEPTED"
     },
     {
       "combinationId": "combo_29",
@@ -837,7 +837,7 @@
       "implementationGaps": [],
       "absoluteClaimReview": true,
       "recommendedAction": "hold_until_edition_checked",
-      "batchStatus": "REVIEW_NOT_EXECUTED"
+      "batchStatus": "AI_ACCEPTED"
     },
     {
       "combinationId": "combo_33",
@@ -865,7 +865,7 @@
       ],
       "absoluteClaimReview": false,
       "recommendedAction": "remain_disabled",
-      "batchStatus": "REVIEW_NOT_EXECUTED"
+      "batchStatus": "AI_ACCEPTED"
     },
     {
       "combinationId": "combo_34",
@@ -892,7 +892,7 @@
       "absoluteClaimReview": false,
       "recommendedAction": "do_not_change_runtime_until_authenticated_edition",
       "formulaComparisonStatus": "CONFLICT",
-      "batchStatus": "REVIEW_NOT_EXECUTED"
+      "batchStatus": "CONFLICT"
     },
     {
       "combinationId": "combo_35",
@@ -942,7 +942,7 @@
       "implementationGaps": [],
       "absoluteClaimReview": false,
       "recommendedAction": "hold_until_edition_checked",
-      "batchStatus": "REVIEW_NOT_EXECUTED"
+      "batchStatus": "AI_ACCEPTED"
     },
     {
       "combinationId": "combo_37",
@@ -995,7 +995,7 @@
       "absoluteClaimReview": false,
       "recommendedAction": "do_not_change_runtime_until_authenticated_edition",
       "formulaComparisonStatus": "CONFLICT",
-      "batchStatus": "REVIEW_NOT_EXECUTED"
+      "batchStatus": "CONFLICT"
     },
     {
       "combinationId": "combo_39",
@@ -1071,7 +1071,7 @@
       ],
       "absoluteClaimReview": true,
       "recommendedAction": "hold_until_edition_checked",
-      "batchStatus": "REVIEW_NOT_EXECUTED"
+      "batchStatus": "UNRESOLVED"
     },
     {
       "combinationId": "combo_42",
@@ -1252,7 +1252,7 @@
       "absoluteClaimReview": false,
       "recommendedAction": "do_not_change_runtime_until_authenticated_edition",
       "formulaComparisonStatus": "PARTIAL",
-      "batchStatus": "REVIEW_NOT_EXECUTED"
+      "batchStatus": "CONFLICT"
     },
     {
       "combinationId": "combo_49",
@@ -1411,7 +1411,7 @@
       "absoluteClaimReview": false,
       "recommendedAction": "do_not_change_runtime_until_authenticated_edition",
       "formulaComparisonStatus": "CONFLICT",
-      "batchStatus": "REVIEW_NOT_EXECUTED"
+      "batchStatus": "AI_ACCEPTED"
     },
     {
       "combinationId": "combo_55",
@@ -1437,7 +1437,7 @@
       "implementationGaps": [],
       "absoluteClaimReview": false,
       "recommendedAction": "hold_until_edition_checked",
-      "batchStatus": "REVIEW_NOT_EXECUTED"
+      "batchStatus": "CONFLICT"
     },
     {
       "combinationId": "combo_56",
@@ -1539,7 +1539,7 @@
       ],
       "absoluteClaimReview": false,
       "recommendedAction": "hold_until_edition_checked",
-      "batchStatus": "REVIEW_NOT_EXECUTED"
+      "batchStatus": "AI_ACCEPTED"
     },
     {
       "combinationId": "combo_60",

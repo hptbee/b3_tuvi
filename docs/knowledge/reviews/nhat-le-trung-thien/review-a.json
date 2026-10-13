@@ -1,0 +1,22 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "phu-giai/70",
+  "sourceDigest": "54375e708b99f295a6700aca5548bff97fe8a558e4a0a04626353761e36cc265",
+  "claimId": "claim-nhat-le-trung-thien",
+  "variantType": "rule",
+  "formulaComparison": "MATCH",
+  "verdict": "MATCH",
+  "conditions": [
+    "palace_menh",
+    "branch_ngo",
+    "star_nhat_toa_thu"
+  ],
+  "exceptions": [],
+  "quotation": "Cung Mệnh an tại Ngọ, có Nhật tọa thủ nên rất sáng sủa tốt đẹp, Nhật ở đây ví nh",
+  "uncertainties": [],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-47d08e52-e880-51be-bf85-6a85de3b5f78"
+}

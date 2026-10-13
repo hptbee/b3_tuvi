@@ -1,0 +1,31 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "19.2.15+19.5",
+  "sourceDigest": "9a25d0c9264bdb03790256f8117f78975c9d56ca48e83a084b285ca049b0a519",
+  "claimId": "claim-nhat-nguyet-tinh-minh",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "palace_menh_or_quan_loc",
+    "branch_suu",
+    "branch_mui",
+    "branch_ty",
+    "branch_hoi",
+    "branch_mao",
+    "avoid_tuan_triet",
+    "avoid_sat",
+    "avoid_bai",
+    "strengthened_by_khoa_quyen_loc",
+    "star_nguyet_toa_thu",
+    "star_nhat_toa_thu"
+  ],
+  "exceptions": [],
+  "quotation": "Cung Mệnh hay Quan Lộc an tại Sửu có Nhật tọa thủ tại Tý và Nguyệt tọa thủ tại Hợi hợp chiếu hay an tại Mùi có Nhật tọa thủ tại Mão và Nguyệt tọa thủ tại Hợi hợp chiếu.",
+  "uncertainties": [],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-60699f69-49d2-58de-aa5a-d7e57872df3d"
+}

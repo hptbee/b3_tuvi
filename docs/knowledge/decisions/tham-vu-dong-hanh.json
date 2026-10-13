@@ -1,0 +1,41 @@
+{
+  "decisionId": "tham-vu-dong-hanh-2026-10-12",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-tham-vu-dong-hanh",
+  "schoolId": "vn-tam-hop-default",
+  "variantType": "rule",
+  "variantId": "rule-pilot-not-runtime",
+  "sourceId": "thai-thu-lang-tan-bien",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "phu-giai/83",
+  "sourceDigest": "d984566cbce8d7ed26acc141c078fc30557f1dc54b0aaa6ccd938fe1e1192786",
+  "fileSha256": "941b104504dd552fe967354759da1683dda30a529aa59a8e570b05727f5b4458",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "MATCH",
+      "reviewRef": "docs/knowledge/reviews/tham-vu-dong-hanh/review-a.json",
+      "agentId": "bc-e4e429da-8492-5030-8925-4e004d11124b",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "MATCH",
+      "reviewRef": "docs/knowledge/reviews/tham-vu-dong-hanh/review-b.json",
+      "agentId": "bc-9e992cc4-3fb4-5215-8078-5d39459c5ad3",
+      "available": true
+    }
+  ],
+  "decision": "CONFLICT",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "hostModelBuildId": null,
+  "notes": "Comparator returned CONFLICT: reviews disagree on conditions. The runtime rule was not changed."
+}

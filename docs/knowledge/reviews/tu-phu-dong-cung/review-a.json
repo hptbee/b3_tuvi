@@ -1,0 +1,22 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "phu-giai/57",
+  "sourceDigest": "f58dc4692312e3b8e17dedf7ce2bc33b540716fdc4c72959d47be3572e80f384",
+  "claimId": "claim-tu-phu-dong-cung",
+  "variantType": "rule",
+  "formulaComparison": "MATCH",
+  "verdict": "MATCH",
+  "conditions": [
+    "palace_menh",
+    "branch_dan_than",
+    "star_tu_phu_same_palace"
+  ],
+  "exceptions": [],
+  "quotation": "Cung Mệnh an tại Dần, Thân có Tử Phủ tọa thủ đồng cung nên rất rực rỡ tốt đẹp. Tuổi Giáp có cách này chắc chắn là được hưởng phúc trọn đời và dĩ nhiên là được hưởng phú qúy song toàn.",
+  "uncertainties": [],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-89a56a3c-f7b9-5f42-8c6b-7c127975487f"
+}

@@ -1,0 +1,36 @@
+promptVersion: dual-ai-source-review-v1-prompt-1
+policyVersion: dual-ai-source-review-v1
+editionId: tan-bien-retypeset-277-cover-1956
+sourceId: thai-thu-lang-tan-bien
+schoolScope: vn-tam-hop-default
+locator: phu-giai/107
+sourceDigest: dde88f71670dd942f697c658538818d54dbcd4117057e21bc4f963a94f803690
+fileSha256: 941b104504dd552fe967354759da1683dda30a529aa59a8e570b05727f5b4458
+
+Read only the span below. Do not use memory of the book to add sentences that are not in the span. Do not look at another model's answer. Return one JSON object and no other text.
+
+Compare this runtime rule to the span.
+Catalog mapping, not a sentence from the book: Phá = Phá Quân; Lộc = Lộc Tồn or Hóa Lộc, as the span names them.
+Runtime rule JSON: {"id":"loc_phung_xung_pha","combination":"Lộc Phùng Xung Phá","strict":true,"target":"menh","clauses":[{"stars":["Lộc Tồn","Hóa Lộc"],"any":true,"at":"menh_or_opposite","samePalaceAny":{"stars":["Địa Không","Địa Kiếp","Hóa Kỵ"],"markers":["tuan","triet"]}}]}
+
+Select a condition id only when the span states that requirement for this pattern.
+Allowed condition ids:
+palace_menh
+star_loc_host
+star_pha_opposite
+
+Allowed exception id, include it only if the span exempts this section from Sát tinh: sat_does_not_reduce
+This section is not 19.2.9, 19.2.16, or 19.2.22.
+
+verdict is MATCH only when the runtime rule states every selected condition and exception. PARTIAL when it states some and omits others. CONFLICT when it contradicts the span. NOT_IMPLEMENTED when the runtime rule is null.
+
+quotation must be an exact contiguous substring of the span, at least 40 characters, and must include this anchor: Cung Mệnh có Lộc tọa thủ, gặp Phá xung chiếu nên rất mờ ám xấu xa. Có cách này, 
+
+JSON keys:
+schoolId, editionId, locator, sourceDigest, claimId, variantType, formulaComparison, verdict, conditions, exceptions, quotation, uncertainties
+
+Use schoolId vn-tam-hop-default, editionId tan-bien-retypeset-277-cover-1956, locator "phu-giai/107", sourceDigest dde88f71670dd942f697c658538818d54dbcd4117057e21bc4f963a94f803690, claimId claim-loc-phung-xung-pha, variantType rule. formulaComparison must equal verdict.
+
+SPAN:
+Lộc phùng xung Phá, cát dã thành hung
+Cung Mệnh có Lộc tọa thủ, gặp Phá xung chiếu nên rất mờ ám xấu xa. Có cách này, nên tiền tài thiếu thốn, suốt đời phải lo lắng vi sinh kế, và hay mắc tai họa.

@@ -1,0 +1,50 @@
+promptVersion: dual-ai-source-review-v1-prompt-1
+policyVersion: dual-ai-source-review-v1
+editionId: tan-bien-retypeset-277-cover-1956
+sourceId: thai-thu-lang-tan-bien
+schoolScope: vn-tam-hop-default
+locator: 19.2.3+19.2.4+19.5
+sourceDigest: 56f853f9f34d622075312af673416400bc7ce8aace930e6f06980ba66c063996
+fileSha256: 941b104504dd552fe967354759da1683dda30a529aa59a8e570b05727f5b4458
+
+Read only the span below. Do not use memory of the book to add sentences that are not in the span. Do not look at another model's answer. Return one JSON object and no other text.
+
+Compare this runtime rule to the span.
+Catalog mapping, not a sentence from the book: Sát = Thất Sát; Tử = Tử Vi; Xương = Văn Xương; Khúc = Văn Khúc; Khôi = Thiên Khôi; Việt = Thiên Việt; Khoa = Hóa Khoa; Quyền = Hóa Quyền; Lộc = Lộc Tồn or Hóa Lộc, as the span names them.
+Runtime rule JSON: {"id":"quan_than_khanh_hoi","combination":"Quân Thần Khánh Hội","strict":true,"target":"menh","clauses":[{"stars":["Tử Vi"],"at":"target"},{"stars":["Tả Phù","Hữu Bật","Thiên Khôi","Thiên Việt"],"at":"tam_phuong_tu_chinh"}]}
+
+Select a condition id only when the span states that requirement for this pattern.
+Allowed condition ids:
+palace_menh_or_quan_loc
+palace_menh
+avoid_tuan
+avoid_tuan_triet
+avoid_sat
+avoid_bai
+strengthened_by_khoa_quyen_loc
+bright
+star_tu_bright_host
+star_phu_bat_opposite
+star_xuong_khuc_khoi_viet_long
+star_phuong
+
+Allowed exception id, include it only if the span exempts this section from Sát tinh: sat_does_not_reduce
+This section is not 19.2.9, 19.2.16, or 19.2.22.
+
+verdict is MATCH only when the runtime rule states every selected condition and exception. PARTIAL when it states some and omits others. CONFLICT when it contradicts the span. NOT_IMPLEMENTED when the runtime rule is null.
+
+quotation must be an exact contiguous substring of the span, at least 40 characters, and must include this anchor: Cung Mệnh hay Quan Lộc có Tử sáng sủa tốt đẹp tọa thủ có Phụ - Bật hợp chiếu.
+
+JSON keys:
+schoolId, editionId, locator, sourceDigest, claimId, variantType, formulaComparison, verdict, conditions, exceptions, quotation, uncertainties
+
+Use schoolId vn-tam-hop-default, editionId tan-bien-retypeset-277-cover-1956, locator "19.2.3+19.2.4+19.5", sourceDigest 56f853f9f34d622075312af673416400bc7ce8aace930e6f06980ba66c063996, claimId claim-quan-than-khanh-hoi, variantType rule. formulaComparison must equal verdict.
+
+SPAN:
+19.2.3. Phụ Bật Củng Chủ
+Cung Mệnh hay Quan Lộc có Tử sáng sủa tốt đẹp tọa thủ có Phụ - Bật hợp chiếu.
+19.2.4. Quân Thần Khánh Hội
+Cùng như trên, nhưng có thêm đủ bộ Xương, Khúc, Khôi, Việt, Long, Phượng hội hợp.
+19.5. Phụ luận
+Phú cục và Qúy cục trình bày sơ lược ở trên rất cần phải xa lánh Tuần, Triệt, Sát tinh và Bại tinh. Ngoại trừ Qúy cục 19.2.9 - 19.2.16 - 19.2.22 gặp Sát tinh cũng không bị chiết giảm mất sự tốt đẹp. Nếu Sát tinh sáng sủa, dĩ nhiên lại càng thêm rực rỡ.
+Phú cục và Qúy cục rất cần gặp Khoa, Quyền, Lộc hội hợp, như vậy mới được toàn mỹ.

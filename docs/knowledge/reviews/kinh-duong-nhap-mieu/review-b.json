@@ -1,0 +1,26 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "phu-giai/111",
+  "sourceDigest": "4e4678d385ab38aca3569f5dc16bada4fe5393b57da9b7ebfd741645154721",
+  "claimId": "claim-kinh-duong-nhap-mieu",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "palace_menh",
+    "branch_tu_mo",
+    "branch_suu_mui",
+    "bright",
+    "star_kinh_host"
+  ],
+  "exceptions": [],
+  "quotation": "Cung Mệnh an tại Tứ Mộ, có Kình tọa thủ, lại gặp thêm nhiều sao sáng sủa tốt đẹp hội hợp, nên được hưởng phú qúy và có danh tiếng lừng lẫy.",
+  "uncertainties": [
+    "Runtime rule omits the stated bright-stars requirement and instead requires Thất Sát or Tham Lang, which the span does not state."
+  ],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-60d68afe-022a-5b68-b15c-9094d9f87ba2"
+}

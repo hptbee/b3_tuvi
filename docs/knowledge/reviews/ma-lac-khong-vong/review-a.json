@@ -1,0 +1,24 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "19.3.8+19.5",
+  "sourceDigest": "f137f8ad547c20bed29634097b9520b3e880cb72a49b03e03671dd7bfcd48652",
+  "claimId": "claim-ma-lac-khong-vong",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "star_ma",
+    "star_ma_host"
+  ],
+  "exceptions": [],
+  "quotation": "19.3.8. Mã Lạc Không Vong\nMã thủ Mệnh gặp Tuần, Triệt án ngữ.",
+  "uncertainties": [
+    "Section 19.5 states brightness only as a conditional recovery (nếu gặp chêm nhiều sao sáng sủa tốt đẹp), so bright was not selected as a defining requirement of this pattern.",
+    "The title Không Vong does not name Địa Không; the pattern sentence requires Mã thủ Mệnh gặp Tuần, Triệt án ngữ."
+  ],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-b78f7e04-acd1-5b97-a30a-49ea7ceb644b"
+}

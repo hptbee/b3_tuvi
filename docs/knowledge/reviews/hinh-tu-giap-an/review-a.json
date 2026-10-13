@@ -1,0 +1,31 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "19.2.18+19.5",
+  "sourceDigest": "bce5f042964ab0ae3a2afde54e334c6b09eb5207a85bf0225ca064f3f92bcb98",
+  "claimId": "claim-hinh-tu-giap-an",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "palace_menh_or_quan_loc",
+    "avoid_tuan",
+    "avoid_tuan_triet",
+    "avoid_sat",
+    "avoid_bai",
+    "strengthened_by_khoa_quyen_loc",
+    "star_an_host",
+    "star_hinh_liem_flank"
+  ],
+  "exceptions": [],
+  "quotation": "Cung Mệnh hay Quan Lộc có Ấn tọa thủ, có Hình, Liêm giáp cung (Hình là tên riêng của Kình Dương, cũng như Tù là tên riêng của Liêm Trinh).",
+  "uncertainties": [
+    "The catalog does not map Ấn to Thiên Tướng, so the runtime anchor Thiên Tướng does not state Ấn tọa thủ.",
+    "flankGroups includes Thiên Hình, while the span defines Hình as the proper name of Kình Dương and the other flank as Liêm Trinh.",
+    "target menh restricts the palace to Mệnh, while the span states Cung Mệnh hay Quan Lộc."
+  ],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-3ec1a986-a1b2-552f-ad1b-c5d1e24f15f3"
+}

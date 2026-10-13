@@ -33,11 +33,28 @@ assert.strictEqual(nguyet.batchStatus, 'AI_ACCEPTED');
 assert.strictEqual(nguyet.formulaComparison, 'PARTIAL');
 assert.strictEqual(nguyet.expertVerified, false);
 
-const locatedPending = loaded.passages.filter((passage) => passage.located === true && passage.claimId !== 'claim-nguyet-lang-thien-mon');
-for (const passage of locatedPending) {
+const located = loaded.passages.filter((passage) => passage.located === true);
+const byClaim = new Map(loaded.decisions.map((decision) => [decision.subjectId, decision]));
+assert.strictEqual(loaded.decisions.length, located.length);
+const locatedClaims = new Set(located.map((passage) => passage.claimId));
+for (const decision of loaded.decisions) {
+    assert.ok(locatedClaims.has(decision.subjectId), decision.subjectId);
+    assert.strictEqual(decision.expertVerified, false, decision.subjectId);
+    assert.strictEqual(decision.runtimeRuleChangeApplied, false, decision.subjectId);
+}
+for (const passage of located) {
+    const decision = byClaim.get(passage.claimId);
+    assert.ok(decision, passage.combinationName);
+    assert.strictEqual(decision.sourceDigest, passage.sourceDigest, passage.combinationName);
     const row = byName.get(passage.combinationName);
-    assert.strictEqual(row.batchStatus, 'REVIEW_NOT_EXECUTED', passage.combinationName);
-    assert.ok(passage.sourceDigest, passage.combinationName);
+    assert.strictEqual(row.batchStatus, decision.decision, passage.combinationName);
+    if (decision.decision === 'AI_ACCEPTED') {
+        assert.strictEqual(row.formulaComparison, decision.formulaComparison, passage.combinationName);
+        assert.strictEqual(row.crossReviewOutcome, 'AI_CROSS_REVIEWED', passage.combinationName);
+    } else {
+        assert.strictEqual(row.formulaComparison, null, passage.combinationName);
+        assert.notStrictEqual(row.batchStatus, 'AI_ACCEPTED', passage.combinationName);
+    }
 }
 
 for (const matrixRow of matrix.rows) {
