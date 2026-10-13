@@ -51,6 +51,16 @@ try {
     assert.equal(result.metrics.personality.value, 11);
     assert.equal(result.nameAnalysis.normalized, 'NGUYEN VAN AN');
     assert.equal(result.metrics.lifePath.meaning, null);
+    assert.equal(result.profile.version, '1.1.0');
+    assert.equal(result.capabilities.birthGrid, 'available');
+    assert.equal(result.capabilities.cycles, 'available');
+    assert.equal(result.cycles.targetDate, result.referenceDate);
+    assert.deepEqual(result.birthGrid.counts, { 1: 2, 2: 0, 3: 0, 4: 0, 5: 1, 6: 1, 7: 0, 8: 0, 9: 2 });
+    const selected = await post(JSON.stringify({ ...birth, targetDate: '2027-01-01' }));
+    assert.equal(selected.headers.get('cache-control'), 'no-store');
+    const selectedResult = await selected.json();
+    assert.deepEqual([selectedResult.cycles.personalYear.value, selectedResult.cycles.personalMonth.value, selectedResult.cycles.personalDay.value], [5, 6, 7]);
+    assert.equal(selectedResult.cycles.targetDate, '2027-01-01');
     assert.ok(logs.some(line => line.includes('POST /api/numerology/calculate')));
     for (const privateValue of ['Nguyễn', 'NGUYEN', '1990', 'fullName', 'birthDate']) assert.ok(!logs.join('\n').includes(privateValue));
 
@@ -66,7 +76,13 @@ try {
         [{ ...birth, metrics: { lifePath: 9 } }, 400, 'CLIENT_RESULT_REJECTED'],
         [{ ...birth, profileId: 'fake' }, 404, 'PROFILE_NOT_FOUND'],
         [{ ...birth, profileVersion: '2.0.0' }, 404, 'PROFILE_NOT_FOUND'],
-        [{ ...birth, locale: 'en-US' }, 400, 'UNSUPPORTED_LOCALE']
+        [{ ...birth, locale: 'en-US' }, 400, 'UNSUPPORTED_LOCALE'],
+        [{ ...birth, targetDate: '1990-06-14' }, 400, 'INVALID_TARGET_DATE'],
+        [{ ...birth, targetDate: '2026-02-30' }, 400, 'INVALID_TARGET_DATE'],
+        [{ ...birth, targetDate: null }, 400, 'INVALID_TARGET_DATE'],
+        [{ ...birth, cycles: { personalYear: 1 } }, 400, 'CLIENT_RESULT_REJECTED'],
+        [{ ...birth, birthGrid: {} }, 400, 'CLIENT_RESULT_REJECTED'],
+        [{ ...birth, profileVersion: '1.0.0' }, 404, 'PROFILE_NOT_FOUND']
     ];
     for (const [body, status, code] of cases) {
         const failure = await post(JSON.stringify(body));

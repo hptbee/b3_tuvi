@@ -83,5 +83,5 @@ for (const bad of [null, [], 1, {}, { birthDate: { year: 1990, month: 2, day: 30
 }
 assert.throws(() => calculateNumerology(base), TypeError);
 assert.throws(() => calculateNumerology(base, '2026-02-30'), TypeError);
-assert.equal(withName.capabilities.birthGrid, 'not_implemented');
+assert.equal(withName.capabilities.birthGrid, 'available');
 console.log(`numerology core: ${fixture.cases.length} independent arithmetic fixtures, mapping, Unicode/date negatives and invariants passed`);

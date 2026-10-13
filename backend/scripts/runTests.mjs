@@ -6,6 +6,7 @@ const root = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 export const unitTests = [
     'test/numerologyCore.test.mjs',
+    'test/numerologyAdvanced.test.mjs',
     'test/engine.test.mjs',
     'test/placement.tables.test.mjs',
     'test/combinationMatch.test.mjs',

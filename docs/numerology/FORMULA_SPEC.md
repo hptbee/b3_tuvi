@@ -1,4 +1,4 @@
-# Core calculator specification — 1.0.0
+# Core calculator specification — 1.1.0
 
 Status: experimental product convention, not externally source-verified. Implementation starts from the proposed numerical rules in [the roadmap](../ROADMAP_NUMEROLOGY_A_TO_Z.md), following the owner's request to implement. This does not promote any source, formula, or personal interpretation status.
 
@@ -18,4 +18,18 @@ Reduction records each input/digits/output step and retains rootValue (1–9). A
 
 Name policy: reject control/format and Unicode default-ignorable characters before normalization (including hidden combining grapheme joiner and variation selectors), then NFC trim and a 100-codepoint bound. Decompose Latin/Vietnamese accents with NFD, Đ→D, uppercase, and treat spaces/hyphen/apostrophes as separators. A–Z map to repeating 1–9 (A/J/S=1, … I/R=9). Combining accents must follow a supported Latin letter and belong to this explicit set: U+0300, U+0301, U+0302, U+0303, U+0304, U+0306, U+0307, U+0308, U+0309, U+030A, U+030B, U+030C, U+030F, U+0311, U+031B, U+0323, U+0324, U+0325, U+0326, U+0327, U+0328, U+032D, U+032E, U+0330, U+0331. Only these accents are removed; NFC/NFD Vietnamese and common accented Latin spellings produce equivalent letters. Other combining marks (for example Devanagari vowel marks and enclosing keycaps), unsupported ligatures and scripts are rejected rather than silently transliterated.
 
-Every result has profile/schema versions, status, raw total, parts, steps, root/master information. Meaning is always null/withheld in this numeric MVP. Birth grid, personal cycles and pinnacles remain not_implemented, not numeric placeholder values.
+Every result has profile/schema versions, status, raw total, parts, steps, root/master information. Meaning remains null/withheld until a separately eligible content policy is enabled. Birth grid and personal cycles are implemented as versioned experimental capabilities; pinnacles remain not_implemented.
+
+## Birth grid — capability version1.0.0
+
+Format the validated date as **DDMMYYYY** (8 digits). Count1–9 without reduction; zeros, including day/month padding zeros, increment `ignoredZeroCount` only. Grid rows3/6/9,2/5/8,1/4/7; layoutVersion3-6-9-v1. Do not add lifePath/name/calculated digits. Present+ignored counts conserve8.
+
+Eight lines:123,456,789,147,258,369,159,357. `present` iff all3digits appear, `absent` iff none, otherwise `partial`; repeats never imply a complete line. Names/psychological meanings of lines are not inferred. Empty cells describe absence from this date, not a lack of ability.
+
+## Personal cycles — capability version1.0.0
+
+Optional strict ISO `targetDate`, validated Gregorian1200–2199 and not before birth. Omitted defaults to injectedreferenceDate captured by HTTP in Vietnam. Future viewing dates through2199 are allowed; futurebirths remain rejected. Each response includes exact targetDate and policycalendar-year-v1.
+
+Year = reduce(digitSum(birthDay)+digitSum(birthMonth)+digitSum(targetYear),false). Month = reduce(personalYear.value+digitSum(targetMonth),false). Day = reduce(personalMonth.value+digitSum(targetDay),false). **All three reduce to1–9, including totals11/22/33.** Periods follow calendar year January1–December31, month and day; no birthday rollover. Parts/reduction traces are serialized exactly like core metrics. No implicit clock or inferred astrology.
+
+Active profile/schema1.1.0 adds these policies without changing any seven core numeric formulas. Explicit requests for inactiveprofile1.0.0 return404; no silent version substitution. Original eight fixtures retain their expected numbers; only profile metadata migrated. These are product conventions, not externally verified school claims.

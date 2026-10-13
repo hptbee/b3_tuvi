@@ -24,6 +24,12 @@ export function dateOnly(value) {
     return `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
 }
 
+export function isoDateOnly(value) {
+    if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return null;
+    const [year, month, day] = value.split('-').map(Number);
+    return dateOnly({ year, month, day });
+}
+
 export function normalizeName(value) {
     if (value === undefined) return null;
     if (typeof value !== 'string') invalid('INVALID_NAME', 'Họ tên phải là văn bản.', 'fullName');
@@ -48,10 +54,10 @@ export function normalizeName(value) {
 
 export function parseInput(body, referenceDate) {
     if (!isObject(body)) invalid('INVALID_BODY', 'Dữ liệu gửi lên phải là một đối tượng JSON.');
-    const allowed = ['birthDate', 'fullName', 'profileId', 'profileVersion', 'locale'];
+    const allowed = ['birthDate', 'fullName', 'profileId', 'profileVersion', 'locale', 'targetDate'];
     for (const key of Object.keys(body)) {
         if (!allowed.includes(key)) {
-            const computed = ['metrics', 'analysis', 'normalizedName', 'profile'].includes(key);
+            const computed = ['metrics', 'analysis', 'normalizedName', 'profile', 'birthGrid', 'cycles'].includes(key);
             invalid(computed ? 'CLIENT_RESULT_REJECTED' : 'UNKNOWN_FIELD', 'Request chứa trường không được hỗ trợ.', key);
         }
     }
@@ -64,5 +70,8 @@ export function parseInput(body, referenceDate) {
         throw new TypeError('A valid date-only referenceDate must be injected');
     }
     if (iso > referenceDate) invalid('INVALID_BIRTH_DATE', 'Ngày sinh không được nằm trong tương lai.', 'birthDate');
-    return { birthDate: { ...body.birthDate }, name: normalizeName(body.fullName), referenceDate };
+    const targetDate = body.targetDate === undefined ? referenceDate : isoDateOnly(body.targetDate);
+    if (!targetDate) invalid('INVALID_TARGET_DATE', 'Ngày xem phải là ngày dương lịch hợp lệ dạng YYYY-MM-DD, năm 1200–2199.', 'targetDate');
+    if (targetDate < iso) invalid('INVALID_TARGET_DATE', 'Ngày xem không được trước ngày sinh.', 'targetDate');
+    return { birthDate: { ...body.birthDate }, name: normalizeName(body.fullName), referenceDate, targetDate };
 }

@@ -1,6 +1,6 @@
 export const PROFILE = Object.freeze({
     id: 'pythagorean-vn-v1',
-    version: '1.0.0',
+    version: '1.1.0',
     status: 'experimental',
     sourceStatus: 'product_specification_only',
     locale: 'vi-VN',
@@ -8,10 +8,12 @@ export const PROFILE = Object.freeze({
     masterNumbers: Object.freeze([11, 22, 33]),
     namePolicy: 'latin-vn-nfd-v1',
     yPolicy: 'consonant',
-    vowels: 'AEIOU'
+    vowels: 'AEIOU',
+    cyclePolicy: 'calendar-year-v1',
+    birthGridPolicy: 'ddmmyyyy-zero-excluded-v1'
 });
 
 export function publicProfile() {
     const { vowels, ...metadata } = PROFILE;
-    return { ...metadata, capabilities: { core: 'available', birthGrid: 'not_implemented', cycles: 'not_implemented', pinnacles: 'not_implemented' } };
+    return { ...metadata, capabilities: { core: 'available', birthGrid: 'available', cycles: 'available', pinnacles: 'not_implemented' } };
 }

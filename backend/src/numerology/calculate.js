@@ -1,21 +1,11 @@
 import { PROFILE, publicProfile } from './profile.js';
 import { parseInput } from './input.js';
 
-export const digitSum = value => [...String(value)].reduce((sum, digit) => sum + Number(digit), 0);
-export function reduceNumber(total, keepMasters) {
-    if (!Number.isSafeInteger(total) || total < 1) throw new RangeError('Reduction requires a positive safe integer');
-    const steps = [];
-    let value = total;
-    while (value > 9 && !(keepMasters && PROFILE.masterNumbers.includes(value))) {
-        const digits = [...String(value)].map(Number);
-        const output = digits.reduce((sum, digit) => sum + digit, 0);
-        steps.push({ input: value, digits, output });
-        value = output;
-    }
-    let rootValue = value;
-    while (rootValue > 9) rootValue = digitSum(rootValue);
-    return { rawTotal: total, value, rootValue, isMaster: PROFILE.masterNumbers.includes(value), steps };
-}
+import { digitSum, reduceNumber } from './reduction.js';
+import { buildBirthGrid } from './birthGrid.js';
+import { calculateCycles } from './cycles.js';
+export { digitSum, reduceNumber } from './reduction.js';
+
 const missing = reason => ({ status: 'unavailable', reason, value: null, meaning: null, meaningStatus: 'withheld' });
 const metric = (formulaId, total, keepMasters, parts) => ({
     status: 'available', formulaId, ...reduceNumber(total, keepMasters), keepMasters,
@@ -25,7 +15,8 @@ const datePart = (label, number) => ({ label, values: [...String(number)].map(Nu
 const lettersPart = (label, letters) => ({ label, values: letters.map(item => item.value), total: letters.reduce((sum, item) => sum + item.value, 0) });
 
 export function calculateNumerology(body, referenceDate) {
-    const { birthDate: { year, month, day }, name } = parseInput(body, referenceDate);
+    const { birthDate, name, targetDate } = parseInput(body, referenceDate);
+    const { year, month, day } = birthDate;
     const dateParts = [datePart('day', day), datePart('month', month), datePart('year', year)];
     const metrics = {
         lifePath: metric('life-path-all-date-digits-v1', dateParts.reduce((sum, part) => sum + part.total, 0), true, dateParts),
@@ -45,8 +36,9 @@ export function calculateNumerology(body, referenceDate) {
             { label: 'expression', values: [metrics.expression.value], total: metrics.expression.value }
         ]) : missing('missing_name');
     return {
-        ok: true, schemaVersion: '1.0.0', profile: publicProfile(), referenceDate,
+        ok: true, schemaVersion: '1.1.0', profile: publicProfile(), referenceDate,
         contentVersion: null, metrics, nameAnalysis: name,
+        birthGrid: buildBirthGrid(birthDate), cycles: calculateCycles(birthDate, targetDate),
         capabilities: publicProfile().capabilities,
         warnings: name?.letters.some(letter => letter.letter === 'Y') ? [{ code: 'Y_AS_CONSONANT', field: 'fullName' }] : []
     };
