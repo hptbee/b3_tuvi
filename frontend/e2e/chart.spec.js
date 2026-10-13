@@ -74,7 +74,10 @@ test('a slow chart cannot replace the latest chart after navigation', async ({ p
   });
   await page.goto('/la-so?day=15&month=6&year=1990&hour=8&gender=1');
   await page.getByRole('link', { name: '← Về trang bắt đầu' }).click();
-  await page.getByRole('combobox', { name: 'Giờ sinh', exact: true }).selectOption('10');
+  await expect(page).toHaveURL(/\/$/);
+  const hour = page.getByRole('combobox', { name: 'Giờ sinh', exact: true });
+  await hour.selectOption('10');
+  await expect(hour).toHaveValue('10');
   await page.getByRole('button', { name: 'Lập Lá Số' }).click();
   await expect(page.locator('.center-info')).toContainText('10 giờ 00 phút');
   await page.waitForTimeout(1000);

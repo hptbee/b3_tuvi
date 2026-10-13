@@ -13,8 +13,8 @@ Snapshot phát triển ngày **2026-10-13**. Đã có **MVP số học thử ngh
 | Trace | Thành phần phép cộng, từng bước rút gọn, master/root; tên chuẩn hóa và giá trị từng chữ |
 | Trạng thái thiếu dữ liệu | Không có tên → bốn chỉ số tên unavailable; thiếu nguyên âm/phụ âm → chỉ nhóm tương ứng unavailable |
 | API | `GET /api/numerology/profiles`, `GET /api/numerology/meanings/:metricId/:value`, `POST /api/numerology/calculate`; typed errors, scoped parser boundary, schema/profile/referenceDate |
-| UI | Landing tím với menu trên cùng; validation/focus, loading, retry, input snapshot, abort/sequence guard, trace bằng bàn phím và mobile; biểu đồ ngày sinh, chu kỳ và bốn giai đoạn đỉnh cao/thử thách |
-| Riêng tư | POST, no-store kể cả lỗi/preflight; không thêm persistence/URL/browser storage; không log tên/body/query |
+| UI | Landing tím với menu trên cùng; validation/focus, loading, retry, input snapshot, abort/sequence guard, trace bằng bàn phím và mobile; biểu đồ ngày sinh, chu kỳ và bốn giai đoạn đỉnh cao/thử thách; xuất/nhập JSON và in A4 |
+| Riêng tư | POST, no-store kể cả lỗi/preflight/429; không thêm persistence/URL/browser storage; không log tên/body/query; họ tên chỉ vào JSON/bản in khi người dùng chọn |
 
 Frontend chỉ hiển thị kết quả server, không copy công thức. Engine thuần nhận ngày tham chiếu được inject; API chụp ngày một lần theo `Asia/Ho_Chi_Minh`. Không thay công thức Tử Vi, không migration SQLite, không thêm dependency hoặc tài khoản.
 
@@ -70,8 +70,7 @@ T005 thêm tài liệu này và integrated E2E; tìm commit bằng lịch sử G
 ## Chưa triển khai và trình tự tiếp theo
 
 1. **Nguồn/công thức:** profile 1.2.0 khớp fixture của chính nó. Kiểm toán đã đọc các trang công thức Decoz và ghi conflict (Đường đời mọi chữ số, đỉnh không giữ master ở thành phần, Y phụ âm). Chưa có ấn bản sách. Nếu đổi quy ước thì tạo profile/version và fixture mới; không sửa số của 1.2.0.
-2. **Nội dung:** catalog và `GET /api/numerology/meanings/:metricId/:value` đã có, 102 mục thí nghiệm cho chỉ số cốt lõi và chu kỳ. Việc còn lại là giảm lặp thân chữ và chỉ xuất bản bài mới sau cổng review. Không có lời 33, đỉnh hoặc thử thách.
-3. **V1 còn lại:** biểu đồ, chu kỳ và đỉnh cao/thử thách đã có theo quy ước thử nghiệm profile 1.2.0. Export/import/print vẫn chưa có.
-4. **Export/import/print riêng:** opt-in tên, kiểm tra version và recalculate, print layout/E2E. Tử Vi export sẵn có không đồng nghĩa Thần Số Học đã hỗ trợ.
-5. **Release:** production rate limit, benchmark thực tế, metadata/noindex, staging SPA rewrite/refresh, logging/monitoring, rollback và các gate §15 roadmap. Không đánh dấu checklist release hoàn tất từ tests local.
+2. **Nội dung:** catalog `1.1.0` đã qua review biên tập cho 102 mục chỉ số cốt lõi và chu kỳ. Không có lời 33, đỉnh hoặc thử thách. Review không phải xác minh chuyên gia.
+3. **V1 tính năng:** biểu đồ, chu kỳ, đỉnh cao/thử thách, xuất JSON, nhập JSON (tính lại) và in A4 đã có trên nhánh tính năng. Họ tên ra khỏi tệp và bản in trừ khi người dùng chọn.
+4. **Release:** limiter trong một process, metadata/`noindex` cho `/la-so`, và checklist staging nằm ở [RELEASE_READINESS.md](RELEASE_READINESS.md). Chưa diễn tập staging, chưa phê duyệt phát hành, và limiter một process không thay proxy khi có nhiều instance.
 6. **Tùy chọn:** nhiều profile, AI, cross-browser; không bắt buộc để chạy calculator hiện tại.
