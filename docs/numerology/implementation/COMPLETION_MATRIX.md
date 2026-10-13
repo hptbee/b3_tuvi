@@ -1,18 +1,21 @@
 # Ma trận hoàn thành lá số Thần số học
 
-Ngày: 2026-10-13. Nhánh: `cursor/numerology-product-gap-2318`. Baseline audit: `5b15f30`.
+> **Rebaseline 2026-10-14:** `main ed31ad1cae7b2411029cccbe8c87da533a996800`, PR #24 đã merge; report UI có bản visual finalization `d490703`. Profile `pythagorean-vn-v1` `1.2.0`, catalog `1.2.0`.
+> **Runtime/CI:** [main backend/frontend/e2e PASS](https://github.com/hptbee/b3_tuvi/actions/runs/38438302551).
+> **Theo dõi tiếp:** [Master Roadmap §12.9/§18](../../ROADMAP_NUMEROLOGY_A_TO_Z.md) và [Product Roadmap](../product-gap/PRODUCT_COMPLETION_ROADMAP.md).
 
-Các nhãn dưới đây không cộng thành một phần trăm “hệ thống đã xong”.
+Các nhãn dưới đây **không cộng** thành một phần trăm “toàn bộ Thần số học đã hoàn thành”:
 
 | Chiều | Trạng thái |
 |---|---|
-| `FORMULA_PROFILE_CONSISTENT` | Đạt cho `pythagorean-vn-v1` `1.2.0`. Số lõi, lưới đếm, chu kỳ ngày đang xem, đỉnh và thử thách không đổi phép. |
-| `FORMULA_SOURCE_VERIFIED` | Chưa đạt. Hồ sơ vẫn là quy ước sản phẩm. Chưa đối chiếu ấn bản sách. |
-| `CONTENT_REVIEWED` | Đạt cho catalog `1.2.0` ở mức review mô hình. Không phải chuyên gia, không phải sách. |
-| `VISUALIZATION_COMPLETE` | Đạt cho các hình trong bảng dưới. |
-| `INTERPRETATION_COMPLETE` | Chỉ đạt ở ô có bài đã review. Ô withheld không được tính là đã có lời. |
-| `PRODUCT_FEATURE_COMPLETE` | Đạt cho hành trình đọc báo cáo ở mục Định nghĩa xong. Không đạt cho toàn bộ thần số học. |
-| `PRODUCTION_READY` | Chưa đạt. Chưa staging, chưa duyệt phát hành, limiter một process. |
+| `CALCULATION_FEATURE_COMPLETE` | Đạt cho 7 core metrics, grid/cycles/pinnacles/challenges và name/combined counts đã triển khai |
+| `FORMULA_PROFILE_CONSISTENT` | Đạt cho `pythagorean-vn-v1` `1.2.0`; các fixture hiện hữu không đổi số |
+| `FORMULA_SOURCE_VERIFIED` | **Chưa đạt**: trang web Decoz chỉ `source_read`; ấn bản sách, chuyên gia chưa đối chiếu |
+| `VISUALIZATION_COMPLETE` | Đạt cho diagram, timeline, grids, cycle bands và report scope đã chốt |
+| `CONTENT_REVIEWED` | Đạt mức editorial/model review cho **154** bài catalog 1.2.0; không là expert/book signoff |
+| `INTERPRETATION_COMPLETE` | **Một phần**: Challenge 0, 33, grid/relationships symbolic depth còn withheld/undefined |
+| `V1_FEATURE_COMPLETE` | Đạt cho named calculator/report interactions, không phải mọi mục trong inventory 90 feature |
+| `RELEASE_GATES_PASSED` / `PRODUCTION_READY` | **Chưa đạt**: live staging, shared proxy, rollback, release owner approval chưa có |
 
 ## Từng năng lực
 
@@ -48,13 +51,11 @@ Các nhãn dưới đây không cộng thành một phần trăm “hệ thống
 - Tương hợp, lưu lịch sử, đặt tên trẻ, kết luận nghề, tiền hoặc sức khỏe.
 - Xác minh sách hoặc chuyên gia.
 
-## Kiểm thử local ngày 2026-10-13
+## Test, review và evidence ở baseline mới
 
-- `npm run test:ci` trong `backend`: đạt sau khi thêm `viewDate`. Coverage floor giữ.
-- `npm run test:ci`, `npm run lint` và `npm run build` trong `frontend`: đạt sau vòng sửa. `NumerologyPage.test.jsx` có 40 test.
-- Playwright `e2e/numerology.spec.js`: 19 đạt sau vòng sửa, gồm 320px, 390px và bản in.
-- Push `5802da8`: GitHub Actions run `38430068692` đạt backend, frontend và e2e.
-- Pull request run `38430111858` đạt backend và frontend. e2e trượt một lần ở `chart.spec.js`: combobox giờ sinh còn giá trị `1` vì URL đã về `/` trước khi React vẽ lại form. Test chờ form về giờ `1` rồi mới chọn giờ `10`.
-- Chưa staging.
+- Main `ed31ad1`: [GitHub CI 38438302551](https://github.com/hptbee/b3_tuvi/actions/runs/38438302551) backend/frontend/e2e **PASS**.
+- Nhánh visual pass PR #24: frontend test:ci **56 passed**, Playwright Numerology **19 passed**, lint/build PASS. Các hình `screenshots/after/desktop-pinnacles.png`, `desktop-birth-grid.png`, `desktop-combined.png`, `desktop-overview.png`, `mobile-320-pinnacles.png`, `print-pinnacles.png` là evidence visual.
+- Các lỗi cycle trước sinh, print opt-in, Challenge 0 status, focus navigation và chart hour state đã được giải quyết trong đợt PR. Chưa có live staging, reverse-proxy multi-instance validation, comprehensive WCAG hoặc Safari/Firefox.
+- Số test/các run ở SHA `5802da8` và PR #26 trong báo cáo 2026-10-13 là **lịch sử của stacked branch**, không thay kết quả main mới.
 
 Review biên tập catalog 1.2.0: Grok 4.7 High `bc-6cf43e1a-4ac7-5421-b817-a9585126aa26`, GPT 5.6 Terra Medium `bc-2fe196a2-a651-53cc-a48a-dfb7a60a24e9`. Review mã tích hợp: `bc-d540b6fc-df93-56d0-89aa-4c4999573732`. Bốn lỗi đã sửa: ngày xem trước ngày sinh, tên hiện khi in dù chưa chọn, câu “đang chờ” cho thử thách 0, và focus bị kéo lên đầu khi chọn năm.
