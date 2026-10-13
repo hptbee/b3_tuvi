@@ -1,6 +1,10 @@
 # Thần Số Học — trạng thái triển khai
 
-Snapshot phát triển ngày **2026-10-13**. Đã có **MVP số học thử nghiệm** tại `/than-so-hoc`, gồm engine → API → landing/form/kết quả → tests. Chưa phải phát hành production hoặc V1 đầy đủ trong [roadmap A–Z](../ROADMAP_NUMEROLOGY_A_TO_Z.md).
+> **Rebaseline:** 2026-10-14 · baseline `main ed31ad1cae7b2411029cccbe8c87da533a996800`.
+> **Current:** `V1_FEATURE_COMPLETE` cho máy tính và báo cáo nhiều chương; `FORMULA_PROFILE_CONSISTENT` với profile `pythagorean-vn-v1` `1.2.0`; content catalog `1.2.0`. **Không** `FORMULA_SOURCE_VERIFIED`, **không** `PRODUCTION_READY`.
+> **Merged:** PR #18 và #20–#24. **CI:** [main backend/frontend/e2e PASS](https://github.com/hptbee/b3_tuvi/actions/runs/38438302551). Không triển khai staging hoặc production trong các PR này.
+
+Tài liệu này ghi **runtime hiện hành**, còn các commit ban đầu và phép đo ở SHA cũ là *historical evidence*. Roadmap cập nhật tại [ROADMAP_NUMEROLOGY_A_TO_Z](../ROADMAP_NUMEROLOGY_A_TO_Z.md) §12.9, §15–18.
 
 ## Năng lực đang hoạt động
 
@@ -13,8 +17,8 @@ Snapshot phát triển ngày **2026-10-13**. Đã có **MVP số học thử ngh
 | Trace | Thành phần phép cộng, từng bước rút gọn, master/root; tên chuẩn hóa và giá trị từng chữ |
 | Trạng thái thiếu dữ liệu | Không có tên → bốn chỉ số tên unavailable; thiếu nguyên âm/phụ âm → chỉ nhóm tương ứng unavailable |
 | API | `GET /api/numerology/profiles`, `GET /api/numerology/meanings/:metricId/:value`, `POST /api/numerology/calculate`; typed errors, scoped parser boundary, schema/profile/referenceDate |
-| UI | Landing tím với menu trên cùng; validation/focus, loading, retry, input snapshot, abort/sequence guard, trace bằng bàn phím và mobile; biểu đồ ngày sinh, chu kỳ và bốn giai đoạn đỉnh cao/thử thách; xuất/nhập JSON và in A4 |
-| Riêng tư | POST, no-store kể cả lỗi/preflight/429; không thêm persistence/URL/browser storage; không log tên/body/query; họ tên chỉ vào JSON/bản in khi người dùng chọn |
+| UI | Báo cáo nhiều chương: overview, core metrics + inline readings, Birth Grid 8 tuyến có nét, Name Chart, Combined Chart 3×3, kim tự tháp P1–P4 có cạnh, challenge age track, 9-year/12-month cycle, phép tính, JSON/import/print và mobile 320/390 |
+| Riêng tư | POST, no-store kể cả lỗi/preflight/429; không thêm persistence/URL/browser storage; không log tên/body/query; họ tên chỉ vào JSON/bản in khi opt-in; import chỉ đưa input sang backend để tính lại |
 
 Frontend chỉ hiển thị kết quả server, không copy công thức. Engine thuần nhận ngày tham chiếu được inject; API chụp ngày một lần theo `Asia/Ho_Chi_Minh`. Không thay công thức Tử Vi, không migration SQLite, không thêm dependency hoặc tài khoản.
 
@@ -31,31 +35,26 @@ Ví dụ kiểm chứng: `15/6/1990`, `Nguyễn Văn An` → `NGUYEN VAN AN`; th
 
 ## Kiểm chứng phát triển
 
-Các lệnh chạy từ repository root, trừ Playwright từ `frontend`:
+### Baseline hiện hành
+
+- `main ed31ad1` — [GitHub Actions 38438302551](https://github.com/hptbee/b3_tuvi/actions/runs/38438302551): **backend PASS, frontend PASS, e2e PASS**. Bằng chứng CI này không thay staging.
+- PR #24 tích hợp visual acceptance: tháp đỉnh có cạnh, trục thử thách, grid chọn tuyến, combined chart, 320px/390px/A4 screenshots tại [screenshots/after](implementation/screenshots/after/).
+- Local validation trong nhánh báo cáo: frontend test:ci **56 tests** tại visual pass; Playwright Numerology **19 passed**; build/lint passed (những số này là bằng chứng của đợt thực thi, không tuyên bố là số test toàn repository tại SHA khác).
+- Các bug đã xử lý trong chuỗi PR: click cycle trước ngày sinh, print name opt-in, Challenge 0 copy, keyboard focus, chart hour navigation race.
+
+### Các lệnh xác nhận chuẩn
 
 ```bash
 npm run test:ci --prefix backend
 npm run test:ci --prefix frontend
 npm run lint --prefix frontend
 npm run build --prefix frontend
-cd frontend
-npm run test:e2e
+npm run test:e2e --prefix frontend
 ```
 
-Trong cloud này Chromium hệ thống `/usr/bin/chromium` được chọn bởi runtime config ignored `frontend/.b3/playwright.cloud.mjs`: từ `frontend`, chạy `npx playwright test --config .b3/playwright.cloud.mjs`. CI và máy cài bundled Chromium vẫn dùng `playwright.config.js` đã commit. Không cần commit config riêng của máy.
+Tại thời điểm này **chưa có bằng chứng** live staging, Safari/Firefox, comprehensive WCAG audit hoặc proxy multi-instance deployment. Profile source `product_specification_only`; Decoz `source_read` không phải authenticated book edition. Dữ liệu ngày sinh/tên gửi qua mạng đến backend để tính, dù server không persist.
 
-Các số 79.97% lines, 20 test frontend và 28 E2E thuộc snapshot cũ hơn HEAD `e4f06aa`. Không dùng chúng làm kết quả hiện tại.
-
-Bằng chứng chạy lại trên `e4f06aa` ngày 2026-10-13, chi tiết ở [TEST_COVERAGE_REPORT.md](audits/TEST_COVERAGE_REPORT.md):
-
-- `npm run test:ci --prefix backend` đạt. Toàn backend 82.6% lines, 87.41% branches. Module `backend/src/numerology` 100% lines, 98.44% branches.
-- `npm run test:ci --prefix frontend` đạt: 42 test. Module `frontend/src/numerology` 100% lines, 93.10% branches. Coverage toàn frontend thấp hơn vì các màn Tử Vi không nằm trong bộ vitest này.
-- `npm run lint --prefix frontend` và `npm run build --prefix frontend` đạt.
-- Playwright bằng `frontend/playwright.config.js`, chỉ file `e2e/numerology.spec.js`: 17/17. Đợt này không chạy đủ `npm run test:e2e`, nên không kết luận các spec Tử Vi.
-
-Đây là kết quả local, không phải trạng thái live GitHub Actions. Chưa kiểm chứng staging/production, Safari/Firefox hoặc audit WCAG toàn diện. Probe keyboard/focus và responsive không thay thế audit accessibility đầy đủ. `no-store`/không persist không loại bỏ việc input được gửi qua mạng để backend tính.
-
-## Commit triển khai
+## Commit triển khai ban đầu (historical)
 
 | Task | Commit | Phạm vi |
 |---|---|---|
@@ -67,10 +66,18 @@ Bằng chứng chạy lại trên `e4f06aa` ngày 2026-10-13, chi tiết ở [TE
 
 T005 thêm tài liệu này và integrated E2E; tìm commit bằng lịch sử Git. Checkpoint autodev cục bộ nằm ở `.b3/autodev/`, không commit cùng sản phẩm. Autodev tạo task commits cục bộ; push/merge/deploy là hành động riêng.
 
-## Chưa triển khai và trình tự tiếp theo
+## Phần còn thiếu và trình tự tiếp theo
 
-1. **Nguồn/công thức:** profile 1.2.0 khớp fixture của chính nó. Kiểm toán đã đọc các trang công thức Decoz và ghi conflict (Đường đời mọi chữ số, đỉnh không giữ master ở thành phần, Y phụ âm). Chưa có ấn bản sách. Nếu đổi quy ước thì tạo profile/version và fixture mới; không sửa số của 1.2.0.
-2. **Nội dung:** catalog `1.2.0` đã qua review biên tập cho 102 mục cũ cộng bài đỉnh và thử thách 1–8. Không có lời 33 hoặc thử thách 0. Review không phải xác minh chuyên gia hoặc đối chiếu sách.
-3. **Báo cáo:** sơ đồ bốn đỉnh có cạnh đúng phép tính (đỉnh 4 nối tháng và năm), trục tuổi thử thách theo số năm của giai đoạn đã kết thúc, lưới ngày sinh có nét tuyến đang chọn, biểu đồ tên, lưới ghép ngày sinh và tên, chín năm, mười hai tháng, mối nối đúng phép tính, xuất JSON, nhập JSON (tính lại) và in A4 đã có trên nhánh báo cáo. Họ tên ra khỏi tệp và bản in trừ khi người dùng chọn. Năm hoặc tháng trước ngày sinh không gửi ngày xem.
-4. **Release:** limiter trong một process, metadata/`noindex` cho `/la-so`, và checklist staging nằm ở [RELEASE_READINESS.md](RELEASE_READINESS.md). Chưa diễn tập staging, chưa phê duyệt phát hành, và limiter một process không thay proxy khi có nhiều instance.
-6. **Tùy chọn:** nhiều profile, AI, cross-browser; không bắt buộc để chạy calculator hiện tại.
+| Track | Phạm vi | Trạng thái |
+|---|---|---|
+| Knowledge K0 | Hidden Passion, Karmic Lessons, Balance, Rational Thought, Bridge: source, spec, tie/master/fixture/compatibility | `REQUIRES_SPEC`; chưa có API |
+| Content K1 | Master 33 và Challenge 0 | `WITHHELD`; không fallback 33→6 hoặc 0→9 |
+| Content K2 | Độ sâu 154 bài, grid/arrow/name/combined chart semantics theo trường phái | `PARTIAL`; tiếp tục research/editorial |
+| Synthesis K3 | Quan hệ đa chỉ số có rule registry, không tự gán compatibility score | `NOT IMPLEMENTED` ở mức luận biểu tượng |
+| UX K4 | Progressive interpretation, chapter links, PDF page breaks | `FOLLOW-UP` |
+| Release R0 | Live staging, shared proxy limiter, rollback rehearsal, approval | `NOT READY` |
+
+Xem [PRODUCT_COMPLETION_ROADMAP](product-gap/PRODUCT_COMPLETION_ROADMAP.md) và [roadmap chính §18](../ROADMAP_NUMEROLOGY_A_TO_Z.md) cho `NUM-K001–009` / `NUM-R001–005`. Những giai đoạn khác như AI narration, alternate Decoz profiles, compatibility, baby-name recommendations hoặc user history không là release scope hiện tại.
+
+**Kết luận:** Không cần làm lại N0–N4 hoặc mở lại product gap audit; nên dùng một AutoDev scoped cho Knowledge Expansion nếu muốn tiến về nội dung sâu hơn. Hoặc đi track Release Validation riêng khi muốn phát hành công khai. Không auto merge/deploy.
+
