@@ -23,7 +23,7 @@ Frontend chỉ hiển thị kết quả server, không copy công thức. Engine
 - Đường đời cộng tất cả chữ số ngày sinh, khác phương pháp rút gọn từng thành phần.
 - Giữ 11/22/33 cho Đường đời, Ngày sinh, Biểu đạt, Linh hồn, Nhân cách, Trưởng thành; Thái độ về 1–9. Master vẫn có `rootValue`.
 - Tên: NFC/NFD tương đương, accent whitelist Latin/tiếng Việt, Đ → D, A–Z → 1–9, nguyên âm AEIOU, Y là phụ âm. Cho phép khoảng trắng/gạch nối/apostrophe như spec; từ chối ký tự ẩn, unsupported script/mark/ligature thay vì bỏ âm thầm. Tên rỗng/whitespace thường là không có tên.
-- `status=experimental`, `sourceStatus=product_specification_only`. Catalog `1.0.0` xuất lời `experimental_editorial` cho bảy chỉ số cốt lõi và ba chu kỳ (102 mục). Đỉnh cao và thử thách giữ `meaning=null`, `meaningStatus=withheld`, lý do `content_not_in_scope`. Số 33 không có bài.
+- `status=experimental`, `sourceStatus=product_specification_only`. Catalog `1.1.0` xuất lời `experimental_editorial` cho bảy chỉ số cốt lõi và ba chu kỳ (102 mục). Mỗi mục có đoạn riêng theo chỉ số, cộng một motif số ngắn. Đỉnh cao và thử thách giữ `meaning=null`, lý do `content_not_in_scope`. Số 33 không có bài. Review: [CONTENT_1_1_REVIEW.md](reviews/CONTENT_1_1_REVIEW.md).
 
 [Formula spec](FORMULA_SPEC.md), [decision register](DECISIONS.md), [source registry](SOURCE_REGISTRY.md), [fixture handbook](FIXTURES.md) và [API contract](API_CONTRACT.md) ghi quy ước thực tế. Fixture số học được tính độc lập với mã engine. Chúng kiểm chứng đúng theo quy ước sản phẩm, không chứng minh một ấn bản sách đã được đối chiếu. Kiểm toán 2026-10-13 đọc được các trang công thức trên worldnumerology.com; bậc là `source_read`, không phải `edition_verified`. Xem [báo cáo kiểm toán](audits/DEEP_AUDIT_REPORT.md).
 

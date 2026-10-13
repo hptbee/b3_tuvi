@@ -1,6 +1,23 @@
 # Ma trận xác minh công thức Thần Số Học
 
-Ngày kiểm: 2026-10-13. Profile `pythagorean-vn-v1` `1.2.0`. Nhãn mô tả sự khớp với một quy ước đã nêu, không phải bằng chứng khoa học rằng thần số dự đoán tính cách hay sự kiện.
+Ngày kiểm: 2026-10-13. Bổ sung bốn trục ngày 2026-10-13 sau kiểm toán, không đổi phép tính. Profile `pythagorean-vn-v1` `1.2.0`. Nhãn mô tả sự khớp với một quy ước đã nêu, không phải bằng chứng khoa học rằng thần số dự đoán tính cách hay sự kiện.
+
+## Bốn trục, tách riêng
+
+Nhãn chính ở bảng phía dưới là nhãn gộp của lần kiểm toán đầu. Từ bản này, mỗi chỉ số còn được đọc theo bốn trục. Không dùng một trục để nâng trục khác.
+
+| Trục | Giá trị dùng trong hồ sơ này |
+|---|---|
+| `implementationStatus` | `IMPLEMENTATION_CORRECT_FOR_PROFILE` cho mọi phép đã triển khai. Không có `IMPLEMENTATION_BUG` so với spec 1.2.0. Lời số 33 và lời đỉnh/thử thách là `NOT_IMPLEMENTED`. |
+| `sourceComparisonStatus` | `SOURCE_VARIANT` khi một trang đã đọc ra số khác trên một ví dụ cụ thể. `ALIGNED_WITH_READ_PAGE` khi ví dụ đã đọc cùng kết quả. `NOT_COMPARED` khi chưa có trang đọc cho đúng phép đó. |
+| `editionVerificationStatus` | `edition_not_verified` cho toàn bộ. Trang web không được nâng thành ấn bản sách. |
+| `expertVerificationStatus` | `expert_not_verified` cho toàn bộ. Không có chữ ký chuyên gia. |
+
+`sourceComparisonStatus` theo từng nhóm:
+
+- Đường đời, đầu vào đỉnh khi tháng/ngày là master, cách cộng tên một lần, Y luôn là phụ âm, thời lượng thử thách gắn vào kỳ đỉnh: `SOURCE_VARIANT`.
+- Tuổi đỉnh `36` trừ gốc, giá trị thử thách, chu kỳ cá nhân về 1–9 theo năm lịch: `ALIGNED_WITH_READ_PAGE` với các URL trong `SOURCE_RESEARCH_REPORT.md`.
+- Biểu đồ tám tuyến và quy ước 29/02: `NOT_COMPARED` với các trang đã đọc.
 
 ## Quy tắc chọn nhãn chính
 
