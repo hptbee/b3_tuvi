@@ -155,10 +155,10 @@ function evaluateLeaf(expr, chart) {
         if (!hoaId || !sourceId) return trace('not_implemented', 'tu_hoa', { reason: 'unknown_star' });
         const hoa = (palace.stars || []).find((star) => star.starId === hoaId);
         if (!hoa) return trace('not_satisfied', 'tu_hoa', { reason: 'hoa_absent' });
-        if (!hoa.association || hoa.association.type !== 'tu_hoa') {
+        if (!hoa.association || hoa.association.type !== 'tu_hoa' || hoa.association.status !== 'same_palace') {
             return trace('unknown', 'tu_hoa', { reason: 'association_not_recorded' });
         }
-        const linked = hoa.association.sourceStarId === sourceId || hoa.association.sourceName === expr.source;
+        const linked = hoa.association.sourceStarId === sourceId;
         return trace(linked ? 'satisfied' : 'not_satisfied', 'tu_hoa');
     }
     const names = expr.op === 'brightness' || expr.op === 'star_present' || expr.op === 'star_absent' || expr.op === 'nhi_hop'

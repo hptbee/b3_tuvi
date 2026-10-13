@@ -91,6 +91,22 @@ assert.strictEqual(evaluateCondition({
     item: { op: 'brightness', target: 'menh', star: 'Tử Vi', marks: ['M'] }
 }, noBrightness).status, 'unknown');
 assert.strictEqual(evaluateCondition({ op: 'tu_hoa', target: 'menh', hoa: 'Hóa Kỵ', source: 'Thiên Tướng' }, base).status, 'not_satisfied');
+const unresolvedBoxes = {};
+for (let i = 1; i <= 12; i += 1) {
+    unresolvedBoxes[i] = {
+        chiName: ['', 'Tí', 'Sửu', 'Dần', 'Mão', 'Thìn', 'Tị', 'Ngọ', 'Mùi', 'Thân', 'Dậu', 'Tuất', 'Hợi'][i],
+        cungName: i === 3 ? 'MỆNH' : 'PHÚC ĐỨC',
+        majorStars: [],
+        goodStars: [],
+        badStars: []
+    };
+}
+unresolvedBoxes[3].goodStars = ['Hóa Khoa'];
+const unresolved = normalizeChart({
+    tuviInfo: { boxes: unresolvedBoxes, menh: 3, than: null },
+    lunarInfo: { canIndex: 1, chiIndex: 1 }
+});
+assert.strictEqual(evaluateCondition({ op: 'tu_hoa', target: 'menh', hoa: 'Hóa Khoa', source: 'Tử Vi' }, unresolved).status, 'unknown');
 
 const layers = evaluateLayers({
     runtimeMatch: 'matched',
