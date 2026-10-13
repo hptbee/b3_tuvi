@@ -1,0 +1,17 @@
+# Numerology API — numeric MVP schema 1.0.0
+
+Implemented endpoints: `GET /api/numerology/profiles` and `POST /api/numerology/calculate`. The profile is experimental product-spec arithmetic; personal meanings are null/withheld. There is no catalog/meanings endpoint, persistence, AI or V1 advanced engine in this release.
+
+POST JSON:
+
+```json
+{"birthDate":{"year":1990,"month":6,"day":15},"fullName":"Nguyễn Văn An","profileId":"pythagorean-vn-v1","profileVersion":"1.0.0","locale":"vi-VN"}
+```
+
+Only birthDate is required. FullName is optional; omitted/blank gives unavailable name metrics. The other fields select the currently sole allowlisted profile/version/locale. Integers are required for year/month/day. No client-supplied results, normalizedName, referenceDate, targetDate, hour or gender. Future birth dates rejected against a reference date captured once in Asia/Ho_Chi_Minh, returned in the response and injected into the pure engine.
+
+Success returns `ok`, schemaVersion, experimental profile metadata, referenceDate, `contentVersion:null`, seven metrics, normalized `nameAnalysis` for the user's calculation trace, capability states and policy warnings. Each available metric carries rawTotal, parts, reduction steps, rootValue and master status. No raw entered name is echoed; normalized name and numeric traces are private response data, not public catalog data.
+
+Errors: `{ok:false,error:{code,message,fields:[{path,code,message}]}}`; 400 body/date/name/locale/client-result/JSON or corrupt/truncated/dictionary-dependent compressed body (`INVALID_BODY_ENCODING`), 404 unknown profile/version, 413 existing 256kb parser limit, 415 unsupported charset (`UNSUPPORTED_CHARSET`) or content encoding (`UNSUPPORTED_ENCODING`), 500 generic calculation failure. Parser errors use fixed messages and empty fields; internal error details are withheld. Numerology error translation is scoped so existing Tu Vi error shapes remain unchanged.
+
+All numerology responses, including parser errors and CORS OPTIONS preflight responses, use `Cache-Control:no-store`. The existing logger records method/path without query/body; no name/date persistence is added. POST results must not be copied into URLs or shared browser storage by frontend. Production rate limiting, source-reviewed content and deployment are separate future release gates; this development implementation does not claim production hardening.
