@@ -63,6 +63,20 @@ export default function NumerologyPage() {
     if (request.status === 'ready' && focusResult.current) resultHeading.current?.focus();
     if (request.status === 'error' && !request.error.fields.length) errorBox.current?.focus();
   }, [request]);
+  useEffect(() => {
+    if (request.status !== 'ready' || typeof IntersectionObserver === 'undefined') return undefined;
+    const nav = document.querySelector('.num-toc');
+    if (!nav) return undefined;
+    const links = [...nav.querySelectorAll('a[href^="#"]')];
+    const sections = links.map(link => document.getElementById(link.getAttribute('href').slice(1))).filter(Boolean);
+    const mark = id => links.forEach(link => (link.getAttribute('href') === `#${id}` ? link.setAttribute('aria-current', 'true') : link.removeAttribute('aria-current')));
+    const observer = new IntersectionObserver(entries => {
+      const visible = entries.filter(entry => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visible) mark(visible.target.id);
+    }, { rootMargin: '-15% 0px -55% 0px', threshold: [0.15, 0.4, 0.75] });
+    sections.forEach(section => observer.observe(section));
+    return () => observer.disconnect();
+  }, [request]);
   const currentPayload = payload(draft);
   const sameInput = request.input && JSON.stringify(request.input) === JSON.stringify(currentPayload);
   const fields = request.status === 'error' && sameInput ? request.error.fields : [];
@@ -178,14 +192,27 @@ export default function NumerologyPage() {
       </nav>
       <section className="num-chapter num-overview" id="tong-quan" aria-labelledby="num-overview-heading">
         <h3 id="num-overview-heading">Tổng quan</h3>
-        <ul>
-          <li>Ngày sinh {request.input.birthDate.day}/{request.input.birthDate.month}/{request.input.birthDate.year}. Ngày xem {result.cycles.targetDate.split('-').reverse().join('/')}.</li>
-          <li>{request.input.fullName ? `Tên đã nhập được chuẩn hóa khi tính các chỉ số từ tên.` : 'Chưa nhập tên. Nhóm chỉ số từ tên không được tính.'}</li>
-          <li>Đường đời {result.metrics.lifePath.value}{result.metrics.lifePath.isMaster ? ` (số đặc biệt, gốc ${result.metrics.lifePath.rootValue})` : ''}. Ngày sinh {result.metrics.birthday.value}. Thái độ {result.metrics.attitude.value}.</li>
-          <li>{result.metrics.expression.status === 'available' ? `Biểu đạt ${result.metrics.expression.value}. Linh hồn ${result.metrics.soulUrge.value}. Nhân cách ${result.metrics.personality.value}. Trưởng thành ${result.metrics.maturity.value}.` : 'Biểu đạt, Linh hồn, Nhân cách và Trưởng thành chưa có vì thiếu tên.'}</li>
-          <li>Đỉnh đang diễn ra: {result.pinnacles.periods.find(period => period.active).pinnacle.value}. Thử thách cùng giai đoạn: {result.pinnacles.periods.find(period => period.active).challenge.value}. Năm cá nhân: {result.cycles.personalYear.value}.</li>
-          <li>Quy ước {result.profile.id} {result.profile.version}. Các con số là quy ước biểu tượng của hồ sơ này, không phải đánh giá khoa học hay lời đã được chuyên gia xác minh.</li>
-        </ul>
+        {(() => {
+          const active = result.pinnacles.periods.find(period => period.active);
+          const birthLabel = `${request.input.birthDate.day}/${request.input.birthDate.month}/${request.input.birthDate.year}`;
+          const facts = [
+            ['Đường đời', result.metrics.lifePath.value, result.metrics.lifePath.isMaster ? `Số đặc biệt, gốc ${result.metrics.lifePath.rootValue}` : 'Từ ngày sinh'],
+            ['Ngày sinh', result.metrics.birthday.value, 'Từ số ngày'],
+            ['Thái độ', result.metrics.attitude.value, 'Từ ngày và tháng'],
+            ['Năm cá nhân', result.cycles.personalYear.value, `Ngày xem ${result.cycles.targetDate.split('-').reverse().join('/')}`],
+            ['Đỉnh đang diễn ra', active.pinnacle.value, 'Cùng cửa sổ tuổi với thử thách'],
+            ['Thử thách cùng giai đoạn', active.challenge.value, active.challenge.value === 0 ? 'Hiệu 0, không đổi thành 9' : 'Hiệu tuyệt đối']
+          ];
+          const named = result.metrics.expression.status === 'available';
+          return <>
+            <p className="num-dash-identity">{birthLabel}{request.input.fullName ? ' · Tên đã nhập được chuẩn hóa khi tính các chỉ số từ tên.' : ' · Chưa nhập tên. Nhóm chỉ số từ tên không được tính.'}</p>
+            <div className="num-dash-grid">
+              {facts.map(([label, value, note]) => <article key={label}><span>{label}</span><strong>{value}</strong><small>{note}</small></article>)}
+              {named ? [['Biểu đạt', result.metrics.expression.value], ['Linh hồn', result.metrics.soulUrge.value], ['Nhân cách', result.metrics.personality.value], ['Trưởng thành', result.metrics.maturity.value]].map(([label, value]) => <article key={label}><span>{label}</span><strong>{value}</strong><small>Từ tên</small></article>) : <article className="num-dash-missing"><span>Chỉ số từ tên</span><strong>—</strong><small>Biểu đạt, Linh hồn, Nhân cách và Trưởng thành chưa có vì thiếu tên.</small></article>}
+            </div>
+            <p className="num-disclaimer">Quy ước {result.profile.id} {result.profile.version}. Các con số là quy ước biểu tượng của hồ sơ này, không phải đánh giá khoa học hay lời đã được chuyên gia xác minh.</p>
+          </>;
+        })()}
       </section>
       <div className="num-metric-grid" id="chi-so-cot-loi">{METRIC_IDS.map(id => <MetricSection key={id} id={id} metric={result.metrics[id]} />)}</div>
       {result.nameAnalysis && <details className={includeName ? 'num-name-trace' : 'num-name-trace num-omit-print'}><summary>Tên được chuyển sang chữ số như thế nào?</summary><p>Tên chuẩn hóa: <strong>{result.nameAnalysis.normalized}</strong></p><p>Đ → D · bỏ dấu · A, E, I, O, U là nguyên âm · Y là phụ âm.</p><div className="num-letter-list">{result.nameAnalysis.letters.map((item, index) => <span key={index} aria-label={`${item.letter} bằng ${item.value}`}>{item.letter}<b>{item.value}</b></span>)}</div></details>}

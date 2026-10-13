@@ -74,6 +74,33 @@ it('submits date-only without a name and explains unavailable metrics', async ()
   expect(screen.getByText(/pythagorean-vn-v1 · 1\.2\.0/)).toBeVisible();
 });
 
+it('draws pinnacle edges, the challenge timeline, and the selected birth-grid line', async () => {
+  vi.stubGlobal('fetch', vi.fn(async () => success(result(4, 'AN'))));
+  const user = userEvent.setup();
+  render(<NumerologyPage />);
+  await fillDate(user);
+  await user.type(screen.getByRole('textbox', { name: /Họ tên khai sinh/ }), 'An');
+  await user.click(screen.getByRole('button', { name: 'Xem kết quả' }));
+  await screen.findByRole('heading', { name: 'Biểu đồ ngày sinh' });
+  expect(document.querySelector('[data-edge="month-p4"]')).toBeTruthy();
+  expect(document.querySelector('[data-edge="year-p4"]')).toBeTruthy();
+  expect(document.querySelector('[data-edge="p1-p3"]')).toBeTruthy();
+  expect(document.querySelector('[data-edge="p3-p4"]')).toBeNull();
+  expect(document.querySelector('.num-diagram svg')).toHaveAttribute('preserveAspectRatio', 'none');
+  expect(screen.getByRole('group', { name: /Trục tuổi bốn thử thách/ })).toHaveTextContent('Hiệu 0, không đổi thành 9');
+  const track = [...document.querySelectorAll('.num-age-track span')];
+  expect(track).toHaveLength(4);
+  expect(Number(track[0].style.flexGrow)).toBeGreaterThan(Number(track[1].style.flexGrow));
+  expect(track[3]).toHaveClass('is-open');
+  expect(screen.getByRole('table', { name: 'Nguồn của từng chữ số' })).toBeVisible();
+  expect(document.querySelector('.num-dual.is-both')).toBeTruthy();
+  await user.click(screen.getByRole('button', { name: /1 – 5 – 9/ }));
+  expect(document.querySelector('.num-line-overlay')).toHaveAttribute('preserveAspectRatio', 'none');
+  expect(document.querySelector('.num-line-overlay polyline')).toHaveClass('is-present');
+  await user.click(screen.getByRole('button', { name: /1 – 2 – 3/ }));
+  expect(document.querySelector('.num-line-overlay polyline')).toHaveClass('is-partial');
+});
+
 it('retains the submitted snapshot while the form is edited', async () => {
   vi.stubGlobal('fetch', vi.fn(async () => success(result(4, 'AN'))));
   const user = userEvent.setup();

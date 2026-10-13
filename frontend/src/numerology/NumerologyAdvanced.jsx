@@ -6,17 +6,14 @@ const STATES = { present: 'Đủ 3 số', partial: 'Có một phần', absent: '
 const PRESENCE = { both: 'Có trong ngày sinh và tên', birth: 'Chỉ có trong ngày sinh', name: 'Chỉ có trong tên', neither: 'Không có trong ngày sinh lẫn tên' };
 const DATE_METRICS = [['lifePath', 'Đường đời'], ['birthday', 'Ngày sinh'], ['attitude', 'Thái độ']];
 const NAME_METRICS = [['expression', 'Biểu đạt'], ['soulUrge', 'Linh hồn'], ['personality', 'Nhân cách'], ['maturity', 'Trưởng thành']];
+const CELL = { 3: [0.5, 0.5], 6: [1.5, 0.5], 9: [2.5, 0.5], 2: [0.5, 1.5], 5: [1.5, 1.5], 8: [2.5, 1.5], 1: [0.5, 2.5], 4: [1.5, 2.5], 7: [2.5, 2.5] };
+const NODES = { p3: [50, 13], p1: [28, 34], p2: [72, 34], month: [16, 58], day: [50, 58], year: [84, 58], p4: [50, 86] };
+const EDGES = [['month', 'p1'], ['day', 'p1'], ['day', 'p2'], ['year', 'p2'], ['p1', 'p3'], ['p2', 'p3'], ['month', 'p4'], ['year', 'p4']];
 
 const format = iso => iso.split('-').reverse().join('/');
-function PeakButton({ period, index, selected, onSelect, edge }) {
-  return <button type="button" className={selected ? 'num-peak is-selected' : 'num-peak'} aria-pressed={selected} onClick={() => onSelect(period.id)}>
-    <span>Đỉnh {index + 1}</span>
-    <strong>{period.pinnacle.value}</strong>
-    {period.pinnacle.isMaster && <small>Số đặc biệt · Gốc {period.pinnacle.rootValue}</small>}
-    <small>{edge}</small>
-    {period.active && <small>Đang diễn ra</small>}
-  </button>;
-}
+const yearsOf = period => period.endDate ? `${period.startDate.slice(0, 4)}–${period.endDate.slice(0, 4)}` : `Từ ${period.startDate.slice(0, 4)}`;
+const closedYears = periods => periods.reduce((sum, period) => sum + (period.endAgeInclusive === null ? 0 : period.endAgeInclusive - period.startAgeInclusive + 1), 0);
+const trackGrow = (period, total) => (period.endAgeInclusive === null ? Math.max(1, total * 0.22) : period.endAgeInclusive - period.startAgeInclusive + 1);
 
 export default function NumerologyAdvanced({ birthGrid, nameChart, combinedChart, cycles, pinnacles, metrics, onViewDate, includeName = false }) {
   const [lineId, setLineId] = useState(null);
@@ -24,17 +21,35 @@ export default function NumerologyAdvanced({ birthGrid, nameChart, combinedChart
   const selectedLine = birthGrid.lines.find(line => line.id === lineId);
   const selected = pinnacles.periods.find(period => period.id === periodId) || pinnacles.periods.find(period => period.active);
   const highlighted = new Set(selectedLine?.digits || []);
+  const month = pinnacles.components.month.value;
+  const day = pinnacles.components.day.value;
+  const year = pinnacles.components.year.value;
+  const nodeText = {
+    month: ['Tháng đã rút gọn', month, 'Master tắt'],
+    day: ['Ngày đã rút gọn', day, 'Master tắt'],
+    year: ['Năm đã rút gọn', year, 'Master tắt'],
+    p1: ['Đỉnh 1', pinnacles.periods[0].pinnacle.value, 'Tháng + ngày'],
+    p2: ['Đỉnh 2', pinnacles.periods[1].pinnacle.value, 'Ngày + năm'],
+    p3: ['Đỉnh 3', pinnacles.periods[2].pinnacle.value, 'Đỉnh 1 + đỉnh 2'],
+    p4: ['Đỉnh 4', pinnacles.periods[3].pinnacle.value, 'Tháng + năm']
+  };
 
   return <div className="num-advanced">
     <section className="num-chapter" id="bieu-do-ngay-sinh" aria-labelledby="num-grid-heading">
       <div className="section-kicker">NHỮNG CHỮ SỐ TRONG NGÀY SINH</div><h2 id="num-grid-heading">Biểu đồ ngày sinh</h2>
       <p>Mỗi ô cho biết số lần một chữ số xuất hiện. Ô không có số chỉ mô tả ngày sinh, không phải đánh giá năng lực của bạn. Số lặp chỉ là số lần đếm được.</p>
       <div className="num-grid-layout"><div>
-        <table className="num-birth-grid"><caption>Chữ số và số lần xuất hiện</caption><tbody>
-          {birthGrid.layout.map(row => <tr key={row.join('-')}>{row.map(digit => <td key={digit} aria-label={`Số ${digit}: ${birthGrid.counts[digit]} lần`} className={`${birthGrid.counts[digit] ? 'num-cell-present' : 'num-cell-empty'}${highlighted.has(digit) ? ' is-lit' : ''}${birthGrid.counts[digit] > 1 ? ' is-repeat' : ''}`}>
-            <b>{digit}</b><span>{birthGrid.counts[digit] ? `${birthGrid.counts[digit]} lần` : 'Không xuất hiện'}</span>
-          </td>)}</tr>)}
-        </tbody></table>
+        <p className="num-grid-caption">Chữ số và số lần xuất hiện</p>
+        <div className="num-grid-frame">
+          <table className="num-birth-grid"><tbody>
+            {birthGrid.layout.map(row => <tr key={row.join('-')}>{row.map(digit => <td key={digit} aria-label={`Số ${digit}: ${birthGrid.counts[digit]} lần`} className={`${birthGrid.counts[digit] ? 'num-cell-present' : 'num-cell-empty'}${highlighted.has(digit) ? ' is-lit' : ''}${birthGrid.counts[digit] > 1 ? ' is-repeat' : ''}`}>
+              <b>{digit}</b><span>{birthGrid.counts[digit] ? `${birthGrid.counts[digit]} lần` : 'Không xuất hiện'}</span>
+            </td>)}</tr>)}
+          </tbody></table>
+          {selectedLine && <svg className="num-line-overlay" viewBox="0 0 3 3" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <polyline className={`is-${selectedLine.state}`} points={selectedLine.digits.map(digit => CELL[digit].join(',')).join(' ')} />
+          </svg>}
+        </div>
         <p className="num-grid-zero">Bỏ qua {birthGrid.ignoredZeroCount} chữ số 0 trong định dạng DDMMYYYY.</p>
       </div><div><h3>Tám tuyến số</h3>
         <ul className="num-lines">{birthGrid.lines.map(line => <li key={line.id}>
@@ -43,7 +58,7 @@ export default function NumerologyAdvanced({ birthGrid, nameChart, combinedChart
           </button>
         </li>)}</ul>
         <p className="num-disclaimer">{birthGrid.lineLayer?.disclaimer}</p>
-        <p className="num-disclaimer">{selectedLine ? `Đang xem tuyến ${selectedLine.digits.join('–')}: ${STATES[selectedLine.state]}. ${selectedLine.state === 'present' ? selectedLine.note || '' : 'Tuyến chưa đủ số nên không gắn tên mũi tên. Ô trống không phải điểm yếu.'}` : 'Chọn một tuyến để tô các ô của tuyến đó.'}</p>
+        <p className="num-disclaimer">{selectedLine ? `Đang xem tuyến ${selectedLine.digits.join('–')}: ${STATES[selectedLine.state]}. ${selectedLine.state === 'present' ? selectedLine.note || '' : 'Tuyến chưa đủ số nên không gắn tên mũi tên. Ô trống không phải điểm yếu.'}` : 'Chọn một tuyến để vẽ tuyến đó trên lưới. Tuyến đủ số là nét liền, một phần là nét đứt, không có số là nét chấm.'}</p>
       </div></div>
     </section>
 
@@ -63,7 +78,17 @@ export default function NumerologyAdvanced({ birthGrid, nameChart, combinedChart
     <section className="num-chapter" id="bieu-do-gop" aria-labelledby="num-combined-heading">
       <div className="section-kicker">HAI NGUỒN, KHÔNG TRỘN THÀNH MỘT ĐIỂM</div><h2 id="num-combined-heading">Biểu đồ ngày sinh và tên</h2>
       {combinedChart.status !== 'available' ? <p>Cần họ tên để đặt số trong tên cạnh số trong ngày sinh. Việc tên có một chữ số mà ngày sinh không có không có nghĩa là tên đã bù một thiếu sót.</p> : <>
-        <p>Mỗi hàng chỉ nói chữ số đó nằm ở đâu. Không kết luận tên làm thay đổi năng lực.</p>
+        <p>Mỗi ô đếm riêng ngày sinh và tên. Không kết luận tên làm thay đổi năng lực.</p>
+        <ul className="num-legend" aria-label="Chú giải nguồn">
+          <li className="is-both">Có ở cả hai</li>
+          <li className="is-birth">Chỉ ngày sinh</li>
+          <li className="is-name">Chỉ tên</li>
+          <li className="is-neither">Không có ở cả hai</li>
+        </ul>
+        <div className="num-dual-grid" aria-hidden="true">{birthGrid.layout.map(row => row.map(digit => {
+          const item = combinedChart.digits.find(entry => entry.digit === digit);
+          return <div key={digit} className={`num-dual is-${item.presence}`}><b>{digit}</b><span>Ngày {item.birth}</span><span>Tên {item.name}</span></div>;
+        }))}</div>
         <table className="num-combined"><caption>Nguồn của từng chữ số</caption><thead><tr><th>Số</th><th>Ngày sinh</th><th>Tên</th><th>Ở đâu</th></tr></thead><tbody>
           {combinedChart.digits.map(item => <tr key={item.digit}><td>{item.digit}</td><td>{item.birth}</td><td>{item.name}</td><td>{PRESENCE[item.presence]}</td></tr>)}
         </tbody></table>
@@ -90,24 +115,37 @@ export default function NumerologyAdvanced({ birthGrid, nameChart, combinedChart
       <div className="section-kicker">BỐN GIAI ĐOẠN TUỔI</div><h2 id="num-pinnacle-heading">Đỉnh cao và thử thách</h2>
       <p>Tuổi tính đến {format(pinnacles.asOf)}: <strong>{pinnacles.completedAge}</strong>. Giai đoạn đầu kết thúc ở tuổi {pinnacles.firstCycleEndAge}, vì gốc Đường đời là {pinnacles.lifePathRoot}. Sinh ngày 29/02 dùng 01/03 trong năm không nhuận.</p>
       <p>Thử thách dùng cùng cửa sổ tuổi với đỉnh cao theo quy ước của hồ sơ này. Một số tài liệu khác chỉ ước lượng thời lượng thử thách và để các giai đoạn chồng lên nhau. Số 0 là một thử thách hợp lệ, không có nghĩa là giai đoạn đó không có gì để để ý. Hồ sơ không gọi thử thách thứ ba là thử thách chính.</p>
-      <div className="num-pyramid" role="group" aria-label="Kim tự tháp bốn đỉnh. Đáy là tháng, ngày và năm đã rút gọn với master tắt.">
-        <PeakButton period={pinnacles.periods[2]} index={2} selected={selected.id === 'p3'} onSelect={setPeriodId} edge="Đỉnh 1 + đỉnh 2" />
-        <div className="num-pyramid-row">
-          <PeakButton period={pinnacles.periods[0]} index={0} selected={selected.id === 'p1'} onSelect={setPeriodId} edge="Tháng + ngày" />
-          <PeakButton period={pinnacles.periods[1]} index={1} selected={selected.id === 'p2'} onSelect={setPeriodId} edge="Ngày + năm" />
-        </div>
-        <PeakButton period={pinnacles.periods[3]} index={3} selected={selected.id === 'p4'} onSelect={setPeriodId} edge="Tháng + năm" />
-        <div className="num-pyramid-base">
-          <span>Tháng đã rút gọn <b>{pinnacles.components.month.value}</b></span>
-          <span>Ngày đã rút gọn <b>{pinnacles.components.day.value}</b></span>
-          <span>Năm đã rút gọn <b>{pinnacles.components.year.value}</b></span>
-        </div>
+      <div className="num-diagram" role="group" aria-label="Sơ đồ bốn đỉnh. Đáy là tháng, ngày và năm đã rút gọn với master tắt.">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          {EDGES.map(([from, to]) => <line key={`${from}-${to}`} data-edge={`${from}-${to}`} className={to === 'p4' ? 'is-base-p4' : undefined} x1={NODES[from][0]} y1={NODES[from][1]} x2={NODES[to][0]} y2={NODES[to][1]} />)}
+        </svg>
+        {Object.entries(NODES).map(([id, [x, y]]) => {
+          const [label, value, edge] = nodeText[id];
+          const period = pinnacles.periods.find(item => item.id === id);
+          const body = <><span>{label}</span><strong>{value}</strong>{period?.pinnacle.isMaster && <small>Số đặc biệt · Gốc {period.pinnacle.rootValue}</small>}<small>{edge}</small>{period?.active && <small>Đang diễn ra</small>}</>;
+          return period ? <button type="button" key={id} className={selected.id === id ? 'num-node is-selected' : 'num-node'} style={{ left: `${x}%`, top: `${y}%` }} aria-pressed={selected.id === id} onClick={() => setPeriodId(id)}>{body}</button>
+            : <span key={id} className="num-node is-base" style={{ left: `${x}%`, top: `${y}%` }}>{body}</span>;
+        })}
       </div>
-      <p className="num-disclaimer">Ba số đáy là thành phần của hồ sơ này, master tắt. Đỉnh 4 cộng tháng và năm. Đỉnh 4 không được suy ra từ đỉnh 3. Đây không phải chu kỳ period của trường phái khác.</p>
-      <div className="num-challenge" role="group" aria-label="Bốn thử thách cùng cửa sổ tuổi với đỉnh">
-        {pinnacles.periods.map((period, index) => <button type="button" key={period.id} className={period.id === selected.id ? 'is-selected' : undefined} aria-pressed={period.id === selected.id} onClick={() => setPeriodId(period.id)}>
-          <span>Thử thách {index + 1}</span><strong>{period.challenge.value}</strong><small>| {period.challenge.operands[0]} − {period.challenge.operands[1]} |</small>
-        </button>)}
+      <p className="num-sr">Đỉnh 1 nối tháng {month} và ngày {day}. Đỉnh 2 nối ngày {day} và năm {year}. Đỉnh 3 nối đỉnh 1 và đỉnh 2. Đỉnh 4 nối tháng {month} và năm {year}. Đỉnh 4 không nối với đỉnh 3.</p>
+      <p className="num-disclaimer">Nét liền đi tới đỉnh 1, đỉnh 2 và đỉnh 3. Nét đứt đi từ tháng và năm tới đỉnh 4. Ba số đáy có master tắt. Đây không phải chu kỳ period của trường phái khác.</p>
+      <div className="num-timeline" role="group" aria-label="Trục tuổi bốn thử thách">
+        <div className="num-age-track" aria-hidden="true">{pinnacles.periods.map(period => <span key={period.id} className={`${period.id === selected.id ? 'is-selected' : ''}${period.endAgeInclusive === null ? ' is-open' : ''}`} data-active={period.active ? 'true' : 'false'} style={{ flexGrow: trackGrow(period, closedYears(pinnacles.periods)) }}>{period.startAgeInclusive}</span>)}</div>
+        <p className="num-disclaimer">Các giai đoạn đã có tuổi kết thúc được vẽ theo số năm. Giai đoạn cuối không có tuổi kết thúc nên chỉ là đoạn mở, không phải một số năm đã tính.</p>
+        {pinnacles.periods.map((period, index) => {
+          const range = period.endAgeInclusive === null ? `Từ ${period.startAgeInclusive} tuổi` : `${period.startAgeInclusive}–${period.endAgeInclusive} tuổi`;
+          const dates = period.endDate === null ? `Từ ${format(period.startDate)}` : `${format(period.startDate)} – ${format(period.endDate)}`;
+          return <button type="button" key={period.id} className={period.id === selected.id ? 'is-selected' : undefined} data-active={period.active ? 'true' : 'false'} aria-pressed={period.id === selected.id} onClick={() => setPeriodId(period.id)}>
+            <span>{range}</span>
+            <span className="num-timeline-years">{yearsOf(period)}</span>
+            <strong>{period.challenge.value}</strong>
+            <span>Thử thách {index + 1}</span>
+            <small>| {period.challenge.operands[0]} − {period.challenge.operands[1]} |</small>
+            <small>{dates}</small>
+            {period.challenge.value === 0 && <small>Hiệu 0, không đổi thành 9</small>}
+            {period.active && <small>Đang diễn ra</small>}
+          </button>;
+        })}
       </div>
       <ol className="num-pinnacle-list">{pinnacles.periods.map((period, index) => {
         const label = `Giai đoạn ${index + 1}`;
@@ -132,7 +170,7 @@ export default function NumerologyAdvanced({ birthGrid, nameChart, combinedChart
         <li>{metrics.expression.status === 'available' ? `Từ tên: ${NAME_METRICS.map(([id, label]) => `${label} ${metrics[id].value}`).join(', ')}.` : 'Chưa có tên nên không có nhóm chỉ số từ tên, và không có số Trưởng thành.'}</li>
         {metrics.maturity.status === 'available' && <li>Trưởng thành = Đường đời {metrics.lifePath.value} + Biểu đạt {metrics.expression.value}.</li>}
         {metrics.lifePath.isMaster && <li>Đường đời giữ số đặc biệt {metrics.lifePath.value}. Gốc dùng cho tuổi đỉnh là {metrics.lifePath.rootValue}.</li>}
-        <li>Đỉnh 1 = tháng {pinnacles.components.month.value} + ngày {pinnacles.components.day.value}. Đỉnh 2 = ngày {pinnacles.components.day.value} + năm {pinnacles.components.year.value}. Đỉnh 3 = đỉnh 1 + đỉnh 2. Đỉnh 4 = tháng {pinnacles.components.month.value} + năm {pinnacles.components.year.value}.</li>
+        <li>Đỉnh 1 = tháng {month} + ngày {day}. Đỉnh 2 = ngày {day} + năm {year}. Đỉnh 3 = đỉnh 1 + đỉnh 2. Đỉnh 4 = tháng {month} + năm {year}.</li>
         <li>Thử thách là hiệu tuyệt đối của cùng các cặp đó. Thử thách 3 là hiệu của thử thách 1 và thử thách 2.</li>
         <li>Năm cá nhân dùng ngày sinh và năm xem. Tháng cá nhân cộng thêm tháng xem. Ngày cá nhân cộng thêm ngày xem.</li>
       </ul>

@@ -1,6 +1,6 @@
 # Ma trận hoàn thành lá số Thần số học
 
-Ngày: 2026-10-13. Nhánh: `cursor/numerology-complete-experience-2318`. Baseline audit: `5b15f30`.
+Ngày: 2026-10-13. Nhánh: `cursor/numerology-product-gap-2318`. Baseline audit: `5b15f30`.
 
 Các nhãn dưới đây không cộng thành một phần trăm “hệ thống đã xong”.
 
@@ -19,12 +19,12 @@ Các nhãn dưới đây không cộng thành một phần trăm “hệ thống
 | Năng lực | Calculation | Visualization | Interpretation | UX | Tests | Evidence |
 |---|---|---|---|---|---|---|
 | Bảy chỉ số cốt lõi | VERIFIED | VERIFIED | VERIFIED cho 1–9, 11, 22. Số 33 withheld | VERIFIED | VERIFIED | Fixture cũ và e2e |
-| Biểu đồ ngày sinh | VERIFIED | VERIFIED | Tên tuyến chỉ khi đủ số, lớp `arrow-labels-vn-v1`. Ô trống không phải điểm yếu | VERIFIED | VERIFIED | Ảnh `desktop-birth-grid.png`, `desktop-line-selected.png` |
-| Tháp bốn đỉnh | VERIFIED | VERIFIED | VERIFIED cho 1–9, 11, 22 theo giai đoạn. Không dùng bài Đường đời | VERIFIED | VERIFIED | Ảnh `desktop-pinnacles.png`. Đỉnh 4 là tháng + năm |
-| Thử thách | VERIFIED | VERIFIED | VERIFIED cho 1–8. Số 0 withheld, không đổi thành 9 | VERIFIED | VERIFIED | Cùng ảnh đỉnh. Không nhãn thử thách chính |
+| Biểu đồ ngày sinh | VERIFIED | VERIFIED | Tên tuyến chỉ khi đủ số, lớp `arrow-labels-vn-v1`. Ô trống không phải điểm yếu | VERIFIED | VERIFIED | Ảnh `screenshots/after/desktop-birth-grid.png`. Một tuyến được chọn, nét đủ / một phần / không có |
+| Tháp bốn đỉnh | VERIFIED | VERIFIED | VERIFIED cho 1–9, 11, 22 theo giai đoạn. Không dùng bài Đường đời | VERIFIED | VERIFIED | Ảnh `screenshots/after/desktop-pinnacles.png`. Cạnh đỉnh 4 là tháng + năm, không có cạnh tới đỉnh 3 |
+| Thử thách | VERIFIED | VERIFIED | VERIFIED cho 1–8. Số 0 withheld, không đổi thành 9 | VERIFIED | VERIFIED | Trục tuổi trong cùng ảnh. Giai đoạn đã kết thúc theo số năm. Đoạn cuối là đoạn mở |
 | Chín năm và mười hai tháng | VERIFIED | VERIFIED | VERIFIED bằng bài chu kỳ đã có | VERIFIED | VERIFIED | Server trả `viewDate`. Ảnh `desktop-cycles.png`, `desktop-year-2027.png` |
 | Biểu đồ tên | VERIFIED | VERIFIED | Không gắn mũi tên tâm lý. Đó là phạm vi đã chọn | VERIFIED | VERIFIED | Đếm chữ Pythagorean. Ảnh thiếu tên: `desktop-name-unavailable.png` |
-| Biểu đồ ghép | VERIFIED | VERIFIED | Không nói tên bù ô trống | VERIFIED | VERIFIED | Ảnh `mobile-390-combined.png` |
+| Biểu đồ ghép | VERIFIED | VERIFIED | Không nói tên bù ô trống | VERIFIED | VERIFIED | Lưới 3×3 tách lần ngày sinh và lần tên. Bảng chi tiết vẫn còn. Ảnh `screenshots/after/desktop-combined.png` |
 | Mối nối | VERIFIED | VERIFIED | Chỉ câu đúng phép tính. Không có điểm tương hợp | VERIFIED | Có mặt trên trang; chưa có e2e riêng cho từng câu | Không bịa quan hệ tâm lý |
 | In và JSON | VERIFIED | VERIFIED | N/A | VERIFIED | VERIFIED | Tên và vết chữ cái ra khỏi bản in trừ khi chọn. Import tính lại |
 | P2: Hidden Passion, Karmic Lessons, Balance, Rational Thought, Bridge | BLOCKED_BY_SOURCE | OUT_OF_SCOPE | OUT_OF_SCOPE | OUT_OF_SCOPE | OUT_OF_SCOPE | `P2_INDICATOR_GATE.md` |
@@ -33,7 +33,8 @@ Các nhãn dưới đây không cộng thành một phần trăm “hệ thống
 
 - Đọc tổng quan từ ngày sinh, tên nếu có, các chỉ số đã tính, đỉnh và thử thách đang diễn ra, năm cá nhân và ngày xem.
 - Xem lưới ngày sinh, chọn tuyến, thấy đủ / một phần / không có.
-- Xem tháp bốn đỉnh và bốn thử thách cùng cửa sổ tuổi.
+- Xem sơ đồ bốn đỉnh: đỉnh 1 từ tháng và ngày, đỉnh 2 từ ngày và năm, đỉnh 3 từ hai đỉnh đó, đỉnh 4 từ tháng và năm.
+- Xem trục tuổi của bốn thử thách. Số 0 giữ nguyên.
 - Đọc bài đã đủ điều kiện ngay trên thẻ. Nguồn vẫn nằm trong mục đóng.
 - Khi có tên: xem biểu đồ tên và bảng ghép.
 - Chọn một năm hoặc một tháng trong vòng đã tính. Ô trước ngày sinh không bấm được.
