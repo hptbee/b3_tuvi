@@ -218,6 +218,8 @@ for (const width of [320, 390]) {
     await page.locator('.num-name-trace summary').click();
     await expect(page.locator('.num-name-trace')).toContainText('NGUYEN VAN AN');
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+    const pinnacleColumns = await page.locator('.num-pinnacle-values').first().evaluate(element => getComputedStyle(element).gridTemplateColumns.split(' ').length);
+    expect(pinnacleColumns).toBe(1);
     await expect(page.getByRole('navigation', { name: 'Chọn lĩnh vực' })).toBeVisible();
   });
 }
@@ -290,6 +292,45 @@ test('original reflective reading and source disclosure open by keyboard', async
   await expect(source.getByRole('link')).toHaveAttribute('href', 'https://github.com/evoluteur/motivational-numerology/blob/c0535c9c9e7bcdc340b7eed255f89f64146dd8d5/i18n/meaning_en.js');
   await expect(source.getByRole('link')).toHaveAttribute('rel', 'noopener noreferrer');
   await expect(page).toHaveURL(/\/than-so-hoc$/);
+});
+
+test('print hides the form and import recalculates instead of trusting the file', async ({ page }) => {
+  await page.goto('/than-so-hoc');
+  await fill(page);
+  await submit(page);
+  await expect(output(page, 'Đường đời')).toHaveText('4');
+  await expect(page.getByText('Thử thách dùng cùng cửa sổ tuổi với đỉnh cao')).toBeVisible();
+  await expect(page.getByText(/Ngày lập \d{2}\/\d{2}\/\d{4}/)).toBeVisible();
+  await page.emulateMedia({ media: 'print' });
+  await expect(page.locator('.num-form')).toBeHidden();
+  await expect(page.locator('.num-actions')).toBeHidden();
+  await expect(page.locator('.site-nav')).toBeHidden();
+  await expect(page.locator('.num-results')).toBeVisible();
+  const printCss = await page.evaluate(async () => {
+    const chunks = [...document.querySelectorAll('style')].map(style => style.textContent || '');
+    for (const sheet of document.styleSheets) {
+      if (!sheet.href) continue;
+      chunks.push(await (await fetch(sheet.href)).text());
+    }
+    return chunks.join('\n');
+  });
+  expect(printCss).toContain('@page { size: A4; margin: 14mm; }');
+  expect(printCss).toContain('.num-omit-print { display: none !important; }');
+  await page.emulateMedia({ media: 'screen' });
+  const tampered = {
+    exportVersion: '1.0.0', schemaVersion: '1.2.0',
+    profile: { id: 'pythagorean-vn-v1', version: '1.2.0' },
+    birthDate: { year: 1990, month: 6, day: 15 },
+    metrics: { lifePath: { value: 33 } }
+  };
+  const responsePromise = page.waitForResponse(response => response.url().endsWith('/api/numerology/calculate'));
+  await page.getByLabel('Chọn tệp JSON đã xuất').setInputFiles({
+    name: 'than-so-hoc.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify(tampered))
+  });
+  const response = await responsePromise;
+  expect(response.request().postDataJSON()).toEqual({ birthDate: { year: 1990, month: 6, day: 15 } });
+  expect(response.request().postDataJSON().metrics).toBeUndefined();
+  await expect(output(page, 'Đường đời')).toHaveText('4');
 });
 
 test('master33 stays numeric with a clear unavailable-reading reason', async ({ page }) => {

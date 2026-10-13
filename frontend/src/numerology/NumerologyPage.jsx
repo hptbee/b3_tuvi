@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { calculateRequest, METRIC_IDS } from './api';
+import { downloadNumerologyJson, parseNumerologyImport } from './numerologyExport';
 import './numerology.css';
 import CalculationTrace from './CalculationTrace';
 import NumerologyAdvanced from './NumerologyAdvanced';
@@ -43,7 +44,20 @@ export default function NumerologyPage() {
   const targetInput = useRef(null);
   const errorBox = useRef(null);
   const resultHeading = useRef(null);
+  const fileInput = useRef(null);
+  const [includeName, setIncludeName] = useState(false);
+  const [importError, setImportError] = useState('');
   useEffect(() => () => { sequence.current += 1; controller.current?.abort(); }, []);
+  useEffect(() => {
+    const previousTitle = document.title;
+    const previousLang = document.documentElement.lang;
+    document.title = 'Thần số học · Chiêm nghiệm';
+    document.documentElement.lang = 'vi';
+    return () => {
+      document.title = previousTitle;
+      document.documentElement.lang = previousLang;
+    };
+  }, []);
   useEffect(() => {
     if (request.status === 'ready') resultHeading.current?.focus();
     if (request.status === 'error' && !request.error.fields.length) errorBox.current?.focus();
@@ -74,6 +88,33 @@ export default function NumerologyPage() {
     }
   };
   const submit = event => { event.preventDefault(); run(currentPayload); };
+  const onImport = async event => {
+    const file = event.target.files?.[0];
+    event.target.value = '';
+    if (!file) return;
+    if (file.size > 256 * 1024) {
+      setImportError('Tệp trống hoặc lớn hơn 256 KB.');
+      return;
+    }
+    const text = typeof file.text === 'function' ? await file.text() : await new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(String(reader.result || ''));
+      reader.onerror = () => reject(reader.error);
+      reader.readAsText(file);
+    });
+    const parsed = parseNumerologyImport(text);
+    if (!parsed.ok) {
+      setImportError(parsed.message);
+      return;
+    }
+    setImportError('');
+    const birth = parsed.input.birthDate;
+    setDraft({
+      day: String(birth.day), month: String(birth.month), year: String(birth.year),
+      fullName: parsed.input.fullName || '', targetDate: parsed.input.targetDate || ''
+    });
+    run(parsed.input);
+  };
   const result = request.result;
   return <div className="numerology-page num-page">
     <section className="num-hero"><div>
@@ -108,7 +149,26 @@ export default function NumerologyPage() {
     {request.status === 'loading' && <div className="num-request-status" role="status">Đang tính các chỉ số theo thông tin bạn đã gửi…</div>}
     {request.status === 'error' && <div className="num-error" role="alert" ref={errorBox} tabIndex={-1}><h2>Chưa thể tính chỉ số</h2><p>{request.error.message}</p>{request.error.retryable && <button className="primary-button" onClick={() => run(request.input)}>Thử lại</button>}</div>}
     {result && <section className="num-results" aria-labelledby="num-results-heading">
-      <div className="num-results-heading"><div><div className="section-kicker">KẾT QUẢ CỦA BẠN</div><h2 id="num-results-heading" ref={resultHeading} tabIndex={-1}>Các chỉ số của bạn</h2><p>{request.input.fullName?.trim() || 'Theo ngày sinh'} · {request.input.birthDate.day}/{request.input.birthDate.month}/{request.input.birthDate.year}</p></div><p>Quy ước Pythagorean {result.profile.version}<br />Bản thử nghiệm · lời luận tham khảo</p></div>
+      <div className="num-results-heading"><div><div className="section-kicker">KẾT QUẢ CỦA BẠN</div><h2 id="num-results-heading" ref={resultHeading} tabIndex={-1}>Các chỉ số của bạn</h2>{(() => {
+        const enteredName = request.input.fullName?.trim();
+        const dateLabel = `${request.input.birthDate.day}/${request.input.birthDate.month}/${request.input.birthDate.year}`;
+        const hideNameInPrint = Boolean(enteredName) && !includeName;
+        return <>
+          <p className={hideNameInPrint ? 'num-omit-print' : undefined}>{enteredName || 'Theo ngày sinh'} · {dateLabel}</p>
+          {hideNameInPrint && <p className="num-print-only">Theo ngày sinh · {dateLabel}</p>}
+        </>;
+      })()}</div><p>Quy ước {result.profile.id} · {result.profile.version}<br />Ngày lập {result.referenceDate.split('-').reverse().join('/')}<br />Bản thử nghiệm · lời luận tham khảo</p></div>
+      <div className="num-actions">
+        <label className="num-include-name"><input type="checkbox" checked={includeName} onChange={event => setIncludeName(event.target.checked)} /> Kèm họ tên khi tải JSON và khi in</label>
+        <button type="button" onClick={() => {
+          try { downloadNumerologyJson(result, request.input, { includeName }); setImportError(''); }
+          catch (error) { setImportError(error instanceof Error ? error.message : 'Không xuất được tệp.'); }
+        }}>Tải JSON</button>
+        <button type="button" onClick={() => fileInput.current?.click()}>Nhập JSON</button>
+        <input ref={fileInput} className="num-file-input" type="file" accept="application/json,.json" aria-label="Chọn tệp JSON đã xuất" onChange={onImport} />
+        <button type="button" onClick={() => window.print()}>In kết quả</button>
+      </div>
+      {importError && <p className="num-field-error" role="alert">{importError}</p>}
       {!sameInput && <p className="num-draft-note" role="status">Bạn đang chỉnh sửa thông tin. Kết quả vẫn thuộc dữ liệu đã gửi; chọn “Xem kết quả” để tính lại.</p>}
       {result.contentVersion && <aside className="num-content-notice" aria-label="Lời luận thử nghiệm"><h3>Một lời gợi mở, để bạn tự suy ngẫm</h3><p>Mở lời luận ở từng chỉ số để xem góc nhìn và câu hỏi tham khảo. Chủ đề số được đối chiếu nguồn cộng đồng; nội dung và ngữ cảnh do ứng dụng biên tập, không quyết định tính cách hoặc tương lai của bạn.</p><p>Phiên bản nội dung {result.contentVersion} · biên tập thử nghiệm</p></aside>}
       <div className="num-metric-grid">{METRIC_IDS.map(id => <MetricSection key={id} id={id} metric={result.metrics[id]} />)}</div>

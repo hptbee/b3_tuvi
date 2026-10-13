@@ -17,7 +17,7 @@ function samplePinnacles(asOf = '2026-10-13') {
 function result(value = 4, normalized = null) {
   const available = number => ({ status: 'available', value: number, rootValue: number, isMaster: false, keepMasters: true,
     meaning: null, meaningStatus: 'withheld', parts: [{ label: 'day', values: [1, 5], total: 6 }], steps: [] });
-  return { ok: true, contentVersion: null, referenceDate: '2026-10-13', profile: { id: 'pythagorean-vn-v1', version: '1.1.0' },
+  return { ok: true, schemaVersion: '1.2.0', contentVersion: null, referenceDate: '2026-10-13', profile: { id: 'pythagorean-vn-v1', version: '1.2.0' },
     birthGrid: { layoutVersion: '3-6-9-v1', layout: [[3,6,9],[2,5,8],[1,4,7]], counts: {1:2,2:0,3:0,4:0,5:1,6:1,7:0,8:0,9:2}, ignoredZeroCount: 2,
       lines: ['1-2-3','4-5-6','7-8-9','1-4-7','2-5-8','3-6-9','1-5-9','3-5-7'].map(id => ({ id, digits: id.split('-').map(Number), state: id === '1-5-9' ? 'present' : 'partial' })) },
     cycles: { policy: 'calendar-year-v1', targetDate: '2026-10-13', year: 2026,
@@ -39,7 +39,7 @@ async function fillDate(user, day = '15') {
   await user.type(screen.getByRole('spinbutton', { name: 'Tháng', exact: true }), '6');
   await user.type(screen.getByRole('spinbutton', { name: 'Năm', exact: true }), '1990');
 }
-afterEach(() => { cleanup(); vi.unstubAllGlobals(); });
+afterEach(() => { cleanup(); vi.unstubAllGlobals(); vi.restoreAllMocks(); });
 
 it('submits date-only without a name and explains unavailable metrics', async () => {
   const fetch = vi.fn(async () => success(result()));
@@ -57,6 +57,8 @@ it('submits date-only without a name and explains unavailable metrics', async ()
   expect(screen.queryByText('0 − 5 = 5')).not.toBeInTheDocument();
   expect(screen.getByText('Đang trong giai đoạn này')).toBeVisible();
   expect(screen.getByRole('heading', { name: 'Các chỉ số của bạn' })).toHaveFocus();
+  expect(screen.getByText(/Ngày lập 13\/10\/2026/)).toBeVisible();
+  expect(screen.getByText(/pythagorean-vn-v1 · 1\.2\.0/)).toBeVisible();
 });
 
 it('retains the submitted snapshot while the form is edited', async () => {
@@ -250,6 +252,98 @@ it('expands original reflective reading, questions, source and limits', async ()
   expect(source).toHaveAttribute('href', expect.stringContaining('/blob/c0535c9'));
   expect(source).toHaveAttribute('rel', 'noopener noreferrer');
   expect(screen.getByText(/đây không phải lời luận đã được chuyên gia xác minh/)).toBeVisible();
+});
+
+async function blobText(blob) {
+  return await new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(String(reader.result || ''));
+    reader.onerror = () => reject(reader.error);
+    reader.readAsText(blob);
+  });
+}
+it('exports the report without the raw name until the user opts in', async () => {
+  const body = result(4, 'AN');
+  vi.stubGlobal('fetch', vi.fn(async () => success(body)));
+  const blobs = [];
+  vi.stubGlobal('URL', { createObjectURL: blob => { blobs.push(blob); return 'blob:numerology'; }, revokeObjectURL: vi.fn() });
+  vi.spyOn(HTMLAnchorElement.prototype, 'click').mockImplementation(() => {});
+  const user = userEvent.setup();
+  render(<NumerologyPage />);
+  await fillDate(user);
+  await user.type(screen.getByRole('textbox', { name: /Họ tên khai sinh/ }), 'An');
+  await user.click(screen.getByRole('button', { name: 'Xem kết quả' }));
+  await screen.findByRole('status', { name: 'Đường đời', exact: true });
+  await user.click(screen.getByRole('button', { name: 'Tải JSON' }));
+  const hidden = JSON.parse(await blobText(blobs[0]));
+  expect(hidden.fullName).toBeNull();
+  expect(hidden.nameAnalysis).toBeUndefined();
+  expect(hidden.metrics.lifePath.value).toBe(4);
+  expect(hidden.exportVersion).toBe('1.0.0');
+  await user.click(screen.getByRole('checkbox', { name: /Kèm họ tên/ }));
+  expect(screen.getByText('An · 15/6/1990')).not.toHaveClass('num-omit-print');
+  await user.click(screen.getByRole('button', { name: 'Tải JSON' }));
+  expect(JSON.parse(await blobText(blobs[1])).fullName).toBe('An');
+});
+
+it('rejects an oversized import before sending it', async () => {
+  const fetch = vi.fn(async () => success(result()));
+  vi.stubGlobal('fetch', fetch);
+  const user = userEvent.setup();
+  render(<NumerologyPage />);
+  await fillDate(user);
+  await user.click(screen.getByRole('button', { name: 'Xem kết quả' }));
+  await screen.findByRole('status', { name: 'Đường đời', exact: true });
+  const file = new File([new Uint8Array(256 * 1024 + 1)], 'big.json', { type: 'application/json' });
+  await user.upload(screen.getByLabelText('Chọn tệp JSON đã xuất'), file);
+  expect(await screen.findByRole('alert')).toHaveTextContent('256 KB');
+  expect(fetch).toHaveBeenCalledTimes(1);
+});
+
+it('explains when the displayed result cannot be exported', async () => {
+  const body = result();
+  delete body.schemaVersion;
+  vi.stubGlobal('fetch', vi.fn(async () => success(body)));
+  const user = userEvent.setup();
+  render(<NumerologyPage />);
+  await fillDate(user);
+  await user.click(screen.getByRole('button', { name: 'Xem kết quả' }));
+  await screen.findByRole('status', { name: 'Đường đời', exact: true });
+  await user.click(screen.getByRole('button', { name: 'Tải JSON' }));
+  expect(await screen.findByRole('alert')).toHaveTextContent('không thuộc quy ước');
+});
+
+it('explains an unsupported import without sending it', async () => {
+  const fetch = vi.fn(async () => success(result()));
+  vi.stubGlobal('fetch', fetch);
+  const user = userEvent.setup();
+  render(<NumerologyPage />);
+  await fillDate(user);
+  await user.click(screen.getByRole('button', { name: 'Xem kết quả' }));
+  await screen.findByRole('status', { name: 'Đường đời', exact: true });
+  const file = new File([JSON.stringify({ exportVersion: '0.9.0' })], 'old.json', { type: 'application/json' });
+  await user.upload(screen.getByLabelText('Chọn tệp JSON đã xuất'), file);
+  expect(await screen.findByRole('alert')).toHaveTextContent('Phiên bản tệp chưa được hỗ trợ');
+  expect(fetch).toHaveBeenCalledTimes(1);
+});
+
+it('recalculates an imported file and does not send tampered results', async () => {
+  const fetch = vi.fn(async () => success(result()));
+  vi.stubGlobal('fetch', fetch);
+  const user = userEvent.setup();
+  render(<NumerologyPage />);
+  await fillDate(user);
+  await user.click(screen.getByRole('button', { name: 'Xem kết quả' }));
+  await screen.findByRole('status', { name: 'Đường đời', exact: true });
+  const file = new File([JSON.stringify({
+    exportVersion: '1.0.0', schemaVersion: '1.2.0',
+    profile: { id: 'pythagorean-vn-v1', version: '1.2.0' },
+    birthDate: { year: 1990, month: 6, day: 16 },
+    metrics: { lifePath: { value: 33 } }, pinnacles: { periods: [] }
+  })], 'than-so-hoc.json', { type: 'application/json' });
+  await user.upload(screen.getByLabelText('Chọn tệp JSON đã xuất'), file);
+  await waitFor(() => expect(fetch).toHaveBeenCalledTimes(2));
+  expect(JSON.parse(fetch.mock.calls[1][1].body)).toEqual({ birthDate: { year: 1990, month: 6, day: 16 } });
 });
 
 it('shows master33 withholding without displaying a root6 substitute', async () => {
