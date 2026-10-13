@@ -60,15 +60,23 @@
       "author": "Nguyễn Phát Lộc",
       "tradition": null,
       "schoolId": null,
-      "sourceType": "unverified_attribution",
+      "sourceType": "secondary",
       "publicationYear": null,
       "edition": null,
       "publisher": null,
       "language": "vi",
-      "url": "https://tuvisonkhiem.vn/thu-vien/sach/tu-vi-dau-so-tan-bien/",
+      "url": "https://tuvisonkhiem.vn/thu-vien/sach/tu-vi-ham-so/",
       "accessedAt": "2026-10-12",
-      "bibliographicStatus": "unverified_attribution",
-      "verificationNotes": "Tên sách và mốc khoảng 1972 chỉ xuất hiện như dòng thời gian trên trang thứ cấp, dẫn lời một người hành nghề. Không có nhà xuất bản, số trang đã kiểm.",
+      "bibliographicStatus": "secondary",
+      "access": {
+        "checkedAt": "2026-10-12",
+        "documentClass": "secondary_introduction",
+        "textLocated": false,
+        "rejectedUrl": "https://tuvisonkhiem.vn/thu-vien/sach/tu-vi-dau-so-tan-bien/",
+        "rejectedTitle": "Tử Vi Đẩu Số Tân Biên",
+        "observedTitle": "Tử Vi Hàm Số"
+      },
+      "verificationNotes": "Ngày 2026-10-12 URL cũ trả trang Tử Vi Đẩu Số Tân Biên. URL mới trả đúng tiêu đề Tử Vi Hàm Số trên một trang giới thiệu thứ cấp. Không phải file sách, không có locator đoạn, không chốt năm in.",
       "copyrightNotes": "Không chép nguyên văn."
     },
     {
@@ -99,10 +107,23 @@
       "edition": null,
       "publisher": null,
       "language": "vi",
-      "url": "https://tuvisonkhiem.vn/thu-vien/sach/tu-vi-lap-thanh-va-phu-doan/",
+      "url": null,
       "accessedAt": "2026-10-12",
       "bibliographicStatus": "unverified_attribution",
-      "verificationNotes": "Mốc khoảng 1974 chỉ là dòng thời gian trên trang Sơn Khiêm. Chưa thấy bìa. Phái Thiên Lương trong docs/TU_VI_SCHOOL_VARIANTS.md là dị bản an sao, chưa gắn sách này.",
+      "access": {
+        "checkedAt": "2026-10-12",
+        "documentClass": "wrong_title_url_removed",
+        "textLocated": false,
+        "rejectedUrl": "https://tuvisonkhiem.vn/thu-vien/sach/tu-vi-lap-thanh-va-phu-doan/",
+        "rejectedTitle": "Tử Vi Lập Thành Và Phú Đoán",
+        "observedTitle": null,
+        "distinctWorkNotAttached": {
+          "title": "Tử Vi Nghiệm Lý Toàn Thư",
+          "url": "https://tuvisonkhiem.vn/thu-vien/sach/tu-vi-nghiem-ly-toan-thu/",
+          "reason": "Trang thứ cấp của một tiêu đề khác, không phải Tử Vi Nghiệm Lý mà sourceId này đặt tên."
+        }
+      },
+      "verificationNotes": "Ngày 2026-10-12 URL cũ trả Tử Vi Lập Thành Và Phú Đoán. Đã gỡ URL. Không gắn trang Toàn Thư vào sourceId này.",
       "copyrightNotes": "Không chép nguyên văn."
     },
     {
@@ -223,6 +244,10 @@
       "authenticatedAt": "2026-10-12",
       "authenticationScope": "digital_file_accepted_as_working_text",
       "digitalArtifactVerified": true,
+      "contentSha256": "941b104504dd552fe967354759da1683dda30a529aa59a8e570b05727f5b4458",
+      "byteLength": 2202452,
+      "pageObjectCount": 277,
+      "contentCheckedAt": "2026-10-12",
       "originalEditionAuthenticated": false,
       "textCollatedAgainstOriginal": false,
       "verificationNotes": "Chủ dự án chấp nhận đúng URL này ngày 2026-10-12. Đã đọc file 277 trang và mục 19. Metadata PDF: Adobe InDesign CC 2014, CreationDate 2014-11-03. Không thấy tên nhà in. authenticated áp cho file số, không chứng minh bản in 1956, và không đổi formulaCheckedAgainstSource."
