@@ -97,7 +97,8 @@ assert.strictEqual(maDecision.formulaComparison, 'NOT_IMPLEMENTED');
 assert.strictEqual(maDecision.identity, 'NAME_MISMATCH');
 const catalog = JSON.parse(readFileSync(fileURLToPath(new URL('../../backend/src/data/combinations.json', import.meta.url)), 'utf8'));
 const hoaCatalog = catalog.find((row) => row.name === 'Hoa Cái Cư Phu Thê');
-assert.ok(hoaCatalog.logic_conditions.required_stars.includes('Hóa Kỵ'));
+assert.ok(hoaCatalog.logic_conditions.required_stars.includes('Hoa Cái'));
+assert.ok(!hoaCatalog.logic_conditions.required_stars.includes('Hóa Kỵ'));
 assert.ok(hoaCatalog.logic_conditions.formula_text.includes('Hoa Cái'));
 assert.notStrictEqual(compareReviews({
     sourceAvailable: true,

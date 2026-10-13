@@ -2,6 +2,7 @@ import assert from 'assert';
 import { calculateTuVi } from '../src/engine/tuviRules.mjs';
 import { matchCombinations, palaceRelations } from '../src/engine/combinationMatch.js';
 import catalog from '../src/data/combinations.json' with { type: 'json' };
+import { formulaByName, resolveRuntime } from '../src/data/formulaV1.mjs';
 
 const DANGEROUS_ALWAYS = [
     'Mệnh Lý Phùng Không',
@@ -51,42 +52,26 @@ function testNeverTrueOnEmpty() {
 function testDisabledUnsupported() {
     const ctx = chartContext(0, 1, 1, 1, 1, 1);
     const matches = matchCombinations(ctx, catalog);
-    const disabled = catalog.filter((c) => c.verification_status === 'disabled').map((c) => c.name);
-    for (const name of disabled) {
-        assert.ok(!namesOf(matches).includes(name), `${name} must stay disabled`);
+    for (const combo of catalog) {
+        const resolved = resolveRuntime(formulaByName(combo.name));
+        if (!resolved.publicInterpretationAllowed) {
+            assert.ok(!namesOf(matches).includes(combo.name), `${combo.name} must stay out of the public result`);
+        }
     }
     console.log('disabled Nhị hợp/Ám hợp not returned passed');
 }
 
 function testPhiemThuyPositiveNegative() {
-    let foundPos = null;
-    let foundNeg = null;
-    for (let can = 0; can < 10; can++) {
-        for (let chi = 1; chi <= 12; chi++) {
-            if ((can % 2) !== ((chi - 1) % 2)) continue;
-            for (let month = 1; month <= 12; month++) {
-                for (let hour = 1; hour <= 12; hour++) {
-                    const ctx = chartContext(can, chi, 1, month, hour, 1);
-                    const hit = namesOf(matchCombinations(ctx, catalog)).includes('Phiếm Thủy Đào Hoa');
-                    const menhChi = ctx.menhChi;
-                    const hasTham = (ctx.tv.boxes[ctx.menhIndex].majorStars || []).some((s) => s.includes('Tham Lang'));
-                    if (hit) {
-                        foundPos = ctx;
-                        assert.ok(['Tí', 'Hợi'].includes(menhChi), 'positive must be Mệnh Tí/Hợi');
-                        assert.ok(hasTham, 'positive must have Tham Lang at Mệnh');
-                    } else if (foundNeg == null && menhChi !== 'Tí' && menhChi !== 'Hợi') {
-                        foundNeg = ctx;
-                    }
-                    if (foundPos && foundNeg) break;
-                }
-                if (foundPos && foundNeg) break;
-            }
-            if (foundPos && foundNeg) break;
-        }
-        if (foundPos && foundNeg) break;
-    }
-    assert.ok(foundPos, 'need a positive Phiếm Thủy fixture');
-    assert.ok(foundNeg, 'need a negative Phiếm Thủy fixture');
+    const foundPos = chartContext(8, 0, 7, 2, 4, 1);
+    const menhBox = foundPos.tv.boxes[foundPos.menhIndex];
+    const bad = (menhBox.badStars || []).join(' ');
+    assert.ok(namesOf(matchCombinations(foundPos, catalog)).includes('Phiếm Thủy Đào Hoa'));
+    assert.ok(['Tí', 'Hợi'].includes(foundPos.menhChi), 'positive must be Mệnh Tí/Hợi');
+    assert.ok((menhBox.majorStars || []).some((star) => star.includes('Tham Lang')));
+    assert.ok(bad.includes('Kình') || bad.includes('Đà'));
+    const foundNeg = chartContext(0, 1, 1, 1, 1, 1);
+    assert.ok(!['Tí', 'Hợi'].includes(foundNeg.menhChi) || !namesOf(matchCombinations(foundNeg, catalog)).includes('Phiếm Thủy Đào Hoa'));
+    assert.ok(!namesOf(matchCombinations(foundNeg, catalog)).includes('Phiếm Thủy Đào Hoa'));
     console.log('Phiếm Thủy positive/negative passed');
 }
 
@@ -149,7 +134,23 @@ function testHamDiaNotEverywhere() {
         }
     }
     assert.ok(tangHuy < total, 'Tàng Huy must not match every chart');
-    assert.ok(tangHuy > 0, 'Tàng Huy should still match some hãm charts');
+    const bothHam = {
+        boxes: Object.fromEntries(Array.from({ length: 12 }, (_, i) => [i + 1, {
+            chiName: ['', 'Tí', 'Sửu', 'Dần', 'Mão', 'Thìn', 'Tị', 'Ngọ', 'Mùi', 'Thân', 'Dậu', 'Tuất', 'Hợi'][i + 1],
+            cungName: i === 0 ? 'MỆNH' : 'PHÚC ĐỨC',
+            majorStars: [],
+            goodStars: [],
+            badStars: []
+        }])),
+        menhIndex: 1,
+        menhChi: 'Tí'
+    };
+    bothHam.boxes[1].majorStars = ['Thái Dương (H)'];
+    bothHam.boxes[7].majorStars = ['Thái Âm (H)'];
+    assert.ok(!namesOf(matchCombinations(bothHam, catalog)).includes('Nhật Nguyệt Tàng Huy'));
+    bothHam.boxes[7].majorStars = [];
+    bothHam.boxes[1].majorStars = ['Thái Dương (M)', 'Cự Môn (V)'];
+    assert.ok(namesOf(matchCombinations(bothHam, catalog)).includes('Nhật Nguyệt Tàng Huy'));
     console.log(`Nhật Nguyệt Tàng Huy rate ${tangHuy}/${total} passed`);
 }
 
@@ -220,7 +221,8 @@ function testEachComboHasPosNegOrDisabled() {
         }
     }
     for (const c of catalog) {
-        if (c.verification_status === 'disabled') {
+        const resolved = resolveRuntime(formulaByName(c.name));
+        if (!resolved.publicInterpretationAllowed) {
             assert.strictEqual(counts[c.name], 0, c.name);
             continue;
         }

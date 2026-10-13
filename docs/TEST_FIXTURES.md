@@ -71,5 +71,6 @@ Khóa tính chất: không nâng nguồn từ test pass, catalog không thành p
 - `combinationResearch.test.mjs`
 - `sprint9cDiscovery.test.mjs`
 - `sprint9Adjudication.test.mjs`
+- `formulaV1.test.mjs`: source-scoped V1 dispositions for all 63 catalog formations. Not an expert-verified golden chart.
 - `fixtureClasses.test.mjs`
 - `perfSmoke.test.mjs`

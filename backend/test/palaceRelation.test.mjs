@@ -1,6 +1,6 @@
 import assert from 'assert';
 import { DIA_CHI } from '../src/engine/constants.js';
-import { branchIndexRelations, relatedBranchIds } from '../src/engine/palaceRelation.js';
+import { branchIndexRelations, nhiHop, relatedBranchIds } from '../src/engine/palaceRelation.js';
 
 /** Bảng viết tay theo chu kỳ 12 chi. Không gọi engine để sinh expected. */
 const TABLE = [
@@ -53,9 +53,12 @@ function testSymmetry() {
         assert.strictEqual(relatedBranchIds(id, 'xung_chieu').length, 1);
         assert.strictEqual(relatedBranchIds(id, 'adjacent').length, 2);
         assert.strictEqual(new Set(relatedBranchIds(id, 'tam_phuong_tu_chinh')).size, 4);
+        assert.strictEqual(branchIndexRelations(nhiHop(id)).nhiHop, id);
     }
+    assert.deepStrictEqual([1, 2, 3, 4, 5, 6].map((id) => nhiHop(id)), [2, 1, 12, 11, 10, 9]);
     assert.strictEqual(branchIndexRelations(0), null);
-    assert.strictEqual(relatedBranchIds(1, 'nhi_hop'), null);
+    assert.deepStrictEqual(relatedBranchIds(1, 'nhi_hop'), [2]);
+    assert.strictEqual(nhiHop(0), null);
     console.log('relationship symmetry passed');
 }
 

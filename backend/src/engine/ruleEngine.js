@@ -1,6 +1,6 @@
 import { wrapIndex, normalizeChi } from './starNames.js';
 import { resolveStar } from './starCatalog.js';
-import { branchIndexRelations } from './palaceRelation.js';
+import { branchIndexRelations, nhiHop } from './palaceRelation.js';
 import { getPalaceAtBranch, getPalaceByFunction, hasStarAtPalace } from './chartQuery.js';
 
 function targetPalace(chart, rule) {
@@ -41,6 +41,11 @@ function zoneIds(palace, at) {
     if (at === 'tam_phuong_tu_chinh') return [...rel.tamPhuongTuChinh];
     if (at === 'opposite') return [rel.xungChieu];
     if (at === 'menh_or_opposite') return [rel.branchId, rel.xungChieu];
+    if (at === 'aspect') return [...rel.tamHop, rel.xungChieu];
+    if (at === 'nhi_hop') {
+        const partner = nhiHop(rel.branchId);
+        return partner ? [partner] : [];
+    }
     if (at === 'chart') return null;
     return [];
 }
@@ -175,6 +180,63 @@ function giapAnchorFlanks(chart, palaceId, anchorId, groups) {
     }));
 }
 
+function giapSplitFlanks(chart, palaceId, ids) {
+    if (ids.length !== 2) return null;
+    const left = wrapIndex(Number(palaceId) - 1);
+    const right = wrapIndex(Number(palaceId) + 1);
+    const [leftStar, rightStar] = ids;
+    const orientations = [
+        [leftStar, rightStar],
+        [rightStar, leftStar]
+    ];
+    const hit = orientations.find(([onLeft, onRight]) => hasStarAtPalace(chart, onLeft, left) && hasStarAtPalace(chart, onRight, right));
+    if (!hit) return null;
+    return ids.map((starId) => ({
+        starId,
+        palaces: [left, right].filter((id) => hasStarAtPalace(chart, starId, id))
+    }));
+}
+
+function absentHits(chart, palace, absent) {
+    if (!absent) return false;
+    const ids = starIds(absent.stars || []);
+    if (ids.length === 0 || ids.some((id) => !id)) return true;
+    const zone = zoneIds(palace, absent.at || 'target');
+    return ids.some((starId) => {
+        const hits = chart.byStarId?.[starId] || [];
+        return hits.some((hit) => !zone || zone.includes(Number(hit.palaceId)));
+    });
+}
+
+function soleMajorOk(palace, names) {
+    const ids = starIds(names);
+    if (!Array.isArray(names) || names.length === 0 || ids.some((id) => !id)) return false;
+    const majors = (palace.stars || []).filter((star) => star.list === 'major');
+    if (majors.length !== ids.length) return false;
+    return ids.every((id) => majors.some((star) => star.starId === id));
+}
+
+function splitPalaceRows(chart, spec) {
+    if (!spec?.absentAt || !Array.isArray(spec.stars) || !Array.isArray(spec.oneEach) || spec.oneEach.length !== 2) {
+        return null;
+    }
+    const home = palaceByRole(chart, spec.absentAt);
+    const left = palaceByRole(chart, spec.oneEach[0]);
+    const right = palaceByRole(chart, spec.oneEach[1]);
+    if (!home || !left || !right) return null;
+    const ids = starIds(spec.stars);
+    if (ids.length < 2 || ids.some((id) => !id)) return null;
+    if (ids.some((id) => hasStarAtPalace(chart, id, home.id))) return null;
+    const present = (palace) => ids.filter((id) => hasStarAtPalace(chart, id, palace.id));
+    const a = present(left);
+    const b = present(right);
+    if (a.length !== 1 || b.length !== 1 || a[0] === b[0]) return null;
+    return [
+        { starId: a[0], palaces: [Number(left.id)] },
+        { starId: b[0], palaces: [Number(right.id)] }
+    ];
+}
+
 function excludedHits(chart, palaceId, excluded) {
     return (excluded || []).some((clause) => {
         if (!clause || clause.relation !== 'same' || !Array.isArray(clause.stars) || clause.stars.length === 0) {
@@ -229,8 +291,14 @@ export function evaluateRule(chart, rule) {
     }
 
     if (rule.noMajor && palace.stars.some((star) => star.list === 'major')) return null;
+    if (rule.brightHost) {
+        const majors = (palace.stars || []).filter((star) => star.list === 'major');
+        if (majors.length === 0 || majors.some((star) => !['M', 'V', 'Đ'].includes(star.brightness))) return null;
+    }
+    if (rule.soleMajor && !soleMajorOk(palace, rule.soleMajor)) return null;
+    if (absentHits(chart, palace, rule.absent)) return null;
 
-    const hasBody = rule.samePalace || rule.giap || rule.clauses || rule.countAtLeast || rule.linked;
+    const hasBody = rule.samePalace || rule.giap || rule.clauses || rule.countAtLeast || rule.linked || rule.splitPalaces;
     if (rule.noMajor && !hasBody) {
         return finish(rule, chart, palace, [], 'no_major');
     }
@@ -257,7 +325,7 @@ export function evaluateRule(chart, rule) {
         op = 'same_palace';
     }
     if (rule.giap) {
-        if (rule.giap.mode !== 'both_flanks' && rule.giap.mode !== 'anchor_flanks') return null;
+        if (!['both_flanks', 'anchor_flanks', 'split_flanks'].includes(rule.giap.mode)) return null;
     }
     if (rule.giap?.mode === 'both_flanks') {
         const ids = starIds(rule.giap.stars);
@@ -275,6 +343,14 @@ export function evaluateRule(chart, rule) {
         if (!giapRows) return null;
         rows = rows.concat(giapRows);
         op = 'giap_anchor_flanks';
+    }
+    if (rule.giap?.mode === 'split_flanks') {
+        const ids = starIds(rule.giap.stars);
+        if (ids.some((id) => !id)) return null;
+        const giapRows = giapSplitFlanks(chart, palace.id, ids);
+        if (!giapRows) return null;
+        rows = rows.concat(giapRows);
+        op = 'giap_split_flanks';
     }
     if (rule.clauses) {
         if (!Array.isArray(rule.clauses) || rule.clauses.length === 0) return null;
@@ -299,7 +375,13 @@ export function evaluateRule(chart, rule) {
         rows = rows.concat(linked);
         op = 'linked';
     }
-    if (!rule.noMajor && !rule.samePalace && !rule.giap && !rule.clauses && !rule.countAtLeast && !rule.linked) return null;
+    if (rule.splitPalaces) {
+        const split = splitPalaceRows(chart, rule.splitPalaces);
+        if (!split) return null;
+        rows = rows.concat(split);
+        op = 'split_palaces';
+    }
+    if (!rule.noMajor && !rule.samePalace && !rule.giap && !rule.clauses && !rule.countAtLeast && !rule.linked && !rule.splitPalaces) return null;
     if (excludedHits(chart, palace.id, rule.excluded)) return null;
     if (rows.length === 0) return null;
     return finish(rule, chart, palace, rows, op);

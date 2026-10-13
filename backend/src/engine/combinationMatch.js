@@ -11,6 +11,7 @@ import { normalizeChart } from './normalizeChart.js';
 import { evaluateRule } from './ruleEngine.js';
 import { getStarById } from './starCatalog.js';
 import rulesV2 from '../data/rulesV2.json' with { type: 'json' };
+import { FORMULA_VERSION, formulaByName, resolveRuntime } from '../data/formulaV1.mjs';
 
 export const SUPPORTED_POSITIONS = new Set([
     'Đồng cung',
@@ -235,6 +236,45 @@ export function matchCombinations(input = {}, catalog = [], options = {}) {
 
     for (const combo of catalog) {
         const status = combo.verification_status || 'provisional';
+        const formula = useV2 ? formulaByName(combo.name) : null;
+        if (formula) {
+            const resolved = resolveRuntime(formula, options.profile);
+            if (!resolved.evaluable) continue;
+            if (!options.includeNonPublic && !resolved.publicInterpretationAllowed) continue;
+            const hit = evaluateRule(chart, resolved.rule);
+            if (!hit) continue;
+            const gradeStatus = gradeStatusFor(chart, resolved);
+            const verificationStatus = status === 'disabled' && resolved.publicInterpretationAllowed
+                ? 'provisional'
+                : status;
+            matched.push(toMatchDto(
+                combo,
+                placementFromRows(hit.rows),
+                {
+                    ...hit.evidence,
+                    sourceProfile: resolved.profile,
+                    formulaVersion: FORMULA_VERSION,
+                    sourceRef: resolved.sourceRef,
+                    identityStatus: resolved.identityStatus,
+                    engineeringState: resolved.engineeringState,
+                    displayIdentity: resolved.displayIdentity,
+                    ...(resolved.notASynonymOf ? { notASynonymOf: resolved.notASynonymOf } : {})
+                },
+                {
+                    catalogId: resolved.catalogId,
+                    sourceProfile: resolved.profile,
+                    formulaVersion: FORMULA_VERSION,
+                    gradeStatus,
+                    sourceRef: resolved.sourceRef,
+                    identityStatus: resolved.identityStatus,
+                    publicInterpretationAllowed: resolved.publicInterpretationAllowed,
+                    engineeringState: resolved.engineeringState,
+                    verificationStatus,
+                    expertVerified: false
+                }
+            ));
+            continue;
+        }
         if (status === 'disabled') continue;
 
         const rule = useV2 ? RULES_V2.get(combo.name) : null;
@@ -291,15 +331,36 @@ export function matchLegacyCombinations(input, catalog) {
     return matchCombinations(input, catalog, { useV2: false });
 }
 
-function toMatchDto(combo, placement = [], evidence = null) {
+function gradeStatusFor(chart, resolved) {
+    if (!resolved.grade) return 'not_applicable';
+    if (!resolved.grade.complete || !resolved.grade.rule) return 'not_certified';
+    return evaluateRule(chart, resolved.grade.rule) ? 'met' : 'not_met';
+}
+
+function toMatchDto(combo, placement = [], evidence = null, meta = null) {
     const lc = combo.logic_conditions || {};
     const type = combo.type;
-    const status = combo.verification_status || 'provisional';
-    const summary = combo.interpretations?.[0]?.content || combo.description || '';
+    const status = meta?.verificationStatus || combo.verification_status || 'provisional';
+    const rawSummary = combo.interpretations?.[0]?.content || combo.description || '';
+    const summary = meta && meta.publicInterpretationAllowed === false
+        ? '[Không công bố luận giải] Khớp cấu trúc theo nguồn đã chọn.'
+        : rawSummary;
     const unverified = status !== 'matching_ok';
     return {
         _id: combo._id,
         name: combo.name,
+        ...(meta ? {
+            catalogId: meta.catalogId,
+            sourceProfile: meta.sourceProfile,
+            formulaVersion: meta.formulaVersion,
+            formationStatus: 'matched',
+            gradeStatus: meta.gradeStatus,
+            sourceRef: meta.sourceRef,
+            identityStatus: meta.identityStatus,
+            publicInterpretationAllowed: meta.publicInterpretationAllowed,
+            engineeringState: meta.engineeringState,
+            expertVerified: false
+        } : {}),
         type,
         description: combo.description,
         formula_text: lc.formula_text || '',

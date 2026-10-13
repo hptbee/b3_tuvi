@@ -1879,10 +1879,10 @@
   {
     "name": "Hoa Cái Cư Phu Thê",
     "type": "hung_bai_cach",
-    "description": "Hóa Kỵ tọa Mệnh: quan hệ gần gũi dễ trắc trở. Tên cách cục cổ, logic engine chỉ bắt Hóa Kỵ tại Mệnh.",
+    "description": "Hoa Cái tại cung Phu Thê. Công thức V1 nhận Hoa Cái tại Phu Thê.",
     "logic_conditions": {
       "required_stars": [
-        "Hóa Kỵ"
+        "Hoa Cái"
       ],
       "formula_text": "Sao Hoa Cái (chủ về sự đài các, cô độc) nằm tại cung Phu Thê gặp Sát tinh/Cô Quả.",
       "excluded_stars": [],
@@ -1893,8 +1893,8 @@
     },
     "interpretations": [
       {
-        "context": "Hóa Kỵ tại Mệnh",
-        "content": "Hóa Kỵ tọa Mệnh: dễ có thị phi trong quan hệ. Không luận hôn nhân tan vỡ.",
+        "context": "Hoa Cái tại Phu Thê",
+        "content": "Hoa Cái tại Phu Thê là cấu trúc theo nguồn đã chọn. Không luận hôn nhân tan vỡ.",
         "tags": [
           "thi_phi"
         ]

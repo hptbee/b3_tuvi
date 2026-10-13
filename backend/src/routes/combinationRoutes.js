@@ -11,10 +11,12 @@ const router = express.Router();
  */
 router.post('/match', async (req, res) => {
     try {
-        const { boxes, menhIndex, menhChi } = req.body || {};
+        const { boxes, menhIndex, menhChi, sourceProfile } = req.body || {};
+        const options = typeof sourceProfile === 'string' ? { profile: sourceProfile } : {};
         const matched = matchCombinations(
             { boxes, menhIndex, menhChi },
-            catalogJson
+            catalogJson,
+            options
         );
         res.json({ count: matched.length, combinations: matched });
     } catch (error) {
