@@ -1,0 +1,407 @@
+{
+  "title": "B3 Tử Vi — Source Discovery Pack for 39 Previously Inaccessible Combinations",
+  "version": "2026-10-13",
+  "purpose": "Discovery only, never source verification or formula MATCH",
+  "sourceLibrary": [
+    {
+      "sourceId": "wikisource-zwds-quanshu-web",
+      "title": "紫微斗數全書 全覽 (Wikisource transcription)",
+      "url": "https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽",
+      "tier": "public-domain historical text transcription",
+      "sections": "卷一 太微賦 / 定富局 / 定貴局; 卷三 諸星同垣",
+      "notes": "Wikisource digital transcription; no printed edition or collation authenticated"
+    },
+    {
+      "sourceId": "xinglin-combination-index",
+      "title": "星林學苑 / 從星開始 紫微研究苑 — 格局解析",
+      "url": "https://www.108s.tw/article/index/20/40",
+      "tier": "modern interpretive articles",
+      "notes": "Page per pattern, live text, accessible HTTP; source identity not ancient"
+    },
+    {
+      "sourceId": "iztro-patterns",
+      "title": "Iztro 格局",
+      "url": "https://iztro.com/zh_TW/learn/pattern",
+      "tier": "modern annotated material",
+      "notes": "Useful for counterchecking ancient attribution and different interpretations"
+    },
+    {
+      "sourceId": "yidexuan-pattern-list",
+      "title": "易德軒 紫微斗數格局分析",
+      "url": "https://ziwei.yi958.com/zwds/5343/",
+      "tier": "secondary compilation",
+      "notes": "Potentially inconsistent and not authoritative for source provenance"
+    },
+    {
+      "sourceId": "jollen-riyue",
+      "title": "Jollen 日月藏輝",
+      "url": "https://www.jollen.tw/97-%E6%97%A5%E6%9C%88%E8%97%8F%E8%BC%9D.html",
+      "tier": "modern analysis",
+      "notes": "May define rule variant, do not merge without independent review"
+    }
+  ],
+  "combinationCandidates": [
+    {
+      "combinationName": "Tử Phủ Vũ Tướng",
+      "matchedTerm": "紫府武相",
+      "leadStatus": "MODERN_FORMULA_PAGE",
+      "candidateUrl": "https://amlichvietnam.vn/kien-thuc/tu-vi/cach-tu-phu-vu-tuong",
+      "locatorOrSection": "Mô tả cách cục trên trang",
+      "researchNote": "Chưa có đối chiếu cổ thư cho nhóm bốn sao; không dùng lời phú tự xưng không dẫn bản.",
+      "alternativeUrl": "https://www.tuvi-pkb.com/tra-cuu/cach-cuc/cach-tu-phu-vu-tuong"
+    },
+    {
+      "combinationName": "Sát Phá Tham",
+      "matchedTerm": "殺破狼",
+      "leadStatus": "RELATED_OR_ALIAS_REQUIRES_REVIEW",
+      "candidateUrl": "https://fortunecloud.co/learn/san-he-school",
+      "locatorOrSection": "星系 殺破狼, đoạn nói về nhóm sao",
+      "researchNote": "Nguồn coi Sát Phá Tham là tinh hệ; không khẳng định đồng nghĩa một cách cục có điều kiện riêng.",
+      "alternativeUrl": "https://astroverse.com.tw/ziwei/patterns"
+    },
+    {
+      "combinationName": "Dương Lương Xương Lộc",
+      "matchedTerm": "陽梁昌祿",
+      "leadStatus": "MODERN_FORMULA_PAGE",
+      "candidateUrl": "https://www.108s.tw/article/info/225",
+      "locatorOrSection": "★形成條件",
+      "researchNote": "Bài đưa công thức Mệnh Mão đồng cung Dương/Lương/Văn Xương và Lộc; có thể khác rule rộng tam phương.",
+      "alternativeUrl": ""
+    },
+    {
+      "combinationName": "Nhật Chiếu Lôi Môn",
+      "matchedTerm": "日照雷門 / 日出扶桑",
+      "leadStatus": "ORIGINAL_TEXT_RELATED_AND_MODERN_FORMULA",
+      "candidateUrl": "https://www.108s.tw/article/info/224",
+      "locatorOrSection": "★形成條件; ★古書詩賦",
+      "researchNote": "Bài modern yêu cầu Dương/Lương đồng cung Mão; cổ thư Định貴局 có 日出扶桑 với Dương ở Mão, không mặc nhiên cùng tất cả điều kiện.",
+      "alternativeUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽"
+    },
+    {
+      "combinationName": "Hỏa Tham",
+      "matchedTerm": "火貪 / 貪火相逢",
+      "leadStatus": "ORIGINAL_TEXT_RELATED_AND_MODERN_FORMULA",
+      "candidateUrl": "https://www.108s.tw/article/info/217",
+      "locatorOrSection": "★形成條件; 《全書》卷一 定貴局 貪火相逢",
+      "researchNote": "Có điều kiện riêng cho Hỏa Tham trong bài; cổ thư mô tả 貪火相逢.",
+      "alternativeUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽"
+    },
+    {
+      "combinationName": "Linh Tham",
+      "matchedTerm": "鈴貪",
+      "leadStatus": "MODERN_FORMULA_PAGE",
+      "candidateUrl": "https://www.108s.tw/article/info/217",
+      "locatorOrSection": "★形成條件",
+      "researchNote": "Trang hiện đại tách Linh Tham; Iztro lưu ý tên này không được mô tả trực tiếp trong bản 全書 mà họ xét.",
+      "alternativeUrl": "https://iztro.com/zh_TW/learn/pattern"
+    },
+    {
+      "combinationName": "Thạch Trung Ẩn Ngọc",
+      "matchedTerm": "石中隱玉",
+      "leadStatus": "ORIGINAL_TEXT_LOCATED",
+      "candidateUrl": "https://www.108s.tw/article/info/227",
+      "locatorOrSection": "★形成條件; 全書卷三 巨門段",
+      "researchNote": "Có đoạn cổ thư liên quan Cự Môn tại Tý/Ngọ; đánh giá điều kiện Lộc/Quyền/Khoa cẩn thận.",
+      "alternativeUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/卷三"
+    },
+    {
+      "combinationName": "Tam Kỳ Gia Hội",
+      "matchedTerm": "三奇嘉會 / 科權祿拱",
+      "leadStatus": "ORIGINAL_TEXT_RELATED_AND_MODERN_FORMULA",
+      "candidateUrl": "https://www.108s.tw/article/info/257",
+      "locatorOrSection": "★形成條件; 全書卷一 增補太微賦",
+      "researchNote": "Cổ thư nói 科權祿拱, cách gọi 三奇嘉會 thuộc hệ luận sau, phải kiểm sự tương đương.",
+      "alternativeUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽"
+    },
+    {
+      "combinationName": "Song Lộc Triều Viên",
+      "matchedTerm": "雙祿朝垣",
+      "leadStatus": "MODERN_FORMULA_PAGE",
+      "candidateUrl": "https://ziweidoushu.com9.tw/pattern/34",
+      "locatorOrSection": "雙祿朝垣格",
+      "researchNote": "Không tự đổi thành 雙祿交流: hai danh xưng/cách diễn đạt có phân biệt.",
+      "alternativeUrl": ""
+    },
+    {
+      "combinationName": "Hùng Tú Triều Viên",
+      "matchedTerm": "雄宿朝垣",
+      "leadStatus": "NAME_MISMATCH_REQUIRES_REVIEW",
+      "candidateUrl": "https://www.108s.tw/article/info/213",
+      "locatorOrSection": "★形成條件",
+      "researchNote": "Nguồn có tên 雄宿 (Hùng Túc), catalog ghi Hùng Tú; cần xét typo/nhánh khác trước khi match.",
+      "alternativeUrl": ""
+    },
+    {
+      "combinationName": "Linh Xương Đà Vũ",
+      "matchedTerm": "鈴昌陀武",
+      "leadStatus": "MODERN_FORMULA_PAGE",
+      "candidateUrl": "https://www.108s.tw/article/info/205",
+      "locatorOrSection": "★形成條件",
+      "researchNote": "Bài ghi Vũ Khúc, Linh, Văn Xương, Đà và vị trí; chú ý phân biệt nguyên cục vs hạn.",
+      "alternativeUrl": ""
+    },
+    {
+      "combinationName": "Hình Kỵ Giáp Ấn",
+      "matchedTerm": "刑忌夾印",
+      "leadStatus": "MODERN_FORMULA_PAGE",
+      "candidateUrl": "https://www.108s.tw/article/info/206",
+      "locatorOrSection": "★形成條件",
+      "researchNote": "Tác giả nói nhiều phái khác cách hiểu; có trường phái cho Thiên Tướng hóa Kỵ, không trộn vào default.",
+      "alternativeUrl": ""
+    },
+    {
+      "combinationName": "Mệnh Lý Phùng Không",
+      "matchedTerm": "命裡逢空",
+      "leadStatus": "MODERN_FORMULA_PAGE",
+      "candidateUrl": "https://www.108s.tw/article/info/267",
+      "locatorOrSection": "★形成條件",
+      "researchNote": "Có đoạn mô tả Địa Không/Địa Kiếp tại Mệnh; không đánh đồng với Mệnh Vô Chính Diệu Đắc Tam Không.",
+      "alternativeUrl": ""
+    },
+    {
+      "combinationName": "Kình Đà Hiệp Kỵ",
+      "matchedTerm": "羊陀夾忌",
+      "leadStatus": "MODERN_FORMULA_PAGE",
+      "candidateUrl": "https://www.108s.tw/article/info/248",
+      "locatorOrSection": "★形成條件",
+      "researchNote": "Bài hiện đại ghi Lộc Tồn bị Kình Đà giáp và thêm Hóa Kỵ; điều kiện tuỳ phái.",
+      "alternativeUrl": ""
+    },
+    {
+      "combinationName": "Phong Lưu Thái Trượng",
+      "matchedTerm": "風流綵杖 / 風流彩杖",
+      "leadStatus": "ORIGINAL_TEXT_RELATED_AND_MODERN_FORMULA",
+      "candidateUrl": "https://www.108s.tw/article/info/220",
+      "locatorOrSection": "★形成條件; 全書卷一 太微賦",
+      "researchNote": "Cổ thư có lời về 刑遇貪狼, danh xưng chữ Hán có dị bản 綵/彩; đối chiếu từ và vị trí.",
+      "alternativeUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽"
+    },
+    {
+      "combinationName": "Nhật Nguyệt Tàng Huy",
+      "matchedTerm": "日月藏輝",
+      "leadStatus": "MODERN_FORMULA_PAGE",
+      "candidateUrl": "https://www.jollen.tw/97-%E6%97%A5%E6%9C%88%E8%97%8F%E8%BC%9D.html",
+      "locatorOrSection": "97. 日月藏輝",
+      "researchNote": "Các nguồn khác mô tả như 日月反背, có thể khác điều kiện; cần hai AI so sánh từng bản.",
+      "alternativeUrl": "https://andylifemap.com/ri-yue-fan-bei-ge/"
+    },
+    {
+      "combinationName": "Bán Không Chiết Xỉ",
+      "matchedTerm": "半天折翅 / 半空折翅",
+      "leadStatus": "NAME_MISMATCH_REQUIRES_REVIEW",
+      "candidateUrl": "https://www.108s.tw/article/info/267",
+      "locatorOrSection": "古書詩賦 trong 命裡逢空",
+      "researchNote": "Catalog ghi Chiết Xỉ trong khi nguồn ghi 折翅 (Chiết Sí); KHÔNG tự quy về cùng rule.",
+      "alternativeUrl": "https://tsight.io/articles/4752831"
+    },
+    {
+      "combinationName": "Thiên Ất Củng Mệnh",
+      "matchedTerm": "天乙拱命",
+      "leadStatus": "MODERN_FORMULA_PAGE",
+      "candidateUrl": "https://www.108s.tw/article/info/262",
+      "locatorOrSection": "★形成條件",
+      "researchNote": "Trang ghi Thiên Khôi/Thiên Việt ở tam phương tứ chính; phân biệt 坐貴向貴.",
+      "alternativeUrl": ""
+    },
+    {
+      "combinationName": "Văn Tinh Củng Mệnh",
+      "matchedTerm": "文星拱命",
+      "leadStatus": "MODERN_FORMULA_PAGE",
+      "candidateUrl": "https://www.108s.tw/article/info/254",
+      "locatorOrSection": "★形成條件",
+      "researchNote": "Trang ghi Văn Xương/Văn Khúc trong tam phương tứ chính; không tự thay bằng 文星暗拱.",
+      "alternativeUrl": ""
+    },
+    {
+      "combinationName": "Thọ Tinh Nhập Miếu",
+      "matchedTerm": "壽星入廟",
+      "leadStatus": "MODERN_FORMULA_PAGE",
+      "candidateUrl": "https://www.108s.tw/article/info/236",
+      "locatorOrSection": "★形成條件",
+      "researchNote": "Trang ghi Thiên Lương ở Tý/Ngọ và điều kiện bổ sung; là nhận định cổ truyền, không dự báo tuổi thọ thực.",
+      "alternativeUrl": ""
+    },
+    {
+      "combinationName": "Anh Tinh Nhập Miếu",
+      "matchedTerm": "英星入廟",
+      "leadStatus": "MODERN_FORMULA_PAGE",
+      "candidateUrl": "https://www.108s.tw/article/info/208",
+      "locatorOrSection": "★形成條件",
+      "researchNote": "Trang ghi Phá Quân tại Tý/Ngọ; có điều kiện bổ sung theo can/miếu/phá cách.",
+      "alternativeUrl": ""
+    },
+    {
+      "combinationName": "Tài Ấn Giao Trì",
+      "matchedTerm": "",
+      "leadStatus": "NO_EXACT_FORMULA_FOUND",
+      "candidateUrl": "https://ziwei.yi958.com/zwds/5343/",
+      "locatorOrSection": "Có các mục 財印夾祿 hoặc 財蔭夾印 (KHÔNG PHẢI同名)",
+      "researchNote": "Chưa tìm thấy trang công thức với đúng tên; không thay nhầm Tài Ấn Giao Trì bằng Tài Ấn Giáp Lộc.",
+      "alternativeUrl": ""
+    },
+    {
+      "combinationName": "Giáp Đệ Đăng Khoa",
+      "matchedTerm": "甲第登科",
+      "leadStatus": "MODERN_FORMULA_PAGE",
+      "candidateUrl": "https://www.108s.tw/article/info/259",
+      "locatorOrSection": "★形成條件",
+      "researchNote": "Trang ghi Hóa Khoa ở Mệnh hội Hóa Quyền tam phương; danh xưng 甲第登庸 là dị danh trong nguồn.",
+      "alternativeUrl": ""
+    },
+    {
+      "combinationName": "Đế Ngộ Hung Đồ",
+      "matchedTerm": "帝遇凶徒",
+      "leadStatus": "ORIGINAL_TEXT_LOCATED",
+      "candidateUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽",
+      "locatorOrSection": "卷一 太微賦",
+      "researchNote": "Có cụm tên trong cổ phú; đây là một mệnh đề thơ, chưa đương nhiên là executable combination.",
+      "alternativeUrl": ""
+    },
+    {
+      "combinationName": "Nhật Nguyệt Tật Ách",
+      "matchedTerm": "日月疾厄",
+      "leadStatus": "ORIGINAL_TEXT_RELATED_AND_MODERN_FORMULA",
+      "candidateUrl": "https://m.gushiwen.cn/guwen/bookv_ffb4d5228ab7.aspx",
+      "locatorOrSection": "卷三 日月段: 日月疾厄命宮空",
+      "researchNote": "Có câu liên quan trong bản chép cổ văn và trang giảng giải; cần kiểm lại đúng định nghĩa rule.",
+      "alternativeUrl": "https://ziwei.yi958.com/zwds/5343/"
+    },
+    {
+      "combinationName": "Khúc Ám Đồng Cung",
+      "matchedTerm": "",
+      "leadStatus": "NO_EXACT_FORMULA_FOUND",
+      "candidateUrl": "https://ziwei.yi958.com/zwds/5343/",
+      "locatorOrSection": "Research index",
+      "researchNote": "Chưa thấy định nghĩa nguồn đáng tin với đúng tên; không suy rằng 文曲 + 巨門 là một cách đã chứng thư.",
+      "alternativeUrl": ""
+    },
+    {
+      "combinationName": "Thiên Cơ Tỵ Hợi",
+      "matchedTerm": "巳亥天機守命",
+      "leadStatus": "MODERN_FORMULA_PAGE",
+      "candidateUrl": "https://ziwei.yi958.com/zwds/5343/",
+      "locatorOrSection": "格局分析: 巳亥天機守命格",
+      "researchNote": "Trang thứ cấp có tên và điều kiện gặp sát, cần kiểm nguồn cổ thư.",
+      "alternativeUrl": ""
+    },
+    {
+      "combinationName": "Cự Phùng Tứ Sát",
+      "matchedTerm": "巨逢四煞 / 巨門四殺",
+      "leadStatus": "ORIGINAL_TEXT_RELATED_AND_MODERN_FORMULA",
+      "candidateUrl": "https://ziwei.yi958.com/zwds/5343/",
+      "locatorOrSection": "格局分析: 巨逢四殺格; 全書卷三 巨門",
+      "researchNote": "Có đoạn cổ thư 巨門四殺陷而凶, nhưng phải phân loại phạm vi và sao bắt buộc.",
+      "alternativeUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/卷三"
+    },
+    {
+      "combinationName": "Lộ Bàng Mai Thi",
+      "matchedTerm": "路上埋屍",
+      "leadStatus": "NAME_MISMATCH_REQUIRES_REVIEW",
+      "candidateUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽",
+      "locatorOrSection": "卷一 太微賦: 七殺廉貞同位; 卷三 七殺段",
+      "researchNote": "Cổ thư dùng 路上埋屍 (Lộ Thượng Mai Thi), catalog ghi Lộ Bàng; cần kiểm dị danh.",
+      "alternativeUrl": ""
+    },
+    {
+      "combinationName": "Hoa Cái Cư Phu Thê",
+      "matchedTerm": "華蓋在夫妻宮",
+      "leadStatus": "RELATED_ONLY",
+      "candidateUrl": "https://tuvi.cohoc.net/hoa-cai-cung-phu-the-la-gi-luan-giai-y-nghia-khi-ket-hop-voi-cac-sao-nid-18579.html",
+      "locatorOrSection": "Hoa Cái cung Phu Thê",
+      "researchNote": "Có bài về vị trí Hoa Cái trong Phu Thê, chưa chứng minh đây là tên cách cục cổ thư.",
+      "alternativeUrl": ""
+    },
+    {
+      "combinationName": "Lưỡng Trùng Thiên Mã",
+      "matchedTerm": "",
+      "leadStatus": "NO_EXACT_FORMULA_FOUND",
+      "candidateUrl": "https://www.108s.tw/article/index/20/40",
+      "locatorOrSection": "Research catalog",
+      "researchNote": "Chưa định vị văn bản đủ căn cứ cho tên Lưỡng Trùng Thiên Mã.",
+      "alternativeUrl": ""
+    },
+    {
+      "combinationName": "Cát Xứ Tàng Hung",
+      "matchedTerm": "吉處藏凶",
+      "leadStatus": "ORIGINAL_TEXT_LOCATED",
+      "candidateUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽",
+      "locatorOrSection": "卷一 太微賦 / 祿逢沖破",
+      "researchNote": "Có câu cổ phú với đúng cụm; phải xem cùng câu để phân tích tiền đề.",
+      "alternativeUrl": ""
+    },
+    {
+      "combinationName": "Chúng Thủy Triều Đông",
+      "matchedTerm": "眾水朝東",
+      "leadStatus": "ORIGINAL_TEXT_LOCATED",
+      "candidateUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽",
+      "locatorOrSection": "卷一 太微賦 / 文耗居寅卯",
+      "researchNote": "Có đoạn cổ thư đúng cụm, không tự giản lược thành công thức sao nếu chưa phân tích 文耗.",
+      "alternativeUrl": ""
+    },
+    {
+      "combinationName": "Không Kiếp Giáp Mệnh",
+      "matchedTerm": "空劫夾命",
+      "leadStatus": "MODERN_FORMULA_PAGE",
+      "candidateUrl": "https://www.108s.tw/article/info/245",
+      "locatorOrSection": "★形成條件",
+      "researchNote": "Định nghĩa hai sao Không/Kiếp giáp Mệnh; không nhầm với Không Kiếp đồng Mệnh.",
+      "alternativeUrl": ""
+    },
+    {
+      "combinationName": "Kình Đà Giáp Mệnh",
+      "matchedTerm": "羊陀夾命",
+      "leadStatus": "MODERN_FORMULA_PAGE",
+      "candidateUrl": "https://www.108s.tw/article/info/247",
+      "locatorOrSection": "★形成條件",
+      "researchNote": "Kiểm điểm giáp cung theo Lộc Tồn và vị trí Kình/Đà trong trường phái đang dùng.",
+      "alternativeUrl": ""
+    },
+    {
+      "combinationName": "Cơ Cự Đồng Lâm",
+      "matchedTerm": "機巨同臨",
+      "leadStatus": "MODERN_FORMULA_PAGE",
+      "candidateUrl": "https://www.108s.tw/article/info/232",
+      "locatorOrSection": "★形成條件",
+      "researchNote": "Nguồn có mục 機巨同臨; cổ thư còn có 巨機居卯 nhưng chưa đồng nhất điều kiện.",
+      "alternativeUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/卷三"
+    },
+    {
+      "combinationName": "Thủy Trừng Quế Ngạc",
+      "matchedTerm": "水澄桂萼",
+      "leadStatus": "ORIGINAL_TEXT_LOCATED",
+      "candidateUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽",
+      "locatorOrSection": "卷一 太微賦 / 太陰居子",
+      "researchNote": "Có câu cổ phú trực tiếp về Thái Âm tại Tý.",
+      "alternativeUrl": ""
+    },
+    {
+      "combinationName": "Đồng Lương Tỵ Hợi",
+      "matchedTerm": "天同/天梁在巳亥",
+      "leadStatus": "RELATED_ONLY",
+      "candidateUrl": "https://www.108s.tw/article/info/430",
+      "locatorOrSection": "天梁坐巳/亥，對宮天同",
+      "researchNote": "Nguồn nói về bố cục Thiên Lương ở Tỵ/Hợi xung Thiên Đồng, nhưng chưa xác định quy tắc đúng của tên Việt.",
+      "alternativeUrl": ""
+    },
+    {
+      "combinationName": "Mệnh VCD Đắc Tam Không",
+      "matchedTerm": "命無正曜; 三空",
+      "leadStatus": "NO_EXACT_FORMULA_FOUND",
+      "candidateUrl": "https://destiny.to/ubbthreads/topic/69716",
+      "locatorOrSection": "Bàn về 命無正曜; không đủ chứng minh 三空",
+      "researchNote": "Nguồn nói Mệnh vô chính diệu, không có định nghĩa Tam Không đủ căn cứ; không gán tự động.",
+      "alternativeUrl": ""
+    }
+  ],
+  "count": 39,
+  "categoryCounts": {
+    "MODERN_FORMULA_PAGE": 18,
+    "RELATED_OR_ALIAS_REQUIRES_REVIEW": 1,
+    "ORIGINAL_TEXT_RELATED_AND_MODERN_FORMULA": 6,
+    "ORIGINAL_TEXT_LOCATED": 5,
+    "NAME_MISMATCH_REQUIRES_REVIEW": 3,
+    "NO_EXACT_FORMULA_FOUND": 4,
+    "RELATED_ONLY": 2
+  },
+  "disclaimer": "All rows are source discovery candidates only. NO new scholarly verification status has been assigned."
+}

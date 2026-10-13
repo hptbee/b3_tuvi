@@ -1,0 +1,108 @@
+{
+  "asOf": "2026-10-13",
+  "pr": "https://github.com/hptbee/b3_tuvi/pull/19",
+  "baseSha": "f80e10f7bb1bc54d4ad22f54fef208c4fc430bae",
+  "workingPdf": {
+    "url": "https://tuvithuchanh.com/wp-content/uploads/2022/11/Tu-vi-dau-so.pdf",
+    "editionId": "tan-bien-retypeset-277-cover-1956",
+    "declaredSha256": "941b104504dd552fe967354759da1683dda30a529aa59a8e570b05727f5b4458",
+    "sha256FreshlyVerified": false,
+    "documentVerifiedByScreenshot": true,
+    "original1956Authenticated": false,
+    "relevantPages": [
+      {
+        "pdfIndexZeroBased": 229,
+        "printedPage": 230,
+        "sections": [
+          "19.2.14",
+          "19.2.15"
+        ],
+        "visualKeyword": "Nhật ... tại Tỵ",
+        "extractedKeyword": "Nhật ... tại Tý"
+      },
+      {
+        "pdfIndexZeroBased": 70,
+        "printedPage": 71,
+        "sections": [
+          "Phú giải Nhật Nguyệt"
+        ],
+        "summary": "Sửu: Nhật Tỵ + Nguyệt Dậu; Mùi: Nhật Mão + Nguyệt Hợi; opposite palace conjunction also appears",
+        "additionalConflict": "Another phu giai passage labels Menh Suu with Sun Mao, Moon Hoi, contrary to its own other Suu example."
+      },
+      {
+        "pdfIndexZeroBased": 228,
+        "printedPage": 229,
+        "sections": [
+          "19.1.5"
+        ],
+        "summary": "Sửu target / conjunction at Mùi; Mùi target / conjunction at Sửu"
+      }
+    ]
+  },
+  "commentary": {
+    "url": "https://sonchu.vn/nghien-cuu/suu-tap-cac-bai-viet-cua-quach-ngoc-boi",
+    "authorAttributed": "Quách Ngọc Bội",
+    "type": "independent_editorial_interpretation",
+    "historicalPrintedVersionVerified": false,
+    "sections": [
+      "14. Nhật Nguyệt đồng lâm",
+      "15. Nhật Nguyệt tịnh minh"
+    ]
+  },
+  "cases": [
+    {
+      "name": "Nhật Nguyệt Tịnh Minh",
+      "slug": "nhat-nguyet-tinh-minh",
+      "printedSection": "19.2.15",
+      "printedClause1": {
+        "target": "Sửu",
+        "sun": "Tỵ",
+        "moon": "Hợi"
+      },
+      "extractedClause1": {
+        "target": "Sửu",
+        "sun": "Tý",
+        "moon": "Hợi"
+      },
+      "editorialCorrectionClause1": {
+        "target": "Sửu",
+        "sun": "Tỵ",
+        "moon": "Dậu"
+      },
+      "clause2": {
+        "target": "Mùi",
+        "sun": "Mão",
+        "moon": "Hợi"
+      },
+      "status": "visual_vs_text_layer_confirmed; editorial_change_requires_versioned_evidence"
+    },
+    {
+      "name": "Nhật Nguyệt Đồng Lâm",
+      "slug": "nhat-nguyet-dong-lam",
+      "printedSection": "19.2.14",
+      "printedClause1": {
+        "target": "Sửu",
+        "sun": "Tỵ",
+        "moon": "Hợi"
+      },
+      "extractedClause1": {
+        "target": "Sửu",
+        "sun": "Tý",
+        "moon": "Hợi"
+      },
+      "editorialCorrectionClause1": {
+        "target": "Sửu",
+        "sunAndMoonConjunction": "Mùi"
+      },
+      "clause2": {
+        "target": "Mùi",
+        "sunAndMoonConjunction": "Sửu"
+      },
+      "status": "visual_vs_text_layer_confirmed; printed_formula_internal_conflict_requires_versioned_correction"
+    }
+  ],
+  "archiveCandidate": {
+    "url": "https://archive.org/details/TuViDdauSoTanBien-VDThaiThuLang-DV",
+    "independentPageVisualCheckDone": false
+  }
+}

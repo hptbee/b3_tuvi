@@ -1,0 +1,23 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/245",
+  "sourceDigest": "aa2c0551ca20d77de526e3946c5add4fd2c8051d4afe5765884bfaf88db2e49b",
+  "claimId": "claim-9c-khong-kiep-giap-menh",
+  "variantType": "rule",
+  "formulaComparison": "MATCH",
+  "verdict": "MATCH",
+  "conditions": [
+    "palace_menh",
+    "star_khong_kiep_flank"
+  ],
+  "exceptions": [],
+  "quotation": "父母宮、兄弟宮各有一顆地空或地劫夾命宮，就能構成此格局的基本條件。",
+  "uncertainties": [
+    "The span does not establish that its Chinese wording is identical to the catalog name Không Kiếp Giáp Mệnh."
+  ],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-eb212ff7-1d7d-5717-84f9-0aecad616f80"
+}

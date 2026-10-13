@@ -1,0 +1,45 @@
+{
+  "decisionId": "tu-phu-vu-tuong-2026-10-13",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-9c-tu-phu-vu-tuong",
+  "schoolId": "unassigned-modern-article",
+  "variantType": "rule",
+  "variantId": "rule-not-runtime",
+  "sourceId": "thienco",
+  "editionId": "thienco-2026-10-13",
+  "locator": "tu-phu-vu-tuong.html",
+  "sourceDigest": "a4bdb4e50602f89087ca0c810dbf37b6446b26e05e7772d22213f3378c34db09",
+  "sourceUrl": "https://thienco.vn/tu-phu-vu-tuong.html",
+  "retrievedAt": "2026-10-13",
+  "pdfTextChecked": false,
+  "binding": "webpage_excerpt",
+  "identity": "UNRESOLVED_IDENTITY",
+  "quotationPolicy": "min-40-v1",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "PARTIAL",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/tu-phu-vu-tuong/review-a.json",
+      "agentId": "bc-d1bba23e-270a-5089-addf-0571a3eec2e4",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "MATCH",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/tu-phu-vu-tuong/review-b.json",
+      "agentId": "bc-b3fbd52e-f4d9-52fd-bfc8-5d8381b7f893",
+      "available": true
+    }
+  ],
+  "decision": "CONFLICT",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "notes": "Comparator CONFLICT. reviews disagree. Identity UNRESOLVED_IDENTITY. Models grok-4.7-high and gpt-5.6-terra-medium. Modern secondary page, not a checked printed edition. Runtime rule not changed."
+}

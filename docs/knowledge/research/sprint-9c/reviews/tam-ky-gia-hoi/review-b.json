@@ -1,0 +1,24 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/257",
+  "sourceDigest": "7d67834d5fa1d05530439068bf4cbb517ecba7fa32ceb7174b9bc85ee91924d9",
+  "claimId": "claim-9c-tam-ky-gia-hoi",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "palace_menh",
+    "star_hoa_loc_quyen_khoa",
+    "bright"
+  ],
+  "exceptions": [],
+  "quotation": "命宮三方四正內，會集化祿、化權、化科，就能構成此格局的基本條件。貴格還需看宮位內的主星是否廟旺，以及化忌只能在命宮、財帛宮、官祿宮、田宅宮、福德宮。",
+  "uncertainties": [
+    "The span does not establish that this Chinese wording is the same rule as the catalog name Tam Kỳ Gia Hội."
+  ],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-5f822fcb-ce5e-54ee-9b41-089a79697298"
+}

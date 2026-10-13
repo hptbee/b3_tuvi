@@ -1,0 +1,24 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/217",
+  "sourceDigest": "14c68f9f7bc470a5c7c1cd2e65f813cd86b7242bbf78a0c6e7986b011b2c4f5a",
+  "claimId": "claim-9c-hoa-tham",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "palace_menh",
+    "star_tham_host",
+    "star_hoa_same"
+  ],
+  "exceptions": [],
+  "quotation": "火貪格，貪狼星獨坐命宮，同宮有火星為正格，其次是對宮。",
+  "uncertainties": [
+    "UNRESOLVED_IDENTITY"
+  ],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-e8ed5e91-8d35-5cf4-9a5b-95f0f2ca6eda"
+}

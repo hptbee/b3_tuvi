@@ -1,0 +1,52 @@
+{
+  "decisionId": "cat-xu-tang-hung-2026-10-13",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-2",
+  "subjectType": "claim",
+  "subjectId": "claim-9c-cat-xu-tang-hung",
+  "schoolId": "unassigned-modern-article",
+  "variantType": "rule",
+  "variantId": "rule-not-runtime",
+  "sourceId": "wikisource-zwds-quanshu",
+  "editionId": "wikisource-zwds-oldid-850734",
+  "locator": "1.taivi-phu",
+  "sourceDigest": "a2c081961df8e1b841688678fbc48ffabd27236232a586371ead7385d3685ce9",
+  "sourceUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽",
+  "retrievedAt": "2026-10-13",
+  "pdfTextChecked": false,
+  "binding": "wikisource_transcription_oldid_850734",
+  "identity": "UNRESOLVED_IDENTITY",
+  "quotationPolicy": "source-sentence-v2",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "NOT_IMPLEMENTED",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/cat-xu-tang-hung/review-a.json",
+      "agentId": "bc-12d5a2dd-259c-5baa-9828-2ac97cc8173a",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "NOT_IMPLEMENTED",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/cat-xu-tang-hung/review-b.json",
+      "agentId": "bc-e9ac5626-ffda-599d-bd78-4d656245ce30",
+      "available": true
+    }
+  ],
+  "decision": "AI_ACCEPTED",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "notes": "Pass 2 rerun under source-sentence-v2 because pass 1 quotations were shorter than a complete bound sentence. Pass 1 agents bc-e67fe3c7-ea49-5317-aa62-3038bc4051b1 and bc-8a3ff8ac-7885-5be8-a9f9-640aed395def kept in review-a-pass1.json and review-b-pass1.json. Comparator AI_ACCEPTED formula NOT_IMPLEMENTED. Identity UNRESOLVED_IDENTITY. Models grok-4.7-high and gpt-5.6-terra-medium. Runtime rule not changed.",
+  "crossReviewOutcome": "AI_CROSS_REVIEWED",
+  "formulaComparison": "NOT_IMPLEMENTED",
+  "conditions": [
+    "aphorism_only",
+    "loc_clash"
+  ],
+  "exceptions": []
+}

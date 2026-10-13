@@ -1,0 +1,22 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "com9-2026-10-13",
+  "locator": "pattern/34",
+  "sourceDigest": "04983c9938258609dbc9d0e1d046114f78e45e8a2b501c4ea01781554300767a",
+  "claimId": "claim-9c-song-loc-trieu-vien",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "palace_menh",
+    "star_loc_not_host",
+    "star_loc_tam_hop"
+  ],
+  "exceptions": [],
+  "quotation": "命宮無祿星坐守，但祿存與化祿分別位于命宮的三合宮，一守官祿一守財帛，是為最佳結構。",
+  "uncertainties": [],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-3f1b1f00-4fe9-5651-a978-9a69007e1c82"
+}

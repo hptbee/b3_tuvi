@@ -1,0 +1,35 @@
+{
+  "retrievedAt": "2026-10-13",
+  "note": "Snapshot from the pass that stopped before these four reviews. The later decisions are in docs/knowledge/research/sprint-9c/decisions/. This file is not the current disposition.",
+  "rows": [
+    {
+      "combinationName": "Tài Ấn Giao Trì",
+      "status": "RELATED_CONCEPT_ONLY",
+      "url": "https://ziweiai.com/zh-TW/notes/wuqu-tianxiang-yinshen-minggong-justice-service",
+      "httpStatus": 200,
+      "observation": "The page title is about 武曲天相 at Dần/Thân. It does not use the catalog name Tài Ấn Giao Trì. No exact historical title was found in this pass."
+    },
+    {
+      "combinationName": "Khúc Ám Đồng Cung",
+      "status": "RELATED_CONCEPT_ONLY",
+      "url": "https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽",
+      "httpStatus": 200,
+      "secondaryUrl": "https://www.ziwei.info/zh-tw/detail/3233",
+      "secondaryHttpStatus": 403,
+      "observation": "Wikisource oldid 850734 is the whole book and contains 文曲. That occurrence was not a bound sentence of a cách named Khúc Ám Đồng Cung. The secondary page returned HTTP 403, so its text was not read."
+    },
+    {
+      "combinationName": "Hoa Cái Cư Phu Thê",
+      "status": "SOURCE_NOT_LOCATED_FOR_EXACT_IDENTITY",
+      "url": "https://services.shen88.cn/ziweidoushu/pc-108861.html",
+      "httpStatus": 200,
+      "observation": "The page title discusses 华盖 in the spouse palace. It does not state the catalog formula (Hoa Cái at Phu Thê plus a malefic). Catalog required_stars is Hóa Kỵ, while rulesV2 hoa_cai_cu_phu_the requires Hoa Cái. That mismatch is a remediation finding. No runtime edit was made."
+    },
+    {
+      "combinationName": "Lưỡng Trùng Thiên Mã",
+      "status": "SOURCE_NOT_LOCATED_FOR_EXACT_IDENTITY",
+      "searches": ["兩重天馬", "流年天馬", "月馬 年馬"],
+      "observation": "No fetched page stated natal Thiên Mã meeting Lưu Thiên Mã with a sát condition under this catalog name. A related page describes 月馬 and 年馬 as two different horses (https://ask.destiny.to/consultant/51/blog/4d7694). That is not this rule. No Lưu Thiên Mã placement was invented. No rulesV2 row was added."
+    }
+  ]
+}

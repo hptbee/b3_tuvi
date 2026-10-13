@@ -1,0 +1,53 @@
+{
+  "decisionId": "thien-co-ty-hoi-2026-10-13",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-9c-thien-co-ty-hoi",
+  "schoolId": "unassigned-modern-article",
+  "variantType": "rule",
+  "variantId": "rule-not-runtime",
+  "sourceId": "display-tw",
+  "editionId": "display-tw-2026-10-13",
+  "locator": "p128.htm",
+  "sourceDigest": "61110ae5e94cfea0d8c63495374402527b8c73618d97b7a02a4b636b63b1fe24",
+  "sourceUrl": "https://display.tw/p128.htm",
+  "retrievedAt": "2026-10-13",
+  "pdfTextChecked": false,
+  "binding": "webpage_excerpt",
+  "identity": "UNRESOLVED_IDENTITY",
+  "quotationPolicy": "min-40-v1",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "NOT_IMPLEMENTED",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/thien-co-ty-hoi/review-a.json",
+      "agentId": "bc-503064f9-3148-5a76-9ac8-243e0beb64e2",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "NOT_IMPLEMENTED",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/thien-co-ty-hoi/review-b.json",
+      "agentId": "bc-2004b14f-bf3d-5a8e-935f-da2a056cad54",
+      "available": true
+    }
+  ],
+  "decision": "AI_ACCEPTED",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "notes": "Comparator AI_ACCEPTED. formula NOT_IMPLEMENTED. Identity UNRESOLVED_IDENTITY. Models grok-4.7-high and gpt-5.6-terra-medium. Modern secondary page, not a checked printed edition. Runtime rule not changed.",
+  "crossReviewOutcome": "AI_CROSS_REVIEWED",
+  "formulaComparison": "NOT_IMPLEMENTED",
+  "conditions": [
+    "branch_ty_hoi_alone",
+    "star_co_host",
+    "star_nguyet_opposite"
+  ],
+  "exceptions": []
+}

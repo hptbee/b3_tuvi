@@ -1,0 +1,45 @@
+{
+  "decisionId": "ban-khong-chiet-xi-2026-10-13",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-9c-ban-khong-chiet-xi",
+  "schoolId": "unassigned-modern-article",
+  "variantType": "rule",
+  "variantId": "rule-not-runtime",
+  "sourceId": "xinglin-108s",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/267",
+  "sourceDigest": "a67dd438279af404237b10df36c749e386d960c8aadba65433021a8f4ab2182b",
+  "sourceUrl": "https://www.108s.tw/article/info/267",
+  "retrievedAt": "2026-10-13",
+  "pdfTextChecked": false,
+  "binding": "webpage_excerpt",
+  "identity": "NAME_MISMATCH",
+  "quotationPolicy": "source-sentence-v2",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "CONFLICT",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/ban-khong-chiet-xi/review-a.json",
+      "agentId": "bc-c6e85022-88d7-52a4-b206-4dd593d2c857",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "CONFLICT",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/ban-khong-chiet-xi/review-b.json",
+      "agentId": "bc-e8550242-0251-5184-8f7f-9e1699cd352c",
+      "available": true
+    }
+  ],
+  "decision": "CONFLICT",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "notes": "Comparator CONFLICT. reviews disagree on conditions Identity NAME_MISMATCH. Models grok-4.7-high and gpt-5.6-terra-medium. Runtime rule not changed."
+}

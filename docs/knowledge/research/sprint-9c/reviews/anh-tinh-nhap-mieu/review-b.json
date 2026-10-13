@@ -1,0 +1,24 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/208",
+  "sourceDigest": "299fec3e1179e21542dbf83fc2b08a6d1a1263003b41f6526c8f9e7bbdd428fd",
+  "claimId": "claim-9c-anh-tinh-nhap-mieu",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "branch_ty_ngo",
+    "star_pha_host",
+    "star_liem_tuong_opposite"
+  ],
+  "exceptions": [],
+  "quotation": "破軍星獨坐子位或午位，對宮廉貞天相，就能構成此格局的基本條件。",
+  "uncertainties": [
+    "UNRESOLVED_IDENTITY"
+  ],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-823a842f-63c4-5511-872f-1e5bc376fae7"
+}

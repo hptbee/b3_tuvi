@@ -1,0 +1,21 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/206",
+  "sourceDigest": "6dcd7372497707ab6ed7bfb40d8a431b999510ce3c649c77aaddf1432bc83cfe",
+  "claimId": "claim-9c-hinh-ky-giap-an",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "school_dependent",
+    "star_tuong_hoa_ky"
+  ],
+  "exceptions": [],
+  "quotation": "對於刑忌夾印格，各門派的定義皆不盡相同，最主要原因是庚年天干，天相是否會化忌所導致不同解讀。",
+  "uncertainties": [],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-714aaa66-48de-53e2-8318-7cac849bd3a0"
+}

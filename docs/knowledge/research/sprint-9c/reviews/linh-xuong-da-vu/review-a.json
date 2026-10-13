@@ -1,0 +1,23 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/205",
+  "sourceDigest": "2b219bed52a438aae58bcdbf5b63c1332328e760d326aad5a89ee53e116ee9eb",
+  "claimId": "claim-9c-linh-xuong-da-vu",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "palace_menh",
+    "branch_thin_tuat",
+    "star_vu_host",
+    "star_linh_da_xuong"
+  ],
+  "exceptions": [],
+  "quotation": "武曲星獨坐命宮在辰或戌位，對宮為貪狼星，三方四正內，會集鈴星、陀羅星、文昌星，就能構成此格局的基本條件。",
+  "uncertainties": [],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-99daba64-3e95-58ff-a555-2ab7df637c83"
+}

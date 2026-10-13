@@ -1,0 +1,44 @@
+{
+  "decisionId": "thach-trung-an-ngoc-2026-10-13",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-9c-thach-trung-an-ngoc",
+  "schoolId": "unassigned-modern-article",
+  "variantType": "rule",
+  "variantId": "rule-not-runtime",
+  "sourceId": "xinglin-108s",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/227",
+  "sourceDigest": "490ffee1da67ba414b3b0b164eecbf9bacb95ff1fd82e3436c31e81f610d3884",
+  "sourceUrl": "https://www.108s.tw/article/info/227",
+  "pdfTextChecked": false,
+  "binding": "webpage_excerpt",
+  "identity": "UNRESOLVED_IDENTITY",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "PARTIAL",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/thach-trung-an-ngoc/review-a.json",
+      "agentId": "bc-a80e424c-fba7-53ee-a605-d78ca0c7b3dc",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "MATCH",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/thach-trung-an-ngoc/review-b.json",
+      "agentId": "bc-ab4c7ce0-a5bf-5d10-a53f-bbcf642126cf",
+      "available": true
+    }
+  ],
+  "decision": "CONFLICT",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "notes": "Comparator returned CONFLICT: reviews disagree. The runtime rule was not changed.",
+  "retrievedAt": "2026-10-13"
+}

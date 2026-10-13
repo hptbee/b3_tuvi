@@ -1,0 +1,21 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "wikisource-zwds-oldid-850734",
+  "locator": "1.taivi-phu",
+  "sourceDigest": "8a625e411c7edb8d407b15ccd2340c06e5498f49b4a8c42059f86473ebc9ff5a",
+  "claimId": "claim-9c-thuy-trung-que-ngac",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "branch_ty",
+    "star_nguyet_host"
+  ],
+  "exceptions": [],
+  "quotation": "太陰居子，號曰水澄桂萼",
+  "uncertainties": [],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-dc79606b-acf3-506a-9d9a-8fa20bdf2cb8"
+}

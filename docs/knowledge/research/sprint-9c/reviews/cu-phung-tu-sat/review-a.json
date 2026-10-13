@@ -1,0 +1,25 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "tuvisonkhiem-2026-10-13",
+  "locator": "thu-vien/cach-cuc/cu-phung-tu-sat",
+  "sourceDigest": "6f07dc0cce757c6f88444f8c4b3ed79f35f3db6fc4656803505e661ceab0d6b8",
+  "claimId": "claim-9c-cu-phung-tu-sat",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "star_cu_menh",
+    "sat_kinh_or_da",
+    "sat_linh_or_hoa",
+    "sat_khong_or_kiep",
+    "palace_tam_phuong"
+  ],
+  "exceptions": [],
+  "quotation": "Cự Môn tọa Mệnh + (Kình hoặc Đà) + (Linh hoặc Hỏa) + (Không hoặc Kiếp) trong tam phương tứ chính",
+  "uncertainties": [],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-97631a6a-afe3-542b-956a-98236f8462b2",
+  "effort": "high"
+}

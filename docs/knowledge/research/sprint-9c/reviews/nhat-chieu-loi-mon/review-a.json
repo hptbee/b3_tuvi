@@ -1,0 +1,27 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/224",
+  "sourceDigest": "5cfe5c74eb3d2f1344df9aa758073d125234c9705c9f4a921cd9c50b5142c6c1",
+  "claimId": "claim-9c-nhat-chieu-loi-mon",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "palace_menh",
+    "branch_mao",
+    "star_duong_luong_same",
+    "avoid_sat_khong_kiep",
+    "strengthened_by_loc_qui"
+  ],
+  "exceptions": [],
+  "quotation": "太陽星、天梁星同宮坐命在卯位，就能構成此格局的基本條件。貴格需三方四正皆無煞忌及地空、地劫，還需有祿存或化祿、天魁、天鉞、左輔、右弼等吉星會照，越多越好。",
+  "uncertainties": [
+    "The span does not state that this Chinese wording is the same rule as the catalog name Nhật Chiếu Lôi Môn.",
+    "The runtime rule states target menh and branch Mão but samePalace lists only Thái Dương, so it omits 天梁星 from the same-palace requirement and omits the 貴格 requirements 三方四正皆無煞忌及地空、地劫 and 祿存或化祿、天魁、天鉞、左輔、右弼."
+  ],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-0b0b7957-b021-57de-8ddc-ffc0e24e1bcd"
+}

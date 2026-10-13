@@ -1,0 +1,54 @@
+{
+  "decisionId": "nhat-chieu-loi-mon-2026-10-13",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-9c-nhat-chieu-loi-mon",
+  "schoolId": "unassigned-modern-article",
+  "variantType": "rule",
+  "variantId": "rule-not-runtime",
+  "sourceId": "xinglin-108s",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/224",
+  "sourceDigest": "5cfe5c74eb3d2f1344df9aa758073d125234c9705c9f4a921cd9c50b5142c6c1",
+  "sourceUrl": "https://www.108s.tw/article/info/224",
+  "pdfTextChecked": false,
+  "binding": "webpage_excerpt",
+  "identity": "UNRESOLVED_IDENTITY",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "PARTIAL",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/nhat-chieu-loi-mon/review-a.json",
+      "agentId": "bc-0b0b7957-b021-57de-8ddc-ffc0e24e1bcd",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "PARTIAL",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/nhat-chieu-loi-mon/review-b.json",
+      "agentId": "bc-3e4b8980-83dd-5b2d-9d41-ebb005924ce1",
+      "available": true
+    }
+  ],
+  "decision": "AI_ACCEPTED",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "notes": "Comparator agreed on PARTIAL. The Vietnamese catalog name is not proven by the excerpt. The runtime rule was not changed.",
+  "crossReviewOutcome": "AI_CROSS_REVIEWED",
+  "formulaComparison": "PARTIAL",
+  "conditions": [
+    "avoid_sat_khong_kiep",
+    "branch_mao",
+    "palace_menh",
+    "star_duong_luong_same",
+    "strengthened_by_loc_qui"
+  ],
+  "exceptions": [],
+  "retrievedAt": "2026-10-13"
+}

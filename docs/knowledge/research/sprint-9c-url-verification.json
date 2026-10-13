@@ -1,0 +1,656 @@
+{
+  "retrievedAt": "2026-10-13",
+  "wikisourceOldid": 850734,
+  "candidates": [
+    {
+      "combinationName": "Tử Phủ Vũ Tướng",
+      "candidateUrl": "https://amlichvietnam.vn/kien-thuc/tu-vi/cach-tu-phu-vu-tuong",
+      "httpStatus": 200,
+      "finalUrl": "https://amlichvietnam.vn/kien-thuc/tu-vi/cach-tu-phu-vu-tuong",
+      "title": "Cách Tử Phủ Vũ Tướng: nhận diện trên lá số, điều kiện thành cách và phá cách | AmLichVietnam.vn",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [],
+      "formationHeadingPresent": false,
+      "packLeadStatus": "MODERN_FORMULA_PAGE",
+      "identity": "EXACT_IDENTITY",
+      "identityNote": "Fetched title contains the catalog name. The page is a modern Vietnamese article. The candidate Chinese term 紫府武相 was not in the retrieved text.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Sát Phá Tham",
+      "candidateUrl": "https://fortunecloud.co/learn/san-he-school",
+      "httpStatus": 200,
+      "finalUrl": "https://fortunecloud.co/learn/san-he-school",
+      "title": "三合派紫微斗數：派別源流與飛星派差別 - 雲算",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "殺破狼"
+      ],
+      "formationHeadingPresent": false,
+      "packLeadStatus": "RELATED_OR_ALIAS_REQUIRES_REVIEW",
+      "identity": "RELATED_CONCEPT",
+      "identityNote": "The page title is a San He school article. 殺破狼 appears as a star group, and the same page says a star group is not a 格.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Dương Lương Xương Lộc",
+      "candidateUrl": "https://www.108s.tw/article/info/225",
+      "httpStatus": 200,
+      "finalUrl": "https://www.108s.tw/article/info/225",
+      "title": "陽梁昌祿格-從星開始 紫微研究苑 | 星林學苑 - 紫微斗數 玄空風水",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "陽梁昌祿"
+      ],
+      "formationHeadingPresent": true,
+      "packLeadStatus": "MODERN_FORMULA_PAGE",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "A page was retrieved. Equivalence between the catalog name and the Chinese page is not established beyond the discovery pack, so identity stays unresolved.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Nhật Chiếu Lôi Môn",
+      "candidateUrl": "https://www.108s.tw/article/info/224",
+      "httpStatus": 200,
+      "finalUrl": "https://www.108s.tw/article/info/224",
+      "title": "日照雷門格-從星開始 紫微研究苑 | 星林學苑 - 紫微斗數 玄空風水",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "日照雷門",
+        "日出扶桑"
+      ],
+      "formationHeadingPresent": true,
+      "packLeadStatus": "ORIGINAL_TEXT_RELATED_AND_MODERN_FORMULA",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "A page was retrieved. Equivalence between the catalog name and the Chinese page is not established beyond the discovery pack, so identity stays unresolved.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Hỏa Tham",
+      "candidateUrl": "https://www.108s.tw/article/info/217",
+      "httpStatus": 200,
+      "finalUrl": "https://www.108s.tw/article/info/217",
+      "title": "火鈴貪格 (火貪格、鈴貪格)-從星開始 紫微研究苑 | 星林學苑 - 紫微斗數 玄空風水",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "火貪"
+      ],
+      "formationHeadingPresent": true,
+      "packLeadStatus": "ORIGINAL_TEXT_RELATED_AND_MODERN_FORMULA",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "A page was retrieved. Equivalence between the catalog name and the Chinese page is not established beyond the discovery pack, so identity stays unresolved.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Linh Tham",
+      "candidateUrl": "https://www.108s.tw/article/info/217",
+      "httpStatus": 200,
+      "finalUrl": "https://www.108s.tw/article/info/217",
+      "title": "火鈴貪格 (火貪格、鈴貪格)-從星開始 紫微研究苑 | 星林學苑 - 紫微斗數 玄空風水",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "鈴貪"
+      ],
+      "formationHeadingPresent": true,
+      "packLeadStatus": "MODERN_FORMULA_PAGE",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "A page was retrieved. Equivalence between the catalog name and the Chinese page is not established beyond the discovery pack, so identity stays unresolved.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Thạch Trung Ẩn Ngọc",
+      "candidateUrl": "https://www.108s.tw/article/info/227",
+      "httpStatus": 200,
+      "finalUrl": "https://www.108s.tw/article/info/227",
+      "title": "石中隱玉格-從星開始 紫微研究苑 | 星林學苑 - 紫微斗數 玄空風水",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "石中隱玉"
+      ],
+      "formationHeadingPresent": true,
+      "packLeadStatus": "ORIGINAL_TEXT_LOCATED",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "A page was retrieved. Equivalence between the catalog name and the Chinese page is not established beyond the discovery pack, so identity stays unresolved.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Tam Kỳ Gia Hội",
+      "candidateUrl": "https://www.108s.tw/article/info/257",
+      "httpStatus": 200,
+      "finalUrl": "https://www.108s.tw/article/info/257",
+      "title": "三奇嘉會格-從星開始 紫微研究苑 | 星林學苑 - 紫微斗數 玄空風水",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "三奇嘉會",
+        "科權祿拱"
+      ],
+      "formationHeadingPresent": true,
+      "packLeadStatus": "ORIGINAL_TEXT_RELATED_AND_MODERN_FORMULA",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "A page was retrieved. Equivalence between the catalog name and the Chinese page is not established beyond the discovery pack, so identity stays unresolved.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Song Lộc Triều Viên",
+      "candidateUrl": "https://ziweidoushu.com9.tw/pattern/34",
+      "httpStatus": 200,
+      "finalUrl": "https://ziweidoushu.com9.tw/pattern/34",
+      "title": "【雙祿朝垣格】 - 紫微斗數格局",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "雙祿朝垣"
+      ],
+      "formationHeadingPresent": false,
+      "packLeadStatus": "MODERN_FORMULA_PAGE",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "A page was retrieved. Equivalence between the catalog name and the Chinese page is not established beyond the discovery pack, so identity stays unresolved.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Hùng Tú Triều Viên",
+      "candidateUrl": "https://www.108s.tw/article/info/213",
+      "httpStatus": 200,
+      "finalUrl": "https://www.108s.tw/article/info/213",
+      "title": "雄宿朝垣格-從星開始 紫微研究苑 | 星林學苑 - 紫微斗數 玄空風水",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "雄宿朝垣"
+      ],
+      "formationHeadingPresent": true,
+      "packLeadStatus": "NAME_MISMATCH_REQUIRES_REVIEW",
+      "identity": "NAME_MISMATCH",
+      "identityNote": "Fetched title is 雄宿朝垣格. That is not evidence the catalog name Hùng Tú is the same pattern.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Linh Xương Đà Vũ",
+      "candidateUrl": "https://www.108s.tw/article/info/205",
+      "httpStatus": 200,
+      "finalUrl": "https://www.108s.tw/article/info/205",
+      "title": "鈴昌陀武格-從星開始 紫微研究苑 | 星林學苑 - 紫微斗數 玄空風水",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "鈴昌陀武"
+      ],
+      "formationHeadingPresent": true,
+      "packLeadStatus": "MODERN_FORMULA_PAGE",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "A page was retrieved. Equivalence between the catalog name and the Chinese page is not established beyond the discovery pack, so identity stays unresolved.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Hình Kỵ Giáp Ấn",
+      "candidateUrl": "https://www.108s.tw/article/info/206",
+      "httpStatus": 200,
+      "finalUrl": "https://www.108s.tw/article/info/206",
+      "title": "刑忌夾印格-從星開始 紫微研究苑 | 星林學苑 - 紫微斗數 玄空風水",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "刑忌夾印"
+      ],
+      "formationHeadingPresent": true,
+      "packLeadStatus": "MODERN_FORMULA_PAGE",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "A page was retrieved. Equivalence between the catalog name and the Chinese page is not established beyond the discovery pack, so identity stays unresolved.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Mệnh Lý Phùng Không",
+      "candidateUrl": "https://www.108s.tw/article/info/267",
+      "httpStatus": 200,
+      "finalUrl": "https://www.108s.tw/article/info/267",
+      "title": "命裡逢空格-從星開始 紫微研究苑 | 星林學苑 - 紫微斗數 玄空風水",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "命裡逢空"
+      ],
+      "formationHeadingPresent": true,
+      "packLeadStatus": "MODERN_FORMULA_PAGE",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "A page was retrieved. Equivalence between the catalog name and the Chinese page is not established beyond the discovery pack, so identity stays unresolved.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Kình Đà Hiệp Kỵ",
+      "candidateUrl": "https://www.108s.tw/article/info/248",
+      "httpStatus": 200,
+      "finalUrl": "https://www.108s.tw/article/info/248",
+      "title": "羊陀夾忌格-從星開始 紫微研究苑 | 星林學苑 - 紫微斗數 玄空風水",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "羊陀夾忌"
+      ],
+      "formationHeadingPresent": true,
+      "packLeadStatus": "MODERN_FORMULA_PAGE",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "A page was retrieved. Equivalence between the catalog name and the Chinese page is not established beyond the discovery pack, so identity stays unresolved.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Phong Lưu Thái Trượng",
+      "candidateUrl": "https://www.108s.tw/article/info/220",
+      "httpStatus": 200,
+      "finalUrl": "https://www.108s.tw/article/info/220",
+      "title": "風流綵杖格-從星開始 紫微研究苑 | 星林學苑 - 紫微斗數 玄空風水",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "風流綵杖",
+        "風流彩杖"
+      ],
+      "formationHeadingPresent": true,
+      "packLeadStatus": "ORIGINAL_TEXT_RELATED_AND_MODERN_FORMULA",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "A page was retrieved. Equivalence between the catalog name and the Chinese page is not established beyond the discovery pack, so identity stays unresolved.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Nhật Nguyệt Tàng Huy",
+      "candidateUrl": "https://www.jollen.tw/97-%E6%97%A5%E6%9C%88%E8%97%8F%E8%BC%9D.html",
+      "httpStatus": 200,
+      "finalUrl": "https://www.jollen.tw/97-%E6%97%A5%E6%9C%88%E8%97%8F%E8%BC%9D.html",
+      "title": "97. 日月藏輝",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "日月藏輝"
+      ],
+      "formationHeadingPresent": true,
+      "packLeadStatus": "MODERN_FORMULA_PAGE",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "A page was retrieved. Equivalence between the catalog name and the Chinese page is not established beyond the discovery pack, so identity stays unresolved.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Bán Không Chiết Xỉ",
+      "candidateUrl": "https://www.108s.tw/article/info/267",
+      "httpStatus": 200,
+      "finalUrl": "https://www.108s.tw/article/info/267",
+      "title": "命裡逢空格-從星開始 紫微研究苑 | 星林學苑 - 紫微斗數 玄空風水",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "半天折翅"
+      ],
+      "formationHeadingPresent": true,
+      "packLeadStatus": "NAME_MISMATCH_REQUIRES_REVIEW",
+      "identity": "NAME_MISMATCH",
+      "identityNote": "The retrieved page is 命裡逢空格 and the term found is 半天折翅, not the catalog wording Chiết Xỉ.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Thiên Ất Củng Mệnh",
+      "candidateUrl": "https://www.108s.tw/article/info/262",
+      "httpStatus": 200,
+      "finalUrl": "https://www.108s.tw/article/info/262",
+      "title": "天乙拱命格-從星開始 紫微研究苑 | 星林學苑 - 紫微斗數 玄空風水",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "天乙拱命"
+      ],
+      "formationHeadingPresent": true,
+      "packLeadStatus": "MODERN_FORMULA_PAGE",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "A page was retrieved. Equivalence between the catalog name and the Chinese page is not established beyond the discovery pack, so identity stays unresolved.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Văn Tinh Củng Mệnh",
+      "candidateUrl": "https://www.108s.tw/article/info/254",
+      "httpStatus": 200,
+      "finalUrl": "https://www.108s.tw/article/info/254",
+      "title": "文星拱命格-從星開始 紫微研究苑 | 星林學苑 - 紫微斗數 玄空風水",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "文星拱命"
+      ],
+      "formationHeadingPresent": true,
+      "packLeadStatus": "MODERN_FORMULA_PAGE",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "A page was retrieved. Equivalence between the catalog name and the Chinese page is not established beyond the discovery pack, so identity stays unresolved.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Thọ Tinh Nhập Miếu",
+      "candidateUrl": "https://www.108s.tw/article/info/236",
+      "httpStatus": 200,
+      "finalUrl": "https://www.108s.tw/article/info/236",
+      "title": "壽星入廟格,紫微斗數格局,從星開始 紫微研究苑 | 星林學苑 - 紫微斗數 玄空風水",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "壽星入廟"
+      ],
+      "formationHeadingPresent": true,
+      "packLeadStatus": "MODERN_FORMULA_PAGE",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "A page was retrieved. Equivalence between the catalog name and the Chinese page is not established beyond the discovery pack, so identity stays unresolved.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Anh Tinh Nhập Miếu",
+      "candidateUrl": "https://www.108s.tw/article/info/208",
+      "httpStatus": 200,
+      "finalUrl": "https://www.108s.tw/article/info/208",
+      "title": "英星入廟格-從星開始 紫微研究苑 | 星林學苑 - 紫微斗數 玄空風水",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "英星入廟"
+      ],
+      "formationHeadingPresent": true,
+      "packLeadStatus": "MODERN_FORMULA_PAGE",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "A page was retrieved. Equivalence between the catalog name and the Chinese page is not established beyond the discovery pack, so identity stays unresolved.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Tài Ấn Giao Trì",
+      "candidateUrl": "https://ziwei.yi958.com/zwds/5343/",
+      "httpStatus": 200,
+      "finalUrl": "https://ziwei.yi958.com/zwds/5343/",
+      "title": "紫微斗数格局分析 - 易德轩紫微斗数网",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [],
+      "formationHeadingPresent": false,
+      "packLeadStatus": "NO_EXACT_FORMULA_FOUND",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "A page was retrieved. Equivalence between the catalog name and the Chinese page is not established beyond the discovery pack, so identity stays unresolved.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Giáp Đệ Đăng Khoa",
+      "candidateUrl": "https://www.108s.tw/article/info/259",
+      "httpStatus": 200,
+      "finalUrl": "https://www.108s.tw/article/info/259",
+      "title": "甲第登科格-從星開始 紫微研究苑 | 星林學苑 - 紫微斗數 玄空風水",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "甲第登科"
+      ],
+      "formationHeadingPresent": true,
+      "packLeadStatus": "MODERN_FORMULA_PAGE",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "A page was retrieved. Equivalence between the catalog name and the Chinese page is not established beyond the discovery pack, so identity stays unresolved.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Đế Ngộ Hung Đồ",
+      "candidateUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽",
+      "httpStatus": 200,
+      "finalUrl": "https://zh.wikisource.org/zh-hant/%E7%B4%AB%E5%BE%AE%E6%96%97%E6%95%B8%E5%85%A8%E6%9B%B8/%E5%85%A8%E8%A6%BD",
+      "title": "紫微斗數全書/全覽 - 維基文庫，自由的圖書館",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [],
+      "formationHeadingPresent": false,
+      "packLeadStatus": "ORIGINAL_TEXT_LOCATED",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "The transcription uses 帝遇兇徒, not 帝遇凶徒. oldid 850734.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Nhật Nguyệt Tật Ách",
+      "candidateUrl": "https://m.gushiwen.cn/guwen/bookv_ffb4d5228ab7.aspx",
+      "httpStatus": 200,
+      "finalUrl": "https://m.gushiwen.cn/guwen/bookv_ffb4d5228ab7.aspx",
+      "title": "紫微斗数·卷三·论诸星同垣各司所宜分别富贵贫贱夭寿第九十七_古文岛_原古诗文网",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "日月疾厄"
+      ],
+      "formationHeadingPresent": false,
+      "packLeadStatus": "ORIGINAL_TEXT_RELATED_AND_MODERN_FORMULA",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "A page was retrieved. Equivalence between the catalog name and the Chinese page is not established beyond the discovery pack, so identity stays unresolved.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Khúc Ám Đồng Cung",
+      "candidateUrl": "https://ziwei.yi958.com/zwds/5343/",
+      "httpStatus": 200,
+      "finalUrl": "https://ziwei.yi958.com/zwds/5343/",
+      "title": "紫微斗数格局分析 - 易德轩紫微斗数网",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [],
+      "formationHeadingPresent": false,
+      "packLeadStatus": "NO_EXACT_FORMULA_FOUND",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "A page was retrieved. Equivalence between the catalog name and the Chinese page is not established beyond the discovery pack, so identity stays unresolved.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Thiên Cơ Tỵ Hợi",
+      "candidateUrl": "https://ziwei.yi958.com/zwds/5343/",
+      "httpStatus": 200,
+      "finalUrl": "https://ziwei.yi958.com/zwds/5343/",
+      "title": "紫微斗数格局分析 - 易德轩紫微斗数网",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "巳亥天機守命"
+      ],
+      "formationHeadingPresent": false,
+      "packLeadStatus": "MODERN_FORMULA_PAGE",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "A page was retrieved. Equivalence between the catalog name and the Chinese page is not established beyond the discovery pack, so identity stays unresolved.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Cự Phùng Tứ Sát",
+      "candidateUrl": "https://ziwei.yi958.com/zwds/5343/",
+      "httpStatus": 200,
+      "finalUrl": "https://ziwei.yi958.com/zwds/5343/",
+      "title": "紫微斗数格局分析 - 易德轩紫微斗数网",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [],
+      "formationHeadingPresent": false,
+      "packLeadStatus": "ORIGINAL_TEXT_RELATED_AND_MODERN_FORMULA",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "A page was retrieved. Equivalence between the catalog name and the Chinese page is not established beyond the discovery pack, so identity stays unresolved.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Lộ Bàng Mai Thi",
+      "candidateUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽",
+      "httpStatus": 200,
+      "finalUrl": "https://zh.wikisource.org/zh-hant/%E7%B4%AB%E5%BE%AE%E6%96%97%E6%95%B8%E5%85%A8%E6%9B%B8/%E5%85%A8%E8%A6%BD",
+      "title": "紫微斗數全書/全覽 - 維基文庫，自由的圖書館",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "路上埋屍"
+      ],
+      "formationHeadingPresent": false,
+      "packLeadStatus": "NAME_MISMATCH_REQUIRES_REVIEW",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "Wikisource oldid 850734 has 七殺廉貞同位，路上埋屍. The catalog name Lộ Bàng is not that phrase.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Hoa Cái Cư Phu Thê",
+      "candidateUrl": "https://tuvi.cohoc.net/hoa-cai-cung-phu-the-la-gi-luan-giai-y-nghia-khi-ket-hop-voi-cac-sao-nid-18579.html",
+      "httpStatus": 200,
+      "finalUrl": "https://tuvi.cohoc.net/hoa-cai-cung-phu-the-la-gi-luan-giai-y-nghia-khi-ket-hop-voi-cac-sao-nid-18579.html",
+      "title": "Hoa Cái cung Phu Thê là gì? Luận giải ý nghĩa khi kết hợp với các sao",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [],
+      "formationHeadingPresent": false,
+      "packLeadStatus": "RELATED_ONLY",
+      "identity": "RELATED_CONCEPT",
+      "identityNote": "Title is a Vietnamese article about Hoa Cái in the spouse palace, not a checked classical pattern name.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Lưỡng Trùng Thiên Mã",
+      "candidateUrl": "https://www.108s.tw/article/index/20/40",
+      "httpStatus": 200,
+      "finalUrl": "https://www.108s.tw/article/index/20/40",
+      "title": "紫微概論 | 星林學苑 - 紫微斗數 玄空風水",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [],
+      "formationHeadingPresent": false,
+      "packLeadStatus": "NO_EXACT_FORMULA_FOUND",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "A page was retrieved. Equivalence between the catalog name and the Chinese page is not established beyond the discovery pack, so identity stays unresolved.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Cát Xứ Tàng Hung",
+      "candidateUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽",
+      "httpStatus": 200,
+      "finalUrl": "https://zh.wikisource.org/zh-hant/%E7%B4%AB%E5%BE%AE%E6%96%97%E6%95%B8%E5%85%A8%E6%9B%B8/%E5%85%A8%E8%A6%BD",
+      "title": "紫微斗數全書/全覽 - 維基文庫，自由的圖書館",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "吉處藏凶"
+      ],
+      "formationHeadingPresent": false,
+      "packLeadStatus": "ORIGINAL_TEXT_LOCATED",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "Wikisource oldid 850734 has 祿逢沖破，吉處藏凶.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Chúng Thủy Triều Đông",
+      "candidateUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽",
+      "httpStatus": 200,
+      "finalUrl": "https://zh.wikisource.org/zh-hant/%E7%B4%AB%E5%BE%AE%E6%96%97%E6%95%B8%E5%85%A8%E6%9B%B8/%E5%85%A8%E8%A6%BD",
+      "title": "紫微斗數全書/全覽 - 維基文庫，自由的圖書館",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "眾水朝東"
+      ],
+      "formationHeadingPresent": false,
+      "packLeadStatus": "ORIGINAL_TEXT_LOCATED",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "Wikisource oldid 850734 has 文耗居寅卯，謂之眾水朝東.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Không Kiếp Giáp Mệnh",
+      "candidateUrl": "https://www.108s.tw/article/info/245",
+      "httpStatus": 200,
+      "finalUrl": "https://www.108s.tw/article/info/245",
+      "title": "​空劫夾命格-從星開始 紫微研究苑 | 星林學苑 - 紫微斗數 玄空風水",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "空劫夾命"
+      ],
+      "formationHeadingPresent": true,
+      "packLeadStatus": "MODERN_FORMULA_PAGE",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "A page was retrieved. Equivalence between the catalog name and the Chinese page is not established beyond the discovery pack, so identity stays unresolved.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Kình Đà Giáp Mệnh",
+      "candidateUrl": "https://www.108s.tw/article/info/247",
+      "httpStatus": 200,
+      "finalUrl": "https://www.108s.tw/article/info/247",
+      "title": "​羊陀夾命格-從星開始 紫微研究苑 | 星林學苑 - 紫微斗數 玄空風水",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "羊陀夾命"
+      ],
+      "formationHeadingPresent": true,
+      "packLeadStatus": "MODERN_FORMULA_PAGE",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "A page was retrieved. Equivalence between the catalog name and the Chinese page is not established beyond the discovery pack, so identity stays unresolved.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Cơ Cự Đồng Lâm",
+      "candidateUrl": "https://www.108s.tw/article/info/232",
+      "httpStatus": 200,
+      "finalUrl": "https://www.108s.tw/article/info/232",
+      "title": "機巨同臨格-從星開始 紫微研究苑 | 星林學苑 - 紫微斗數 玄空風水",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "機巨同臨"
+      ],
+      "formationHeadingPresent": true,
+      "packLeadStatus": "MODERN_FORMULA_PAGE",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "A page was retrieved. Equivalence between the catalog name and the Chinese page is not established beyond the discovery pack, so identity stays unresolved.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Thủy Trừng Quế Ngạc",
+      "candidateUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽",
+      "httpStatus": 200,
+      "finalUrl": "https://zh.wikisource.org/zh-hant/%E7%B4%AB%E5%BE%AE%E6%96%97%E6%95%B8%E5%85%A8%E6%9B%B8/%E5%85%A8%E8%A6%BD",
+      "title": "紫微斗數全書/全覽 - 維基文庫，自由的圖書館",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "水澄桂萼"
+      ],
+      "formationHeadingPresent": false,
+      "packLeadStatus": "ORIGINAL_TEXT_LOCATED",
+      "identity": "UNRESOLVED_IDENTITY",
+      "identityNote": "Wikisource oldid 850734 has 太陰居子，號曰水澄桂萼. The B3 rule pairs Thiên Đồng with Thái Âm, which this line does not say.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Đồng Lương Tỵ Hợi",
+      "candidateUrl": "https://www.108s.tw/article/info/430",
+      "httpStatus": 200,
+      "finalUrl": "https://www.108s.tw/article/info/430",
+      "title": "天梁坐巳/亥，對宮天同 紫微斗數命盤全集-星林學苑 | 星林學苑 - 紫微斗數 玄空風水",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [
+        "天同"
+      ],
+      "formationHeadingPresent": false,
+      "packLeadStatus": "RELATED_ONLY",
+      "identity": "RELATED_CONCEPT",
+      "identityNote": "Title is 天梁坐巳/亥，對宮天同. 天同 alone is not this catalog name.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    },
+    {
+      "combinationName": "Mệnh VCD Đắc Tam Không",
+      "candidateUrl": "https://destiny.to/ubbthreads/topic/69716",
+      "httpStatus": 200,
+      "finalUrl": "https://destiny.to/ubbthreads/topic/69716",
+      "title": "命無正曜格： - DestinyNet 命理網",
+      "retrievedAt": "2026-10-13",
+      "termsFound": [],
+      "formationHeadingPresent": false,
+      "packLeadStatus": "NO_EXACT_FORMULA_FOUND",
+      "identity": "RELATED_CONCEPT",
+      "identityNote": "Title is 命無正曜格. The retrieved page does not state Tam Không.",
+      "pdfTextChecked": false,
+      "binding": "webpage_retrieved"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "wikisource-zwds-oldid-850734",
+  "locator": "1.taivi-phu",
+  "sourceDigest": "06ebecafaf87c38ad7b1cb093f3698700166ecaa5fb9485d4b2d35fdcc499d47",
+  "claimId": "claim-9c-de-ngo-hung-do",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "aphorism_only"
+  ],
+  "exceptions": [],
+  "quotation": "祿居奴僕縱有官也奔馳，帝遇兇徒雖獲吉而無道。",
+  "uncertainties": [
+    "UNRESOLVED_IDENTITY: the span does not use the catalog name Đế Ngộ Hung Đồ, so 帝遇兇徒 is not proven identical to that name.",
+    "The span states only the aphorism and does not name Mệnh, Tử Vi, Kình Dương, or Hỏa Tinh.",
+    "Wikisource span is a digital transcription, not a checked printed edition."
+  ],
+  "agentId": "bc-ff44d590-55a0-5813-bb72-2c2d7d73213f",
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "available": true,
+  "effort": "high"
+}

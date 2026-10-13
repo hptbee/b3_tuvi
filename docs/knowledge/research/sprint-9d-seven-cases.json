@@ -1,0 +1,85 @@
+{
+  "version": "sprint9d-seven-v1",
+  "retrievedAt": "2026-10-13",
+  "modelsRerun": false,
+  "pdfPageChecked": false,
+  "wikisource": {
+    "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷一&oldid=7913704",
+    "oldid": 7913704,
+    "kind": "digital_transcription",
+    "note": "The retrieved page names 七杀朝斗, 日月同临, 巨日同宫, 紫府朝垣, and 日月并明 in one list, and 马落空亡 as 马既落亡. Those lines do not state the Tân Biên coordinates."
+  },
+  "cases": [
+    {
+      "slug": "nhat-nguyet-tinh-minh",
+      "url": "https://www.108s.tw/article/info/250",
+      "httpStatus": 200,
+      "quote": "命宮三方四正坐或會太陽星、太陰星，兩星需在廟旺位，就能構成此格局的基本條件。",
+      "disposition": "INSUFFICIENT_EVIDENCE",
+      "runtimeRelation": "DISJOINT_FROM_STORED_SPAN",
+      "cause": "The stored span places Thái Dương at Tý and Thái Âm at Hợi, or Thái Dương at Mão and Thái Âm at Hợi. The current placer emits Tí/Dần and Mão/Hợi, not Tí/Hợi. rulesV2 uses Sun at Tị/Ngọ and Moon at Dậu/Tí. The modern page is a third formula. branch_ty is the span word Tý, not Tỵ. avoid_tuan repeats avoid_tuan_triet.",
+      "counterexample": { "can": 0, "chi": 0, "day": 14, "month": 1, "hour": 2, "shows": "Mệnh Sửu, Sun Tị, Moon Dậu satisfies the runtime and not the stored Tý/Hợi clause" }
+    },
+    {
+      "slug": "cu-nhat-dong-cung",
+      "url": "https://www.108s.tw/article/info/223",
+      "httpStatus": 200,
+      "quote": "太陽星、巨門星在寅位或未位同宮坐命，就能構成此格局的基本條件。",
+      "laterSentence": "命坐寅位優於申位",
+      "disposition": "DOCUMENTED_SOURCE_VARIANT",
+      "runtimeRelation": "RUNTIME_ADDS_BRANCHES_THE_SPAN_OMITS",
+      "cause": "The Tân Biên span states same-palace Cự Môn and Thái Dương and no branch. rulesV2 adds Dần and Thân. A placement search found that pair only at Dần and Thân. The modern page says 寅 or 未 in the formation sentence and later compares 寅 with 申. Those were not corrected into one branch list.",
+      "counterexample": { "can": 0, "chi": 0, "day": 1, "month": 1, "hour": 7, "shows": "Mệnh Thân with Cự Môn and Thái Dương; no same-palace example outside Dần/Thân was found" }
+    },
+    {
+      "slug": "that-sat-trieu-dau",
+      "url": "https://www.108s.tw/article/info/207",
+      "httpStatus": 200,
+      "quote": "七殺坐命於寅位或申位，對宮為紫微天府，就能構成此格局的基本條件。",
+      "disposition": "DOCUMENTED_SOURCE_VARIANT",
+      "runtimeRelation": "OVERLAPPING_DIFFERENT",
+      "cause": "The stored span and this modern basic sentence require Dần/Thân and opposite Tử Vi with Thiên Phủ. rulesV2 also allows Tí and Ngọ and does not require that opposite pair. Auxiliaries on the modern page are quý grade.",
+      "positive": { "can": 0, "chi": 0, "day": 4, "month": 1, "hour": 7, "shows": "Mệnh Thân, opposite holds Tử Vi and Thiên Phủ" },
+      "negative": { "can": 0, "chi": 0, "day": 3, "month": 2, "hour": 10, "shows": "Mệnh Ngọ is inside the runtime branches and the opposite palace is not Tử Vi plus Thiên Phủ" }
+    },
+    {
+      "slug": "tham-vu-dong-hanh",
+      "url": "https://www.108s.tw/article/info/197",
+      "httpStatus": 200,
+      "quote": "命宮武曲星、貪狼星在丑位或是未位同坐，或武曲星、貪狼星，在辰位、戌位對照，就能構成此格局的基本條件。",
+      "disposition": "DOCUMENTED_SOURCE_VARIANT",
+      "runtimeRelation": "EQUIVALENT_ON_BASIC_SPAN",
+      "cause": "Both stored reviews say MATCH. Terra's branch_suu is not an extra requirement beyond Sửu or Mùi in the Tân Biên span. The modern page also accepts 辰/戌 opposition and treats 丑 as the quý seat. The original CONFLICT decision was not rewritten.",
+      "positive": { "can": 0, "chi": 0, "day": 2, "month": 1, "hour": 8, "shows": "Tham Lang and Vũ Khúc together at Mệnh Mùi" }
+    },
+    {
+      "slug": "ma-lac-khong-vong",
+      "url": "https://www.108s.tw/article/info/268",
+      "httpStatus": 200,
+      "quote": "命宮有天馬星遇地空、地劫同宮或是對宮沖命宮，就能構成此格局的基本條件。",
+      "disposition": "SOURCE_CONTRADICTION",
+      "runtimeRelation": "OVERLAPPING_DIFFERENT",
+      "cause": "Tân Biên recognition is Thiên Mã at Mệnh with Tuần or Triệt. The phụ luận is mitigation. 108s uses Địa Không or Địa Kiếp, same palace or opposite. rulesV2 uses tam phương tứ chính plus Địa Không or Tuần/Triệt. Grok omitted Tuần/Triệt and Terra added bright from the mitigation sentence."
+    },
+    {
+      "slug": "tu-phu-trieu-vien",
+      "url": "https://www.108s.tw/article/info/196",
+      "httpStatus": 200,
+      "quote": "紫微、天府在命宮的三方四正照命宮，皆稱為紫府朝垣格",
+      "disposition": "DOCUMENTED_SOURCE_VARIANT",
+      "runtimeRelation": "RUNTIME_BROADER",
+      "cause": "The stored span is a bright-host disjunction at Mệnh or Quan. Terra's general bright id repeats the star-specific bright wording. rulesV2 only requires the two stars in tam phương tứ chính. The modern eight-configuration page was not substituted for that sentence."
+    },
+    {
+      "slug": "nhat-nguyet-dong-lam",
+      "url": "https://www.108s.tw/article/info/222",
+      "httpStatus": 200,
+      "quote": "太陽星、太陰星，在丑位或未位同宮，就能構成此格局的基本條件。",
+      "disposition": "INSUFFICIENT_EVIDENCE",
+      "runtimeRelation": "MATCHES_MODERN_PAGE_NOT_STORED_SECOND_CLAUSE",
+      "cause": "The stored second clause is Mệnh at Mùi with both luminaries together at Sửu. That chart exists. rulesV2 and this modern page require both luminaries in the Mệnh palace at Sửu or Mùi. The stored first clause uses the unreachable Tý/Hợi pair. The printed page was not opened, so the stored wording was not replaced.",
+      "positiveStoredClause": { "can": 0, "chi": 0, "day": 3, "month": 3, "hour": 10, "shows": "Mệnh Mùi, both luminaries at Sửu" },
+      "modernAndRuntime": { "can": 0, "chi": 0, "day": 6, "month": 3, "hour": 4, "shows": "both luminaries at Mệnh Sửu" }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "wikisource-zwds-oldid-850734",
+  "locator": "1.taivi-phu",
+  "sourceDigest": "34757c6d34d6bad5b7c3d3612951c8408d34bbde41e01654f8b2ce8dd6bac1bf",
+  "claimId": "claim-9c-lo-bang-mai-thi",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "star_sat_liem_same",
+    "alias_lo_thuong"
+  ],
+  "exceptions": [],
+  "quotation": "七殺廉貞同位，路上埋屍。破軍暗曜同鄉，水中作塚。",
+  "uncertainties": [
+    "Catalog name Lộ Bàng Mai Thi does not occur in the span; the span says 路上埋屍. Prior identity status is UNRESOLVED_IDENTITY, so those names are not treated as proven identical.",
+    "The span states only 七殺廉貞同位 and the aphorism 路上埋屍. The runtime rule adds target mệnh, branches Sửu and Mùi, and Hóa Kỵ, Kình Dương, Đà La at tam phương tứ chính, which the span does not state.",
+    "The same span also says 破軍暗曜同鄉，水中作塚, which the runtime rule does not state.",
+    "Wikisource span is a digital transcription, not a checked printed edition."
+  ],
+  "agentId": "bc-e7cf02b7-66cb-543a-949a-4c03932c90e1",
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "available": true,
+  "effort": "high"
+}

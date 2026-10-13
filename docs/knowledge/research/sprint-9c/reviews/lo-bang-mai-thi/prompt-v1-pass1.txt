@@ -1,0 +1,34 @@
+promptVersion: dual-ai-source-review-v1-prompt-1
+policyVersion: dual-ai-source-review-v1
+editionId: wikisource-zwds-oldid-850734
+sourceId: wikisource-zwds-quanshu
+schoolScope: unassigned-modern-article
+locator: 1.taivi-phu
+sourceDigest: 34757c6d34d6bad5b7c3d3612951c8408d34bbde41e01654f8b2ce8dd6bac1bf
+retrievedAt: 2026-10-13
+sourceUrl: https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽
+wikisourceOldid: 850734
+
+Read only the span below. It was retrieved from the URL on 2026-10-13. A Wikisource span is a digital transcription, not a checked printed edition. Do not add sentences that are not in the span. Do not look at another model's answer. Return one JSON object and no other text.
+
+The catalog name is Lộ Bàng Mai Thi. Identity status recorded before this review: UNRESOLVED_IDENTITY. If the span does not use that catalog name, do not treat the names as proven identical. A short aphorism is not a full executable formula: use NOT_IMPLEMENTED when the runtime rule is null, and CONFLICT when the runtime rule adds stars or palaces the span does not state.
+
+Compare this runtime rule to the span.
+Runtime rule JSON: {"id": "lo_bang_mai_thi", "combination": "Lộ Bàng Mai Thi", "target": "menh", "branches": ["Sửu", "Mùi"], "clauses": [{"stars": ["Liêm Trinh", "Thất Sát"], "at": "target"}, {"stars": ["Hóa Kỵ", "Kình Dương", "Đà La"], "at": "tam_phuong_tu_chinh"}], "strict": true}
+
+Select a condition id only when the span states that requirement.
+Allowed condition ids:
+star_sat_liem_same
+alias_lo_thuong
+
+verdict is MATCH only when the runtime rule states every selected condition and adds none that contradict the span. PARTIAL when it states some and omits others. CONFLICT when it contradicts the span. NOT_IMPLEMENTED when the runtime rule is null.
+
+quotation must be an exact contiguous substring of the span and must include this anchor: 七殺廉貞同位，路上埋屍
+
+JSON keys:
+schoolId, editionId, locator, sourceDigest, claimId, variantType, formulaComparison, verdict, conditions, exceptions, quotation, uncertainties
+
+Use schoolId unassigned-modern-article, editionId wikisource-zwds-oldid-850734, locator "1.taivi-phu", sourceDigest 34757c6d34d6bad5b7c3d3612951c8408d34bbde41e01654f8b2ce8dd6bac1bf, claimId claim-9c-lo-bang-mai-thi, variantType rule. formulaComparison must equal verdict. exceptions must be [].
+
+SPAN:
+七殺廉貞同位，路上埋屍。破軍暗曜同鄉，水中作塚。

@@ -1,0 +1,53 @@
+{
+  "decisionId": "luong-trung-thien-ma-2026-10-13",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-9c-luong-trung-thien-ma",
+  "schoolId": "unassigned-modern-article",
+  "variantType": "rule",
+  "variantId": "rule-not-runtime",
+  "sourceId": "ichingtrilogy",
+  "editionId": "ichingtrilogy-2026-10-13",
+  "locator": "tian-ma-xing fu-wen Lu-hou",
+  "sourceDigest": "9c18d49ef4893d226d45dcebceff565eca5b112b2d0b5650ace28b0405519c18",
+  "sourceUrl": "https://ichingtrilogy.com/post/tian-ma-xing/",
+  "retrievedAt": "2026-10-13",
+  "pdfTextChecked": false,
+  "binding": "webpage_excerpt",
+  "identity": "NAME_MISMATCH",
+  "quotationPolicy": "source-sentence-v2",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "NOT_IMPLEMENTED",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/luong-trung-thien-ma/review-a.json",
+      "agentId": "bc-b9e6b132-9f73-59f2-8120-7174c23e5a46",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "NOT_IMPLEMENTED",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/luong-trung-thien-ma/review-b.json",
+      "agentId": "bc-3003611a-e4ef-57ff-a933-a1f0d2a41cbf",
+      "available": true
+    }
+  ],
+  "decision": "AI_ACCEPTED",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "notes": "Comparator AI_ACCEPTED. formula NOT_IMPLEMENTED. The bound line is 兩重天祿天馬, glossed as 祿存 + 化祿 + one 天馬. That is not two Thiên Mã and not a Lưu Thiên Mã overlay. 疊馬 was fetched separately and was not bound as this decision. Models grok-4.7-high and gpt-5.6-terra-medium. Runtime rule not changed.",
+  "crossReviewOutcome": "AI_CROSS_REVIEWED",
+  "formulaComparison": "NOT_IMPLEMENTED",
+  "conditions": [
+    "phrase_loc_loc_ma",
+    "star_loc_ton_and_hoa_loc",
+    "star_ma_same_menh"
+  ],
+  "exceptions": []
+}

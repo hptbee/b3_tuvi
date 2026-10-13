@@ -1,0 +1,52 @@
+{
+  "decisionId": "khong-kiep-giap-menh-2026-10-13",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-9c-khong-kiep-giap-menh",
+  "schoolId": "unassigned-modern-article",
+  "variantType": "rule",
+  "variantId": "rule-not-runtime",
+  "sourceId": "xinglin-108s",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/245",
+  "sourceDigest": "aa2c0551ca20d77de526e3946c5add4fd2c8051d4afe5765884bfaf88db2e49b",
+  "sourceUrl": "https://www.108s.tw/article/info/245",
+  "pdfTextChecked": false,
+  "binding": "webpage_excerpt",
+  "identity": "UNRESOLVED_IDENTITY",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "MATCH",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/khong-kiep-giap-menh/review-a.json",
+      "agentId": "bc-cc80f20f-216a-58c9-bb1a-f92a22c47456",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "MATCH",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/khong-kiep-giap-menh/review-b.json",
+      "agentId": "bc-eb212ff7-1d7d-5717-84f9-0aecad616f80",
+      "available": true
+    }
+  ],
+  "decision": "AI_ACCEPTED",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "notes": "Stored reviews replayed under source-sentence-v2. Models were not rerun. The v1 40-character guard had rejected a complete sentence that is an exact substring. Formula MATCH. Catalog identity stays UNRESOLVED_IDENTITY. The runtime rule was not changed.",
+  "retrievedAt": "2026-10-13",
+  "quotationPolicy": "source-sentence-v2",
+  "crossReviewOutcome": "AI_CROSS_REVIEWED",
+  "formulaComparison": "MATCH",
+  "conditions": [
+    "palace_menh",
+    "star_khong_kiep_flank"
+  ],
+  "exceptions": []
+}

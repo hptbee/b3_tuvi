@@ -1,0 +1,35 @@
+promptVersion: dual-ai-source-review-v1-prompt-1
+policyVersion: dual-ai-source-review-v1
+editionId: xinglin-108s-2026-10-13
+sourceId: xinglin-108s
+schoolScope: unassigned-modern-article
+locator: article/info/267
+sourceDigest: a67dd438279af404237b10df36c749e386d960c8aadba65433021a8f4ab2182b
+retrievedAt: 2026-10-13
+sourceUrl: https://www.108s.tw/article/info/267
+wikisourceOldid: 850734
+
+Read only the span below. It was retrieved from the URL on 2026-10-13. A Wikisource span is a digital transcription, not a checked printed edition. Do not add sentences that are not in the span. Do not look at another model's answer. Return one JSON object and no other text.
+
+The catalog name is Bán Không Chiết Xỉ. Identity status recorded before this review: NAME_MISMATCH. If the span does not use that catalog name, do not treat the names as proven identical. A short aphorism is not a full executable formula: use NOT_IMPLEMENTED when the runtime rule is null, and CONFLICT when the runtime rule adds stars or palaces the span does not state.
+
+Compare this runtime rule to the span.
+Runtime rule JSON: {"id": "ban_khong_chiet_xi", "combination": "Bán Không Chiết Xỉ", "target": "menh", "clauses": [{"stars": ["Thất Sát", "Thiên Tướng"], "at": "target", "any": true}, {"stars": ["Địa Không", "Địa Kiếp"], "at": "target"}], "strict": true}
+
+Select a condition id only when the span states that requirement.
+Allowed condition ids:
+palace_menh
+star_khong_kiep_host
+name_mismatch_chiet_si
+
+verdict is MATCH only when the runtime rule states every selected condition and adds none that contradict the span. PARTIAL when it states some and omits others. CONFLICT when it contradicts the span. NOT_IMPLEMENTED when the runtime rule is null.
+
+quotation must be an exact contiguous substring of the span and must include this anchor: 坐命有地劫、地空
+
+JSON keys:
+schoolId, editionId, locator, sourceDigest, claimId, variantType, formulaComparison, verdict, conditions, exceptions, quotation, uncertainties
+
+Use schoolId unassigned-modern-article, editionId xinglin-108s-2026-10-13, locator "article/info/267", sourceDigest a67dd438279af404237b10df36c749e386d960c8aadba65433021a8f4ab2182b, claimId claim-9c-ban-khong-chiet-xi, variantType rule. formulaComparison must equal verdict. exceptions must be [].
+
+SPAN:
+坐命有地劫、地空，就能構成此格局的基本條件。生逢天空，如同半天折翅；命中遇劫，恰如浪裡行船。

@@ -1,0 +1,22 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/208",
+  "sourceDigest": "299fec3e1179e21542dbf83fc2b08a6d1a1263003b41f6526c8f9e7bbdd428fd",
+  "claimId": "claim-9c-anh-tinh-nhap-mieu",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "branch_ty_ngo",
+    "star_pha_host",
+    "star_liem_tuong_opposite"
+  ],
+  "exceptions": [],
+  "quotation": "破軍星獨坐子位或午位，對宮廉貞天相，就能構成此格局的基本條件。貴格為破軍星在子位或午位皆入廟，但正格為破軍星在午位。",
+  "uncertainties": [],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-12930dd1-0818-5309-9522-0e05c48a1a3b"
+}

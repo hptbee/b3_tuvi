@@ -1,0 +1,25 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "yishihui-2026-10-13",
+  "locator": "bz/7375.htm",
+  "sourceDigest": "94821a96b94df9f69d3ffc9e8b06a15980066608441cc81e65b96ba07d7c9ea5",
+  "claimId": "claim-9c-dong-luong-ty-hoi",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "branch_ty_hoi_alone_simp",
+    "star_luong_opposite"
+  ],
+  "exceptions": [],
+  "quotation": "天同在巳亥二宫独坐，对宫必为天梁，所以基本性质与[天同天梁]相同。",
+  "uncertainties": [
+    "UNRESOLVED_IDENTITY",
+    "modern secondary webpage in simplified characters, not a checked printed edition"
+  ],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-2420c0aa-ce14-59f3-bd28-f364e82c4d08",
+  "effort": "high"
+}

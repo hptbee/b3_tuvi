@@ -1,0 +1,23 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "jollen-2026-10-13",
+  "locator": "p122-style",
+  "sourceDigest": "d1f16c94bf4e2b1a0e9e8994578e25a7d65bf6763b0eba6c92591541fbd4ea0e",
+  "claimId": "claim-9c-nhat-nguyet-tang-huy",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "palace_menh",
+    "branch_ham_nhat",
+    "branch_ham_nguyet",
+    "star_cu_same"
+  ],
+  "exceptions": [],
+  "quotation": "格局形成條件分兩組擇一成立：其一，命宮見太陽，且命宮地支為亥、子、丑，同宮或同宮可見巨門；其二，命宮見太陰，且命宮地支為巳、午、未，同宮或同宮可見巨門。",
+  "uncertainties": [],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-2b5bd486-9c90-51c0-9ed4-ba43bb695429"
+}

@@ -1,0 +1,45 @@
+{
+  "decisionId": "lo-bang-mai-thi-2026-10-13",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-2",
+  "subjectType": "claim",
+  "subjectId": "claim-9c-lo-bang-mai-thi",
+  "schoolId": "unassigned-modern-article",
+  "variantType": "rule",
+  "variantId": "rule-not-runtime",
+  "sourceId": "wikisource-zwds-quanshu",
+  "editionId": "wikisource-zwds-oldid-850734",
+  "locator": "1.taivi-phu",
+  "sourceDigest": "34757c6d34d6bad5b7c3d3612951c8408d34bbde41e01654f8b2ce8dd6bac1bf",
+  "sourceUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽",
+  "retrievedAt": "2026-10-13",
+  "pdfTextChecked": false,
+  "binding": "wikisource_transcription_oldid_850734",
+  "identity": "UNRESOLVED_IDENTITY",
+  "quotationPolicy": "source-sentence-v2",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "CONFLICT",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/lo-bang-mai-thi/review-a.json",
+      "agentId": "bc-e7cf02b7-66cb-543a-949a-4c03932c90e1",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "CONFLICT",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/lo-bang-mai-thi/review-b.json",
+      "agentId": "bc-95714227-48f5-5910-9aba-152c5ceb7675",
+      "available": true
+    }
+  ],
+  "decision": "CONFLICT",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "notes": "Pass 2 rerun under source-sentence-v2 because pass 1 quotations were shorter than a complete bound sentence. Pass 1 agents bc-a04561a0-42ef-52da-8b5c-5109ed1ed431 and bc-1b2b6271-fe78-5061-a2b4-2aa784ae69d7 kept in review-a-pass1.json and review-b-pass1.json. Comparator CONFLICT reviews disagree on conditions. Identity UNRESOLVED_IDENTITY. Models grok-4.7-high and gpt-5.6-terra-medium. Runtime rule not changed."
+}

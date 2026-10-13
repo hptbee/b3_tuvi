@@ -1,0 +1,21 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "wikisource-zwds-oldid-850734",
+  "locator": "1.taivi-phu",
+  "sourceDigest": "a2c081961df8e1b841688678fbc48ffabd27236232a586371ead7385d3685ce9",
+  "claimId": "claim-9c-cat-xu-tang-hung",
+  "variantType": "rule",
+  "formulaComparison": "NOT_IMPLEMENTED",
+  "verdict": "NOT_IMPLEMENTED",
+  "conditions": [
+    "loc_clash",
+    "aphorism_only"
+  ],
+  "exceptions": [],
+  "quotation": "祿逢沖破，吉處藏凶。",
+  "uncertainties": [],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-8a3ff8ac-7885-5be8-a9f9-640aed395def"
+}

@@ -1,0 +1,54 @@
+{
+  "decisionId": "nhat-nguyet-tang-huy-2026-10-13",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-9c-nhat-nguyet-tang-huy",
+  "schoolId": "unassigned-modern-article",
+  "variantType": "rule",
+  "variantId": "rule-not-runtime",
+  "sourceId": "jollen",
+  "editionId": "jollen-2026-10-13",
+  "locator": "p122-style",
+  "sourceDigest": "d1f16c94bf4e2b1a0e9e8994578e25a7d65bf6763b0eba6c92591541fbd4ea0e",
+  "sourceUrl": "https://www.jollen.tw/97-%E6%97%A5%E6%9C%88%E8%97%8F%E8%BC%9D.html",
+  "retrievedAt": "2026-10-13",
+  "pdfTextChecked": false,
+  "binding": "webpage_excerpt",
+  "identity": "UNRESOLVED_IDENTITY",
+  "quotationPolicy": "min-40-v1",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "CONFLICT",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/nhat-nguyet-tang-huy/review-a.json",
+      "agentId": "bc-2b5bd486-9c90-51c0-9ed4-ba43bb695429",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "CONFLICT",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/nhat-nguyet-tang-huy/review-b.json",
+      "agentId": "bc-e09d51ec-2f97-5834-a20d-ee4362d59876",
+      "available": true
+    }
+  ],
+  "decision": "AI_ACCEPTED",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "notes": "Comparator AI_ACCEPTED CONFLICT.  Identity UNRESOLVED_IDENTITY. Models grok-4.7-high and gpt-5.6-terra-medium. Runtime rule not changed.",
+  "crossReviewOutcome": "AI_CROSS_REVIEWED",
+  "formulaComparison": "CONFLICT",
+  "conditions": [
+    "branch_ham_nguyet",
+    "branch_ham_nhat",
+    "palace_menh",
+    "star_cu_same"
+  ],
+  "exceptions": []
+}

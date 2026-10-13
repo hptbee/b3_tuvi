@@ -1,0 +1,22 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/217",
+  "sourceDigest": "d19d2e99c26babe651c9ecaef15ff88aed58c91217e6a365053578c2607fdd93",
+  "claimId": "claim-9c-linh-tham",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "palace_menh",
+    "star_tham_host",
+    "star_linh_same"
+  ],
+  "exceptions": [],
+  "quotation": "鈴貪格，貪狼星獨坐命宮，同宮有鈴星為正格，其次是對宮。貪鈴並守，將相之名。貪狼遇鈴火四墓宮，豪富家資侯伯貴。",
+  "uncertainties": [],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-8fbb5196-8e01-5d05-bdc6-6ebb9ccf0e14"
+}

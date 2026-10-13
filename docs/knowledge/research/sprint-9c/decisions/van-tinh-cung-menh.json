@@ -1,0 +1,44 @@
+{
+  "decisionId": "van-tinh-cung-menh-2026-10-13",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-9c-van-tinh-cung-menh",
+  "schoolId": "unassigned-modern-article",
+  "variantType": "rule",
+  "variantId": "rule-not-runtime",
+  "sourceId": "xinglin-108s",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/254",
+  "sourceDigest": "6588d301c07c1f5548b49d7defad55b18e84191206f83ec82245411349c715a7",
+  "sourceUrl": "https://www.108s.tw/article/info/254",
+  "retrievedAt": "2026-10-13",
+  "pdfTextChecked": false,
+  "binding": "webpage_excerpt",
+  "identity": "UNRESOLVED_IDENTITY",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "CONFLICT",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/van-tinh-cung-menh/review-a.json",
+      "agentId": "bc-e780ed73-45ef-5319-a9e8-5bedd1c703bb",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "PARTIAL",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/van-tinh-cung-menh/review-b.json",
+      "agentId": "bc-ec9dcf25-efad-56bd-92a5-cde049381d21",
+      "available": true
+    }
+  ],
+  "decision": "CONFLICT",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "notes": "Comparator returned CONFLICT: reviews disagree. Catalog identity stays UNRESOLVED_IDENTITY. The runtime rule was not changed."
+}

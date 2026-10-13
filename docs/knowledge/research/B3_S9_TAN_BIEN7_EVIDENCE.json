@@ -1,0 +1,84 @@
+{
+  "research_date": "2026-10-13",
+  "base_pr": "https://github.com/hptbee/b3_tuvi/pull/19",
+  "pr_head_checked": "00f93ccdb03c1dd9bec0f1ff162552bcccc1a51c",
+  "scope": "seven unresolved Tân Biên disagreements",
+  "sources_are": "directly opened modern HTML, not matched historical PDF",
+  "pdf_page_checked": false,
+  "secondary_identity_does_not_prove_historical_equivalence": true,
+  "cases": [
+    {
+      "slug": "nhat-nguyet-tinh-minh",
+      "name": "Nhật Nguyệt Tịnh Minh",
+      "webpage_url": "https://www.108s.tw/article/info/250",
+      "source_status": "PDF_PAGE_NOT_VERIFIED",
+      "research_issue": "stored Sun/Moon coordinates require page and geometry verification; duplicate branch/avoid conditions",
+      "action": "independent source binding + source-specific condition adjudication"
+    },
+    {
+      "slug": "cu-nhat-dong-cung",
+      "name": "Cự Nhật Đồng Cung",
+      "webpage_url": "https://www.108s.tw/article/info/223",
+      "source_status": "MODERN_PAGE_CHECKED_INTERNAL_CONTRADICTION",
+      "research_issue": "modern formation 寅/未 conflicts with article explanation 寅/申; Tân Biên no branch in stored span; runtime adds Dần/Thân",
+      "action": "independent source binding + source-specific condition adjudication"
+    },
+    {
+      "slug": "that-sat-trieu-dau",
+      "name": "Thất Sát Triều Đẩu",
+      "webpage_url": "https://www.108s.tw/article/info/207",
+      "source_status": "MODERN_PAGE_CHECKED",
+      "research_issue": "Tân Biên Dần/Thân + opposite Tử/Phủ; runtime admits Tý/Ngọ and does not bind opposite",
+      "action": "independent source binding + source-specific condition adjudication"
+    },
+    {
+      "slug": "tham-vu-dong-hanh",
+      "name": "Tham Vũ Đồng Hành",
+      "webpage_url": "https://www.108s.tw/article/info/197",
+      "source_status": "MODERN_PAGE_CHECKED",
+      "research_issue": "Both reviews MATCH; redundant branch_suu vs branch_suu_mui and modern grade/alternate branch must be separated",
+      "action": "independent source binding + source-specific condition adjudication"
+    },
+    {
+      "slug": "ma-lac-khong-vong",
+      "name": "Mã Lạc Không Vong",
+      "webpage_url": "https://www.108s.tw/article/info/268",
+      "source_status": "MODERN_VARIANT_PAGE_CHECKED",
+      "research_issue": "Tân Biên Tuần/Triệt at Mệnh; 108s Địa Không/Địa Kiếp same/opposite; source variation, do not collapse",
+      "action": "independent source binding + source-specific condition adjudication"
+    },
+    {
+      "slug": "tu-phu-trieu-vien",
+      "name": "Tử Phủ Triều Viên",
+      "webpage_url": "https://www.108s.tw/article/info/196",
+      "source_status": "MODERN_VARIANT_PAGE_CHECKED",
+      "research_issue": "Tân Biên target Mệnh/Quan with bright and opposing; modern broader 三方四正; runtime lacks restrictions",
+      "action": "independent source binding + source-specific condition adjudication"
+    },
+    {
+      "slug": "nhat-nguyet-dong-lam",
+      "name": "Nhật Nguyệt Đồng Lâm",
+      "webpage_url": "https://www.108s.tw/article/info/222",
+      "source_status": "PDF_PAGE_NOT_VERIFIED",
+      "research_issue": "Tân Biên stored placements differ from modern same-palace 丑/未; check print edition before choosing",
+      "action": "independent source binding + source-specific condition adjudication"
+    }
+  ],
+  "additional_sources": [
+    {
+      "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷一&oldid=7913704",
+      "kind": "digital transcription",
+      "caution": "not a checked printed edition"
+    },
+    {
+      "url": "https://www.108s.tw/article/info/348",
+      "kind": "modern explainer",
+      "caution": "supplementary check for branch disagreement in article info/223"
+    },
+    {
+      "url": "https://vietbooks.info/threads/tu-vi-dau-so-tan-bien-nxb-tin-duc-thu-xa-1956-thai-thu-lang-277-trang.23142/",
+      "kind": "PDF acquisition lead only",
+      "caution": "file/hash/license not checked"
+    }
+  ]
+}

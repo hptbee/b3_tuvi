@@ -1,0 +1,54 @@
+{
+  "decisionId": "phong-luu-thai-truong-2026-10-13",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-9c-phong-luu-thai-truong",
+  "schoolId": "unassigned-modern-article",
+  "variantType": "rule",
+  "variantId": "rule-not-runtime",
+  "sourceId": "xinglin-108s",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/220",
+  "sourceDigest": "97ac7f01ccbc5f08dda47f223e6c2d33d451a4805267a0fa93a229dab8457be5",
+  "sourceUrl": "https://www.108s.tw/article/info/220",
+  "retrievedAt": "2026-10-13",
+  "pdfTextChecked": false,
+  "binding": "webpage_excerpt",
+  "identity": "UNRESOLVED_IDENTITY",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "MATCH",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/phong-luu-thai-truong/review-a.json",
+      "agentId": "bc-562a2e5d-1672-53e5-86ab-ad35ba027254",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "MATCH",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/phong-luu-thai-truong/review-b.json",
+      "agentId": "bc-693fac22-0e3a-51a9-bd7c-2852203a2eee",
+      "available": true
+    }
+  ],
+  "decision": "AI_ACCEPTED",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "notes": "Stored reviews replayed under source-sentence-v2. Models were not rerun. The v1 40-character guard had rejected a complete sentence that is an exact substring. Formula MATCH. Catalog identity stays UNRESOLVED_IDENTITY. The runtime rule was not changed.",
+  "quotationPolicy": "source-sentence-v2",
+  "crossReviewOutcome": "AI_CROSS_REVIEWED",
+  "formulaComparison": "MATCH",
+  "conditions": [
+    "branch_dan",
+    "palace_menh",
+    "star_da_same",
+    "star_tham_host"
+  ],
+  "exceptions": []
+}

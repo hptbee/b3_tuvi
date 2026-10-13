@@ -1,0 +1,21 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/262",
+  "sourceDigest": "1b4b79c9790b7f498db1e4c262eabcca52b0320a7d428588ef7742ff1e74e975",
+  "claimId": "claim-9c-thien-at-cung-menh",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "palace_menh",
+    "star_khoi_viet_aspect"
+  ],
+  "exceptions": [],
+  "quotation": "天魁星、天鉞星，在命宮的三方四正照會命宮，就能構成此格局的基本條件。此格局類似於「坐貴向貴格」，差別在於不一定在命宮、遷移宮對照。",
+  "uncertainties": [],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-d5259453-d389-50f1-b4f2-9566f7115c4c"
+}

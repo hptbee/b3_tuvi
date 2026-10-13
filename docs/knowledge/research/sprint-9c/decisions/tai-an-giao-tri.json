@@ -1,0 +1,52 @@
+{
+  "decisionId": "tai-an-giao-tri-2026-10-13",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-9c-tai-an-giao-tri",
+  "schoolId": "unassigned-modern-article",
+  "variantType": "rule",
+  "variantId": "rule-not-runtime",
+  "sourceId": "xuanjige",
+  "editionId": "xuanjige-2026-10-13",
+  "locator": "articles/tianxiang-qianyi#faq-yin-shen",
+  "sourceDigest": "1cb82a1ae99cf8fb9eb7ef627aab0f1a2cb1470180980dd8aeea0d0e5fdd853a",
+  "sourceUrl": "https://www.xuanjige.app/articles/tianxiang-qianyi",
+  "retrievedAt": "2026-10-13",
+  "pdfTextChecked": false,
+  "binding": "webpage_excerpt",
+  "identity": "UNRESOLVED_IDENTITY",
+  "quotationPolicy": "min-40-v1",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "CONFLICT",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/tai-an-giao-tri/review-a.json",
+      "agentId": "bc-57fc9bec-755e-5d5b-88ba-c3e3a8db5c90",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "CONFLICT",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/tai-an-giao-tri/review-b.json",
+      "agentId": "bc-3eb4de4a-b97c-5658-b15b-fe074823800f",
+      "available": true
+    }
+  ],
+  "decision": "AI_ACCEPTED",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "notes": "Comparator AI_ACCEPTED. formula CONFLICT. Modern simplified label 财印交驰. The span does not say 命宫 and does not contain 天相. A separate fetched page names 财印坐马格 and was not merged into this span. Catalog title identity stays unresolved. Models grok-4.7-high and gpt-5.6-terra-medium. Runtime rule not changed.",
+  "crossReviewOutcome": "AI_CROSS_REVIEWED",
+  "formulaComparison": "CONFLICT",
+  "conditions": [
+    "alias_tai_an_modern",
+    "star_vu_dan_than"
+  ],
+  "exceptions": []
+}

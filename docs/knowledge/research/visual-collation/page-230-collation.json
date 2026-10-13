@@ -1,0 +1,21 @@
+{
+  "retrievedAt": "2026-10-13",
+  "url": "https://tuvithuchanh.com/wp-content/uploads/2022/11/Tu-vi-dau-so.pdf",
+  "sha256": "941b104504dd552fe967354759da1683dda30a529aa59a8e570b05727f5b4458",
+  "sha256MatchesRegistry": true,
+  "pages": 277,
+  "pdfIndexZeroBased": 229,
+  "printedPage": 230,
+  "textLayerCodepoint": "U+00FD",
+  "textLayerReading": "Tý",
+  "renderedGlyph": "dot below the y",
+  "comparisonGlyph": "page 71 words encoded U+1EF5 render with a dot below; page 71 U+00FD in lý renders with an acute",
+  "storedSpansRewritten": false,
+  "original1956Authenticated": false,
+  "archiveVisualCheck": false,
+  "crops": [
+    "docs/knowledge/research/visual-collation/page230-sun-glyph.png",
+    "docs/knowledge/research/visual-collation/page71-u00fd-acute.png",
+    "docs/knowledge/research/visual-collation/page71-u1ef5-dot-below.png"
+  ]
+}

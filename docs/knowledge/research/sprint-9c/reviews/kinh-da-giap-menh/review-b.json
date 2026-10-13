@@ -1,0 +1,24 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/247",
+  "sourceDigest": "2fc2291a9025558550521909501d13812a05738a692df1b3d4cb2986d526062d",
+  "claimId": "claim-9c-kinh-da-giap-menh",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "palace_menh",
+    "star_loc_ton_host",
+    "star_kinh_da_flank"
+  ],
+  "exceptions": [],
+  "quotation": "命宮有祿存時，必定被擎羊、陀羅夾，就能構成此格局的基本條件。主人貴爵，掌人壽基，若獨守命而無吉化，乃看財奴耳。",
+  "uncertainties": [
+    "The span does not prove that its Chinese wording is identical to the catalog name Kình Đà Giáp Mệnh."
+  ],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-0eb63394-a4f1-5dfc-96c2-b1af93f53d21"
+}

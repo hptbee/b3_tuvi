@@ -35,6 +35,8 @@ export const unitTests = [
     'test/crossReviewNegatives.test.mjs',
     'test/combinationBatch.test.mjs',
     'test/combinationResearch.test.mjs',
+    'test/sprint9cDiscovery.test.mjs',
+    'test/sprint9Adjudication.test.mjs',
     'test/qualityEdges.test.mjs',
     'test/perfSmoke.test.mjs'
 ];

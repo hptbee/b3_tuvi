@@ -1,0 +1,25 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "wikisource-zwds-oldid-850734",
+  "locator": "1.taivi-phu",
+  "sourceDigest": "8a625e411c7edb8d407b15ccd2340c06e5498f49b4a8c42059f86473ebc9ff5a",
+  "claimId": "claim-9c-thuy-trung-que-ngac",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "branch_ty",
+    "star_nguyet_host"
+  ],
+  "exceptions": [],
+  "quotation": "太陰居子，號曰水澄桂萼，得清要之職，忠諫之材。",
+  "uncertainties": [
+    "UNRESOLVED_IDENTITY: the span uses 水澄桂萼, not the catalog name Thủy Trừng Quế Ngạc.",
+    "The runtime rule adds Thiên Đồng, which the span does not state."
+  ],
+  "agentId": "bc-145a9271-b43b-5a25-8121-7f965fe0772a",
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "available": true,
+  "effort": "medium"
+}

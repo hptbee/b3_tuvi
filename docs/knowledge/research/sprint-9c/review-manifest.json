@@ -1,0 +1,474 @@
+[
+  {
+    "slug": "duong-luong-xuong-loc",
+    "combinationName": "Dương Lương Xương Lộc",
+    "sourceDigest": "83b5137e909cf2d8a3417a81085e4b7905d66f16ee8919f70715687193df741a",
+    "allowed": [
+      "palace_menh",
+      "branch_mao",
+      "star_duong_luong_same",
+      "star_xuong",
+      "star_loc"
+    ],
+    "anchor": "太陽星、天梁星同宮坐命在卯位",
+    "locator": "article/info/225",
+    "span": "太陽星、天梁星同宮坐命在卯位，命宮同時有太陽化祿或祿存，並有文昌星同坐，就能構成此格局的基本條件。"
+  },
+  {
+    "slug": "nhat-chieu-loi-mon",
+    "combinationName": "Nhật Chiếu Lôi Môn",
+    "sourceDigest": "5cfe5c74eb3d2f1344df9aa758073d125234c9705c9f4a921cd9c50b5142c6c1",
+    "allowed": [
+      "palace_menh",
+      "branch_mao",
+      "star_duong_luong_same",
+      "avoid_sat_khong_kiep",
+      "strengthened_by_loc_qui"
+    ],
+    "anchor": "太陽星、天梁星同宮坐命在卯位",
+    "locator": "article/info/224",
+    "span": "太陽星、天梁星同宮坐命在卯位，就能構成此格局的基本條件。貴格需三方四正皆無煞忌及地空、地劫，還需有祿存或化祿、天魁、天鉞、左輔、右弼等吉星會照，越多越好。"
+  },
+  {
+    "slug": "thach-trung-an-ngoc",
+    "combinationName": "Thạch Trung Ẩn Ngọc",
+    "sourceDigest": "490ffee1da67ba414b3b0b164eecbf9bacb95ff1fd82e3436c31e81f610d3884",
+    "allowed": [
+      "palace_menh",
+      "branch_ty_ngo",
+      "star_cu_host",
+      "strengthened_by_loc_quyen"
+    ],
+    "anchor": "巨門星坐命子位或午位",
+    "locator": "article/info/227",
+    "span": "巨門星坐命子位或午位，就能構成此格局的基本條件。貴格為巨門星坐命子位，同宮加會祿、權或祿存，三方四正內不逢煞忌。"
+  },
+  {
+    "slug": "tam-ky-gia-hoi",
+    "combinationName": "Tam Kỳ Gia Hội",
+    "sourceDigest": "7d67834d5fa1d05530439068bf4cbb517ecba7fa32ceb7174b9bc85ee91924d9",
+    "allowed": [
+      "palace_menh",
+      "star_hoa_loc_quyen_khoa",
+      "bright"
+    ],
+    "anchor": "命宮三方四正內，會集化祿、化權、化科",
+    "locator": "article/info/257",
+    "span": "命宮三方四正內，會集化祿、化權、化科，就能構成此格局的基本條件。貴格還需看宮位內的主星是否廟旺，以及化忌只能在命宮、財帛宮、官祿宮、田宅宮、福德宮。"
+  },
+  {
+    "slug": "khong-kiep-giap-menh",
+    "combinationName": "Không Kiếp Giáp Mệnh",
+    "sourceDigest": "aa2c0551ca20d77de526e3946c5add4fd2c8051d4afe5765884bfaf88db2e49b",
+    "allowed": [
+      "palace_menh",
+      "star_khong_kiep_flank"
+    ],
+    "anchor": "父母宮、兄弟宮各有一顆地空或地劫夾命宮",
+    "locator": "article/info/245",
+    "span": "父母宮、兄弟宮各有一顆地空或地劫夾命宮，就能構成此格局的基本條件。空劫夾命為敗局。"
+  },
+  {
+    "slug": "kinh-da-giap-menh",
+    "combinationName": "Kình Đà Giáp Mệnh",
+    "sourceDigest": "2fc2291a9025558550521909501d13812a05738a692df1b3d4cb2986d526062d",
+    "allowed": [
+      "palace_menh",
+      "star_loc_ton_host",
+      "star_kinh_da_flank"
+    ],
+    "anchor": "命宮有祿存時，必定被擎羊、陀羅夾",
+    "locator": "article/info/247",
+    "span": "命宮有祿存時，必定被擎羊、陀羅夾，就能構成此格局的基本條件。主人貴爵，掌人壽基，若獨守命而無吉化，乃看財奴耳。"
+  },
+  {
+    "slug": "co-cu-dong-lam",
+    "combinationName": "Cơ Cự Đồng Lâm",
+    "sourceDigest": "aafc179457c1533b112544804f535d3520b73c04d082668bb8a9e449dacccbb8",
+    "allowed": [
+      "palace_menh",
+      "branch_mao_dau",
+      "star_co_cu_same"
+    ],
+    "anchor": "天機星、巨門星同宮坐命在卯位或酉位",
+    "locator": "article/info/232",
+    "span": "天機星、巨門星同宮坐命在卯位或酉位，就能構成此格局的基本條件。貴格為，坐命在卯位，並且無煞忌，還需要有吉星照會。"
+  },
+  {
+    "slug": "giap-de-dang-khoa",
+    "combinationName": "Giáp Đệ Đăng Khoa",
+    "sourceDigest": "78831cf38ca62f348e7f7ae57ab5abde0ec06c5bccf43332fd5260e33e3fdc79",
+    "allowed": [
+      "palace_menh",
+      "star_hoa_khoa_host",
+      "star_hoa_quyen_aspect"
+    ],
+    "anchor": "命宮主星化科，三方四正內有星曜化權來照會",
+    "locator": "article/info/259",
+    "span": "命宮主星化科，三方四正內有星曜化權來照會，就能構成此格局的基本條件。貴格還需三方四正無煞忌，並且有吉星坐命或照會命宮。"
+  },
+  {
+    "slug": "hoa-tham",
+    "combinationName": "Hỏa Tham",
+    "sourceDigest": "14c68f9f7bc470a5c7c1cd2e65f813cd86b7242bbf78a0c6e7986b011b2c4f5a",
+    "allowed": [
+      "palace_menh",
+      "star_tham_host",
+      "star_hoa_same"
+    ],
+    "anchor": "火貪格，貪狼星獨坐命宮",
+    "locator": "article/info/217"
+  },
+  {
+    "slug": "linh-tham",
+    "combinationName": "Linh Tham",
+    "sourceDigest": "d19d2e99c26babe651c9ecaef15ff88aed58c91217e6a365053578c2607fdd93",
+    "allowed": [
+      "palace_menh",
+      "star_tham_host",
+      "star_linh_same"
+    ],
+    "anchor": "鈴貪格，貪狼星獨坐命宮",
+    "locator": "article/info/217"
+  },
+  {
+    "slug": "song-loc-trieu-vien",
+    "combinationName": "Song Lộc Triều Viên",
+    "sourceDigest": "04983c9938258609dbc9d0e1d046114f78e45e8a2b501c4ea01781554300767a",
+    "allowed": [
+      "palace_menh",
+      "star_loc_not_host",
+      "star_loc_tam_hop"
+    ],
+    "anchor": "命宮無祿星坐守",
+    "locator": "pattern/34"
+  },
+  {
+    "slug": "hung-tu-trieu-vien",
+    "combinationName": "Hùng Tú Triều Viên",
+    "sourceDigest": "d3324ec07065e96f33f9650ba2dcdfa98b45d941058a6b07cb2c675b8851934b",
+    "allowed": [
+      "palace_menh",
+      "branch_dan_than",
+      "star_liem_host",
+      "star_tham_opposite"
+    ],
+    "anchor": "廉貞星坐命在寅位或申位",
+    "locator": "article/info/213"
+  },
+  {
+    "slug": "linh-xuong-da-vu",
+    "combinationName": "Linh Xương Đà Vũ",
+    "sourceDigest": "2b219bed52a438aae58bcdbf5b63c1332328e760d326aad5a89ee53e116ee9eb",
+    "allowed": [
+      "palace_menh",
+      "branch_thin_tuat",
+      "star_vu_host",
+      "star_linh_da_xuong"
+    ],
+    "anchor": "武曲星獨坐命宮在辰或戌位",
+    "locator": "article/info/205"
+  },
+  {
+    "slug": "hinh-ky-giap-an",
+    "combinationName": "Hình Kỵ Giáp Ấn",
+    "sourceDigest": "6dcd7372497707ab6ed7bfb40d8a431b999510ce3c649c77aaddf1432bc83cfe",
+    "allowed": [
+      "school_dependent",
+      "star_tuong_hoa_ky"
+    ],
+    "anchor": "對於刑忌夾印格，各門派的定義皆不盡相同",
+    "locator": "article/info/206"
+  },
+  {
+    "slug": "menh-ly-phung-khong",
+    "combinationName": "Mệnh Lý Phùng Không",
+    "sourceDigest": "edf1dede6b79dc0baf1a0da2ef79ce00ad453c8852094598f0918b451f47b503",
+    "allowed": [
+      "palace_menh",
+      "star_khong_kiep_host",
+      "branch_ty_hoi"
+    ],
+    "anchor": "坐命有地劫、地空",
+    "locator": "article/info/267"
+  },
+  {
+    "slug": "kinh-da-hiep-ky",
+    "combinationName": "Kình Đà Hiệp Kỵ",
+    "sourceDigest": "ded963e1cb4c27ff4a5f3aa68793130fd8119f08926fe41413389b7d5e8b6148",
+    "allowed": [
+      "palace_menh",
+      "star_loc_ton_host",
+      "star_kinh_da_flank",
+      "star_hoa_ky"
+    ],
+    "anchor": "命宮有祿存時，必定被擎羊、陀羅夾",
+    "locator": "article/info/248"
+  },
+  {
+    "slug": "phong-luu-thai-truong",
+    "combinationName": "Phong Lưu Thái Trượng",
+    "sourceDigest": "97ac7f01ccbc5f08dda47f223e6c2d33d451a4805267a0fa93a229dab8457be5",
+    "allowed": [
+      "palace_menh",
+      "branch_dan",
+      "star_tham_host",
+      "star_da_same"
+    ],
+    "anchor": "貪狼星獨坐命宮在寅位",
+    "locator": "article/info/220"
+  },
+  {
+    "slug": "thien-at-cung-menh",
+    "combinationName": "Thiên Ất Củng Mệnh",
+    "sourceDigest": "1b4b79c9790b7f498db1e4c262eabcca52b0320a7d428588ef7742ff1e74e975",
+    "allowed": [
+      "palace_menh",
+      "star_khoi_viet_aspect"
+    ],
+    "anchor": "天魁星、天鉞星，在命宮的三方四正照會命宮",
+    "locator": "article/info/262"
+  },
+  {
+    "slug": "van-tinh-cung-menh",
+    "combinationName": "Văn Tinh Củng Mệnh",
+    "sourceDigest": "6588d301c07c1f5548b49d7defad55b18e84191206f83ec82245411349c715a7",
+    "allowed": [
+      "palace_menh",
+      "star_xuong_khuc_aspect",
+      "avoid_sat"
+    ],
+    "anchor": "文昌、文曲在命宮三方四正",
+    "locator": "article/info/254"
+  },
+  {
+    "slug": "tho-tinh-nhap-mieu",
+    "combinationName": "Thọ Tinh Nhập Miếu",
+    "sourceDigest": "a739dd938d03c77cbce1ce0805068b95ebccb8300bb364bd6e3fe86c4f99a5c7",
+    "allowed": [
+      "palace_menh",
+      "branch_ty_ngo",
+      "star_luong_host",
+      "avoid_sat"
+    ],
+    "anchor": "天梁星在子位或午位坐命",
+    "locator": "article/info/236"
+  },
+  {
+    "slug": "anh-tinh-nhap-mieu",
+    "combinationName": "Anh Tinh Nhập Miếu",
+    "sourceDigest": "299fec3e1179e21542dbf83fc2b08a6d1a1263003b41f6526c8f9e7bbdd428fd",
+    "allowed": [
+      "palace_menh",
+      "branch_ty_ngo",
+      "star_pha_host",
+      "star_liem_tuong_opposite"
+    ],
+    "anchor": "破軍星獨坐子位或午位",
+    "locator": "article/info/208"
+  },
+  {
+    "slug": "nhat-nguyet-tang-huy",
+    "combinationName": "Nhật Nguyệt Tàng Huy",
+    "sourceDigest": "d1f16c94bf4e2b1a0e9e8994578e25a7d65bf6763b0eba6c92591541fbd4ea0e",
+    "allowed": [
+      "palace_menh",
+      "branch_ham_nhat",
+      "branch_ham_nguyet",
+      "star_cu_same"
+    ],
+    "anchor": "格局形成條件分兩組擇一成立",
+    "locator": "p122-style"
+  },
+  {
+    "slug": "ban-khong-chiet-xi",
+    "combinationName": "Bán Không Chiết Xỉ",
+    "sourceDigest": "a67dd438279af404237b10df36c749e386d960c8aadba65433021a8f4ab2182b",
+    "allowed": [
+      "palace_menh",
+      "star_khong_kiep_host",
+      "name_mismatch_chiet_si"
+    ],
+    "anchor": "坐命有地劫、地空",
+    "locator": "article/info/267"
+  },
+  {
+    "slug": "de-ngo-hung-do",
+    "combinationName": "Đế Ngộ Hung Đồ",
+    "sourceDigest": "06ebecafaf87c38ad7b1cb093f3698700166ecaa5fb9485d4b2d35fdcc499d47",
+    "allowed": [
+      "aphorism_only"
+    ],
+    "anchor": "帝遇兇徒雖獲吉而無道",
+    "locator": "1.taivi-phu"
+  },
+  {
+    "slug": "lo-bang-mai-thi",
+    "combinationName": "Lộ Bàng Mai Thi",
+    "sourceDigest": "34757c6d34d6bad5b7c3d3612951c8408d34bbde41e01654f8b2ce8dd6bac1bf",
+    "allowed": [
+      "star_sat_liem_same",
+      "alias_lo_thuong"
+    ],
+    "anchor": "七殺廉貞同位，路上埋屍",
+    "locator": "1.taivi-phu"
+  },
+  {
+    "slug": "cat-xu-tang-hung",
+    "combinationName": "Cát Xứ Tàng Hung",
+    "sourceDigest": "a2c081961df8e1b841688678fbc48ffabd27236232a586371ead7385d3685ce9",
+    "allowed": [
+      "loc_clash",
+      "aphorism_only"
+    ],
+    "anchor": "祿逢沖破，吉處藏凶",
+    "locator": "1.taivi-phu"
+  },
+  {
+    "slug": "chung-thuy-trieu-dong",
+    "combinationName": "Chúng Thủy Triều Đông",
+    "sourceDigest": "27703fe78603e6998e2b791aafab3cbe4bfdc3181f17847fcf0712fe1aa11d95",
+    "allowed": [
+      "star_van_hao_dan_mao"
+    ],
+    "anchor": "文耗居寅卯，謂之眾水朝東",
+    "locator": "1.taivi-phu"
+  },
+  {
+    "slug": "thuy-trung-que-ngac",
+    "combinationName": "Thủy Trừng Quế Ngạc",
+    "sourceDigest": "8a625e411c7edb8d407b15ccd2340c06e5498f49b4a8c42059f86473ebc9ff5a",
+    "allowed": [
+      "branch_ty",
+      "star_nguyet_host"
+    ],
+    "anchor": "太陰居子，號曰水澄桂萼",
+    "locator": "1.taivi-phu"
+  },
+  {
+    "slug": "nhat-nguyet-tat-ach",
+    "combinationName": "Nhật Nguyệt Tật Ách",
+    "sourceDigest": "8ee6c88a300fe0426e3424b1aec25b6d63e1d70ce63f75dd4187413b3ae03742",
+    "allowed": [
+      "palace_tat_ach",
+      "star_nhat_nguyet_same"
+    ],
+    "anchor": "太陽、太陰同入疾厄宮",
+    "locator": "p122.htm"
+  },
+  {
+    "slug": "sat-pha-tham",
+    "combinationName": "Sát Phá Tham",
+    "sourceDigest": "80ca13b1c844ab574260c777984ce344a3cbd62e72665d521fe82083eab97736",
+    "allowed": [
+      "palace_tam_hop_menh_tai_quan",
+      "star_sat_pha_tham"
+    ],
+    "anchor": "tam hợp Mệnh, Tài, Quan",
+    "locator": "hoc-tu-vi/cach-cuc/sat-pha-tham"
+  },
+  {
+    "slug": "cu-phung-tu-sat",
+    "combinationName": "Cự Phùng Tứ Sát",
+    "sourceDigest": "6f07dc0cce757c6f88444f8c4b3ed79f35f3db6fc4656803505e661ceab0d6b8",
+    "allowed": [
+      "star_cu_menh",
+      "sat_kinh_or_da",
+      "sat_linh_or_hoa",
+      "sat_khong_or_kiep",
+      "palace_tam_phuong"
+    ],
+    "anchor": "Cự Môn tọa Mệnh",
+    "locator": "thu-vien/cach-cuc/cu-phung-tu-sat"
+  },
+  {
+    "slug": "tu-phu-vu-tuong",
+    "combinationName": "Tử Phủ Vũ Tướng",
+    "sourceDigest": "a4bdb4e50602f89087ca0c810dbf37b6446b26e05e7772d22213f3378c34db09",
+    "allowed": [
+      "star_tu_phu_vu_tuong",
+      "not_same_palace"
+    ],
+    "anchor": "Tử Vi, Thiên Phủ, Vũ Khúc và Thiên Tướng",
+    "locator": "tu-phu-vu-tuong.html"
+  },
+  {
+    "slug": "thien-co-ty-hoi",
+    "combinationName": "Thiên Cơ Tỵ Hợi",
+    "sourceDigest": "61110ae5e94cfea0d8c63495374402527b8c73618d97b7a02a4b636b63b1fe24",
+    "allowed": [
+      "star_co_host",
+      "branch_ty_hoi_alone",
+      "star_nguyet_opposite"
+    ],
+    "anchor": "天機星在巳、亥宮獨坐",
+    "locator": "p128.htm"
+  },
+  {
+    "slug": "dong-luong-ty-hoi",
+    "combinationName": "Đồng Lương Tỵ Hợi",
+    "sourceDigest": "94821a96b94df9f69d3ffc9e8b06a15980066608441cc81e65b96ba07d7c9ea5",
+    "allowed": [
+      "branch_ty_hoi_alone_simp",
+      "star_luong_opposite"
+    ],
+    "anchor": "对宫必为天梁",
+    "locator": "bz/7375.htm"
+  },
+  {
+    "slug": "menh-vcd-dac-tam-khong",
+    "combinationName": "Mệnh VCD Đắc Tam Không",
+    "sourceDigest": "64e9300c6dc2d211a86e7aed4b39e965eee97a2299d41697b001e96662563a9d",
+    "allowed": [
+      "no_major",
+      "tuan_or_triet_host",
+      "thien_khong_aspect"
+    ],
+    "anchor": "Vô Chính Diệu Đắc Tam Không",
+    "locator": "doi-dieu-ban-ve-12-cung-vo-chinh-dieu"
+  },
+  {
+    "slug": "tai-an-giao-tri",
+    "combinationName": "Tài Ấn Giao Trì",
+    "sourceDigest": "1cb82a1ae99cf8fb9eb7ef627aab0f1a2cb1470180980dd8aeea0d0e5fdd853a",
+    "allowed": [
+      "star_vu_dan_than",
+      "alias_tai_an_modern"
+    ],
+    "anchor": "财印交驰",
+    "locator": "articles/tianxiang-qianyi#faq-yin-shen"
+  },
+  {
+    "slug": "khuc-am-dong-cung",
+    "combinationName": "Khúc Ám Đồng Cung",
+    "sourceDigest": "1c95a4cd9317c49c11c9ba351788bfde48b2e7f1e4d9f9a84828da57b2e75378",
+    "allowed": [
+      "star_khuc_cu_same"
+    ],
+    "anchor": "Văn Khúc Cự Môn đồng cung",
+    "locator": "chuong-20 item 9"
+  },
+  {
+    "slug": "hoa-cai-cu-phu-the",
+    "combinationName": "Hoa Cái Cư Phu Thê",
+    "sourceDigest": "f05cef89e85a34101482709ec69fa8eeeca0791f19fa62ba56bb54fa32af5b84",
+    "allowed": [
+      "star_hoa_cai_phu_the",
+      "palace_phu_the"
+    ],
+    "anchor": "sao Hoa Cái an tại cung Phu Thê",
+    "locator": "section-1-hoa-cai-cung-phu-the-la-gi"
+  },
+  {
+    "slug": "luong-trung-thien-ma",
+    "combinationName": "Lưỡng Trùng Thiên Mã",
+    "sourceDigest": "9c18d49ef4893d226d45dcebceff565eca5b112b2d0b5650ace28b0405519c18",
+    "allowed": [
+      "phrase_loc_loc_ma",
+      "star_loc_ton_and_hoa_loc",
+      "star_ma_same_menh"
+    ],
+    "anchor": "兩重天祿天馬",
+    "locator": "tian-ma-xing fu-wen Lu-hou"
+  }
+]

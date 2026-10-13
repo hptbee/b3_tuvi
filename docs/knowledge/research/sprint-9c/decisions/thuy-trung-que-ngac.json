@@ -1,0 +1,52 @@
+{
+  "decisionId": "thuy-trung-que-ngac-2026-10-13",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-2",
+  "subjectType": "claim",
+  "subjectId": "claim-9c-thuy-trung-que-ngac",
+  "schoolId": "unassigned-modern-article",
+  "variantType": "rule",
+  "variantId": "rule-not-runtime",
+  "sourceId": "wikisource-zwds-quanshu",
+  "editionId": "wikisource-zwds-oldid-850734",
+  "locator": "1.taivi-phu",
+  "sourceDigest": "8a625e411c7edb8d407b15ccd2340c06e5498f49b4a8c42059f86473ebc9ff5a",
+  "sourceUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽",
+  "retrievedAt": "2026-10-13",
+  "pdfTextChecked": false,
+  "binding": "wikisource_transcription_oldid_850734",
+  "identity": "UNRESOLVED_IDENTITY",
+  "quotationPolicy": "source-sentence-v2",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "CONFLICT",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/thuy-trung-que-ngac/review-a.json",
+      "agentId": "bc-93a3c763-afbb-5948-8b4d-8f18c4ea20a1",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "CONFLICT",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/thuy-trung-que-ngac/review-b.json",
+      "agentId": "bc-145a9271-b43b-5a25-8121-7f965fe0772a",
+      "available": true
+    }
+  ],
+  "decision": "AI_ACCEPTED",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "notes": "Pass 2 rerun under source-sentence-v2 because pass 1 quotations were shorter than a complete bound sentence. Pass 1 agents bc-dc79606b-acf3-506a-9d9a-8fa20bdf2cb8 and bc-ccfbb003-05a5-556b-945b-99d128044426 kept in review-a-pass1.json and review-b-pass1.json. Comparator AI_ACCEPTED formula CONFLICT. Identity UNRESOLVED_IDENTITY. Models grok-4.7-high and gpt-5.6-terra-medium. Runtime rule not changed.",
+  "crossReviewOutcome": "AI_CROSS_REVIEWED",
+  "formulaComparison": "CONFLICT",
+  "conditions": [
+    "branch_ty",
+    "star_nguyet_host"
+  ],
+  "exceptions": []
+}

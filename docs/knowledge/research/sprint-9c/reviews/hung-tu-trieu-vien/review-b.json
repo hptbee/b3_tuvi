@@ -1,0 +1,25 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/213",
+  "sourceDigest": "d3324ec07065e96f33f9650ba2dcdfa98b45d941058a6b07cb2c675b8851934b",
+  "claimId": "claim-9c-hung-tu-trieu-vien",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "palace_menh",
+    "branch_dan_than",
+    "star_liem_host",
+    "star_tham_opposite"
+  ],
+  "exceptions": [],
+  "quotation": "廉貞星坐命在寅位或申位，對宮貪狼星，就能構成此格局的基本條件。貴格為有祿存或化祿同宮，三方四正無煞忌沖破。",
+  "uncertainties": [
+    "NAME_MISMATCH"
+  ],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-3b838ba6-3d7e-5d3f-bdea-8e0d8401d479"
+}
