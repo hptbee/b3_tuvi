@@ -58,7 +58,8 @@ export function createContentStore(catalogInput, sourceInput) {
             readingTexts.push(reading);
             entries.set(`${metricId}/${value}`, {
                 contentId: `${metricId}-${value}-vi-v2`, metricId, value, kind: 'original_editorial',
-                title: `${context.label} ${value} · ${theme.title}`, summary: `${context.opening} ${reading} ${theme.body}`,
+                title: `${context.label} ${value} · ${theme.title}`, brief: `${context.opening} ${reading}`, detail: theme.body,
+                summary: `${context.opening} ${reading} ${theme.body}`,
                 reflectionPrompts: [context.prompt, theme.prompt], limitations: [context.application, 'Góc nhìn biểu tượng để suy ngẫm; không phải kết luận khoa học hoặc dự báo.'],
                 sourceReferences: [{ id: source.id, title: source.title, url: source.locator, evidenceClass: source.evidenceClass, relationship: source.relationship, section: theme.sourceSection }],
                 reviewStatus: 'editorial_reviewed', evidenceStatus: 'community_reference', expertVerified: false
