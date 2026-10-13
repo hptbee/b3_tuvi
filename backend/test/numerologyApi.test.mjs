@@ -50,7 +50,10 @@ try {
     assert.equal(result.metrics.lifePath.value, 4);
     assert.equal(result.metrics.personality.value, 11);
     assert.equal(result.nameAnalysis.normalized, 'NGUYEN VAN AN');
-    assert.equal(result.metrics.lifePath.meaning, null);
+    assert.equal(result.contentVersion, '1.0.0');
+    assert.equal(result.metrics.lifePath.meaningStatus, 'experimental_editorial');
+    assert.equal(result.metrics.lifePath.meaning.expertVerified, false);
+    assert.equal(result.metrics.lifePath.meaning.value, 4);
     assert.equal(result.profile.version, '1.1.0');
     assert.equal(result.capabilities.birthGrid, 'available');
     assert.equal(result.capabilities.cycles, 'available');
@@ -64,6 +67,29 @@ try {
     assert.ok(logs.some(line => line.includes('POST /api/numerology/calculate')));
     for (const privateValue of ['Nguyễn', 'NGUYEN', '1990', 'fullName', 'birthDate']) assert.ok(!logs.join('\n').includes(privateValue));
 
+    for (const path of ['/meanings/fake/4', '/meanings/personalYear/11', '/meanings/birthday/33', '/meanings/lifePath/04']) {
+        const error = await fetch(`${base}/api/numerology${path}`);
+        assert.equal(error.status, 404);
+        assert.equal((await error.json()).error.code, 'MEANING_NOT_FOUND');
+        assert.equal(error.headers.get('cache-control'), 'no-store');
+    }
+    for (const query of ['approvedForPublic=true', 'draft=true', 'profileVersion=1.0.0', 'locale=en-US', 'profileId=fake', 'locale=vi-VN&locale=vi-VN']) {
+        const error = await fetch(`${base}/api/numerology/meanings/lifePath/4?${query}`);
+        assert.ok([400,404].includes(error.status));
+        assert.equal((await error.json()).ok, false);
+        assert.equal(error.headers.get('cache-control'), 'no-store');
+    }
+    const meaningResponse = await fetch(`${base}/api/numerology/meanings/lifePath/4`);
+    assert.equal(meaningResponse.status, 200);
+    assert.equal(meaningResponse.headers.get('cache-control'), 'no-store');
+    const meaningBody = await meaningResponse.json();
+    assert.deepEqual(meaningBody.meaning, result.metrics.lifePath.meaning);
+    assert.equal(meaningBody.meaningStatus, result.metrics.lifePath.meaningStatus);
+    const unsupportedMeaning = await (await fetch(`${base}/api/numerology/meanings/lifePath/33`)).json();
+    assert.equal(unsupportedMeaning.meaning, null);
+    assert.equal(unsupportedMeaning.meaningStatus, 'withheld');
+    assert.equal(unsupportedMeaning.meaningReason, 'source_unavailable');
+    assert.equal(meaningBody.contentVersion, '1.0.0');
     const unnamed = await (await post(JSON.stringify({ birthDate: birth.birthDate }))).json();
     assert.equal(unnamed.metrics.expression.status, 'unavailable');
     assert.equal(unnamed.metrics.expression.value, null);

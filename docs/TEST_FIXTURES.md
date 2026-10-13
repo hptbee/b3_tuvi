@@ -28,6 +28,8 @@ Giữ hành vi đã có của engine, API, hoặc chuẩn hóa. Kết quả kỳ
 
 - `numerologyApi.test.mjs`: real HTTP contract/validation/privacy and unchanged temp SQLite counts for the experimental calculator.
 
+- `numerologyContent.test.mjs`: versioned original-editorial schema, source/review eligibility and immutable public serializer; community themes not expert formula proof.
+
 - `numerologyAdvanced.test.mjs`: independent grid/calendar-cycle arithmetic, line states, target validation and date boundaries; experimental product convention.
 
 - `numerologyCore.test.mjs`: independent hand-derived product-spec arithmetic fixtures, Unicode/calendar negatives and invariants. Experimental Pythagorean convention; not an externally verified domain reference.

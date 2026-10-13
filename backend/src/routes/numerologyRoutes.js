@@ -1,7 +1,8 @@
 import express from 'express';
 import { calculateNumerology } from '../numerology/calculate.js';
 import { NumerologyInputError } from '../numerology/input.js';
-import { publicProfile } from '../numerology/profile.js';
+import { PROFILE, publicProfile } from '../numerology/profile.js';
+import { contentStore, supportedMeaningValue } from '../numerology/content.js';
 
 export function numerologyNoStore(req, res, next) {
     res.set('Cache-Control', 'no-store');
@@ -15,6 +16,22 @@ export function currentVietnamDate() {
 }
 const router = express.Router();
 router.get('/profiles', (req, res) => res.json({ ok: true, profiles: [publicProfile()] }));
+router.get('/meanings/:metricId/:value', (req, res, next) => {
+    try {
+        const { metricId, value: rawValue } = req.params;
+        const value = Number(rawValue);
+        if (!/^(?:[1-9]|11|22|33)$/.test(rawValue) || !supportedMeaningValue(metricId, value)) {
+            throw new NumerologyInputError('MEANING_NOT_FOUND', 'Chỉ số hoặc giá trị chưa được hỗ trợ.');
+        }
+        for (const key of Object.keys(req.query)) if (!['profileId', 'profileVersion', 'locale'].includes(key)) {
+            throw new NumerologyInputError('UNKNOWN_FIELD', 'Tham số không được hỗ trợ.', key);
+        }
+        for (const [key, expected] of [['profileId', PROFILE.id], ['profileVersion', PROFILE.version], ['locale', PROFILE.locale]]) {
+            if (req.query[key] !== undefined && req.query[key] !== expected) throw new NumerologyInputError(key === 'locale' ? 'UNSUPPORTED_LOCALE' : 'PROFILE_NOT_FOUND', 'Phương pháp, phiên bản hoặc ngôn ngữ chưa được hỗ trợ.', key);
+        }
+        res.json({ ok: true, metricId, value, profile: publicProfile(), contentVersion: contentStore.contentVersion, ...contentStore.getMeaning(metricId, value) });
+    } catch (error) { next(error); }
+});
 router.post('/calculate', (req, res, next) => {
     try {
         res.json(calculateNumerology(req.body, currentVietnamDate()));
@@ -30,7 +47,7 @@ export function numerologyErrorHandler(error, req, res, next) {
     let message = 'Chưa tính được chỉ số. Vui lòng thử lại.';
     let fields = [];
     if (error instanceof NumerologyInputError) {
-        status = error.code === 'PROFILE_NOT_FOUND' ? 404 : 400;
+        status = ['PROFILE_NOT_FOUND', 'MEANING_NOT_FOUND'].includes(error.code) ? 404 : 400;
         ({ code, message, fields } = error);
     } else if (error.type === 'entity.too.large' || error.status === 413) {
         status = 413; code = 'PAYLOAD_TOO_LARGE'; message = 'Dữ liệu gửi lên quá lớn.';

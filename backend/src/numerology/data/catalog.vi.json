@@ -1,0 +1,277 @@
+{
+  "version": "1.0.0",
+  "locale": "vi-VN",
+  "profileId": "pythagorean-vn-v1",
+  "compatibleProfileVersions": [
+    "1.1.0"
+  ],
+  "review": {
+    "status": "editorial_reviewed",
+    "approvedForPublic": true,
+    "reviewerRole": "independent_editorial_reviewer",
+    "evidenceId": "autodev-T008-editorial-review-1"
+  },
+  "themes": {
+    "1": {
+      "title": "Tự chủ và khởi đầu",
+      "body": "Hãy thử dùng chủ đề tự chủ để nhìn lại một lựa chọn đang chờ bạn quyết định. Một bước nhỏ có lý do rõ ràng có thể hữu ích hơn việc cố chứng minh mình phải dẫn đầu.",
+      "prompt": "Đâu là một việc bạn có thể chủ động bắt đầu, và khi nào bạn cần nhờ hỗ trợ?",
+      "sourceId": "motivational-community-c0535c9",
+      "sourceSection": "destiny.1"
+    },
+    "2": {
+      "title": "Lắng nghe và hợp tác",
+      "body": "Chủ đề hợp tác gợi một cách nhìn về sự cân bằng giữa tiếng nói của mình và người khác. Lắng nghe có thể đi cùng việc nói rõ nhu cầu; không cần giữ hòa khí bằng mọi giá.",
+      "prompt": "Bạn muốn trao đổi điều gì để hai bên hiểu nhau hơn?",
+      "sourceId": "motivational-community-c0535c9",
+      "sourceSection": "destiny.2"
+    },
+    "3": {
+      "title": "Biểu đạt và sáng tạo",
+      "body": "Bạn có thể dùng chủ đề biểu đạt để thử một cách trình bày mới cho điều mình nghĩ. Sáng tạo không chỉ là nghệ thuật; đôi khi đó là tìm một lời giải dễ hiểu hoặc chia sẻ một ý tưởng chưa hoàn chỉnh.",
+      "prompt": "Ý tưởng nào bạn muốn thử diễn đạt bằng lời, hình ảnh hoặc một việc làm nhỏ?",
+      "sourceId": "motivational-community-c0535c9",
+      "sourceSection": "destiny.3"
+    },
+    "4": {
+      "title": "Nền tảng và sự đều đặn",
+      "body": "Chủ đề nền tảng gợi việc xem lại những thói quen đang giúp bạn tiến lên. Sự đều đặn hữu ích khi còn chỗ cho nghỉ ngơi và điều chỉnh, thay vì biến mọi việc thành một quy tắc cứng.",
+      "prompt": "Thói quen nào cần giữ, và quy tắc nào đã đến lúc linh hoạt hơn?",
+      "sourceId": "motivational-community-c0535c9",
+      "sourceSection": "destiny.4"
+    },
+    "5": {
+      "title": "Khám phá và linh hoạt",
+      "body": "Bạn có thể xem chủ đề khám phá như lời mời thử một góc nhìn khác. Trải nghiệm mới sẽ có ý nghĩa hơn khi bạn chọn điều muốn học và giới hạn phù hợp, thay vì thay đổi chỉ để tránh sự nhàm chán.",
+      "prompt": "Bạn muốn thử điều gì mới trong phạm vi mình có thể kiểm soát?",
+      "sourceId": "motivational-community-c0535c9",
+      "sourceSection": "destiny.5"
+    },
+    "6": {
+      "title": "Chăm sóc và trách nhiệm",
+      "body": "Chủ đề chăm sóc gợi việc nhìn lại cách bạn dành thời gian cho những điều quan trọng. Trách nhiệm cũng bao gồm việc nhận ra giới hạn của mình và cho người khác cơ hội tự quyết định.",
+      "prompt": "Bạn có thể quan tâm đến người khác mà vẫn giữ một khoảng dành cho bản thân như thế nào?",
+      "sourceId": "motivational-community-c0535c9",
+      "sourceSection": "destiny.6"
+    },
+    "7": {
+      "title": "Tìm hiểu và chiêm nghiệm",
+      "body": "Bạn có thể dùng chủ đề tìm hiểu để đặt câu hỏi sâu hơn trước khi kết luận. Khoảng lặng có thể giúp suy nghĩ rõ, nhưng trải nghiệm và phản hồi thực tế cũng là cách kiểm tra điều mình tin.",
+      "prompt": "Bạn cần tìm thêm dữ kiện hay trò chuyện với ai để hiểu vấn đề này?",
+      "sourceId": "motivational-community-c0535c9",
+      "sourceSection": "destiny.7"
+    },
+    "8": {
+      "title": "Điều phối và trách nhiệm chung",
+      "body": "Chủ đề điều phối gợi việc sắp xếp nguồn lực và xem ảnh hưởng của quyết định lên người khác. Điều đáng quan sát là cách bạn làm việc có trách nhiệm, không phải một lời hứa về quyền lực hoặc thành công.",
+      "prompt": "Bạn muốn tổ chức việc gì rõ ràng hơn, và ai cần được tham gia quyết định?",
+      "sourceId": "motivational-community-c0535c9",
+      "sourceSection": "destiny.8"
+    },
+    "9": {
+      "title": "Đóng góp và nhìn rộng",
+      "body": "Bạn có thể dùng chủ đề đóng góp để nhìn lại điều mình đã học và muốn chia sẻ. Giúp đỡ có thể bắt đầu rất nhỏ; lựa chọn phù hợp với khả năng hiện tại thường bền vững hơn kỳ vọng phải làm được tất cả.",
+      "prompt": "Điều gì đáng tổng kết hoặc chia sẻ, và bạn cần đặt giới hạn ở đâu?",
+      "sourceId": "motivational-community-c0535c9",
+      "sourceSection": "destiny.9"
+    },
+    "11": {
+      "title": "Lắng nghe tinh tế",
+      "body": "Chủ đề của số 11 trong nguồn tham khảo gợi việc chú ý đến trải nghiệm và đối thoại. Bạn có thể ghi nhận cảm nhận của mình rồi kiểm tra bằng trao đổi và dữ kiện; con số không chứng minh một khả năng đặc biệt.",
+      "prompt": "Cảm nhận nào bạn muốn kiểm tra lại trước khi hành động?",
+      "sourceId": "motivational-community-c0535c9",
+      "sourceSection": "destiny.11"
+    },
+    "22": {
+      "title": "Ý tưởng và cách thực hiện",
+      "body": "Chủ đề số 22 gợi việc nối một ý tưởng lớn với các bước có thể làm được. Có thể bắt đầu bằng việc xác định mục tiêu, nguồn lực và một thử nghiệm nhỏ; con số không bảo đảm kết quả hay vị thế.",
+      "prompt": "Bạn muốn chia một kế hoạch thành bước đầu tiên cụ thể nào?",
+      "sourceId": "motivational-community-c0535c9",
+      "sourceSection": "destiny.22"
+    }
+  },
+  "contexts": {
+    "lifePath": {
+      "label": "Đường đời",
+      "opening": "Ở chỉ số Đường đời, hãy xem chủ đề này như một khung suy ngẫm về hướng đi dài hạn.",
+      "application": "Đối chiếu với trải nghiệm thật của bạn; một ngày sinh không quyết định con đường phải chọn.",
+      "prompt": "Trong hướng đi bạn đang cân nhắc, chủ đề này có điểm nào phù hợp hoặc không phù hợp?",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        22
+      ]
+    },
+    "birthday": {
+      "label": "Ngày sinh",
+      "opening": "Ở chỉ số Ngày sinh, hãy thử liên hệ chủ đề này với cách bạn thường bắt đầu một việc.",
+      "application": "Đây là gợi ý quan sát thói quen, không phải khẳng định về năng lực bẩm sinh.",
+      "prompt": "Khi bắt đầu một việc gần đây, bạn đã sử dụng cách tiếp cận nào?",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        22
+      ]
+    },
+    "attitude": {
+      "label": "Thái độ",
+      "opening": "Ở chỉ số Thái độ, hãy dùng chủ đề này để xem lại một phản ứng thường gặp.",
+      "application": "Bạn có thể chọn thay đổi cách phản hồi khi bối cảnh khác đi; ngày và tháng sinh không mô tả toàn bộ thái độ.",
+      "prompt": "Trong một tình huống mới, bạn muốn phản hồi khác đi như thế nào?",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "expression": {
+      "label": "Biểu đạt",
+      "opening": "Ở chỉ số Biểu đạt, chủ đề này là gợi ý để nhìn cách bạn đưa suy nghĩ thành hành động.",
+      "application": "Chỉ số từ tên không thay thế kỹ năng đã rèn luyện hoặc phản hồi từ người làm việc cùng bạn.",
+      "prompt": "Bạn muốn thể hiện một ý tưởng hoặc khả năng theo cách nào rõ ràng hơn?",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        22
+      ]
+    },
+    "soulUrge": {
+      "label": "Linh hồn",
+      "opening": "Ở chỉ số Linh hồn, hãy liên hệ chủ đề này với những điều bạn cảm thấy quan trọng.",
+      "application": "Cảm xúc và nhu cầu thực tế của bạn đáng được lắng nghe hơn một mô hình từ các nguyên âm trong tên.",
+      "prompt": "Điều gì đem lại cảm giác có ý nghĩa cho bạn ở thời điểm này?",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        22
+      ]
+    },
+    "personality": {
+      "label": "Nhân cách",
+      "opening": "Ở chỉ số Nhân cách, hãy dùng chủ đề này để suy ngẫm về cách bạn xuất hiện trong một cuộc gặp.",
+      "application": "Mô hình phụ âm trong tên không biết người khác thực sự nhìn bạn ra sao; bạn có thể hỏi thay vì đoán.",
+      "prompt": "Bạn muốn người đối diện hiểu rõ điều gì, và có thể xin phản hồi từ ai?",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        22
+      ]
+    },
+    "maturity": {
+      "label": "Trưởng thành",
+      "opening": "Ở chỉ số Trưởng thành, hãy xem chủ đề này như một cách nối mục tiêu với trải nghiệm đã tích lũy.",
+      "application": "Đây không phải lịch trình bắt buộc hoặc lời dự báo cho một độ tuổi nào.",
+      "prompt": "Bạn muốn kết hợp điều đã học với mục tiêu tiếp theo như thế nào?",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        22
+      ]
+    },
+    "personalYear": {
+      "label": "Năm cá nhân",
+      "opening": "Với Năm cá nhân đang xem, chủ đề này có thể làm câu hỏi cho một kế hoạch trong năm.",
+      "application": "Đây là bài tập suy ngẫm do sản phẩm biên tập, không phải dự báo các sự kiện trong năm.",
+      "prompt": "Bạn muốn dành sự chú ý cho mục tiêu nào trong năm được chọn?",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "personalMonth": {
+      "label": "Tháng cá nhân",
+      "opening": "Với Tháng cá nhân đang xem, hãy thử dùng chủ đề này để rà soát một ưu tiên gần.",
+      "application": "Tháng được chọn không bảo đảm thuận lợi hay khó khăn; quyết định cần dựa vào hoàn cảnh thật.",
+      "prompt": "Bạn muốn thực hiện một việc nhỏ nào trong tháng được chọn?",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "personalDay": {
+      "label": "Ngày cá nhân",
+      "opening": "Với Ngày cá nhân đang xem, chủ đề này là một lời nhắc nhẹ để nhìn lại cách sử dụng thời gian.",
+      "application": "Con số không quyết định hôm nay tốt hay xấu, cũng không thay thế việc đánh giá tình huống.",
+      "prompt": "Một hành động vừa sức trong ngày được chọn của bạn là gì?",
+      "values": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    }
+  }
+}

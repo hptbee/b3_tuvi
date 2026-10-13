@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "sources": [
+    {
+      "id": "motivational-community-c0535c9",
+      "title": "Motivational-Numerology · chủ đề số",
+      "authors": [
+        "Sally Faubion",
+        "Olivier Giulieri"
+      ],
+      "evidenceClass": "community_reference",
+      "status": "reference_checked",
+      "locator": "https://github.com/evoluteur/motivational-numerology/blob/c0535c9c9e7bcdc340b7eed255f89f64146dd8d5/i18n/meaning_en.js",
+      "revision": "c0535c9c9e7bcdc340b7eed255f89f64146dd8d5",
+      "fingerprint": "sha256:612f68459b972d7d1702da3f7337987c0afb837ea467ea6fd2266de0dccb8a92",
+      "license": "AGPL-3.0",
+      "supportedValues": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        22
+      ],
+      "relationship": "general_number_theme",
+      "expertVerified": false,
+      "bookVerified": false
+    }
+  ]
+}

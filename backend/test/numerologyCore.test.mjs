@@ -13,10 +13,15 @@ for (const { id, input, expected } of fixture.cases) {
     for (const [metric, value] of Object.entries(expected)) assert.equal(result.metrics[metric].value, value, `${id}/${metric}`);
     assert.equal(JSON.stringify(input), before, `${id}: input mutation`);
     assert.equal(result.profile.status, 'experimental');
-    assert.equal(result.contentVersion, null);
+    assert.equal(result.contentVersion, '1.0.0');
     for (const metric of Object.values(result.metrics)) {
-        assert.equal(metric.meaning, null);
-        assert.equal(metric.meaningStatus, 'withheld');
+        const eligible = metric.status === 'available' && metric.value !== 33;
+        assert.equal(metric.meaningStatus, eligible ? 'experimental_editorial' : 'withheld');
+        if (eligible) {
+            assert.equal(metric.meaning.value, metric.value);
+            assert.equal(metric.meaning.kind, 'original_editorial');
+            assert.equal(metric.meaning.expertVerified, false);
+        } else assert.equal(metric.meaning, null);
         if (metric.status === 'available') {
             assert.equal(metric.parts.reduce((sum, part) => sum + part.total, 0), metric.rawTotal);
             assert.equal(metric.isMaster, [11, 22, 33].includes(metric.value));

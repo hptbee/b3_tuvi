@@ -1,5 +1,6 @@
 import { PROFILE, publicProfile } from './profile.js';
 import { parseInput } from './input.js';
+import { contentStore } from './content.js';
 
 import { digitSum, reduceNumber } from './reduction.js';
 import { buildBirthGrid } from './birthGrid.js';
@@ -35,10 +36,17 @@ export function calculateNumerology(body, referenceDate) {
             { label: 'lifePath', values: [metrics.lifePath.value], total: metrics.lifePath.value },
             { label: 'expression', values: [metrics.expression.value], total: metrics.expression.value }
         ]) : missing('missing_name');
+    const cycles = calculateCycles(birthDate, targetDate);
+    for (const [id, value] of Object.entries(metrics)) {
+        if (value.status === 'available') Object.assign(value, contentStore.getMeaning(id, value.value, { profileId: PROFILE.id, profileVersion: PROFILE.version, locale: PROFILE.locale }));
+    }
+    for (const id of ['personalYear', 'personalMonth', 'personalDay']) {
+        Object.assign(cycles[id], contentStore.getMeaning(id, cycles[id].value, { profileId: PROFILE.id, profileVersion: PROFILE.version, locale: PROFILE.locale }));
+    }
     return {
         ok: true, schemaVersion: '1.1.0', profile: publicProfile(), referenceDate,
-        contentVersion: null, metrics, nameAnalysis: name,
-        birthGrid: buildBirthGrid(birthDate), cycles: calculateCycles(birthDate, targetDate),
+        contentVersion: contentStore.contentVersion, metrics, nameAnalysis: name,
+        birthGrid: buildBirthGrid(birthDate), cycles,
         capabilities: publicProfile().capabilities,
         warnings: name?.letters.some(letter => letter.letter === 'Y') ? [{ code: 'Y_AS_CONSONANT', field: 'fullName' }] : []
     };
