@@ -5,7 +5,11 @@ import NumerologyPage from './NumerologyPage';
 function result(value = 4, normalized = null) {
   const available = number => ({ status: 'available', value: number, rootValue: number, isMaster: false, keepMasters: true,
     parts: [{ label: 'day', values: [1, 5], total: 6 }], steps: [] });
-  return { ok: true, referenceDate: '2026-10-13', profile: { id: 'pythagorean-vn-v1', version: '1.0.0' },
+  return { ok: true, referenceDate: '2026-10-13', profile: { id: 'pythagorean-vn-v1', version: '1.1.0' },
+    birthGrid: { layoutVersion: '3-6-9-v1', layout: [[3,6,9],[2,5,8],[1,4,7]], counts: {1:2,2:0,3:0,4:0,5:1,6:1,7:0,8:0,9:2}, ignoredZeroCount: 2,
+      lines: ['1-2-3','4-5-6','7-8-9','1-4-7','2-5-8','3-6-9','1-5-9','3-5-7'].map(id => ({ id, digits: id.split('-').map(Number), state: id === '1-5-9' ? 'present' : 'partial' })) },
+    cycles: { policy: 'calendar-year-v1', targetDate: '2026-10-13', year: 2026,
+      personalYear: { ...available(4), keepMasters: false }, personalMonth: { ...available(5), keepMasters: false }, personalDay: { ...available(9), keepMasters: false } },
     nameAnalysis: normalized ? { normalized, letters: [{ letter: 'A', value: 1 }] } : null,
     metrics: {
       lifePath: available(value), birthday: available(6), attitude: available(3),
@@ -150,4 +154,50 @@ it('rejects an incomplete successful response and aborts requests on unmount', a
   await waitFor(() => expect(fetch).toHaveBeenCalledTimes(2));
   view.unmount();
   expect(fetch.mock.calls[1][1].signal.aborted).toBe(true);
+});
+
+
+it('submits an explicit target date and retains its result while editing', async () => {
+  const body = result(); body.cycles.targetDate = '2027-01-01'; body.cycles.year = 2027;
+  const fetch = vi.fn(async () => success(body)); vi.stubGlobal('fetch', fetch);
+  const user = userEvent.setup(); render(<NumerologyPage />); await fillDate(user);
+  const target = screen.getByLabelText(/Ngày xem chu kỳ/);
+  await user.type(target, '2027-01-01');
+  await user.click(screen.getByRole('button', { name: 'Xem kết quả' }));
+  expect(await screen.findByRole('status', { name: 'Năm cá nhân', exact: true })).toHaveTextContent('4');
+  expect(JSON.parse(fetch.mock.calls[0][1].body).targetDate).toBe('2027-01-01');
+  expect(screen.getByText('01/01/2027')).toBeVisible();
+  expect(screen.getByRole('cell', { name: 'Số 1: 2 lần' })).toBeVisible();
+  await user.clear(target); await user.type(target, '2028-01-01');
+  expect(screen.getByText('01/01/2027')).toBeVisible();
+  expect(screen.getByText(/Bạn đang chỉnh sửa thông tin/)).toBeVisible();
+});
+
+it('focuses a rejected target date and links its field error', async () => {
+  vi.stubGlobal('fetch', vi.fn(async () => ({ ok: false, status: 400, json: async () => ({ error: {
+    message: 'Ngày xem không được trước ngày sinh.', fields: [{ path: 'targetDate', message: 'Ngày xem không được trước ngày sinh.' }]
+  } }) })));
+  const user = userEvent.setup(); render(<NumerologyPage />); await fillDate(user);
+  const target = screen.getByLabelText(/Ngày xem chu kỳ/); await user.type(target, '1989-01-01');
+  await user.click(screen.getByRole('button', { name: 'Xem kết quả' }));
+  await screen.findByRole('alert'); expect(target).toHaveFocus();
+  expect(target).toHaveAttribute('aria-invalid', 'true');
+  expect(target).toHaveAttribute('aria-describedby', 'num-target-hint num-target-error');
+  expect(screen.queryByRole('heading', { name: 'Chu kỳ cá nhân' })).not.toBeInTheDocument();
+});
+
+it.each([
+  ['missing grid', body => { body.birthGrid = null; }],
+  ['invalid layout', body => { body.birthGrid.layout = [[1]]; }],
+  ['missing count', body => { delete body.birthGrid.counts[9]; }],
+  ['unknown line', body => { body.birthGrid.lines[0].state = 'unknown'; }],
+  ['master cycle', body => { body.cycles.personalYear.value = 11; }],
+  ['missing cycle', body => { delete body.cycles.personalDay; }]
+])('rejects malformed advanced response: %s', async (_, corrupt) => {
+  const body = result(); corrupt(body);
+  vi.stubGlobal('fetch', vi.fn(async () => success(body)));
+  const user = userEvent.setup(); render(<NumerologyPage />); await fillDate(user);
+  await user.click(screen.getByRole('button', { name: 'Xem kết quả' }));
+  expect(await screen.findByRole('alert')).toHaveTextContent('Phản hồi chưa đầy đủ');
+  expect(screen.queryByRole('heading', { name: 'Biểu đồ ngày sinh' })).not.toBeInTheDocument();
 });

@@ -221,3 +221,31 @@ for (const width of [320, 390]) {
     await expect(page.getByRole('navigation', { name: 'Chọn lĩnh vực' })).toBeVisible();
   });
 }
+
+
+test('birth grid and calendar cycles match real server fixtures for selected and default dates', async ({ page }) => {
+  await page.goto('/than-so-hoc'); await fill(page);
+  await page.locator('#num-target').fill('2027-01-01'); await submit(page);
+  await expect(output(page, 'Năm cá nhân')).toHaveText('5');
+  await expect(output(page, 'Tháng cá nhân')).toHaveText('6');
+  await expect(output(page, 'Ngày cá nhân')).toHaveText('7');
+  await expect(page.getByRole('cell', { name: 'Số 1: 2 lần', exact: true })).toBeVisible();
+  await expect(page.getByRole('cell', { name: 'Số 2: 0 lần', exact: true })).toContainText('Không xuất hiện');
+  await expect(page.locator('.num-grid-zero')).toContainText('2 chữ số 0');
+  await expect(page.locator('.num-lines li').filter({ hasText: '1 – 5 – 9' })).toContainText('Đủ 3 số');
+  await expect(page.locator('.num-cycle-date')).toContainText('01/01/2027');
+  await page.locator('#num-target').fill('2028-01-01');
+  await expect(page.locator('.num-cycle-date')).toContainText('01/01/2027');
+  await expect(page.locator('.num-draft-note')).toBeVisible();
+  await page.locator('#num-target').fill('1989-01-01'); await submit(page);
+  await expect(page.getByRole('alert')).toBeVisible();
+  await expect(page.locator('#num-target')).toBeFocused();
+  await expect(page.locator('#num-target')).toHaveAttribute('aria-invalid', 'true');
+  await page.locator('#num-target').fill('');
+  const responsePromise = page.waitForResponse(response => response.url().endsWith('/api/numerology/calculate'));
+  await submit(page);
+  const body = await (await responsePromise).json();
+  await expect(page.locator('.num-cycle-date')).toContainText(body.referenceDate.split('-').reverse().join('/'));
+  expect(body.cycles.targetDate).toBe(body.referenceDate);
+  await expect(page).toHaveURL(/\/than-so-hoc$/);
+});
