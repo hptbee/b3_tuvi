@@ -706,19 +706,19 @@ Từ `frontend`: `npm run test:e2e`. Command `test:numerology` hoặc validate r
 
 ## 12. Lộ trình triển khai và work packages
 
-### 12.1. Giai đoạn / dependency
+### 12.1. Các giai đoạn và trạng thái đã đối chiếu
 
-| Giai đoạn | Scope | Dependency | Gate ra |
+| Giai đoạn | Scope | Trạng thái tại `ed31ad1` | Gate còn mở |
 |---|---|---|---|
-| N0 — Discovery | Baseline, sources, D01–D12, fixture handbook | Checkout/CI hiện tại | G0: profile/spec đủ Ready |
-| N1 — Core engine | Date/name/reduction và 7 metric MVP | N0 cho công thức liên quan | G1: independent fixtures + unit tests |
-| N2 — API/catalog | Routes, contracts, content validator, privacy | N1; content research có thể bắt đầu từ N0 | G2: integration + public serializer |
-| N3 — Public MVP | Landing/form/result/cách tính/UX | API contract N2 | G3: MVP E2E + review mobile/a11y |
-| N4 — V1 nâng cao | Grid, cycles, pinnacle/challenge | Review riêng từng module, N1–N3 ổn định | G4: công thức + UI + tests từng capability |
-| N5 — Hardening/release | Export/import, ops, benchmark, deployment | Capability dự định phát hành | G5: release checklist và rollback |
-| N6 — Optional | Profiles bổ sung, AI grounded | V1 ổn định; source/evaluation riêng | Không chặn MVP/V1 |
+| N0 | Baseline, D01–D12, source/fixtures | ENGINEERING READY | Source book/edition vẫn OPEN |
+| N1 | Seven-metric engine | DONE | Không chứng minh công thức trường phái |
+| N2 | API/catalog/privacy | DONE for V1 | Content trial/verification separate |
+| N3 | Public MVP & UX | DONE for V1 | Browser/WCAG depth ngoài test hiện có |
+| N4 | Grids, cycles, pinnacles, meaning/report | DONE for defined visuals; PARTIAL interpretation | 33, Challenge 0, deeper synthesis |
+| N5 | Export/import/print/ops | PARTIAL | Live staging, shared proxy, rollback/approval |
+| N6 | New indicator/profile/content/AI | PLANNED/REQUIRES_SPEC | Evidence, formula tie/master/fixtures |
 
-Có thể làm UX prototype/content research sau khi N0 xác định phạm vi; chỉ chốt integration UI khi API schema ổn định. Không đợi AI rồi mới phát hành engine deterministic.
+Các bảng dưới giữ **định nghĩa và acceptance ban đầu** để truy vết. Trạng thái của từng mã task nằm trong §12.9, không suy ra một task chưa làm chỉ vì bảng còn nguyên.
 
 ### 12.2. N0 — Discovery, sources và đặc tả
 
@@ -805,16 +805,39 @@ Có thể làm UX prototype/content research sau khi N0 xác định phạm vi; 
 
 **G5:** có bằng chứng cho từng check, các blocker được phân biệt với giới hạn sản phẩm. Không dùng green build thay cho gate công thức/nội dung hoặc tuyên bố production-ready khi chưa staging.
 
-### 12.8. N6 — Mở rộng tùy chọn
+### 12.8. N6 — Mở rộng có điều kiện
 
-- `NUM-060`: thêm rule profile khác sau source/spec/fixture; UI chọn profile và so sánh dị bản rõ ràng.
-- `NUM-061`: chỉ số bổ sung như hidden passion, karmic lessons, balance, planes of expression **chỉ sau khi có đặc tả và nguồn riêng**; không tính vào MVP/V1 acceptance.
-- `NUM-062`: content search/bài viết có nguồn; tránh auto-generate hàng loạt bài giống nhau để SEO.
-- `NUM-063`: narrator/QA tùy chọn, provider abstraction, timeout/cost budget, deterministic fallback; chưa mặc định thêm API key.
-- `NUM-064`: bộ đánh giá AI chống bịa số/nguồn/lời kết luận; model không tự tính số. Prompt phải dùng structured result server; reference IDs khớp chưa chứng minh prose bám sát, cần đánh giá semantic thật.
-- `NUM-065`: cross-browser khi cần hỗ trợ Safari/Firefox; layout/a11y test cho từng browser được cam kết.
+- `NUM-060`: profile thứ hai (chẳng hạn Decoz) — NOT STARTED; phải có source/spec/version/UI phân biệt dị bản.
+- `NUM-061`: Hidden Passion, Karmic Lessons, Balance, Rational Thought, Bridge — REQUIRES_SPEC; nghiên cứu nguồn mới và fixture độc lập trước khi đưa API.
+- `NUM-062`: nội dung sâu hơn, factual versus symbolic synthesis, mũi tên/lưới có tên trường phái — PLANNED.
+- `NUM-063–064`: optional AI narration/evaluator — NOT STARTED, không là điều kiện V1.
+- `NUM-065`: cross-browser và a11y theo browser support — NOT VERIFIED.
 
-Không auto-enable AI public chỉ vì provider trả 200. Không để task tùy chọn chặn calculator deterministic đã đủ gate.
+### 12.9. Reconciled NUM task ledger — `ed31ad1`
+
+| Task ID | Trạng thái | Bằng chứng / việc còn lại |
+|---|---|---|
+| `NUM-001` | DONE | Baseline inventory và audits |
+| `NUM-002` | PARTIAL: SOURCE OPEN | Source registry + Decoz `source_read`, không sách/edition |
+| `NUM-003–005` | DONE FOR 1.2.0 | D01–D12, formula/fixture/API contract, vẫn có dị bản |
+| `NUM-010–017` | DONE | Pure engine, 7 metrics, name normalization, master, fixtures |
+| `NUM-020–024` | DONE | Endpoints, catalog 1.2.0, eligibility gates |
+| `NUM-025` | PARTIAL OPS | no-store, safe log, 256 KB body, in-process limiter; shared proxy chưa chạy |
+| `NUM-026` | DONE | API/integration tests |
+| `NUM-030–035` | DONE | Public report, trace, async state, E2E |
+| `NUM-036` | DONE WITH FOLLOW-UP | lang/metadata/mobile; full WCAG/cross-browser chưa kiểm |
+| `NUM-040–045` | DONE | Birth/name/combined charts, cycles, pinnacles/challenges |
+| `NUM-046` | PARTIAL CONTENT | 154 bài thử nghiệm; 33 / Challenge 0 withheld; synthesis còn thiếu |
+| `NUM-047` | DONE FOR V1 | Backend/frontend/E2E CI green; staging separate |
+| `NUM-050–052` | DONE | Export/import server recalc/print A4/name opt-in |
+| `NUM-053` | DONE FOR MAIN | [CI run 38438302551](https://github.com/hptbee/b3_tuvi/actions/runs/38438302551) |
+| `NUM-054` | PARTIAL LIVE | Local performance/privacy probe, not production SLO |
+| `NUM-055` | NOT DONE | Live staging deploy/smoke/proxy |
+| `NUM-056` | PARTIAL | Rollback documented, not rehearsed; no release approval |
+| `NUM-057` | IN PROGRESS | Documentation reconciliation in this roadmap PR |
+| `NUM-060–065` | PLANNED / CONDITIONAL | Details §18 and release gates |
+
+`DONE` chỉ xét scope triển khai/test; `SOURCE OPEN` và `PRODUCTION_READY=false` vẫn là các chiều độc lập.
 
 ## 13. Cấu trúc file dự kiến — lịch sử
 
@@ -892,70 +915,95 @@ Chỉ tạo file khi có trách nhiệm thực tế. Một module có thể đ�
 
 ## 15. Definition of Done và checklist phát hành
 
-### 15.1. Mỗi task
+### 15.1. Chức năng V1 (không phải production)
 
-- [ ] Output đúng task scope, có commit hoặc artifact truy được.
-- [ ] Formula/profile thay đổi có spec, nguồn/trạng thái và fixture độc lập; không tự nâng nhãn.
-- [ ] Test liên quan **đã chạy**, số ca/phạm vi đúng; failed/skipped/unrun ghi riêng.
-- [ ] Error/empty/unsupported states có semantics đúng, không fake success.
-- [ ] Public response không lộ raw name/date ngoài contract người dùng đã chọn.
-- [ ] Tu Vi regression bị ảnh hưởng đã được kiểm tra.
-- [ ] Tài liệu API/UI/version cập nhật; không ghi tính năng dự kiến thành hiện có.
+- [x] 7 metrics, ngày/tên/unavailable/master/trace và regression của profile 1.2.0.
+- [x] API profiles/calculate/meanings, validation, source/content eligibility.
+- [x] Birth Grid + 8 lines, Name/Combined Chart, pyramid, Challenge timeline, 9-year/12-month charts.
+- [x] Overview/report có chương, 154 nội dung biên tập eligible, withholding đúng 33/Challenge 0.
+- [x] Export JSON, import recalculation, print A4, raw name opt-in.
+- [x] CI backend/frontend/E2E tại main `ed31ad1` PASS.
+- [ ] Formula/source book-edition verification: chưa làm; không nói review model = expert.
+- [ ] Cross-browser và comprehensive WCAG audit theo release browser matrix: chưa được chứng minh.
 
-### 15.2. MVP release checklist
+### 15.2. Content và indicator expansion gate
 
-- [ ] G0–G3 có evidence; profile active được quyết định rõ.
-- [ ] Date-only happy path, tên tiếng Việt, masters và missing-name đều đúng fixture.
-- [ ] Core calculation/public catalog routes có negative tests.
-- [ ] Landing/menu/CTA/form/result hoạt động desktop/mobile, keyboard và reduced motion.
-- [ ] API lỗi/retry/stale response/navigation không làm đổi input/result sai.
-- [ ] Không có server persistence/history/accounts mới.
-- [ ] Source/content gate rõ; số không đi cùng lời nghĩa chưa được chấp nhận.
-- [ ] CI unit/integration/frontend/build/lint/E2E đạt cho HEAD phát hành.
-- [ ] Staging smoke, SPA refresh, no-store, logs và deployment env được kiểm tra.
-- [ ] Release note nêu các capability chưa có và profile/content versions.
-- [ ] Rollback preview hoặc version trước được diễn tập.
-- [ ] Phê duyệt phát hành theo quy trình repository hoàn thành.
+- [ ] Với 5 chỉ số mới: source được đọc, spec đầy đủ về tie/master/name, handwritten independent fixtures, version/compatibility decision.
+- [ ] Với số 33 và Challenge 0: source-specific content decision; không fallback thành 6/9.
+- [ ] Nội dung mới có bài tiếng Việt nguyên bản, phân biệt general-number-theme và metric/stage-specific claims.
+- [ ] Hai review độc lập thật nếu yêu cầu, chỉnh sửa sau review phải được review lại trước khi publish.
+- [ ] Relationship registry định nghĩa chính xác quan hệ được phép; không invent synergy/compatibility score.
+- [ ] Tests/conventions/out-of-scope changes được kiểm trước merge; không sửa công thức 1.2.0 âm thầm.
 
-### 15.3. V1 release checklist bổ sung
+### 15.3. Production release gate / N5 (CHƯA PASS)
 
-- [ ] G4–G5: birthGrid/cycles/pinnacles/challenges có source/formula/UI/test evidence riêng.
-- [ ] TargetDate/referenceDate/age/phase policies hiển thị và được version hóa.
-- [ ] Export name opt-in, import revalidation/recalculation, print A4 đạt.
-- [ ] Unsupported profile/contentVersion được giải thích, không silent fallback.
-- [ ] Chỉ những capability đủ gate được mở; optional AI vẫn độc lập.
+- [ ] Staging deploy/SPA refresh/deployed API/content versions.
+- [ ] Proxy shared rate limit and trusted forwarding tested for real topology.
+- [ ] Staging no-store/errors/429/print/import/mobile and privacy smoke.
+- [ ] Cross-browser/a11y checks theo support commitment; metadata/canonical/proxy config.
+- [ ] Rollback drill frontend/backend/proxy có evidence.
+- [ ] Release note: profile/catalog 1.2.0, 33 và Challenge 0 withheld, source unverified.
+- [ ] Release-owner approval. Không auto deploy.
 
-## 16. Trình tự bắt đầu thực tế
+**Status:** `V1_FEATURE_COMPLETE` theo phạm vi hiện tại; `FORMULA_SOURCE_VERIFIED=false`, `RELEASE_GATES_PASSED=false`, `PRODUCTION_READY=false`.
 
-Lần triển khai đầu tiên nên tập trung `NUM-001`–`NUM-005` rồi `NUM-010`–`NUM-017`:
+## 16. Trình tự bắt đầu thực tế — lịch sử
 
-1. Chụp baseline HEAD/CI, tạo decision register và source dossier.
-2. Chốt **một** profile Pythagorean cho phép cộng ngày/tên, đặc biệt D02/D03/D05/D06.
-3. Viết fixture có derivation trước engine, bao gồm all-digits vs component divergence và Unicode.
-4. Làm vertical slice **date-only calculate → API → result/cách tính**; name-based metrics nối tiếp theo contract đã chốt.
-5. Giữ trang preview cho những capability chưa ready. Chỉ sau core ổn định mới triển khai grid/cycles/pinnacles, export và AI tùy chọn.
+Chuỗi ban đầu `NUM-001`–`NUM-017` trên baseline `8fc5a01` đã được triển khai; giữ đoạn thiết kế cũ trong lịch sử Git, không khởi động lại engine. Với task mới, bắt đầu từ §18 (knowledge expansion) hoặc §15.3 (release validation), tùy mục tiêu. Không redo audit 90 feature hay sửa Tử Vi.
 
-**Trạng thái lịch sử tại phiên bản 1.0 (2026-10-12):** preview/navigation đã có; các task `NUM-*` còn lại là backlog đề xuất. Roadmap này được lưu không có nghĩa engine, API, nguồn, nội dung hoặc release gate đã hoàn thành.
+## 17. Snapshot hiện hành — 2026-10-14
 
+**Git:** main `ed31ad1`, merged PR #20 (audit), #21 (content 1.1), #22 (export/import/print), #23 (hardening), #24 (product audit + visual report). Baseline gốc 2026-10-13 `f709e42` là historical. CI main [38438302551](https://github.com/hptbee/b3_tuvi/actions/runs/38438302551) thành công backend/frontend/e2e.
 
-## 17. Snapshot triển khai — 2026-10-13
+**User experience:** form → fact-only overview → 7 core numbers → 3×3 Birth Grid với 8 tuyến → 3×3 Name + dual-source combined chart → pyramid P1–P4 → challenge age track → personal-cycle 9-year/12-month chooser → formula-backed relationships → JSON import/export/A4 print. Trên mobile 320/390, các giai đoạn và hình đã được kiểm bằng screenshot của PR #24.
 
-MVP số học thử nghiệm đã thay preview ở `/than-so-hoc`. Chi tiết runtime, evidence và giới hạn ở [IMPLEMENTATION_STATUS](numerology/IMPLEMENTATION_STATUS.md). Các bảng baseline §3 vẫn mô tả `8fc5a01`, không phải HEAD hiện tại.
+**Rules:** `pythagorean-vn-v1` `1.2.0` không đổi từ audit; all-date-digits Life Path, Y là phụ âm, thành phần đỉnh rút master tắt. Ví dụ Nguyễn Văn An, 15/06/1990: Đường đời 4; Biểu đạt 3; Nhân cách 11; đỉnh 3/7/1/7; thử thách 0/5/5/5. Catalog `1.2.0`: 102 bài core/chu kỳ, 44 đỉnh, 8 thử thách. Challenge 0 và 33 vẫn không có lời; `expertVerified` và `bookVerified` chưa đạt.
 
-| Giai đoạn / task | Trạng thái thực tế | Phần còn lại |
-|---|---|---|
-| N0; NUM-001/003/004/005 | Baseline kiểm kê; quyết định/spec profile thử nghiệm, fixture độc lập và API contract đã có | NUM-002 source dossier chưa xác minh; không tuyên bố G0 nghiên cứu nguồn hoàn tất |
-| N1; NUM-010–017 | 7 metric, date-only, Unicode tiếng Việt, Y, master/root, unavailable states, trace và unit runner đã triển khai | Chứng cứ đúng theo quy ước sản phẩm; không tự nâng status nguồn |
-| N2; NUM-020/021/022–024/026 | API calculate/profiles/meanings, typed errors, catalog 102 mục và validator eligibility | Lời vẫn là biên tập thử nghiệm; chưa có bài đỉnh, thử thách hoặc 33 |
-| N2; NUM-025 | No-store (cả lỗi/preflight/429), logger không body/query, không persist; parser limit 256kb; limiter một process | Proxy nhiều instance, staging và phê duyệt release còn pending |
-| N3; NUM-030–035 | Landing/form/result, snapshot/retry/abort, disclosure và browser tests đã có | Disclosure là quy ước thử nghiệm, không là citation đã xác minh |
-| N3; NUM-036 | Probe keyboard/focus và mobile320/390, desktop1440; `lang=vi`; `/la-so` là `noindex` | Chưa audit WCAG đầy đủ hoặc cross-browser |
-| N4; NUM-040–047 | Biểu đồ, chu kỳ và đỉnh cao/thử thách đã có như quy ước thử nghiệm `1.2.0` | Chưa có lời luận cho đỉnh cao/thử thách |
-| N5; NUM-050–057 | Export/import/print, probe hiệu năng local và checklist staging đã có | Staging sống, rollback diễn tập và phê duyệt release còn pending |
-| N6 | Pending, không chặn calculator | Profile bổ sung, AI và cross-browser theo gate riêng. Nội dung cốt lõi/chu kỳ đã có ở dạng thử nghiệm, không thuộc nhóm “chưa có chữ”. |
+**Maturity:** V1 report feature-complete trong scope hiện hữu; không có năm chỉ số P2; không có nguồn sách xác minh; không staging hay rollback thực tế. Limiter chỉ in-process.
 
-Đoạn trên cập nhật hiện trạng tính đến kiểm toán 2026-10-13. Câu lịch sử trước đó nói `contentVersion=null` và mọi `meaning=null` mô tả giai đoạn trước catalog, không còn là runtime HEAD.
+### Những khoảng trống sau merge — thứ tự đề xuất
 
-Không đánh dấu các checklist phát hành §15 đã xong. `sourceStatus=product_specification_only`, `status=experimental`. Chỉ số cốt lõi và chu kỳ có thể mang `experimental_editorial` khi catalog hợp lệ. Đỉnh, thử thách và số 33 vẫn withheld. Các trang Decoz đọc trong kiểm toán là `source_read`, không phải sách đã xác minh, và không tự approved thành profile mới.
+| Thứ tự | Workstream | Acceptance gate | Trạng thái |
+|---|---|---|---|
+| K0 | Research + công thức 5 indicators (Hidden Passion, Karmic Lessons, Balance, Rational Thought, Bridge) | Nguồn công thức, variant matrix, spec các trường hợp tie/master, ít nhất 3 fixture độc lập mỗi indicator | NEXT / `REQUIRES_SPEC` |
+| K1 | 33 và Challenge 0 | Dossier source-specific, không đổi số/fallback, editorial decision độc lập | NEXT / `SOURCE_GAP` |
+| K2 | Deep interpretations & charts | 154 bài hiện tại review theo metric/stage; arrow/name layers tách truyền thống; dài thêm chỉ nếu thêm được ý kiểm chứng | PLANNED |
+| K3 | Defined relationship synthesis | Registry các quan hệ có phép hoặc nguồn, đúng input, không điểm tâm lý tự tạo | PLANNED |
+| K4 | Report reading UX | Progressive disclosure, headings, contextual cross-links, print chapter breaks | AFTER K2/K3 |
+| R0 | Release validation | Live staging, shared proxy limiter, rollback, approval | OPEN / separate track |
+| O0 | Alternative profiles/AI/compatibility | Spec, source, version, evaluation riêng; không chặn V1 | OPTIONAL |
 
-Thứ tự kế tiếp: giữ số của profile 1.2.0; chỉ tạo profile mới nếu muốn theo biến thể Decoz đã ghi; diễn tập staging và rollback trước khi phê duyệt release. Export/import/print và limiter một process đã có mã và test local. Báo cáo: [audits/DEEP_AUDIT_REPORT.md](numerology/audits/DEEP_AUDIT_REPORT.md) và [RELEASE_READINESS.md](numerology/RELEASE_READINESS.md).
+Không biến việc không có ấn bản sách thành lời hứa giả: tìm kiếm nguồn **có giới hạn**, ghi chi tiết blocker, tiếp tục việc khác nếu một capability không đủ điều kiện.
+
+## 18. Roadmap triển khai tiếp — Numerology Knowledge Expansion
+
+### 18.1. Một lần AutoDev, nhiều work package
+
+Sau khi roadmap được duyệt, một lần AutoDev có thể thực thi `K0 → K1 → K2/K3 → K4` trên một Master Plan và checkpoint chung. Không tự kết luận rằng mọi ứng viên đều formula-ready. Ghi riêng `SOURCE_RESEARCH`, `SPEC_READY`, `IMPLEMENTED`, `CONTENT_REVIEWED`, `PUBLIC_ELIGIBLE` và `BLOCKED_WITH_EVIDENCE`.
+
+### 18.2. Task mở rộng (mã mới, không sửa lại NUM lịch sử)
+
+| Mã | Package | Deliverables | Điều kiện hoàn thành |
+|---|---|---|---|
+| `NUM-K001` | Research 5 indicators | Author/source locators, definitions, tie/master/initials/name variants, formula comparison | 5/5 ứng viên có quyết định nguồn hoặc blocker cụ thể; không dừng ở landing page chỉ liệt kê tên |
+| `NUM-K002` | Formula spec + fixture | Pure expressions, handwritten examples, profile/capability version decision | Implement chỉ khi `FORMULA_READY`, có >=3 fixture/candidate; không đổi 1.2.0 |
+| `NUM-K003` | Advanced calculator UI | Server metric, trace, typed unavailable, result chapter, tests | Public chỉ với spec/fixture approved; thiếu tên không hiện số 0 giả |
+| `NUM-K004` | 33 / Challenge 0 | Source dossier, variant comparison, original draft/editorial gate | Có xuất bản hay withheld đều có lý do; 33≠6, challenge 0≠9 |
+| `NUM-K005` | 154-reading quality pass | Content audit theo metric/stage, concise+detail structure, copyright/disclosures | Không padding; không claim chắc chắn; text thay sau review phải review lại |
+| `NUM-K006` | Arrow/name/combined reading | Presentation tradition named, source applicability and original explanatory copy | Không dùng tên lưới thuộc trường phái khác như quy tắc Pythagorean; name không 'chữa' birth grid |
+| `NUM-K007` | Relationship rules | Input/applicability/source registry, synthesis engine deterministic, tests | Formula facts tách symbolic reading; không invent harmony scores |
+| `NUM-K008` | Report refinement | Content layers, cross-links, mobile/print, accessibility, screenshots | Không redesign lại N4 hoặc thay đổi privacy |
+| `NUM-K009` | Integration and closure | Full tests, independent reviews, source/coverage matrix, roadmap rebaseline | Báo PASS/PARTIAL/BLOCKED theo evidence, draft PR, không auto merge |
+
+### 18.3. Song song: N5 Release Validation
+
+`NUM-R001` staging deploy và API/SPA smoke; `NUM-R002` reverse-proxy shared limiter/trusted IP; `NUM-R003` rollback rehearsal; `NUM-R004` cross-browser/accessibility theo browser support; `NUM-R005` owner approval. Là một track riêng, **không tự động thực hiện trong Knowledge Expansion**.
+
+### 18.4. Out of scope và version policy
+
+Không thêm compatibility, đặt tên trẻ, saved birth history, career/health/money certainty hoặc LLM runtime như một phần bắt buộc. Không trộn Pythagorean `1.2.0` với Decoz/Phillips/Lo Shu mà không đặt tên convention và version riêng. Không nâng `edition_verified`/`expertVerified` khi mới có hai model thống nhất hoặc fixtures khớp spec nội bộ.
+
+### 18.5. Tiêu chí phát hành roadmap
+
+**Knowledge pass** khi mỗi gói có implementation/test hoặc blocker được chứng minh; **product expansion pass** khi mọi phần công bố có đủ formula/content gates; **production pass** chỉ sau §15.3. Những trạng thái này tuyệt đối không gộp thành một nhãn DONE.
+
