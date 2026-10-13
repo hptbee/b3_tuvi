@@ -280,10 +280,8 @@ test('original reflective reading and source disclosure open by keyboard', async
   await expect(output(page, 'Đường đời')).toHaveText('4');
   const card = page.getByRole('article', { name: 'Đường đời', exact: true });
   const reading = card.locator('.num-reading');
-  await expect(reading.locator('h4')).toBeHidden();
-  await card.getByText('Lời luận tham khảo · Đường đời', { exact: true }).focus();
-  await page.keyboard.press('Enter');
-  await expect(reading.locator('h4')).toContainText('Đường đời 4');
+  await expect(reading.locator('h4')).toContainText('Lời luận tham khảo');
+  await expect(reading.locator('.num-reading-title')).toContainText('Đường đời 4');
   await expect(reading).toContainText('khung suy ngẫm về hướng đi dài hạn');
   await expect(reading.getByRole('heading', { name: 'Câu hỏi để tự suy ngẫm' })).toBeVisible();
   const source = reading.locator('.num-reading-source');

@@ -64,9 +64,33 @@ function validAdvanced(body) {
     && Number.isInteger(grid.ignoredZeroCount) && grid.ignoredZeroCount >= 0 && grid.ignoredZeroCount <= 8
     && Array.isArray(grid.lines) && grid.lines.length === 8 && new Set(grid.lines.map(line => line?.id)).size === 8
     && grid.lines.every(line => lines.includes(line?.id) && Array.isArray(line.digits) && line.digits.join('-') === line.id && ['present', 'partial', 'absent'].includes(line.state))
-    && cycle?.policy === 'calendar-year-v1' && typeof cycle.targetDate === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(cycle.targetDate)
-    && Number.isInteger(cycle.year)
-    && ['personalYear', 'personalMonth', 'personalDay'].every(id => validMetric(cycle[id], id) && cycle[id].status === 'available' && cycle[id].value >= 1 && cycle[id].value <= 9 && cycle[id].isMaster === false && cycle[id].keepMasters === false);
+    && cycle?.policy === 'calendar-year-v1' && cycle.bandPolicy === 'personal-year-cycle-containing-target-v1'
+    && typeof cycle.targetDate === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(cycle.targetDate)
+    && Number.isInteger(cycle.year) && Number.isInteger(cycle.month) && cycle.month >= 1 && cycle.month <= 12
+    && ['personalYear', 'personalMonth', 'personalDay'].every(id => validMetric(cycle[id], id) && cycle[id].status === 'available' && cycle[id].value >= 1 && cycle[id].value <= 9 && cycle[id].isMaster === false && cycle[id].keepMasters === false)
+    && Array.isArray(cycle.yearBand) && cycle.yearBand.length === 9 && cycle.yearBand.filter(item => item?.selected === true).length === 1
+    && cycle.yearBand.every(item => Number.isInteger(item.year) && validMetric(item.personalYear, 'personalYear') && item.personalYear.value >= 1 && item.personalYear.value <= 9 && item.personalYear.keepMasters === false)
+    && cycle.yearBand.find(item => item.selected).year === cycle.year
+    && cycle.yearBand.find(item => item.selected).personalYear.value === cycle.personalYear.value
+    && Array.isArray(cycle.months) && cycle.months.length === 12 && cycle.months.filter(item => item?.selected === true).length === 1
+    && cycle.months.every((item, index) => item.month === index + 1 && validMetric(item.personalMonth, 'personalMonth') && item.personalMonth.keepMasters === false)
+    && cycle.months.find(item => item.selected).month === cycle.month
+    && cycle.months.find(item => item.selected).personalMonth.value === cycle.personalMonth.value
+    && validCharts(body);
+}
+function validCharts(body) {
+  const name = body.nameChart;
+  const combined = body.combinedChart;
+  const digits = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  if (name?.version !== '1.0.0' || name.policy !== 'pythagorean-letter-count-v1') return false;
+  if (combined?.version !== '1.0.0' || combined.policy !== 'birth-name-presence-v1') return false;
+  if (body.nameAnalysis === null) return name.status === 'unavailable' && name.reason === 'missing_name' && name.counts === null && combined.status === 'unavailable';
+  if (name.status !== 'available' || name.normalized !== body.nameAnalysis.normalized || !Array.isArray(name.letters)) return false;
+  if (!digits.every(digit => Number.isInteger(name.counts?.[digit]) && name.counts[digit] >= 0)) return false;
+  if (digits.reduce((sum, digit) => sum + name.counts[digit], 0) !== body.nameAnalysis.letters.length) return false;
+  return combined.status === 'available' && Array.isArray(combined.digits) && combined.digits.length === 9
+    && combined.digits.every((item, index) => item.digit === index + 1 && item.birth === body.birthGrid.counts[item.digit] && item.name === name.counts[item.digit]
+      && item.presence === (item.birth > 0 && item.name > 0 ? 'both' : item.birth > 0 ? 'birth' : item.name > 0 ? 'name' : 'neither'));
 }
 export async function calculateRequest(input, signal) {
   let response;

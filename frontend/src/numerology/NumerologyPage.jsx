@@ -170,11 +170,33 @@ export default function NumerologyPage() {
       </div>
       {importError && <p className="num-field-error" role="alert">{importError}</p>}
       {!sameInput && <p className="num-draft-note" role="status">Bạn đang chỉnh sửa thông tin. Kết quả vẫn thuộc dữ liệu đã gửi; chọn “Xem kết quả” để tính lại.</p>}
-      {result.contentVersion && <aside className="num-content-notice" aria-label="Lời luận thử nghiệm"><h3>Một lời gợi mở, để bạn tự suy ngẫm</h3><p>Mở lời luận ở từng chỉ số để xem góc nhìn và câu hỏi tham khảo. Chủ đề số được đối chiếu nguồn cộng đồng; nội dung và ngữ cảnh do ứng dụng biên tập, không quyết định tính cách hoặc tương lai của bạn.</p><p>Phiên bản nội dung {result.contentVersion} · biên tập thử nghiệm</p></aside>}
-      <div className="num-metric-grid">{METRIC_IDS.map(id => <MetricSection key={id} id={id} metric={result.metrics[id]} />)}</div>
+      {result.contentVersion && <aside className="num-content-notice" aria-label="Lời luận thử nghiệm"><h3>Một lời gợi mở, để bạn tự suy ngẫm</h3><p>Lời luận hiện ngay dưới mỗi chỉ số đã có bài. Chủ đề số được đối chiếu nguồn cộng đồng; nội dung và ngữ cảnh do ứng dụng biên tập, không quyết định tính cách hoặc tương lai của bạn.</p><p>Phiên bản nội dung {result.contentVersion} · biên tập thử nghiệm</p></aside>}
+      <nav className="num-toc" aria-label="Mục lục lá số">
+        {[['#tong-quan', 'Tổng quan'], ['#chi-so-cot-loi', 'Chỉ số cốt lõi'], ['#bieu-do-ngay-sinh', 'Biểu đồ ngày sinh'], ['#bieu-do-ten', 'Biểu đồ tên'], ['#bieu-do-gop', 'Ngày sinh và tên'], ['#dinh-cao', 'Đỉnh cao và thử thách'], ['#chu-ky', 'Chu kỳ'], ['#quan-he', 'Mối nối'], ['#nguon', 'Nguồn']].map(([href, label]) => <a key={href} href={href}>{label}</a>)}
+      </nav>
+      <section className="num-chapter num-overview" id="tong-quan" aria-labelledby="num-overview-heading">
+        <h3 id="num-overview-heading">Tổng quan</h3>
+        <ul>
+          <li>Ngày sinh {request.input.birthDate.day}/{request.input.birthDate.month}/{request.input.birthDate.year}. Ngày xem {result.cycles.targetDate.split('-').reverse().join('/')}.</li>
+          <li>{request.input.fullName ? `Tên đã nhập được chuẩn hóa khi tính các chỉ số từ tên.` : 'Chưa nhập tên. Nhóm chỉ số từ tên không được tính.'}</li>
+          <li>Đường đời {result.metrics.lifePath.value}{result.metrics.lifePath.isMaster ? ` (số đặc biệt, gốc ${result.metrics.lifePath.rootValue})` : ''}. Ngày sinh {result.metrics.birthday.value}. Thái độ {result.metrics.attitude.value}.</li>
+          <li>{result.metrics.expression.status === 'available' ? `Biểu đạt ${result.metrics.expression.value}. Linh hồn ${result.metrics.soulUrge.value}. Nhân cách ${result.metrics.personality.value}. Trưởng thành ${result.metrics.maturity.value}.` : 'Biểu đạt, Linh hồn, Nhân cách và Trưởng thành chưa có vì thiếu tên.'}</li>
+          <li>Đỉnh đang diễn ra: {result.pinnacles.periods.find(period => period.active).pinnacle.value}. Thử thách cùng giai đoạn: {result.pinnacles.periods.find(period => period.active).challenge.value}. Năm cá nhân: {result.cycles.personalYear.value}.</li>
+          <li>Quy ước {result.profile.id} {result.profile.version}. Các con số là quy ước biểu tượng của hồ sơ này, không phải đánh giá khoa học hay lời đã được chuyên gia xác minh.</li>
+        </ul>
+      </section>
+      <div className="num-metric-grid" id="chi-so-cot-loi">{METRIC_IDS.map(id => <MetricSection key={id} id={id} metric={result.metrics[id]} />)}</div>
       {result.nameAnalysis && <details className="num-name-trace"><summary>Tên được chuyển sang chữ số như thế nào?</summary><p>Tên chuẩn hóa: <strong>{result.nameAnalysis.normalized}</strong></p><p>Đ → D · bỏ dấu · A, E, I, O, U là nguyên âm · Y là phụ âm.</p><div className="num-letter-list">{result.nameAnalysis.letters.map((item, index) => <span key={index} aria-label={`${item.letter} bằng ${item.value}`}>{item.letter}<b>{item.value}</b></span>)}</div></details>}
-      <NumerologyAdvanced birthGrid={result.birthGrid} cycles={result.cycles} pinnacles={result.pinnacles} />
-      <p className="num-disclaimer">Các con số không phải đánh giá khoa học về tính cách hoặc tương lai. Đỉnh cao và thử thách theo quy ước tuổi của bản thử nghiệm; nhóm này chưa có lời luận.</p>
+      <NumerologyAdvanced birthGrid={result.birthGrid} nameChart={result.nameChart} combinedChart={result.combinedChart} cycles={result.cycles} pinnacles={result.pinnacles} metrics={result.metrics} onViewDate={iso => {
+        const next = { birthDate: request.input.birthDate, ...(request.input.fullName ? { fullName: request.input.fullName } : {}), targetDate: iso };
+        setDraft(current => ({ ...current, targetDate: iso }));
+        run(next);
+      }} />
+      <section className="num-chapter" id="nguon" aria-labelledby="num-source-heading">
+        <h2 id="num-source-heading">Cách tính và nguồn</h2>
+        <p>Hồ sơ {result.profile.id} {result.profile.version}. Đường đời cộng mọi chữ số của ngày sinh và có thể giữ 11, 22, 33. Tên bỏ dấu, Đ thành D, Y là phụ âm. Biểu đồ tên chỉ đếm các chữ đó. Đỉnh dùng tháng, ngày, năm đã rút gọn với master tắt, rồi giữ master ở tổng. Thử thách là hiệu tuyệt đối và dùng cùng cửa sổ tuổi.</p>
+        <p className="num-disclaimer">Các con số không phải đánh giá khoa học về tính cách hoặc tương lai. Lời nào chưa có bài đã duyệt thì được ghi là chưa đủ căn cứ, không mượn bài của chỉ số khác.</p>
+      </section>
     </section>}
   </div>;
 }
