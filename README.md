@@ -140,6 +140,22 @@ npm run dev --prefix frontend -- --host 127.0.0.1 --port 5173 --strictPort
 
 Frontend mặc định cổng 5173, backend cổng 5000. Kiểm tra backend bằng `GET /api/health`; phản hồi có `database: "sqlite"` khi database được khởi tạo.
 
+## B3 / autodev trên Codex cloud
+
+Các skill B3 không nằm trong Git checkout của sản phẩm: `.agents/skills` là index liên kết cục bộ, còn `.b3/home` có thể trỏ tới máy Windows. Trên Linux/cloud, chạy từ thư mục gốc:
+
+```bash
+bash scripts/setup-b3-cloud.sh
+export B3_HOME="$(cat .b3/cloud-home)"
+bash scripts/setup-b3-cloud.sh --verify
+```
+
+Bootstrap cài nguồn B3 được pin và dùng installer chính thức để tạo liên kết cho `$autodev` cùng các skill khác. Nó giữ nguyên `.b3/home`, không sao chép nội dung skill và không thay skill riêng đang có. Cần quyền đọc repository `hptbee/b3_ai-engineering` qua Git; không cần tự thêm token nếu authentication hiện tại hoạt động.
+
+Kiểm tra hồi quy installer: `bash scripts/test-b3-cloud.sh` (có kiểm tra clone mới, cần mạng). Xem thêm [hướng dẫn Codex cloud](.cursor/README.md#codex-cloud--linux).
+
+Chat đang mở có thể chưa cập nhật danh sách skill. Khi đó dùng yêu cầu đọc `.agents/skills/autodev/SKILL.md` và workflow B3 theo `.b3/cloud-home`, hoặc bắt đầu task mới để kiểm tra discovery. Việc file/link đọc được không chứng minh skill picker đã nhận `$autodev`.
+
 ## API hiện có
 
 | Method | Endpoint | Mô tả |

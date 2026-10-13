@@ -7,9 +7,12 @@ This product repository is attached to B3. Do not copy B3 skills into this repo.
 Resolve `B3_HOME` in this order. Stop at the first match that contains `workflows/autonomous-development.md`:
 
 1. Environment variable `B3_HOME`
-2. Product git root file `.b3/home` (one line, absolute path)
+2. Product git root file `.b3/cloud-home` (ignored Linux/cloud installation pointer)
+3. Product git root file `.b3/home` (one line, absolute path; may be Windows-specific)
 
-If none match → stop. Do not invent a second procedure.
+If none match on Linux/cloud, run `bash scripts/setup-b3-cloud.sh` once to install the canonical B3 dependency and skill links, then resolve again. Do not invent an autonomous procedure or copy skill bodies. If installation fails, report the exact blocker.
+
+In cloud sessions use the resolved absolute path as `B3_HOME` when following a canonical skill. For shell commands: `export B3_HOME="$(cat .b3/cloud-home)"`. Never rewrite tracked `.b3/home` merely to adapt a Windows checkout to Linux.
 
 ## What to load
 
@@ -38,7 +41,9 @@ Codex does **not** load `.cursor/commands/` as slash commands (`/autodev` is Cur
 | Verify | `$verify` |
 | Review loop | `$review-loop` |
 
-When the user says “autodev”, “run autodev”, or `$autodev`, **read and follow** `.agents/skills/autodev/SKILL.md`, then `{B3_HOME}/workflows/autonomous-development.md`. Do not stop after the plan.
+When the user asks to execute “autodev”, “run autodev”, or `$autodev`, **read and follow** `.agents/skills/autodev/SKILL.md`, then `{B3_HOME}/workflows/autonomous-development.md`. Do not stop after the plan. Installation/troubleshooting requests are not instructions to launch development of unrelated backlog items.
+
+A running cloud chat may not refresh its skill picker after installation. If `$autodev` is absent from the host catalog, follow the same local `SKILL.md` and canonical workflow by explicit file path; do not claim picker discovery was verified. A fresh task may be required for native discovery.
 
 For review-loop delegation, send `{B3_HOME}/.cursor/agents/reviewer.md`, `fixer.md`, `security-reviewer.md`, or `architecture-reviewer.md` to an isolated agent when available. The parent owns `PASS`, `FAIL`, and `UNKNOWN / INCOMPLETE`.
 
