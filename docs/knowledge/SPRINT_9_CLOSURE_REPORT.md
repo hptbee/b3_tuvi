@@ -12,7 +12,7 @@ A reachable positive witness from the closure test is can 1, chi 1, lunar day 15
 
 ## Tests
 
-`backend/test/sprint9Closure.test.mjs` passed, along with the interpretation pipeline, whole-chart, internal-slice, and narrator tests. Full backend unit and integration commands are recorded in the pull request after they run. Frontend and e2e run in GitHub Actions because this change does not alter the frontend source.
+`node scripts/runTests.mjs unit` and `node scripts/runTests.mjs integration` passed locally, including `backend/test/sprint9Closure.test.mjs`. Frontend source was not changed. Frontend and e2e are expected from GitHub Actions on the pull request.
 
 ## Still unresolved
 
