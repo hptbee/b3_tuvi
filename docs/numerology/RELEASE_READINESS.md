@@ -45,7 +45,7 @@ server {
 
 `frontend/e2e/chart.spec.js` scenario `a slow chart cannot replace the latest chart after navigation` had failed with `1 giờ 00 phút` where the test expected `10 giờ 00 phút`. Hour 1 is `DEFAULT_INPUT`, not the delayed hour-8 response. Leaving `/la-so` clears the query, and the shared form discards an edit that was stored against the previous query. The test could select hour 10 on the chart form before the landing form had committed, then submit the default.
 
-The test now waits until the URL is `/`, selects hour 10, and checks the combobox value before submit. The displayed-hour assertion is unchanged. Local result on 2026-10-13: the full Playwright suite passed 34 tests, and this scenario then passed 10/10 with two workers. That is local evidence, not a claim that GitHub Actions has already run it.
+The test now waits until the URL is `/` and the combobox shows hour 1, then selects hour 10 and checks that value before submit. The URL can change before React commits the home form, so waiting only for `/` still raced: pull-request run `38430111858` received `1` after `selectOption('10')`. The displayed-hour assertion is unchanged. Local result after that wait: this scenario passed 10/10 with two workers.
 
 ## Performance and privacy probe
 

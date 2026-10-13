@@ -52,6 +52,8 @@ Các nhãn dưới đây không cộng thành một phần trăm “hệ thống
 - `npm run test:ci` trong `backend`: đạt sau khi thêm `viewDate`. Coverage floor giữ.
 - `npm run test:ci`, `npm run lint` và `npm run build` trong `frontend`: đạt sau vòng sửa. `NumerologyPage.test.jsx` có 40 test.
 - Playwright `e2e/numerology.spec.js`: 19 đạt sau vòng sửa, gồm 320px, 390px và bản in.
-- GitHub Actions của nhánh này chỉ được ghi sau khi push. Chưa staging.
+- Push `5802da8`: GitHub Actions run `38430068692` đạt backend, frontend và e2e.
+- Pull request run `38430111858` đạt backend và frontend. e2e trượt một lần ở `chart.spec.js`: combobox giờ sinh còn giá trị `1` vì URL đã về `/` trước khi React vẽ lại form. Test chờ form về giờ `1` rồi mới chọn giờ `10`.
+- Chưa staging.
 
 Review biên tập catalog 1.2.0: Grok 4.7 High `bc-6cf43e1a-4ac7-5421-b817-a9585126aa26`, GPT 5.6 Terra Medium `bc-2fe196a2-a651-53cc-a48a-dfb7a60a24e9`. Review mã tích hợp: `bc-d540b6fc-df93-56d0-89aa-4c4999573732`. Bốn lỗi đã sửa: ngày xem trước ngày sinh, tên hiện khi in dù chưa chọn, câu “đang chờ” cho thử thách 0, và focus bị kéo lên đầu khi chọn năm.

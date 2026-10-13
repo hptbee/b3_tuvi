@@ -76,6 +76,7 @@ test('a slow chart cannot replace the latest chart after navigation', async ({ p
   await page.getByRole('link', { name: '← Về trang bắt đầu' }).click();
   await expect(page).toHaveURL(/\/$/);
   const hour = page.getByRole('combobox', { name: 'Giờ sinh', exact: true });
+  await expect(hour).toHaveValue('1');
   await hour.selectOption('10');
   await expect(hour).toHaveValue('10');
   await page.getByRole('button', { name: 'Lập Lá Số' }).click();
