@@ -1,0 +1,25 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "phu-giai/88",
+  "sourceDigest": "92f5e2400be292d5b760020719797ed802624e53327982e3f30d3d284958b550",
+  "claimId": "claim-cu-nhat-dong-cung",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "palace_menh",
+    "star_nhat_toa_thu",
+    "star_cu_nhat_same_palace"
+  ],
+  "exceptions": [],
+  "quotation": "Cung Mệnh có Cự, Nhật tọa thủ đồng cung, tất từ đời ông đời cha đã vinh hiển và liên tục ba đời đều có danh giá.",
+  "uncertainties": [
+    "The runtime rule limits branches to Dần and Thân, which this span does not state.",
+    "The runtime rule lists Thái Dương in samePalace but has no field stating Nhật tọa thủ."
+  ],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-9701cfc3-c864-5fd8-9885-5165cd19199b"
+}

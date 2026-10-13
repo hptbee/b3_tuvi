@@ -1,5 +1,5 @@
 import assert from 'assert';
-import { readFileSync } from 'fs';
+import { readdirSync, readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { resolveStar } from '../src/engine/starCatalog.js';
 import { claimEligibility } from '../src/interpretation/eligibility.js';
@@ -71,6 +71,57 @@ const publicClaim = {
     conditions: decision.conditions
 };
 assert.strictEqual(claimEligibility(publicClaim, chart()).eligible, false);
+assert.ok(claimEligibility(publicClaim, chart()).reasons.includes('not_approved_for_interpretation'));
+assert.ok(claimEligibility(publicClaim, chart()).reasons.includes('interpretation_not_sourced'));
+
+const knowledgeRoot = fileURLToPath(new URL('../../docs/knowledge/', import.meta.url));
+const decisionFiles = readdirSync(`${knowledgeRoot}decisions`).filter((name) => name.endsWith('.json'));
+assert.ok(decisionFiles.includes('menh-vo-chinh-dieu.json'));
+for (const file of decisionFiles) {
+    const storedDecision = JSON.parse(readFileSync(`${knowledgeRoot}decisions/${file}`, 'utf8'));
+    const slice = evaluateInternalSlice(chart(), storedDecision);
+    assert.strictEqual(slice.prose, null, file);
+    assert.strictEqual(slice.expertVerified, false, file);
+    const asClaim = {
+        claimId: storedDecision.subjectId,
+        sourceId: storedDecision.sourceId,
+        editionId: storedDecision.editionId,
+        formulaComparisonStatus: storedDecision.formulaComparison,
+        schoolId: storedDecision.schoolId,
+        conditions: storedDecision.conditions
+    };
+    const gate = claimEligibility(asClaim, chart());
+    assert.strictEqual(gate.eligible, false, file);
+    assert.ok(gate.reasons.includes('not_approved_for_interpretation'), file);
+    assert.ok(gate.reasons.includes('interpretation_not_sourced'), file);
+}
+
+const matchedDecision = JSON.parse(readFileSync(`${knowledgeRoot}decisions/menh-vo-chinh-dieu.json`, 'utf8'));
+assert.strictEqual(matchedDecision.decision, 'AI_ACCEPTED');
+assert.strictEqual(matchedDecision.formulaComparison, 'MATCH');
+const matchedSlice = evaluateInternalSlice(chart(), matchedDecision);
+assert.strictEqual(matchedSlice.availabilityStatus, 'not_implemented');
+assert.strictEqual(matchedSlice.prose, null);
+
+const wouldOpen = {
+    claimId: 'fixture-gate',
+    approvedForInterpretation: true,
+    interpretationStatus: 'sourced',
+    formulaComparisonStatus: 'MATCH',
+    sourceId: matchedDecision.sourceId,
+    schoolId: 'vn-tam-hop-default',
+    relatedPalaces: ['menh'],
+    relatedStars: [nguyet],
+    conditions: [`starId=${nguyet}`]
+};
+assert.ok(claimEligibility({ ...wouldOpen, approvedForInterpretation: false }, chart()).reasons.includes('not_approved_for_interpretation'));
+assert.ok(claimEligibility({ ...wouldOpen, interpretationStatus: 'draft' }, chart()).reasons.includes('interpretation_not_sourced'));
+assert.ok(claimEligibility({ ...wouldOpen, formulaComparisonStatus: 'PARTIAL' }, chart()).reasons.includes('formula_not_matched'));
+assert.strictEqual(claimEligibility({ ...wouldOpen, formulaComparisonStatus: 'CONFLICT' }, chart()).eligible, false);
+
+const pipelineSource = readFileSync(fileURLToPath(new URL('../src/interpretation/pipeline.js', import.meta.url)), 'utf8');
+assert.strictEqual(pipelineSource.includes('evaluateInternalSlice'), false);
+assert.strictEqual(pipelineSource.includes('internalSlice'), false);
 
 assert.strictEqual(readFileSync(fileURLToPath(new URL('../src/data/rulesV2.json', import.meta.url)), 'utf8'), rulesBefore);
 

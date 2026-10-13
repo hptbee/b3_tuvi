@@ -1,0 +1,41 @@
+{
+  "decisionId": "nhat-nguyet-dong-lam-2026-10-12",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-nhat-nguyet-dong-lam",
+  "schoolId": "vn-tam-hop-default",
+  "variantType": "rule",
+  "variantId": "rule-pilot-not-runtime",
+  "sourceId": "thai-thu-lang-tan-bien",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "19.2.14+19.5",
+  "sourceDigest": "772523f5fecb776b9c291b82447b1099ddbec216755396c9a054898a433010c4",
+  "fileSha256": "941b104504dd552fe967354759da1683dda30a529aa59a8e570b05727f5b4458",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "CONFLICT",
+      "reviewRef": "docs/knowledge/reviews/nhat-nguyet-dong-lam/review-a.json",
+      "agentId": "bc-67b0f035-b828-5a21-91c3-ef637b435f43",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "CONFLICT",
+      "reviewRef": "docs/knowledge/reviews/nhat-nguyet-dong-lam/review-b.json",
+      "agentId": "bc-170d3495-428d-5e22-a0ab-22245fd3b713",
+      "available": true
+    }
+  ],
+  "decision": "CONFLICT",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "hostModelBuildId": null,
+  "notes": "Comparator returned CONFLICT: reviews disagree on conditions. The runtime rule was not changed."
+}

@@ -1,0 +1,48 @@
+{
+  "decisionId": "loc-ma-giao-tri-2026-10-12",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-loc-ma-giao-tri",
+  "schoolId": "vn-tam-hop-default",
+  "variantType": "rule",
+  "variantId": "rule-pilot-not-runtime",
+  "sourceId": "thai-thu-lang-tan-bien",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "phu-giai/42",
+  "sourceDigest": "b9db6f04daeb0cc649911650b17e991665d7eb7659fb4942b9ea9ecd0c90a044",
+  "fileSha256": "941b104504dd552fe967354759da1683dda30a529aa59a8e570b05727f5b4458",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "PARTIAL",
+      "reviewRef": "docs/knowledge/reviews/loc-ma-giao-tri/review-a.json",
+      "agentId": "bc-67a2b0b5-c3e7-53df-9bde-60dd5bd9761e",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "PARTIAL",
+      "reviewRef": "docs/knowledge/reviews/loc-ma-giao-tri/review-b.json",
+      "agentId": "bc-c2863ba7-8e3d-5e7b-b296-793d6c7e7e22",
+      "available": true
+    }
+  ],
+  "decision": "AI_ACCEPTED",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "hostModelBuildId": null,
+  "notes": "Both requested model slugs agreed on PARTIAL. The host did not return a separate build id. The runtime rule was not changed.",
+  "crossReviewOutcome": "AI_CROSS_REVIEWED",
+  "formulaComparison": "PARTIAL",
+  "conditions": [
+    "star_loc_ton_opposite",
+    "star_ma"
+  ],
+  "exceptions": []
+}

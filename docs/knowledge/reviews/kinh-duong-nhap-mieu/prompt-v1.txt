@@ -1,0 +1,38 @@
+promptVersion: dual-ai-source-review-v1-prompt-1
+policyVersion: dual-ai-source-review-v1
+editionId: tan-bien-retypeset-277-cover-1956
+sourceId: thai-thu-lang-tan-bien
+schoolScope: vn-tam-hop-default
+locator: phu-giai/111
+sourceDigest: 4e4678d385ab38aca3569f5dcfd16bada4fe5393b57da9b7ebfd741645154721
+fileSha256: 941b104504dd552fe967354759da1683dda30a529aa59a8e570b05727f5b4458
+
+Read only the span below. Do not use memory of the book to add sentences that are not in the span. Do not look at another model's answer. Return one JSON object and no other text.
+
+Compare this runtime rule to the span.
+Catalog mapping, not a sentence from the book: Kình = Kình Dương.
+Runtime rule JSON: {"id":"kinh_duong_nhap_mieu","combination":"Kình Dương Nhập Miếu (Mã Đầu Đới Tiễn)","strict":true,"target":"menh","branches":["Thìn","Tuất","Sửu","Mùi","Ngọ"],"clauses":[{"stars":["Kình Dương"],"at":"target"},{"stars":["Thất Sát","Tham Lang"],"at":"target","any":true}]}
+
+Select a condition id only when the span states that requirement for this pattern.
+Allowed condition ids:
+palace_menh
+branch_tu_mo
+branch_suu_mui
+bright
+star_kinh_host
+
+Allowed exception id, include it only if the span exempts this section from Sát tinh: sat_does_not_reduce
+This section is not 19.2.9, 19.2.16, or 19.2.22.
+
+verdict is MATCH only when the runtime rule states every selected condition and exception. PARTIAL when it states some and omits others. CONFLICT when it contradicts the span. NOT_IMPLEMENTED when the runtime rule is null.
+
+quotation must be an exact contiguous substring of the span, at least 40 characters, and must include this anchor: Cung Mệnh an tại Tứ Mộ, có Kình tọa thủ, lại gặp thêm nhiều sao sáng sủa tốt đẹp
+
+JSON keys:
+schoolId, editionId, locator, sourceDigest, claimId, variantType, formulaComparison, verdict, conditions, exceptions, quotation, uncertainties
+
+Use schoolId vn-tam-hop-default, editionId tan-bien-retypeset-277-cover-1956, locator "phu-giai/111", sourceDigest 4e4678d385ab38aca3569f5dcfd16bada4fe5393b57da9b7ebfd741645154721, claimId claim-kinh-duong-nhap-mieu, variantType rule. formulaComparison must equal verdict.
+
+SPAN:
+Kình, Dương nhập Miếu, phú qúy thanh dương
+Cung Mệnh an tại Tứ Mộ, có Kình tọa thủ, lại gặp thêm nhiều sao sáng sủa tốt đẹp hội hợp, nên được hưởng phú qúy và có danh tiếng lừng lẫy. Tuổi Thìn, Tuất, Sửu, Mùi có cách này lại càng qúy hiển.

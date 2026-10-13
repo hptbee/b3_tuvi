@@ -1,0 +1,27 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "19.2.8+19.5",
+  "sourceDigest": "d12a6735c86037ff271cea98193769dbd9f405f398e459b281e126c8ef0f84ee",
+  "claimId": "claim-that-sat-trieu-dau",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "palace_menh_or_quan_loc",
+    "branch_dan_than",
+    "avoid_tuan_triet",
+    "avoid_sat",
+    "avoid_bai",
+    "strengthened_by_khoa_quyen_loc",
+    "star_sat_toa_thu",
+    "star_tu_phu_opposite"
+  ],
+  "exceptions": [],
+  "quotation": "Cung Mệnh hay Quan Lộc an tại Dần, Thân có Sát tọa thủ và có Tử, Phủ (đồng cung) xung chiếu.",
+  "uncertainties": [],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-50089db1-6998-5353-bbbb-2f542332878a"
+}

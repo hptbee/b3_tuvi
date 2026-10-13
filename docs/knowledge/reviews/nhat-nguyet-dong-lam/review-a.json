@@ -1,0 +1,31 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "19.2.14+19.5",
+  "sourceDigest": "772523f5fecb776b9c291b82447b1099ddbec216755396c9a054898a433010c4",
+  "claimId": "claim-nhat-nguyet-dong-lam",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "palace_menh_or_quan_loc",
+    "branch_suu",
+    "branch_mui",
+    "branch_ty",
+    "branch_hoi",
+    "avoid_tuan_triet",
+    "avoid_sat",
+    "avoid_bai",
+    "strengthened_by_khoa_quyen_loc",
+    "star_nguyet_toa_thu",
+    "star_nhat_toa_thu",
+    "star_nhat_nguyet"
+  ],
+  "exceptions": [],
+  "quotation": "Cung Mệnh hay Quan Lộc an tại Sửu, có Nhật tọa thủ tại Tý và Nguyệt tọa thủ tại Hợi xung chiếu hay an tại Mùi có Nhật, Nguyệt tọa thủ đồng cung tại Sửu xung chiếu.",
+  "uncertainties": [],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-67b0f035-b828-5a21-91c3-ef637b435f43"
+}

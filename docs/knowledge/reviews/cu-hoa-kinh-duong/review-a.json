@@ -1,0 +1,25 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "phu-giai/90",
+  "sourceDigest": "de4d59465bb2119539df09a1e64e1e8b788c90dcc67c70b38cc1f309c8aa13ad",
+  "claimId": "claim-cu-hoa-kinh-duong",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "palace_menh",
+    "star_cu_host",
+    "star_hoa_kinh_da"
+  ],
+  "exceptions": [],
+  "quotation": "Cung Mệnh có Cự tọa thủ, gặp Hỏa, Kình, Đà hội hợp, cùng với nhiều sao xấu xa ác độc, tất thắt cổ hay đâm đầu xuống sông mà chết.",
+  "uncertainties": [
+    "The span requires Cự tọa thủ in Cung Mệnh and Hỏa, Kình, Đà hội hợp. The runtime rule targets menh and lists Cự Môn, Hỏa Tinh, and Kình Dương together at tam_phuong_tu_chinh, so it does not state Cự as host and omits Đà La.",
+    "The span also requires nhiều sao xấu xa ác độc and states death by hanging or drowning. No allowed condition id covers that clause, and the runtime rule does not state it."
+  ],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-dd7ac48e-c704-5a0d-8f4d-147a47dfd8cd"
+}

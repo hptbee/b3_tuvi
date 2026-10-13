@@ -1,0 +1,23 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "phu-giai/83",
+  "sourceDigest": "d984566cbce8d7ed26acc141c078fc30557f1dc54b0aaa6ccd938fe1e1192786",
+  "claimId": "claim-tham-vu-dong-hanh",
+  "variantType": "rule",
+  "formulaComparison": "MATCH",
+  "verdict": "MATCH",
+  "conditions": [
+    "palace_menh",
+    "branch_suu_mui",
+    "branch_suu",
+    "star_tham_vu_same_palace"
+  ],
+  "exceptions": [],
+  "quotation": "Cung Mệnh an tại Sửu, Mùi có Tham Vũ tọa thủ đồng cung, về già có uy quyền, được nhiều người lui tới thần phục.",
+  "uncertainties": [],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-9e992cc4-3fb4-5215-8078-5d39459c5ad3"
+}

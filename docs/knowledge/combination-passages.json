@@ -1,0 +1,547 @@
+{
+  "version": 1,
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "sourceId": "thai-thu-lang-tan-bien",
+  "schoolId": "vn-tam-hop-default",
+  "fileSha256": "941b104504dd552fe967354759da1683dda30a529aa59a8e570b05727f5b4458",
+  "catalogCountIsNotVerification": true,
+  "entries": [
+    {
+      "combinationName": "Tử Phủ Đồng Cung",
+      "claimId": "claim-tu-phu-dong-cung",
+      "located": true,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "sourceId": "thai-thu-lang-tan-bien",
+      "locator": "phu-giai/57",
+      "pdfPage": 57,
+      "spanFile": "docs/knowledge/passages/tu-phu-dong-cung/span.txt"
+    },
+    {
+      "combinationName": "Tử Phủ Vũ Tướng",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "the name occurs inside the Quân Thần paragraph, not as this formula"
+    },
+    {
+      "combinationName": "Cơ Nguyệt Đồng Lương",
+      "claimId": "claim-co-nguyet-dong-luong",
+      "located": true,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "sourceId": "thai-thu-lang-tan-bien",
+      "locator": "phu-giai/76",
+      "pdfPage": 76,
+      "spanFile": "docs/knowledge/passages/co-nguyet-dong-luong/span.txt"
+    },
+    {
+      "combinationName": "Sát Phá Tham",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "the name occurs in another verse and a hạn note, not as this formula"
+    },
+    {
+      "combinationName": "Nhật Nguyệt Tịnh Minh",
+      "claimId": "claim-nhat-nguyet-tinh-minh",
+      "located": true,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "sourceId": "thai-thu-lang-tan-bien",
+      "locator": "19.2.15+19.5",
+      "pdfPage": 230,
+      "spanFile": "docs/knowledge/passages/nhat-nguyet-tinh-minh/span.txt"
+    },
+    {
+      "combinationName": "Minh Châu Xuất Hải",
+      "claimId": "claim-minh-chau-xuat-hai",
+      "located": true,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "sourceId": "thai-thu-lang-tan-bien",
+      "locator": "19.2.12+19.2.13+19.5",
+      "pdfPage": 230,
+      "spanFile": "docs/knowledge/passages/minh-chau-xuat-hai/span.txt"
+    },
+    {
+      "combinationName": "Cự Nhật Đồng Cung",
+      "claimId": "claim-cu-nhat-dong-cung",
+      "located": true,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "sourceId": "thai-thu-lang-tan-bien",
+      "locator": "phu-giai/88",
+      "pdfPage": 88,
+      "spanFile": "docs/knowledge/passages/cu-nhat-dong-cung/span.txt"
+    },
+    {
+      "combinationName": "Dương Lương Xương Lộc",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Nguyệt Lãng Thiên Môn",
+      "claimId": "claim-nguyet-lang-thien-mon",
+      "located": true,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "sourceId": "thai-thu-lang-tan-bien",
+      "locator": "19.2.11+19.5",
+      "pdfPage": 230,
+      "spanFile": "docs/knowledge/reviews/nguyet-lang-thien-mon/span.txt"
+    },
+    {
+      "combinationName": "Nhật Chiếu Lôi Môn",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Thất Sát Triều Đẩu",
+      "claimId": "claim-that-sat-trieu-dau",
+      "located": true,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "sourceId": "thai-thu-lang-tan-bien",
+      "locator": "19.2.8+19.5",
+      "pdfPage": 230,
+      "spanFile": "docs/knowledge/passages/that-sat-trieu-dau/span.txt"
+    },
+    {
+      "combinationName": "Tham Vũ Đồng Hành",
+      "claimId": "claim-tham-vu-dong-hanh",
+      "located": true,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "sourceId": "thai-thu-lang-tan-bien",
+      "locator": "phu-giai/83",
+      "pdfPage": 83,
+      "spanFile": "docs/knowledge/passages/tham-vu-dong-hanh/span.txt"
+    },
+    {
+      "combinationName": "Hỏa Tham",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Linh Tham",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Thạch Trung Ẩn Ngọc",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Tam Kỳ Gia Hội",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Song Lộc Triều Viên",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Khoa Minh Lộc Ám",
+      "claimId": "claim-khoa-minh-loc-am",
+      "located": true,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "sourceId": "thai-thu-lang-tan-bien",
+      "locator": "19.2.25+19.5",
+      "pdfPage": 231,
+      "spanFile": "docs/knowledge/passages/khoa-minh-loc-am/span.txt"
+    },
+    {
+      "combinationName": "Lộc Mã Giao Trì",
+      "claimId": "claim-loc-ma-giao-tri",
+      "located": true,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "sourceId": "thai-thu-lang-tan-bien",
+      "locator": "phu-giai/42",
+      "pdfPage": 42,
+      "spanFile": "docs/knowledge/passages/loc-ma-giao-tri/span.txt"
+    },
+    {
+      "combinationName": "Hùng Tú Triều Viên",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Linh Xương Đà Vũ",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Hình Kỵ Giáp Ấn",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Mệnh Lý Phùng Không",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Kình Đà Hiệp Kỵ",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Lộc Phùng Xung Phá",
+      "claimId": "claim-loc-phung-xung-pha",
+      "located": true,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "sourceId": "thai-thu-lang-tan-bien",
+      "locator": "phu-giai/107",
+      "pdfPage": 107,
+      "spanFile": "docs/knowledge/passages/loc-phung-xung-pha/span.txt"
+    },
+    {
+      "combinationName": "Mã Lạc Không Vong",
+      "claimId": "claim-ma-lac-khong-vong",
+      "located": true,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "sourceId": "thai-thu-lang-tan-bien",
+      "locator": "19.3.8+19.5",
+      "pdfPage": 232,
+      "spanFile": "docs/knowledge/passages/ma-lac-khong-vong/span.txt"
+    },
+    {
+      "combinationName": "Cự Hỏa Kình Dương",
+      "claimId": "claim-cu-hoa-kinh-duong",
+      "located": true,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "sourceId": "thai-thu-lang-tan-bien",
+      "locator": "phu-giai/90",
+      "pdfPage": 90,
+      "spanFile": "docs/knowledge/passages/cu-hoa-kinh-duong/span.txt"
+    },
+    {
+      "combinationName": "Phiếm Thủy Đào Hoa",
+      "claimId": "claim-phiem-thuy-dao-hoa",
+      "located": true,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "sourceId": "thai-thu-lang-tan-bien",
+      "locator": "phu-giai/84",
+      "pdfPage": 84,
+      "spanFile": "docs/knowledge/passages/phiem-thuy-dao-hoa/span.txt"
+    },
+    {
+      "combinationName": "Phong Lưu Thái Trượng",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Nhật Nguyệt Tàng Huy",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Bán Không Chiết Xỉ",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Mệnh Vô Chính Diệu",
+      "claimId": "claim-menh-vo-chinh-dieu",
+      "located": true,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "sourceId": "thai-thu-lang-tan-bien",
+      "locator": "dai-cuong/31",
+      "pdfPage": 31,
+      "spanFile": "docs/knowledge/passages/menh-vo-chinh-dieu/span.txt"
+    },
+    {
+      "combinationName": "Ám Lộc",
+      "claimId": "claim-am-loc",
+      "located": true,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "sourceId": "thai-thu-lang-tan-bien",
+      "locator": "phu-giai/108",
+      "pdfPage": 108,
+      "spanFile": "docs/knowledge/passages/am-loc/span.txt"
+    },
+    {
+      "combinationName": "Tử Phủ Triều Viên",
+      "claimId": "claim-tu-phu-trieu-vien",
+      "located": true,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "sourceId": "thai-thu-lang-tan-bien",
+      "locator": "19.2.2+19.5",
+      "pdfPage": 229,
+      "spanFile": "docs/knowledge/passages/tu-phu-trieu-vien/span.txt"
+    },
+    {
+      "combinationName": "Thiên Ất Củng Mệnh",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Tả Hữu Đồng Cung",
+      "claimId": "claim-ta-huu-dong-cung",
+      "located": true,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "sourceId": "thai-thu-lang-tan-bien",
+      "locator": "phu-giai/109",
+      "pdfPage": 109,
+      "spanFile": "docs/knowledge/passages/ta-huu-dong-cung/span.txt"
+    },
+    {
+      "combinationName": "Văn Tinh Củng Mệnh",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Nhật Nguyệt Đồng Lâm",
+      "claimId": "claim-nhat-nguyet-dong-lam",
+      "located": true,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "sourceId": "thai-thu-lang-tan-bien",
+      "locator": "19.2.14+19.5",
+      "pdfPage": 230,
+      "spanFile": "docs/knowledge/passages/nhat-nguyet-dong-lam/span.txt"
+    },
+    {
+      "combinationName": "Thọ Tinh Nhập Miếu",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Anh Tinh Nhập Miếu",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Kình Dương Nhập Miếu (Mã Đầu Đới Tiễn)",
+      "claimId": "claim-kinh-duong-nhap-mieu",
+      "located": true,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "sourceId": "thai-thu-lang-tan-bien",
+      "locator": "phu-giai/111",
+      "pdfPage": 111,
+      "spanFile": "docs/knowledge/passages/kinh-duong-nhap-mieu/span.txt"
+    },
+    {
+      "combinationName": "Tài Ấn Giao Trì",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Giáp Đệ Đăng Khoa",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Đế Ngộ Hung Đồ",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Nhật Nguyệt Tật Ách",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Khúc Ám Đồng Cung",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Thiên Cơ Tỵ Hợi",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Hình Tù Giáp Ấn",
+      "claimId": "claim-hinh-tu-giap-an",
+      "located": true,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "sourceId": "thai-thu-lang-tan-bien",
+      "locator": "19.2.18+19.5",
+      "pdfPage": 231,
+      "spanFile": "docs/knowledge/passages/hinh-tu-giap-an/span.txt"
+    },
+    {
+      "combinationName": "Cự Phùng Tứ Sát",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Lộ Bàng Mai Thi",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Hoa Cái Cư Phu Thê",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Lưỡng Trùng Thiên Mã",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Cát Xứ Tàng Hung",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Phủ Tướng Triều Viên",
+      "claimId": "claim-phu-tuong-trieu-vien",
+      "located": true,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "sourceId": "thai-thu-lang-tan-bien",
+      "locator": "19.2.5+19.5",
+      "pdfPage": 229,
+      "spanFile": "docs/knowledge/passages/phu-tuong-trieu-vien/span.txt"
+    },
+    {
+      "combinationName": "Nhật Lệ Trung Thiên",
+      "claimId": "claim-nhat-le-trung-thien",
+      "located": true,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "sourceId": "thai-thu-lang-tan-bien",
+      "locator": "phu-giai/70",
+      "pdfPage": 70,
+      "spanFile": "docs/knowledge/passages/nhat-le-trung-thien/span.txt"
+    },
+    {
+      "combinationName": "Chúng Thủy Triều Đông",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Không Kiếp Giáp Mệnh",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Kình Đà Giáp Mệnh",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Quân Thần Khánh Hội",
+      "claimId": "claim-quan-than-khanh-hoi",
+      "located": true,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "sourceId": "thai-thu-lang-tan-bien",
+      "locator": "19.2.3+19.2.4+19.5",
+      "pdfPage": 229,
+      "spanFile": "docs/knowledge/passages/quan-than-khanh-hoi/span.txt"
+    },
+    {
+      "combinationName": "Cơ Cự Đồng Lâm",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Thủy Trừng Quế Ngạc",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Đồng Lương Tỵ Hợi",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    },
+    {
+      "combinationName": "Mệnh VCD Đắc Tam Không",
+      "located": false,
+      "schoolId": "vn-tam-hop-default",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "reason": "no defining paragraph of this name in this edition"
+    }
+  ]
+}

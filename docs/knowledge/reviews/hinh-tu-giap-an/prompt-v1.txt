@@ -1,0 +1,45 @@
+promptVersion: dual-ai-source-review-v1-prompt-1
+policyVersion: dual-ai-source-review-v1
+editionId: tan-bien-retypeset-277-cover-1956
+sourceId: thai-thu-lang-tan-bien
+schoolScope: vn-tam-hop-default
+locator: 19.2.18+19.5
+sourceDigest: bce5f042964ab0ae3a2afde54e334c6b09eb5207a85bf0225ca064f3f92bcb98
+fileSha256: 941b104504dd552fe967354759da1683dda30a529aa59a8e570b05727f5b4458
+
+Read only the span below. Do not use memory of the book to add sentences that are not in the span. Do not look at another model's answer. Return one JSON object and no other text.
+
+Compare this runtime rule to the span.
+Catalog mapping, not a sentence from the book: Sát = Thất Sát; Kình = Kình Dương; Liêm = Liêm Trinh; Khoa = Hóa Khoa; Quyền = Hóa Quyền; Lộc = Lộc Tồn or Hóa Lộc, as the span names them.
+Runtime rule JSON: {"id":"hinh_tu_giap_an","combination":"Hình Tù Giáp Ấn","strict":true,"target":"menh","giap":{"mode":"anchor_flanks","anchor":"Thiên Tướng","flankGroups":[["Kình Dương","Thiên Hình"],["Liêm Trinh"]]}}
+
+Select a condition id only when the span states that requirement for this pattern.
+Allowed condition ids:
+palace_menh_or_quan_loc
+palace_menh
+avoid_tuan
+avoid_tuan_triet
+avoid_sat
+avoid_bai
+strengthened_by_khoa_quyen_loc
+star_an_host
+star_hinh_liem_flank
+
+Allowed exception id, include it only if the span exempts this section from Sát tinh: sat_does_not_reduce
+This section is not 19.2.9, 19.2.16, or 19.2.22.
+
+verdict is MATCH only when the runtime rule states every selected condition and exception. PARTIAL when it states some and omits others. CONFLICT when it contradicts the span. NOT_IMPLEMENTED when the runtime rule is null.
+
+quotation must be an exact contiguous substring of the span, at least 40 characters, and must include this anchor: Cung Mệnh hay Quan Lộc có Ấn tọa thủ, có Hình, Liêm giáp cung (Hình là tên riêng
+
+JSON keys:
+schoolId, editionId, locator, sourceDigest, claimId, variantType, formulaComparison, verdict, conditions, exceptions, quotation, uncertainties
+
+Use schoolId vn-tam-hop-default, editionId tan-bien-retypeset-277-cover-1956, locator "19.2.18+19.5", sourceDigest bce5f042964ab0ae3a2afde54e334c6b09eb5207a85bf0225ca064f3f92bcb98, claimId claim-hinh-tu-giap-an, variantType rule. formulaComparison must equal verdict.
+
+SPAN:
+19.2.18. Hình Tù Giáp Ấn
+Cung Mệnh hay Quan Lộc có Ấn tọa thủ, có Hình, Liêm giáp cung (Hình là tên riêng của Kình Dương, cũng như Tù là tên riêng của Liêm Trinh).
+19.5. Phụ luận
+Phú cục và Qúy cục trình bày sơ lược ở trên rất cần phải xa lánh Tuần, Triệt, Sát tinh và Bại tinh. Ngoại trừ Qúy cục 19.2.9 - 19.2.16 - 19.2.22 gặp Sát tinh cũng không bị chiết giảm mất sự tốt đẹp. Nếu Sát tinh sáng sủa, dĩ nhiên lại càng thêm rực rỡ.
+Phú cục và Qúy cục rất cần gặp Khoa, Quyền, Lộc hội hợp, như vậy mới được toàn mỹ.
