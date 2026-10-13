@@ -26,6 +26,8 @@ Giữ hành vi đã có của engine, API, hoặc chuẩn hóa. Kết quả kỳ
 
 ## Synthetic test case
 
+- `numerologyCore.test.mjs`: independent hand-derived product-spec arithmetic fixtures, Unicode/calendar negatives and invariants. Experimental Pythagorean convention; not an externally verified domain reference.
+
 Dữ liệu dựng trong test, database tạm, hoặc lỗi giả. Không dùng cho luận giải người dùng.
 
 - `sqlite.test.mjs`

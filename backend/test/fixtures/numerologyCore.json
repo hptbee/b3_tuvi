@@ -1,0 +1,55 @@
+{
+  "fixtureClass": "independent_product_spec_arithmetic",
+  "profileVersion": "1.0.0",
+  "externallySourceVerified": false,
+  "cases": [
+    {
+      "id": "vietnamese-full-name",
+      "input": {"birthDate":{"year":1990,"month":6,"day":15},"fullName":"Nguyễn Văn An"},
+      "expected": {"lifePath":4,"birthday":6,"attitude":3,"expression":3,"soulUrge":1,"personality":11,"maturity":7},
+      "derivation": "Date digits total 31; birthday 15; attitude 6+6=12; NGUYENVANAN=5+7+3+7+5+5+4+1+5+1+5=48; vowels=10; consonants=38; maturity=4+3=7"
+    },
+    {
+      "id":"master-eleven",
+      "input":{"birthDate":{"year":2007,"month":9,"day":29}},
+      "expected":{"lifePath":11,"birthday":11,"attitude":2,"expression":null,"soulUrge":null,"personality":null,"maturity":null},
+      "derivation":"2+9+9+2+0+0+7=29 -> 11; birthday 29 -> 11; attitude 11+9=20 -> 2"
+    },
+    {
+      "id":"master-twenty-two",
+      "input":{"birthDate":{"year":1990,"month":1,"day":11}},
+      "expected":{"lifePath":22,"birthday":11,"attitude":3,"expression":null,"soulUrge":null,"personality":null,"maturity":null},
+      "derivation":"1+1+1+1+9+9+0=22; attitude 1+1+1=3"
+    },
+    {
+      "id":"master-thirty-three",
+      "input":{"birthDate":{"year":1990,"month":3,"day":29}},
+      "expected":{"lifePath":33,"birthday":11,"attitude":5,"expression":null,"soulUrge":null,"personality":null,"maturity":null},
+      "derivation":"2+9+3+1+9+9+0=33; birthday 29 -> 11; attitude 2+9+3=14 -> 5"
+    },
+    {
+      "id":"method-divergence",
+      "input":{"birthDate":{"year":2000,"month":9,"day":11}},
+      "expected":{"lifePath":4,"birthday":11,"attitude":2,"expression":null,"soulUrge":null,"personality":null,"maturity":null},
+      "derivation":"All date digits 1+1+9+2+0+0+0=13 -> 4; component method with master day would give 22 and is intentionally not this profile"
+    },
+    {
+      "id":"vietnamese-d",
+      "input":{"birthDate":{"year":1990,"month":6,"day":15},"fullName":"Đỗ"},
+      "expected":{"lifePath":4,"birthday":6,"attitude":3,"expression":1,"soulUrge":6,"personality":4,"maturity":5},
+      "derivation":"DO=4+6=10 -> 1; maturity=4+1=5"
+    },
+    {
+      "id":"y-consonant-no-vowels",
+      "input":{"birthDate":{"year":1990,"month":6,"day":15},"fullName":"LY"},
+      "expected":{"lifePath":4,"birthday":6,"attitude":3,"expression":1,"soulUrge":null,"personality":1,"maturity":5},
+      "derivation":"L=3,Y=7 both consonants; total 10 -> 1; vowel subset empty"
+    },
+    {
+      "id":"no-consonants",
+      "input":{"birthDate":{"year":1990,"month":6,"day":15},"fullName":"AE"},
+      "expected":{"lifePath":4,"birthday":6,"attitude":3,"expression":6,"soulUrge":6,"personality":null,"maturity":1},
+      "derivation":"A=1,E=5 vowels, total6; consonants empty; maturity=4+6=10 -> 1"
+    }
+  ]
+}
