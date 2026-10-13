@@ -8,6 +8,7 @@ import StructuredAnalysis from './components/StructuredAnalysis';
 import ChartActions from './components/ChartActions';
 import { LuanGiai, KienThuc, TaiLieu, LienHe } from './pages/Pages';
 import { API_BASE } from './apiBase';
+import NumerologyPage from './numerology/NumerologyPage';
 
 const DEFAULT_INPUT = { name: '', day: 1, month: 1, year: 1990, hour: 1, gender: 1 };
 const BRANCHES = ['Tí', 'Sửu', 'Dần', 'Mão', 'Thìn', 'Tị', 'Ngọ', 'Mùi', 'Thân', 'Dậu', 'Tuất', 'Hợi'];
@@ -44,17 +45,6 @@ function BirthForm({ input, onChange, onSubmit, loading }) {
     </form>
   </section>;
 }
-function Numerology() {
-  return <div className="numerology-page">
-    <div className="section-kicker">MỘT GÓC NHÌN MỚI</div><span className="coming-badge">Đang phát triển</span>
-    <h1>Những con số.<br />Câu chuyện của bạn.</h1>
-    <p>Không gian riêng cho Thần Số Học — tìm hiểu các chỉ số từ ngày sinh và họ tên, theo một cách đơn giản và dễ tiếp cận.</p>
-    <div className="number-art" aria-hidden="true"><span>3</span><span>9</span><span>6</span></div>
-    <div className="future-features">{[['01', 'Chỉ số đường đời', 'Khám phá từ ngày tháng năm sinh.'], ['02', 'Biểu đồ ngày sinh', 'Một cách trình bày trực quan, dễ hiểu.'], ['03', 'Chỉ số từ họ tên', 'Tìm hiểu thêm về các con số trong tên bạn.']].map(([number, title, text]) => <article key={number}><span>{number}</span><h2>{title}</h2><p>{text}</p></article>)}</div>
-    <p className="coming-note">Các nội dung trên là tính năng dự kiến. Công cụ tính chưa khả dụng.</p>
-    <Link className="text-link" to="/">Khám phá Tử Vi trước <span aria-hidden="true">→</span></Link>
-  </div>;
-}
 function Landing({ form }) {
   return <div className="landing-page">
     <section className="landing-hero">
@@ -76,7 +66,7 @@ function Landing({ form }) {
       <div className="landing-section-heading"><div><div className="section-kicker">CHỌN CÁCH BẠN KHÁM PHÁ</div><h2 id="explore-heading">Hai góc nhìn. Một chính bạn.</h2></div><p>Không cần có tất cả câu trả lời.<br />Chỉ cần bắt đầu bằng sự tò mò.</p></div>
       <div className="discipline-grid">
         <article className="discipline-card tuvi-card"><div className="discipline-art" aria-hidden="true"><span className="discipline-yin"><YinIcon /></span><span className="discipline-star">✧</span></div><span className="discipline-label">01 / TỬ VI</span><h3>Đọc những vì sao.<br />Mở thêm góc nhìn.</h3><p>Lập lá số từ ngày giờ sinh, khám phá 12 cung và tìm hiểu ý nghĩa của các sao.</p><a className="discipline-link" href="#lap-la-so">Lập lá số Tử Vi <span aria-hidden="true">→</span></a></article>
-        <article className="discipline-card numbers-card"><div className="discipline-art number-composition" aria-hidden="true"><span>3</span><span>9</span><span>6</span></div><span className="discipline-label">02 / THẦN SỐ HỌC <span className="card-soon">Sắp ra mắt</span></span><h3>Những con số.<br />Một câu chuyện riêng.</h3><p>Một không gian mới để tìm hiểu các chỉ số từ ngày sinh và họ tên. Đang được chuẩn bị.</p><Link className="discipline-link" to="/than-so-hoc">Khám phá không gian mới <span aria-hidden="true">→</span></Link></article>
+        <article className="discipline-card numbers-card"><div className="discipline-art number-composition" aria-hidden="true"><span>3</span><span>9</span><span>6</span></div><span className="discipline-label">02 / THẦN SỐ HỌC <span className="card-soon">Bản thử nghiệm</span></span><h3>Những con số.<br />Một câu chuyện riêng.</h3><p>Tính các chỉ số từ ngày sinh và họ tên, với từng bước giải thích cách tính.</p><Link className="discipline-link" to="/than-so-hoc">Khám phá không gian mới <span aria-hidden="true">→</span></Link></article>
       </div>
     </section>
     <section id="lap-la-so" className="landing-start" aria-labelledby="start-heading">
@@ -84,7 +74,7 @@ function Landing({ form }) {
       {form}
     </section>
     <section className="landing-philosophy"><span aria-hidden="true">✧</span><p>Mỗi góc nhìn là một lời gợi mở.<br /><em>Bạn vẫn là người chọn hành trình.</em></p></section>
-    <section className="landing-faq" aria-labelledby="faq-heading"><div><div className="section-kicker">TRƯỚC KHI BẮT ĐẦU</div><h2 id="faq-heading">Có thể bạn đang hỏi.</h2></div><div className="faq-list"><details><summary>Tôi nên nhập ngày âm hay ngày dương?</summary><p>Hãy nhập ngày sinh dương lịch. Công cụ sẽ chuyển sang âm lịch để lập lá số.</p></details><details><summary>Nếu tôi chưa biết chính xác giờ sinh?</summary><p>Vị trí cung và sao có thể thay đổi theo giờ sinh. Bạn nên xác nhận giờ sinh trước khi sử dụng kết quả để tham khảo.</p></details><details><summary>Thông tin sinh của tôi có được lưu không?</summary><p>API lập lá số không lưu ngày giờ sinh vào cơ sở dữ liệu. Đường dẫn chia sẻ chứa thông tin bạn nhập, vì vậy hãy cân nhắc trước khi gửi cho người khác.</p></details><details><summary>Thần Số Học đã sử dụng được chưa?</summary><p>Chưa. Không gian Thần Số Học hiện là trang giới thiệu cho các tính năng dự kiến.</p></details></div></section>
+    <section className="landing-faq" aria-labelledby="faq-heading"><div><div className="section-kicker">TRƯỚC KHI BẮT ĐẦU</div><h2 id="faq-heading">Có thể bạn đang hỏi.</h2></div><div className="faq-list"><details><summary>Tôi nên nhập ngày âm hay ngày dương?</summary><p>Hãy nhập ngày sinh dương lịch. Công cụ sẽ chuyển sang âm lịch để lập lá số.</p></details><details><summary>Nếu tôi chưa biết chính xác giờ sinh?</summary><p>Vị trí cung và sao có thể thay đổi theo giờ sinh. Bạn nên xác nhận giờ sinh trước khi sử dụng kết quả để tham khảo.</p></details><details><summary>Thông tin sinh của tôi có được lưu không?</summary><p>API lập lá số không lưu ngày giờ sinh vào cơ sở dữ liệu. Đường dẫn chia sẻ chứa thông tin bạn nhập, vì vậy hãy cân nhắc trước khi gửi cho người khác.</p></details><details><summary>Thần Số Học đã sử dụng được chưa?</summary><p>Đã có bản thử nghiệm tính 7 chỉ số cốt lõi và giải thích cách tính. Biểu đồ, chu kỳ và nội dung diễn giải sẽ được triển khai sau.</p></details></div></section>
   </div>;
 }
 function App() {
@@ -137,7 +127,7 @@ function App() {
       <Link to="/" className="brand"><span className="brand-symbol" aria-hidden="true">✧</span><span>Chiêm nghiệm</span></Link>
       <nav className="landing-menu" aria-label="Chọn lĩnh vực">
         <NavLink to="/" end>Tử Vi</NavLink>
-        <NavLink to="/than-so-hoc">Thần Số Học <span className="menu-soon">Sắp ra mắt</span></NavLink>
+        <NavLink to="/than-so-hoc">Thần Số Học</NavLink>
         <NavLink to="/kien-thuc">Kiến thức</NavLink>
         <NavLink to="/tai-lieu">Tài liệu</NavLink>
       </nav>
@@ -147,7 +137,7 @@ function App() {
       <main id="main-content" className="app-main"><Routes>
         <Route path="/" element={<Landing form={form} />} />
         <Route path="/la-so" element={<><section className="results-heading"><div><div className="section-kicker">KHÔNG GIAN TỬ VI</div><h1>Lá số của bạn</h1><p>Chạm vào tên sao hoặc cung để tìm hiểu ý nghĩa.</p></div><Link className="text-link" to="/">← Về trang bắt đầu</Link></section><div className="results-layout"><div className="input-column">{form}</div><section className="result-column" aria-label="Kết quả lá số" aria-busy={status === 'loading'}>{status === 'loading' && <div className="result-message" role="status"><span className="loading-orbit"><YinIcon /></span><h2>Đang lập lá số của bạn</h2><p>Chờ một chút, các cung và sao đang được sắp xếp.</p></div>}{status === 'error' && <div className="result-message error-message" role="alert"><h2>Chưa thể lập lá số</h2><p>{error}</p><button className="primary-button" onClick={() => setRetry(value => value + 1)}>Thử lại</button></div>}{!hasQuery && <div className="result-message"><h2>Bắt đầu với thông tin sinh</h2><p>Điền biểu mẫu và chọn “Lập Lá Số” để xem kết quả.</p></div>}{current && <><div className="chart-view"><ChartActions chartData={current.chart} /><p className="chart-scroll-hint">Trên màn hình nhỏ, vuốt ngang để xem đủ 12 cung.</p><div className="chart-scroll" tabIndex={0} role="region" aria-label="Lá số 12 cung, có thể cuộn ngang"><TuViChart lunarInfo={current.chart.lunarInfo} tuviInfo={current.chart.tuviInfo} userInfo={current.input} /></div></div><CachCucPanel chartData={current.chart} userInfo={current.input} /><StructuredAnalysis userInfo={current.input} /></>}</section></div></>} />
-        <Route path="/than-so-hoc" element={<Numerology />} /><Route path="/luan-giai" element={<LuanGiai />} /><Route path="/kien-thuc" element={<KienThuc />} /><Route path="/tai-lieu" element={<TaiLieu />} /><Route path="/lien-he" element={<LienHe />} /><Route path="*" element={<div className="result-message"><h1>Trang chưa có nội dung</h1><Link className="text-link" to="/">Về trang bắt đầu →</Link></div>} />
+        <Route path="/than-so-hoc" element={<NumerologyPage />} /><Route path="/luan-giai" element={<LuanGiai />} /><Route path="/kien-thuc" element={<KienThuc />} /><Route path="/tai-lieu" element={<TaiLieu />} /><Route path="/lien-he" element={<LienHe />} /><Route path="*" element={<div className="result-message"><h1>Trang chưa có nội dung</h1><Link className="text-link" to="/">Về trang bắt đầu →</Link></div>} />
       </Routes></main><footer className="app-footer"><span>© {new Date().getFullYear()} Chiêm nghiệm</span><p>Nội dung mang tính tham khảo, không thay thế quyết định của bạn.</p></footer>
     </div>
   </div>;

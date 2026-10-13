@@ -1,0 +1,35 @@
+.num-page { max-width: none; padding: 20px 0; }
+.num-hero { display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: 30px; padding: 20px 0 65px; }
+.num-hero h1 em { color: #8f77a2; font-weight: 400; }
+.num-hero p { max-width: 520px; font-size: 14px; line-height: 1.9; color: var(--muted); margin: 24px 0; }
+.num-hero .primary-button { width: fit-content; text-decoration: none; border-radius: 30px; font-size: 13px; padding: 16px 24px; }
+.num-hero .number-art { justify-content: center; }
+.num-start { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; padding: 50px 0; border-top: 1px solid var(--line); scroll-margin-top: 20px; align-items: start; }
+.num-start-copy > h2 { font: 40px/1.2 Georgia, serif; margin: 18px 0; letter-spacing: -.8px; }
+.num-start-copy > p { font-size: 14px; line-height: 1.9; color: var(--muted); }
+.num-method { margin: 30px 0 20px; padding: 22px; background: #f0eaf5; border: 1px solid #e1d6eb; border-radius: 8px; }
+.num-method h3 { font-size: 14px; margin-bottom: 12px; }
+.num-method p { font-size: 12px; line-height: 1.9; margin: 8px 0; color: #6c577e; }
+.num-page .num-disclaimer { font-size: 12px; line-height: 1.8; color: var(--muted); }
+.num-form { padding: 30px; }
+.num-form h2 { font: 27px Georgia, serif; }
+.num-field-error { color: #9b3247; font-size: 12px; line-height: 1.7; margin-top: -10px; }
+.num-page [aria-invalid=true] { border-color: #ba5868; }
+.num-page .primary-button:hover { background: #4f386e; }
+.num-request-status, .num-error { margin: 10px 0 30px; border: 1px solid var(--line); background: white; padding: 24px; border-radius: 10px; font-size: 14px; line-height: 1.8; }
+.num-error { border-color: #dfbcc6; }
+.num-error h2 { font: 25px Georgia, serif; margin-bottom: 12px; }.num-error .primary-button { margin-top: 18px; }
+.num-results { padding-top: 40px; border-top: 1px solid var(--line); }
+.num-results-heading { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 26px; }
+.num-results-heading h2 { font: 35px Georgia, serif; margin: 14px 0; }.num-results-heading p { font-size: 12px; color: var(--muted); line-height: 1.9; overflow-wrap: anywhere; }
+.num-draft-note { padding: 15px; background: #efe8f5; border-radius: 8px; font-size: 12px; line-height: 1.8; margin-bottom: 20px; }
+.num-metric-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.num-metric { padding: 24px; border: 1px solid var(--line); border-radius: 10px; background: #ffffffaa; min-width: 0; }
+.num-metric h3 { font: 24px Georgia, serif; }.num-metric-note { font-size: 11px; line-height: 1.8; color: var(--muted); margin: 10px 0; }
+.num-value { display: block; font: 64px/1.2 Georgia, serif; margin: 16px 0; color: #6d528e; }.num-master { font-size: 11px; color: #745794; margin: -6px 0 16px; }.num-unavailable { font-size: 12px; line-height: 1.8; color: var(--muted); padding: 20px 0; }
+.num-trace { border-top: 1px solid var(--line); padding-top: 14px; }.num-trace summary, .num-name-trace summary { cursor: pointer; font-size: 12px; line-height: 1.8; }
+.num-trace p, .num-name-trace p { font-size: 12px; line-height: 1.9; margin-top: 10px; overflow-wrap: anywhere; }
+.num-name-trace { border: 1px solid var(--line); border-radius: 10px; padding: 22px; margin: 22px 0; background: #f2edf6; }
+.num-letter-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }.num-letter-list > span { display: grid; gap: 6px; width: 36px; text-align: center; padding: 8px; border: 1px solid #d9cce4; border-radius: 5px; background: white; font-size: 11px; }.num-letter-list b { font-size: 16px; }
+@media (max-width: 900px) { .num-hero h1 { font-size: 48px; }.num-start { gap: 30px; }.num-metric-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }.num-hero .number-art { font-size: 90px; gap: 15px; } }
+@media (max-width: 600px) { .num-hero { grid-template-columns: 1fr; gap: 20px; padding-bottom: 30px; }.num-hero h1 { font-size: 42px; }.num-hero .number-art { margin: 15px 0; font-size: 88px; }.num-start { grid-template-columns: 1fr; padding: 30px 0; }.num-start-copy > h2 { font-size: 34px; }.num-form { padding: 24px; }.num-results-heading { flex-direction: column; align-items: start; gap: 12px; }.num-results-heading h2 { font-size: 30px; }.num-metric-grid { grid-template-columns: 1fr; }.num-metric { padding: 22px; } }

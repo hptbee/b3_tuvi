@@ -45,7 +45,17 @@ test('a combination API failure does not appear as an empty match result', async
 });
 
 test('download exports the displayed chart as valid JSON', async ({ page }) => {
-  const responsePromise = page.waitForResponse(response => response.url().endsWith('/api/charts/generate') && response.status() === 200);
+  const responsePromise = page.waitForResponse(async response => {
+    if (!response.url().endsWith('/api/charts/generate') || response.status() !== 200) return false;
+    try {
+      if (await response.finished()) return false;
+      await response.json();
+      return true;
+    } catch {
+      // StrictMode may cancel a response after its headers arrive.
+      return false;
+    }
+  });
   await page.goto(chartUrl);
   const expectedChart = await (await responsePromise).json();
   const downloadPromise = page.waitForEvent('download');

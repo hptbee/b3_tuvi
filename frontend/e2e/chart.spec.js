@@ -88,7 +88,7 @@ test('mobile navigation separates the disciplines without page overflow', async 
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.getByRole('navigation', { name: 'Chọn lĩnh vực' }).getByRole('link', { name: /Thần Số Học/ }).click();
   await expect(page).toHaveURL(/than-so-hoc/);
-  await expect(page.getByText('Đang phát triển', { exact: true })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Tính chỉ số của bạn', exact: true })).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.goto('/la-so?day=15&month=6&year=1990&hour=8&gender=1');
   await expect(page.locator('.center-info')).toBeVisible();

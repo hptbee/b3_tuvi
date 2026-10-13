@@ -18,16 +18,16 @@ for (const viewport of [{ width: 1440, height: 900 }, { width: 390, height: 844 
   });
 }
 
-test('header entry opens an empty chart form and numerology remains a preview', async ({ page }) => {
+test('header entry opens an empty chart form and numerology has its own calculator', async ({ page }) => {
   await page.goto('/');
   await page.getByRole('banner').getByRole('link', { name: 'Lập lá số', exact: true }).click();
   await expect(page).toHaveURL(/\/la-so$/);
   await expect(page.getByRole('heading', { name: 'Bắt đầu với thông tin sinh' })).toBeVisible();
   await expect(page.locator('.palace-box')).toHaveCount(0);
   await page.getByRole('navigation', { name: 'Chọn lĩnh vực' }).getByRole('link', { name: /Thần Số Học/ }).click();
-  await expect(page.getByText('Đang phát triển', { exact: true })).toBeVisible();
-  await expect(page.getByText('Các nội dung trên là tính năng dự kiến. Công cụ tính chưa khả dụng.')).toBeVisible();
-  await page.getByRole('link', { name: 'Khám phá Tử Vi trước' }).click();
+  await expect(page.getByRole('heading', { name: 'Tính chỉ số của bạn', exact: true })).toBeVisible();
+  await expect(page.getByText('Bản thử nghiệm', { exact: true })).toBeVisible();
+  await page.getByRole('navigation', { name: 'Chọn lĩnh vực' }).getByRole('link', { name: 'Tử Vi', exact: true }).click();
   await expect(page).toHaveURL('/');
 });
 
