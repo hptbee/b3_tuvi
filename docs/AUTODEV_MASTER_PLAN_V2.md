@@ -318,3 +318,7 @@ Không sửa `tuviRules.mjs`, `rulesV2.json`, hoặc `docs/AUTODEV_MASTER_PLAN.m
 
 Đo trên nhánh research sau integrity gate `69f7f86`. Research dossier 63/63. Nguồn đọc được trong span Tân Biên: 24/63. Trang PDF kiểm chữ: 0. Dual-AI: 24. `MATCH` không bị ép. 39 cách `SOURCE_INACCESSIBLE`. `expertVerified` vẫn false. Runtime rules không đổi. Báo cáo: `docs/knowledge/SPRINT_9B_COMPLETION_REPORT.md`.
 
+## 22. Sprint 9 closure status
+
+Baseline `origin/main` `434345c` đã gồm Formula V1 từ PR #25. Nhánh đóng Sprint 9 không viết lại 63 công thức và không sửa `rulesV2.json`. `interpretChart` dùng `evaluateNormalizedFormulas`. Lát cắt Tử Phủ Đồng Cung giữ `prose: null` vì quyết định `AI_ACCEPTED` / `MATCH` không phải duyệt luận giải. Chi tiết và quyết định Sprint 10 nằm ở `docs/knowledge/SPRINT_9_CLOSURE_REPORT.md`.
+
