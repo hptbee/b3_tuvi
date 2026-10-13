@@ -12,7 +12,7 @@ function closed(extra) {
         prose: null,
         expertVerified: false,
         publicRelease: false,
-        auspicious: false,
+        auspicious: null,
         ...extra
     };
 }

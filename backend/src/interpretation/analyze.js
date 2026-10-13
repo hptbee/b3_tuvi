@@ -4,7 +4,6 @@ import { validateChartInput } from '../engine/chartInput.js';
 import { normalizeChart } from '../engine/normalizeChart.js';
 import { hourBranchIndex } from '../engine/hourBranch.js';
 import { PALACE_FUNCTIONS, interpretChart } from './pipeline.js';
-import { evaluateTuPhuDongCungSlice } from './tuPhuSlice.js';
 import { synthesize } from './wholeChart.js';
 import { timeOverlay } from '../time/timeEngine.js';
 
@@ -43,8 +42,7 @@ function responseFor(chart) {
             palaceFunctions: analysis.statements.filter((statement) => !statement.thanOverlay).map((statement) => statement.functionId),
             wholeChart: synthesize(analysis),
             time: timeOverlay(chart),
-            palaceCount: PALACE_FUNCTIONS.length,
-            internalInterpretation: evaluateTuPhuDongCungSlice(chart)
+            palaceCount: PALACE_FUNCTIONS.length
         }
     };
 }
