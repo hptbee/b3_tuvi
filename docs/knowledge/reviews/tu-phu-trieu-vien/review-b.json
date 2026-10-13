@@ -1,0 +1,30 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "19.2.2+19.5",
+  "sourceDigest": "9045f8516a9d0b1e5ead4aaeb4ea527c28aebddd68f2a760243e43499d34f6c2",
+  "claimId": "claim-tu-phu-trieu-vien",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "palace_menh_or_quan_loc",
+    "avoid_tuan_triet",
+    "avoid_sat",
+    "avoid_bai",
+    "strengthened_by_khoa_quyen_loc",
+    "bright",
+    "star_tu_bright_host",
+    "star_phu_opposite",
+    "star_phu_bright_host"
+  ],
+  "exceptions": [],
+  "quotation": "Cung Mệnh hay Quan Lộc có Tử sáng sủa tốt đẹp tọa thủ và có Phủ chiếu, hay có Phủ sáng sủa tốt đẹp tọa thủ và có Tử chiếu.",
+  "uncertainties": [
+    "The allowed condition identifiers do not represent the reciprocal requirement of Tử chiếu when Phủ tọa thủ."
+  ],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-2e72994f-e730-5059-874b-0431dec93189"
+}

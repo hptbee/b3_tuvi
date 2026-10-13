@@ -1,0 +1,24 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "phu-giai/109",
+  "sourceDigest": "7a9bc916e869db67b39a963ffd8e1dc965b3bd4cadbbf3bbec1b6e35ce56ee2b",
+  "claimId": "claim-ta-huu-dong-cung",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "palace_menh",
+    "branch_suu_mui",
+    "strengthened_by_khoa_quyen_loc",
+    "bright",
+    "star_ta_huu_same_palace"
+  ],
+  "exceptions": [],
+  "quotation": "Cung Mệnh an tại Sửu, Mùi, có Tả, Hữu tọa thủ đồng cung, lại gặp nhiều sao sáng sủa tốt đẹp hội hợp, nhất là Khoa, Quyền, Lộc tất được hưởng phú qúy song toàn",
+  "uncertainties": [],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-b3b5b0b7-793e-5fa5-a4cc-8fdc1c3c3f2a"
+}

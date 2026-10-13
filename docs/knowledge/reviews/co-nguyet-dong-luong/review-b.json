@@ -1,0 +1,21 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "phu-giai/76",
+  "sourceDigest": "2bec18168b5c9ed8f3f2ce3603711ce298986b39f79266e0123cdb5c1cda2dee",
+  "claimId": "claim-co-nguyet-dong-luong",
+  "variantType": "rule",
+  "formulaComparison": "MATCH",
+  "verdict": "MATCH",
+  "conditions": [
+    "palace_menh",
+    "star_co_nguyet_dong_luong"
+  ],
+  "exceptions": [],
+  "quotation": "Cung Mệnh có Cơ, Nguyệt, Đồng Lương hội hợp, thường là công chức.",
+  "uncertainties": [],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-e352c029-4d2b-5104-9bde-e14297769e6f"
+}

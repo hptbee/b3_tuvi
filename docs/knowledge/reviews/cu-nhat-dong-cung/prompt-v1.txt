@@ -1,0 +1,36 @@
+promptVersion: dual-ai-source-review-v1-prompt-1
+policyVersion: dual-ai-source-review-v1
+editionId: tan-bien-retypeset-277-cover-1956
+sourceId: thai-thu-lang-tan-bien
+schoolScope: vn-tam-hop-default
+locator: phu-giai/88
+sourceDigest: 92f5e2400be292d5b760020719797ed802624e53327982e3f30d3d284958b550
+fileSha256: 941b104504dd552fe967354759da1683dda30a529aa59a8e570b05727f5b4458
+
+Read only the span below. Do not use memory of the book to add sentences that are not in the span. Do not look at another model's answer. Return one JSON object and no other text.
+
+Compare this runtime rule to the span.
+Catalog mapping, not a sentence from the book: Nhật = Thái Dương; Cự = Cự Môn.
+Runtime rule JSON: {"id":"cu_nhat_dong_cung","combination":"Cự Nhật Đồng Cung","target":"menh","branches":["Dần","Thân"],"samePalace":["Cự Môn","Thái Dương"]}
+
+Select a condition id only when the span states that requirement for this pattern.
+Allowed condition ids:
+palace_menh
+star_nhat_toa_thu
+star_cu_nhat_same_palace
+
+Allowed exception id, include it only if the span exempts this section from Sát tinh: sat_does_not_reduce
+This section is not 19.2.9, 19.2.16, or 19.2.22.
+
+verdict is MATCH only when the runtime rule states every selected condition and exception. PARTIAL when it states some and omits others. CONFLICT when it contradicts the span. NOT_IMPLEMENTED when the runtime rule is null.
+
+quotation must be an exact contiguous substring of the span, at least 40 characters, and must include this anchor: Cung Mệnh có Cự, Nhật tọa thủ đồng cung, tất từ đời ông đời cha đã vinh hiển và 
+
+JSON keys:
+schoolId, editionId, locator, sourceDigest, claimId, variantType, formulaComparison, verdict, conditions, exceptions, quotation, uncertainties
+
+Use schoolId vn-tam-hop-default, editionId tan-bien-retypeset-277-cover-1956, locator "phu-giai/88", sourceDigest 92f5e2400be292d5b760020719797ed802624e53327982e3f30d3d284958b550, claimId claim-cu-nhat-dong-cung, variantType rule. formulaComparison must equal verdict.
+
+SPAN:
+Cự, Nhật, đồng cung, quan phong tam đại
+Cung Mệnh có Cự, Nhật tọa thủ đồng cung, tất từ đời ông đời cha đã vinh hiển và liên tục ba đời đều có danh giá.

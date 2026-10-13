@@ -1,0 +1,53 @@
+{
+  "decisionId": "minh-chau-xuat-hai-2026-10-12",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-minh-chau-xuat-hai",
+  "schoolId": "vn-tam-hop-default",
+  "variantType": "rule",
+  "variantId": "rule-pilot-not-runtime",
+  "sourceId": "thai-thu-lang-tan-bien",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "19.2.12+19.2.13+19.5",
+  "sourceDigest": "80539f3dfae40951f28fbd662d63b2d0966d05a6eb1dcb4b07ad03af25d4c5e2",
+  "fileSha256": "941b104504dd552fe967354759da1683dda30a529aa59a8e570b05727f5b4458",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "CONFLICT",
+      "reviewRef": "docs/knowledge/reviews/minh-chau-xuat-hai/review-a.json",
+      "agentId": "bc-c00d43c5-6f62-5ec2-9462-85ab21ed8b37",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "CONFLICT",
+      "reviewRef": "docs/knowledge/reviews/minh-chau-xuat-hai/review-b.json",
+      "agentId": "bc-b68b1980-07aa-5169-9d82-b9aeed186ed4",
+      "available": true
+    }
+  ],
+  "decision": "AI_ACCEPTED",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "hostModelBuildId": null,
+  "notes": "Both requested model slugs agreed on CONFLICT. The host did not return a separate build id. The runtime rule was not changed.",
+  "crossReviewOutcome": "AI_CROSS_REVIEWED",
+  "formulaComparison": "CONFLICT",
+  "conditions": [
+    "avoid_bai",
+    "avoid_sat",
+    "avoid_tuan_triet",
+    "branch_ty",
+    "palace_menh_or_quan_loc",
+    "star_nguyet_toa_thu",
+    "strengthened_by_khoa_quyen_loc"
+  ],
+  "exceptions": []
+}

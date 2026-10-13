@@ -1,0 +1,37 @@
+promptVersion: dual-ai-source-review-v1-prompt-1
+policyVersion: dual-ai-source-review-v1
+editionId: tan-bien-retypeset-277-cover-1956
+sourceId: thai-thu-lang-tan-bien
+schoolScope: vn-tam-hop-default
+locator: phu-giai/70
+sourceDigest: 54375e708b99f295a6700aca5548bff97fe8a558e4a0a04626353761e36cc265
+fileSha256: 941b104504dd552fe967354759da1683dda30a529aa59a8e570b05727f5b4458
+
+Read only the span below. Do not use memory of the book to add sentences that are not in the span. Do not look at another model's answer. Return one JSON object and no other text.
+
+Compare this runtime rule to the span.
+Catalog mapping, not a sentence from the book: Nhật = Thái Dương.
+Runtime rule JSON: {"id":"nhat_le_trung_thien","combination":"Nhật Lệ Trung Thiên","target":"menh","branches":["Ngọ"],"samePalace":["Thái Dương"]}
+
+Select a condition id only when the span states that requirement for this pattern.
+Allowed condition ids:
+palace_menh
+branch_ngo
+bright
+star_nhat_toa_thu
+
+Allowed exception id, include it only if the span exempts this section from Sát tinh: sat_does_not_reduce
+This section is not 19.2.9, 19.2.16, or 19.2.22.
+
+verdict is MATCH only when the runtime rule states every selected condition and exception. PARTIAL when it states some and omits others. CONFLICT when it contradicts the span. NOT_IMPLEMENTED when the runtime rule is null.
+
+quotation must be an exact contiguous substring of the span, at least 40 characters, and must include this anchor: Cung Mệnh an tại Ngọ, có Nhật tọa thủ nên rất sáng sủa tốt đẹp, Nhật ở đây ví nh
+
+JSON keys:
+schoolId, editionId, locator, sourceDigest, claimId, variantType, formulaComparison, verdict, conditions, exceptions, quotation, uncertainties
+
+Use schoolId vn-tam-hop-default, editionId tan-bien-retypeset-277-cover-1956, locator "phu-giai/70", sourceDigest 54375e708b99f295a6700aca5548bff97fe8a558e4a0a04626353761e36cc265, claimId claim-nhat-le-trung-thien, variantType rule. formulaComparison must equal verdict.
+
+SPAN:
+Thái Dương cư Ngọ, Nhật lệ trung thiên
+Cung Mệnh an tại Ngọ, có Nhật tọa thủ nên rất sáng sủa tốt đẹp, Nhật ở đây ví như mặt trời rực rỡ trên từng cao. Tuổi Canh, Tân, Đinh, Kỷ có cách này tất hay chuyên quyền, nhưng được hưởng phú qúy đến tột bậc. Còn các tuổi khác có cách này, cũng được hưởng giàu sang trọn đời.

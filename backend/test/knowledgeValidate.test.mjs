@@ -5,6 +5,8 @@ import pilotDoc from '../../docs/knowledge/pilotClaims.json' with { type: 'json'
 import contract from '../../docs/knowledge/provenance-contract.json' with { type: 'json' };
 import catalog from '../src/data/combinations.json' with { type: 'json' };
 import { parseKnowledgeJson, validateKnowledgeBundle } from '../src/knowledge/validateKnowledge.js';
+import schoolsDoc from '../../docs/knowledge/schools.json' with { type: 'json' };
+import { DEFAULT_SCHOOL, resolveSchool } from '../src/engine/schoolProfile.js';
 
 const live = validateKnowledgeBundle({
     sources: sourcesDoc,
@@ -92,6 +94,69 @@ assert.ok(codes(badType).has('invalid_claim_type'));
 const badSchool = bundle();
 badSchool.pilot.claims[0].schoolId = 'other-school';
 assert.ok(codes(badSchool).has('unknown_school'));
+
+const researchSchool = bundle();
+researchSchool.pilot.claims[0].schoolId = 'trung-chau';
+assert.strictEqual(validateKnowledgeBundle(researchSchool).ok, true);
+assert.strictEqual(schoolsDoc.baselineSchoolId, DEFAULT_SCHOOL.id);
+assert.deepStrictEqual(resolveSchool(), DEFAULT_SCHOOL);
+assert.ok(schoolsDoc.variants.some((variant) => variant.variantType === 'calculation'));
+assert.ok(schoolsDoc.variants.some((variant) => variant.variantType === 'rule'));
+assert.ok(schoolsDoc.variants.some((variant) => variant.variantType === 'interpretation'));
+assert.ok(schoolsDoc.variants.every((variant) => variant.appliedByDefault === false));
+assert.ok(schoolsDoc.schools.filter((school) => school.schoolId !== DEFAULT_SCHOOL.id).every((school) => school.calculationApplied === false));
+
+const crossReviewed = bundle();
+crossReviewed.pilot.claims[0].crossReviewed = true;
+crossReviewed.pilot.claims[0].locator = '19.2.11/230';
+crossReviewed.pilot.claims[0].editionId = 'ed';
+crossReviewed.pilot.claims[0].variantType = 'rule';
+crossReviewed.pilot.claims[0].variantId = 'rule-pilot-not-runtime';
+crossReviewed.pilot.claims[0].schoolId = 'vn-tam-hop-default';
+assert.strictEqual(validateKnowledgeBundle(crossReviewed).ok, true);
+
+const missingLocator = bundle();
+missingLocator.pilot.claims[0].crossReviewed = true;
+missingLocator.pilot.claims[0].editionId = 'ed';
+missingLocator.pilot.claims[0].variantType = 'rule';
+missingLocator.pilot.claims[0].variantId = 'rule-pilot-not-runtime';
+assert.ok(codes(missingLocator).has('missing_locator'));
+
+const wrongEdition = bundle();
+wrongEdition.sources.editions.push({ editionId: 'other-source-edition', sourceId: 'missing-source', authenticated: false });
+wrongEdition.pilot.claims[0].crossReviewed = true;
+wrongEdition.pilot.claims[0].locator = '19.2.11/230';
+wrongEdition.pilot.claims[0].editionId = 'other-source-edition';
+wrongEdition.pilot.claims[0].variantType = 'rule';
+wrongEdition.pilot.claims[0].variantId = 'rule-pilot-not-runtime';
+wrongEdition.pilot.claims[0].schoolId = 'vn-tam-hop-default';
+assert.ok(codes(wrongEdition).has('broken_reference') || codes(wrongEdition).has('mismatched_edition'));
+
+const unknownVariant = bundle();
+unknownVariant.pilot.claims[0].crossReviewed = true;
+unknownVariant.pilot.claims[0].locator = '19.2.11/230';
+unknownVariant.pilot.claims[0].editionId = 'ed';
+unknownVariant.pilot.claims[0].variantType = 'rule';
+unknownVariant.pilot.claims[0].variantId = 'not-a-variant';
+unknownVariant.pilot.claims[0].schoolId = 'vn-tam-hop-default';
+assert.ok(codes(unknownVariant).has('invalid_variant'));
+
+const mixed = bundle();
+mixed.schools = {
+    baselineSchoolId: DEFAULT_SCHOOL.id,
+    schools: schoolsDoc.schools,
+    variants: schoolsDoc.variants.map((variant) => variant.variantId === 'calc-chu-menh-menh-chi'
+        ? { ...variant, appliedByDefault: true }
+        : variant)
+};
+assert.ok(codes(mixed).has('mixed_school'));
+
+const blankVariant = bundle();
+blankVariant.schools = {
+    ...schoolsDoc,
+    variants: schoolsDoc.variants.map((variant, index) => index === 0 ? { ...variant, variantId: ' ' } : variant)
+};
+assert.ok(codes(blankVariant).has('duplicate_id'));
 
 const promoted = bundle();
 promoted.sources.sources[0].bibliographicStatus = 'primary';

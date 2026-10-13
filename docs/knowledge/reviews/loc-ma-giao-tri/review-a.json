@@ -1,0 +1,23 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "phu-giai/42",
+  "sourceDigest": "b9db6f04daeb0cc649911650b17e991665d7eb7659fb4942b9ea9ecd0c90a044",
+  "claimId": "claim-loc-ma-giao-tri",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "star_loc_ton_opposite",
+    "star_ma"
+  ],
+  "exceptions": [],
+  "quotation": "Lộc Tồn xung chiếu (Lộc, Mã giao trì - Lộc, Mã gặp nhau): mau mắn, vui vẻ, mọi sự hành thông, tài, quan song mỹ.",
+  "uncertainties": [
+    "The span requires Lộc Tồn xung chiếu and names Mã in Lộc, Mã gặp nhau. The runtime requires Thiên Mã and Lộc Tồn or Hóa Lộc at tam_phuong_tu_chinh, so it states Mã and omits Lộc Tồn specifically opposite."
+  ],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-67a2b0b5-c3e7-53df-9bde-60dd5bd9761e"
+}

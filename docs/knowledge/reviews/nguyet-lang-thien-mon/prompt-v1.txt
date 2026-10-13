@@ -1,0 +1,45 @@
+promptVersion: dual-ai-source-review-v1-prompt-1
+policyVersion: dual-ai-source-review-v1
+editionId: tan-bien-retypeset-277-cover-1956
+sourceId: thai-thu-lang-tan-bien
+schoolScope: vn-tam-hop-default
+locator: 19.2.11 plus 19.5 on the 277-page retypeset file, printed pages 230 and 233
+sourceDigest: 950bae3902afe40ca2d65daff0e20bab3fdd0e8fe9667a4804f84d45c276ee3e
+fileSha256: 941b104504dd552fe967354759da1683dda30a529aa59a8e570b05727f5b4458
+
+Read only the span below. Do not use memory of the book to add sentences that are not in the span. Do not look at another model's answer. Return one JSON object and no other text.
+
+Compare this runtime rule to the span. Catalog mapping, not a sentence from the book: Nguyệt in this rule is the star Thái Âm.
+
+{"id":"nguyet_lang_thien_mon","target":"menh","branches":["Hợi"],"samePalace":["Thái Âm"]}
+
+Select condition ids only when the span states them for 19.2.11. 19.2.11 is a quý cục and is not in the list 19.2.9, 19.2.16, 19.2.22.
+
+Allowed condition ids:
+palace_menh_or_quan_loc
+branch_hoi
+star_nguyet_toa_thu
+avoid_tuan
+avoid_triet
+avoid_sat
+avoid_bai
+strengthened_by_khoa_quyen_loc
+
+Allowed exception id, include it only if the span exempts 19.2.11:
+sat_does_not_reduce
+
+verdict is MATCH only when the runtime rule states every selected condition and exception. PARTIAL when it states some and omits others. CONFLICT when it contradicts the span. NOT_IMPLEMENTED when no rule is provided.
+
+quotation must be an exact contiguous substring of the span.
+
+JSON keys:
+schoolId, editionId, locator, sourceDigest, claimId, variantType, formulaComparison, verdict, conditions, exceptions, quotation, uncertainties
+
+Use schoolId vn-tam-hop-default, editionId tan-bien-retypeset-277-cover-1956, locator "19.2.11+19.5", sourceDigest as given above, claimId claim-nguyet-lang-thien-mon, variantType rule. formulaComparison must equal verdict.
+
+SPAN:
+19.2.11. Nguyệt Lãng Thiên Môn
+Cung Mệnh hay Quan Lộc an tại Hợi có Nguyệt tọa thủ (Hợi thuộc quẻ Kiền là biểu tượng của Trời nên gọi là Thiên Môn).
+19.5. Phụ luận
+Phú cục và Qúy cục trình bày sơ lược ở trên rất cần phải xa lánh Tuần, Triệt, Sát tinh và Bại tinh. Ngoại trừ Qúy cục 19.2.9 - 19.2.16 - 19.2.22 gặp Sát tinh cũng không bị chiết giảm mất sự tốt đẹp. Nếu Sát tinh sáng sủa, dĩ nhiên lại càng thêm rực rỡ.
+Phú cục và Qúy cục rất cần gặp Khoa, Quyền, Lộc hội hợp, như vậy mới được toàn mỹ.

@@ -1,0 +1,55 @@
+{
+  "decisionId": "khoa-minh-loc-am-2026-10-12",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-khoa-minh-loc-am",
+  "schoolId": "vn-tam-hop-default",
+  "variantType": "rule",
+  "variantId": "rule-pilot-not-runtime",
+  "sourceId": "thai-thu-lang-tan-bien",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "19.2.25+19.5",
+  "sourceDigest": "8bf75a720401adf6633278a514636db453d887e51c548459681d48f7b654fd95",
+  "fileSha256": "941b104504dd552fe967354759da1683dda30a529aa59a8e570b05727f5b4458",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "NOT_IMPLEMENTED",
+      "reviewRef": "docs/knowledge/reviews/khoa-minh-loc-am/review-a.json",
+      "agentId": "bc-a9595b1c-4354-5df3-b1d6-437790369870",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "NOT_IMPLEMENTED",
+      "reviewRef": "docs/knowledge/reviews/khoa-minh-loc-am/review-b.json",
+      "agentId": "bc-5c004245-fa54-5da8-b6fc-ee881516e06b",
+      "available": true
+    }
+  ],
+  "decision": "AI_ACCEPTED",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "hostModelBuildId": null,
+  "notes": "Both requested model slugs agreed on NOT_IMPLEMENTED. The host did not return a separate build id. The runtime rule was not changed.",
+  "crossReviewOutcome": "AI_CROSS_REVIEWED",
+  "formulaComparison": "NOT_IMPLEMENTED",
+  "conditions": [
+    "avoid_bai",
+    "avoid_sat",
+    "avoid_tuan_triet",
+    "palace_menh_or_quan_loc",
+    "star_khoa_host",
+    "star_loc_host",
+    "star_loc_nhi_hop",
+    "star_nhi_hop",
+    "strengthened_by_khoa_quyen_loc"
+  ],
+  "exceptions": []
+}

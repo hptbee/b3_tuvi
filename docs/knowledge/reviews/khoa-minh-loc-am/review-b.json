@@ -1,0 +1,31 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "19.2.25+19.5",
+  "sourceDigest": "8bf75a720401adf6633278a514636db453d887e51c548459681d48f7b654fd95",
+  "claimId": "claim-khoa-minh-loc-am",
+  "variantType": "rule",
+  "formulaComparison": "NOT_IMPLEMENTED",
+  "verdict": "NOT_IMPLEMENTED",
+  "conditions": [
+    "palace_menh_or_quan_loc",
+    "avoid_tuan_triet",
+    "avoid_sat",
+    "avoid_bai",
+    "strengthened_by_khoa_quyen_loc",
+    "star_khoa_host",
+    "star_loc_host",
+    "star_loc_nhi_hop",
+    "star_nhi_hop"
+  ],
+  "exceptions": [],
+  "quotation": "Cung Mệnh hay Quan Lộc có Khoa tọa thủ và có Lộc nhị hợp hay có Lộc tọa thủ và có Khoa nhị hợp.",
+  "uncertainties": [
+    "The core formula has two alternative branches; the allowed condition IDs do not encode their disjunction.",
+    "The 19.5 qualifications are stated for Phú cục and Qúy cục generally rather than naming Khoa Minh Lộc Ám directly."
+  ],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-5c004245-fa54-5da8-b6fc-ee881516e06b"
+}

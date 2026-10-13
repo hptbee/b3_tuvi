@@ -24,6 +24,13 @@ export const unitTests = [
     'test/timeEngine.test.mjs',
     'test/fixtureClasses.test.mjs',
     'test/knowledgeCatalog.test.mjs',
+    'test/sourceHygiene.test.mjs',
+    'test/crossReview.test.mjs',
+    'test/decisionRegistry.test.mjs',
+    'test/storedDecision.test.mjs',
+    'test/internalSlice.test.mjs',
+    'test/crossReviewNegatives.test.mjs',
+    'test/combinationBatch.test.mjs',
     'test/qualityEdges.test.mjs',
     'test/perfSmoke.test.mjs'
 ];

@@ -1,0 +1,26 @@
+{
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "phu-giai/108",
+  "sourceDigest": "36f820279d7749885fea12f70fea6c3db8d6b87da57e66756b2509112eee7917",
+  "claimId": "claim-am-loc",
+  "variantType": "rule",
+  "formulaComparison": "NOT_IMPLEMENTED",
+  "verdict": "NOT_IMPLEMENTED",
+  "conditions": [
+    "palace_menh",
+    "bright",
+    "star_loc_ton_host",
+    "star_hoa_loc_host",
+    "star_nhi_hop"
+  ],
+  "exceptions": [],
+  "quotation": "Cung Mệnh sáng sủa tốt đẹp, có Lộc Tồn tọa thủ, cung nhị hợp có Hóa Lộc tọa thủ, hay cung Mệnh sáng sủa tốt đẹp có Hóa Lộc tọa thủ, cung nhị hợp có Lộc Tồn tọa thủ, như vậy thật là rực rỡ.",
+  "uncertainties": [
+    "The span gives two alternative placements: Lộc Tồn in Mệnh with Hóa Lộc in the nhị hợp palace, or Hóa Lộc in Mệnh with Lộc Tồn in the nhị hợp palace; the provided condition IDs do not encode which star is in the nhị hợp palace."
+  ],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-3cf92147-82d4-5338-8936-cdb5ff3ef8bd"
+}

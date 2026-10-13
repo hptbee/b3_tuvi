@@ -1,0 +1,39 @@
+promptVersion: dual-ai-source-review-v1-prompt-1
+policyVersion: dual-ai-source-review-v1
+editionId: tan-bien-retypeset-277-cover-1956
+sourceId: thai-thu-lang-tan-bien
+schoolScope: vn-tam-hop-default
+locator: 19.3.8+19.5
+sourceDigest: f137f8ad547c20bed29634097b9520b3e880cb72a49b03e03671dd7bfcd48652
+fileSha256: 941b104504dd552fe967354759da1683dda30a529aa59a8e570b05727f5b4458
+
+Read only the span below. Do not use memory of the book to add sentences that are not in the span. Do not look at another model's answer. Return one JSON object and no other text.
+
+Compare this runtime rule to the span.
+Catalog mapping, not a sentence from the book: Mã = Thiên Mã.
+Runtime rule JSON: {"id":"ma_lac_khong_vong","combination":"Mã Lạc Không Vong","strict":true,"target":"menh","clauses":[{"stars":["Thiên Mã"],"at":"tam_phuong_tu_chinh","samePalaceAny":{"stars":["Địa Không"],"markers":["tuan","triet"]}}]}
+
+Select a condition id only when the span states that requirement for this pattern.
+Allowed condition ids:
+avoid_tuan_triet
+bright
+star_ma
+star_ma_host
+
+Allowed exception id, include it only if the span exempts this section from Sát tinh: sat_does_not_reduce
+This section is not 19.2.9, 19.2.16, or 19.2.22.
+
+verdict is MATCH only when the runtime rule states every selected condition and exception. PARTIAL when it states some and omits others. CONFLICT when it contradicts the span. NOT_IMPLEMENTED when the runtime rule is null.
+
+quotation must be an exact contiguous substring of the span, at least 40 characters, and must include this anchor: Mã thủ Mệnh gặp Tuần, Triệt án ngữ.
+
+JSON keys:
+schoolId, editionId, locator, sourceDigest, claimId, variantType, formulaComparison, verdict, conditions, exceptions, quotation, uncertainties
+
+Use schoolId vn-tam-hop-default, editionId tan-bien-retypeset-277-cover-1956, locator "19.3.8+19.5", sourceDigest f137f8ad547c20bed29634097b9520b3e880cb72a49b03e03671dd7bfcd48652, claimId claim-ma-lac-khong-vong, variantType rule. formulaComparison must equal verdict.
+
+SPAN:
+19.3.8. Mã Lạc Không Vong
+Mã thủ Mệnh gặp Tuần, Triệt án ngữ.
+19.5. Phụ luận
+Bần tiện cục trình bày sơ lược ở trên, nếu gặp Tuần, Triệt án ngữ (không kể Bần Tiện Cục 19.3.1 -19.3.3) cũng đỡ xấu xa, và nếu gặp chêm nhiều sao sáng sủa tốt đẹp, chắc chắn là trở lại tốt đẹp.
