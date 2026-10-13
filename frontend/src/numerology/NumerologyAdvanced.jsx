@@ -44,7 +44,8 @@ export default function NumerologyAdvanced({ birthGrid, nameChart, combinedChart
             <strong>{line.digits.join(' – ')}</strong><span>{STATES[line.state]}</span>
           </button>
         </li>)}</ul>
-        <p className="num-disclaimer">{selectedLine ? `Đang xem tuyến ${selectedLine.digits.join('–')}: ${STATES[selectedLine.state]}.` : 'Chọn một tuyến để tô các ô của tuyến đó.'} Chỉ nhận diện sự xuất hiện của các số; chưa diễn giải ý nghĩa mũi tên.</p>
+        <p className="num-disclaimer">{birthGrid.lineLayer?.disclaimer}</p>
+        <p className="num-disclaimer">{selectedLine ? `Đang xem tuyến ${selectedLine.digits.join('–')}: ${STATES[selectedLine.state]}. ${selectedLine.state === 'present' ? selectedLine.note || '' : 'Tuyến chưa đủ số nên không gắn tên mũi tên. Ô trống không phải điểm yếu.'}` : 'Chọn một tuyến để tô các ô của tuyến đó.'}</p>
       </div></div>
     </section>
 

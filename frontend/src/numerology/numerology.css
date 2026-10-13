@@ -73,7 +73,8 @@
 .num-reading-title { font-weight: 600; }
 @media (prefers-reduced-motion: reduce) { .num-peak, .num-year-band button, .num-month-band button { transition: none; } }
 @media print {
-  .site-nav, .app-footer, .skip-link, .num-hero, .num-start, .num-request-status, .num-error, .num-actions, .num-draft-note, .num-omit-print, .num-toc { display: none !important; }
+  .num-toc { display: none !important; }
+  .site-nav, .app-footer, .skip-link, .num-hero, .num-start, .num-request-status, .num-error, .num-actions, .num-draft-note, .num-omit-print { display: none !important; }
   .num-print-only { display: block; }
   .num-results { border: 0; padding-top: 0; }
   .num-metric-grid, .num-cycle-grid, .num-grid-layout, .num-pinnacle-values { grid-template-columns: 1fr 1fr; }

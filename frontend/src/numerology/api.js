@@ -46,7 +46,7 @@ function validPinnacles(body) {
     return period?.id === `p${index + 1}` && period.startAgeInclusive === starts[index] && period.endAgeInclusive === ends[index]
       && validMetric(period.pinnacle, period.id) && period.pinnacle.keepMasters === true && allowed.includes(period.pinnacle.value)
       && challenge?.status === 'available' && Number.isInteger(challenge.value) && challenge.value >= 0 && challenge.value <= 8
-      && challenge.meaning === null && challenge.meaningStatus === 'withheld'
+      && (challenge.value === 0 ? challenge.meaning === null && challenge.meaningStatus === 'withheld' : validMeaning(challenge, 'challenge'))
       && Array.isArray(challenge.operands) && challenge.operands.length === 2 && challenge.operands.every(Number.isInteger)
       && Math.abs(challenge.operands[0] - challenge.operands[1]) === challenge.value
       && iso(period.startDate) && (period.endAgeInclusive === null ? period.endDate === null : iso(period.endDate))
