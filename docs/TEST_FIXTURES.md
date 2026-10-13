@@ -75,5 +75,6 @@ Khóa tính chất: không nâng nguồn từ test pass, catalog không thành p
 - `sprint9Adjudication.test.mjs`
 - `formulaV1.test.mjs`: source-scoped V1 dispositions for all 63 catalog formations. Not an expert-verified golden chart.
 - `sprint9Closure.test.mjs`: Formula V1 interpretation wiring and the internal Tử Phủ Đồng Cung slice. Not an approved interpretation.
+- `conditionEval.test.mjs`: typed condition contracts and three-valued Boolean cases. Not a historical formula proof.
 - `fixtureClasses.test.mjs`
 - `perfSmoke.test.mjs`

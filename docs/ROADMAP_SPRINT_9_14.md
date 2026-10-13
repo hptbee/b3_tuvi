@@ -266,6 +266,8 @@ flowchart TD
 
 **Kickoff gate — READY / CONDITIONAL GO, baseline `b014969` (2026-10-14).** Bắt đầu từ PR #25/#27 đã merge; không dựng lại Formula V1 hoặc đổi `rulesV2.json`. Từng work package phải đo đúng source/profile/condition hiện có và giữ mọi lời luận chưa approved ở `prose: null`. **Không tuyên bố Sprint 10 đã thực thi** chỉ vì dependency được merge.
 
+**Thực thi điều kiện (nhánh Sprint 10, baseline `ed31ad1`):** evaluator có kiểu ở `backend/src/engine/conditionEval.js`. Ma trận operator: `docs/knowledge/SPRINT_10_OPERATOR_MATRIX.md`. Kiểm kê quyết định đang lưu, không chạy dual-AI mới: `docs/knowledge/SPRINT_10_RESEARCH_INVENTORY.md`. Báo cáo: `docs/knowledge/SPRINT_10_FINAL_REPORT.md`. Không sửa Formula V1 hay `rulesV2.json`. `expertVerified` vẫn false.
+
 **Mục tiêu:** Chuyển “phát hiện tổ hợp sao” thành hệ thống đánh giá điều kiện có giải thích, dựa trên tri thức đã qua dual-AI cross-review theo trường phái; xử lý sai lệch theo từng rule thay vì viết thêm `if/else` tự phát.
 
 | ID | Ưu tiên | Công việc | Bằng chứng nghiệm thu |

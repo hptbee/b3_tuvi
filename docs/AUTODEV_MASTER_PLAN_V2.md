@@ -329,13 +329,13 @@ Các thiếu hụt thư tịch/điều kiện/claim còn mở đi tiếp dưới
 ## 23. Sprint 10 — READY / CONDITIONAL GO (2026-10-14)
 
 - **Baseline xác minh:** `main` `b014969`; scope hiện tại là research và implementation của Condition DSL, formation/breaking, evidence và claim eligibility. **Chưa có implementation Sprint 10 được nghiệm thu**.
-- **S10-01 — READY / P0:** kiểm kê operator hỗ trợ/không hỗ trợ/ambiguous theo source profile; đo code/claims hiện tại.
-- **S10-04 — READY / P0 (parallel research):** kiểm kê lại pilot decision records và phân tích các case chưa giải quyết với source locator, edition, school; không dùng đếm 7/2/1 đời đầu như trạng thái live. Hai model thực sự chạy phải ghi được invocation/model version; không giả lập cross-review.
-- **S10-02 — BLOCKED on S10-01 / P0:** typed condition AST/DSL + pure evaluator, trace rõ satisfied/not_satisfied/unknown/not_implemented; unknown fail closed.
-- **S10-03 — BLOCKED on S10-01/S10-02 / P0:** formation, grade, breaking và runtime match là các trạng thái độc lập; breaking chưa đánh giá không phải clear; source match không duyệt lời luận.
-- **S10-06 — BLOCKED on S10-02/S10-03 / P1:** contradiction/modifier handling không trộn các school/profile.
-- **S10-07 — READY for fixture design, implementation gated / P1:** independent positives/negatives, school isolation, trust boundaries, regression E2E.
-- **S10-05 — DEFERRED until accepted source decision and owner approval / P1:** sửa Formula V1 runtime nếu thật sự cần; PR riêng với regression/negative tests. Không tự sửa `rulesV2.json`.
+- **S10-01 — implemented in the Sprint 10 branch / P0:** operator matrix and `OPERATORS` list. Ambiguous prose conditions stay `not_implemented`.
+- **S10-04 — recounted, dual-AI not re-run / P0:** live Tân Biên files are CONFLICT 12, PARTIAL 6, MATCH 3, NOT_IMPLEMENTED 2, UNRESOLVED 1. Sprint 9C files are CONFLICT 20, PARTIAL 11, MATCH 5, NOT_IMPLEMENTED 3. No new model invocation was recorded.
+- **S10-02 — implemented / P0:** `evaluateCondition` returns `satisfied`, `not_satisfied`, `unknown`, or `not_implemented`. Unknown does not pass.
+- **S10-03 — implemented / P0:** `evaluateLayers` does not copy a runtime match into formation, grade, breaking, or interpretation eligibility.
+- **S10-06 — implemented / P1:** contradictory claims resolve to `unresolved` with `winner: null`.
+- **S10-07 — implemented for the new evaluator / P1:** `backend/test/conditionEval.test.mjs` and the Tử Phủ slice regression.
+- **S10-05 — no correction shipped / P1:** Formula V1 was not edited. A future source-sensitive change still needs its own review and owner merge.
 
 **Acceptance:** một internal chart → Formula V1 → typed condition → evidence/provenance → claim eligibility flow có negative cases, với abstention nếu chưa đủ nguồn; CI backend/frontend/E2E PASS, coverage đo thật, review độc lập và report GO/NO-GO. Mặc định không phát public prose, fortune, AI, nâng `expertVerified`, hay ghi SQLite production. Owner vẫn duyệt từng PR và release gate.
 
