@@ -72,7 +72,15 @@ const PHRASES = [
     ['对宫必为天梁', 'star_luong_opposite'],
     ['vô chính diệu', 'no_major'],
     ['Tuần hoặc Triệt thủ', 'tuan_or_triet_host'],
-    ['Thiên Không chiếu', 'thien_khong_aspect']
+    ['Thiên Không chiếu', 'thien_khong_aspect'],
+    ['寅申与武曲同度', 'star_vu_dan_than'],
+    ['财印交驰', 'alias_tai_an_modern'],
+    ['Văn Khúc Cự Môn đồng cung', 'star_khuc_cu_same'],
+    ['sao Hoa Cái an tại cung Phu Thê', 'star_hoa_cai_phu_the'],
+    ['cung Phu Thê', 'palace_phu_the'],
+    ['兩重天祿天馬', 'phrase_loc_loc_ma'],
+    ['祿存又逢化祿', 'star_loc_ton_and_hoa_loc'],
+    ['天馬同守命宮', 'star_ma_same_menh']
 ];
 
 export function sprint9cObligationIds(span, allowed) {

@@ -1,0 +1,76 @@
+{
+  "packageVersion": "sprint9c-final4-2026-10-13-v1",
+  "retrievedAt": "2026-10-13",
+  "repository": "hptbee/b3_tuvi",
+  "pr": 19,
+  "prHeadAtResearch": "b398187e10fc28de77e5fcb4afc827e754eb104c",
+  "purpose": "New public source leads for four combinations pending dual-AI; all leads require validation by Cursor before source promotion",
+  "evidenceSemantics": {
+    "READABLE_MODERN_PASSAGE": "Relevant accessible article text, not authenticated classical formula",
+    "RELATED_STAR_COMBINATION": "Relevant star pairing or palace meaning; exact named cách cục not established",
+    "CLASSICAL_TEXT_CANDIDATE": "Historical text on modern host; edition/transcription provenance must be confirmed",
+    "POSSIBLE_CATALOG_IDENTITY_ERROR": "Related historical phrase is not the same as catalog name",
+    "SECONDARY_DISAGREEMENT": "Modern source discusses a different meaning or school; keep separate"
+  },
+  "candidates": [
+    {
+      "combinationName": "Tài Ấn Giao Trì",
+      "catalogFormulaAtObservedCommit": "Vũ Khúc (Tài) và Thiên Tướng (Ấn) đồng cung tại Dần hoặc Thân.",
+      "suggestedChineseCandidate": "財印交馳 / 财印交驰",
+      "identity": "UNRESOLVED_IDENTITY",
+      "evidenceLevel": "READABLE_MODERN_PASSAGE",
+      "sources": [
+        {"url":"https://askziwei.com/blog/en/finance-star.html", "type":"modern_explanation", "locator":"Company changes the reading, configuration table", "observed":"The configuration table explicitly labels 武曲 + 天相 as 财印交驰.", "reviewTarget":"Does the article support both the pairing and the exact Chinese name? Does it support the Dần/Thân branch restriction?"},
+        {"url":"https://www.xuanjige.app/articles/tianxiang-qianyi", "type":"modern_explanation", "locator":"section on 武曲 pairing with 天相", "observed":"Describes 武曲 with 天相 in 寅/申 and calls it 財印交馳.", "reviewTarget":"Determine whether a separate source confirms an equivalent formula and school."},
+        {"url":"https://www.chinazwds.com/Home/ArticleDetails/c6365cb199df40708220b417fd4a61ee", "type":"modern_secondary", "locator":"武曲（財）天相（印）同坐寅申宮", "observed":"Uses the different name 財印坐馬格 for a related structure. Additional 天马 condition may apply.", "reviewTarget":"Do NOT collapse 財印坐馬格 into 財印交馳."}
+      ],
+      "mustNot": ["Call a modern label authenticated ancient literature", "Conflate 財印交馳 with 財蔭夾印 or 財印夾祿", "Change runtime rules in Sprint 9"]
+    },
+    {
+      "combinationName": "Khúc Ám Đồng Cung",
+      "catalogFormulaAtObservedCommit": "Văn Khúc và Cự Môn (Ám tinh) đồng cung hoặc hội chiếu.",
+      "suggestedChineseCandidate": "文曲 + 巨門 同宮 / 文曲巨門同宮 (a description, not verified title)",
+      "identity": "UNRESOLVED_IDENTITY",
+      "evidenceLevel": "RELATED_STAR_COMBINATION",
+      "sources": [
+        {"url":"https://hocvienlyso.org/chuong-20-van-xuong-van-khuc.html", "type":"modern_vietnamese_text", "locator":"list item 9, Văn Khúc Cự Môn đồng cung", "observed":"The page contains a statement about Văn Khúc and Cự Môn occupying the same palace.", "reviewTarget":"Does it establish the exact named cách Khúc Ám Đồng Cung? No exact name seen during preliminary research."},
+        {"url":"https://hocvienlyso.org/luan-giai-cac-sao-phu-tinh-tu-vi-dai-toan.html", "type":"modern_vietnamese_text", "locator":"Văn Khúc Cự Môn đồng cung", "observed":"Related description in another article; may be duplicated material rather than independent source.", "reviewTarget":"Deduplicate material and identify quoted book/edition if possible."}
+      ],
+      "mustNot": ["Invent Chinese title 曲暗同宮", "Accept hội chiếu as proved by đồng cung statement", "Treat the source as a full formal named-rule definition"]
+    },
+    {
+      "combinationName": "Hoa Cái Cư Phu Thê",
+      "catalogFormulaAtObservedCommit": "Sao Hoa Cái nằm tại cung Phu Thê gặp Sát tinh/Cô Quả; catalog required_stars incorrectly lists Hóa Kỵ.",
+      "suggestedChineseCandidate": "華蓋在夫妻宮 (placement meaning, not established classic pattern name)",
+      "identity": "UNRESOLVED_IDENTITY",
+      "evidenceLevel": "READABLE_MODERN_PASSAGE",
+      "sources": [
+        {"url":"https://tracuutuvi.com/hoa-cai-cung-phu-the.html", "type":"modern_vietnamese_explanation", "locator":"Hoa Cái cung Phu Thê là gì? and section 2", "observed":"Directly states Hoa Cái at the Phu Thê palace; various additional star combinations presented separately.", "reviewTarget":"Separate structural placement from extra interpretations; do not require Hóa Kỵ unconditionally."},
+        {"url":"https://goodfate.tw/star-library/%E8%8F%AF%E8%93%8B/%E5%A4%AB%E5%A6%BB%E5%AE%AE", "type":"modern_chinese_explanation", "locator":"華蓋在夫妻宮", "observed":"Page heading is Hua Gai in spouse palace; interpretation is not a named classical formula.", "reviewTarget":"Corroborate placement and variant; no historical source claim."},
+        {"url":"https://tuvi.cohoc.net/phu-tinh-trong-cung-phu-the-nid-1428.html", "type":"access_unreliable", "locator":"夫妻宮 華蓋", "observed":"Search-indexed content exists but direct opening redirected to /404.html with anti-spam query. Do not claim accessible full text until Cursor retrieves it.", "reviewTarget":"Try only legal public access; otherwise mark SOURCE_INACCESSIBLE."}
+      ],
+      "catalogFinding": "The catalog describes Hoa Cái, but required_stars is Hóa Kỵ; do not edit automatically.",
+      "mustNot": ["Use Hóa Kỵ as synonym for Hoa Cái", "Promote general spouse-palace interpretation as a classical named formation", "Make deterministic marriage predictions"]
+    },
+    {
+      "combinationName": "Lưỡng Trùng Thiên Mã",
+      "catalogFormulaAtObservedCommit": "Thiên Mã natal meets Lưu Thiên Mã in 大限/小限 and sát tinh; disabled because period overlay is not implemented.",
+      "suggestedChineseCandidate": "兩重天祿天馬 (different phrase); 本命天馬與流年天馬 (modern overlay concept)",
+      "identity": "POSSIBLE_CATALOG_IDENTITY_ERROR",
+      "evidenceLevel": "POSSIBLE_CATALOG_IDENTITY_ERROR",
+      "sources": [
+        {"url":"https://blog.udn.com/article/article_print.jsp?f_ART_ID=4124683&f_CODE=1786764589785&uid=DejaVu", "type":"classical_text_on_secondary_host", "locator":"女命骨髓賦 / 呂后專權", "observed":"The line is 呂后專權、兩重天祿天馬; the commentary explains two lộc plus Thiên Mã, not two Thiên Mã.", "reviewTarget":"Identify which edition the excerpt transcribes; do not rename current catalog as a proven synonym."},
+        {"url":"https://ichingtrilogy.com/post/tian-ma-xing/", "type":"annotated_historical_excerpt", "locator":"entry 7: 呂后專權、兩重天祿天馬", "observed":"Explains 祿存 plus 化祿 and 天馬 in one palace.", "reviewTarget":"Corroborate the ancient phrase; distinguish from natal and annual star coincidence."},
+        {"url":"https://tuvisonlong.com/sao-thien-ma-trong-tu-vi-mau-nguoi-dich-ma/", "type":"modern_vietnamese_interpretation", "locator":"Lưu Thiên Mã khi nhập hạn", "observed":"Discusses natal Thiên Mã with Lưu Thiên Mã in same/opposing/aspecting palace for period changes, without proving the formal name Lưỡng Trùng Thiên Mã.", "reviewTarget":"Store as separate fortune-overlay concept, not exact named cách cục."},
+        {"url":"https://www.ziweitai.com/topic/lucunxing", "type":"modern_secondary", "locator":"祿存 + 流馬 and 疊馬", "observed":"Defines 疊馬 as natal Tian Ma and annual Tian Ma in same palace, separate from ancient 兩重天祿天馬.", "reviewTarget":"Assess whether this validates generic overlapping horse concept only."}
+      ],
+      "mustNot": ["Equate 兩重天祿天馬 to two Thiên Mã", "Enable a disabled runtime rule without 流馬 overlay", "Auto-rename or delete the catalog item"]
+    }
+  ],
+  "warnings": [
+    "Public pages are modern interpretations or transcriptions; none automatically establishes historical authenticity or 100% formula correctness.",
+    "The four items can gain SOURCE_ASSERTION/RELATED_CONCEPT evidence without earning an exact-ID AI_ACCEPTED decision.",
+    "Web fetch success is not equivalent to validation of model-claimed source/edition or consent to redistribute text.",
+    "The repository baseline cited here is PR #19 at b398187; Cursor must re-fetch current HEAD before use."
+  ]
+}

@@ -73,7 +73,4 @@ These rows are separate from the Tân Biên table above. They do not change that
 | Thiên Ất Củng Mệnh | CONFLICT | models disagreed |
 | Văn Tinh Củng Mệnh | CONFLICT | models disagreed |
 | Hình Kỵ Giáp Ấn | CONFLICT | models disagreed |
-| Tài Ấn Giao Trì | REVIEW_NOT_EXECUTED | related Vũ Khúc–Thiên Tướng page, no exact title |
-| Khúc Ám Đồng Cung | REVIEW_NOT_EXECUTED | related Văn Khúc text, named cách not bound |
-| Hoa Cái Cư Phu Thê | REVIEW_NOT_EXECUTED | no exact cách sentence; catalog required_stars is Hóa Kỵ |
-| Lưỡng Trùng Thiên Mã | REVIEW_NOT_EXECUTED | no exact named source |
+The four former `REVIEW_NOT_EXECUTED` rows now have 9C decisions. Tài Ấn Giao Trì, Khúc Ám Đồng Cung, and Hoa Cái Cư Phu Thê are `AI_ACCEPTED` with formula `CONFLICT` and `UNRESOLVED_IDENTITY`. Lưỡng Trùng Thiên Mã is `AI_ACCEPTED` with formula `NOT_IMPLEMENTED` and `NAME_MISMATCH`. Those outcomes are not exact-name verification.

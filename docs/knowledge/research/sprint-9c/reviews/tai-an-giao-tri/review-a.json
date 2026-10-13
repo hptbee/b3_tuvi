@@ -1,0 +1,24 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "xuanjige-2026-10-13",
+  "locator": "articles/tianxiang-qianyi#faq-yin-shen",
+  "sourceDigest": "1cb82a1ae99cf8fb9eb7ef627aab0f1a2cb1470180980dd8aeea0d0e5fdd853a",
+  "claimId": "claim-9c-tai-an-giao-tri",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "star_vu_dan_than",
+    "alias_tai_an_modern"
+  ],
+  "exceptions": [],
+  "quotation": "寅申与武曲同度，财印交驰，在外是专业、果断、可信的金融或技术人才形象，利于异地的实质利益。",
+  "uncertainties": [
+    "UNRESOLVED_IDENTITY"
+  ],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-57fc9bec-755e-5d5b-88ba-c3e3a8db5c90",
+  "effort": "high"
+}

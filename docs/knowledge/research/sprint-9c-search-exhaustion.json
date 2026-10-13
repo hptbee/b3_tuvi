@@ -1,6 +1,6 @@
 {
   "retrievedAt": "2026-10-13",
-  "note": "These four catalog names did not receive a dual-AI review. No review JSON was invented for them.",
+  "note": "Snapshot from the pass that stopped before these four reviews. The later decisions are in docs/knowledge/research/sprint-9c/decisions/. This file is not the current disposition.",
   "rows": [
     {
       "combinationName": "Tài Ấn Giao Trì",

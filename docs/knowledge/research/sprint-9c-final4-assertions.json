@@ -1,0 +1,61 @@
+{
+  "retrievedAt": "2026-10-13",
+  "note": "Pages fetched while reviewing the last four catalog rows. They were not merged into those decisions.",
+  "rows": [
+    {
+      "combinationName": "Tài Ấn Giao Trì",
+      "url": "https://askziwei.com/blog/en/finance-star.html",
+      "httpStatus": 200,
+      "assertion": "A configuration row says 武曲 + 天相 = 财印交驰. That cell does not state Dần/Thân. It was not the bound span."
+    },
+    {
+      "combinationName": "Tài Ấn Giao Trì",
+      "url": "https://www.chinazwds.com/Home/ArticleDetails/c6365cb199df40708220b417fd4a61ee",
+      "httpStatus": 200,
+      "assertion": "The page names 财印坐马格 and requires 天马 with 武曲 and 天相 at 寅/申. That name was not treated as 财印交驰."
+    },
+    {
+      "combinationName": "Khúc Ám Đồng Cung",
+      "url": "https://hocvienlyso.org/luan-giai-cac-sao-phu-tinh-tu-vi-dai-toan.html",
+      "httpStatus": 403,
+      "assertion": "Direct HTTP returned Cloudflare 403. No second body was retrieved, so it was not used as an independent original."
+    },
+    {
+      "combinationName": "Hoa Cái Cư Phu Thê",
+      "url": "https://goodfate.tw/star-library/%E8%8F%AF%E8%93%8B/%E5%A4%AB%E5%A6%BB%E5%AE%AE",
+      "httpStatus": 200,
+      "assertion": "The title is 華蓋在夫妻宮. It was not the bound span."
+    },
+    {
+      "combinationName": "Hoa Cái Cư Phu Thê",
+      "url": "https://tuvi.cohoc.net/phu-tinh-trong-cung-phu-the-nid-1428.html",
+      "httpStatus": 200,
+      "finalUrl": "https://tuvi.cohoc.net/404.html?from=bai-viet&ref=ip-spam&id=1428",
+      "assertion": "The request ended on a 404 anti-spam URL. The body was not used."
+    },
+    {
+      "combinationName": "Lưỡng Trùng Thiên Mã",
+      "url": "https://blog.udn.com/article/article_print.jsp?f_ART_ID=4124683",
+      "httpStatus": 403,
+      "assertion": "Direct HTTP returned 403. The classical line was bound from ichingtrilogy instead."
+    },
+    {
+      "combinationName": "Lưỡng Trùng Thiên Mã",
+      "url": "https://ekachai.pixnet.net/blog/posts/11365236026",
+      "httpStatus": 200,
+      "assertion": "The page glosses 兩重天祿天馬 as 祿存、化祿、天馬 in one palace. Same gloss as the bound span, not a second edition check."
+    },
+    {
+      "combinationName": "Lưỡng Trùng Thiên Mã",
+      "url": "https://www.ziweitai.com/topic/lucunxing",
+      "httpStatus": 200,
+      "assertion": "The page defines 疊馬 as 流馬 with natal 天馬, and quotes 兩重天祿天馬 as a different line. Not bound to the catalog decision."
+    },
+    {
+      "combinationName": "Lưỡng Trùng Thiên Mã",
+      "url": "https://tuvisonlong.com/sao-thien-ma-trong-tu-vi-mau-nguoi-dich-ma/",
+      "httpStatus": 200,
+      "assertion": "The page discusses Thiên Mã and Lưu Thiên Mã during a period. It does not use the catalog name Lưỡng Trùng Thiên Mã."
+    }
+  ]
+}

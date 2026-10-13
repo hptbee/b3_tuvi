@@ -1,0 +1,27 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "hocvienlyso-2026-10-13",
+  "locator": "chuong-20 item 9",
+  "sourceDigest": "1c95a4cd9317c49c11c9ba351788bfde48b2e7f1e4d9f9a84828da57b2e75378",
+  "claimId": "claim-9c-khuc-am-dong-cung",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "star_khuc_cu_same"
+  ],
+  "exceptions": [],
+  "quotation": "Văn Khúc Cự Môn đồng cung, mất ý chí.",
+  "uncertainties": [
+    "UNRESOLVED_IDENTITY",
+    "span does not contain the catalog name Khúc Ám Đồng Cung",
+    "span does not say hội chiếu",
+    "runtime at tam_phuong_tu_chinh allows a relationship the span does not state",
+    "runtime target menh is not stated in the span"
+  ],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-f92fcfae-2d17-5e5b-a525-5a300333539f",
+  "effort": "high"
+}

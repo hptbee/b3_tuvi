@@ -426,5 +426,49 @@
     ],
     "anchor": "Vô Chính Diệu Đắc Tam Không",
     "locator": "doi-dieu-ban-ve-12-cung-vo-chinh-dieu"
+  },
+  {
+    "slug": "tai-an-giao-tri",
+    "combinationName": "Tài Ấn Giao Trì",
+    "sourceDigest": "1cb82a1ae99cf8fb9eb7ef627aab0f1a2cb1470180980dd8aeea0d0e5fdd853a",
+    "allowed": [
+      "star_vu_dan_than",
+      "alias_tai_an_modern"
+    ],
+    "anchor": "财印交驰",
+    "locator": "articles/tianxiang-qianyi#faq-yin-shen"
+  },
+  {
+    "slug": "khuc-am-dong-cung",
+    "combinationName": "Khúc Ám Đồng Cung",
+    "sourceDigest": "1c95a4cd9317c49c11c9ba351788bfde48b2e7f1e4d9f9a84828da57b2e75378",
+    "allowed": [
+      "star_khuc_cu_same"
+    ],
+    "anchor": "Văn Khúc Cự Môn đồng cung",
+    "locator": "chuong-20 item 9"
+  },
+  {
+    "slug": "hoa-cai-cu-phu-the",
+    "combinationName": "Hoa Cái Cư Phu Thê",
+    "sourceDigest": "f05cef89e85a34101482709ec69fa8eeeca0791f19fa62ba56bb54fa32af5b84",
+    "allowed": [
+      "star_hoa_cai_phu_the",
+      "palace_phu_the"
+    ],
+    "anchor": "sao Hoa Cái an tại cung Phu Thê",
+    "locator": "section-1-hoa-cai-cung-phu-the-la-gi"
+  },
+  {
+    "slug": "luong-trung-thien-ma",
+    "combinationName": "Lưỡng Trùng Thiên Mã",
+    "sourceDigest": "9c18d49ef4893d226d45dcebceff565eca5b112b2d0b5650ace28b0405519c18",
+    "allowed": [
+      "phrase_loc_loc_ma",
+      "star_loc_ton_and_hoa_loc",
+      "star_ma_same_menh"
+    ],
+    "anchor": "兩重天祿天馬",
+    "locator": "tian-ma-xing fu-wen Lu-hou"
   }
 ]

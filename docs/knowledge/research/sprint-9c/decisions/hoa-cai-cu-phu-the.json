@@ -1,0 +1,52 @@
+{
+  "decisionId": "hoa-cai-cu-phu-the-2026-10-13",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-9c-hoa-cai-cu-phu-the",
+  "schoolId": "unassigned-modern-article",
+  "variantType": "rule",
+  "variantId": "rule-not-runtime",
+  "sourceId": "tracuutuvi",
+  "editionId": "tracuutuvi-2026-10-13",
+  "locator": "section-1-hoa-cai-cung-phu-the-la-gi",
+  "sourceDigest": "f05cef89e85a34101482709ec69fa8eeeca0791f19fa62ba56bb54fa32af5b84",
+  "sourceUrl": "https://tracuutuvi.com/hoa-cai-cung-phu-the.html",
+  "retrievedAt": "2026-10-13",
+  "pdfTextChecked": false,
+  "binding": "webpage_excerpt",
+  "identity": "UNRESOLVED_IDENTITY",
+  "quotationPolicy": "min-40-v1",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "CONFLICT",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/hoa-cai-cu-phu-the/review-a.json",
+      "agentId": "bc-17a0cd00-96dc-5ef6-811b-e762f83213b5",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "CONFLICT",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/hoa-cai-cu-phu-the/review-b.json",
+      "agentId": "bc-df5e04dc-0790-5094-a2fb-678f5dfa47a5",
+      "available": true
+    }
+  ],
+  "decision": "AI_ACCEPTED",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "notes": "Comparator AI_ACCEPTED. formula CONFLICT. Modern placement sentence. Hoa Cái is not Hóa Kỵ. The span does not require sát or Cô Quả. Catalog required_stars remains Hóa Kỵ and was not edited. Runtime rule adds a malefic. Models grok-4.7-high and gpt-5.6-terra-medium. Runtime rule not changed.",
+  "crossReviewOutcome": "AI_CROSS_REVIEWED",
+  "formulaComparison": "CONFLICT",
+  "conditions": [
+    "palace_phu_the",
+    "star_hoa_cai_phu_the"
+  ],
+  "exceptions": []
+}

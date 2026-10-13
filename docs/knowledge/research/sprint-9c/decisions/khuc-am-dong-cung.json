@@ -1,0 +1,51 @@
+{
+  "decisionId": "khuc-am-dong-cung-2026-10-13",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-9c-khuc-am-dong-cung",
+  "schoolId": "unassigned-modern-article",
+  "variantType": "rule",
+  "variantId": "rule-not-runtime",
+  "sourceId": "hocvienlyso",
+  "editionId": "hocvienlyso-2026-10-13",
+  "locator": "chuong-20 item 9",
+  "sourceDigest": "1c95a4cd9317c49c11c9ba351788bfde48b2e7f1e4d9f9a84828da57b2e75378",
+  "sourceUrl": "https://hocvienlyso.org/chuong-20-van-xuong-van-khuc.html",
+  "retrievedAt": "2026-10-13",
+  "pdfTextChecked": false,
+  "binding": "webpage_excerpt",
+  "identity": "UNRESOLVED_IDENTITY",
+  "quotationPolicy": "source-sentence-v2",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "CONFLICT",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/khuc-am-dong-cung/review-a.json",
+      "agentId": "bc-f92fcfae-2d17-5e5b-a525-5a300333539f",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "CONFLICT",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/khuc-am-dong-cung/review-b.json",
+      "agentId": "bc-7a007eb5-372d-5224-8004-1b8da0ae464a",
+      "available": true
+    }
+  ],
+  "decision": "AI_ACCEPTED",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "notes": "Comparator AI_ACCEPTED. formula CONFLICT. RELATED_STAR_COMBINATION. The span states đồng cung only. It does not establish the catalog name or hội chiếu. Direct HTTP was 403; the sentence comes from a second retrieval of list item 9. The page cites huyenhocvadoisong.com. Models grok-4.7-high and gpt-5.6-terra-medium. Runtime rule not changed.",
+  "crossReviewOutcome": "AI_CROSS_REVIEWED",
+  "formulaComparison": "CONFLICT",
+  "conditions": [
+    "star_khuc_cu_same"
+  ],
+  "exceptions": []
+}

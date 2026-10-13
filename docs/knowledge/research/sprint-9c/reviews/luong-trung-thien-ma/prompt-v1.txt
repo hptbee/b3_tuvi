@@ -1,0 +1,34 @@
+promptVersion: dual-ai-source-review-v1-prompt-1
+policyVersion: dual-ai-source-review-v1
+editionId: ichingtrilogy-2026-10-13
+sourceId: ichingtrilogy
+schoolScope: unassigned-modern-article
+locator: tian-ma-xing fu-wen Lu-hou
+sourceDigest: 9c18d49ef4893d226d45dcebceff565eca5b112b2d0b5650ace28b0405519c18
+retrievedAt: 2026-10-13
+sourceUrl: https://ichingtrilogy.com/post/tian-ma-xing/
+
+Read only the span below. It was retrieved on 2026-10-13. Do not add sentences that are not in the span. Do not look at another model's answer. Return one JSON object and no other text.
+
+The catalog name is Lưỡng Trùng Thiên Mã. The span is a modern host transcription of an annotated line, not a checked printed edition. Its name is 兩重天祿天馬. The note says 祿存, 化祿, and one 天馬 in the same palace. That is not two Thiên Mã and not a Lưu Thiên Mã overlay. The catalog name Lưỡng Trùng Thiên Mã is not in the span. Do not treat the names as the same. Identity status recorded before this review: the names are not proved identical. The runtime rule JSON is null. Use NOT_IMPLEMENTED.
+
+Compare this runtime rule to the span.
+Runtime rule JSON: null
+
+Select a condition id only when the span states that requirement.
+Allowed condition ids:
+phrase_loc_loc_ma
+star_loc_ton_and_hoa_loc
+star_ma_same_menh
+
+verdict is MATCH only when the runtime rule states every selected condition and adds none that contradict the span. PARTIAL when it states some and omits others. CONFLICT when it contradicts the span. NOT_IMPLEMENTED when the runtime rule is null.
+
+quotation must be an exact contiguous copy of the entire SPAN, including its punctuation. Do not shorten it. The anchor must still occur inside that quotation. Anchor: 兩重天祿天馬
+
+JSON keys:
+schoolId, editionId, locator, sourceDigest, claimId, variantType, formulaComparison, verdict, conditions, exceptions, quotation, uncertainties
+
+Use schoolId unassigned-modern-article, editionId ichingtrilogy-2026-10-13, locator "tian-ma-xing fu-wen Lu-hou", sourceDigest 9c18d49ef4893d226d45dcebceff565eca5b112b2d0b5650ace28b0405519c18, claimId claim-9c-luong-trung-thien-ma, variantType rule. formulaComparison must equal verdict. exceptions must be [].
+
+SPAN:
+呂后專權、兩重天祿天馬。(書、集) 註：祿存又逢化祿，及天馬同守命宮是也。

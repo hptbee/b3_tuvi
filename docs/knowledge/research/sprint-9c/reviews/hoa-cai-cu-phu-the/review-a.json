@@ -1,0 +1,24 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "tracuutuvi-2026-10-13",
+  "locator": "section-1-hoa-cai-cung-phu-the-la-gi",
+  "sourceDigest": "f05cef89e85a34101482709ec69fa8eeeca0791f19fa62ba56bb54fa32af5b84",
+  "claimId": "claim-9c-hoa-cai-cu-phu-the",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "star_hoa_cai_phu_the",
+    "palace_phu_the"
+  ],
+  "exceptions": [],
+  "quotation": "Hoa Cái cung Phu Thê trong Tử Vi là cách cục khi sao Hoa Cái an tại cung Phu Thê trên lá số, chủ về hôn nhân có tính chất kín đáo, thiên về đời sống tinh thần và đôi khi có xu hướng lẻ loi.",
+  "uncertainties": [
+    "UNRESOLVED_IDENTITY"
+  ],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-17a0cd00-96dc-5ef6-811b-e762f83213b5",
+  "effort": "high"
+}

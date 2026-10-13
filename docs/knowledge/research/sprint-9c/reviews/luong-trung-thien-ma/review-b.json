@@ -1,0 +1,26 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "ichingtrilogy-2026-10-13",
+  "locator": "tian-ma-xing fu-wen Lu-hou",
+  "sourceDigest": "9c18d49ef4893d226d45dcebceff565eca5b112b2d0b5650ace28b0405519c18",
+  "claimId": "claim-9c-luong-trung-thien-ma",
+  "variantType": "rule",
+  "formulaComparison": "NOT_IMPLEMENTED",
+  "verdict": "NOT_IMPLEMENTED",
+  "conditions": [
+    "phrase_loc_loc_ma",
+    "star_loc_ton_and_hoa_loc",
+    "star_ma_same_menh"
+  ],
+  "exceptions": [],
+  "quotation": "呂后專權、兩重天祿天馬。(書、集) 註：祿存又逢化祿，及天馬同守命宮是也。",
+  "uncertainties": [
+    "The catalog name Lưỡng Trùng Thiên Mã is not in the span; identity with 兩重天祿天馬 is not proved.",
+    "The span is a modern host transcription of an annotated line, not a checked printed edition."
+  ],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-3003611a-e4ef-57ff-a933-a1f0d2a41cbf",
+  "effort": "medium"
+}
