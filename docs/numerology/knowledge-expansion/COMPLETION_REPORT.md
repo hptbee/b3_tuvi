@@ -40,7 +40,7 @@ Không deploy. Không merge. Không đổi công thức Tử Vi hay SQLite.
 - Frontend `npm run test:ci`: 56 tests pass. `npm run lint` và `npm run build` pass.
 - Playwright `e2e/numerology.spec.js`: 19 pass sau khi tắt server cũ cổng 5000/5173. Lần đầu 17 fail vì Playwright dùng lại server không có `indicators`. Đó là server cũ, không phải sai số.
 
-CI trên GitHub chưa chạy tại thời điểm viết tệp này.
+CI trên GitHub chưa được xem tại thời điểm ghi nhận kiểm thử cục bộ. PR nháp: https://github.com/hptbee/b3_tuvi/pull/31
 
 ## Giới hạn còn lại
 
