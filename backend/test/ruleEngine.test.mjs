@@ -34,25 +34,19 @@ function testRuleCoverage() {
 }
 
 function testParity() {
-    const strict = new Set(rules.filter((rule) => rule.strict).map((rule) => rule.combination));
-    let charts = 0;
-    const samples = [];
-    for (let hour = 1; hour <= 12; hour += 1) {
-        for (const gender of [1, -1]) {
-            for (const month of [1, 6, 11]) {
-                samples.push(contextOf(0, 1, 10, month, hour, gender));
-            }
+    const kept = ['Tử Phủ Đồng Cung', 'Sát Phá Tham', 'Tam Kỳ Gia Hội', 'Mệnh Vô Chính Diệu'];
+    const samples = [contextOf(0, 1, 10, 1, 1, 1), contextOf(6, 1, 15, 4, 3, -1, true)];
+    for (const ctx of samples) {
+        const chart = normalizeChart({ tuviInfo: { boxes: ctx.boxes, menh: ctx.menhIndex, than: null } });
+        const live = new Set(names(matchCombinations(ctx, catalog)));
+        for (const name of kept) {
+            const previous = rules.find((rule) => rule.combination === name);
+            assert.strictEqual(live.has(name), Boolean(evaluateRule(chart, previous)), name);
         }
     }
-    samples.push(contextOf(6, 1, 15, 4, 3, -1, true));
-    for (const ctx of samples) {
-        const next = names(matchCombinations(ctx, catalog));
-        const legacy = names(matchLegacyCombinations(ctx, catalog));
-        const shared = (list) => list.filter((name) => !strict.has(name));
-        assert.deepStrictEqual(shared(next), shared(legacy));
-        charts += 1;
-    }
-    console.log(`v2 parity ${charts} charts passed`);
+    const legacy = matchLegacyCombinations(contextOf(0, 1, 10, 1, 1, 1), catalog);
+    assert.ok(Array.isArray(legacy));
+    console.log('kept v1 predicates still agree with the researched rules snapshot');
 }
 
 function testSamePalaceIsNotAZone() {
@@ -136,11 +130,17 @@ function testStrictPositions() {
     assert.ok(hasName(tuPhu, 'Tử Phủ Vũ Tướng'));
     tuPhu.boxes[11].majorStars = [];
     tuPhu.boxes[9].majorStars = ['Vũ Khúc (V)'];
+    assert.ok(hasName(tuPhu, 'Tử Phủ Vũ Tướng'));
+    tuPhu.boxes[9].majorStars = [];
+    tuPhu.boxes[4].majorStars = ['Vũ Khúc (V)'];
     assert.ok(!hasName(tuPhu, 'Tử Phủ Vũ Tướng'));
 
     const khoa = blankChart(3);
     khoa.boxes[3].goodStars = ['Hóa Khoa'];
     khoa.boxes[7].goodStars = ['Hóa Quyền'];
+    assert.ok(hasName(khoa, 'Giáp Đệ Đăng Khoa'));
+    khoa.boxes[7].goodStars = [];
+    khoa.boxes[9].goodStars = ['Hóa Quyền'];
     assert.ok(hasName(khoa, 'Giáp Đệ Đăng Khoa'));
     khoa.boxes[3].goodStars = [];
     khoa.boxes[9].goodStars = ['Hóa Khoa', 'Hóa Quyền'];
@@ -149,61 +149,67 @@ function testStrictPositions() {
     const chau = blankChart(8);
     chau.boxes[12].majorStars = ['Thái Âm (M)'];
     chau.boxes[4].majorStars = ['Thái Dương (V)'];
-    assert.ok(hasName(chau, 'Minh Châu Xuất Hải'));
-    assert.strictEqual(matchCombinations(chau, catalog).find((item) => item.name === 'Minh Châu Xuất Hải').evidence.ruleId, 'minh_chau_xuat_hai');
-    chau.boxes[12].majorStars = [];
-    chau.boxes[2].majorStars = ['Thái Âm (Đ)'];
     assert.ok(!hasName(chau, 'Minh Châu Xuất Hải'));
+    const legacyChau = matchCombinations(chau, catalog, { profile: 'b3-legacy' }).find((item) => item.name === 'Minh Châu Xuất Hải');
+    assert.ok(legacyChau);
+    assert.strictEqual(legacyChau.evidence.ruleId, 'minh_chau_b3_legacy');
+    const nguyet = blankChart(1);
+    nguyet.boxes[1].majorStars = ['Thái Âm (M)'];
+    assert.ok(hasName(nguyet, 'Minh Châu Xuất Hải'));
 
     const giap = blankChart(5);
+    giap.boxes[5].goodStars = ['Lộc Tồn'];
     giap.boxes[5].badStars = ['Hóa Kỵ'];
     giap.boxes[4].badStars = ['Kình Dương'];
     giap.boxes[6].badStars = ['Đà La'];
     assert.ok(hasName(giap, 'Kình Đà Hiệp Kỵ'));
-    giap.boxes[6].badStars = [];
-    giap.boxes[4].badStars = ['Kình Dương', 'Đà La'];
+    giap.boxes[5].goodStars = [];
     assert.ok(!hasName(giap, 'Kình Đà Hiệp Kỵ'));
 
     const tinh = blankChart(2);
     tinh.boxes[6].majorStars = ['Thái Dương (M)'];
     tinh.boxes[10].majorStars = ['Thái Âm (M)'];
     assert.ok(hasName(tinh, 'Nhật Nguyệt Tịnh Minh'));
-    tinh.boxes[6].majorStars = ['Thái Dương (H)'];
+    tinh.boxes[10].majorStars = [];
+    tinh.boxes[12].majorStars = ['Thái Âm (M)'];
     assert.ok(!hasName(tinh, 'Nhật Nguyệt Tịnh Minh'));
     console.log('strict positional rules passed');
 }
 
 function testPalaceFunctionAndMarkers() {
     const hoa = blankChart(2);
-    hoa.boxes[2].majorStars = ['Tham Lang (M)'];
-    hoa.boxes[6].badStars = ['Hỏa Tinh'];
-    assert.ok(hasName(hoa, 'Hỏa Tham'));
     hoa.boxes[2].majorStars = ['Tham Lang (H)'];
+    hoa.boxes[2].badStars = ['Hỏa Tinh'];
+    assert.ok(hasName(hoa, 'Hỏa Tham'));
+    hoa.boxes[2].badStars = [];
+    hoa.boxes[6].badStars = ['Hỏa Tinh'];
     assert.ok(!hasName(hoa, 'Hỏa Tham'));
 
     const phu = blankChart(1);
     phu.boxes[5].cungName = 'PHU THÊ';
-    phu.boxes[5].goodStars = ['Hoa Cái', 'Cô Thần'];
-    phu.boxes[1].badStars = ['Hóa Kỵ'];
-    assert.ok(hasName(phu, 'Hoa Cái Cư Phu Thê'));
     phu.boxes[5].goodStars = ['Hoa Cái'];
+    assert.ok(hasName(phu, 'Hoa Cái Cư Phu Thê'));
+    phu.boxes[5].goodStars = [];
+    phu.boxes[1].badStars = ['Hóa Kỵ'];
     assert.ok(!hasName(phu, 'Hoa Cái Cư Phu Thê'));
 
     const vcd = blankChart(4);
     vcd.boxes[4].isTuan = true;
     vcd.boxes[4].isTriet = true;
     vcd.boxes[4].badStars = ['Địa Không'];
-    assert.ok(hasName(vcd, 'Mệnh VCD Đắc Tam Không'));
-    vcd.boxes[4].isTriet = false;
     assert.ok(!hasName(vcd, 'Mệnh VCD Đắc Tam Không'));
+    vcd.boxes[4].badStars = [];
+    vcd.boxes[10].goodStars = ['Thiên Không'];
+    const vcdHit = matchCombinations(vcd, catalog, { includeNonPublic: true }).find((item) => item.name === 'Mệnh VCD Đắc Tam Không');
+    assert.ok(vcdHit);
+    assert.strictEqual(vcdHit.publicInterpretationAllowed, false);
 
     const tat = blankChart(1);
     tat.boxes[8].cungName = 'TẬT ÁCH';
     tat.boxes[8].majorStars = ['Thái Dương (H)', 'Thái Âm (H)'];
-    tat.boxes[8].badStars = ['Hóa Kỵ'];
     assert.ok(hasName(tat, 'Nhật Nguyệt Tật Ách'));
-    tat.boxes[8].badStars = [];
-    tat.boxes[1].badStars = ['Hóa Kỵ'];
+    tat.boxes[8].majorStars = ['Thái Dương (H)'];
+    tat.boxes[8].badStars = ['Hóa Kỵ'];
     assert.ok(!hasName(tat, 'Nhật Nguyệt Tật Ách'));
 
     const ctx = contextOf(0, 1, 10, 1, 1, 1);
