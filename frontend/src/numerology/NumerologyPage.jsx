@@ -98,7 +98,7 @@ export default function NumerologyPage() {
           <p className="field-hint" id="num-name-hint">Nhập tên có dấu như bình thường. Bạn sẽ xem được tên đã chuẩn hóa trong kết quả.</p>
           {nameError && <p className="num-field-error" id="num-name-error">{nameError.message}</p>}
           <label htmlFor="num-target">Ngày xem chu kỳ <span className="optional">(không bắt buộc)</span><input ref={targetInput} id="num-target" name="targetDate" type="date" min="1200-01-01" max="2199-12-31" value={draft.targetDate} onChange={change} aria-invalid={Boolean(targetError)} aria-describedby={targetError ? 'num-target-hint num-target-error' : 'num-target-hint'} /></label>
-          <p className="field-hint" id="num-target-hint">Để trống để xem ngày hiện tại theo giờ Việt Nam, hoặc chọn một ngày từ ngày sinh trở đi.</p>
+          <p className="field-hint" id="num-target-hint">Để trống để xem ngày hiện tại theo giờ Việt Nam. Ngày này cũng chọn giai đoạn đỉnh cao đang diễn ra.</p>
           {targetError && <p className="num-field-error" id="num-target-error">{targetError.message}</p>}
           <button className="primary-button" disabled={request.status === 'loading' && Boolean(sameInput)} type="submit">{request.status === 'loading' && sameInput ? 'Đang tính…' : 'Xem kết quả'} <span aria-hidden="true">→</span></button>
           <p className="privacy-note">Không cần tài khoản. Tên và ngày sinh không được lưu vào cơ sở dữ liệu hoặc đường dẫn.</p>
@@ -113,8 +113,8 @@ export default function NumerologyPage() {
       {result.contentVersion && <aside className="num-content-notice" aria-label="Lời luận thử nghiệm"><h3>Một lời gợi mở, để bạn tự suy ngẫm</h3><p>Mở lời luận ở từng chỉ số để xem góc nhìn và câu hỏi tham khảo. Chủ đề số được đối chiếu nguồn cộng đồng; nội dung và ngữ cảnh do ứng dụng biên tập, không quyết định tính cách hoặc tương lai của bạn.</p><p>Phiên bản nội dung {result.contentVersion} · biên tập thử nghiệm</p></aside>}
       <div className="num-metric-grid">{METRIC_IDS.map(id => <MetricSection key={id} id={id} metric={result.metrics[id]} />)}</div>
       {result.nameAnalysis && <details className="num-name-trace"><summary>Tên được chuyển sang chữ số như thế nào?</summary><p>Tên chuẩn hóa: <strong>{result.nameAnalysis.normalized}</strong></p><p>Đ → D · bỏ dấu · A, E, I, O, U là nguyên âm · Y là phụ âm.</p><div className="num-letter-list">{result.nameAnalysis.letters.map((item, index) => <span key={index} aria-label={`${item.letter} bằng ${item.value}`}>{item.letter}<b>{item.value}</b></span>)}</div></details>}
-      <NumerologyAdvanced birthGrid={result.birthGrid} cycles={result.cycles} />
-      <p className="num-disclaimer">Các con số không phải đánh giá khoa học về tính cách hoặc tương lai. Đỉnh cao/thử thách sẽ được triển khai ở giai đoạn tiếp theo.</p>
+      <NumerologyAdvanced birthGrid={result.birthGrid} cycles={result.cycles} pinnacles={result.pinnacles} />
+      <p className="num-disclaimer">Các con số không phải đánh giá khoa học về tính cách hoặc tương lai. Đỉnh cao và thử thách theo quy ước tuổi của bản thử nghiệm; nhóm này chưa có lời luận.</p>
     </section>}
   </div>;
 }

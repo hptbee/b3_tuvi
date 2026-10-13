@@ -926,10 +926,10 @@ MVP số học thử nghiệm đã thay preview ở `/than-so-hoc`. Chi tiết r
 | N2; NUM-025 | No-store (cả lỗi/preflight), logger không body/query, không persist; parser limit 256kb | Rate limiting và hardening production còn pending |
 | N3; NUM-030–035 | Landing/form/result, snapshot/retry/abort, disclosure và browser tests đã có | Disclosure là quy ước thử nghiệm, không là citation đã xác minh |
 | N3; NUM-036 | Probe keyboard/focus và mobile320/390, desktop1440 | Chưa audit WCAG đầy đủ, metadata/noindex/SEO production hoặc cross-browser |
-| N4; NUM-040–047 | Pending toàn bộ | Grid, cycles, pinnacle/challenge cần source/spec/engine/UI/tests riêng |
+| N4; NUM-040–047 | Biểu đồ, chu kỳ và đỉnh cao/thử thách đã có như quy ước thử nghiệm `1.2.0` | Chưa có lời luận cho đỉnh cao/thử thách; export vẫn thuộc N5 |
 | N5; NUM-050–057 | Docs runtime và local CI checks đã có | Export/import/print Thần Số Học, benchmark, staging, rollback và phê duyệt release còn pending |
 | N6 | Pending, không chặn MVP numeric | Profiles bổ sung, nội dung, AI và cross-browser theo gate riêng |
 
 Không đánh dấu các checklist phát hành §15 hoặc toàn bộ task đã xong chỉ vì vertical slice chạy được. `sourceStatus=product_specification_only`, `status=experimental`, `contentVersion=null`, mọi metric `meaning=null` và `meaningStatus=withheld`. Source registry hiện ghi rõ thiếu dossier; không có nguồn bên ngoài được fabricated hoặc tự approved.
 
-Thứ tự kế tiếp: (1) nghiên cứu và xác minh source dossier/D01–D12, (2) thiết kế catalog/content eligibility có review thật, (3) chọn một capability V1 và đi trọn spec→fixture→engine→API→UI→tests, (4) export/import/print, (5) hardening/staging/rollback trước release. Nếu source review làm đổi quy ước, tạo profile/version mới và fixture trước khi mở capability.
+Thứ tự kế tiếp: (1) nghiên cứu và xác minh source dossier/D01–D12 khi muốn đổi quy ước, (2) export/import/print, (3) hardening/staging/rollback trước release. Đỉnh cao và thử thách đã nằm trong calculator thử nghiệm, chưa có lời luận riêng. Nếu source review làm đổi quy ước, tạo profile/version mới và fixture trước khi đổi số.
