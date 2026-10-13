@@ -15,6 +15,19 @@ assert.equal(dated.cycles.months.length, 12);
 assert.equal(dated.cycles.months.filter(item => item.selected).length, 1);
 assert.equal(dated.cycles.months.find(item => item.selected).month, 10);
 assert.equal(dated.cycles.months.find(item => item.selected).personalMonth.value, dated.cycles.personalMonth.value);
+assert.equal(dated.cycles.yearBand.every(item => item.viewDate === `${item.year}-10-01`), true);
+assert.equal(dated.cycles.months.every(item => item.viewDate === `2026-${String(item.month).padStart(2, '0')}-01`), true);
+const born = calculateNumerology({ birthDate: birth, targetDate: '1990-06-15' }, today);
+for (const item of born.cycles.yearBand) {
+    if (item.year < 1990) assert.equal(item.viewDate, null);
+    else if (item.year === 1990) assert.equal(item.viewDate, '1990-06-15');
+    else assert.equal(item.viewDate, `${item.year}-06-01`);
+}
+for (const item of born.cycles.months) {
+    if (item.month < 6) assert.equal(item.viewDate, null);
+    else if (item.month === 6) assert.equal(item.viewDate, '1990-06-15');
+    else assert.equal(item.viewDate, `1990-${String(item.month).padStart(2, '0')}-01`);
+}
 assert.equal(dated.nameChart.status, 'unavailable');
 assert.equal(dated.combinedChart.status, 'unavailable');
 assert.deepEqual(dated.pinnacles.periods.map(period => period.pinnacle.value), [3, 7, 1, 7]);

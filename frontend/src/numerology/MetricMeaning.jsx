@@ -1,6 +1,9 @@
 export default function MetricMeaning({ label, metric }) {
   if (metric.status !== 'available') return null;
-  if (metric.meaningStatus === 'withheld') return <p className="num-meaning-withheld">{metric.meaningReason === 'source_unavailable' ? `Chưa có lời luận đủ căn cứ cho số ${metric.value}.` : 'Lời luận đang chờ đủ điều kiện hiển thị.'}</p>;
+  if (metric.meaningStatus === 'withheld') {
+    if (metric.value === 0 && metric.meaningReason === 'content_not_in_scope') return null;
+    return <p className="num-meaning-withheld">{metric.meaningReason === 'source_unavailable' ? `Chưa có lời luận đủ căn cứ cho số ${metric.value}.` : 'Lời luận đang chờ đủ điều kiện hiển thị.'}</p>;
+  }
   const meaning = metric.meaning;
   return <section className="num-reading">
     <h4>Lời luận tham khảo · {label}</h4>

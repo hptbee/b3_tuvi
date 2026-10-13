@@ -33,8 +33,8 @@ function result(value = 4, normalized = null) {
     nameChart, combinedChart,
     cycles: { policy: 'calendar-year-v1', bandPolicy: 'personal-year-cycle-containing-target-v1', targetDate: '2026-10-13', year: 2026, month: 10, day: 13,
       personalYear: cycleValue(4), personalMonth: cycleValue(5), personalDay: cycleValue(9),
-      yearBand: [1, 2, 3, 4, 5, 6, 7, 8, 9].map((personal, index) => ({ year: 2023 + index, personalYear: cycleValue(personal), selected: personal === 4 })),
-      months: Array.from({ length: 12 }, (_, index) => ({ month: index + 1, personalMonth: cycleValue(index === 9 ? 5 : 1), selected: index === 9 })) },
+      yearBand: [1, 2, 3, 4, 5, 6, 7, 8, 9].map((personal, index) => ({ year: 2023 + index, personalYear: cycleValue(personal), selected: personal === 4, viewDate: `${2023 + index}-10-01` })),
+      months: Array.from({ length: 12 }, (_, index) => ({ month: index + 1, personalMonth: cycleValue(index === 9 ? 5 : 1), selected: index === 9, viewDate: `2026-${String(index + 1).padStart(2, '0')}-01` })) },
     pinnacles: samplePinnacles(),
     nameAnalysis: normalized ? { normalized, letters: [{ letter: 'A', value: 1 }] } : null,
     metrics: {
@@ -294,10 +294,42 @@ it('exports the report without the raw name until the user opts in', async () =>
   expect(hidden.nameAnalysis).toBeUndefined();
   expect(hidden.metrics.lifePath.value).toBe(4);
   expect(hidden.exportVersion).toBe('1.0.0');
+  expect(document.querySelector('#bieu-do-ten p')).toHaveClass('num-omit-print');
+  expect(document.querySelector('.num-name-trace')).toHaveClass('num-omit-print');
   await user.click(screen.getByRole('checkbox', { name: /Kèm họ tên/ }));
   expect(screen.getByText('An · 15/6/1990')).not.toHaveClass('num-omit-print');
+  expect(document.querySelector('#bieu-do-ten p')).not.toHaveClass('num-omit-print');
+  expect(document.querySelector('.num-name-trace')).not.toHaveClass('num-omit-print');
   await user.click(screen.getByRole('button', { name: 'Tải JSON' }));
   expect(JSON.parse(await blobText(blobs[1])).fullName).toBe('An');
+});
+
+it('follows the server view date and keeps focus on the selected year', async () => {
+  const first = result();
+  first.cycles.yearBand[0].year = 1987;
+  first.cycles.yearBand[0].viewDate = null;
+  const second = result();
+  second.cycles.targetDate = '2027-10-01';
+  second.cycles.year = 2027;
+  second.cycles.personalYear.value = 5;
+  second.pinnacles.asOf = '2027-10-01';
+  second.cycles.yearBand.forEach(item => { item.selected = item.year === 2027; });
+  let call = 0;
+  const fetch = vi.fn(async () => success(call++ === 0 ? first : second));
+  vi.stubGlobal('fetch', fetch);
+  const user = userEvent.setup();
+  render(<NumerologyPage />);
+  await fillDate(user);
+  await user.click(screen.getByRole('button', { name: 'Xem kết quả' }));
+  await screen.findByRole('heading', { name: 'Các chỉ số của bạn' });
+  const earlyYear = document.querySelector('.num-year-band button');
+  expect(earlyYear).toHaveTextContent('1987');
+  expect(earlyYear).toBeDisabled();
+  await user.click(screen.getByRole('button', { name: /^2027/ }));
+  await waitFor(() => expect(fetch).toHaveBeenCalledTimes(2));
+  expect(JSON.parse(fetch.mock.calls[1][1].body).targetDate).toBe('2027-10-01');
+  expect(screen.getByRole('heading', { name: 'Các chỉ số của bạn' })).not.toHaveFocus();
+  expect(screen.getByRole('button', { name: /^2027/ })).toHaveFocus();
 });
 
 it('rejects an oversized import before sending it', async () => {

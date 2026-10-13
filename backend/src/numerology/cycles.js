@@ -7,6 +7,21 @@ const metric = (formulaId, parts) => ({ status: 'available', formulaId,
 
 const YEAR_MIN = 1200;
 const YEAR_MAX = 2199;
+const iso = ({ year, month, day }) => `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+const pad = value => String(value).padStart(2, '0');
+
+function viewOnOrAfterBirth(birthDate, year, month) {
+    const birth = iso(birthDate);
+    const firstOfMonth = `${year}-${pad(month)}-01`;
+    if (firstOfMonth >= birth && firstOfMonth <= '2199-12-31') return firstOfMonth;
+    if (year === birthDate.year && month === birthDate.month && birth <= '2199-12-31') return birth;
+    return null;
+}
+
+function yearViewDate(birthDate, year, preferredMonth) {
+    return viewOnOrAfterBirth(birthDate, year, preferredMonth)
+        || (year === birthDate.year ? iso(birthDate) : year > birthDate.year ? `${year}-01-01` : null);
+}
 
 export function personalYearMetric(birthDate, year) {
     return metric('personal-year-calendar-v1', [part('birthDay', birthDate.day), part('birthMonth', birthDate.month), part('targetYear', year)]);
@@ -25,11 +40,11 @@ export function calculateCycles(birthDate, targetDate) {
     const startYear = Math.min(Math.max(alignedStart, YEAR_MIN), YEAR_MAX - 8);
     const yearBand = Array.from({ length: 9 }, (_, index) => {
         const bandYear = startYear + index;
-        return { year: bandYear, personalYear: personalYearMetric(birthDate, bandYear), selected: bandYear === year };
+        return { year: bandYear, personalYear: personalYearMetric(birthDate, bandYear), selected: bandYear === year, viewDate: yearViewDate(birthDate, bandYear, month) };
     });
     const months = Array.from({ length: 12 }, (_, index) => {
         const bandMonth = index + 1;
-        return { month: bandMonth, personalMonth: personalMonthMetric(personalYear.value, bandMonth), selected: bandMonth === month };
+        return { month: bandMonth, personalMonth: personalMonthMetric(personalYear.value, bandMonth), selected: bandMonth === month, viewDate: viewOnOrAfterBirth(birthDate, year, bandMonth) };
     });
     return {
         version: '1.1.0', policy: 'calendar-year-v1', bandPolicy: 'personal-year-cycle-containing-target-v1',

@@ -18,14 +18,12 @@ function PeakButton({ period, index, selected, onSelect, edge }) {
   </button>;
 }
 
-export default function NumerologyAdvanced({ birthGrid, nameChart, combinedChart, cycles, pinnacles, metrics, onViewDate }) {
+export default function NumerologyAdvanced({ birthGrid, nameChart, combinedChart, cycles, pinnacles, metrics, onViewDate, includeName = false }) {
   const [lineId, setLineId] = useState(null);
   const [periodId, setPeriodId] = useState(pinnacles.periods.find(period => period.active).id);
   const selectedLine = birthGrid.lines.find(line => line.id === lineId);
   const selected = pinnacles.periods.find(period => period.id === periodId) || pinnacles.periods.find(period => period.active);
   const highlighted = new Set(selectedLine?.digits || []);
-  const viewYear = year => onViewDate(`${year}-${String(cycles.month).padStart(2, '0')}-01`);
-  const viewMonth = month => onViewDate(`${cycles.year}-${String(month).padStart(2, '0')}-01`);
 
   return <div className="num-advanced">
     <section className="num-chapter" id="bieu-do-ngay-sinh" aria-labelledby="num-grid-heading">
@@ -52,7 +50,8 @@ export default function NumerologyAdvanced({ birthGrid, nameChart, combinedChart
     <section className="num-chapter" id="bieu-do-ten" aria-labelledby="num-name-chart-heading">
       <div className="section-kicker">CHỮ CÁI ĐÃ CHUẨN HÓA</div><h2 id="num-name-chart-heading">Biểu đồ tên</h2>
       {nameChart.status !== 'available' ? <p>Chưa có tên nên không có biểu đồ tên. Biểu đồ này chỉ đếm chữ, không dùng mũi tên của biểu đồ ngày sinh.</p> : <>
-        <p>Tên chuẩn hóa <strong>{nameChart.normalized}</strong>. Mỗi chữ cộng một lần vào ô đúng giá trị Pythagorean. Đây không phải mũi tên tính cách.</p>
+        <p className={includeName ? undefined : 'num-omit-print'}>Tên chuẩn hóa <strong>{nameChart.normalized}</strong>. Mỗi chữ cộng một lần vào ô đúng giá trị Pythagorean. Đây không phải mũi tên tính cách.</p>
+        {!includeName && <p className="num-print-only">Biểu đồ tên đếm giá trị chữ. Họ tên không được in vì bạn chưa chọn kèm họ tên.</p>}
         <table className="num-birth-grid"><caption>Số lần mỗi giá trị xuất hiện trong tên</caption><tbody>
           {nameChart.layout.map(row => <tr key={row.join('-')}>{row.map(digit => <td key={digit} className={nameChart.counts[digit] ? 'num-cell-present' : 'num-cell-empty'}>
             <b>{digit}</b><span>{nameChart.counts[digit] ? `${nameChart.counts[digit]} lần` : 'Không có trong tên'}</span>
@@ -74,12 +73,12 @@ export default function NumerologyAdvanced({ birthGrid, nameChart, combinedChart
     <section className="num-chapter num-cycle-section" id="chu-ky" aria-labelledby="num-cycle-heading">
       <div className="section-kicker">MỘT NGÀY, MỘT GÓC NHÌN</div><h2 id="num-cycle-heading">Chu kỳ cá nhân</h2>
       <p className="num-cycle-date">Ngày xem: <strong>{format(cycles.targetDate)}</strong> · Năm {cycles.year}</p>
-      <p>Quy ước năm dương lịch từ 01/01 đến 31/12, không đổi vào sinh nhật. Các chu kỳ rút gọn về 1–9. Chín ô năm là một vòng Năm cá nhân chứa năm đang xem, không phải đường tăng hay giảm.</p>
-      <div className="num-year-band" role="group" aria-label="Chín năm cá nhân">{cycles.yearBand.map(item => <button type="button" key={item.year} aria-pressed={item.selected} onClick={() => viewYear(item.year)}>
+      <p>Quy ước năm dương lịch từ 01/01 đến 31/12, không đổi vào sinh nhật. Các chu kỳ rút gọn về 1–9. Chín ô năm là một vòng Năm cá nhân chứa năm đang xem, không phải đường tăng hay giảm. Chọn năm hoặc tháng sẽ xem ngày do máy chủ chỉ định, không sớm hơn ngày sinh. Ô trước ngày sinh không bấm được.</p>
+      <div className="num-year-band" role="group" aria-label="Chín năm cá nhân">{cycles.yearBand.map(item => <button type="button" key={item.year} aria-pressed={item.selected} disabled={item.viewDate === null} onClick={() => item.viewDate && onViewDate(item.viewDate)}>
         <span>{item.year}</span><strong>{item.personalYear.value}</strong>
       </button>)}</div>
       <h3>Mười hai tháng của năm {cycles.year}</h3>
-      <div className="num-month-band" role="group" aria-label="Mười hai tháng cá nhân">{cycles.months.map(item => <button type="button" key={item.month} aria-pressed={item.selected} onClick={() => viewMonth(item.month)}>
+      <div className="num-month-band" role="group" aria-label="Mười hai tháng cá nhân">{cycles.months.map(item => <button type="button" key={item.month} aria-pressed={item.selected} disabled={item.viewDate === null} onClick={() => item.viewDate && onViewDate(item.viewDate)}>
         <span>Tháng {item.month}</span><strong>{item.personalMonth.value}</strong>
       </button>)}</div>
       <div className="num-cycle-grid">{[['personalYear', 'Năm cá nhân'], ['personalMonth', 'Tháng cá nhân'], ['personalDay', 'Ngày cá nhân']].map(([id, label]) => <article key={id} className="num-metric" aria-labelledby={`cycle-${id}`}>

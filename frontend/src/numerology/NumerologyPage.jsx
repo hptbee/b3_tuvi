@@ -44,6 +44,7 @@ export default function NumerologyPage() {
   const targetInput = useRef(null);
   const errorBox = useRef(null);
   const resultHeading = useRef(null);
+  const focusResult = useRef(true);
   const fileInput = useRef(null);
   const [includeName, setIncludeName] = useState(false);
   const [importError, setImportError] = useState('');
@@ -59,7 +60,7 @@ export default function NumerologyPage() {
     };
   }, []);
   useEffect(() => {
-    if (request.status === 'ready') resultHeading.current?.focus();
+    if (request.status === 'ready' && focusResult.current) resultHeading.current?.focus();
     if (request.status === 'error' && !request.error.fields.length) errorBox.current?.focus();
   }, [request]);
   const currentPayload = payload(draft);
@@ -69,19 +70,20 @@ export default function NumerologyPage() {
   const nameError = fields.find(field => field.path === 'fullName');
   const targetError = fields.find(field => field.path === 'targetDate');
   const change = event => setDraft(current => ({ ...current, [event.target.name]: event.target.value }));
-  const run = async input => {
+  const run = async (input, { focus = true, keepResult = false } = {}) => {
+    focusResult.current = focus;
     controller.current?.abort();
     const next = new AbortController();
     controller.current = next;
     const id = ++sequence.current;
-    setRequest({ status: 'loading', result: null, input, error: null });
+    setRequest(current => ({ status: 'loading', result: keepResult ? current.result : null, input, error: null }));
     try {
       const result = await calculateRequest(input, next.signal);
       if (next.signal.aborted || id !== sequence.current) return;
       setRequest({ status: 'ready', result, input, error: null });
     } catch (error) {
       if (next.signal.aborted || id !== sequence.current || error.name === 'AbortError') return;
-      setRequest({ status: 'error', result: null, input, error });
+      setRequest(current => ({ status: 'error', result: keepResult ? current.result : null, input, error }));
       if (error.fields?.some(field => field.path === 'targetDate')) targetInput.current?.focus();
       else if (error.fields?.some(field => field.path === 'fullName')) nameInput.current?.focus();
       else if (error.fields?.some(field => field.path === 'birthDate')) dayInput.current?.focus();
@@ -186,11 +188,11 @@ export default function NumerologyPage() {
         </ul>
       </section>
       <div className="num-metric-grid" id="chi-so-cot-loi">{METRIC_IDS.map(id => <MetricSection key={id} id={id} metric={result.metrics[id]} />)}</div>
-      {result.nameAnalysis && <details className="num-name-trace"><summary>Tên được chuyển sang chữ số như thế nào?</summary><p>Tên chuẩn hóa: <strong>{result.nameAnalysis.normalized}</strong></p><p>Đ → D · bỏ dấu · A, E, I, O, U là nguyên âm · Y là phụ âm.</p><div className="num-letter-list">{result.nameAnalysis.letters.map((item, index) => <span key={index} aria-label={`${item.letter} bằng ${item.value}`}>{item.letter}<b>{item.value}</b></span>)}</div></details>}
-      <NumerologyAdvanced birthGrid={result.birthGrid} nameChart={result.nameChart} combinedChart={result.combinedChart} cycles={result.cycles} pinnacles={result.pinnacles} metrics={result.metrics} onViewDate={iso => {
+      {result.nameAnalysis && <details className={includeName ? 'num-name-trace' : 'num-name-trace num-omit-print'}><summary>Tên được chuyển sang chữ số như thế nào?</summary><p>Tên chuẩn hóa: <strong>{result.nameAnalysis.normalized}</strong></p><p>Đ → D · bỏ dấu · A, E, I, O, U là nguyên âm · Y là phụ âm.</p><div className="num-letter-list">{result.nameAnalysis.letters.map((item, index) => <span key={index} aria-label={`${item.letter} bằng ${item.value}`}>{item.letter}<b>{item.value}</b></span>)}</div></details>}
+      <NumerologyAdvanced birthGrid={result.birthGrid} nameChart={result.nameChart} combinedChart={result.combinedChart} cycles={result.cycles} pinnacles={result.pinnacles} metrics={result.metrics} includeName={includeName} onViewDate={iso => {
         const next = { birthDate: request.input.birthDate, ...(request.input.fullName ? { fullName: request.input.fullName } : {}), targetDate: iso };
         setDraft(current => ({ ...current, targetDate: iso }));
-        run(next);
+        run(next, { focus: false, keepResult: true });
       }} />
       <section className="num-chapter" id="nguon" aria-labelledby="num-source-heading">
         <h2 id="num-source-heading">Cách tính và nguồn</h2>

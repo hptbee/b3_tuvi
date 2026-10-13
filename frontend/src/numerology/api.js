@@ -69,11 +69,12 @@ function validAdvanced(body) {
     && Number.isInteger(cycle.year) && Number.isInteger(cycle.month) && cycle.month >= 1 && cycle.month <= 12
     && ['personalYear', 'personalMonth', 'personalDay'].every(id => validMetric(cycle[id], id) && cycle[id].status === 'available' && cycle[id].value >= 1 && cycle[id].value <= 9 && cycle[id].isMaster === false && cycle[id].keepMasters === false)
     && Array.isArray(cycle.yearBand) && cycle.yearBand.length === 9 && cycle.yearBand.filter(item => item?.selected === true).length === 1
-    && cycle.yearBand.every(item => Number.isInteger(item.year) && validMetric(item.personalYear, 'personalYear') && item.personalYear.value >= 1 && item.personalYear.value <= 9 && item.personalYear.keepMasters === false)
+    && cycle.yearBand.every(item => Number.isInteger(item.year) && validMetric(item.personalYear, 'personalYear') && item.personalYear.value >= 1 && item.personalYear.value <= 9 && item.personalYear.keepMasters === false && (item.viewDate === null || typeof item.viewDate === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(item.viewDate)))
     && cycle.yearBand.find(item => item.selected).year === cycle.year
     && cycle.yearBand.find(item => item.selected).personalYear.value === cycle.personalYear.value
+    && /^\d{4}-\d{2}-\d{2}$/.test(cycle.yearBand.find(item => item.selected).viewDate)
     && Array.isArray(cycle.months) && cycle.months.length === 12 && cycle.months.filter(item => item?.selected === true).length === 1
-    && cycle.months.every((item, index) => item.month === index + 1 && validMetric(item.personalMonth, 'personalMonth') && item.personalMonth.keepMasters === false)
+    && cycle.months.every((item, index) => item.month === index + 1 && validMetric(item.personalMonth, 'personalMonth') && item.personalMonth.keepMasters === false && (item.viewDate === null || typeof item.viewDate === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(item.viewDate)))
     && cycle.months.find(item => item.selected).month === cycle.month
     && cycle.months.find(item => item.selected).personalMonth.value === cycle.personalMonth.value
     && validCharts(body);

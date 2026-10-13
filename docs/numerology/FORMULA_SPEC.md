@@ -18,7 +18,7 @@ Reduction records each input/digits/output step and retains rootValue (1–9). A
 
 Name policy: reject control/format and Unicode default-ignorable characters before normalization (including hidden combining grapheme joiner and variation selectors), then NFC trim and a 100-codepoint bound. Decompose Latin/Vietnamese accents with NFD, Đ→D, uppercase, and treat spaces/hyphen/apostrophes as separators. A–Z map to repeating 1–9 (A/J/S=1, … I/R=9). Combining accents must follow a supported Latin letter and belong to this explicit set: U+0300, U+0301, U+0302, U+0303, U+0304, U+0306, U+0307, U+0308, U+0309, U+030A, U+030B, U+030C, U+030F, U+0311, U+031B, U+0323, U+0324, U+0325, U+0326, U+0327, U+0328, U+032D, U+032E, U+0330, U+0331. Only these accents are removed; NFC/NFD Vietnamese and common accented Latin spellings produce equivalent letters. Other combining marks (for example Devanagari vowel marks and enclosing keycaps), unsupported ligatures and scripts are rejected rather than silently transliterated.
 
-Every result has profile/schema versions, status, raw total, parts, steps, root/master information. Meaning remains null/withheld until a separately eligible content policy is enabled. Birth grid, personal cycles, and pinnacles/challenges are implemented as versioned experimental capabilities. Pinnacle numbers do not receive editorial prose.
+Every result has profile/schema versions, status, raw total, parts, steps, root/master information. Meaning remains null/withheld until a separately eligible content policy is enabled. Birth grid, personal cycles, and pinnacles/challenges are implemented as versioned experimental capabilities. Catalog 1.2.0 adds experimental editorial for pinnacle stages and challenges 1–8. Challenge 0 and number 33 stay without a reading.
 
 ## Birth grid — capability version1.0.0
 
@@ -32,7 +32,7 @@ Optional strict ISO `targetDate`, validated Gregorian1200–2199 and not before 
 
 Year = reduce(digitSum(birthDay)+digitSum(birthMonth)+digitSum(targetYear),false). Month = reduce(personalYear.value+digitSum(targetMonth),false). Day = reduce(personalMonth.value+digitSum(targetDay),false). **All three reduce to1–9, including totals11/22/33.** Periods follow calendar year January1–December31, month and day; no birthday rollover. Parts/reduction traces are serialized exactly like core metrics. No implicit clock or inferred astrology.
 
-Capability version 1.1.0 adds two views that reuse those formulas. `yearBand` is nine calendar years. It starts at the year whose personal year is 1 and that contains the selected year. If that window would leave 1200–2199, it shifts so all nine years stay inside the range. `months` is January–December of the selected personal year. The selected year and month match `personalYear` and `personalMonth`. The client must not recompute either list.
+Capability version 1.1.0 adds two views that reuse those formulas. `yearBand` is nine calendar years. It starts at the year whose personal year is 1 and that contains the selected year. If that window would leave 1200–2199, it shifts so all nine years stay inside the range. `months` is January–December of the selected personal year. The selected year and month match `personalYear` and `personalMonth`. Each year and month carries `viewDate`: the earliest valid target on or after the birthday for that cell, or `null` when the whole cell is before birth. The client sends that date and does not recompute either list.
 
 ## Name chart and combined chart — capability version 1.0.0
 

@@ -78,8 +78,10 @@
   .num-print-only { display: block; }
   .num-results { border: 0; padding-top: 0; }
   .num-metric-grid, .num-cycle-grid, .num-grid-layout, .num-pinnacle-values { grid-template-columns: 1fr 1fr; }
-  .num-metric, .num-pinnacle-period, .num-reading, .num-birth-grid, .num-name-trace { break-inside: avoid; page-break-inside: avoid; }
-  .num-results-heading { break-after: avoid; page-break-after: avoid; }
+  .num-metric, .num-pinnacle-period, .num-reading, .num-birth-grid, .num-name-trace, .num-pyramid, .num-year-band, .num-month-band, .num-combined { break-inside: avoid; page-break-inside: avoid; }
+  .num-chapter { break-before: page; page-break-before: always; }
+  #tong-quan { break-before: auto; page-break-before: auto; }
+  .num-chapter > h2, .num-chapter > h3, .num-results-heading { break-after: avoid; page-break-after: avoid; }
   details > *:not(summary) { display: block !important; }
   .num-page, .num-page * { color: #000; overflow: visible; }
 }
