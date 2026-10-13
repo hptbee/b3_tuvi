@@ -1,10 +1,14 @@
 # Roadmap Thần Số Học từ A–Z
 
-> **Phiên bản:** 1.1 · **Ngày cập nhật:** 2026-10-13
-> **Trạng thái:** backlog `PROPOSED`, có MVP số học thử nghiệm — xem snapshot §17; chưa phải công thức đã đối chiếu nguồn.
-> **Baseline mã nguồn:** `8fc5a01`; phải kiểm kê lại khi kickoff.  
-> **Mục tiêu:** triển khai một lĩnh vực Thần Số Học độc lập trong `b3_tuvi`, từ engine đến trải nghiệm landing, có thể giải thích cách tính và kiểm thử được.  
-> **Không ấn định ngày phát hành.** Sprint bên dưới là giai đoạn theo dependency, không phải cam kết thời gian.
+> **Roadmap:** v2.0 · **Cập nhật:** 2026-10-14 · **Baseline xác nhận:** `main` `ed31ad1cae7b2411029cccbe8c87da533a996800` (PR #20–#24 đã merge).
+> **Runtime:** profile `pythagorean-vn-v1` `1.2.0`, editorial catalog `1.2.0` (102 core/chu kỳ + 44 đỉnh + 8 thử thách = 154 bài), lớp nhãn `arrow-labels-vn-v1`.
+> **Scope:** `V1_FEATURE_COMPLETE` cho calculator + chaptered visual report; **chưa** `FORMULA_SOURCE_VERIFIED`, `RELEASE_GATES_PASSED` hoặc `PRODUCTION_READY`.
+> **CI:** Backend/frontend/e2e PASS tại [main run 38438302551](https://github.com/hptbee/b3_tuvi/actions/runs/38438302551). Không suy từ CI thành staging.
+> **Theo dõi:** trạng thái NUM task tại §12.9, checklist §15, roadmap tiếp theo §18.
+
+Đây là **living roadmap**. Các đặc tả công thức, ví dụ và cây file mang chữ *dự kiến* là lịch sử thiết kế; mã runtime và [FORMULA_SPEC](numerology/FORMULA_SPEC.md) là nguồn chi tiết của profile đang chạy. Chỉ đánh dấu complete theo đúng chiều: calculation, visualization, interpretation, source verification, release.
+
+**Không ấn định ngày phát hành.** Mọi mốc mới dựa vào dependency và evidence gate.
 
 ## 1. Cách sử dụng roadmap
 
@@ -36,15 +40,17 @@ Người dùng từ landing page chọn Thần Số Học, nhập ngày sinh dư
 
 Thần Số Học giữ phong cách riêng, dự kiến tím/kem; dùng chung logo, menu trên cùng, accessibility và các primitive form/button với Tử Vi. Không dựng dashboard quản trị cho trải nghiệm công khai.
 
-### 2.2. Phân kỳ năng lực
+### 2.2. Các lớp năng lực và trạng thái
 
-| Mức | Phạm vi | Điều kiện phát hành |
+| Lớp | Năng lực | Trạng thái tại `ed31ad1` |
 |---|---|---|
-| Preview tại baseline 1.0 | Trang `/than-so-hoc`, giới thiệu và thông báo đang phát triển | Đã có, chưa phải công cụ tính |
-| MVP tính toán | Ngày sinh, tên, chỉ số cốt lõi, trace, nội dung đủ điều kiện, UI kết quả | Profile + fixtures + API + UX + tests đạt; thiếu nội dung thì hiển thị số/cách tính |
-| V1 đầy đủ | Biểu đồ ngày sinh, chu kỳ cá nhân, đỉnh cao/thử thách, export và nội dung rộng hơn | Mỗi nhóm công thức/nội dung qua gate riêng |
-| V1.1 mở rộng | Nhiều rule profile, các chỉ số bổ sung có nguồn | Versioning và kiểm tra dị bản rõ ràng |
-| AI tùy chọn | Diễn đạt/giải thích dữ liệu server đã tính | Có bộ đánh giá riêng; không bắt buộc để phát hành MVP/V1 |
+| N1–N3 | 7 chỉ số, validation, trace, API, UX | **DONE** theo profile 1.2.0 |
+| N4 / P0a / P1 | Birth Grid 8 tuyến, biểu đồ tên/ghép, kim tự tháp, challenge age track, dải 9 năm + 12 tháng, dashboard/báo cáo nhiều chương | **DONE** cho scope đã chốt |
+| N4 / P0b | 154 bài biên tập theo metric/giai đoạn, tên tuyến tách khỏi công thức | **PARTIAL CONTENT**: số 33, Challenge 0 và lớp luận sâu còn withheld |
+| N5 | JSON export/import có server recalculation, A4 print, in-process limiter, CI, local probe | **DEV COMPLETE / RELEASE OPEN** |
+| Source | Đối chiếu định nghĩa sách và chuyên gia | **NOT VERIFIED**: Decoz chỉ `source_read`, không sách |
+| N6 | Hidden Passion, Karmic Lessons, Balance, Rational Thought, Bridge; synthesis, alternative profiles, optional AI | **PLANNED / REQUIRES_SPEC** |
+| Production | Live staging/proxy/rollback/approval | **NOT READY** |
 
 ### 2.3. Ngoài phạm vi
 
@@ -54,19 +60,21 @@ Không dùng LLM để tính số, suy chữ nguyên âm hoặc quyết định 
 
 ## 3. Baseline và nguyên tắc kiến trúc
 
-### 3.1. Những gì thực sự đang có
+### 3.1. Trạng thái runtime hiện hành
 
-| Hạng mục | Trạng thái tại baseline |
+| Hạng mục | Trạng thái tại `main ed31ad1` |
 |---|---|
-| Landing và menu lĩnh vực | Có; không gian Thần Số Học vẫn preview |
-| Form/API Tử Vi | Có; ngày sinh + giờ + giới tính |
-| Engine Thần Số Học | Chưa có |
-| Chuẩn hóa tên cho Thần Số Học | Chưa có; không dùng nhầm validator Tử Vi như engine tên |
-| Catalog nội dung Thần Số Học | Chưa có |
-| API `/api/numerology/*` | Chưa có |
-| E2E | 15 test đã chạy đạt ở cloud; phần Thần Số Học mới kiểm tra preview/navigation |
-| CI | Backend, frontend, E2E; runner backend liệt kê file thủ công |
-| Database | SQLite của Tử Vi; không cần migration để tính Thần Số Học |
+| Landing/form | `/than-so-hoc`: ngày sinh, tên tùy chọn, ngày xem, validate, async snapshot |
+| Engine | `backend/src/numerology/`: 7 metrics, grids, cycles, pinnacles/challenges, trace |
+| API | GET `/api/numerology/profiles`, GET `/api/numerology/meanings/:metricId/:value`, POST `/api/numerology/calculate` |
+| Content | Catalog `1.2.0` có 154 bài đã qua review AI độc lập; số 33 và Challenge 0 withheld |
+| UI | Báo cáo nhiều chương, overview, lưới ngày sinh và tên/ghép, tháp đỉnh, age track, 9 năm/12 tháng |
+| Tải/in | Export JSON, import tính lại trên server, in A4; opt-in họ tên, không tự lưu lịch sử |
+| Privacy | `no-store`, safe logging, limiter theo process, không thêm persistence |
+| Tests | CI backend/frontend/e2e trên `ed31ad1` PASS; chưa live staging |
+| Sources | Hồ sơ quy ước sản phẩm, 5 trang Decoz đọc được; chưa `edition_verified`/expert signoff |
+
+**Mốc lịch sử:** `8fc5a01` là preview (engine/API chưa có), không còn là baseline để giao task. Xem [IMPLEMENTATION_STATUS](numerology/IMPLEMENTATION_STATUS.md) và [COMPLETION_MATRIX](numerology/implementation/COMPLETION_MATRIX.md).
 
 ### 3.2. Kiến trúc đích
 
@@ -91,11 +99,11 @@ flowchart LR
 - Nội dung JSON được load read-only; kết quả người dùng không lưu server mặc định.
 - Runtime có thể dùng helper chung sau khi có test chứng minh tương đương; tránh ép mọi domain vào một schema khổng lồ.
 
-## 4. Quyết định domain cần chốt trước engine
+## 4. Quyết định domain của profile đang chạy
 
-### 4.1. Decision register đề xuất
+### 4.1. Decision register D01–D12 (đã chọn cho profile 1.2.0, chưa được chứng nhận từ sách)
 
-| ID | Quyết định | Baseline đề xuất | Review / bằng chứng cần có |
+| ID | Quyết định | Quy ước đang triển khai | Giới hạn/đối chiếu nguồn |
 |---|---|---|---|
 | `D01` | Trường phái | Hệ Pythagorean, profile riêng cho sản phẩm tiếng Việt | Source dossier, phân biệt biến thể từ các sách/tác giả |
 | `D02` | Số đặc biệt | Bộ `{11,22,33}` cho một số chỉ số, không áp toàn cục | Matrix theo từng metric; đặc biệt 33 và tuổi đỉnh cao |
@@ -112,13 +120,13 @@ flowchart LR
 
 **Definition of Ready:** có profile, spec của từng metric, các quyết định đã ghi nhận, fixtures tính độc lập và trạng thái nguồn. Nếu chưa chốt một metric mở rộng, tiếp tục phần đã đủ điều kiện; không tạo kết quả placeholder giống số thật.
 
-### 4.2. Rule profile dự kiến
+### 4.2. Rule profile — ví dụ policy snapshot (không phải API contract)
 
 ```json
 {
   "profileId": "pythagorean-vn-v1",
-  "profileVersion": "1.0.0",
-  "status": "proposed",
+  "profileVersion": "1.2.0",
+  "status": "experimental",
   "lifePathMethod": "all-date-digits",
   "masterNumbers": [11, 22, 33],
   "masterPolicy": "per-metric",
@@ -135,7 +143,9 @@ flowchart LR
 
 Đổi cách tính, mapping tên, Y hoặc lịch chu kỳ là thay đổi profile semantics: tăng version, cập nhật expected fixtures và release note. Hai kết quả khác version không được so như cùng công thức.
 
-## 5. Đặc tả tính toán đề xuất
+## 5. Đặc tả công thức — quy ước sản phẩm (không phải chuẩn chung)
+
+Đang chạy profile 1.2.0. Đặc tả đầy đủ nằm tại [FORMULA_SPEC](numerology/FORMULA_SPEC.md), khác Decoz tại life path all-digits, rút master của thành phần đỉnh, Y và cách cộng tên. Không sửa giá trị 1.2.0 để khớp nguồn khác.
 
 ### 5.1. Hàm nền và reduction
 
@@ -283,6 +293,8 @@ Nếu client không gửi `targetDate`, API chụp một `referenceDate` theo `A
 
 ## 6. Fixtures độc lập và ví dụ kiểm tra tay
 
+**Đã có fixture và CI cho profile hiện tại.** Ví dụ đối chiếu: Nguyễn Văn An, 15/06/1990 → Đường đời 4, Biểu đạt 3, Nhân cách 11, đỉnh 3/7/1/7, thử thách 0/5/5/5. Chỉ số mới phải có fixture tính độc lập trước khi code.
+
 Các ví dụ dưới đây xác minh phép tính theo **baseline đề xuất**, chưa xác minh trường phái hoặc lời luận. Khi spec được review, đưa vào fixture có `input`, `profileVersion`, `expected`, `derivation`, `fixtureClass` và reviewer; expected không được tạo bằng chính engine đang test.
 
 ### 6.1. Ngày 15/06/1990, tên “Nguyễn Văn An”
@@ -336,6 +348,8 @@ Bổ sung fixture có tổng gốc 11/22/33 và nhiều bước đạt master ch
 
 ## 7. Data model, nguồn và nội dung
 
+Catalog runtime 1.2.0 đã có 154 bài (102+44+8). Các phần schema *dự kiến* dưới đây mang tính lịch sử; xem [CONTENT_POLICY](numerology/CONTENT_POLICY.md) và [SOURCE_REGISTRY](numerology/SOURCE_REGISTRY.md). Review AI không thay xác minh ấn bản hoặc chuyên gia.
+
 ### 7.1. Các loại dữ liệu tách riêng
 
 | Loại | Ví dụ | Version |
@@ -386,7 +400,9 @@ Eligibility tối thiểu: schema hợp lệ, metric/value/profile khớp, nội
 
 Văn phong: gợi ý suy ngẫm, tránh định mệnh hóa; không đưa kết luận chẩn đoán sức khỏe, tuổi thọ, tài chính hoặc điều kiện “phải đổi tên để thành công”. Nội dung cho thử thách/mũi tên không gắn nhãn đạo đức với ô số vắng.
 
-## 8. API contract dự kiến
+## 8. API contract — bản thiết kế lịch sử
+
+Ba API đã có. Ví dụ MVP bên dưới chưa bao gồm `nameChart`, `combinedChart`, `cycles.yearBand`, `cycles.months`, đỉnh/thử thách và nội dung mới; [API_CONTRACT](numerology/API_CONTRACT.md) là tài liệu hiện hành.
 
 **Tất cả endpoint trong phần này chưa tồn tại tại baseline.** Thiết kế theo REST hiện có, route mỏng gọi service/engine.
 
@@ -488,6 +504,8 @@ Error contract: `{ ok:false, error:{ code, message, fields:[{path,code,message}]
 
 ## 9. Thiết kế giao diện và UX
 
+UI visual report đã triển khai qua PR #24 (overview, grid overlays, tháp đỉnh có cạnh, challenge track, dual-source 3×3, 9 năm/12 tháng, print). Phần mô tả *dự kiến* dưới là lịch sử thiết kế; UX tiếp theo ưu tiên nội dung sâu, progressive disclosure, print page breaks và a11y/cross-browser.
+
 ### 9.1. Routes và navigation dự kiến
 
 - `/than-so-hoc`: landing + giải thích + form; thay preview khi capability core sẵn sàng.
@@ -545,6 +563,8 @@ State machine: `idle → validating → loading → ready | error`. Tách input 
 
 ## 10. Export, dữ liệu cá nhân và vận hành
 
+Export/import JSON, A4 print, name opt-in đã triển khai. Proxy đa instance, live staging, rollback rehearsal và release approval chưa xong; limiter chỉ in-process. Xem [RELEASE_READINESS](numerology/RELEASE_READINESS.md).
+
 ### 10.1. Lưu trữ và chia sẻ
 
 Mặc định không có server persistence, localStorage chứa sinh/tên, background sync hoặc analytics payload chứa raw input. Tính trong request và giữ result ở memory client.
@@ -581,6 +601,8 @@ Frontend chia chunk theo route khi cần; không preload LLM/visualization libra
 Feature flag/capability gate: khi core chưa ready thì preview; khi chỉ content chưa ready thì vẫn có thể tính với `meaningStatus=withheld`. Rollback quay lại preview/profile cũ hợp lệ, không cần xóa database. Phát hành production vẫn theo quy trình review/owner của repo.
 
 ## 11. Chiến lược kiểm thử
+
+CI tại main `ed31ad1` đã PASS backend, frontend và E2E. Đây là bằng chứng phần mềm, không thay thử nghiệm staging/cross-browser hoặc đối chiếu nguồn.
 
 ### 11.1. Unit / property tests
 
@@ -794,7 +816,9 @@ Có thể làm UX prototype/content research sau khi N0 xác định phạm vi; 
 
 Không auto-enable AI public chỉ vì provider trả 200. Không để task tùy chọn chặn calculator deterministic đã đủ gate.
 
-## 13. Cấu trúc file dự kiến
+## 13. Cấu trúc file dự kiến — lịch sử
+
+Cây bên dưới chỉ là thiết kế ban đầu. Runtime hiện tại tại `backend/src/numerology/` và `frontend/src/numerology/`, chứng cứ dưới `docs/numerology/{audits,implementation,product-gap,reviews}/`.
 
 **Đây là đề xuất tổ chức khi triển khai, không phải cây thư mục hiện tại.**
 
