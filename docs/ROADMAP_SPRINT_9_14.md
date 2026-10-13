@@ -1,10 +1,23 @@
 # B3 Tử Vi — Roadmap sau Sprint 8 (Sprint 9–14)
 
-> **Loại tài liệu:** Roadmap đề xuất cho giai đoạn phát triển tiếp theo  
-> **Phiên bản:** 1.1 · **Ngày lập:** 2026-10-12  
-> **Trạng thái:** `PROPOSED` — chưa đồng nghĩa đã được chấp nhận theo policy dual-AI khi áp dụng triển khai  
-> **Đường dẫn dự kiến trong repo:** `docs/ROADMAP_SPRINT_9_14.md`  
+> **Loại tài liệu:** Roadmap thực thi có điều kiện cho Sprint 9–14  
+> **Phiên bản:** 1.2 · **Ngày cập nhật:** 2026-10-14  
+> **Trạng thái:** `ACTIVE` — Sprint 9 engineering integration đã merge; Sprint 10 `READY / CONDITIONAL GO`; không hàm ý release approval  
+> **Đường dẫn:** `docs/ROADMAP_SPRINT_9_14.md`  
 > **Mốc thực hiện:** Sprint 9 → 14, **không ấn định ngày kết thúc** hoặc cam kết phát hành.
+
+## Trạng thái thực tế — rebaseline 2026-10-14
+
+- **Đã merge:** [PR #25](https://github.com/hptbee/b3_tuvi/pull/25), Formula V1 (merge `434345c`); [PR #27](https://github.com/hptbee/b3_tuvi/pull/27), unified interpretation wiring (merge `1a85cd8`). Baseline quan sát: `origin/main` `b014969`. [PR #24](https://github.com/hptbee/b3_tuvi/pull/24) được merge sau đó nhưng thuộc nhánh sản phẩm Thần Số Học, không thay đổi gate Tử Vi. [CI main](https://github.com/hptbee/b3_tuvi/actions/runs/38437441255) PASS tại baseline này.
+- **Sprint 9 — ENGINEERING INTEGRATION COMPLETE; RESEARCH GAPS OPEN.** Matcher và `interpretChart` sử dụng chung `evaluateNormalizedFormulas`/Formula V1 (`s9-v1`). `rulesV2.json` giữ nguyên làm snapshot lịch sử. Internal Tử Phủ Đồng Cung đã có witness thực thi, nhưng `AI_ACCEPTED / MATCH` chỉ xác nhận việc đối chiếu công thức, **không duyệt claim luận giải**; `prose: null`, `expertVerified: false`, `interpretationEligibility.eligible: false`.
+- **Phạm vi số liệu Formula V1:** 63 catalog records = 29 ACTIVE + 24 VARIANT + 2 INTERNAL_ONLY + 8 DISABLED; 55 predicates thực thi; 67 source variants; 50 **kết quả nhận diện cách cục** được phép trả về mặc định. Con số 50 **không phải** số claim có thể phát hành lời luận. Không có supported non-disabled predicate bị bỏ quên tại thời điểm báo cáo PR #25.
+- **API boundary:** `POST /api/interpretations/analyze` dựng lại lá số từ birth input, từ chối `normalizedChart` do client cung cấp và **không xuất `internalInterpretation` trong response mặc định**. `evaluateTuPhuDongCungSlice` vẫn là helper nội bộ; `auspicious: null` biểu thị chưa có phán đoán cát/hung.
+- **Sprint 10 — READY / CONDITIONAL GO:** chỉ được nghiên cứu/triển khai typed conditions, formation/breaking, provenance và independent negative tests trong PR có phạm vi rõ. Chưa mở public interpretation, fortune, AI prose, nâng `expertVerified`, tự đổi công thức, hay production SQLite migration.
+- **Sprint 11–14 — PLANNED / GATED:** các tính năng lần lượt phụ thuộc evidence và từng release gate; không coi hoàn thành Sprint 9 integration là GO phát hành sản phẩm.
+
+Nguồn kiểm chứng: [Formula V1 implementation report](./knowledge/SPRINT_9_FINAL_IMPLEMENTATION_REPORT.md), [Sprint 9 closure report](./knowledge/SPRINT_9_CLOSURE_REPORT.md), các PR/CI trên. Các số liệu nghiên cứu 9B/9C bên dưới là snapshots lịch sử, **không được xem là độ phủ công thức đã xác thực hoặc lời luận đã được phê duyệt**.
+
+---
 
 ## 1. Mục tiêu và vị trí của tài liệu
 
@@ -118,14 +131,14 @@ Không nằm trong phạm vi khi chưa có quyết định sản phẩm mới: t
 
 ## 4. Tổng quan Sprint 9–14
 
-| Sprint | Trọng tâm | Giá trị đạt được | Dependency chính | Mức phát hành dự kiến |
-|---|---|---|---|---|
-| **9** | Knowledge Base và vertical slice đầu tiên | Claim có nguồn, điều kiện và quyết định dual-AI truy vết được | Baseline Sprint 8, source corpus và dual-model access | Research/internal; public prose có gate |
-| **10** | Rule Accuracy & Condition Engine | Đánh giá thành/phá cách và các điều kiện có chứng cứ | Claim/điều kiện được dual-AI kiểm chứng ở Sprint 9 | Sửa rule runtime cần PR + owner merge gate |
-| **11** | Real Interpretation Engine | Luận giải có điều kiện theo các claim dual-AI accepted và runtime-valid | Sprint 9–10 | Public interpretation có gate |
-| **12** | Fortune Intelligence | Time overlay/các vận được xác minh theo từng công thức | Nguồn và công thức vận hạn qua dual-AI + approval khi đổi runtime | Không dự báo chu kỳ chưa duyệt |
-| **13** | Grounded AI & Q&A | AI giải thích evidence; đánh giá model thật nội bộ | Dữ liệu interpretation đủ điều kiện theo policy dual-AI | AI public cần owner release gate riêng |
-| **14** | Capability-based Release | Đóng gói, kiểm thử, phát hành những phần đủ điều kiện | Sprint 8 Ops + năng lực đủ gate | Có thể phát hành từng phần |
+| Sprint | Trọng tâm | Trạng thái tại rebaseline | Gate sản phẩm |
+|---|---|---|---|
+| **9** | Formula V1, knowledge research, tích hợp evidence nội bộ | **Engineering integration COMPLETE** qua PR #25/#27; research gaps OPEN | Không phát hành lời luận thiếu approval |
+| **10** | Rule accuracy, typed conditions, formation/breaking, evidence | **READY / CONDITIONAL GO**; chưa có PR triển khai Sprint 10 | Formula corrections cần bằng chứng dual-AI và owner merge |
+| **11** | Interpretation claims, 12 cung, grounded synthesis | **PLANNED** — blocked theo độ đủ chứng cứ | Public prose cần owner release gate |
+| **12** | Fortune Intelligence | **PLANNED** — formula/source-gated | Không tự tính các chu kỳ chưa đủ nguồn |
+| **13** | Grounded AI & Q&A | **PLANNED** — model evaluations chưa hoàn thành | AI public cần owner release gate |
+| **14** | Capability-based Release | **PLANNED** — quyết định cho từng capability | Không auto-GO toàn sản phẩm |
 
 **Cho phép chạy song song có kiểm soát:** nghiên cứu Sprint 9 khi đang đóng Sprint 8; nghiên cứu công thức vận hạn Sprint 12 song song với AI infrastructure Sprint 13 sau khi contracts ổn định. Không bắt buộc hoàn thành toàn bộ Fortune Engine rồi mới thử AI nội bộ cho các claim nguyên cục đã được dual-AI chấp nhận.
 
@@ -135,9 +148,9 @@ Không nằm trong phạm vi khi chưa có quyết định sản phẩm mới: t
 
 **Trạng thái 9B đo ngày 2026-10-13:** research record 63/63. Span Tân Biên đọc được 24/63. PDF từng trang chưa mở lại trong batch này (0/63). Dual-AI đã ghi 24/63. Công thức `MATCH` 3, `PARTIAL` 6, `CONFLICT` 3, `NOT_IMPLEMENTED` 2. 39 cách còn `SOURCE_INACCESSIBLE` vì các sách kia không có toàn văn trong repo. Trạng thái: `RESEARCH_COMPLETE_WITH_GAPS`. Chi tiết ở `docs/knowledge/SPRINT_9B_COMPLETION_REPORT.md`. Không sửa `rulesV2.json`.
 
-**Sprint 9C (chưa đóng Sprint 9):** 39/39 ứng viên có dual-AI riêng dưới `docs/knowledge/research/sprint-9c/`. Số lần chạy model không phải danh tính đã kiểm. Ba `NAME_MISMATCH`: Hùng Tú Triều Viên, Bán Không Chiết Xỉ, Lưỡng Trùng Thiên Mã. Các quyết định 9C còn lại là `UNRESOLVED_IDENTITY`. 24 quyết định Tân Biên không bị ghi đè. Ma trận 21 xung đột nằm ở `docs/knowledge/SPRINT_9_ADJUDICATION_MATRIX.md` và không ghi đè quyết định cũ. Báo cáo: `docs/knowledge/SPRINT_9C_SOURCE_DISCOVERY_REPORT.md`. Trạng thái: `RESEARCH_PARTIAL_EVIDENCE_GAPS`.
+**Sprint 9C (research gaps vẫn mở; không đồng nghĩa engineering integration còn mở):** 39/39 ứng viên có dual-AI riêng dưới `docs/knowledge/research/sprint-9c/`. Số lần chạy model không phải danh tính đã kiểm. Ba `NAME_MISMATCH`: Hùng Tú Triều Viên, Bán Không Chiết Xỉ, Lưỡng Trùng Thiên Mã. Các quyết định 9C còn lại là `UNRESOLVED_IDENTITY`. 24 quyết định Tân Biên không bị ghi đè. Ma trận 21 xung đột nằm ở `docs/knowledge/SPRINT_9_ADJUDICATION_MATRIX.md` và không ghi đè quyết định cũ. Báo cáo: `docs/knowledge/SPRINT_9C_SOURCE_DISCOVERY_REPORT.md`. Trạng thái: `RESEARCH_PARTIAL_EVIDENCE_GAPS`.
 
-**Đóng tích hợp Sprint 9 (sau PR #25, `434345c`):** matcher và `interpretChart` cùng đọc Formula V1. `rulesV2.json` giữ nguyên như snapshot nghiên cứu. Lát cắt nội bộ Tử Phủ Đồng Cung trả công thức đã khớp, grade `not_certified`, và `interpretationEligibility.eligible: false`. `AI_ACCEPTED` / `MATCH` không mở lời luận. `expertVerified` vẫn false. Báo cáo: `docs/knowledge/SPRINT_9_CLOSURE_REPORT.md`. Sprint 10 chỉ được mở như công việc điều kiện có chứng cứ, không phải luận giải công khai.
+**Đóng tích hợp Sprint 9 (PR #25 và #27 đã merge; xác nhận trên main `b014969`):** matcher và `interpretChart` cùng đọc Formula V1. `rulesV2.json` giữ nguyên như snapshot nghiên cứu. Lát cắt nội bộ Tử Phủ Đồng Cung trả công thức đã khớp, grade `not_certified`, và `interpretationEligibility.eligible: false`. `AI_ACCEPTED` / `MATCH` không mở lời luận. `expertVerified` vẫn false. Báo cáo: `docs/knowledge/SPRINT_9_CLOSURE_REPORT.md`. Sprint 10 chỉ được mở như công việc điều kiện có chứng cứ, không phải luận giải công khai. API mặc định không trả internal slice; `auspicious: null` khi chưa được đánh giá. **Trạng thái Sprint 9:** đóng scope tích hợp phần mềm; các research/source/claim gaps đi tiếp như backlog có provenance, không được ghi là đã verified.
 
 **Mục tiêu:** Xây quy trình **hai model kiểm chứng chéo** giúp chủ dự án không phải là chuyên gia Tử Vi vẫn nghiên cứu được sách, phân loại trường phái, đối chiếu công thức và tạo claim có căn cứ; sau đó chứng minh **một vertical slice** từ đoạn sách đến phân tích có điều kiện trong internal/research mode.
 
@@ -251,6 +264,8 @@ flowchart TD
 
 ## 6. Sprint 10 — Rule Accuracy, Formation/Breaking & Condition DSL
 
+**Kickoff gate — READY / CONDITIONAL GO, baseline `b014969` (2026-10-14).** Bắt đầu từ PR #25/#27 đã merge; không dựng lại Formula V1 hoặc đổi `rulesV2.json`. Từng work package phải đo đúng source/profile/condition hiện có và giữ mọi lời luận chưa approved ở `prose: null`. **Không tuyên bố Sprint 10 đã thực thi** chỉ vì dependency được merge.
+
 **Mục tiêu:** Chuyển “phát hiện tổ hợp sao” thành hệ thống đánh giá điều kiện có giải thích, dựa trên tri thức đã qua dual-AI cross-review theo trường phái; xử lý sai lệch theo từng rule thay vì viết thêm `if/else` tự phát.
 
 | ID | Ưu tiên | Công việc | Bằng chứng nghiệm thu |
@@ -258,14 +273,32 @@ flowchart TD
 | `S10-01` | P0 | Kiểm kê operators runtime và những conditions KB chưa biểu diễn được | Operator matrix: supported/unsupported/ambiguous/by school |
 | `S10-02` | P0 | Condition evaluator/DSL có kiểu dữ liệu và evidence cho operators đã định nghĩa | Trạng thái `satisfied`, `not_satisfied`, `unknown`, `not_implemented` xác định |
 | `S10-03` | P0 | Độc lập `runtimeMatchStatus`, `formationConditions` và `breakingConditions` | Tests chống suy ra thành cách chỉ từ matching |
-| `S10-04` | P0 | Phân tích 7 CONFLICT, 2 PARTIAL, 1 NOT_IMPLEMENTED pilot; sau đó đối chiếu catalog theo batch | Từng đề xuất có diff, nguồn, school variant, phản ví dụ, expected output |
+| `S10-04` | P0 | Tái kiểm kê trạng thái **hiện tại** của các pilot (7 CONFLICT/2 PARTIAL/1 NOT_IMPLEMENTED chỉ là snapshot cũ), ưu tiên những điều kiện cần cho slice; xét catalog theo batch có nguồn | Mỗi quyết định có locator, source/profile, hai verdicts độc lập nếu thực sự đã chạy, phản ví dụ và expected output; không bịa lần gọi model |
 | `S10-05` | P1 | Áp dụng rule corrections **AI_CROSS_REVIEWED** theo PR riêng, có owner merge gate | Hai independent model verdicts + source evidence + regression/negative tests + owner merge |
 | `S10-06` | P1 | Contradiction resolver và nguyên tắc ưu tiên/không thể ưu tiên | Không tự chọn một trường phái hay kết luận là đúng tuyệt đối |
 | `S10-07` | P1 | Tests cho rule operators, overlap, exclusions, false-positive/false-negative | Coverage theo branches và fixture độc lập khi có thể |
 
 **Ranh giới thiết kế:** chỉ triển khai operators có semantic contract rõ ràng: đồng cung, tam hợp, xung chiếu, giáp cung, hiện diện/vắng sao, độ sáng, điều kiện Tuần/Triệt/Tứ Hóa đã có nguồn... Nếu điều kiện văn bản chưa được hỗ trợ thì `unknown/not_implemented`, không coi là đạt.
 
-**Definition of Done:** có trace cho điều kiện đã kiểm và chưa kiểm; mọi thay đổi công thức runtime có dual-AI record, PR và quyết định merge riêng; không bật disabled rule khi thiếu quyết định; các trường hợp tranh luận được giữ trong issue/research backlog.
+### Kế hoạch thực thi và dependency (không tạo thêm Master Plan)
+
+| Wave | Công việc | Dependency và gate |
+|---|---|---|
+| **A — audit** | `S10-01` operator matrix, condition inventory, xác định trường hợp ambiguous theo trường phái; `S10-04` source/claim adjudication **song song, độc lập** | `main` đã có Formula V1 + wiring; xem lại accepted edition + actual dual-AI records |
+| **B — typed evaluation** | `S10-02` typed condition AST/DSL + evaluator + DTO evidence; `S10-03` phân biệt recognition / formation / grade / breaking | Operator contract hoàn chỉnh theo từng nhánh; unknown không mặc định false hay clear |
+| **C — correctness** | `S10-06` contradictions và modifiers theo school; `S10-07` positive/negative, invariants, mutation/property checks có chọn lọc | Wave B có evidence trace ổn định, golden witness phải độc lập khi có thể |
+| **D — controlled corrections** | `S10-05` thay đổi rule **chỉ khi cần và có đủ bằng chứng** trong PR scope riêng | Dual-AI có chứng cứ, regression, owner merge approval; có thể DEFERRED nếu chưa có source |
+
+**Sprint 10 acceptance gates:**
+
+1. Mỗi condition trả `satisfied` / `not_satisfied` / `unknown` / `not_implemented` với operand, palace, star, relationship, school/source, lý do và bằng chứng có thể truy vết. Unsupported/free-text condition phải fail closed.
+2. `runtimeMatchStatus` không tự suy thành cách, chứng nhận grade, phá cách đã clear hay claim được phép luận giải. Breaking chưa được triển khai phải là `not_implemented`; conflicting school claims phải có trạng thái và evidence, không auto chọn.
+3. Test negative cho same-palace vs flank, tam hợp/xung, Tứ Hóa, Tuần/Triệt, brightness, unsupported profiles, leap boundaries nơi liên quan; kết quả source-sensitive không được dùng engine tự tạo làm historical golden oracle.
+4. Cần một internal end-to-end path cho **đánh giá condition + evidence/eligibility** trên witness thực (ưu tiên Tử Phủ Đồng Cung hoặc claim có nguồn tốt hơn), bao gồm trường hợp không đủ evidence. Chưa yêu cầu prose public hoặc `expertVerified`.
+5. Regression backend/integration/frontend/E2E liên quan PASS; report ghi CI run IDs, coverage thực, diff scope, remaining unresolved; mọi sửa công thức phải tách riêng, được owner duyệt. `rulesV2.json` không đổi; không nâng approval/provenance từ test PASS.
+6. API mặc định không xuất internal-only DTO, không tin client-supplied chart, không tự mở public AI, vận hạn, knowledge SQLite production migration.
+
+**Definition of Done:** Có trace cho điều kiện đã kiểm/chưa kiểm; từng task cập nhật status ở Master Plan V2, PR chuyên biệt, evidence và negative tests. Không bật disabled rule, không âm thầm chữa source conflict, không merge/deploy thay owner.
 
 ---
 
@@ -435,7 +468,7 @@ Không bịa model invocation, trích dẫn, digest hoặc người duyệt. N�
 | Code phình to vì các lần review/refactor | PR nhỏ, xóa trùng có chứng cứ, không refactor ngoài scope |
 | Migration làm hỏng SQLite hiện có | Human approval + temp dry run + backup/restore/rollback |
 
-## 14. Checklist khởi động Sprint 9
+## 14. Checklist khởi động Sprint 9 — lưu lịch sử (không dùng cho Sprint 10)
 
 - [ ] Có Sprint 8 Final Report và kết quả coverage/CI/E2E thực tế.
 - [ ] Xác nhận `origin/main` mới nhất; remediation quan trọng đã merge hoặc có lý do hoãn.
@@ -444,7 +477,7 @@ Không bịa model invocation, trích dẫn, digest hoặc người duyệt. N�
 - [ ] Áp dụng policy dual-AI: AI_CROSS_REVIEWED chỉ là chấp nhận theo nguồn/trường phái, không tự đồng nghĩa expert/public; owner giữ quyết định bật phát hành.
 - [ ] Tách task Sprint 9 từ `S09-*`, có scope, dependencies, reviewer và acceptance tests.
 
-**Việc nên làm đầu tiên:** `S09-01` + `S09-02` (kiểm kê và source mapping), tiếp đến `S09-04`/`S09-05` (dual-AI validation) rồi `S09-07` (một internal vertical slice). Đây là cách nhanh nhất để chứng minh engine có thể đưa ra **một nhận định có căn cứ trong hệ thống Tử Vi đang dùng**, trước khi mở rộng hàng loạt.
+**Ghi chú trạng thái:** Đây là checklist trước Sprint 9, giữ lại để đối chiếu quyết định lịch sử; không đánh dấu completed khi chưa có bằng chứng riêng. **Thứ tự thực hiện hiện tại** là `S10-01` + `S10-04` → `S10-02` + `S10-03` → `S10-06` + `S10-07`; `S10-05` chỉ khi source và approval đủ. Không mở public prose chỉ vì internal slice đã có witness.
 
 ### Các phần tiếp tục chưa được tự triển khai/public
 
@@ -457,4 +490,4 @@ Không bịa model invocation, trích dẫn, digest hoặc người duyệt. N�
 
 **Quyết định mới áp dụng:** chủ dự án đã ủy quyền kiểm tra nguồn/claim theo dual-AI cho Sprint 9; những human domain-review dependencies trái với chính sách này cần cập nhật đồng bộ trong task plan/engineering guidelines khi triển khai, nhưng không sửa Master Plan V1 và không bỏ owner release gate.
 
-**Quy tắc bảo trì:** cập nhật roadmap bằng PR tập trung khi thứ tự phụ thuộc, nguồn hoặc quyết định miền thay đổi. Trạng thái task chính vẫn theo Master Plan V2 hoặc tracker chính thức. Tài liệu này là **kế hoạch sau Sprint 8**, không phải bằng chứng Sprint 9–14 đã bắt đầu hoặc hoàn tất.
+**Quy tắc bảo trì:** cập nhật roadmap bằng PR tập trung khi thứ tự phụ thuộc, nguồn hoặc quyết định miền thay đổi. Trạng thái task chính vẫn theo Master Plan V2 hoặc tracker chính thức. Tài liệu này vẫn là **kế hoạch Sprint 9–14**; bằng chứng Sprint 9 engineering closure được dẫn trực tiếp đến PR #25/#27 và CI, còn Sprint 10–14 chỉ mang trạng thái đã ghi ở bản rebaseline, không tự coi là hoàn tất.

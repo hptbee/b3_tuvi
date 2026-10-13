@@ -318,7 +318,26 @@ Không sửa `tuviRules.mjs`, `rulesV2.json`, hoặc `docs/AUTODEV_MASTER_PLAN.m
 
 Đo trên nhánh research sau integrity gate `69f7f86`. Research dossier 63/63. Nguồn đọc được trong span Tân Biên: 24/63. Trang PDF kiểm chữ: 0. Dual-AI: 24. `MATCH` không bị ép. 39 cách `SOURCE_INACCESSIBLE`. `expertVerified` vẫn false. Runtime rules không đổi. Báo cáo: `docs/knowledge/SPRINT_9B_COMPLETION_REPORT.md`.
 
-## 22. Sprint 9 closure status
+## 22. Sprint 9 closure status — merged and integration complete (2026-10-14)
 
-Baseline `origin/main` `434345c` đã gồm Formula V1 từ PR #25. Nhánh đóng Sprint 9 không viết lại 63 công thức và không sửa `rulesV2.json`. `interpretChart` dùng `evaluateNormalizedFormulas`. Lát cắt Tử Phủ Đồng Cung giữ `prose: null` vì quyết định `AI_ACCEPTED` / `MATCH` không phải duyệt luận giải. Chi tiết và quyết định Sprint 10 nằm ở `docs/knowledge/SPRINT_9_CLOSURE_REPORT.md`.
+Đã xác minh trên GitHub: PR #25 (merge `434345c`) và PR #27 (merge `1a85cd8`) đều nằm trên `main`; HEAD lúc rebaseline là `b014969`, gồm PR #24 của Thần Số Học; CI `38437441255` PASS tại `b014969`. Đây là **engineering-integration COMPLETE**, không phải historical/expert verification hoặc duyệt lời luận.
+
+Formula V1 giữ 63 catalog records (ACTIVE 29, VARIANT 24, INTERNAL_ONLY 2, DISABLED 8); 55 predicates thực thi, 67 source variants, 50 default-profile recognition results. `rulesV2.json` giữ nguyên research snapshot. Combination matcher và `interpretChart` dùng chung `evaluateNormalizedFormulas`; profile không di chuyển sao nguyên cục. Lát cắt Tử Phủ Đồng Cung giữ `prose: null`, `expertVerified: false`, `interpretationEligibility.eligible: false`; `AI_ACCEPTED` / `MATCH` **không** duyệt nội dung luận giải. API phân tích mặc định không xuất `internalInterpretation`, từ chối `normalizedChart` do client đưa vào; giá trị cát/hung chưa xác định là `auspicious: null`. Chi tiết ở `docs/knowledge/SPRINT_9_CLOSURE_REPORT.md`.
+
+Các thiếu hụt thư tịch/điều kiện/claim còn mở đi tiếp dưới backlog có provenance; không lấy việc merge làm xác thực sử học hay duyệt claim.
+
+## 23. Sprint 10 — READY / CONDITIONAL GO (2026-10-14)
+
+- **Baseline xác minh:** `main` `b014969`; scope hiện tại là research và implementation của Condition DSL, formation/breaking, evidence và claim eligibility. **Chưa có implementation Sprint 10 được nghiệm thu**.
+- **S10-01 — READY / P0:** kiểm kê operator hỗ trợ/không hỗ trợ/ambiguous theo source profile; đo code/claims hiện tại.
+- **S10-04 — READY / P0 (parallel research):** kiểm kê lại pilot decision records và phân tích các case chưa giải quyết với source locator, edition, school; không dùng đếm 7/2/1 đời đầu như trạng thái live. Hai model thực sự chạy phải ghi được invocation/model version; không giả lập cross-review.
+- **S10-02 — BLOCKED on S10-01 / P0:** typed condition AST/DSL + pure evaluator, trace rõ satisfied/not_satisfied/unknown/not_implemented; unknown fail closed.
+- **S10-03 — BLOCKED on S10-01/S10-02 / P0:** formation, grade, breaking và runtime match là các trạng thái độc lập; breaking chưa đánh giá không phải clear; source match không duyệt lời luận.
+- **S10-06 — BLOCKED on S10-02/S10-03 / P1:** contradiction/modifier handling không trộn các school/profile.
+- **S10-07 — READY for fixture design, implementation gated / P1:** independent positives/negatives, school isolation, trust boundaries, regression E2E.
+- **S10-05 — DEFERRED until accepted source decision and owner approval / P1:** sửa Formula V1 runtime nếu thật sự cần; PR riêng với regression/negative tests. Không tự sửa `rulesV2.json`.
+
+**Acceptance:** một internal chart → Formula V1 → typed condition → evidence/provenance → claim eligibility flow có negative cases, với abstention nếu chưa đủ nguồn; CI backend/frontend/E2E PASS, coverage đo thật, review độc lập và report GO/NO-GO. Mặc định không phát public prose, fortune, AI, nâng `expertVerified`, hay ghi SQLite production. Owner vẫn duyệt từng PR và release gate.
+
+**Tài liệu điều phối:** `docs/ROADMAP_SPRINT_9_14.md` §6 là roadmap chi tiết; Master Plan V2 là tracker task chính. Giữ Master Plan V1 lịch sử, không tạo V3.
 
