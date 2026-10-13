@@ -1,0 +1,92 @@
+[
+  {
+    "combinationName": "Tử Phủ Vũ Tướng",
+    "url": "https://www.thaiam.vn/tu-vi-wiki/cach-cuc/tu-phu-vu-tuong.html",
+    "httpStatus": 200,
+    "finalUrl": "https://www.thaiam.vn/tu-vi-wiki/cach-cuc/tu-phu-vu-tuong.html",
+    "title": "Tử Phủ Vũ Tướng - Tứ Đế Tinh Hội Tụ",
+    "needle": "Tử Phủ",
+    "needlePresent": true,
+    "retrievedAt": "2026-10-13"
+  },
+  {
+    "combinationName": "Sát Phá Tham",
+    "url": "https://thienco.vn/sat-pha-tham.html",
+    "httpStatus": 200,
+    "finalUrl": "https://thienco.vn/sat-pha-tham.html",
+    "title": "Sát Phá Tham là gì? Ý nghĩa Thất Sát – Phá Quân – Tham Lang trong Tử Vi",
+    "needle": "Sát Phá Tham",
+    "needlePresent": true,
+    "retrievedAt": "2026-10-13"
+  },
+  {
+    "combinationName": "Tài Ấn Giao Trì",
+    "url": "https://ziweiai.com/zh-TW/notes/wuqu-tianxiang-yinshen-minggong-justice-service",
+    "httpStatus": 200,
+    "finalUrl": "https://ziweiai.com/zh-TW/notes/wuqu-tianxiang-yinshen-minggong-justice-service",
+    "title": "武曲天相寅申守命宮：為什麼這麼有原則有擔當，卻總在權威決策中感到糾結和孤立？ | 紫微斗數筆記 | 紫微AI",
+    "needle": "武曲",
+    "needlePresent": true,
+    "retrievedAt": "2026-10-13"
+  },
+  {
+    "combinationName": "Khúc Ám Đồng Cung",
+    "url": "https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽",
+    "httpStatus": 200,
+    "finalUrl": "https://zh.wikisource.org/zh-hant/%E7%B4%AB%E5%BE%AE%E6%96%97%E6%95%B8%E5%85%A8%E6%9B%B8/%E5%85%A8%E8%A6%BD",
+    "title": "紫微斗數全書/全覽 - 維基文庫，自由的圖書館",
+    "needle": "文曲",
+    "needlePresent": true,
+    "retrievedAt": "2026-10-13"
+  },
+  {
+    "combinationName": "Cự Phùng Tứ Sát",
+    "url": "https://hocvienlyso.org/tu-vi-dau-so-khan-cach-cuc.html",
+    "httpStatus": 403,
+    "finalUrl": null,
+    "title": null,
+    "needle": "Cự",
+    "needlePresent": false,
+    "retrievedAt": "2026-10-13"
+  },
+  {
+    "combinationName": "Hoa Cái Cư Phu Thê",
+    "url": "https://services.shen88.cn/ziweidoushu/pc-108861.html",
+    "httpStatus": 200,
+    "finalUrl": "https://services.shen88.cn/ziweidoushu/pc-108861.html",
+    "title": "紫微斗数夫妻宫有华盖代表什么意思_神巴巴测试网",
+    "needle": "華蓋",
+    "needlePresent": false,
+    "retrievedAt": "2026-10-13"
+  },
+  {
+    "combinationName": "Đồng Lương Tỵ Hợi",
+    "url": "https://blog.udn.com/jo52348/9125487",
+    "httpStatus": 403,
+    "finalUrl": null,
+    "title": null,
+    "needle": "天同",
+    "needlePresent": false,
+    "retrievedAt": "2026-10-13"
+  },
+  {
+    "combinationName": "Nhật Nguyệt Tật Ách",
+    "url": "https://display.tw/p122.htm",
+    "httpStatus": 200,
+    "finalUrl": "https://display.tw/p122.htm",
+    "title": "日月疾厄格",
+    "needle": "日月疾厄",
+    "needlePresent": true,
+    "retrievedAt": "2026-10-13"
+  },
+  {
+    "combinationName": "Mệnh VCD Đắc Tam Không",
+    "url": "https://baomoi.com/menh-vo-chinh-dieu-la-gi-dac-diem-nguoi-co-menh-vo-chinh-dieu-c48694795.epi",
+    "httpStatus": 200,
+    "finalUrl": "https://baomoi.com/menh-vo-chinh-dieu-la-gi-dac-diem-nguoi-co-menh-vo-chinh-dieu-r48694795.epi",
+    "title": "Mệnh vô chính diệu là gì? Đặc điểm người có mệnh vô chính diệu - Báo Thế Giới &amp; Việt Nam",
+    "needle": "Tam Không",
+    "needlePresent": false,
+    "retrievedAt": "2026-10-13"
+  }
+]

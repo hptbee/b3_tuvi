@@ -33,8 +33,17 @@ function text(value) {
     return typeof value === 'string' && value.trim() !== '';
 }
 
-function spanContains(span, quotation) {
-    return typeof quotation === 'string' && quotation.trim().length >= 40 && quotation.trim() === quotation && span.includes(quotation);
+export const QUOTATION_POLICY_V1 = 'min-40-v1';
+export const QUOTATION_POLICY_V2 = 'source-sentence-v2';
+
+function spanContains(span, quotation, policy) {
+    if (typeof quotation !== 'string' || quotation.trim() !== quotation || !span.includes(quotation)) return false;
+    if (quotation.length >= 40) return true;
+    if (policy !== QUOTATION_POLICY_V2) return false;
+    if (quotation.length < 16) return false;
+    if (!/[。！？.!?]$/.test(quotation)) return false;
+    if (!/[，、,;；]/.test(quotation)) return false;
+    return true;
 }
 
 function digestOf(span) {
@@ -92,7 +101,8 @@ export function compareReviews(input) {
     if (left.formulaComparison !== left.verdict || right.formulaComparison !== right.verdict) {
         return decision({ decision: 'UNRESOLVED', reason: 'verdict does not match formulaComparison' });
     }
-    if (!spanContains(input.storedSpan, left.quotation) || !spanContains(input.storedSpan, right.quotation)) {
+    const quotationPolicy = input.quotationPolicy === QUOTATION_POLICY_V2 ? QUOTATION_POLICY_V2 : QUOTATION_POLICY_V1;
+    if (!spanContains(input.storedSpan, left.quotation, quotationPolicy) || !spanContains(input.storedSpan, right.quotation, quotationPolicy)) {
         return decision({ decision: 'UNRESOLVED', reason: 'quotation is not in the stored span' });
     }
     if (!sameList(left.conditions, right.conditions)) {

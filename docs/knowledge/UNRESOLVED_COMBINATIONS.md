@@ -54,4 +54,26 @@ A row here is not a failed catalog entry. It has a recorded result other than `A
 | Đồng Lương Tỵ Hợi | PASSAGE_NOT_LOCATED | — | no_source_in_readable_corpus |
 | Mệnh VCD Đắc Tam Không | PASSAGE_NOT_LOCATED | — | no_source_in_readable_corpus |
 
-39 combinations have no defining paragraph in the readable spans. Their other candidate books are listed in each search log and were not quoted.
+39 combinations have no defining paragraph in the readable Tân Biên spans. Their other candidate books are listed in each search log and were not quoted.
+
+## Sprint 9C records that are not AI_ACCEPTED
+
+These rows are separate from the Tân Biên table above. They do not change that table.
+
+| Combination | 9C decision | Gap |
+| --- | --- | --- |
+| Anh Tinh Nhập Miếu | CONFLICT | models disagreed, PARTIAL versus CONFLICT |
+| Bán Không Chiết Xỉ | CONFLICT | NAME_MISMATCH, 半天折翅 versus the catalog name |
+| Lộ Bàng Mai Thi | CONFLICT | models disagreed on alias_lo_thuong |
+| Mệnh VCD Đắc Tam Không | CONFLICT | models disagreed on thien_khong_aspect |
+| Nhật Nguyệt Tật Ách | CONFLICT | CONFLICT versus PARTIAL; span has no Hóa Kỵ |
+| Sát Phá Tham | CONFLICT | MATCH versus PARTIAL |
+| Tử Phủ Vũ Tướng | CONFLICT | PARTIAL versus MATCH; span does not say tam hợp |
+| Thạch Trung Ẩn Ngọc | CONFLICT | models disagreed |
+| Thiên Ất Củng Mệnh | CONFLICT | models disagreed |
+| Văn Tinh Củng Mệnh | CONFLICT | models disagreed |
+| Hình Kỵ Giáp Ấn | CONFLICT | models disagreed |
+| Tài Ấn Giao Trì | REVIEW_NOT_EXECUTED | related Vũ Khúc–Thiên Tướng page, no exact title |
+| Khúc Ám Đồng Cung | REVIEW_NOT_EXECUTED | related Văn Khúc text, named cách not bound |
+| Hoa Cái Cư Phu Thê | REVIEW_NOT_EXECUTED | no exact cách sentence; catalog required_stars is Hóa Kỵ |
+| Lưỡng Trùng Thiên Mã | REVIEW_NOT_EXECUTED | no exact named source |

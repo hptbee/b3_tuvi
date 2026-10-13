@@ -1,0 +1,51 @@
+{
+  "decisionId": "de-ngo-hung-do-2026-10-13",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-2",
+  "subjectType": "claim",
+  "subjectId": "claim-9c-de-ngo-hung-do",
+  "schoolId": "unassigned-modern-article",
+  "variantType": "rule",
+  "variantId": "rule-not-runtime",
+  "sourceId": "wikisource-zwds-quanshu",
+  "editionId": "wikisource-zwds-oldid-850734",
+  "locator": "1.taivi-phu",
+  "sourceDigest": "06ebecafaf87c38ad7b1cb093f3698700166ecaa5fb9485d4b2d35fdcc499d47",
+  "sourceUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽",
+  "retrievedAt": "2026-10-13",
+  "pdfTextChecked": false,
+  "binding": "wikisource_transcription_oldid_850734",
+  "identity": "UNRESOLVED_IDENTITY",
+  "quotationPolicy": "source-sentence-v2",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "CONFLICT",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/de-ngo-hung-do/review-a.json",
+      "agentId": "bc-ff44d590-55a0-5813-bb72-2c2d7d73213f",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "CONFLICT",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/de-ngo-hung-do/review-b.json",
+      "agentId": "bc-1e0602b9-d8da-581b-a958-5ad7b838fd8c",
+      "available": true
+    }
+  ],
+  "decision": "AI_ACCEPTED",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "notes": "Pass 2 rerun under source-sentence-v2 because pass 1 quotations were shorter than a complete bound sentence. Pass 1 agents bc-02853112-fa65-52f0-b4f9-acbbd33242c9 and bc-f4cbca2b-e25f-5d77-8378-266ffe23539f kept in review-a-pass1.json and review-b-pass1.json. Comparator AI_ACCEPTED formula CONFLICT. Identity UNRESOLVED_IDENTITY. Models grok-4.7-high and gpt-5.6-terra-medium. Runtime rule not changed.",
+  "crossReviewOutcome": "AI_CROSS_REVIEWED",
+  "formulaComparison": "CONFLICT",
+  "conditions": [
+    "aphorism_only"
+  ],
+  "exceptions": []
+}

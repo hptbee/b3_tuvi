@@ -1,0 +1,20 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "wikisource-zwds-oldid-850734",
+  "locator": "1.taivi-phu",
+  "sourceDigest": "06ebecafaf87c38ad7b1cb093f3698700166ecaa5fb9485d4b2d35fdcc499d47",
+  "claimId": "claim-9c-de-ngo-hung-do",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "aphorism_only"
+  ],
+  "exceptions": [],
+  "quotation": "帝遇兇徒雖獲吉而無道",
+  "uncertainties": [],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-02853112-fa65-52f0-b4f9-acbbd33242c9"
+}

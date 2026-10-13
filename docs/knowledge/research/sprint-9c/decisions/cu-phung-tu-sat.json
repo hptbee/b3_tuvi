@@ -1,0 +1,55 @@
+{
+  "decisionId": "cu-phung-tu-sat-2026-10-13",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-9c-cu-phung-tu-sat",
+  "schoolId": "unassigned-modern-article",
+  "variantType": "rule",
+  "variantId": "rule-not-runtime",
+  "sourceId": "tuvisonkhiem",
+  "editionId": "tuvisonkhiem-2026-10-13",
+  "locator": "thu-vien/cach-cuc/cu-phung-tu-sat",
+  "sourceDigest": "6f07dc0cce757c6f88444f8c4b3ed79f35f3db6fc4656803505e661ceab0d6b8",
+  "sourceUrl": "https://tuvisonkhiem.vn/thu-vien/cach-cuc/cu-phung-tu-sat/",
+  "retrievedAt": "2026-10-13",
+  "pdfTextChecked": false,
+  "binding": "webpage_excerpt",
+  "identity": "UNRESOLVED_IDENTITY",
+  "quotationPolicy": "min-40-v1",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "CONFLICT",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/cu-phung-tu-sat/review-a.json",
+      "agentId": "bc-97631a6a-afe3-542b-956a-98236f8462b2",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "CONFLICT",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/cu-phung-tu-sat/review-b.json",
+      "agentId": "bc-48055f3c-dff4-503b-b00e-d31fc368ce00",
+      "available": true
+    }
+  ],
+  "decision": "AI_ACCEPTED",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "notes": "Comparator AI_ACCEPTED. formula CONFLICT. Identity UNRESOLVED_IDENTITY. Models grok-4.7-high and gpt-5.6-terra-medium. Modern secondary page, not a checked printed edition. Runtime rule not changed.",
+  "crossReviewOutcome": "AI_CROSS_REVIEWED",
+  "formulaComparison": "CONFLICT",
+  "conditions": [
+    "palace_tam_phuong",
+    "sat_khong_or_kiep",
+    "sat_kinh_or_da",
+    "sat_linh_or_hoa",
+    "star_cu_menh"
+  ],
+  "exceptions": []
+}

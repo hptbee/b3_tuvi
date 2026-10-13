@@ -1,0 +1,20 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "wikisource-zwds-oldid-850734",
+  "locator": "1.taivi-phu",
+  "sourceDigest": "27703fe78603e6998e2b791aafab3cbe4bfdc3181f17847fcf0712fe1aa11d95",
+  "claimId": "claim-9c-chung-thuy-trieu-dong",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "star_van_hao_dan_mao"
+  ],
+  "exceptions": [],
+  "quotation": "文耗居寅卯，謂之眾水朝東。",
+  "uncertainties": [],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-a3825f3c-1b48-5480-b7a3-40aa8682812c"
+}

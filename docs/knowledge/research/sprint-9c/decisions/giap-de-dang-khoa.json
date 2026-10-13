@@ -35,10 +35,19 @@
       "available": true
     }
   ],
-  "decision": "UNRESOLVED",
+  "decision": "AI_ACCEPTED",
   "reviewMethod": "dual_ai_independent_then_cross_review",
   "expertVerified": false,
   "runtimeRuleChangeApplied": false,
-  "notes": "Comparator returned UNRESOLVED: quotation is not in the stored span. The runtime rule was not changed.",
-  "retrievedAt": "2026-10-13"
+  "notes": "Stored reviews replayed under source-sentence-v2. Models were not rerun. The v1 40-character guard had rejected a complete sentence that is an exact substring. Formula MATCH. Catalog identity stays UNRESOLVED_IDENTITY. The runtime rule was not changed.",
+  "retrievedAt": "2026-10-13",
+  "quotationPolicy": "source-sentence-v2",
+  "crossReviewOutcome": "AI_CROSS_REVIEWED",
+  "formulaComparison": "MATCH",
+  "conditions": [
+    "palace_menh",
+    "star_hoa_khoa_host",
+    "star_hoa_quyen_aspect"
+  ],
+  "exceptions": []
 }

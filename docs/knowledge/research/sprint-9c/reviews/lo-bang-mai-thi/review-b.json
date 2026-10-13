@@ -1,0 +1,23 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "wikisource-zwds-oldid-850734",
+  "locator": "1.taivi-phu",
+  "sourceDigest": "34757c6d34d6bad5b7c3d3612951c8408d34bbde41e01654f8b2ce8dd6bac1bf",
+  "claimId": "claim-9c-lo-bang-mai-thi",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "star_sat_liem_same"
+  ],
+  "exceptions": [],
+  "quotation": "七殺廉貞同位，路上埋屍。破軍暗曜同鄉，水中作塚。",
+  "uncertainties": [
+    "UNRESOLVED_IDENTITY: the span does not use the catalog name Lộ Bàng Mai Thi."
+  ],
+  "agentId": "bc-95714227-48f5-5910-9aba-152c5ceb7675",
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "available": true,
+  "effort": "medium"
+}

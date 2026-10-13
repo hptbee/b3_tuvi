@@ -1,0 +1,45 @@
+{
+  "decisionId": "sat-pha-tham-2026-10-13",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-9c-sat-pha-tham",
+  "schoolId": "unassigned-modern-article",
+  "variantType": "rule",
+  "variantId": "rule-not-runtime",
+  "sourceId": "tuvixemtuong",
+  "editionId": "tuvixemtuong-2026-10-13",
+  "locator": "hoc-tu-vi/cach-cuc/sat-pha-tham",
+  "sourceDigest": "80ca13b1c844ab574260c777984ce344a3cbd62e72665d521fe82083eab97736",
+  "sourceUrl": "https://tuvixemtuong.net/hoc-tu-vi/cach-cuc/sat-pha-tham",
+  "retrievedAt": "2026-10-13",
+  "pdfTextChecked": false,
+  "binding": "webpage_excerpt",
+  "identity": "UNRESOLVED_IDENTITY",
+  "quotationPolicy": "min-40-v1",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "MATCH",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/sat-pha-tham/review-a.json",
+      "agentId": "bc-504c1e55-50d9-5d81-80d0-28e9ab365318",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "PARTIAL",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/sat-pha-tham/review-b.json",
+      "agentId": "bc-4c2fcec1-65c6-583e-b6d1-b98b7ea5e809",
+      "available": true
+    }
+  ],
+  "decision": "CONFLICT",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "notes": "Comparator CONFLICT. reviews disagree. Identity UNRESOLVED_IDENTITY. Models grok-4.7-high and gpt-5.6-terra-medium. Modern secondary page, not a checked printed edition. Runtime rule not changed."
+}

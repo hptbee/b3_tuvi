@@ -25,6 +25,7 @@ export function verifyDecisionBinding({ record, reviews, storedSpan, baseline } 
         requiredExceptions: baseline.requiredExceptions || [],
         requiredAnchors: baseline.requiredAnchors,
         allowedConditions: baseline.allowedConditions,
+        quotationPolicy: baseline.quotationPolicy,
         reviews
     });
     if (compared.decision !== record.decision) {

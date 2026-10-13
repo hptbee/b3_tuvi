@@ -1,0 +1,344 @@
+{
+  "schemaVersion": 1,
+  "title": "Sprint 9C supplemental source candidates, independently researched",
+  "repo": "hptbee/b3_tuvi",
+  "pr": "https://github.com/hptbee/b3_tuvi/pull/19",
+  "baselineHead": "cb1dd30dd2a146aace55973924391edc408df8d1",
+  "retrievedAt": "2026-10-13",
+  "verificationScope": "Pages opened via public web, source text/paraphrase checked; no rechecked printed edition; GitHub branch may change after this pack. Do not promote source verification on pack alone.",
+  "targetCount": 19,
+  "groups": {
+    "eight_not_dual_ai": [
+      "Anh Tinh Nhập Miếu",
+      "Nhật Nguyệt Tàng Huy",
+      "Bán Không Chiết Xỉ",
+      "Đế Ngộ Hung Đồ",
+      "Lộ Bàng Mai Thi",
+      "Cát Xứ Tàng Hung",
+      "Chúng Thủy Triều Đông",
+      "Thủy Trừng Quế Ngạc"
+    ],
+    "eleven_no_defining_html_in_existing_url": [
+      "Tử Phủ Vũ Tướng",
+      "Sát Phá Tham",
+      "Tài Ấn Giao Trì",
+      "Khúc Ám Đồng Cung",
+      "Thiên Cơ Tỵ Hợi",
+      "Cự Phùng Tứ Sát",
+      "Hoa Cái Cư Phu Thê",
+      "Lưỡng Trùng Thiên Mã",
+      "Đồng Lương Tỵ Hợi",
+      "Nhật Nguyệt Tật Ách",
+      "Mệnh VCD Đắc Tam Không"
+    ]
+  },
+  "records": [
+    {
+      "combinationName": "Anh Tinh Nhập Miếu",
+      "discoveryStatus": "READY_FOR_DUAL_AI",
+      "evidenceClass": "DIRECT_FORMULA_PAGE",
+      "primaryCandidateUrl": "https://www.108s.tw/article/info/208",
+      "searchAnchor": "英星入廟格",
+      "checkedObservation": "Page describes Phá Quân alone at Tý or Ngọ, opposite Liêm Trinh–Thiên Tướng; stronger variant depends on year, transformations and absence of sát/kỵ/Không Kiếp.",
+      "nextAction": "Compare core structural rule to B3 Phá Quân Tý/Ngọ; classify extra conditions rather than forcing them all to be mandatory.",
+      "supplementalCandidates": [],
+      "reviewedWithWeb": "2026-10-13",
+      "isFormulaVerified": false,
+      "isHistoricalEditionAuthenticated": false,
+      "recommendRuntimeChange": false
+    },
+    {
+      "combinationName": "Nhật Nguyệt Tàng Huy",
+      "discoveryStatus": "READY_FOR_DUAL_AI",
+      "evidenceClass": "MODERN_FORMULA_VARIANT",
+      "primaryCandidateUrl": "https://www.jollen.tw/97-%E6%97%A5%E6%9C%88%E8%97%8F%E8%BC%9D.html",
+      "searchAnchor": "日月藏輝",
+      "checkedObservation": "Article gives alternative configurations: Thái Dương at Hợi/Tý/Sửu or Thái Âm at Tỵ/Ngọ/Mùi; mentions Cự Môn involvement. Not simply both Sun and Moon hãm anywhere.",
+      "nextAction": "Potential FORMULA_CONFLICT: B3 uses both Thái Dương and Thái Âm in hãm status. Verify source identity and if author cites real historical text.",
+      "supplementalCandidates": [],
+      "reviewedWithWeb": "2026-10-13",
+      "isFormulaVerified": false,
+      "isHistoricalEditionAuthenticated": false,
+      "recommendRuntimeChange": false
+    },
+    {
+      "combinationName": "Bán Không Chiết Xỉ",
+      "discoveryStatus": "IDENTITY_REVIEW_BEFORE_DUAL_AI",
+      "evidenceClass": "RELATED_SOURCE_ALIAS_MISMATCH",
+      "primaryCandidateUrl": "https://www.108s.tw/article/info/267",
+      "searchAnchor": "半天折翅",
+      "checkedObservation": "The page is actually 命裡逢空格; it mentions 半天折翅 in a separate classical-style line. The catalog says Chiết Xỉ, not Chiết Sí.",
+      "nextAction": "Do NOT accept identity as proven; check Vietnamese transcription/Xỉ vs Sí, and whether B3 formula about Không Kiếp meeting authority stars is supported.",
+      "supplementalCandidates": [],
+      "reviewedWithWeb": "2026-10-13",
+      "isFormulaVerified": false,
+      "isHistoricalEditionAuthenticated": false,
+      "recommendRuntimeChange": false
+    },
+    {
+      "combinationName": "Đế Ngộ Hung Đồ",
+      "discoveryStatus": "READY_FOR_DUAL_AI",
+      "evidenceClass": "HISTORICAL_TRANSCRIPTION_MENTION",
+      "primaryCandidateUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽",
+      "searchAnchor": "帝遇兇徒",
+      "checkedObservation": "Wikisource 全書 卷一 太微賦 has 帝遇兇徒 as part of a couplet. A symbolic clause, not a complete explicit star list.",
+      "nextAction": "Prompt the two models to avoid inferring Kình/Hỏa thresholds from the phrase; may be incomplete/not executable.",
+      "supplementalCandidates": [],
+      "reviewedWithWeb": "2026-10-13",
+      "isFormulaVerified": false,
+      "isHistoricalEditionAuthenticated": false,
+      "recommendRuntimeChange": false
+    },
+    {
+      "combinationName": "Lộ Bàng Mai Thi",
+      "discoveryStatus": "IDENTITY_REVIEW_BEFORE_DUAL_AI",
+      "evidenceClass": "HISTORICAL_TRANSCRIPTION_ALIAS_MISMATCH",
+      "primaryCandidateUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽",
+      "searchAnchor": "路上埋屍",
+      "checkedObservation": "Wikisource 全書 卷一 太微賦 associates the phrase 路上埋屍 with Liêm Trinh and Thất Sát sharing a palace. Its Chinese characters are 路上, not 路傍.",
+      "nextAction": "Separate verified phrase from catalog alias; B3 adds Sửu/Mùi and Hóa Kỵ/Kình Đà, which this short clause does not establish.",
+      "supplementalCandidates": [],
+      "reviewedWithWeb": "2026-10-13",
+      "isFormulaVerified": false,
+      "isHistoricalEditionAuthenticated": false,
+      "recommendRuntimeChange": false
+    },
+    {
+      "combinationName": "Cát Xứ Tàng Hung",
+      "discoveryStatus": "READY_FOR_DUAL_AI",
+      "evidenceClass": "HISTORICAL_TRANSCRIPTION_MENTION",
+      "primaryCandidateUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽",
+      "searchAnchor": "吉處藏凶",
+      "checkedObservation": "Wikisource 全書 卷一 太微賦 pairs 吉處藏凶 with 祿逢沖破.",
+      "nextAction": "Potential FORMULA_CONFLICT: B3 requires Địa Kiếp/Triệt. Do not infer those from 祿逢沖破.",
+      "supplementalCandidates": [],
+      "reviewedWithWeb": "2026-10-13",
+      "isFormulaVerified": false,
+      "isHistoricalEditionAuthenticated": false,
+      "recommendRuntimeChange": false
+    },
+    {
+      "combinationName": "Chúng Thủy Triều Đông",
+      "discoveryStatus": "READY_FOR_DUAL_AI",
+      "evidenceClass": "HISTORICAL_TRANSCRIPTION_MENTION",
+      "primaryCandidateUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽",
+      "searchAnchor": "眾水朝東",
+      "checkedObservation": "Wikisource 全書 卷一 太微賦 mentions 文耗居寅卯.",
+      "nextAction": "Potential FORMULA_CONFLICT: B3 uses Đại Hao + Tiểu Hao in Mão/Dậu. Distinguish 文耗, exact star and palace positions before asserting equivalence.",
+      "supplementalCandidates": [],
+      "reviewedWithWeb": "2026-10-13",
+      "isFormulaVerified": false,
+      "isHistoricalEditionAuthenticated": false,
+      "recommendRuntimeChange": false
+    },
+    {
+      "combinationName": "Thủy Trừng Quế Ngạc",
+      "discoveryStatus": "READY_FOR_DUAL_AI",
+      "evidenceClass": "HISTORICAL_TRANSCRIPTION_MENTION",
+      "primaryCandidateUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽",
+      "searchAnchor": "水澄桂萼",
+      "checkedObservation": "Wikisource 全書 卷一 太微賦 describes Thái Âm at Tý (太陰居子).",
+      "nextAction": "Potential FORMULA_CONFLICT: B3 requires Thiên Đồng and Thái Âm same at Tý; passage only explicitly states Thái Âm at Tý.",
+      "supplementalCandidates": [],
+      "reviewedWithWeb": "2026-10-13",
+      "isFormulaVerified": false,
+      "isHistoricalEditionAuthenticated": false,
+      "recommendRuntimeChange": false
+    },
+    {
+      "combinationName": "Tử Phủ Vũ Tướng",
+      "discoveryStatus": "NEW_CANDIDATE_DIRECT",
+      "evidenceClass": "MODERN_FORMULA_PAGE",
+      "primaryCandidateUrl": "https://www.thaiam.vn/tu-vi-wiki/cach-cuc/tu-phu-vu-tuong.html",
+      "searchAnchor": "Tử Phủ Vũ Tướng",
+      "checkedObservation": "Vietnamese modern article describes Tử Vi, Thiên Phủ, Vũ Khúc, Thiên Tướng in tam phương/tứ chính. A separate Tuvica source claims book Áo Bí page 341, unverified by this research.",
+      "nextAction": "Validate structural claims against deterministic star placement; beware varying versions requiring Tử Phủ cùng cung vs broad tetrad in tam phương.",
+      "supplementalCandidates": [
+        {
+          "type": "modern_specific",
+          "url": "https://tuvica.net/tra-cuu/tu-phu-vu-tuong",
+          "note": "Claims citation to Áo Bí pp341–342, print edition not checked"
+        },
+        {
+          "type": "other",
+          "url": "https://thienco.vn/tu-phu-vu-tuong.html",
+          "note": "Defines star quartet/tam phương"
+        },
+        {
+          "type": "other",
+          "url": "https://tuvi.cohoc.net/cach-cuc-trong-tu-vi-la-gi-mot-so-cach-cuc-tieu-bieu-trong-tu-vi-nid-18755.html",
+          "note": "Mentions variant Tử Phủ Vũ Tướng Liêm"
+        }
+      ],
+      "reviewedWithWeb": "2026-10-13",
+      "isFormulaVerified": false,
+      "isHistoricalEditionAuthenticated": false,
+      "recommendRuntimeChange": false
+    },
+    {
+      "combinationName": "Sát Phá Tham",
+      "discoveryStatus": "NEW_CANDIDATE_DIRECT",
+      "evidenceClass": "MODERN_FORMULA_PAGE",
+      "primaryCandidateUrl": "https://thienco.vn/sat-pha-tham.html",
+      "searchAnchor": "Sát Phá Tham",
+      "checkedObservation": "Modern article directly defines Thất Sát, Phá Quân, Tham Lang in the Mệnh–Tài–Quan triangle; distinguishes structural constellation from auspicious/broken formation.",
+      "nextAction": "Check whether this is near-automatic structural invariant under certain placements; do not count it as a rare special good fortune on merely seeing three stars.",
+      "supplementalCandidates": [
+        {
+          "type": "specific",
+          "url": "https://tuvixemtuong.net/hoc-tu-vi/cach-cuc/sat-pha-tham",
+          "note": "Discusses structural relationships and classic citation"
+        }
+      ],
+      "reviewedWithWeb": "2026-10-13",
+      "isFormulaVerified": false,
+      "isHistoricalEditionAuthenticated": false,
+      "recommendRuntimeChange": false
+    },
+    {
+      "combinationName": "Tài Ấn Giao Trì",
+      "discoveryStatus": "RELATED_ONLY",
+      "evidenceClass": "RELATED_STAR_PAIR",
+      "primaryCandidateUrl": "https://ziweiai.com/zh-TW/notes/wuqu-tianxiang-yinshen-minggong-justice-service",
+      "searchAnchor": "財印格局",
+      "checkedObservation": "The article discusses Vũ Khúc and Thiên Tướng at Dần/Thân and describes 財印 in semantic terms; it does not verify an historical formal combination called Tài Ấn Giao Trì.",
+      "nextAction": "Retain unverified name. Seek print source with formal exact name, or classify as a derived star pair not a named source-verified cách cục.",
+      "supplementalCandidates": [],
+      "reviewedWithWeb": "2026-10-13",
+      "isFormulaVerified": false,
+      "isHistoricalEditionAuthenticated": false,
+      "recommendRuntimeChange": false
+    },
+    {
+      "combinationName": "Khúc Ám Đồng Cung",
+      "discoveryStatus": "RELATED_ONLY",
+      "evidenceClass": "RELATED_STAR_PAIR",
+      "primaryCandidateUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/全覽",
+      "searchAnchor": "文曲 / 巨門",
+      "checkedObservation": "Wikisource question on Văn Khúc discusses Văn Khúc meeting Cự Môn; does not clearly identify the Vietnamese formal name Khúc Ám Đồng Cung. Secondary Chinese pages likewise mention the pair.",
+      "nextAction": "Maintain RELATED_CONCEPT; verify whether Ám refers to Cự Môn, and whether đồng cung vs hội chiếu are separately supported.",
+      "supplementalCandidates": [
+        {
+          "type": "chinese_secondary",
+          "url": "https://www.ziwei.info/zh-tw/detail/3233",
+          "note": "文曲巨門同宮 phrase, not formal named rule"
+        }
+      ],
+      "reviewedWithWeb": "2026-10-13",
+      "isFormulaVerified": false,
+      "isHistoricalEditionAuthenticated": false,
+      "recommendRuntimeChange": false
+    },
+    {
+      "combinationName": "Thiên Cơ Tỵ Hợi",
+      "discoveryStatus": "NO_EXACT_SOURCE",
+      "evidenceClass": "SEARCH_NEGATIVE",
+      "primaryCandidateUrl": null,
+      "searchAnchor": "天機巳亥 / 天機在巳亥",
+      "checkedObservation": "Searches for named formation with these Chinese phrases were insufficient to establish an exact formal source.",
+      "nextAction": "Keep SOURCE_NOT_LOCATED; do not infer hãm+sat from generic Thiên Cơ interpretations. Try authenticated source indexes or page-specific book references.",
+      "supplementalCandidates": [],
+      "reviewedWithWeb": "2026-10-13",
+      "isFormulaVerified": false,
+      "isHistoricalEditionAuthenticated": false,
+      "recommendRuntimeChange": false
+    },
+    {
+      "combinationName": "Cự Phùng Tứ Sát",
+      "discoveryStatus": "NEW_CANDIDATE_DIRECT",
+      "evidenceClass": "FORMULA_VARIANT_CONFLICT",
+      "primaryCandidateUrl": "https://hocvienlyso.org/tu-vi-dau-so-khan-cach-cuc.html",
+      "searchAnchor": "巨逢四煞格",
+      "checkedObservation": "Article includes a Hán văn section 巨逢四煞格 with combinations involving Cự Môn and four sát stars; a Vietnamese modern site uses three families including Không/Kiếp. The definitions differ.",
+      "nextAction": "Mark CONFLICTING_SOURCE_DEFINITIONS. B3 currently demands all Kình, Đà, Hỏa, Linh; do not simply choose one by model consensus.",
+      "supplementalCandidates": [
+        {
+          "type": "divergent",
+          "url": "https://tuvisonkhiem.vn/thu-vien/cach-cuc/cu-phung-tu-sat/",
+          "note": "Modern rule using three sát families differs from Kình/Đà/Hỏa/Linh rule"
+        }
+      ],
+      "reviewedWithWeb": "2026-10-13",
+      "isFormulaVerified": false,
+      "isHistoricalEditionAuthenticated": false,
+      "recommendRuntimeChange": false
+    },
+    {
+      "combinationName": "Hoa Cái Cư Phu Thê",
+      "discoveryStatus": "RELATED_ONLY",
+      "evidenceClass": "PALACE_INTERPRETATION",
+      "primaryCandidateUrl": "https://services.shen88.cn/ziweidoushu/pc-108861.html",
+      "searchAnchor": "华盖星入夫妻宫",
+      "checkedObservation": "Article discusses Hoa Cái located in Phu Thê; does not establish a formal cách cục requiring Sát/Cô Quả.",
+      "nextAction": "Critical catalog issue: B3 required_stars is Hóa Kỵ despite name/formula referring to Hoa Cái. Research identity and create remediation finding, not runtime edit.",
+      "supplementalCandidates": [
+        {
+          "type": "modern",
+          "url": "https://www.xingchen-douwu.com/%E7%B4%AB%E5%BE%AE%E6%96%97%E6%95%B8/%F0%9F%91%91%E8%8F%AF%E8%93%8B%E6%98%9F%EF%BC%9A%E5%AD%A4%E5%82%B2%E5%85%A7%E6%96%82%E8%88%87%E7%8E%84%E5%AD%B8%E8%97%9D%E8%A1%93%E6%8C%87%E4%BB%A4/",
+          "note": "Palace-specific interpretation, not formal classic named cách"
+        }
+      ],
+      "reviewedWithWeb": "2026-10-13",
+      "isFormulaVerified": false,
+      "isHistoricalEditionAuthenticated": false,
+      "recommendRuntimeChange": false
+    },
+    {
+      "combinationName": "Lưỡng Trùng Thiên Mã",
+      "discoveryStatus": "NO_EXACT_SOURCE",
+      "evidenceClass": "SEARCH_NEGATIVE",
+      "primaryCandidateUrl": null,
+      "searchAnchor": "兩重天馬 / 雙馬 / 流天馬",
+      "checkedObservation": "No checked webpage established the exact named condition of natal + Lưu Thiên Mã. Wikisource 天馬 section discusses hạn and Thiên Mã but not this specific name.",
+      "nextAction": "Keep source inaccessible for exact rule and runtime disabled. Do not invent the moving-star calculation or dates.",
+      "supplementalCandidates": [],
+      "reviewedWithWeb": "2026-10-13",
+      "isFormulaVerified": false,
+      "isHistoricalEditionAuthenticated": false,
+      "recommendRuntimeChange": false
+    },
+    {
+      "combinationName": "Đồng Lương Tỵ Hợi",
+      "discoveryStatus": "NEW_CANDIDATE_STRUCTURAL",
+      "evidenceClass": "STRUCTURAL_INTERPRETATION",
+      "primaryCandidateUrl": "https://blog.udn.com/jo52348/9125487",
+      "searchAnchor": "同梁巳亥",
+      "checkedObservation": "Detailed 2013 article says Thiên Đồng alone at Tỵ/Hợi and Thiên Lương in đối cung, not same-palace.",
+      "nextAction": "Potential FORMULA_CONFLICT: B3 allows đồng cung OR opposition at Tỵ/Hợi and marks both hãm. Verify placement against engine; do not equate same-palace with this source.",
+      "supplementalCandidates": [],
+      "reviewedWithWeb": "2026-10-13",
+      "isFormulaVerified": false,
+      "isHistoricalEditionAuthenticated": false,
+      "recommendRuntimeChange": false
+    },
+    {
+      "combinationName": "Nhật Nguyệt Tật Ách",
+      "discoveryStatus": "NEW_CANDIDATE_DIRECT",
+      "evidenceClass": "MODERN_FORMULA_PAGE",
+      "primaryCandidateUrl": "https://display.tw/p122.htm",
+      "searchAnchor": "日月疾厄格",
+      "checkedObservation": "Page explicitly titles 日月疾厄格 and discusses Thái Dương/Thái Âm at Tật Ách, with extra conditions like Kỵ/sát.",
+      "nextAction": "Possible source-backed concept but not historical print authentication. Flag health predictions as cultural interpretation, not medical facts.",
+      "supplementalCandidates": [],
+      "reviewedWithWeb": "2026-10-13",
+      "isFormulaVerified": false,
+      "isHistoricalEditionAuthenticated": false,
+      "recommendRuntimeChange": false
+    },
+    {
+      "combinationName": "Mệnh VCD Đắc Tam Không",
+      "discoveryStatus": "NEW_CANDIDATE_SECONDARY",
+      "evidenceClass": "SECONDARY_FORMULA_VARIANT",
+      "primaryCandidateUrl": "https://baomoi.com/menh-vo-chinh-dieu-la-gi-dac-diem-nguoi-co-menh-vo-chinh-dieu-c48694795.epi",
+      "searchAnchor": "Mệnh Vô Chính Diệu Đắc Tam Không",
+      "checkedObservation": "Article describes vô chính diệu with 1 Không in Mệnh and 2 Không in tam hợp; B3 says any 3 of 4, and has require_no_major_at_menh:false.",
+      "nextAction": "Critical FORMULA_CONFLICT candidate. Must distinguish Đắc/Ngộ/Kiến Tam Không and number/placements of stars; do not auto-promote.",
+      "supplementalCandidates": [],
+      "reviewedWithWeb": "2026-10-13",
+      "isFormulaVerified": false,
+      "isHistoricalEditionAuthenticated": false,
+      "recommendRuntimeChange": false
+    }
+  ],
+  "quotePolicy": "Short exact anchored quotations only, preserve the original source reference and URL; do not copy entire copyrighted articles."
+}

@@ -253,5 +253,178 @@
     ],
     "anchor": "天梁星在子位或午位坐命",
     "locator": "article/info/236"
+  },
+  {
+    "slug": "anh-tinh-nhap-mieu",
+    "combinationName": "Anh Tinh Nhập Miếu",
+    "sourceDigest": "299fec3e1179e21542dbf83fc2b08a6d1a1263003b41f6526c8f9e7bbdd428fd",
+    "allowed": [
+      "palace_menh",
+      "branch_ty_ngo",
+      "star_pha_host",
+      "star_liem_tuong_opposite"
+    ],
+    "anchor": "破軍星獨坐子位或午位",
+    "locator": "article/info/208"
+  },
+  {
+    "slug": "nhat-nguyet-tang-huy",
+    "combinationName": "Nhật Nguyệt Tàng Huy",
+    "sourceDigest": "d1f16c94bf4e2b1a0e9e8994578e25a7d65bf6763b0eba6c92591541fbd4ea0e",
+    "allowed": [
+      "palace_menh",
+      "branch_ham_nhat",
+      "branch_ham_nguyet",
+      "star_cu_same"
+    ],
+    "anchor": "格局形成條件分兩組擇一成立",
+    "locator": "p122-style"
+  },
+  {
+    "slug": "ban-khong-chiet-xi",
+    "combinationName": "Bán Không Chiết Xỉ",
+    "sourceDigest": "a67dd438279af404237b10df36c749e386d960c8aadba65433021a8f4ab2182b",
+    "allowed": [
+      "palace_menh",
+      "star_khong_kiep_host",
+      "name_mismatch_chiet_si"
+    ],
+    "anchor": "坐命有地劫、地空",
+    "locator": "article/info/267"
+  },
+  {
+    "slug": "de-ngo-hung-do",
+    "combinationName": "Đế Ngộ Hung Đồ",
+    "sourceDigest": "06ebecafaf87c38ad7b1cb093f3698700166ecaa5fb9485d4b2d35fdcc499d47",
+    "allowed": [
+      "aphorism_only"
+    ],
+    "anchor": "帝遇兇徒雖獲吉而無道",
+    "locator": "1.taivi-phu"
+  },
+  {
+    "slug": "lo-bang-mai-thi",
+    "combinationName": "Lộ Bàng Mai Thi",
+    "sourceDigest": "34757c6d34d6bad5b7c3d3612951c8408d34bbde41e01654f8b2ce8dd6bac1bf",
+    "allowed": [
+      "star_sat_liem_same",
+      "alias_lo_thuong"
+    ],
+    "anchor": "七殺廉貞同位，路上埋屍",
+    "locator": "1.taivi-phu"
+  },
+  {
+    "slug": "cat-xu-tang-hung",
+    "combinationName": "Cát Xứ Tàng Hung",
+    "sourceDigest": "a2c081961df8e1b841688678fbc48ffabd27236232a586371ead7385d3685ce9",
+    "allowed": [
+      "loc_clash",
+      "aphorism_only"
+    ],
+    "anchor": "祿逢沖破，吉處藏凶",
+    "locator": "1.taivi-phu"
+  },
+  {
+    "slug": "chung-thuy-trieu-dong",
+    "combinationName": "Chúng Thủy Triều Đông",
+    "sourceDigest": "27703fe78603e6998e2b791aafab3cbe4bfdc3181f17847fcf0712fe1aa11d95",
+    "allowed": [
+      "star_van_hao_dan_mao"
+    ],
+    "anchor": "文耗居寅卯，謂之眾水朝東",
+    "locator": "1.taivi-phu"
+  },
+  {
+    "slug": "thuy-trung-que-ngac",
+    "combinationName": "Thủy Trừng Quế Ngạc",
+    "sourceDigest": "8a625e411c7edb8d407b15ccd2340c06e5498f49b4a8c42059f86473ebc9ff5a",
+    "allowed": [
+      "branch_ty",
+      "star_nguyet_host"
+    ],
+    "anchor": "太陰居子，號曰水澄桂萼",
+    "locator": "1.taivi-phu"
+  },
+  {
+    "slug": "nhat-nguyet-tat-ach",
+    "combinationName": "Nhật Nguyệt Tật Ách",
+    "sourceDigest": "8ee6c88a300fe0426e3424b1aec25b6d63e1d70ce63f75dd4187413b3ae03742",
+    "allowed": [
+      "palace_tat_ach",
+      "star_nhat_nguyet_same"
+    ],
+    "anchor": "太陽、太陰同入疾厄宮",
+    "locator": "p122.htm"
+  },
+  {
+    "slug": "sat-pha-tham",
+    "combinationName": "Sát Phá Tham",
+    "sourceDigest": "80ca13b1c844ab574260c777984ce344a3cbd62e72665d521fe82083eab97736",
+    "allowed": [
+      "palace_tam_hop_menh_tai_quan",
+      "star_sat_pha_tham"
+    ],
+    "anchor": "tam hợp Mệnh, Tài, Quan",
+    "locator": "hoc-tu-vi/cach-cuc/sat-pha-tham"
+  },
+  {
+    "slug": "cu-phung-tu-sat",
+    "combinationName": "Cự Phùng Tứ Sát",
+    "sourceDigest": "6f07dc0cce757c6f88444f8c4b3ed79f35f3db6fc4656803505e661ceab0d6b8",
+    "allowed": [
+      "star_cu_menh",
+      "sat_kinh_or_da",
+      "sat_linh_or_hoa",
+      "sat_khong_or_kiep",
+      "palace_tam_phuong"
+    ],
+    "anchor": "Cự Môn tọa Mệnh",
+    "locator": "thu-vien/cach-cuc/cu-phung-tu-sat"
+  },
+  {
+    "slug": "tu-phu-vu-tuong",
+    "combinationName": "Tử Phủ Vũ Tướng",
+    "sourceDigest": "a4bdb4e50602f89087ca0c810dbf37b6446b26e05e7772d22213f3378c34db09",
+    "allowed": [
+      "star_tu_phu_vu_tuong",
+      "not_same_palace"
+    ],
+    "anchor": "Tử Vi, Thiên Phủ, Vũ Khúc và Thiên Tướng",
+    "locator": "tu-phu-vu-tuong.html"
+  },
+  {
+    "slug": "thien-co-ty-hoi",
+    "combinationName": "Thiên Cơ Tỵ Hợi",
+    "sourceDigest": "61110ae5e94cfea0d8c63495374402527b8c73618d97b7a02a4b636b63b1fe24",
+    "allowed": [
+      "star_co_host",
+      "branch_ty_hoi_alone",
+      "star_nguyet_opposite"
+    ],
+    "anchor": "天機星在巳、亥宮獨坐",
+    "locator": "p128.htm"
+  },
+  {
+    "slug": "dong-luong-ty-hoi",
+    "combinationName": "Đồng Lương Tỵ Hợi",
+    "sourceDigest": "94821a96b94df9f69d3ffc9e8b06a15980066608441cc81e65b96ba07d7c9ea5",
+    "allowed": [
+      "branch_ty_hoi_alone_simp",
+      "star_luong_opposite"
+    ],
+    "anchor": "对宫必为天梁",
+    "locator": "bz/7375.htm"
+  },
+  {
+    "slug": "menh-vcd-dac-tam-khong",
+    "combinationName": "Mệnh VCD Đắc Tam Không",
+    "sourceDigest": "64e9300c6dc2d211a86e7aed4b39e965eee97a2299d41697b001e96662563a9d",
+    "allowed": [
+      "no_major",
+      "tuan_or_triet_host",
+      "thien_khong_aspect"
+    ],
+    "anchor": "Vô Chính Diệu Đắc Tam Không",
+    "locator": "doi-dieu-ban-ve-12-cung-vo-chinh-dieu"
   }
 ]

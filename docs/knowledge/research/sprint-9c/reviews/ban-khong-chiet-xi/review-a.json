@@ -1,0 +1,24 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/267",
+  "sourceDigest": "a67dd438279af404237b10df36c749e386d960c8aadba65433021a8f4ab2182b",
+  "claimId": "claim-9c-ban-khong-chiet-xi",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "palace_menh",
+    "star_khong_kiep_host",
+    "name_mismatch_chiet_si"
+  ],
+  "exceptions": [],
+  "quotation": "坐命有地劫、地空，就能構成此格局的基本條件。生逢天空，如同半天折翅；命中遇劫，恰如浪裡行船。",
+  "uncertainties": [
+    "NAME_MISMATCH"
+  ],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-c6e85022-88d7-52a4-b206-4dd593d2c857"
+}

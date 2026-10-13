@@ -1,0 +1,23 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "wikisource-zwds-oldid-850734",
+  "locator": "1.taivi-phu",
+  "sourceDigest": "27703fe78603e6998e2b791aafab3cbe4bfdc3181f17847fcf0712fe1aa11d95",
+  "claimId": "claim-9c-chung-thuy-trieu-dong",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "star_van_hao_dan_mao"
+  ],
+  "exceptions": [],
+  "quotation": "紫微輔弼同宮，一呼百諾居上品。文耗居寅卯，謂之眾水朝東。",
+  "uncertainties": [
+    "UNRESOLVED_IDENTITY: the span uses 眾水朝東, not the catalog name Chúng Thủy Triều Đông."
+  ],
+  "agentId": "bc-ad851665-eb1b-5e94-9a3f-d07d1647c07b",
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "available": true,
+  "effort": "medium"
+}

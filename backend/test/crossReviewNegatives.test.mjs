@@ -1,6 +1,6 @@
 import assert from 'assert';
 import { createHash } from 'crypto';
-import { compareReviews } from '../src/knowledge/crossReview.js';
+import { compareReviews, QUOTATION_POLICY_V2 } from '../src/knowledge/crossReview.js';
 
 const span = 'Cung Mệnh hay Quan Lộc an tại Hợi có Nguyệt tọa thủ. Xa Tuần Triệt.';
 const digest = createHash('sha256').update(span).digest('hex');
@@ -142,5 +142,71 @@ for (const [name, body] of Object.entries(cases)) {
     assert.notStrictEqual(compareReviews(body).decision, 'AI_ACCEPTED', name);
     assert.strictEqual(compareReviews(body).expertVerified, false, name);
 }
+
+const classical = '祿逢沖破，吉處藏凶。馬遇空亡，終身奔走。';
+const classicalSpan = `例曰 ${classical}`;
+const classicalDigest = createHash('sha256').update(classicalSpan).digest('hex');
+function classicalReview(model, quotation) {
+    return {
+        available: true,
+        model,
+        schoolId: 'vn-tam-hop-default',
+        editionId: 'tan-bien-retypeset-277-cover-1956',
+        locator: '1',
+        sourceDigest: classicalDigest,
+        claimId: 'claim-short',
+        formulaComparison: 'NOT_IMPLEMENTED',
+        verdict: 'NOT_IMPLEMENTED',
+        quotation,
+        conditions: ['loc_clash'],
+        exceptions: []
+    };
+}
+function classicalPacket(quotation, policy) {
+    return {
+        sourceAvailable: true,
+        storedSpan: classicalSpan,
+        sourceDigest: classicalDigest,
+        editionId: 'tan-bien-retypeset-277-cover-1956',
+        locator: '1',
+        schoolId: 'vn-tam-hop-default',
+        requiredConditions: ['loc_clash'],
+        requiredExceptions: [],
+        requiredAnchors: ['祿逢沖破'],
+        allowedConditions: ['loc_clash'],
+        quotationPolicy: policy,
+        reviews: [classicalReview('grok-4.7-high', quotation), classicalReview('gpt-5.6-terra-medium', quotation)]
+    };
+}
+assert.strictEqual(compareReviews(classicalPacket(classical, 'min-40-v1')).decision, 'UNRESOLVED');
+assert.strictEqual(compareReviews(classicalPacket(classical, QUOTATION_POLICY_V2)).decision, 'AI_ACCEPTED');
+assert.strictEqual(compareReviews(classicalPacket('吉處藏凶。', QUOTATION_POLICY_V2)).decision, 'UNRESOLVED');
+assert.strictEqual(compareReviews(classicalPacket('這句不在原文，但是完整句。', QUOTATION_POLICY_V2)).decision, 'UNRESOLVED');
+assert.strictEqual(compareReviews(classicalPacket('陽梁昌祿格', QUOTATION_POLICY_V2)).decision, 'UNRESOLVED');
+
+const noStop = '祿逢沖破，吉處藏凶。馬遇空亡，終身';
+assert.ok(noStop.length >= 16);
+assert.strictEqual(compareReviews(classicalPacket(noStop, QUOTATION_POLICY_V2)).decision, 'UNRESOLVED');
+const noComma = '這一句完整但是沒有任何逗號存在。';
+assert.ok(classicalSpan.includes(noComma) === false);
+const noCommaSpan = `例曰 ${noComma}`;
+const noCommaDigest = createHash('sha256').update(noCommaSpan).digest('hex');
+assert.strictEqual(compareReviews({
+    ...classicalPacket(noComma, QUOTATION_POLICY_V2),
+    storedSpan: noCommaSpan,
+    sourceDigest: noCommaDigest,
+    reviews: [
+        { ...classicalReview('grok-4.7-high', noComma), sourceDigest: noCommaDigest },
+        { ...classicalReview('gpt-5.6-terra-medium', noComma), sourceDigest: noCommaDigest }
+    ]
+}).decision, 'UNRESOLVED');
+assert.strictEqual(compareReviews(classicalPacket(`${classical} `, QUOTATION_POLICY_V2)).decision, 'UNRESOLVED');
+assert.strictEqual(compareReviews(classicalPacket(12, QUOTATION_POLICY_V2)).decision, 'UNRESOLVED');
+assert.strictEqual(compareReviews(packet({
+    reviews: [
+        review({ model: 'a', editionId: 'edition-left' }),
+        review({ model: 'b', editionId: 'edition-right' })
+    ]
+})).decision, 'CONFLICT');
 
 console.log('cross-review negatives stay fail-closed');

@@ -1,0 +1,25 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "phamngochien-2026-10-13",
+  "locator": "doi-dieu-ban-ve-12-cung-vo-chinh-dieu",
+  "sourceDigest": "64e9300c6dc2d211a86e7aed4b39e965eee97a2299d41697b001e96662563a9d",
+  "claimId": "claim-9c-menh-vcd-dac-tam-khong",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "no_major",
+    "tuan_or_triet_host",
+    "thien_khong_aspect"
+  ],
+  "exceptions": [],
+  "quotation": "Chỉ khi nào vô chính diệu có Tuần hoặc Triệt thủ, được 2 trong 3 sao là Tuần, Triệt, Thiên Không chiếu thì mới là cách Vô Chính Diệu Đắc Tam Không.",
+  "uncertainties": [
+    "UNRESOLVED_IDENTITY"
+  ],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-f03d7cf9-d067-5d2a-ba6e-c3b71135f72d",
+  "effort": "medium"
+}

@@ -1,0 +1,24 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "tuvixemtuong-2026-10-13",
+  "locator": "hoc-tu-vi/cach-cuc/sat-pha-tham",
+  "sourceDigest": "80ca13b1c844ab574260c777984ce344a3cbd62e72665d521fe82083eab97736",
+  "claimId": "claim-9c-sat-pha-tham",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "palace_tam_hop_menh_tai_quan",
+    "star_sat_pha_tham"
+  ],
+  "exceptions": [],
+  "quotation": "Cách thành khi tam hợp Mệnh, Tài, Quan hội đủ Thất Sát, Phá Quân và Tham Lang.",
+  "uncertainties": [
+    "UNRESOLVED_IDENTITY"
+  ],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-4c2fcec1-65c6-583e-b6d1-b98b7ea5e809",
+  "effort": "medium"
+}

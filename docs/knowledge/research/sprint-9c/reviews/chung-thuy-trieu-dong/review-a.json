@@ -1,0 +1,26 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "wikisource-zwds-oldid-850734",
+  "locator": "1.taivi-phu",
+  "sourceDigest": "27703fe78603e6998e2b791aafab3cbe4bfdc3181f17847fcf0712fe1aa11d95",
+  "claimId": "claim-9c-chung-thuy-trieu-dong",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "star_van_hao_dan_mao"
+  ],
+  "exceptions": [],
+  "quotation": "紫微輔弼同宮，一呼百諾居上品。文耗居寅卯，謂之眾水朝東。",
+  "uncertainties": [
+    "UNRESOLVED_IDENTITY: the span says 眾水朝東 and does not use the catalog name Chúng Thủy Triều Đông, so those names are not treated as proven identical.",
+    "The span is a Wikisource digital transcription, not a checked printed edition.",
+    "The runtime rule does not state star_van_hao_dan_mao.",
+    "The span also contains 紫微輔弼同宮，一呼百諾居上品, and no allowed condition id covers that sentence."
+  ],
+  "agentId": "bc-7eb846c1-563e-50bf-936b-0550f65dca32",
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "available": true,
+  "effort": "high"
+}

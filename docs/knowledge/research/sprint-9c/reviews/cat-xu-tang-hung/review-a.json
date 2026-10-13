@@ -1,0 +1,27 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "wikisource-zwds-oldid-850734",
+  "locator": "1.taivi-phu",
+  "sourceDigest": "a2c081961df8e1b841688678fbc48ffabd27236232a586371ead7385d3685ce9",
+  "claimId": "claim-9c-cat-xu-tang-hung",
+  "variantType": "rule",
+  "formulaComparison": "NOT_IMPLEMENTED",
+  "verdict": "NOT_IMPLEMENTED",
+  "conditions": [
+    "loc_clash",
+    "aphorism_only"
+  ],
+  "exceptions": [],
+  "quotation": "祿逢沖破，吉處藏凶。馬遇空亡，終身奔走。",
+  "uncertainties": [
+    "UNRESOLVED_IDENTITY: the span does not use the catalog name Cát Xứ Tàng Hung, so that name and 吉處藏凶 are not proven identical.",
+    "The span is a short aphorism and states no executable formula. The runtime rule is null.",
+    "The span also states 馬遇空亡，終身奔走, which has no allowed condition id.",
+    "The Wikisource span is a digital transcription, not a checked printed edition."
+  ],
+  "agentId": "bc-12d5a2dd-259c-5baa-9828-2ac97cc8173a",
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "available": true,
+  "effort": "high"
+}

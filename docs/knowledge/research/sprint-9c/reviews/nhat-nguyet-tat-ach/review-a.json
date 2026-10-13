@@ -1,0 +1,22 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "display-tw-2026-10-13",
+  "locator": "p122.htm",
+  "sourceDigest": "8ee6c88a300fe0426e3424b1aec25b6d63e1d70ce63f75dd4187413b3ae03742",
+  "claimId": "claim-9c-nhat-nguyet-tat-ach",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "palace_tat_ach",
+    "star_nhat_nguyet_same"
+  ],
+  "exceptions": [],
+  "quotation": "日月疾厄格 : 太陽、太陰同入疾厄宮，有身體障礙。但從事醫生、星相命卜之業，反主吉。",
+  "uncertainties": [],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-9a24c204-28e1-5f5b-b53f-9d7d8fd20ab4",
+  "effort": "high"
+}

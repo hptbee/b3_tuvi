@@ -1,0 +1,26 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "thienco-2026-10-13",
+  "locator": "tu-phu-vu-tuong.html",
+  "sourceDigest": "a4bdb4e50602f89087ca0c810dbf37b6446b26e05e7772d22213f3378c34db09",
+  "claimId": "claim-9c-tu-phu-vu-tuong",
+  "variantType": "rule",
+  "formulaComparison": "PARTIAL",
+  "verdict": "PARTIAL",
+  "conditions": [
+    "star_tu_phu_vu_tuong",
+    "not_same_palace"
+  ],
+  "exceptions": [],
+  "quotation": "Tử Phủ Vũ Tướng là cách gọi một hệ tổ hợp gồm bốn chính tinh: Tử Vi, Thiên Phủ, Vũ Khúc và Thiên Tướng. Khi nghiên cứu tổ hợp này, điều quan trọng nhất là không hiểu theo nghĩa bốn sao phải cùng nằm trong một cung.",
+  "uncertainties": [
+    "UNRESOLVED_IDENTITY",
+    "The page is a modern secondary webpage, not a checked printed edition, so the names are not a proven historical identity.",
+    "The runtime rule places the four stars at tam_hop, which the span does not name."
+  ],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-d1bba23e-270a-5089-addf-0571a3eec2e4",
+  "effort": "high"
+}

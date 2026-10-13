@@ -1,0 +1,20 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "wikisource-zwds-oldid-850734",
+  "locator": "1.taivi-phu",
+  "sourceDigest": "34757c6d34d6bad5b7c3d3612951c8408d34bbde41e01654f8b2ce8dd6bac1bf",
+  "claimId": "claim-9c-lo-bang-mai-thi",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "star_sat_liem_same"
+  ],
+  "exceptions": [],
+  "quotation": "七殺廉貞同位，路上埋屍。",
+  "uncertainties": [],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-1b2b6271-fe78-5061-a2b4-2aa784ae69d7"
+}

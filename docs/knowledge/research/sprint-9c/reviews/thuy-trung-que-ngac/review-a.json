@@ -1,0 +1,26 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "wikisource-zwds-oldid-850734",
+  "locator": "1.taivi-phu",
+  "sourceDigest": "8a625e411c7edb8d407b15ccd2340c06e5498f49b4a8c42059f86473ebc9ff5a",
+  "claimId": "claim-9c-thuy-trung-que-ngac",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "branch_ty",
+    "star_nguyet_host"
+  ],
+  "exceptions": [],
+  "quotation": "太陰居子，號曰水澄桂萼，得清要之職，忠諫之材。",
+  "uncertainties": [
+    "Wikisource span is a digital transcription, not a checked printed edition.",
+    "Prior identity status is UNRESOLVED_IDENTITY. The span names 水澄桂萼 and does not print the Vietnamese catalog string Thủy Trừng Quế Ngạc.",
+    "The span states 太陰居子 only. The runtime rule adds the star Thiên Đồng and the palace menh, which the span does not state."
+  ],
+  "agentId": "bc-93a3c763-afbb-5948-8b4d-8f18c4ea20a1",
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "available": true,
+  "effort": "high"
+}

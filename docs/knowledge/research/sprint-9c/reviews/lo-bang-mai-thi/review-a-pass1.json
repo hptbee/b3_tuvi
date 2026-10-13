@@ -1,0 +1,21 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "wikisource-zwds-oldid-850734",
+  "locator": "1.taivi-phu",
+  "sourceDigest": "34757c6d34d6bad5b7c3d3612951c8408d34bbde41e01654f8b2ce8dd6bac1bf",
+  "claimId": "claim-9c-lo-bang-mai-thi",
+  "variantType": "rule",
+  "formulaComparison": "CONFLICT",
+  "verdict": "CONFLICT",
+  "conditions": [
+    "star_sat_liem_same",
+    "alias_lo_thuong"
+  ],
+  "exceptions": [],
+  "quotation": "七殺廉貞同位，路上埋屍",
+  "uncertainties": [],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-a04561a0-42ef-52da-8b5c-5109ed1ed431"
+}

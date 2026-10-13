@@ -1,0 +1,25 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "display-tw-2026-10-13",
+  "locator": "p128.htm",
+  "sourceDigest": "61110ae5e94cfea0d8c63495374402527b8c73618d97b7a02a4b636b63b1fe24",
+  "claimId": "claim-9c-thien-co-ty-hoi",
+  "variantType": "rule",
+  "formulaComparison": "NOT_IMPLEMENTED",
+  "verdict": "NOT_IMPLEMENTED",
+  "conditions": [
+    "star_co_host",
+    "branch_ty_hoi_alone",
+    "star_nguyet_opposite"
+  ],
+  "exceptions": [],
+  "quotation": "天機巳亥格 : 天機星在巳、亥宮獨坐，對宮為太陰星，財帛同巨在丑未，官祿在卯酉空宮借陽梁。此格局之人機謀善辯，亦有離宗及遠親人之際遇，所以並不是以正面及好命的角度來註解這個格局。",
+  "uncertainties": [
+    "UNRESOLVED_IDENTITY"
+  ],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-503064f9-3148-5a76-9ac8-243e0beb64e2",
+  "effort": "high"
+}
