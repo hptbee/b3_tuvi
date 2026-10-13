@@ -37,6 +37,8 @@ Giữ hành vi đã có của engine, API, hoặc chuẩn hóa. Kết quả kỳ
 
 - `numerologyCharts.test.mjs`: nine-year personal-year window, twelve personal months, Pythagorean letter counts, birth/name presence, and unchanged core pinnacle numbers. Product counting convention, not an externally verified school.
 
+- `numerologyIndicators.test.mjs`: Decoz-convention frequency, initials, rational thought and published-core bridges, including the Thomas John Hancock example and a missing-name case. Not an expert-verified golden case.
+
 - `numerologyCore.test.mjs`: independent hand-derived product-spec arithmetic fixtures, Unicode/calendar negatives and invariants. Experimental Pythagorean convention; not an externally verified domain reference.
 
 Dữ liệu dựng trong test, database tạm, hoặc lỗi giả. Không dùng cho luận giải người dùng.
