@@ -31,7 +31,7 @@
       "id":"method-divergence",
       "input":{"birthDate":{"year":2000,"month":9,"day":11}},
       "expected":{"lifePath":4,"birthday":11,"attitude":2,"expression":null,"soulUrge":null,"personality":null,"maturity":null},
-      "derivation":"All date digits 1+1+9+2+0+0+0=13 -> 4; component method with master day would give 22 and is intentionally not this profile"
+      "derivation":"All date digits 1+1+0+9+2+0+0+0=13 -> 4; reducing day 11, month 9 and year 2 while keeping the master day gives 22 and is intentionally not this profile"
     },
     {
       "id":"vietnamese-d",

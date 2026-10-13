@@ -5,7 +5,7 @@ Implementation convention: `pythagorean-vn-v1`, version 1.2.0, experimental.
 - D01/D02/D03: use proposed Pythagorean all-date-digits calculation and per-metric 11/22/33 preservation. A 11/09/2000 divergence fixture prevents silent switch to component reduction.
 - D04/D05/D06/D09: optional entered name, Latin/Vietnamese accent normalization, explicit Y=consonant, missing name/subsets unavailable. No name inferred from Tu Vi or browser storage.
 - D08: Gregorian date-only, integer fields, same supported year bounds as current product; injected referenceDate rejects future dates.
-- D11: no externally reviewed content exists. All meanings withheld; no positive source-verification flags and no AI prose.
+- D11: no externally reviewed content exists. All meanings withheld; no positive source-verification flags and no AI prose. Cập nhật kiểm toán 2026-10-13: câu “all meanings withheld” là quyết định tại thời điểm viết D11. Catalog `1.0.0` sau đó xuất 102 mục `experimental_editorial` cho chỉ số cốt lõi và chu kỳ. `expertVerified` và `bookVerified` vẫn là false. Đỉnh, thử thách và số 33 vẫn withheld. Không có lời AI.
 - D12: POST calculation, no personal query string or persistence; no-store and safe logging tested at API boundary.
 - D07: calendar-year cycles now enabled; targetDate default captured Vietnam referenceDate, range birth through2199, all cycles ordinary1–9.
 - Birth grid: DDMMYYYY with paddingzeros counted as ignored; countsonly/eightline states, no sourced arrow meanings.

@@ -28,4 +28,18 @@ No external book/edition has been acquired, authenticated or compared in this im
 
 Supplementary inspected artifact: NPM `@csessh/sochumenh@0.3.0`, MITlicense, packageauthor agentics-vn; LICENSE identifies La Quoc Thinh2023. Tarballintegrity verified `sha512-scB6AoRzYyhtx//2ccMPQqGUAPvZP4j65LKeXUOfubXF4HMvI1fzZ/fCAhoj3EjMw6TcjchoIM0bwtYxOlU2CA==`; files read asdata withscriptsdisabled, not executed/imported. Statedrepository URL didnotresolve. This is a comparison artifact only, not a publishedcontent source or authenticated book; its imperativecareer/finance-like claims were not adopted.
 
-Acquisitionlimits: directarticleHTTP to numerology.com/worldnumerology.com/Wikipedia returned proxy403; networkgrant/escalation didnotchange it; directTLS failedDNS. NPMpublicmetadata and GitHTTPSproxy worked, providing the actual community artifact above. No forged bibliography to fill gaps. Contenteligibility and independenteditorialreview are tracked separately in [CONTENT_POLICY](CONTENT_POLICY.md).
+Acquisition limits ghi tại lần lập registry: direct article HTTP to numerology.com/worldnumerology.com/Wikipedia returned proxy 403; a network grant did not change that result; direct TLS failed DNS. NPM public metadata and Git HTTPS worked for the community artifact above. No forged bibliography was added then.
+
+## Web pages read in the 2026-10-13 audit
+
+A later audit fetch read these Hans Decoz pages. Status `source_read`. `edition_verified=false`. They are not books, and they do not replace the product profile.
+
+| ID | URL | Use |
+|---|---|---|
+| SRC-DECOZ-METHOD | https://www.worldnumerology.com/do-your-own-reading/ | Component life path with masters; pinnacle inputs keep masters; challenge subtraction; per-name expression; conditional Y; calendar personal cycles |
+| SRC-DECOZ-LIFEPATH | https://www.worldnumerology.com/numerology-life-path/ | Same life-path method, with worked dates |
+| SRC-DECOZ-PINNACLE | https://www.worldnumerology.com/numerology-pinnacles/ | Pinnacle sums and age `36` minus the single-digit life path |
+| SRC-DECOZ-CHALLENGE | https://www.worldnumerology.com/numerology-challenges/ | Absolute differences after master reduction; durations described as approximate |
+| SRC-DECOZ-MONTH | https://www.worldnumerology.com/free-forecasts/monthly-numerology-forecast.html | Calendar personal month/day; 11 is not kept on personal cycles |
+
+Conflicts with `pythagorean-vn-v1` 1.2.0 are recorded in [audits/SOURCE_RESEARCH_REPORT.md](audits/SOURCE_RESEARCH_REPORT.md). Do not copy interpretive paragraphs from these pages into the catalog. The earlier 403 note stays as the record of that attempt. Content eligibility remains in [CONTENT_POLICY](CONTENT_POLICY.md).
