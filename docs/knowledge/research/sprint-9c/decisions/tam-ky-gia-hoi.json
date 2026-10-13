@@ -1,0 +1,52 @@
+{
+  "decisionId": "tam-ky-gia-hoi-2026-10-13",
+  "policyVersion": "dual-ai-source-review-v1",
+  "promptVersion": "dual-ai-source-review-v1-prompt-1",
+  "subjectType": "claim",
+  "subjectId": "claim-9c-tam-ky-gia-hoi",
+  "schoolId": "unassigned-modern-article",
+  "variantType": "rule",
+  "variantId": "rule-not-runtime",
+  "sourceId": "xinglin-108s",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/257",
+  "sourceDigest": "7d67834d5fa1d05530439068bf4cbb517ecba7fa32ceb7174b9bc85ee91924d9",
+  "sourceUrl": "https://www.108s.tw/article/info/257",
+  "pdfTextChecked": false,
+  "binding": "webpage_excerpt",
+  "identity": "UNRESOLVED_IDENTITY",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "effort": "high",
+      "requestedAs": "Grok 4.7 High",
+      "verdict": "PARTIAL",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/tam-ky-gia-hoi/review-a.json",
+      "agentId": "bc-2f4d0a4b-ac30-5ae9-8efd-c9c47cdf1d93",
+      "available": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "effort": "medium",
+      "requestedAs": "GPT 5.6 Terra Medium",
+      "verdict": "PARTIAL",
+      "reviewRef": "docs/knowledge/research/sprint-9c/reviews/tam-ky-gia-hoi/review-b.json",
+      "agentId": "bc-5f822fcb-ce5e-54ee-9b41-089a79697298",
+      "available": true
+    }
+  ],
+  "decision": "AI_ACCEPTED",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "notes": "Comparator agreed on PARTIAL. The Vietnamese catalog name is not proven by the excerpt. The runtime rule was not changed.",
+  "crossReviewOutcome": "AI_CROSS_REVIEWED",
+  "formulaComparison": "PARTIAL",
+  "conditions": [
+    "bright",
+    "palace_menh",
+    "star_hoa_loc_quyen_khoa"
+  ],
+  "exceptions": [],
+  "retrievedAt": "2026-10-13"
+}

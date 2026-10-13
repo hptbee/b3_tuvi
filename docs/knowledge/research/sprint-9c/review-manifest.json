@@ -1,0 +1,110 @@
+[
+  {
+    "slug": "duong-luong-xuong-loc",
+    "combinationName": "Dương Lương Xương Lộc",
+    "sourceDigest": "83b5137e909cf2d8a3417a81085e4b7905d66f16ee8919f70715687193df741a",
+    "allowed": [
+      "palace_menh",
+      "branch_mao",
+      "star_duong_luong_same",
+      "star_xuong",
+      "star_loc"
+    ],
+    "anchor": "太陽星、天梁星同宮坐命在卯位",
+    "locator": "article/info/225",
+    "span": "太陽星、天梁星同宮坐命在卯位，命宮同時有太陽化祿或祿存，並有文昌星同坐，就能構成此格局的基本條件。"
+  },
+  {
+    "slug": "nhat-chieu-loi-mon",
+    "combinationName": "Nhật Chiếu Lôi Môn",
+    "sourceDigest": "5cfe5c74eb3d2f1344df9aa758073d125234c9705c9f4a921cd9c50b5142c6c1",
+    "allowed": [
+      "palace_menh",
+      "branch_mao",
+      "star_duong_luong_same",
+      "avoid_sat_khong_kiep",
+      "strengthened_by_loc_qui"
+    ],
+    "anchor": "太陽星、天梁星同宮坐命在卯位",
+    "locator": "article/info/224",
+    "span": "太陽星、天梁星同宮坐命在卯位，就能構成此格局的基本條件。貴格需三方四正皆無煞忌及地空、地劫，還需有祿存或化祿、天魁、天鉞、左輔、右弼等吉星會照，越多越好。"
+  },
+  {
+    "slug": "thach-trung-an-ngoc",
+    "combinationName": "Thạch Trung Ẩn Ngọc",
+    "sourceDigest": "490ffee1da67ba414b3b0b164eecbf9bacb95ff1fd82e3436c31e81f610d3884",
+    "allowed": [
+      "palace_menh",
+      "branch_ty_ngo",
+      "star_cu_host",
+      "strengthened_by_loc_quyen"
+    ],
+    "anchor": "巨門星坐命子位或午位",
+    "locator": "article/info/227",
+    "span": "巨門星坐命子位或午位，就能構成此格局的基本條件。貴格為巨門星坐命子位，同宮加會祿、權或祿存，三方四正內不逢煞忌。"
+  },
+  {
+    "slug": "tam-ky-gia-hoi",
+    "combinationName": "Tam Kỳ Gia Hội",
+    "sourceDigest": "7d67834d5fa1d05530439068bf4cbb517ecba7fa32ceb7174b9bc85ee91924d9",
+    "allowed": [
+      "palace_menh",
+      "star_hoa_loc_quyen_khoa",
+      "bright"
+    ],
+    "anchor": "命宮三方四正內，會集化祿、化權、化科",
+    "locator": "article/info/257",
+    "span": "命宮三方四正內，會集化祿、化權、化科，就能構成此格局的基本條件。貴格還需看宮位內的主星是否廟旺，以及化忌只能在命宮、財帛宮、官祿宮、田宅宮、福德宮。"
+  },
+  {
+    "slug": "khong-kiep-giap-menh",
+    "combinationName": "Không Kiếp Giáp Mệnh",
+    "sourceDigest": "aa2c0551ca20d77de526e3946c5add4fd2c8051d4afe5765884bfaf88db2e49b",
+    "allowed": [
+      "palace_menh",
+      "star_khong_kiep_flank"
+    ],
+    "anchor": "父母宮、兄弟宮各有一顆地空或地劫夾命宮",
+    "locator": "article/info/245",
+    "span": "父母宮、兄弟宮各有一顆地空或地劫夾命宮，就能構成此格局的基本條件。空劫夾命為敗局。"
+  },
+  {
+    "slug": "kinh-da-giap-menh",
+    "combinationName": "Kình Đà Giáp Mệnh",
+    "sourceDigest": "2fc2291a9025558550521909501d13812a05738a692df1b3d4cb2986d526062d",
+    "allowed": [
+      "palace_menh",
+      "star_loc_ton_host",
+      "star_kinh_da_flank"
+    ],
+    "anchor": "命宮有祿存時，必定被擎羊、陀羅夾",
+    "locator": "article/info/247",
+    "span": "命宮有祿存時，必定被擎羊、陀羅夾，就能構成此格局的基本條件。主人貴爵，掌人壽基，若獨守命而無吉化，乃看財奴耳。"
+  },
+  {
+    "slug": "co-cu-dong-lam",
+    "combinationName": "Cơ Cự Đồng Lâm",
+    "sourceDigest": "aafc179457c1533b112544804f535d3520b73c04d082668bb8a9e449dacccbb8",
+    "allowed": [
+      "palace_menh",
+      "branch_mao_dau",
+      "star_co_cu_same"
+    ],
+    "anchor": "天機星、巨門星同宮坐命在卯位或酉位",
+    "locator": "article/info/232",
+    "span": "天機星、巨門星同宮坐命在卯位或酉位，就能構成此格局的基本條件。貴格為，坐命在卯位，並且無煞忌，還需要有吉星照會。"
+  },
+  {
+    "slug": "giap-de-dang-khoa",
+    "combinationName": "Giáp Đệ Đăng Khoa",
+    "sourceDigest": "78831cf38ca62f348e7f7ae57ab5abde0ec06c5bccf43332fd5260e33e3fdc79",
+    "allowed": [
+      "palace_menh",
+      "star_hoa_khoa_host",
+      "star_hoa_quyen_aspect"
+    ],
+    "anchor": "命宮主星化科，三方四正內有星曜化權來照會",
+    "locator": "article/info/259",
+    "span": "命宮主星化科，三方四正內有星曜化權來照會，就能構成此格局的基本條件。貴格還需三方四正無煞忌，並且有吉星坐命或照會命宮。"
+  }
+]

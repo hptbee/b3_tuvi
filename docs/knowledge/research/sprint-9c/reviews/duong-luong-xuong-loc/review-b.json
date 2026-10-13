@@ -1,0 +1,26 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/225",
+  "sourceDigest": "83b5137e909cf2d8a3417a81085e4b7905d66f16ee8919f70715687193df741a",
+  "claimId": "claim-9c-duong-luong-xuong-loc",
+  "variantType": "rule",
+  "formulaComparison": "MATCH",
+  "verdict": "MATCH",
+  "conditions": [
+    "palace_menh",
+    "branch_mao",
+    "star_duong_luong_same",
+    "star_xuong",
+    "star_loc"
+  ],
+  "exceptions": [],
+  "quotation": "太陽星、天梁星同宮坐命在卯位，命宮同時有太陽化祿或祿存，並有文昌星同坐，就能構成此格局的基本條件。",
+  "uncertainties": [
+    "The span does not establish that this Chinese-described configuration is identical to the catalog name Dương Lương Xương Lộc."
+  ],
+  "available": true,
+  "model": "gpt-5.6-terra-medium",
+  "requestedAs": "GPT 5.6 Terra Medium",
+  "agentId": "bc-394fe448-57a5-5bf7-9013-4e209d079016"
+}

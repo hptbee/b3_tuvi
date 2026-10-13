@@ -1,0 +1,33 @@
+promptVersion: dual-ai-source-review-v1-prompt-1
+policyVersion: dual-ai-source-review-v1
+editionId: xinglin-108s-2026-10-13
+sourceId: xinglin-108s
+schoolScope: unassigned-modern-article
+locator: article/info/245
+sourceDigest: aa2c0551ca20d77de526e3946c5add4fd2c8051d4afe5765884bfaf88db2e49b
+retrievedAt: 2026-10-13
+sourceUrl: https://www.108s.tw/article/info/245
+
+Read only the span below. It is a short excerpt from a modern article, not a classical quotation. Do not add sentences that are not in the span. Do not look at another model's answer. Return one JSON object and no other text.
+
+The catalog name is Không Kiếp Giáp Mệnh. The span does not state that this Chinese wording is the same rule as that Vietnamese name. Do not treat the names as proven identical.
+
+Compare this runtime rule to the span.
+Runtime rule JSON: {"id": "khong_kiep_giap_menh", "combination": "Không Kiếp Giáp Mệnh", "target": "menh", "giap": {"stars": ["Địa Không", "Địa Kiếp"], "mode": "both_flanks"}}
+
+Select a condition id only when the span states that requirement.
+Allowed condition ids:
+palace_menh
+star_khong_kiep_flank
+
+verdict is MATCH only when the runtime rule states every selected condition. PARTIAL when it states some and omits others. CONFLICT when it contradicts the span. NOT_IMPLEMENTED when the runtime rule is null.
+
+quotation must be an exact contiguous substring of the span, at least 40 characters, and must include this anchor: 父母宮、兄弟宮各有一顆地空或地劫夾命宮
+
+JSON keys:
+schoolId, editionId, locator, sourceDigest, claimId, variantType, formulaComparison, verdict, conditions, exceptions, quotation, uncertainties
+
+Use schoolId unassigned-modern-article, editionId xinglin-108s-2026-10-13, locator "article/info/245", sourceDigest aa2c0551ca20d77de526e3946c5add4fd2c8051d4afe5765884bfaf88db2e49b, claimId claim-9c-khong-kiep-giap-menh, variantType rule. formulaComparison must equal verdict. exceptions must be [].
+
+SPAN:
+父母宮、兄弟宮各有一顆地空或地劫夾命宮，就能構成此格局的基本條件。空劫夾命為敗局。

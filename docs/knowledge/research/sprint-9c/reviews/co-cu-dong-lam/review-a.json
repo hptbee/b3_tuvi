@@ -1,0 +1,25 @@
+{
+  "schoolId": "unassigned-modern-article",
+  "editionId": "xinglin-108s-2026-10-13",
+  "locator": "article/info/232",
+  "sourceDigest": "aafc179457c1533b112544804f535d3520b73c04d082668bb8a9e449dacccbb8",
+  "claimId": "claim-9c-co-cu-dong-lam",
+  "variantType": "rule",
+  "formulaComparison": "MATCH",
+  "verdict": "MATCH",
+  "conditions": [
+    "palace_menh",
+    "branch_mao_dau",
+    "star_co_cu_same"
+  ],
+  "exceptions": [],
+  "quotation": "天機星、巨門星同宮坐命在卯位或酉位，就能構成此格局的基本條件。貴格為，坐命在卯位，並且無煞忌，還需要有吉星照會。",
+  "uncertainties": [
+    "The span does not state that this Chinese wording is the same rule as Cơ Cự Đồng Lâm.",
+    "The span states a 貴格 that further requires 坐命在卯位, 無煞忌, and 吉星照會; those constraints are not selected condition ids."
+  ],
+  "available": true,
+  "model": "grok-4.7-high",
+  "requestedAs": "Grok 4.7 High",
+  "agentId": "bc-46972272-efa5-5fe7-a18b-df10293fe4f7"
+}

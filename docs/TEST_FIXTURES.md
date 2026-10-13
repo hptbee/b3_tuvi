@@ -66,5 +66,6 @@ Khóa tính chất: không nâng nguồn từ test pass, catalog không thành p
 - `sourceBinding.test.mjs`
 - `combinationBatch.test.mjs`
 - `combinationResearch.test.mjs`
+- `sprint9cDiscovery.test.mjs`
 - `fixtureClasses.test.mjs`
 - `perfSmoke.test.mjs`

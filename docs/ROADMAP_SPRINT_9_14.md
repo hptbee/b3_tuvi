@@ -135,6 +135,8 @@ Không nằm trong phạm vi khi chưa có quyết định sản phẩm mới: t
 
 **Trạng thái 9B đo ngày 2026-10-13:** research record 63/63. Span Tân Biên đọc được 24/63. PDF từng trang chưa mở lại trong batch này (0/63). Dual-AI đã ghi 24/63. Công thức `MATCH` 3, `PARTIAL` 6, `CONFLICT` 3, `NOT_IMPLEMENTED` 2. 39 cách còn `SOURCE_INACCESSIBLE` vì các sách kia không có toàn văn trong repo. Trạng thái: `RESEARCH_COMPLETE_WITH_GAPS`. Chi tiết ở `docs/knowledge/SPRINT_9B_COMPLETION_REPORT.md`. Không sửa `rulesV2.json`.
 
+**Sprint 9C:** 39 URL ứng viên đã được mở (HTTP 200). Tám đoạn hiện đại có dual-AI riêng, không ghi đè 24 quyết định Tân Biên. Một `MATCH` trên excerpt không chứng minh tên Việt trùng tên Hán. Báo cáo: `docs/knowledge/SPRINT_9C_SOURCE_DISCOVERY_REPORT.md`.
+
 **Mục tiêu:** Xây quy trình **hai model kiểm chứng chéo** giúp chủ dự án không phải là chuyên gia Tử Vi vẫn nghiên cứu được sách, phân loại trường phái, đối chiếu công thức và tạo claim có căn cứ; sau đó chứng minh **một vertical slice** từ đoạn sách đến phân tích có điều kiện trong internal/research mode.
 
 **Kết quả chấp nhận theo policy là `AI_CROSS_REVIEWED`, không phải `EXPERT_VERIFIED` hoặc sự thật khoa học.** Hai model có thể cùng sai; chỉ chấp nhận những gì người khác có thể truy ngược và tự kiểm lại trên tài liệu.
