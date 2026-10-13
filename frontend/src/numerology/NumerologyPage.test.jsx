@@ -313,6 +313,18 @@ it('explains when the displayed result cannot be exported', async () => {
   expect(await screen.findByRole('alert')).toHaveTextContent('không thuộc quy ước');
 });
 
+it('offers a retry when calculation is rate limited', async () => {
+  vi.stubGlobal('fetch', vi.fn(async () => ({ ok: false, status: 429, json: async () => ({ error: {
+    code: 'RATE_LIMITED', message: 'Bạn đã gửi quá nhiều yêu cầu. Vui lòng chờ một lúc rồi thử lại.', fields: []
+  } }) })));
+  const user = userEvent.setup();
+  render(<NumerologyPage />);
+  await fillDate(user);
+  await user.click(screen.getByRole('button', { name: 'Xem kết quả' }));
+  expect(await screen.findByRole('alert')).toHaveTextContent('quá nhiều yêu cầu');
+  expect(screen.getByRole('button', { name: 'Thử lại' })).toBeVisible();
+});
+
 it('explains an unsupported import without sending it', async () => {
   const fetch = vi.fn(async () => success(result()));
   vi.stubGlobal('fetch', fetch);

@@ -333,6 +333,19 @@ test('print hides the form and import recalculates instead of trusting the file'
   await expect(output(page, 'Đường đời')).toHaveText('4');
 });
 
+test('informational numerology page stays indexable without a birth-data canonical', async ({ page }) => {
+  await page.goto('/than-so-hoc');
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'index, follow');
+  await expect(page.locator('link[rel="canonical"]')).toHaveCount(0);
+  const robots = await page.request.get('/robots.txt');
+  expect(robots.status()).toBe(200);
+  expect(await robots.text()).toContain('Disallow: /la-so');
+  await page.goto('/la-so?day=15&month=6&year=1990&hour=8&gender=1');
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'noindex, nofollow');
+  expect(page.url()).toContain('day=15');
+  await expect(page.locator('link[rel="canonical"]')).toHaveCount(0);
+});
+
 test('master33 stays numeric with a clear unavailable-reading reason', async ({ page }) => {
   await page.goto('/than-so-hoc'); await fill(page, { day: 29, month: 3, year: 1990 }); await submit(page);
   const card = page.getByRole('article', { name: 'Đường đời', exact: true });

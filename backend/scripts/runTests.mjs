@@ -41,6 +41,7 @@ export const unitTests = [
 
 export const integrationTests = [
     'test/numerologyApi.test.mjs',
+    'test/numerologyRateLimit.test.mjs',
     'test/combinationRoute.integration.test.mjs',
     'test/sqlite.test.mjs',
     'test/knowledgePrototype.test.mjs',

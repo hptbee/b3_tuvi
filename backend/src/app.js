@@ -7,12 +7,14 @@ import combinationRoutes from './routes/combinationRoutes.js';
 import interpretationRoutes from './routes/interpretationRoutes.js';
 import numerologyRoutes, { numerologyNoStore, numerologyErrorHandler } from './routes/numerologyRoutes.js';
 import { requestLogLine } from './http/requestLog.js';
+import { createNumerologyRateLimit } from './http/numerologyRateLimit.js';
 
 export function createApp() {
     const app = express();
     app.disable('x-powered-by');
     app.use('/api/numerology', numerologyNoStore);
     app.use(cors());
+    app.use('/api/numerology', createNumerologyRateLimit());
     app.use(express.json({ limit: '256kb' }));
     app.use((req, res, next) => {
         const requestId = typeof req.get('x-request-id') === 'string' && req.get('x-request-id').length <= 80
