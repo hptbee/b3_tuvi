@@ -80,7 +80,7 @@ These numbers are one local run. They are not a production SLO. The existing API
 - `npm run test:e2e --prefix frontend`: 34 passed.
 - Chart navigation scenario repeated with `--repeat-each=10`: 10 passed.
 
-GitHub Actions status belongs in the pull request after the push. Do not copy this local pass into that status.
+GitHub Actions run `38395357768` on `cursor/numerology-release-hardening-2318` completed with `backend`, `frontend`, and `e2e` successful. The pull-request run `38395391186` also completed with those three jobs successful. Earlier branches still contain the unsynchronized chart test: audit run `38386327026` and content push run `38391879426` failed `e2e` on `chart.spec.js` expecting `10 giờ 00 phút` and receiving `1 giờ 00 phút`. Their other recorded runs passed, which matches the race rather than a calculation change.
 
 ## Staging checklist
 
