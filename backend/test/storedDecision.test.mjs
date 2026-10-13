@@ -2,30 +2,12 @@ import assert from 'assert';
 import { createHash } from 'crypto';
 import { readdirSync, readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
-import { compareReviews } from '../src/knowledge/crossReview.js';
+import { verifyDecisionBinding } from '../src/knowledge/decisionIntegrity.js';
+import { reviewBaseline } from '../src/knowledge/extractionBaseline.js';
 import { readDecision, validateDecisionRecord } from '../src/knowledge/decisionRegistry.js';
 
 const root = fileURLToPath(new URL('../../docs/knowledge/', import.meta.url));
 const manifest = JSON.parse(readFileSync(`${root}combination-passages.json`, 'utf8'));
-
-function allowedIds(prompt) {
-    const block = prompt.split('Allowed condition ids:\n')[1]?.split('\n\n')[0] || '';
-    return block.split('\n').map((line) => line.trim()).filter(Boolean);
-}
-
-function anchorOf(prompt) {
-    const line = prompt.split('\n').find((item) => item.includes('must include this anchor:'));
-    if (!line) return null;
-    return line.split('must include this anchor:')[1].replace(/^ /, '');
-}
-
-function requiredConditions(review, allowed) {
-    const conditions = review.conditions;
-    if (Array.isArray(conditions) && conditions.length > 0 && conditions.every((item) => typeof item === 'string' && item.trim() !== '')) {
-        return conditions;
-    }
-    return allowed;
-}
 
 const NGUYET_ANCHORS = [
     'Cung Mệnh hay Quan Lộc an tại Hợi có Nguyệt tọa thủ',
@@ -55,20 +37,25 @@ for (const file of files) {
     const prompt = readFileSync(`${root}reviews/${slug}/prompt-v1.txt`, 'utf8');
     const promptSpan = prompt.split('SPAN:\n')[1]?.replace(/\n$/, '');
     assert.strictEqual(promptSpan, span, slug);
-    const anchor = anchorOf(prompt);
-    const nguyet = slug === 'nguyet-lang-thien-mon';
-    const requiredAnchors = nguyet ? NGUYET_ANCHORS : [anchor];
-    assert.ok(requiredAnchors.every((item) => typeof item === 'string' && item.length >= 4), slug);
-    const compared = compareReviews({
-        sourceAvailable: true,
-        storedSpan: span,
-        sourceDigest: decision.sourceDigest,
+    const baseline = reviewBaseline({
+        span,
+        prompt,
         editionId: decision.editionId,
-        requiredConditions: nguyet ? decision.conditions : requiredConditions(reviewA, allowedIds(prompt)),
-        requiredExceptions: nguyet ? decision.exceptions : [],
-        requiredAnchors,
-        reviews: [reviewA, reviewB]
+        schoolId: decision.schoolId,
+        locator: decision.locator,
+        sourceDigest: decision.sourceDigest,
+        fallbackAnchors: NGUYET_ANCHORS
     });
+    assert.ok(baseline.requiredConditions.length > 0, slug);
+    assert.ok(baseline.requiredAnchors.every((item) => typeof item === 'string' && item.length >= 4), slug);
+    const binding = verifyDecisionBinding({
+        record: decision,
+        reviews: [reviewA, reviewB],
+        storedSpan: span,
+        baseline
+    });
+    assert.strictEqual(binding.ok, true, `${slug} ${binding.reason || ''} ${binding.compared?.reason || ''}`);
+    const compared = binding.compared;
     assert.strictEqual(compared.decision, decision.decision, `${slug} ${compared.reason || ''}`);
     assert.strictEqual(compared.expertVerified, false, slug);
     if (decision.decision === 'AI_ACCEPTED') {

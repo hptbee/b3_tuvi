@@ -26,6 +26,8 @@ export const unitTests = [
     'test/crossReview.test.mjs',
     'test/decisionRegistry.test.mjs',
     'test/storedDecision.test.mjs',
+    'test/decisionIntegrity.test.mjs',
+    'test/sourceBinding.test.mjs',
     'test/internalSlice.test.mjs',
     'test/crossReviewNegatives.test.mjs',
     'test/combinationBatch.test.mjs',

@@ -58,6 +58,8 @@ Khóa tính chất: không nâng nguồn từ test pass, catalog không thành p
 - `crossReviewNegatives.test.mjs`
 - `decisionRegistry.test.mjs`
 - `storedDecision.test.mjs`
+- `decisionIntegrity.test.mjs`
+- `sourceBinding.test.mjs`
 - `combinationBatch.test.mjs`
 - `fixtureClasses.test.mjs`
 - `perfSmoke.test.mjs`

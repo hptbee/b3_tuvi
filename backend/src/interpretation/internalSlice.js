@@ -48,7 +48,14 @@ function evaluateCondition(conditionId, chart) {
     return { conditionId, status: 'satisfied' };
 }
 
-export function evaluateInternalSlice(chart, decision) {
+export function evaluateInternalSlice(chart, decision, binding) {
+    if (!binding || binding.ok !== true) {
+        return result(decision, {
+            availabilityStatus: 'insufficient_evidence',
+            reason: 'binding_not_verified',
+            conditionResults: []
+        });
+    }
     const read = readDecision(decision);
     if (!read.ok || read.decision !== 'AI_ACCEPTED') {
         return result(decision, { availabilityStatus: 'insufficient_evidence', conditionResults: [] });
