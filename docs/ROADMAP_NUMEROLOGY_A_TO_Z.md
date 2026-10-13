@@ -923,15 +923,15 @@ MVP số học thử nghiệm đã thay preview ở `/than-so-hoc`. Chi tiết r
 | N0; NUM-001/003/004/005 | Baseline kiểm kê; quyết định/spec profile thử nghiệm, fixture độc lập và API contract đã có | NUM-002 source dossier chưa xác minh; không tuyên bố G0 nghiên cứu nguồn hoàn tất |
 | N1; NUM-010–017 | 7 metric, date-only, Unicode tiếng Việt, Y, master/root, unavailable states, trace và unit runner đã triển khai | Chứng cứ đúng theo quy ước sản phẩm; không tự nâng status nguồn |
 | N2; NUM-020/021/022–024/026 | API calculate/profiles/meanings, typed errors, catalog 102 mục và validator eligibility | Lời vẫn là biên tập thử nghiệm; chưa có bài đỉnh, thử thách hoặc 33 |
-| N2; NUM-025 | No-store (cả lỗi/preflight), logger không body/query, không persist; parser limit 256kb | Rate limiting và hardening production còn pending |
+| N2; NUM-025 | No-store (cả lỗi/preflight/429), logger không body/query, không persist; parser limit 256kb; limiter một process | Proxy nhiều instance, staging và phê duyệt release còn pending |
 | N3; NUM-030–035 | Landing/form/result, snapshot/retry/abort, disclosure và browser tests đã có | Disclosure là quy ước thử nghiệm, không là citation đã xác minh |
-| N3; NUM-036 | Probe keyboard/focus và mobile320/390, desktop1440 | Chưa audit WCAG đầy đủ, metadata/noindex/SEO production hoặc cross-browser |
-| N4; NUM-040–047 | Biểu đồ, chu kỳ và đỉnh cao/thử thách đã có như quy ước thử nghiệm `1.2.0` | Chưa có lời luận cho đỉnh cao/thử thách; export vẫn thuộc N5 |
-| N5; NUM-050–057 | Docs runtime và local CI checks đã có | Export/import/print Thần Số Học, benchmark, staging, rollback và phê duyệt release còn pending |
+| N3; NUM-036 | Probe keyboard/focus và mobile320/390, desktop1440; `lang=vi`; `/la-so` là `noindex` | Chưa audit WCAG đầy đủ hoặc cross-browser |
+| N4; NUM-040–047 | Biểu đồ, chu kỳ và đỉnh cao/thử thách đã có như quy ước thử nghiệm `1.2.0` | Chưa có lời luận cho đỉnh cao/thử thách |
+| N5; NUM-050–057 | Export/import/print, probe hiệu năng local và checklist staging đã có | Staging sống, rollback diễn tập và phê duyệt release còn pending |
 | N6 | Pending, không chặn calculator | Profile bổ sung, AI và cross-browser theo gate riêng. Nội dung cốt lõi/chu kỳ đã có ở dạng thử nghiệm, không thuộc nhóm “chưa có chữ”. |
 
 Đoạn trên cập nhật hiện trạng tính đến kiểm toán 2026-10-13. Câu lịch sử trước đó nói `contentVersion=null` và mọi `meaning=null` mô tả giai đoạn trước catalog, không còn là runtime HEAD.
 
 Không đánh dấu các checklist phát hành §15 đã xong. `sourceStatus=product_specification_only`, `status=experimental`. Chỉ số cốt lõi và chu kỳ có thể mang `experimental_editorial` khi catalog hợp lệ. Đỉnh, thử thách và số 33 vẫn withheld. Các trang Decoz đọc trong kiểm toán là `source_read`, không phải sách đã xác minh, và không tự approved thành profile mới.
 
-Thứ tự kế tiếp: (1) giữ số của profile 1.2.0, chỉ tạo profile mới nếu muốn theo biến thể Decoz đã ghi, (2) export/import/print, (3) hardening/staging/rollback trước release. Báo cáo: [audits/DEEP_AUDIT_REPORT.md](numerology/audits/DEEP_AUDIT_REPORT.md).
+Thứ tự kế tiếp: giữ số của profile 1.2.0; chỉ tạo profile mới nếu muốn theo biến thể Decoz đã ghi; diễn tập staging và rollback trước khi phê duyệt release. Export/import/print và limiter một process đã có mã và test local. Báo cáo: [audits/DEEP_AUDIT_REPORT.md](numerology/audits/DEEP_AUDIT_REPORT.md) và [RELEASE_READINESS.md](numerology/RELEASE_READINESS.md).

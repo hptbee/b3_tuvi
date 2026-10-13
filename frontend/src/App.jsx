@@ -86,6 +86,28 @@ function App() {
   const navigate = useNavigate();
   const location = useLocation();
   const isNumerology = location.pathname === '/than-so-hoc';
+  useEffect(() => {
+    let robots = document.querySelector('meta[name="robots"]');
+    if (!robots) {
+      robots = document.createElement('meta');
+      robots.setAttribute('name', 'robots');
+      document.head.appendChild(robots);
+    }
+    robots.setAttribute('content', location.pathname === '/la-so' ? 'noindex, nofollow' : 'index, follow');
+    const origin = import.meta.env.VITE_SITE_ORIGIN;
+    const canonicalOrigin = typeof origin === 'string' && /^https:\/\/[a-z0-9.-]+(?::\d+)?$/i.test(origin) ? origin : '';
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonicalOrigin) {
+      canonical?.remove();
+      return;
+    }
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', `${canonicalOrigin}${location.pathname}`);
+  }, [location.pathname]);
   const hasQuery = ['day', 'month', 'year'].every(key => params.has(key));
   const query = params.toString();
   const input = draft.query === query ? draft.input : readInput(params);

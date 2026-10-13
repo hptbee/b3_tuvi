@@ -27,6 +27,7 @@ Giữ hành vi đã có của engine, API, hoặc chuẩn hóa. Kết quả kỳ
 ## Synthetic test case
 
 - `numerologyApi.test.mjs`: real HTTP contract/validation/privacy and unchanged temp SQLite counts for the experimental calculator.
+- `numerologyRateLimit.test.mjs`: per-process window, proxy-token key, reset and HTTP 429. Not a multi-instance production proof.
 
 - `numerologyContent.test.mjs`: versioned original-editorial schema, source/review eligibility and immutable public serializer; community themes not expert formula proof.
 
