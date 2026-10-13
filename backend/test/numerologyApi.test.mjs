@@ -50,7 +50,7 @@ try {
     assert.equal(result.metrics.lifePath.value, 4);
     assert.equal(result.metrics.personality.value, 11);
     assert.equal(result.nameAnalysis.normalized, 'NGUYEN VAN AN');
-    assert.equal(result.contentVersion, '1.0.0');
+    assert.equal(result.contentVersion, '1.1.0');
     assert.equal(result.metrics.lifePath.meaningStatus, 'experimental_editorial');
     assert.equal(result.metrics.lifePath.meaning.expertVerified, false);
     assert.equal(result.metrics.lifePath.meaning.value, 4);
@@ -92,7 +92,7 @@ try {
     assert.equal(unsupportedMeaning.meaning, null);
     assert.equal(unsupportedMeaning.meaningStatus, 'withheld');
     assert.equal(unsupportedMeaning.meaningReason, 'source_unavailable');
-    assert.equal(meaningBody.contentVersion, '1.0.0');
+    assert.equal(meaningBody.contentVersion, '1.1.0');
     const unnamed = await (await post(JSON.stringify({ birthDate: birth.birthDate }))).json();
     assert.equal(unnamed.metrics.expression.status, 'unavailable');
     assert.equal(unnamed.metrics.expression.value, null);

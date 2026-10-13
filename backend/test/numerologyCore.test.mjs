@@ -13,7 +13,7 @@ for (const { id, input, expected } of fixture.cases) {
     for (const [metric, value] of Object.entries(expected)) assert.equal(result.metrics[metric].value, value, `${id}/${metric}`);
     assert.equal(JSON.stringify(input), before, `${id}: input mutation`);
     assert.equal(result.profile.status, 'experimental');
-    assert.equal(result.contentVersion, '1.0.0');
+    assert.equal(result.contentVersion, '1.1.0');
     for (const metric of Object.values(result.metrics)) {
         const eligible = metric.status === 'available' && metric.value !== 33;
         assert.equal(metric.meaningStatus, eligible ? 'experimental_editorial' : 'withheld');
