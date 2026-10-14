@@ -1,0 +1,26 @@
+{
+  "decisionId": "nguyet-duc-branch-placement-2026-10-14",
+  "subjectId": "nguyet-duc-branch-placement",
+  "doesNotReplace": [
+    "docs/knowledge/research/fortune/juan2-annual-star-review.json",
+    "docs/knowledge/research/fortune/thien-duc-convention-decision.json"
+  ],
+  "sourceSentence": "月德星從子上起子，順數至流年太歲上是也。",
+  "convention": "https://www.weather.gov.hk/tc/gts/time/stemsandbranches.htm",
+  "decision": "BRANCH_PLACEMENT_ONLY",
+  "placement": "the lưu-niên year branch itself",
+  "interpretation": "blocked",
+  "publicFortune": false,
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "agentId": "bc-ce9039f6-c41d-5bd2-a3dc-94f51985906b",
+      "nguyetDucImplement": true
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "agentId": "bc-375bebf2-6825-5902-82d1-a0c6b1add3f1",
+      "nguyetDucImplement": true
+    }
+  ]
+}

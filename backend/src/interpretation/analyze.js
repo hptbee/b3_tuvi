@@ -26,7 +26,7 @@ function chartFromBirth(value) {
     return chart;
 }
 
-function responseFor(chart) {
+function responseFor(chart, bodyViewYear) {
     const analysis = interpretChart(chart);
     if (!analysis.ok) {
         if (analysis.error === 'knowledge_bundle_invalid') {
@@ -42,7 +42,7 @@ function responseFor(chart) {
             chartSource: 'server',
             palaceFunctions: analysis.statements.filter((statement) => !statement.thanOverlay).map((statement) => statement.functionId),
             wholeChart: synthesize(analysis),
-            time: timeOverlay(chart),
+            time: timeOverlay(chart, { viewYearBranch: bodyViewYear }),
             palaceCount: PALACE_FUNCTIONS.length
         }
     };
@@ -56,5 +56,9 @@ export function analyzeChartRequest(body) {
     if (!parsed.ok) return { status: 400, body: { error: 'Dữ liệu lập lá số không hợp lệ', details: parsed.errors } };
     const chart = chartFromBirth(parsed.value);
     if (!chart?.ok) return { status: 400, body: { error: 'Không đổi được ngày dương sang âm lịch' } };
-    return responseFor(chart);
+    const viewYearBranch = body.viewYearBranch;
+    if (viewYearBranch != null && viewYearBranch !== '' && typeof viewYearBranch !== 'string') {
+        return { status: 400, body: { error: 'Chi năm xem không hợp lệ', code: 'invalid_view_year_branch' } };
+    }
+    return responseFor(chart, viewYearBranch);
 }

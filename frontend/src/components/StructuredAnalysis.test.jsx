@@ -89,4 +89,33 @@ describe('StructuredAnalysis', () => {
     await waitFor(() => expect(screen.getByText(/rule-new/)).toBeTruthy());
     expect(screen.queryByText(/rule-old/)).toBeNull();
   });
+
+  it('sends the selected view-year branch and does not call it a prediction', async () => {
+    const fetchMock = vi.fn(async () => ({
+      ok: true,
+      json: async () => ({
+        ...analysisBody(),
+        time: {
+          capabilities: {
+            tieu_han: { status: 'blocked' },
+            thien_duc: { status: 'branch_placed', branch: 'Dậu', interpretation: null },
+            nguyet_duc: { status: 'branch_placed', branch: 'Tí', interpretation: null }
+          },
+          interpretation: null
+        }
+      })
+    }));
+    vi.stubGlobal('fetch', fetchMock);
+    const user = userEvent.setup();
+    render(<StructuredAnalysis userInfo={birth} />);
+    await screen.findByRole('button', { name: /Mệnh/ });
+    await user.selectOptions(screen.getByLabelText('Chi năm xem'), 'Tí');
+    await waitFor(() => {
+      const body = JSON.parse(fetchMock.mock.calls.at(-1)[1].body);
+      expect(body.viewYearBranch).toBe('Tí');
+    });
+    expect(await screen.findByText(/Thiên Đức tại Dậu, chỉ là vị trí chi/)).toBeTruthy();
+    expect(screen.getByText(/Nguyệt Đức tại Tí, chỉ là vị trí chi/)).toBeTruthy();
+    expect(screen.queryByText(/dự đoán/i)).toBeNull();
+  });
 });

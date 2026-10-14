@@ -1,5 +1,6 @@
 import assert from 'assert';
-import { thienDucBranch, thienDucCapability } from '../src/time/thienDuc.js';
+import { nguyetDucBranch, thienDucBranch, thienDucCapability } from '../src/time/thienDuc.js';
+import { analyzeChartRequest } from '../src/interpretation/analyze.js';
 import { timeOverlay } from '../src/time/timeEngine.js';
 import { calculateTuVi } from '../src/engine/tuviRules.mjs';
 import { normalizeChart } from '../src/engine/normalizeChart.js';
@@ -44,6 +45,14 @@ for (const invalid of ['Tý', '子', ' ', 0, false]) {
     assert.strictEqual(capability.publicFortune, false);
 }
 
+for (const yearBranch of Object.keys(EXPECTED)) {
+    const placed = nguyetDucBranch(yearBranch);
+    assert.strictEqual(placed.branch, yearBranch, yearBranch);
+    assert.strictEqual(placed.publicFortune, false);
+    assert.strictEqual(placed.interpretation, null);
+    assert.strictEqual(placed.interpretationStatus, 'blocked');
+}
+
 assert.strictEqual(thienDucCapability(undefined).reason, 'missing_view_year_branch');
 assert.strictEqual(thienDucCapability('').reason, 'missing_view_year_branch');
 
@@ -61,6 +70,10 @@ assert.strictEqual(shown.capabilities.thien_duc.status, 'branch_placed');
 assert.strictEqual(shown.capabilities.thien_duc.branchPlacement, 'supported');
 assert.strictEqual(shown.capabilities.thien_duc.interpretationStatus, 'blocked');
 assert.strictEqual(shown.capabilities.thien_duc.branch, 'Dậu');
+assert.strictEqual(shown.capabilities.nguyet_duc.status, 'branch_placed');
+assert.strictEqual(shown.capabilities.nguyet_duc.branch, 'Tí');
+assert.strictEqual(shown.capabilities.nguyet_duc.interpretation, null);
+assert.strictEqual(shown.capabilities.nguyet_duc.publicFortune, false);
 assert.strictEqual(shown.capabilities.thien_duc.publicFortune, false);
 assert.strictEqual(shown.capabilities.thien_duc.interpretation, null);
 assert.strictEqual(shown.interpretation, null);
@@ -71,5 +84,17 @@ const rejected = timeOverlay(chart, { viewYearBranch: 'Tý' });
 assert.strictEqual(rejected.capabilities.thien_duc.status, 'not_applied');
 assert.strictEqual(rejected.capabilities.thien_duc.reason, 'unknown_year_branch');
 assert.strictEqual(rejected.capabilities.thien_duc.branch, null);
+assert.strictEqual(rejected.capabilities.nguyet_duc.status, 'not_applied');
 
-console.log('thiên đức places all twelve branches and rejects an unknown view year');
+const served = analyzeChartRequest({ day: 15, month: 6, year: 1990, hour: 8, gender: 1, viewYearBranch: 'Ngọ' });
+assert.strictEqual(served.status, 200);
+assert.strictEqual(served.body.time.capabilities.nguyet_duc.branch, 'Ngọ');
+assert.strictEqual(served.body.time.capabilities.thien_duc.branch, 'Mão');
+assert.strictEqual(served.body.time.interpretation, null);
+const plain = analyzeChartRequest({ day: 15, month: 6, year: 1990, hour: 8, gender: 1 });
+assert.strictEqual(plain.body.time.capabilities.nguyet_duc.status, 'not_applied');
+const badType = analyzeChartRequest({ day: 15, month: 6, year: 1990, hour: 8, gender: 1, viewYearBranch: 2026 });
+assert.strictEqual(badType.status, 400);
+assert.strictEqual(badType.body.code, 'invalid_view_year_branch');
+
+console.log('thiên đức and nguyệt đức place branches for a chosen view year');
