@@ -42,10 +42,52 @@ fallback(request('', ''), response(), () => { fallbackPassed = true; });
 assert.equal(fallbackPassed, true);
 const crowded = new Map();
 const crowdedLimit = createNumerologyRateLimit({ limit: 1, windowMs: 10, now: () => 50, buckets: crowded });
-for (let index = 0; index < 4097; index += 1) {
-    crowdedLimit(request('', '', `10.0.0.${index}`), response(), () => {});
+for (let index = 0; index < 10_000; index += 1) {
+    const reply = response();
+    let accepted = false;
+    crowdedLimit(request('', '', `10.0.0.${index}`), reply, () => { accepted = true; });
+    assert.equal(accepted, index < 4096);
+    if (index >= 4096) {
+        assert.equal(reply.statusCode, 429);
+        assert.equal(reply.body.error.code, 'RATE_LIMITED');
+        assert.equal(reply.headers['RateLimit-Remaining'], '0');
+        assert.equal(reply.headers['Retry-After'], '1');
+    }
 }
-assert.ok(crowded.size > 4000);
+assert.equal(crowded.size, 4096);
+const activeReply = response();
+crowdedLimit(request('', '', '10.0.0.0'), activeReply, () => assert.fail('active key must not be evicted'));
+assert.equal(activeReply.statusCode, 429);
+assert.equal(crowded.get('direct:10.0.0.0').count, 2);
+
+let scannedEntries = 0;
+class ObservedMap extends Map {
+    *[Symbol.iterator]() {
+        for (const entry of super[Symbol.iterator]()) { scannedEntries += 1; yield entry; }
+    }
+}
+const bounded = new ObservedMap();
+let boundedNow = 0;
+const boundedLimit = createNumerologyRateLimit({ maxKeys: 2, limit: 1, windowMs: 2000, now: () => boundedNow, buckets: bounded });
+boundedLimit(request('', '', 'first'), response(), () => {});
+boundedLimit(request('', '', 'second'), response(), () => {});
+for (let index = 0; index < 1000; index += 1) {
+    boundedLimit(request('', '', `denied-${index}`), response(), () => assert.fail('overflow must fail closed'));
+}
+assert.equal(bounded.size, 2);
+assert.equal(scannedEntries, 0, 'denied traffic must not scan live buckets for each request');
+boundedNow = 1000;
+boundedLimit(request('', '', 'third'), response(), () => assert.fail('live budgets must remain'));
+assert.equal(scannedEntries, 2);
+boundedNow = 2000;
+let recovered = false;
+boundedLimit(request('', '', 'third'), response(), () => { recovered = true; });
+assert.equal(recovered, true);
+assert.equal(bounded.size, 1);
+assert.equal(scannedEntries, 4);
+const invalidCapacity = new Map();
+createNumerologyRateLimit({ maxKeys: -1, buckets: invalidCapacity })(request('', ''), response(), () => {});
+assert.equal(invalidCapacity.size, 1);
 const expiring = new Map();
 let expiringNow = 0;
 const expiringLimit = createNumerologyRateLimit({ limit: 1, windowMs: 10, now: () => expiringNow, buckets: expiring });
