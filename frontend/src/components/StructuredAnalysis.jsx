@@ -77,7 +77,8 @@ function Detail({ statement }) {
       <ul>
         {claims.map((item) => (
           <li key={item.claimId}>
-            {item.claimId}: {item.eligible ? 'đủ cờ và điều kiện, vẫn chưa phải lời luận' : `chưa đủ (${(item.reasons || []).join(', ')})`}
+            {item.claimId}: {item.eligible ? 'đủ điều kiện nội bộ, lời luận công khai vẫn bị giữ' : `chưa đủ (${(item.reasons || []).join(', ')})`}
+            {item.layers ? ` — nguồn ${item.layers.sourceReview}, công thức ${item.layers.formulaComparison}, điều kiện ${item.layers.runtimeConditions}, duyệt luận ${item.layers.interpretationApproval}, phát hành ${item.layers.releasePermission}` : ''}
           </li>
         ))}
       </ul>

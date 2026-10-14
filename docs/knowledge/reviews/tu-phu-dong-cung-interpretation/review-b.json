@@ -1,0 +1,20 @@
+{
+  "subjectId": "interp-tu-phu-dong-cung-giap-menh",
+  "scope": "interpretation",
+  "model": "gpt-5.6-terra-medium",
+  "agentId": "bc-122a2db4-09d4-51f4-a029-2cd744690f1e",
+  "verdict": "INTERPRETATION_SUPPORTED_WITH_LIMITS",
+  "supportedQuotes": [
+    "Tuổi Giáp có cách này chắc chắn là được hưởng phúc trọn đời và dĩ nhiên là được hưởng phú qúy song toàn."
+  ],
+  "absoluteClaims": [
+    "chắc chắn là được hưởng phúc trọn đời",
+    "được hưởng phú qúy song toàn"
+  ],
+  "limitations": [
+    "The strongest claim is limited to tuổi Giáp with the stated configuration.",
+    "Other ages are only described as rất qúy hiển và khá giả.",
+    "This is a traditional school assertion, not verified biographical evidence."
+  ],
+  "expertVerified": false
+}

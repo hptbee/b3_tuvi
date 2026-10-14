@@ -13,7 +13,8 @@
 - **Phạm vi số liệu Formula V1:** 63 catalog records = 29 ACTIVE + 24 VARIANT + 2 INTERNAL_ONLY + 8 DISABLED; 55 predicates thực thi; 67 source variants; 50 **kết quả nhận diện cách cục** được phép trả về mặc định. Con số 50 **không phải** số claim có thể phát hành lời luận. Không có supported non-disabled predicate bị bỏ quên tại thời điểm báo cáo PR #25.
 - **API boundary:** `POST /api/interpretations/analyze` dựng lại lá số từ birth input, từ chối `normalizedChart` do client cung cấp và **không xuất `internalInterpretation` trong response mặc định**. `evaluateTuPhuDongCungSlice` vẫn là helper nội bộ; `auspicious: null` biểu thị chưa có phán đoán cát/hung.
 - **Sprint 10 — READY / CONDITIONAL GO:** chỉ được nghiên cứu/triển khai typed conditions, formation/breaking, provenance và independent negative tests trong PR có phạm vi rõ. Chưa mở public interpretation, fortune, AI prose, nâng `expertVerified`, tự đổi công thức, hay production SQLite migration.
-- **Sprint 11–14 — PLANNED / GATED:** các tính năng lần lượt phụ thuộc evidence và từng release gate; không coi hoàn thành Sprint 9 integration là GO phát hành sản phẩm.
+- **Sprint 11 — engineering CONDITIONAL GO; public interpretation NO-GO.** Report: `docs/archive/sprints/tuvi/sprint-11/SPRINT_11_FINAL_REPORT.md`. Sprint 11B adds one internal Giáp / Tử Phủ Đồng Cung claim; public release remains NO-GO. Report: `docs/archive/sprints/tuvi/sprint-11/SPRINT_11B_REPORT.md`.
+- **Sprint 12–14 — PLANNED / GATED:** các tính năng lần lượt phụ thuộc evidence và từng release gate.
 
 Nguồn kiểm chứng: [Formula V1 implementation report](../archive/sprints/tuvi/sprint-9/SPRINT_9_FINAL_IMPLEMENTATION_REPORT.md), [Sprint 9 closure report](../archive/sprints/tuvi/sprint-9/SPRINT_9_CLOSURE_REPORT.md), các PR/CI trên. Các số liệu nghiên cứu 9B/9C bên dưới là snapshots lịch sử, **không được xem là độ phủ công thức đã xác thực hoặc lời luận đã được phê duyệt**.
 

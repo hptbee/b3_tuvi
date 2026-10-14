@@ -22,6 +22,7 @@ export const unitTests = [
     'test/safeErrorLog.test.mjs',
     'test/evidenceV3.test.mjs',
     'test/interpretationPipeline.test.mjs',
+    'test/sprint11bInterpretation.test.mjs',
     'test/knowledgeCoverage.test.mjs',
     'test/wholeChart.test.mjs',
     'test/timeEngine.test.mjs',

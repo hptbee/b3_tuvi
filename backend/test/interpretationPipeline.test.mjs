@@ -2,7 +2,7 @@ import assert from 'assert';
 import { calculateTuVi } from '../src/engine/tuviRules.mjs';
 import { normalizeChart } from '../src/engine/normalizeChart.js';
 import { CORE_PALACES, PALACE_FUNCTIONS, interpretChart } from '../src/interpretation/pipeline.js';
-import { claimEligibility } from '../src/interpretation/eligibility.js';
+import { claimEligibility, evaluateClaimConditions } from '../src/interpretation/eligibility.js';
 import contract from '../../docs/knowledge/provenance-contract.json' with { type: 'json' };
 
 function chartFrom(can, chi, day, month, hour, gender) {
@@ -45,7 +45,10 @@ const eligibleClaim = {
     claimId: 'fixture-eligible-host',
     approvedForInterpretation: true,
     interpretationStatus: 'sourced',
+    sourceReviewStatus: 'AI_CROSS_REVIEWED',
     formulaComparisonStatus: 'MATCH',
+    formulaCatalogId: 'fixture-catalog',
+    sourceProfile: 'tan-bien',
     sourceId: 'thai-thu-lang-tan-bien',
     relatedPalaces: [host.functionId],
     relatedStars: [starId],
@@ -53,7 +56,15 @@ const eligibleClaim = {
     schoolId: 'vn-tam-hop-default'
 };
 chart.schoolId = 'vn-tam-hop-default';
-const withClaim = interpretChart(chart, { claims: [eligibleClaim] });
+const fixtureHit = {
+    catalogId: 'fixture-catalog',
+    palaceId: String(host.id),
+    sourceProfile: 'tan-bien',
+    gradeStatus: 'not_certified',
+    formationStatus: 'unknown',
+    breakingStatus: 'not_implemented'
+};
+const withClaim = interpretChart(chart, { claims: [eligibleClaim], extraFormulaHits: [fixtureHit] });
 const hostStatement = withClaim.statements.find((item) => item.statementId === `palace:${host.functionId}`);
 assert.strictEqual(hostStatement.availabilityStatus, 'eligible_claims_present');
 assert.strictEqual(hostStatement.prose, null);
@@ -88,7 +99,7 @@ const absentStatement = absent.statements.find((item) => item.statementId === `p
 assert.notStrictEqual(absentStatement.availabilityStatus, 'eligible_claims_present');
 assert.ok(absentStatement.claimApplicability.find((item) => item.claimId === 'fixture-eligible-host').reasons.includes('conditions_not_met'));
 
-const proseCondition = claimEligibility({ ...eligibleClaim, claimId: 'fixture-prose', conditions: ['nếu hãm'] }, chart, host);
+const proseCondition = claimEligibility({ ...eligibleClaim, claimId: 'fixture-prose', conditions: ['nếu hãm'] }, chart, host, { formulaHits: [fixtureHit] });
 assert.strictEqual(proseCondition.eligible, false);
 assert.ok(proseCondition.reasons.includes('conditions_not_evaluated'));
 
@@ -135,5 +146,41 @@ const invalidKnowledge = interpretChart(chart, {
 assert.strictEqual(invalidKnowledge.ok, false);
 assert.strictEqual(invalidKnowledge.error, 'knowledge_bundle_invalid');
 assert.deepStrictEqual(invalidKnowledge.statements, []);
+
+const matchOnly = claimEligibility({
+    ...eligibleClaim,
+    claimId: 'fixture-match-only',
+    sourceReviewStatus: 'MATCH'
+}, chart, host);
+assert.strictEqual(matchOnly.eligible, false);
+assert.ok(matchOnly.reasons.includes('source_review_not_recorded'));
+assert.strictEqual(matchOnly.layers.formulaComparison, 'match');
+assert.strictEqual(matchOnly.layers.interpretationApproval, 'approved');
+assert.strictEqual(matchOnly.publicRelease, false);
+
+const worded = {
+    ...eligibleClaim,
+    claimId: 'fixture-worded',
+    approvedWording: 'cung này được sách ghi nhận trong điều kiện đã nêu.'
+};
+const internal = interpretChart(chart, { claims: [worded], includeInternal: true, extraFormulaHits: [fixtureHit] });
+const internalHost = internal.statements.find((item) => item.statementId === `palace:${host.functionId}`);
+assert.strictEqual(internalHost.prose, null);
+assert.match(internalHost.internalProse, /thai-thu-lang-tan-bien/);
+assert.match(internalHost.internalProse, /cung này được sách ghi nhận/);
+assert.strictEqual(internalHost.publicInterpretationReleased, false);
+const hidden = interpretChart(chart, { claims: [worded] });
+assert.strictEqual(hidden.statements.find((item) => item.statementId === `palace:${host.functionId}`).internalProse, null);
+const conflictedInternal = interpretChart(chart, { claims: [left, { ...right, approvedWording: 'không được hiện' }], includeInternal: true });
+assert.strictEqual(conflictedInternal.statements.find((item) => item.statementId === `palace:${host.functionId}`).internalProse, null);
+assert.strictEqual(claimEligibility({ ...eligibleClaim, schoolId: 'vn-tam-hop-default' }, { palaces: chart.palaces }, host).reasons.includes('school_mismatch'), true);
+assert.strictEqual(evaluateClaimConditions({ ...eligibleClaim, rule: { brightHost: true, mystery: true } }, chart, host).evaluated, false);
+
+const { analyzeChartRequest } = await import('../src/interpretation/analyze.js');
+const publicBody = analyzeChartRequest({ day: 15, month: 6, year: 1990, hour: 8, gender: 1 });
+assert.strictEqual(publicBody.status, 200);
+assert.ok(publicBody.body.statements.every((item) => item.prose == null && item.internalProse == null));
+assert.ok(publicBody.body.wholeChart.topics.every((topic) => topic.prose == null && topic.score == null));
+assert.strictEqual(publicBody.body.wholeChart.topics.length, 8);
 
 console.log('interpretation pipeline stays structured when evidence is missing');

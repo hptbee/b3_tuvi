@@ -24,7 +24,7 @@ Tài liệu này được thiết kế để cung cấp cho mô hình AI (như C
 | Cách cục | `backend/src/engine/combinationMatch.js`, `backend/src/data/combinations.json`, `backend/src/routes/combinationRoutes.js` |
 | Model lá số chuẩn hóa | `backend/src/engine/normalizeChart.js`, `backend/src/engine/starCatalog.js`, `docs/architecture/CHART_DOMAIN_MODEL.md` |
 | Quan hệ cung | `backend/src/engine/palaceRelation.js`, `backend/src/engine/chartQuery.js`, `docs/tuvi/PALACE_RELATIONSHIPS.md` |
-| Formula V1 (matcher + interpretation) | `backend/src/engine/formulaV1.mjs`, `backend/src/data/formulaV1.mjs`, `docs/archive/sprints/tuvi/sprint-9/SPRINT_9_FINAL_FORMULA_SPEC.md` |
+| Formula V1 (matcher + interpretation) | `backend/src/data/formulaV1.mjs`, `backend/src/engine/combinationMatch.js`, `docs/archive/sprints/tuvi/sprint-9/SPRINT_9_FINAL_FORMULA_SPEC.md` |
 | Rule cách cục v2 (research snapshot) | `backend/src/engine/ruleEngine.js`, `backend/src/data/rulesV2.json`, `docs/archive/implementation/p0-p1/P1_2_RULE_ENGINE.md` |
 | Hồ sơ trường phái | `backend/src/engine/schoolProfile.js`, `docs/tuvi/TU_VI_SCHOOL_VARIANTS.md` |
 | UI lá số | `frontend/src/components/TuViChart.jsx` |

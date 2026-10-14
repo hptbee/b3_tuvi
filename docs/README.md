@@ -42,7 +42,7 @@ Do not create a competing “Master Plan V3”. Completed sprint **reports** liv
 | [KNOWLEDGE_CLAIM_MODEL.md](tuvi/KNOWLEDGE_CLAIM_MODEL.md) | Claim and provenance model |
 | [knowledge/](knowledge/) | Sources, matrix, decisions, research evidence (includes runtime JSON) |
 
-**Live formula spec:** Formula V1 in code (`backend/src/engine/formulaV1.mjs`); human spec in [SPRINT_9_FINAL_FORMULA_SPEC.md](archive/sprints/tuvi/sprint-9/SPRINT_9_FINAL_FORMULA_SPEC.md). `rulesV2.json` is a research snapshot, not the runtime matcher.
+**Live formula spec:** Formula V1 in code (`backend/src/data/formulaV1.mjs`, evaluated via `backend/src/engine/combinationMatch.js`); human spec in [SPRINT_9_FINAL_FORMULA_SPEC.md](archive/sprints/tuvi/sprint-9/SPRINT_9_FINAL_FORMULA_SPEC.md). `rulesV2.json` is a research snapshot, not the runtime matcher.
 
 **Active backlog (research):** [UNRESOLVED_COMBINATIONS.md](knowledge/UNRESOLVED_COMBINATIONS.md), [RULE_REMEDIATION_BACKLOG.md](knowledge/RULE_REMEDIATION_BACKLOG.md).
 

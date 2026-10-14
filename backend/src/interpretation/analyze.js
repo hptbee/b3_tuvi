@@ -38,6 +38,7 @@ function responseFor(chart) {
         status: 200,
         body: {
             ...analysis,
+            statements: analysis.statements.map(({ internalProse, ...statement }) => statement),
             chartSource: 'server',
             palaceFunctions: analysis.statements.filter((statement) => !statement.thanOverlay).map((statement) => statement.functionId),
             wholeChart: synthesize(analysis),

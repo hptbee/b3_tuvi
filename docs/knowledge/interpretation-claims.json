@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "note": "Internal research claims. Formula MATCH is not this file. expertVerified stays false. Public release stays withheld.",
+  "claims": [
+    {
+      "claimId": "interp-tu-phu-dong-cung-giap-menh",
+      "sourceId": "thai-thu-lang-tan-bien",
+      "editionId": "tan-bien-retypeset-277-cover-1956",
+      "section": "phu-giai/57",
+      "schoolId": "vn-tam-hop-default",
+      "sourceReviewStatus": "AI_CROSS_REVIEWED",
+      "interpretationDecisionRef": "docs/knowledge/interpretation-decisions/tu-phu-dong-cung.json",
+      "formulaCatalogId": "tu_phu_dong_cung",
+      "sourceProfile": "tan-bien",
+      "formulaComparisonStatus": "MATCH",
+      "approvedForInterpretation": true,
+      "interpretationStatus": "sourced",
+      "releasePermission": "withheld",
+      "expertVerified": false,
+      "relatedPalaces": ["menh"],
+      "yearStem": "Giáp",
+      "approvedWording": "Tuổi Giáp có cách này chắc chắn là được hưởng phúc trọn đời và dĩ nhiên là được hưởng phú qúy song toàn. Đây là lời sách truyền thống, không phải sự kiện đời đã kiểm chứng.",
+      "limitations": [
+        "giap_age_only",
+        "not_a_verified_life_event",
+        "verse_vo_sat_not_in_approved_sentence",
+        "grade_not_certified",
+        "breaking_not_implemented"
+      ]
+    }
+  ]
+}
