@@ -4,7 +4,9 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const summary = JSON.parse(readFileSync(path.join(root, 'coverage', 'coverage-summary.json'), 'utf8'));
-const baseline = JSON.parse(readFileSync(path.join(root, '..', 'docs', 'quality', 'coverage-baseline.json'), 'utf8'));
+const baseline = JSON.parse(
+    readFileSync(path.join(root, '..', 'docs', 'engineering', 'quality', 'coverage-baseline.json'), 'utf8')
+);
 const floors = baseline.backend;
 let failed = false;
 for (const metric of ['lines', 'statements', 'functions', 'branches']) {

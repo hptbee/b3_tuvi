@@ -12,4 +12,4 @@ Source located means an extracted span file exists for `tan-bien-retypeset-277-c
 
 ## Sprint 9C addition
 
-The 39 Tân Biên rows above stay `SOURCE_INACCESSIBLE` for that edition. The stored URL index records HTTP 200 for each candidate on 2026-10-13. All 39 have a separate excerpt and a dual-AI decision under `docs/knowledge/research/sprint-9c/`. Those decisions are not PDF checks, not historical identity checks, and do not replace the 24 Tân Biên records. See `docs/knowledge/SPRINT_9C_SOURCE_DISCOVERY_REPORT.md`.
+The 39 Tân Biên rows above stay `SOURCE_INACCESSIBLE` for that edition. The stored URL index records HTTP 200 for each candidate on 2026-10-13. All 39 have a separate excerpt and a dual-AI decision under `docs/knowledge/research/sprint-9c/`. Those decisions are not PDF checks, not historical identity checks, and do not replace the 24 Tân Biên records. See `docs/archive/sprints/tuvi/sprint-9/SPRINT_9C_SOURCE_DISCOVERY_REPORT.md`.

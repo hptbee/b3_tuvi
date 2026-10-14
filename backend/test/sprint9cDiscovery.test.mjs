@@ -68,7 +68,10 @@ for (const item of manifest) {
     }
 }
 
-const report = readFileSync(`${root}SPRINT_9C_SOURCE_DISCOVERY_REPORT.md`, 'utf8');
+const report = readFileSync(
+    fileURLToPath(new URL('../../docs/archive/sprints/tuvi/sprint-9/SPRINT_9C_SOURCE_DISCOVERY_REPORT.md', import.meta.url)),
+    'utf8'
+);
 assert.match(report, /Candidates examined: 39\/39/);
 assert.match(report, /URL validity checked: 39\/39/);
 assert.match(report, /Dual-AI reviewed: 39\/39/);

@@ -2,7 +2,7 @@ import assert from 'assert';
 import { readdirSync, readFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 
-const doc = readFileSync(fileURLToPath(new URL('../../docs/TEST_FIXTURES.md', import.meta.url)), 'utf8');
+const doc = readFileSync(fileURLToPath(new URL('../../docs/engineering/TEST_FIXTURES.md', import.meta.url)), 'utf8');
 const files = readdirSync(fileURLToPath(new URL('.', import.meta.url))).filter((name) => name.endsWith('.mjs'));
 
 for (const name of files) {

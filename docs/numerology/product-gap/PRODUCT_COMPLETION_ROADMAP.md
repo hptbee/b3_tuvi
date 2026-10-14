@@ -1,7 +1,7 @@
 # Lộ trình hoàn thiện sản phẩm Thần số học
 
 > **Rebaseline:** 2026-10-14 · `main ed31ad1` · Profile `pythagorean-vn-v1` `1.2.0` · Catalog `1.2.0`.
-> **Nguồn roadmap chính:** [ROADMAP_NUMEROLOGY_A_TO_Z.md](../../ROADMAP_NUMEROLOGY_A_TO_Z.md) §12.9, §15–18.
+> **Nguồn roadmap chính:** [ROADMAP_NUMEROLOGY_A_TO_Z.md](../../planning/ROADMAP_NUMEROLOGY_A_TO_Z.md) §12.9, §15–18.
 > **Điểm xuất phát lịch sử:** product gap audit tại `f709e42`, PR #24 và ảnh `screenshots/`. Kế hoạch P0/P1 khi đó đã được triển khai, không còn là backlog chưa làm.
 
 ## Phạm vi và cách đọc
@@ -63,7 +63,7 @@ Các mục đã triển khai:
 
 Các mục này **không được tự hiện số trong UI** khi chỉ mới có tên gọi trên competitor landing. Ưu tiên nguồn tác giả, phép tính rõ và fixtures độc lập. Không dừng cả package khi một ứng viên thiếu nguồn; ghi blocker và tiếp tục.
 
-**Execution:** một AutoDev có Master Plan duy nhất, work packages `NUM-K001`–`NUM-K009`, research có giới hạn; xem [master roadmap §18](../../ROADMAP_NUMEROLOGY_A_TO_Z.md).
+**Execution:** một AutoDev có Master Plan duy nhất, work packages `NUM-K001`–`NUM-K009`, research có giới hạn; xem [master roadmap §18](../../planning/ROADMAP_NUMEROLOGY_A_TO_Z.md).
 
 ## P3 — Optional / không thành điều kiện V1
 

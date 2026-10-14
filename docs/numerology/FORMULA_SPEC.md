@@ -1,6 +1,6 @@
 # Core calculator specification — 1.2.0
 
-Status: experimental product convention, not externally source-verified. Implementation starts from the proposed numerical rules in [the roadmap](../ROADMAP_NUMEROLOGY_A_TO_Z.md), following the owner's request to implement. This does not promote any source, formula, or personal interpretation status.
+Status: experimental product convention, not externally source-verified. Implementation starts from the proposed numerical rules in [the roadmap](../planning/ROADMAP_NUMEROLOGY_A_TO_Z.md), following the owner's request to implement. This does not promote any source, formula, or personal interpretation status.
 
 The pure calculator accepts Gregorian integer birthDate (1200–2199), an optional Latin/Vietnamese fullName and an injected referenceDate. No hidden clock, database, network, hour or gender. Future birth dates are invalid. Missing name is allowed; unsupported characters are errors.
 

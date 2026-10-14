@@ -1,7 +1,7 @@
 /**
  * Hồ sơ trường phái mặc định của engine.
  * Các khóa là điểm dị bản đã xác nhận trong kiểm toán P0 — không trộn quy tắc mâu thuẫn.
- * Chi tiết nguồn: docs/TU_VI_SCHOOL_VARIANTS.md
+ * Chi tiết nguồn: docs/tuvi/TU_VI_SCHOOL_VARIANTS.md
  */
 export const DEFAULT_SCHOOL = {
     id: 'vn-tam-hop-default',

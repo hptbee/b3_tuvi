@@ -18,4 +18,4 @@ Hard rules for how work is done in this system.
 
 Strong guideline: when a principle and a delivery shortcut conflict, record the tradeoff instead of silently dropping the principle.
 
-Conflicts with a user request or a product repo: `docs/precedence.md`.
+Conflicts with a user request or a product repo: `{B3_HOME}/docs/precedence.md` in the B3 system repository. See [rules/README.md](README.md).

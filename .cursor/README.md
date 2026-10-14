@@ -80,7 +80,7 @@ Use ordinary chat messages, without `/` or `$`:
 
 ```text
 B3: autodev status
-B3: plan docs/ROADMAP_NUMEROLOGY_A_TO_Z.md
+B3: plan docs/planning/ROADMAP_NUMEROLOGY_A_TO_Z.md
 B3: autodev <specific requirement or accepted plan>
 B3: debug <failure>
 B3: review <target>
@@ -91,4 +91,4 @@ B3: review-loop <target>
 `AGENTS.md` routes these messages to the canonical B3 instructions. The helper
 `bash scripts/b3-paths.sh autodev` prints source paths only; it does not execute
 an AI lifecycle. The agent must read those files and perform the procedure.
-See [Codex cloud B3 guide](../docs/CODEX_CLOUD_B3.md) for all actions and limits.
+See [Codex cloud B3 guide](../docs/engineering/CODEX_CLOUD_B3.md) for all actions and limits.

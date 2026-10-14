@@ -7,7 +7,10 @@ import passages from '../../docs/knowledge/combination-passages.json' with { typ
 import { loadCombinationBatch } from '../src/knowledge/combinationBatch.js';
 
 const root = fileURLToPath(new URL('../../docs/knowledge/', import.meta.url));
-const report = readFileSync(`${root}SPRINT_9B_COMPLETION_REPORT.md`, 'utf8');
+const report = readFileSync(
+    fileURLToPath(new URL('../../docs/archive/sprints/tuvi/sprint-9/SPRINT_9B_COMPLETION_REPORT.md', import.meta.url)),
+    'utf8'
+);
 const loaded = loadCombinationBatch();
 const byName = new Map(loaded.rows.map((row) => [row.combinationName, row]));
 

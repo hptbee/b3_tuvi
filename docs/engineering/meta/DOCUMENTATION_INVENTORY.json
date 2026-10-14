@@ -1,0 +1,3042 @@
+{
+  "generatedAt": "2026-10-14T03:57:24.111Z",
+  "count": 506,
+  "items": [
+    {
+      "path": "docs/CHANGELOG.md",
+      "category": "UNKNOWN",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/DOCUMENTATION_POLICY.md",
+      "category": "ACTIVE_CANONICAL",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/README.md",
+      "category": "ACTIVE_CANONICAL",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/architecture/ARCHITECTURAL_OVERVIEW.md",
+      "category": "ACTIVE_CANONICAL",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/architecture/CHART_DOMAIN_MODEL.md",
+      "category": "ACTIVE_CANONICAL",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/archive/audits/CODE_CLEANUP_PROPOSAL.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/audits/FINDINGS.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/audits/FULL_REPOSITORY_AUDIT.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/audits/RELEASE_READINESS.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/audits/REMEDIATION_PLAN.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/implementation/p0-p1/P0_IMPLEMENTATION_REPORT.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/implementation/p0-p1/P1_1_CHART_MODEL_REPORT.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/implementation/p0-p1/P1_2_5_DEEP_AUDIT.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/implementation/p0-p1/P1_2_RULE_ENGINE.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/implementation/p0-p1/P1_3A_1_SOURCE_VERIFICATION.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/implementation/p0-p1/P1_3A_KNOWLEDGE_AUDIT.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/implementation/p0-p1/P1_3B_IMPLEMENTATION_PLAN.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/implementation/p0-p1/P1_3_READINESS.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/planning/AUTODEV_MASTER_PLAN.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/prompts/B3_S9C_CURSOR_PROMPT.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/prompts/B3_S9C_SOURCE_FINDINGS.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/prompts/B3_S9_ADJUDICATION_EVIDENCE_21.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/prompts/B3_S9_CURSOR_EVIDENCE_ADJUDICATION_PROMPT.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/prompts/B3_S9_CURSOR_SEVEN_CASES_PROMPT.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/prompts/B3_S9_RUNTIME_COMPARISON.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/prompts/B3_S9_TAN_BIEN7_VERIFIED_SOURCE_HANDOFF.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/prompts/B3_TUVI_S9C_CURSOR_EXECUTION_PROMPT.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/prompts/B3_TUVI_S9C_VERIFIED_SOURCE_REPORT.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/prompts/B3_TUVI_SOURCE_DISCOVERY_39.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/prompts/CURSOR_PROMPT.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/specs/RULE_ENGINE_V2_VERIFICATION.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/specs/SQLITE_MIGRATION_VERIFICATION.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/sprints/tuvi/sprint-10/SPRINT_10_FINAL_REPORT.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/sprints/tuvi/sprint-10/SPRINT_10_OPERATOR_MATRIX.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/sprints/tuvi/sprint-10/SPRINT_10_RESEARCH_INVENTORY.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/sprints/tuvi/sprint-8/SPRINT_8_FINAL_REPORT.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/sprints/tuvi/sprint-9/SPRINT_9B_COMPLETION_REPORT.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/sprints/tuvi/sprint-9/SPRINT_9C_SOURCE_DISCOVERY_REPORT.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/sprints/tuvi/sprint-9/SPRINT_9D_SEVEN_CASE_ADJUDICATION.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/sprints/tuvi/sprint-9/SPRINT_9_ADJUDICATION_MATRIX.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/sprints/tuvi/sprint-9/SPRINT_9_CLOSURE_REPORT.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/sprints/tuvi/sprint-9/SPRINT_9_FINAL_FORMULA_SPEC.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/archive/sprints/tuvi/sprint-9/SPRINT_9_FINAL_IMPLEMENTATION_REPORT.md",
+      "category": "HISTORICAL_RECORD",
+      "extension": "md",
+      "action": "archived"
+    },
+    {
+      "path": "docs/engineering/AGENT_ENGINEERING.md",
+      "category": "ACTIVE_CANONICAL",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/engineering/AI_CONTEXT.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/engineering/CODEX_CLOUD_B3.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/engineering/CONTRIBUTING.md",
+      "category": "ACTIVE_CANONICAL",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/engineering/TEST_FIXTURES.md",
+      "category": "ACTIVE_CANONICAL",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/engineering/meta/CANONICAL_SOURCES.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/engineering/meta/DOCUMENTATION_INVENTORY.json",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/engineering/meta/MIGRATION_MANIFEST.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/engineering/meta/PATH_SENSITIVE_FILES.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/engineering/quality/E2E_TEST_MATRIX.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/engineering/quality/RELEASE_READINESS.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/engineering/quality/REMAINING_COVERAGE_GAPS.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/engineering/quality/TEST_COVERAGE_BASELINE.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/engineering/quality/TEST_COVERAGE_FINAL.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/engineering/quality/TEST_STRATEGY.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/engineering/quality/coverage-baseline.json",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/DECISION_REVALIDATION.md",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/FORMULA_SCOPE_DIFF.md",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/RULE_REMEDIATION_BACKLOG.md",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/SOURCE_COVERAGE_REPORT.md",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/SOURCE_IDENTITY_AUDIT_39.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/SOURCE_IDENTITY_AUDIT_39.md",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/UNRESOLVED_COMBINATIONS.md",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/combination-passages.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/combination-research.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/combination-source-matrix.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/decisions/am-loc.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/decisions/co-nguyet-dong-luong.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/decisions/cu-hoa-kinh-duong.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/decisions/cu-nhat-dong-cung.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/decisions/hinh-tu-giap-an.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/decisions/khoa-minh-loc-am.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/decisions/kinh-duong-nhap-mieu.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/decisions/loc-ma-giao-tri.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/decisions/loc-phung-xung-pha.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/decisions/ma-lac-khong-vong.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/decisions/menh-vo-chinh-dieu.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/decisions/minh-chau-xuat-hai.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/decisions/nguyet-lang-thien-mon.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/decisions/nhat-le-trung-thien.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/decisions/nhat-nguyet-dong-lam.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/decisions/nhat-nguyet-tinh-minh.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/decisions/phiem-thuy-dao-hoa.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/decisions/phu-tuong-trieu-vien.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/decisions/quan-than-khanh-hoi.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/decisions/ta-huu-dong-cung.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/decisions/tham-vu-dong-hanh.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/decisions/that-sat-trieu-dau.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/decisions/tu-phu-dong-cung.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/decisions/tu-phu-trieu-vien.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/passages/am-loc/span.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/passages/co-nguyet-dong-luong/span.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/passages/cu-hoa-kinh-duong/span.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/passages/cu-nhat-dong-cung/span.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/passages/hinh-tu-giap-an/span.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/passages/khoa-minh-loc-am/span.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/passages/kinh-duong-nhap-mieu/span.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/passages/loc-ma-giao-tri/span.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/passages/loc-phung-xung-pha/span.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/passages/ma-lac-khong-vong/span.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/passages/menh-vo-chinh-dieu/span.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/passages/minh-chau-xuat-hai/span.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/passages/nhat-le-trung-thien/span.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/passages/nhat-nguyet-dong-lam/span.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/passages/nhat-nguyet-tinh-minh/span.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/passages/phiem-thuy-dao-hoa/span.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/passages/phu-tuong-trieu-vien/span.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/passages/quan-than-khanh-hoi/span.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/passages/ta-huu-dong-cung/span.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/passages/tham-vu-dong-hanh/span.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/passages/that-sat-trieu-dau/span.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/passages/tu-phu-dong-cung/span.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/passages/tu-phu-trieu-vien/span.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/pilotClaims.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/provenance-contract.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/B3_S9C_RESEARCH_4.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/B3_S9_ADJUDICATION_EVIDENCE_21.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/B3_S9_TAN_BIEN7_EVIDENCE.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/B3_TUVI_S9C_VERIFIED_SOURCES_19.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/B3_TUVI_SOURCE_DISCOVERY_39.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/SOURCE_EVIDENCE.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/SOURCE_FINDINGS.md",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9-adjudication-matrix.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c-final4-assertions.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c-group-b-fetch.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c-search-exhaustion.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c-url-verification.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/anh-tinh-nhap-mieu.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/ban-khong-chiet-xi.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/cat-xu-tang-hung.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/chung-thuy-trieu-dong.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/co-cu-dong-lam.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/cu-phung-tu-sat.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/de-ngo-hung-do.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/dong-luong-ty-hoi.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/duong-luong-xuong-loc.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/giap-de-dang-khoa.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/hinh-ky-giap-an.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/hoa-cai-cu-phu-the.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/hoa-tham.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/hung-tu-trieu-vien.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/khong-kiep-giap-menh.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/khuc-am-dong-cung.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/kinh-da-giap-menh.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/kinh-da-hiep-ky.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/linh-tham.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/linh-xuong-da-vu.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/lo-bang-mai-thi.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/luong-trung-thien-ma.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/menh-ly-phung-khong.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/menh-vcd-dac-tam-khong.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/nhat-chieu-loi-mon.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/nhat-nguyet-tang-huy.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/nhat-nguyet-tat-ach.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/phong-luu-thai-truong.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/sat-pha-tham.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/song-loc-trieu-vien.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/tai-an-giao-tri.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/tam-ky-gia-hoi.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/thach-trung-an-ngoc.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/thien-at-cung-menh.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/thien-co-ty-hoi.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/tho-tinh-nhap-mieu.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/thuy-trung-que-ngac.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/tu-phu-vu-tuong.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/decisions/van-tinh-cung-menh.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/anh-tinh-nhap-mieu.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/ban-khong-chiet-xi.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/cat-xu-tang-hung.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/chung-thuy-trieu-dong.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/co-cu-dong-lam.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/cu-phung-tu-sat.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/de-ngo-hung-do.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/dong-luong-ty-hoi.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/duong-luong-xuong-loc.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/giap-de-dang-khoa.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/hinh-ky-giap-an.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/hoa-cai-cu-phu-the.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/hoa-tham.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/hung-tu-trieu-vien.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/khong-kiep-giap-menh.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/khuc-am-dong-cung.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/kinh-da-giap-menh.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/kinh-da-hiep-ky.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/linh-tham.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/linh-xuong-da-vu.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/lo-bang-mai-thi.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/luong-trung-thien-ma.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/menh-ly-phung-khong.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/menh-vcd-dac-tam-khong.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/nhat-chieu-loi-mon.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/nhat-nguyet-tang-huy.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/nhat-nguyet-tat-ach.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/phong-luu-thai-truong.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/sat-pha-tham.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/song-loc-trieu-vien.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/tai-an-giao-tri.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/tam-ky-gia-hoi.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/thach-trung-an-ngoc.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/thien-at-cung-menh.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/thien-co-ty-hoi.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/tho-tinh-nhap-mieu.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/thuy-trung-que-ngac.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/tu-phu-vu-tuong.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/passages/van-tinh-cung-menh.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/review-manifest.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/anh-tinh-nhap-mieu/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/anh-tinh-nhap-mieu/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/anh-tinh-nhap-mieu/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/ban-khong-chiet-xi/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/ban-khong-chiet-xi/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/ban-khong-chiet-xi/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/cat-xu-tang-hung/prompt-v1-pass1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/cat-xu-tang-hung/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/cat-xu-tang-hung/prompt-v2.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/cat-xu-tang-hung/review-a-pass1.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/cat-xu-tang-hung/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/cat-xu-tang-hung/review-b-pass1.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/cat-xu-tang-hung/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/chung-thuy-trieu-dong/prompt-v1-pass1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/chung-thuy-trieu-dong/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/chung-thuy-trieu-dong/prompt-v2.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/chung-thuy-trieu-dong/review-a-pass1.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/chung-thuy-trieu-dong/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/chung-thuy-trieu-dong/review-b-pass1.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/chung-thuy-trieu-dong/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/co-cu-dong-lam/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/co-cu-dong-lam/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/co-cu-dong-lam/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/cu-phung-tu-sat/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/cu-phung-tu-sat/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/cu-phung-tu-sat/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/de-ngo-hung-do/prompt-v1-pass1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/de-ngo-hung-do/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/de-ngo-hung-do/prompt-v2.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/de-ngo-hung-do/review-a-pass1.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/de-ngo-hung-do/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/de-ngo-hung-do/review-b-pass1.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/de-ngo-hung-do/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/dong-luong-ty-hoi/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/dong-luong-ty-hoi/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/dong-luong-ty-hoi/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/duong-luong-xuong-loc/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/duong-luong-xuong-loc/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/duong-luong-xuong-loc/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/giap-de-dang-khoa/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/giap-de-dang-khoa/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/giap-de-dang-khoa/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/hinh-ky-giap-an/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/hinh-ky-giap-an/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/hinh-ky-giap-an/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/hoa-cai-cu-phu-the/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/hoa-cai-cu-phu-the/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/hoa-cai-cu-phu-the/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/hoa-tham/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/hoa-tham/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/hoa-tham/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/hung-tu-trieu-vien/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/hung-tu-trieu-vien/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/hung-tu-trieu-vien/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/khong-kiep-giap-menh/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/khong-kiep-giap-menh/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/khong-kiep-giap-menh/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/khuc-am-dong-cung/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/khuc-am-dong-cung/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/khuc-am-dong-cung/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/kinh-da-giap-menh/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/kinh-da-giap-menh/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/kinh-da-giap-menh/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/kinh-da-hiep-ky/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/kinh-da-hiep-ky/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/kinh-da-hiep-ky/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/linh-tham/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/linh-tham/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/linh-tham/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/linh-xuong-da-vu/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/linh-xuong-da-vu/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/linh-xuong-da-vu/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/lo-bang-mai-thi/prompt-v1-pass1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/lo-bang-mai-thi/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/lo-bang-mai-thi/prompt-v2.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/lo-bang-mai-thi/review-a-pass1.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/lo-bang-mai-thi/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/lo-bang-mai-thi/review-b-pass1.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/lo-bang-mai-thi/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/luong-trung-thien-ma/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/luong-trung-thien-ma/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/luong-trung-thien-ma/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/menh-ly-phung-khong/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/menh-ly-phung-khong/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/menh-ly-phung-khong/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/menh-vcd-dac-tam-khong/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/menh-vcd-dac-tam-khong/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/menh-vcd-dac-tam-khong/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/nhat-chieu-loi-mon/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/nhat-chieu-loi-mon/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/nhat-chieu-loi-mon/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/nhat-nguyet-tang-huy/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/nhat-nguyet-tang-huy/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/nhat-nguyet-tang-huy/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/nhat-nguyet-tat-ach/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/nhat-nguyet-tat-ach/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/nhat-nguyet-tat-ach/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/phong-luu-thai-truong/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/phong-luu-thai-truong/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/phong-luu-thai-truong/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/sat-pha-tham/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/sat-pha-tham/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/sat-pha-tham/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/song-loc-trieu-vien/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/song-loc-trieu-vien/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/song-loc-trieu-vien/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/tai-an-giao-tri/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/tai-an-giao-tri/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/tai-an-giao-tri/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/tam-ky-gia-hoi/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/tam-ky-gia-hoi/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/tam-ky-gia-hoi/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/thach-trung-an-ngoc/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/thach-trung-an-ngoc/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/thach-trung-an-ngoc/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/thien-at-cung-menh/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/thien-at-cung-menh/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/thien-at-cung-menh/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/thien-co-ty-hoi/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/thien-co-ty-hoi/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/thien-co-ty-hoi/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/tho-tinh-nhap-mieu/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/tho-tinh-nhap-mieu/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/tho-tinh-nhap-mieu/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/thuy-trung-que-ngac/prompt-v1-pass1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/thuy-trung-que-ngac/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/thuy-trung-que-ngac/prompt-v2.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/thuy-trung-que-ngac/review-a-pass1.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/thuy-trung-que-ngac/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/thuy-trung-que-ngac/review-b-pass1.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/thuy-trung-que-ngac/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/tu-phu-vu-tuong/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/tu-phu-vu-tuong/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/tu-phu-vu-tuong/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/van-tinh-cung-menh/prompt-v1.txt",
+      "category": "UNKNOWN",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/van-tinh-cung-menh/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9c/reviews/van-tinh-cung-menh/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/sprint-9d-seven-cases.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/visual-collation/page-230-collation.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/visual-collation/page230-sun-glyph.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/visual-collation/page71-u00fd-acute.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/research/visual-collation/page71-u1ef5-dot-below.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/am-loc/prompt-v1.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/am-loc/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/am-loc/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/co-nguyet-dong-luong/prompt-v1.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/co-nguyet-dong-luong/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/co-nguyet-dong-luong/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/cu-hoa-kinh-duong/prompt-v1.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/cu-hoa-kinh-duong/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/cu-hoa-kinh-duong/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/cu-nhat-dong-cung/prompt-v1.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/cu-nhat-dong-cung/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/cu-nhat-dong-cung/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/hinh-tu-giap-an/prompt-v1.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/hinh-tu-giap-an/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/hinh-tu-giap-an/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/khoa-minh-loc-am/prompt-v1.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/khoa-minh-loc-am/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/khoa-minh-loc-am/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/kinh-duong-nhap-mieu/prompt-v1.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/kinh-duong-nhap-mieu/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/kinh-duong-nhap-mieu/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/loc-ma-giao-tri/prompt-v1.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/loc-ma-giao-tri/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/loc-ma-giao-tri/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/loc-phung-xung-pha/prompt-v1.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/loc-phung-xung-pha/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/loc-phung-xung-pha/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/ma-lac-khong-vong/prompt-v1.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/ma-lac-khong-vong/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/ma-lac-khong-vong/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/menh-vo-chinh-dieu/prompt-v1.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/menh-vo-chinh-dieu/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/menh-vo-chinh-dieu/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/minh-chau-xuat-hai/prompt-v1.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/minh-chau-xuat-hai/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/minh-chau-xuat-hai/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/nguyet-lang-thien-mon/prompt-v1.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/nguyet-lang-thien-mon/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/nguyet-lang-thien-mon/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/nguyet-lang-thien-mon/span.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/nhat-le-trung-thien/prompt-v1.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/nhat-le-trung-thien/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/nhat-le-trung-thien/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/nhat-nguyet-dong-lam/prompt-v1.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/nhat-nguyet-dong-lam/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/nhat-nguyet-dong-lam/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/nhat-nguyet-tinh-minh/prompt-v1.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/nhat-nguyet-tinh-minh/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/nhat-nguyet-tinh-minh/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/phiem-thuy-dao-hoa/prompt-v1.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/phiem-thuy-dao-hoa/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/phiem-thuy-dao-hoa/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/phu-tuong-trieu-vien/prompt-v1.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/phu-tuong-trieu-vien/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/phu-tuong-trieu-vien/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/quan-than-khanh-hoi/prompt-v1.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/quan-than-khanh-hoi/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/quan-than-khanh-hoi/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/ta-huu-dong-cung/prompt-v1.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/ta-huu-dong-cung/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/ta-huu-dong-cung/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/tham-vu-dong-hanh/prompt-v1.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/tham-vu-dong-hanh/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/tham-vu-dong-hanh/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/that-sat-trieu-dau/prompt-v1.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/that-sat-trieu-dau/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/that-sat-trieu-dau/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/tu-phu-dong-cung/prompt-v1.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/tu-phu-dong-cung/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/tu-phu-dong-cung/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/tu-phu-trieu-vien/prompt-v1.txt",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "txt",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/tu-phu-trieu-vien/review-a.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/reviews/tu-phu-trieu-vien/review-b.json",
+      "category": "RESEARCH_EVIDENCE",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/schools.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/knowledge/sources.json",
+      "category": "EXECUTABLE_DATA_DEPENDENCY",
+      "extension": "json",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/API_CONTRACT.md",
+      "category": "ACTIVE_CANONICAL",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/CONTENT_POLICY.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/DECISIONS.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/FIXTURES.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/FORMULA_SPEC.md",
+      "category": "ACTIVE_CANONICAL",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/IMPLEMENTATION_STATUS.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/PINNACLE_CONTENT_STATUS.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/RELEASE_READINESS.md",
+      "category": "ACTIVE_CANONICAL",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/SOURCE_REGISTRY.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/audits/CONTENT_QUALITY_AUDIT.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/audits/DEEP_AUDIT_REPORT.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/audits/FORMULA_VERIFICATION_MATRIX.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/audits/SOURCE_RESEARCH_REPORT.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/audits/TEST_COVERAGE_REPORT.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/audits/UI_UX_AUDIT.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/audits/V1_COMPLETION_BACKLOG.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/implementation/COMPLETION_MATRIX.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/implementation/NUMEROLOGY_COMPLETE_MASTER_PLAN.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/implementation/P2_INDICATOR_GATE.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/implementation/VISUAL_ACCEPTANCE.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/implementation/screenshots/after/desktop-birth-grid.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/implementation/screenshots/after/desktop-combined.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/implementation/screenshots/after/desktop-overview.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/implementation/screenshots/after/desktop-pinnacles.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/implementation/screenshots/after/mobile-320-grid.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/implementation/screenshots/after/mobile-320-overview.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/implementation/screenshots/after/mobile-320-pinnacles.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/implementation/screenshots/after/mobile-390-combined.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/implementation/screenshots/after/mobile-390-overview.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/implementation/screenshots/after/mobile-390-pinnacles.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/implementation/screenshots/after/print-pinnacles.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/implementation/screenshots/desktop-birth-grid.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/implementation/screenshots/desktop-cycles.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/implementation/screenshots/desktop-line-selected.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/implementation/screenshots/desktop-name-unavailable.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/implementation/screenshots/desktop-overview.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/implementation/screenshots/desktop-pinnacles.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/implementation/screenshots/desktop-report.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/implementation/screenshots/desktop-year-2027.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/implementation/screenshots/mobile-320-pinnacles.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/implementation/screenshots/mobile-390-combined.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/implementation/screenshots/mobile-390-pinnacles.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/implementation/screenshots/print-a4.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/knowledge-expansion/ADVANCED_INDICATOR_SPEC.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/knowledge-expansion/ARROW_AND_NAME_CHART_MEANINGS.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/knowledge-expansion/COMPLETION_REPORT.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/knowledge-expansion/CONTENT_EXPANSION_MATRIX.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/knowledge-expansion/EDITORIAL_REVIEW.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/knowledge-expansion/FORMULA_DECISION_MATRIX.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/knowledge-expansion/INDEPENDENT_FIXTURES.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/knowledge-expansion/MASTER_PLAN.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/knowledge-expansion/NUMBER_33_CHALLENGE_0.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/knowledge-expansion/RELATIONSHIP_RULES.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/knowledge-expansion/SOURCE_RESEARCH.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/product-gap/COMPETITOR_BENCHMARK.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/product-gap/EXECUTIVE_SUMMARY.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/product-gap/FEATURE_GAP_MATRIX.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/product-gap/FULL_FEATURE_INVENTORY.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/product-gap/IDEAL_USER_EXPERIENCE.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/product-gap/INTERPRETATION_COVERAGE_REPORT.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/product-gap/PRODUCT_COMPLETION_ROADMAP.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/product-gap/VISUALIZATION_GAP_REPORT.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/product-gap/screenshots/desktop-date-only-1990-06-15.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/product-gap/screenshots/desktop-master33-1990-03-29.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/product-gap/screenshots/desktop-named-1990-06-15.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/product-gap/screenshots/mobile-named-1990-06-15.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/product-gap/screenshots/print-named-1990-06-15.png",
+      "category": "GENERATED_ARTIFACT",
+      "extension": "png",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/reviews/CONTENT_1_1_REVIEW.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/numerology/reviews/CONTENT_1_2_REVIEW.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/planning/AUTODEV_MASTER_PLAN_V2.md",
+      "category": "ACTIVE_CANONICAL",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/planning/ROADMAP_NUMEROLOGY_A_TO_Z.md",
+      "category": "ACTIVE_CANONICAL",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/planning/ROADMAP_SPRINT_9_14.md",
+      "category": "ACTIVE_CANONICAL",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/tuvi/COMBINATION_SOURCE_MATRIX.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/tuvi/DOMAIN_KNOWLEDGE.md",
+      "category": "ACTIVE_CANONICAL",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/tuvi/GOLDEN_TEST_REFERENCE.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/tuvi/KNOWLEDGE_CLAIM_MODEL.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/tuvi/PALACE_RELATIONSHIPS.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/tuvi/PILOT_RULE_SOURCE_COMPARISON.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/tuvi/TU_VI_SCHOOL_VARIANTS.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    },
+    {
+      "path": "docs/tuvi/TU_VI_SOURCE_REGISTRY.md",
+      "category": "ACTIVE_SUPPORTING",
+      "extension": "md",
+      "action": "retain"
+    }
+  ]
+}

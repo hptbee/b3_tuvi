@@ -1,8 +1,8 @@
 # Ma trận hoàn thành lá số Thần số học
 
-> **Rebaseline 2026-10-14:** `main ed31ad1cae7b2411029cccbe8c87da533a996800`, PR #24 đã merge; report UI có bản visual finalization `d490703`. Profile `pythagorean-vn-v1` `1.2.0`, catalog `1.2.0`.
+> **Rebaseline 2026-10-14:** `main 2d08b2e`, PR #24 (visual report) và **#31** (5 advanced indicators, formula-only). Profile `pythagorean-vn-v1` `1.2.0`, catalog `1.2.0`.
 > **Runtime/CI:** [main backend/frontend/e2e PASS](https://github.com/hptbee/b3_tuvi/actions/runs/38438302551).
-> **Theo dõi tiếp:** [Master Roadmap §12.9/§18](../../ROADMAP_NUMEROLOGY_A_TO_Z.md) và [Product Roadmap](../product-gap/PRODUCT_COMPLETION_ROADMAP.md).
+> **Theo dõi tiếp:** [Master Roadmap §12.9/§18](../../planning/ROADMAP_NUMEROLOGY_A_TO_Z.md) và [Product Roadmap](../product-gap/PRODUCT_COMPLETION_ROADMAP.md).
 
 Các nhãn dưới đây **không cộng** thành một phần trăm “toàn bộ Thần số học đã hoàn thành”:
 
@@ -30,7 +30,7 @@ Các nhãn dưới đây **không cộng** thành một phần trăm “toàn b�
 | Biểu đồ ghép | VERIFIED | VERIFIED | Không nói tên bù ô trống | VERIFIED | VERIFIED | Lưới 3×3 tách lần ngày sinh và lần tên. Bảng chi tiết vẫn còn. Ảnh `screenshots/after/desktop-combined.png` |
 | Mối nối | VERIFIED | VERIFIED | Chỉ câu đúng phép tính. Không có điểm tương hợp | VERIFIED | Có mặt trên trang; chưa có e2e riêng cho từng câu | Không bịa quan hệ tâm lý |
 | In và JSON | VERIFIED | VERIFIED | N/A | VERIFIED | VERIFIED | Tên và vết chữ cái ra khỏi bản in trừ khi chọn. Import tính lại |
-| P2: Hidden Passion, Karmic Lessons, Balance, Rational Thought, Bridge | BLOCKED_BY_SOURCE | OUT_OF_SCOPE | OUT_OF_SCOPE | OUT_OF_SCOPE | OUT_OF_SCOPE | `P2_INDICATOR_GATE.md` |
+| P2: Hidden Passion, Karmic Lessons, Balance, Rational Thought, Bridge | VERIFIED (PR #31) | VERIFIED (cards/trace) | **WITHHELD** (no new catalog articles) | VERIFIED | VERIFIED | `knowledge-expansion/COMPLETION_REPORT.md`, `P2_INDICATOR_GATE.md` |
 
 ## Việc người dùng làm được
 
