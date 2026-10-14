@@ -1,0 +1,2 @@
+# Source digests and extraction prompts bind to these exact LF text bytes.
+docs/knowledge/**/*.txt text eol=lf
