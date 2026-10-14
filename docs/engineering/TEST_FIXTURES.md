@@ -55,6 +55,7 @@ Dữ liệu dựng trong test, database tạm, hoặc lỗi giả. Không dùng 
 - `knowledgeCoverage.test.mjs`
 - `wholeChart.test.mjs`
 - `timeEngine.test.mjs`
+- `thienDuc.test.mjs`
 - `narrator.test.mjs`
 - `qualityEdges.test.mjs`
 

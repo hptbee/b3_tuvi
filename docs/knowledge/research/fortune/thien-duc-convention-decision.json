@@ -1,0 +1,33 @@
+{
+  "decisionId": "thien-duc-convention-2026-10-14",
+  "subjectId": "thien-duc-branch-placement",
+  "doesNotReplace": "docs/knowledge/research/fortune/juan2-annual-star-review.json",
+  "convention": {
+    "source": "Hong Kong Observatory",
+    "url": "https://www.weather.gov.hk/tc/gts/time/stemsandbranches.htm",
+    "order": "子丑寅卯辰巳午未申酉戌亥"
+  },
+  "bookExample": "癸祿在子，丑宮安擎羊，亥宮安陀羅",
+  "decision": "BRANCH_PLACEMENT_ONLY",
+  "interpretation": "blocked",
+  "publicFortune": false,
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "agentId": "bc-d0b76e9e-ec49-5c8b-aca4-39131e280e29",
+      "thienDucImplement": true,
+      "tangMonImplement": false,
+      "daiHanImplement": false,
+      "tieuHanImplement": false
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "agentId": "bc-69fdf8e1-6801-5ce0-9202-fbcde4d0ce03",
+      "thienDucImplement": true,
+      "tangMonImplement": true,
+      "daiHanImplement": false,
+      "tieuHanImplement": false,
+      "note": "Tang Môn was not implemented because this review does not agree with the other on the opposite offset."
+    }
+  ]
+}

@@ -34,3 +34,11 @@ The rest of volume 2 was read after the đại hạn excerpt. New lines for Tang
 | Thiên Đức / Nguyệt Đức | Reviewers disagree, and neither gives a branch order for 順. |
 
 Agents: grok-4.7-high `bc-a74566ff-5e13-5f0c-ae16-e95d39b8f1e3`, gpt-5.6-terra-medium `bc-ede9b5be-fde7-573d-be43-62ded2b9a29c`. No annual-star position is calculated.
+
+## Convention pass
+
+Hong Kong Observatory states the earthly-branch order 子丑寅卯辰巳午未申酉戌亥 and the sexagenary steps 甲子, 乙丑, 丙寅 (https://www.weather.gov.hk/tc/gts/time/stemsandbranches.htm). The same Wikisource volume places 擎羊 on 丑 and 陀羅 on 亥 when 祿 is on 子, so 前/後 in that example follows this order.
+
+With that convention supplied, both later reviews (`bc-d0b76e9e-ec49-5c8b-aca4-39131e280e29`, `bc-69fdf8e1-6801-5ce0-9202-fbcde4d0ce03`) allow Thiên Đức as a branch placement: start at 酉 for 子 and count forward to the year branch. They do not allow Đại hạn or Tiểu hạn. Tang Môn stays blocked because they do not agree that 對照 is six steps.
+
+Thiên Đức returns a branch only when a view-year branch is supplied. It does not use the birth year, and `interpretation` stays null.

@@ -370,3 +370,7 @@ Baseline `b25478d`. Cơ Nguyệt Đồng Lương interpretation binding is `UNRE
 
 Baseline `1cd063d`. Volume 2 annual-star lines were reviewed separately. Lưu Lộc stays an example only. Tang Môn and Thiên Đức stay unimplemented because the reviewers do not agree on a branch order. No public fortune text.
 
+## 28. Fortune convention gate (2026-10-14)
+
+Hong Kong Observatory supplies the earthly-branch order. With that convention, both reviews allow Thiên Đức as a branch placement and still reject Đại hạn and Tiểu hạn for missing age parameters. Tang Môn stays blocked on the opposite-palace offset. `thienDucBranch` does not emit a reading.
+
