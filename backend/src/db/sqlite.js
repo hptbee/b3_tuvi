@@ -87,24 +87,34 @@ export function closeDatabase() {
 export function initDatabase() {
     if (db) return db;
     const dbPath = resolveDbPath();
-    fs.mkdirSync(path.dirname(dbPath), { recursive: true });
-    db = new DatabaseSync(dbPath);
-    db.exec('PRAGMA foreign_keys = ON;');
-    db.exec('PRAGMA journal_mode = WAL;');
-    db.exec('PRAGMA busy_timeout = 5000;');
-    db.exec(SCHEMA);
-    const version = db.prepare(`SELECT value FROM schema_meta WHERE key = 'schema_version'`).get();
-    if (!version) {
-        db.prepare(`INSERT INTO schema_meta (key, value) VALUES ('schema_version', ?)`).run(SCHEMA_VERSION);
-    } else if (version.value !== SCHEMA_VERSION) {
-        const message = `Unsupported SQLite schema version ${version.value}`;
-        db.close();
+    let connection;
+    try {
+        fs.mkdirSync(path.dirname(dbPath), { recursive: true });
+        connection = new DatabaseSync(dbPath);
+        const metadata = connection.prepare(`SELECT name FROM sqlite_master WHERE name = 'schema_meta' COLLATE NOCASE`).get();
+        const version = metadata
+            ? connection.prepare(`SELECT value FROM schema_meta WHERE key = 'schema_version'`).get()
+            : undefined;
+        if (version && version.value !== SCHEMA_VERSION) {
+            throw new Error(`Unsupported SQLite schema version ${version.value}`);
+        }
+        connection.exec('PRAGMA foreign_keys = ON;');
+        connection.exec('PRAGMA journal_mode = WAL;');
+        connection.exec('PRAGMA busy_timeout = 5000;');
+        connection.exec(SCHEMA);
+        if (!version) {
+            connection.prepare(`INSERT INTO schema_meta (key, value) VALUES ('schema_version', ?)`).run(SCHEMA_VERSION);
+        }
+        db = connection;
+        ready = true;
+        console.log(`SQLite ready at ${dbPath}`);
+        return db;
+    } catch (error) {
         db = null;
-        throw new Error(message);
+        ready = false;
+        connection?.close();
+        throw error;
     }
-    ready = true;
-    console.log(`SQLite ready at ${dbPath}`);
-    return db;
 }
 
 export function withTransaction(work) {
