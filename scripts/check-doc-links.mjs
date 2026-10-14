@@ -67,7 +67,7 @@ function isExternal(target) {
     return /^(https?:|mailto:|#)/.test(target);
 }
 
-export function resolveDocLink(fromFile, rawTarget, repoRoot) {
+export function resolveDocLink(fromFile, rawTarget, repoRoot, options = {}) {
     let target = rawTarget.trim();
     if (!target || isExternal(target)) return { skip: true };
     if (target.startsWith('{B3_HOME}/')) return { skip: true };
@@ -78,7 +78,7 @@ export function resolveDocLink(fromFile, rawTarget, repoRoot) {
     if (pathPart.startsWith('/')) {
         return { abs: join(repoRoot, pathPart.slice(1)), display: pathPart };
     }
-    const base = dirname(fromFile);
+    const base = options.repoRootRelative ? repoRoot : dirname(fromFile);
     const abs = normalize(resolve(base, pathPart));
     return { abs, display: pathPart };
 }
@@ -86,8 +86,8 @@ export function resolveDocLink(fromFile, rawTarget, repoRoot) {
 export function checkMarkdownFile(filePath, repoRoot) {
     const text = readFileSync(filePath, 'utf8');
     const broken = [];
-    const check = (raw, kind) => {
-        const resolved = resolveDocLink(filePath, raw, repoRoot);
+    const check = (raw, kind, linkOptions = {}) => {
+        const resolved = resolveDocLink(filePath, raw, repoRoot, linkOptions);
         if (resolved.skip) return;
         if (!resolved.abs.startsWith(repoRoot)) {
             broken.push({ kind, raw, reason: 'escapes repository root' });
@@ -107,7 +107,7 @@ export function checkMarkdownFile(filePath, repoRoot) {
         BACKTICK_DOC_RE.lastIndex = 0;
         while ((m = BACKTICK_DOC_RE.exec(text))) {
             if (m[1].startsWith('{B3_HOME}/')) continue;
-            check(m[1], 'backtick');
+            check(m[1], 'backtick', { repoRootRelative: true });
         }
     }
     return broken.map((b) => ({ file: relFromRoot, ...b }));

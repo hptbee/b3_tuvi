@@ -27,7 +27,7 @@ node scripts/check-doc-links.test.mjs
 | Markdown relative | `[label](../planning/ROADMAP_SPRINT_9_14.md)` | Yes |
 | Markdown root-relative | `[label](/README.md)` | Yes |
 | Angle autolink | angle-bracket path under `docs/` | Yes |
-| Rules backtick path | `` `docs/engineering/CONTRIBUTING.md` `` | Yes, in `rules/` only |
+| Rules backtick path | `` `docs/engineering/CONTRIBUTING.md` `` | Yes, in `rules/` only; resolved from **repository root**, not from `rules/` |
 | Fragment only | `[§](#anchor)` | Skipped |
 | External URL | `https://...` | Skipped |
 | B3 system doc | `` `{B3_HOME}/docs/precedence.md` `` | Skipped (external to product tree) |

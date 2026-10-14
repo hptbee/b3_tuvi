@@ -23,10 +23,15 @@ assert.equal(broken.length, 1);
 assert.equal(broken[0].raw, './missing.md');
 
 mkdirSync(join(tmp, 'rules'), { recursive: true });
+writeFileSync(join(tmp, 'rules', 'example.md'), 'Policy in `docs/target.md`.\n');
+const rulesRootRelative = checkMarkdownFile(join(tmp, 'rules', 'example.md'), tmp);
+assert.equal(rulesRootRelative.length, 0, 'rules backtick docs/ paths are repo-root-relative');
+
 writeFileSync(join(tmp, 'rules', 'portable.md'), 'Use `docs/missing-in-rules.md` for policy.\n');
 const rulesBroken = checkMarkdownFile(join(tmp, 'rules', 'portable.md'), tmp);
 assert.equal(rulesBroken.length, 1);
 assert.equal(rulesBroken[0].kind, 'backtick');
+assert.equal(rulesBroken[0].reason, 'missing target');
 
 writeFileSync(
     join(tmp, 'rules', 'b3-only.md'),
