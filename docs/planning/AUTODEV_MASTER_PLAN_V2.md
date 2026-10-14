@@ -366,3 +366,7 @@ Baseline `b25478d`. Cơ Nguyệt Đồng Lương interpretation binding is `UNRE
 
 **GO / NO-GO:** 11C gate CONDITIONAL GO, more readings NO-GO. Sprint 12 block CONDITIONAL GO, fortune calculation NO-GO. Sprint 13 narration NO-GO.
 
+## 27. Fortune source completion (2026-10-14)
+
+Baseline `1cd063d`. Volume 2 annual-star lines were reviewed separately. Lưu Lộc stays an example only. Tang Môn and Thiên Đức stay unimplemented because the reviewers do not agree on a branch order. No public fortune text.
+

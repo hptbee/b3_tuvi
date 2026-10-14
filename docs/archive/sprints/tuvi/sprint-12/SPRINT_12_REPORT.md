@@ -22,3 +22,15 @@ Date: 2026-10-14. Baseline: `origin/main` `b25478d`.
 | Fortune calculation | NO-GO |
 | Public fortune prediction | NO-GO |
 | Sprint 13 kickoff | NO-GO for narration. There is no approved fortune text and only one internal interpretation claim. Grounded narration would have almost nothing new to say and must stay disabled. |
+
+## Annual-star pass
+
+The rest of volume 2 was read after the đại hạn excerpt. New lines for Tang Môn, Lưu Lộc, and Thiên Đức were reviewed on their own.
+
+| Formula | Result |
+| --- | --- |
+| Lưu Lộc / Lưu Kình / Lưu Đà | Both reviewers: the 己丑 sentence is one example, not a general rule. |
+| Tang Môn, Điếu Khách, Bạch Hổ, Quan Phủ | Reviewers disagree, and neither gives a branch order for 前/後. |
+| Thiên Đức / Nguyệt Đức | Reviewers disagree, and neither gives a branch order for 順. |
+
+Agents: grok-4.7-high `bc-a74566ff-5e13-5f0c-ae16-e95d39b8f1e3`, gpt-5.6-terra-medium `bc-ede9b5be-fde7-573d-be43-62ded2b9a29c`. No annual-star position is calculated.

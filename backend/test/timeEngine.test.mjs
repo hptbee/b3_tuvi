@@ -19,6 +19,10 @@ assert.strictEqual(overlay.capabilities.dai_han_label.interpretation, 'not_appro
 assert.strictEqual(overlay.capabilities.dai_han_label.fortuneFormula, 'not_applied');
 assert.strictEqual(overlay.research.tieu_han, 'BLOCKED_SOURCE');
 assert.strictEqual(overlay.research.blockReason, 'direction_without_age_step');
+assert.strictEqual(overlay.research.annualStarReasons.luu_loc, 'example_only_not_a_general_rule');
+assert.strictEqual(overlay.research.annualStarReasons.tang_mon, 'reviewers_disagree_on_direction');
+assert.strictEqual(overlay.research.luu_loc, 'BLOCKED_SOURCE');
+assert.ok(!overlay.capabilities.tieu_han.branch);
 assert.strictEqual(overlay.boundaries.leapMonthFortune, 'not_evaluated');
 assert.strictEqual(overlay.boundaries.genderEffect, 'not_evaluated');
 assert.notStrictEqual(overlay.boundaries.genderEffect, false);

@@ -36,8 +36,17 @@ export function timeOverlay(chart) {
             luu_nien: 'BLOCKED_SOURCE',
             luu_tinh: 'BLOCKED_SOURCE',
             tu_hoa_han: 'BLOCKED_SOURCE',
+            luu_loc: 'BLOCKED_SOURCE',
+            tang_mon: 'BLOCKED_SOURCE',
+            thien_duc: 'BLOCKED_SOURCE',
             reviewedExcerpt: 'docs/knowledge/research/fortune/ziwei-quanshu-juan2-limits.txt',
-            blockReason: 'direction_without_age_step'
+            annualStarExcerpt: 'docs/knowledge/research/fortune/ziwei-quanshu-juan2-annual-stars.txt',
+            blockReason: 'direction_without_age_step',
+            annualStarReasons: {
+                luu_loc: 'example_only_not_a_general_rule',
+                tang_mon: 'reviewers_disagree_on_direction',
+                thien_duc: 'reviewers_disagree_on_direction'
+            }
         },
         boundaries: {
             timezone: 'Asia/Ho_Chi_Minh',
