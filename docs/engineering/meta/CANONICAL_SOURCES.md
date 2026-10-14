@@ -14,7 +14,7 @@ Last rebaseline: 2026-10-14 (documentation architecture cleanup).
 | Tử Vi domain terms | [tuvi/DOMAIN_KNOWLEDGE.md](../../tuvi/DOMAIN_KNOWLEDGE.md) | |
 | Source / provenance policy | [tuvi/KNOWLEDGE_CLAIM_MODEL.md](../../tuvi/KNOWLEDGE_CLAIM_MODEL.md), [knowledge/provenance-contract.json](../../knowledge/provenance-contract.json) | |
 | Runtime knowledge registry | [knowledge/sources.json](../../knowledge/sources.json), [knowledge/combination-source-matrix.json](../../knowledge/combination-source-matrix.json) | Imported by backend |
-| Formula V1 (executable) | `backend/src/engine/formulaV1.mjs`, `backend/src/data/formulaV1.mjs` | Human spec: [archive sprint 9 spec](../../archive/sprints/tuvi/sprint-9/SPRINT_9_FINAL_FORMULA_SPEC.md) |
+| Formula V1 (executable) | `backend/src/data/formulaV1.mjs` (called from `backend/src/engine/combinationMatch.js`) | Human spec: [archive sprint 9 spec](../../archive/sprints/tuvi/sprint-9/SPRINT_9_FINAL_FORMULA_SPEC.md). There is no `backend/src/engine/formulaV1.mjs`. |
 | Rule engine v2 snapshot | `backend/src/data/rulesV2.json` | Research/historical; not runtime matcher |
 | Condition engine (Sprint 10) | `backend/src/engine/conditionEval.js` | Report: [SPRINT_10_FINAL_REPORT.md](../../archive/sprints/tuvi/sprint-10/SPRINT_10_FINAL_REPORT.md) |
 | Thần Số Học formulas | [numerology/FORMULA_SPEC.md](../../numerology/FORMULA_SPEC.md) | |

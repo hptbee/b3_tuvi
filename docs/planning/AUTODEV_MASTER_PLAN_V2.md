@@ -341,3 +341,18 @@ Các thiếu hụt thư tịch/điều kiện/claim còn mở đi tiếp dưới
 
 **Tài liệu điều phối:** `docs/planning/ROADMAP_SPRINT_9_14.md` §6 là roadmap chi tiết; Master Plan V2 là tracker task chính. Giữ Master Plan V1 lịch sử, không tạo V3.
 
+## 24. Sprint 11 — evidence-grounded interpretation (2026-10-14)
+
+Baseline `18fab65` (PR #25, #27, #29, #32 on main). Formula V1 path: `backend/src/data/formulaV1.mjs`.
+
+- **S11-01 — implemented:** eligibility layers; `MATCH` is not interpretation approval.
+- **S11-02 — content blocked:** five priority palaces and Thân overlay stay structured. No fabricated readings.
+- **S11-03 — implemented:** deterministic copy of `approvedWording` only, internal channel.
+- **S11-04 — implemented:** evidence UI shows layer status.
+- **S11-05 — implemented:** twelve palace functions always return a status.
+- **S11-06 — implemented:** topic rollup, `score: null`.
+- **S11-07 — fixtures only:** no new dual-AI interpretation review.
+- **S11-08 — implemented:** public analyze and chart export omit unapproved prose.
+
+**GO / NO-GO:** engineering CONDITIONAL GO; internal content NO-GO; public release NO-GO; Sprint 12 research CONDITIONAL GO. Matrix: `docs/archive/sprints/tuvi/sprint-11/INTERPRETATION_COVERAGE_MATRIX.md`.
+

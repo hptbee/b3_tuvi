@@ -8,6 +8,7 @@ import { buildEvidenceV3 } from '../engine/evidenceV3.js';
 import { branchIndexRelations } from '../engine/palaceRelation.js';
 import { validateKnowledgeBundle } from '../knowledge/validateKnowledge.js';
 import { claimEligibility } from './eligibility.js';
+import { renderInternalProse } from './synthesis.js';
 import { contradictionResolution } from '../engine/contradiction.js';
 
 export const PALACE_FUNCTIONS = [
@@ -103,7 +104,7 @@ function rollupFormation(hits) {
     return 'unknown';
 }
 
-function statementFor(chart, palace, spec, hits, claims) {
+function statementFor(chart, palace, spec, hits, claims, options) {
     const palaceHits = palace ? hits.filter((hit) => hit.palaceId === palace.id) : [];
     const applied = applicableClaims(claims, chart, spec.functionId, palaceHits);
         const eligibility = applied.map((claim) => claimEligibility(claim, chart, palace));
@@ -166,6 +167,10 @@ function statementFor(chart, palace, spec, hits, claims) {
         availabilityStatus,
         limitations,
         prose: null,
+        internalProse: options.includeInternal && availabilityStatus === 'eligible_claims_present'
+            ? renderInternalProse(applied.filter((claim) => eligibility.find((item) => item.claimId === claim.claimId)?.eligible))
+            : null,
+        publicInterpretationReleased: false,
         usage: 'structured_analysis'
     };
 }
@@ -201,14 +206,14 @@ export function interpretChart(chart, options = {}) {
         statementId: `palace:${functionId}`,
         functionId,
         topic: functionId
-    }, hits, claims));
+    }, hits, claims, options));
     const thanPalace = chart.palaces.find((palace) => palace.isThan) || null;
     statements.push(statementFor(chart, thanPalace, {
         statementId: `than:${thanPalace?.id || 'missing'}`,
         functionId: thanPalace?.functionId || null,
         topic: 'than',
         thanOverlay: true
-    }, hits, claims));
+    }, hits, claims, options));
     return {
         ok: true,
         usage: 'structured_analysis',

@@ -47,6 +47,7 @@ const approved = {
     claimId: 'edge-approved',
     approvedForInterpretation: true,
     interpretationStatus: 'sourced',
+    sourceReviewStatus: 'AI_CROSS_REVIEWED',
     formulaComparisonStatus: 'MATCH',
     sourceId: 'src',
     relatedPalaces: [host.functionId],
