@@ -78,7 +78,7 @@ function validStatement(statement) {
       && typeof star === 'object'
       && (star.displayName === undefined || typeof star.displayName === 'string')
       && (star.starId === undefined || typeof star.starId === 'string')
-      && (star.brightness === undefined || typeof star.brightness === 'string')
+      && (star.brightness === undefined || star.brightness === null || typeof star.brightness === 'string')
       && (star.displayName || star.starId)
     ))) return false;
   }
@@ -125,7 +125,7 @@ function validAnalysisBody(body) {
     if (!capabilities || typeof capabilities !== 'object') return false;
     if (!Object.values(capabilities).every((value) => {
       if (!value || typeof value !== 'object') return false;
-      if (value.branch !== undefined && typeof value.branch !== 'string') return false;
+      if (value.branch !== undefined && value.branch !== null && typeof value.branch !== 'string') return false;
       if (value.status !== undefined && typeof value.status !== 'string') return false;
       return true;
     })) return false;
@@ -225,7 +225,6 @@ export default function StructuredAnalysis({ userInfo }) {
     if (![day, month, year, hour, gender].every((value) => Number.isInteger(value))) return undefined;
 
     const id = ++sequence.current;
-    setState((current) => (current.key === nextRequestKey ? current : { key: nextRequestKey, status: 'loading', body: null, error: '' }));
 
     const controller = new AbortController();
     fetch(`${API_BASE}/api/interpretations/analyze`, {
