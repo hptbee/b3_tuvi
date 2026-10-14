@@ -3,6 +3,7 @@ import pilot from '../../../docs/knowledge/pilotClaims.json' with { type: 'json'
 import sourcesDoc from '../../../docs/knowledge/sources.json' with { type: 'json' };
 import matrixDoc from '../../../docs/knowledge/combination-source-matrix.json' with { type: 'json' };
 import contract from '../../../docs/knowledge/provenance-contract.json' with { type: 'json' };
+import interpretationClaims from '../../../docs/knowledge/interpretation-claims.json' with { type: 'json' };
 import { evaluateNormalizedFormulas } from '../engine/combinationMatch.js';
 import { buildEvidenceV3 } from '../engine/evidenceV3.js';
 import { branchIndexRelations } from '../engine/palaceRelation.js';
@@ -57,7 +58,7 @@ function catalogClaims(extra) {
         editionId: claim.editionId || pilot.editionId,
         usage: 'research_pilot'
     }));
-    return [...fromPilot, ...(extra || [])];
+    return [...fromPilot, ...interpretationClaims.claims, ...(extra || [])];
 }
 
 function applicableClaims(claims, chart, functionId, hits) {
@@ -107,7 +108,19 @@ function rollupFormation(hits) {
 function statementFor(chart, palace, spec, hits, claims, options) {
     const palaceHits = palace ? hits.filter((hit) => hit.palaceId === palace.id) : [];
     const applied = applicableClaims(claims, chart, spec.functionId, palaceHits);
-        const eligibility = applied.map((claim) => claimEligibility(claim, chart, palace));
+        const eligibility = applied.map((claim) => claimEligibility(claim, chart, palace, {
+            formulaHits: [
+                ...hits.map((hit) => ({
+                    catalogId: hit.formula.catalogId,
+                    palaceId: hit.palaceId,
+                    sourceProfile: hit.formula.sourceProfile,
+                    gradeStatus: hit.formula.gradeStatus,
+                    formationStatus: hit.formula.formationStatus,
+                    breakingStatus: hit.evidence?.breakingConditions || 'not_implemented'
+                })),
+                ...(options.extraFormulaHits || [])
+            ]
+        }));
     const links = linkEvidence(applied);
     const eligible = eligibility.filter((item) => item.eligible);
     let availabilityStatus = 'insufficient_evidence';

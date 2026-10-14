@@ -356,3 +356,7 @@ Baseline `18fab65` (PR #25, #27, #29, #32 on main). Formula V1 path: `backend/sr
 
 **GO / NO-GO:** engineering CONDITIONAL GO; internal content NO-GO; public release NO-GO; Sprint 12 research CONDITIONAL GO. Matrix: `docs/archive/sprints/tuvi/sprint-11/INTERPRETATION_COVERAGE_MATRIX.md`.
 
+## 25. Sprint 11B — one internal interpretation claim (2026-10-14)
+
+PR #33 was not merged at start. Stacked on that branch. Two interpretation reviews of the stored Tân Biên Tử Phủ span were executed (`grok-4.7-high` `bc-f2233997-a2cb-5eed-9dd0-1dfac28c23e0`, `gpt-5.6-terra-medium` `bc-122a2db4-09d4-51f4-a029-2cd744690f1e`). Claim `interp-tu-phu-dong-cung-giap-menh` requires a live Formula V1 hit, profile `tan-bien`, palace Mệnh, and year stem Giáp. Grade is not certified. Breaking is not promoted. Public prose stays null. Report: `docs/archive/sprints/tuvi/sprint-11/SPRINT_11B_REPORT.md`.
+
