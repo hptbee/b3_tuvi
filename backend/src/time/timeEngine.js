@@ -35,12 +35,14 @@ export function timeOverlay(chart) {
             tieu_han: 'BLOCKED_SOURCE',
             luu_nien: 'BLOCKED_SOURCE',
             luu_tinh: 'BLOCKED_SOURCE',
-            tu_hoa_han: 'BLOCKED_SOURCE'
+            tu_hoa_han: 'BLOCKED_SOURCE',
+            reviewedExcerpt: 'docs/knowledge/research/fortune/ziwei-quanshu-juan2-limits.txt',
+            blockReason: 'direction_without_age_step'
         },
         boundaries: {
             timezone: 'Asia/Ho_Chi_Minh',
-            leapMonthFortune: 'not_applied',
-            genderChangesCycle: false,
+            leapMonthFortune: 'not_evaluated',
+            genderEffect: 'not_evaluated',
             ageConvention: 'not_approved'
         }
     };

@@ -18,8 +18,10 @@ assert.strictEqual(overlay.capabilities.leap_month_fortune.status, 'not_applied'
 assert.strictEqual(overlay.capabilities.dai_han_label.interpretation, 'not_approved');
 assert.strictEqual(overlay.capabilities.dai_han_label.fortuneFormula, 'not_applied');
 assert.strictEqual(overlay.research.tieu_han, 'BLOCKED_SOURCE');
-assert.strictEqual(overlay.boundaries.leapMonthFortune, 'not_applied');
-assert.strictEqual(overlay.boundaries.genderChangesCycle, false);
+assert.strictEqual(overlay.research.blockReason, 'direction_without_age_step');
+assert.strictEqual(overlay.boundaries.leapMonthFortune, 'not_evaluated');
+assert.strictEqual(overlay.boundaries.genderEffect, 'not_evaluated');
+assert.notStrictEqual(overlay.boundaries.genderEffect, false);
 assert.strictEqual(overlay.natalDecadeLabels.length, 12);
 assert.ok(overlay.natalDecadeLabels.every((item) => item.daiHan !== undefined));
 assert.strictEqual(tuviInfo.boxes[1].daiHan, before);
