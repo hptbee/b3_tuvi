@@ -1,9 +1,19 @@
 import decision from '../../../docs/knowledge/decisions/tu-phu-dong-cung.json' with { type: 'json' };
 import combinations from '../data/combinations.json' with { type: 'json' };
 import { evaluateNormalizedFormulas } from '../engine/combinationMatch.js';
+import { evaluateCondition } from '../engine/conditionEval.js';
 import { readDecision } from '../knowledge/decisionRegistry.js';
 
 const COMBINATION = 'Tử Phủ Đồng Cung';
+
+const FORMATION = {
+    op: 'and',
+    profile: 'tan-bien',
+    items: [
+        { op: 'branch', target: 'menh', branches: ['Dần', 'Thân'] },
+        { op: 'same_palace', target: 'menh', stars: ['Tử Vi', 'Thiên Phủ'] }
+    ]
+};
 
 function closed(extra) {
     return {
@@ -44,15 +54,16 @@ export function evaluateTuPhuDongCungSlice(chart) {
             availabilityStatus: 'insufficient_evidence',
             reason: chart?.chartSource === 'server' ? 'decision_not_readable' : 'chart_not_server_calculated',
             runtimeMatch: { status: 'not_matched' },
-            formation: { status: 'not_matched' },
-            grade: { status: 'not_applicable' },
-            breaking: { status: 'not_evaluated' },
+            formation: { status: 'unknown' },
+            grade: { status: 'not_certified' },
+            breaking: { status: 'not_implemented' },
             sourceVerification,
             interpretationEligibility
         });
     }
     const catalog = combinations.filter((item) => item.name === COMBINATION);
     const hit = evaluateNormalizedFormulas(chart, catalog)[0] || null;
+    const formation = evaluateCondition(FORMATION, chart, { profile: 'tan-bien' });
     return closed({
         availabilityStatus: 'insufficient_evidence',
         reason: 'formula_match_is_not_interpretation_approval',
@@ -64,9 +75,10 @@ export function evaluateTuPhuDongCungSlice(chart) {
             branchName: hit.evidence?.branchName || null,
             sourceProfile: hit.sourceProfile
         } : { status: 'not_matched' },
-        formation: { status: hit ? 'matched' : 'not_matched' },
-        grade: { status: hit?.gradeStatus || 'not_applicable' },
-        breaking: { status: 'not_evaluated' },
+        formation: { status: formation.status, reason: 'evaluated_from_condition_tree' },
+        grade: { status: hit?.gradeStatus || 'not_certified' },
+        breaking: { status: 'not_implemented' },
+        conditionTrace: formation,
         sourceVerification,
         interpretationEligibility
     });

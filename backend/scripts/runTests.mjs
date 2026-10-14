@@ -40,6 +40,7 @@ export const unitTests = [
     'test/sprint9Adjudication.test.mjs',
     'test/formulaV1.test.mjs',
     'test/sprint9Closure.test.mjs',
+    'test/conditionEval.test.mjs',
     'test/qualityEdges.test.mjs',
     'test/perfSmoke.test.mjs'
 ];

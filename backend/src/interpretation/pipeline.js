@@ -8,6 +8,7 @@ import { buildEvidenceV3 } from '../engine/evidenceV3.js';
 import { branchIndexRelations } from '../engine/palaceRelation.js';
 import { validateKnowledgeBundle } from '../knowledge/validateKnowledge.js';
 import { claimEligibility } from './eligibility.js';
+import { contradictionResolution } from '../engine/contradiction.js';
 
 export const PALACE_FUNCTIONS = [
     'menh',
@@ -160,6 +161,7 @@ function statementFor(chart, palace, spec, hits, claims) {
             : 'not_implemented',
         supportingEvidence: links.supportingEvidence,
         contradictoryEvidence: links.contradictoryEvidence,
+        contradictionResolution: contradictionResolution(links.contradictoryEvidence),
         unresolvedConditions: palaceHits.length > 0 ? ['source_formation_not_inferred_from_runtime_match'] : ['no_runtime_rule_hit'],
         availabilityStatus,
         limitations,
