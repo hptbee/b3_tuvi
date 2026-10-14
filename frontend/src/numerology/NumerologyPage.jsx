@@ -5,6 +5,7 @@ import './numerology.css';
 import CalculationTrace from './CalculationTrace';
 import NumerologyAdvanced from './NumerologyAdvanced';
 import MetricMeaning from './MetricMeaning';
+import { unavailableMetricMessage } from './metricAvailability';
 
 const LABELS = {
   lifePath: ['Đường đời', 'Từ tổng các chữ số trong ngày sinh.'],
@@ -14,11 +15,6 @@ const LABELS = {
   soulUrge: ['Linh hồn', 'Từ các nguyên âm A, E, I, O, U.'],
   personality: ['Nhân cách', 'Từ các phụ âm trong họ tên.'],
   maturity: ['Trưởng thành', 'Từ Đường đời và Biểu đạt.']
-};
-const UNAVAILABLE = {
-  missing_name: 'Thêm họ tên để tính chỉ số này.',
-  no_vowels: 'Tên chuẩn hóa không có nguyên âm A, E, I, O, U.',
-  no_consonants: 'Tên chuẩn hóa không có phụ âm.'
 };
 function payload(draft) {
   return { birthDate: { year: Number(draft.year), month: Number(draft.month), day: Number(draft.day) }, ...(draft.fullName !== '' ? { fullName: draft.fullName } : {}), ...(draft.targetDate ? { targetDate: draft.targetDate } : {}) };
@@ -31,7 +27,7 @@ function MetricSection({ id, metric }) {
       <output className="num-value" aria-label={label}>{metric.value}</output>
       {metric.isMaster && <p className="num-master">Số đặc biệt · Gốc {metric.rootValue}</p>}
       <CalculationTrace label={label} metric={metric} /><MetricMeaning label={label} metric={metric} />
-    </> : <p className="num-unavailable">{UNAVAILABLE[metric.reason] || 'Chưa đủ thông tin để tính.'}</p>}
+    </> : <p className="num-unavailable">{unavailableMetricMessage(metric)}</p>}
   </article>;
 }
 export default function NumerologyPage() {
@@ -224,7 +220,11 @@ export default function NumerologyPage() {
             <p className="num-dash-identity">{birthLabel}{resultInput.fullName ? ' · Tên đã nhập được chuẩn hóa khi tính các chỉ số từ tên.' : ' · Chưa nhập tên. Nhóm chỉ số từ tên không được tính.'}</p>
             <div className="num-dash-grid">
               {facts.map(([label, value, note]) => <article key={label}><span>{label}</span><strong>{value}</strong><small>{note}</small></article>)}
-              {named ? [['Biểu đạt', result.metrics.expression.value], ['Linh hồn', result.metrics.soulUrge.value], ['Nhân cách', result.metrics.personality.value], ['Trưởng thành', result.metrics.maturity.value]].map(([label, value]) => <article key={label}><span>{label}</span><strong>{value}</strong><small>Từ tên</small></article>) : <article className="num-dash-missing"><span>Chỉ số từ tên</span><strong>—</strong><small>Biểu đạt, Linh hồn, Nhân cách và Trưởng thành chưa có vì thiếu tên.</small></article>}
+              {named ? [['expression', 'Biểu đạt'], ['soulUrge', 'Linh hồn'], ['personality', 'Nhân cách'], ['maturity', 'Trưởng thành']].map(([id, label]) => {
+                const metric = result.metrics[id];
+                const available = metric.status === 'available';
+                return <article key={id}><span>{label}</span><strong>{available ? metric.value : 'Chưa tính được'}</strong><small>{available ? 'Từ tên' : unavailableMetricMessage(metric)}</small></article>;
+              }) : <article className="num-dash-missing"><span>Chỉ số từ tên</span><strong>—</strong><small>Biểu đạt, Linh hồn, Nhân cách và Trưởng thành chưa có vì thiếu tên.</small></article>}
             </div>
             <p className="num-disclaimer">Quy ước {result.profile.id} {result.profile.version}. Các con số là quy ước biểu tượng của hồ sơ này, không phải đánh giá khoa học hay lời đã được chuyên gia xác minh.</p>
           </>;

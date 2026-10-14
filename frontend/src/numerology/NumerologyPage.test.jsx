@@ -1,4 +1,4 @@
-import { act, cleanup, render, screen, waitFor } from '@testing-library/react';
+import { act, cleanup, render, screen, waitFor, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import NumerologyPage from './NumerologyPage';
 
@@ -85,6 +85,40 @@ it('submits date-only without a name and explains unavailable metrics', async ()
   expect(screen.getByRole('heading', { name: 'Các chỉ số của bạn' })).toHaveFocus();
   expect(screen.getByText(/Ngày lập 13\/10\/2026/)).toBeVisible();
   expect(screen.getByText(/pythagorean-vn-v1 · 1\.2\.0/)).toBeVisible();
+});
+
+it.each([
+  ['LY', 'soulUrge', 'Linh hồn', 'no_vowels', 'Tên chuẩn hóa không có nguyên âm A, E, I, O, U.', 1, 'Nhân cách', 1, 5],
+  ['AE', 'personality', 'Nhân cách', 'no_consonants', 'Tên chuẩn hóa không có phụ âm.', 6, 'Linh hồn', 6, 1],
+  ['LY', 'soulUrge', 'Linh hồn', 'constructor', 'Chưa đủ thông tin để tính.', 1, 'Nhân cách', 1, 5]
+])('explains unavailable %s name metrics in the overview and relationships: %s', async (name, missingId, label, reason, message, expression, companionLabel, companion, maturity) => {
+  const body = result(4, name);
+  const available = value => ({ ...body.metrics.lifePath, value, rootValue: value });
+  body.metrics.expression = available(expression);
+  body.metrics.maturity = available(maturity);
+  body.metrics[missingId === 'soulUrge' ? 'personality' : 'soulUrge'] = available(companion);
+  body.metrics[missingId] = { status: 'unavailable', value: null, reason, meaning: null, meaningStatus: 'withheld' };
+  body.indicators.bridges[1] = { id: 'soulUrge-personality', status: 'unavailable', reason, value: null, meaning: null, meaningStatus: 'withheld' };
+  vi.stubGlobal('fetch', vi.fn(async () => success(body)));
+  const user = userEvent.setup();
+  render(<NumerologyPage />);
+  await fillDate(user);
+  await user.type(screen.getByRole('textbox', { name: /Họ tên khai sinh/ }), name);
+  await user.click(screen.getByRole('button', { name: 'Xem kết quả' }));
+  await screen.findByRole('heading', { name: 'Các chỉ số của bạn' });
+  const overview = screen.getByRole('region', { name: 'Tổng quan' });
+  const missingCard = within(overview).getByText(label, { exact: true }).closest('article');
+  expect(within(missingCard).getByText('Chưa tính được')).toBeVisible();
+  expect(missingCard).toHaveTextContent(message);
+  const companionCard = within(overview).getByText(companionLabel, { exact: true }).closest('article');
+  expect(within(companionCard).getByText(String(companion), { exact: true })).toBeVisible();
+  expect(screen.getByRole('status', { name: companionLabel, exact: true })).toHaveTextContent(String(companion));
+  expect(screen.queryByRole('status', { name: label, exact: true })).not.toBeInTheDocument();
+  expect(screen.getByRole('article', { name: label, exact: true })).toHaveTextContent(message);
+  const relations = screen.getByRole('region', { name: 'Các mối nối đã định nghĩa' });
+  expect(relations).toHaveTextContent(`${label}: ${message.replace(/\.$/, '')}`);
+  expect(relations).toHaveTextContent(`${companionLabel} ${companion}`);
+  expect(relations).not.toHaveTextContent(/null|undefined/);
 });
 
 it('draws pinnacle edges, the challenge timeline, and the selected birth-grid line', async () => {
