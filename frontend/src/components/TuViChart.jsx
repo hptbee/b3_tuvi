@@ -1,76 +1,91 @@
-import React, { useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 import PalaceBox from './PalaceBox';
 import CenterInfo from './CenterInfo';
 import { API_BASE } from '../apiBase';
 
 function TuViChart({ lunarInfo, tuviInfo, userInfo }) {
-    const [selectedStar, setSelectedStar] = useState(null);
-    const [selectedPalace, setSelectedPalace] = useState(null);
+    const [lookup, setLookup] = useState(null);
+    const controller = useRef(null);
+    const sequence = useRef(0);
+    const dialog = useRef(null);
+    const trigger = useRef(null);
+    const heading = useRef(null);
+    const headingId = useId();
+    const current = lookup?.chart === tuviInfo ? lookup : null;
+    const isOpen = Boolean(current);
+    useEffect(() => () => {
+        sequence.current += 1;
+        controller.current?.abort();
+    }, [tuviInfo]);
+    useEffect(() => {
+        if (isOpen && dialog.current && !dialog.current.open) dialog.current.showModal();
+    }, [isOpen]);
+    const loadInfo = async ({ kind, starName, cungName }, captureFocus = true) => {
+        if (captureFocus) trigger.current = document.activeElement;
+        controller.current?.abort();
+        const next = new AbortController();
+        controller.current = next;
+        const id = ++sequence.current;
+        const intent = { kind, starName, cungName, chart: tuviInfo };
+        setLookup({ ...intent, status: 'loading', data: null });
+        try {
+            const url = kind === 'star'
+                ? `${API_BASE}/api/meanings/star/${encodeURIComponent(starName)}?palace=${encodeURIComponent(cungName)}`
+                : `${API_BASE}/api/meanings/palace/${encodeURIComponent(cungName)}`;
+            const response = await fetch(url, { signal: next.signal, cache: 'no-store' });
+            if (!response.ok) throw new Error('Meaning unavailable');
+            const data = await response.json();
+            const valid = kind === 'star'
+                ? typeof data?.text === 'string' && data.text.length <= 50_000
+                : Array.isArray(data) && data.length <= 32 && data.every(item => typeof item?.title === 'string' && typeof item?.desc === 'string' && item.title.length <= 200 && item.desc.length <= 50_000);
+            if (!valid) throw new Error('Invalid meaning response');
+            if (next.signal.aborted || id !== sequence.current) return;
+            setLookup({ ...intent, status: 'ready', data });
+        } catch (error) {
+            if (next.signal.aborted || id !== sequence.current || error?.name === 'AbortError') return;
+            setLookup({ ...intent, status: 'error', data: null });
+        }
+    };
+    const handleStarClick = (starName, cungName) => loadInfo({ kind: 'star', starName, cungName });
+    const handlePalaceClick = cungName => loadInfo({ kind: 'palace', cungName });
+    const closeInfo = () => {
+        sequence.current += 1;
+        controller.current?.abort();
+        dialog.current?.close();
+        setLookup(null);
+        if (trigger.current?.isConnected) trigger.current.focus();
+    };
 
     if (!tuviInfo) return null;
-
     const { boxes } = tuviInfo;
-
-    const handleStarClick = async (starName, cungName) => {
-        try {
-            const url = `${API_BASE}/api/meanings/star/${encodeURIComponent(starName)}?palace=${encodeURIComponent(cungName)}`;
-            const res = await fetch(url);
-            const data = await res.json();
-            setSelectedStar({ starName, cungName, meaning: data.text || data });
-            setSelectedPalace(null);
-        } catch (error) {
-            console.error(error);
-        }
-    };
-
-    const handlePalaceClick = async (cungName) => {
-        try {
-            const res = await fetch(`${API_BASE}/api/meanings/palace/${encodeURIComponent(cungName)}`);
-            const data = await res.json();
-            setSelectedPalace({ cungName, meaningList: data });
-            setSelectedStar(null);
-        } catch (error) {
-            console.error(error);
-        }
-    };
-
-    const closeInfo = () => {
-        setSelectedStar(null);
-        setSelectedPalace(null);
-    };
 
     return (
         <div className="tuvi-chart">
-            {(selectedStar || selectedPalace) && (
-                <div className="star-modal-overlay" onClick={closeInfo}>
-                    <div className="star-modal-content" onClick={e => e.stopPropagation()}>
-                        <button className="close-btn" onClick={closeInfo}>×</button>
-                        
-                        {selectedStar && (
-                            <>
-                                <h3>Sao {selectedStar.starName}</h3>
-                                <p className="cung-subtitle">Tại cung <strong>{selectedStar.cungName}</strong></p>
-                                <div className="star-meaning-body">
-                                    <p>{selectedStar.meaning}</p>
-                                </div>
-                            </>
-                        )}
-
-                        {selectedPalace && (
-                            <>
-                                <h3>{selectedPalace.cungName}</h3>
-                                <div className="star-meaning-body">
-                                    {selectedPalace.meaningList.map((item, idx) => (
-                                        <div key={idx} style={{ marginBottom: '15px' }}>
-                                            <h4 style={{ color: '#ffb347', marginBottom: '5px' }}>{item.title}</h4>
-                                            <p>{item.desc}</p>
-                                        </div>
-                                    ))}
-                                </div>
-                            </>
-                        )}
-                    </div>
-                </div>
+            {current && (
+                <dialog className="star-modal-content" ref={dialog} aria-labelledby={headingId} onCancel={event => { event.preventDefault(); closeInfo(); }} onKeyDown={event => {
+                    if (event.key !== 'Tab') return;
+                    const buttons = [...event.currentTarget.querySelectorAll('button')];
+                    const first = buttons[0];
+                    const last = buttons.at(-1);
+                    const active = document.activeElement;
+                    if (!buttons.includes(active) || (event.shiftKey ? active === first : active === last)) {
+                        event.preventDefault();
+                        (event.shiftKey ? last : first)?.focus();
+                    }
+                }} onClick={event => {
+                    if (event.target !== event.currentTarget) return;
+                    const bounds = event.currentTarget.getBoundingClientRect();
+                    if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) closeInfo();
+                }}>
+                    <button type="button" className="close-btn" aria-label="Đóng thông tin" onClick={closeInfo}>×</button>
+                    <h3 id={headingId} ref={heading} tabIndex={-1}>{current.kind === 'star' ? `Sao ${current.starName}` : current.cungName}</h3>
+                    {current.kind === 'star' && <p className="cung-subtitle">Tại cung <strong>{current.cungName}</strong></p>}
+                    {current.status === 'loading' && <p role="status">Đang tải thông tin…</p>}
+                    {current.status === 'error' && <div><p role="alert">Không tải được thông tin. Vui lòng thử lại.</p><button type="button" onClick={() => { heading.current?.focus(); loadInfo(current, false); }}>Thử lại</button></div>}
+                    {current.status === 'ready' && <div className="star-meaning-body">
+                        {current.kind === 'star' ? <p>{current.data.text || 'Chưa có nội dung tra cứu.'}</p> : current.data.length === 0 ? <p>Chưa có nội dung tra cứu.</p> : current.data.map((item, index) => <div key={index} className="palace-meaning-item"><h4>{item.title}</h4><p>{item.desc}</p></div>)}
+                    </div>}
+                </dialog>
             )}
 
             <div className="grid-container">

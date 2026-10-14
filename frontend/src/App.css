@@ -366,17 +366,8 @@ body {
 }
 
 /* Star Modal Styles */
-.star-modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+.star-modal-content::backdrop {
   background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
   backdrop-filter: blur(2px);
 }
 
@@ -390,7 +381,13 @@ body {
   box-shadow: 0 4px 20px rgba(0,0,0,0.4);
   text-align: left;
   border: 2px solid #8b0000;
+  margin: auto;
+  max-height: calc(100dvh - 32px);
+  overflow-y: auto;
 }
+.palace-meaning-item + .palace-meaning-item { margin-top: 15px; }
+.palace-meaning-item h4 { color: var(--accent, #265542); margin-bottom: 5px; }
+@media print { .star-modal-content { display: none !important; } }
 
 .star-modal-content h3 {
   color: #c62828;
