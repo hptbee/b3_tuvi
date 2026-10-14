@@ -10,17 +10,53 @@ const START = ORDER.indexOf('Dậu');
  * 子丑寅卯辰巳午未申酉戌亥, which matches Tí…Hợi in DIA_CHI.
  * This places a branch only. It is not a fortune prediction.
  */
+function closed(extra) {
+    return {
+        publicFortune: false,
+        interpretation: null,
+        interpretationStatus: 'blocked',
+        ...extra
+    };
+}
+
 export function thienDucBranch(yearBranch) {
     const index = ORDER.indexOf(yearBranch);
     if (index < 0 || START < 0) {
-        return { ok: false, reason: 'unknown_year_branch', publicFortune: false, interpretation: null };
+        return closed({ ok: false, reason: 'unknown_year_branch', branch: null, branchPlacement: 'not_applied' });
     }
-    return {
+    return closed({
         ok: true,
         branch: ORDER[(START + index) % ORDER.length],
+        branchPlacement: 'supported',
         profile: 'ziwei-quanshu-wikisource-juan2',
-        convention: 'hko-earthly-branch-forward',
-        publicFortune: false,
-        interpretation: null
-    };
+        convention: 'hko-earthly-branch-forward'
+    });
+}
+
+export function thienDucCapability(viewYearBranch) {
+    if (viewYearBranch == null || viewYearBranch === '') {
+        return closed({
+            id: 'thien_duc',
+            status: 'not_applied',
+            reason: 'missing_view_year_branch',
+            branch: null,
+            branchPlacement: 'not_applied'
+        });
+    }
+    const placed = thienDucBranch(viewYearBranch);
+    if (!placed.ok) {
+        return closed({
+            id: 'thien_duc',
+            status: 'not_applied',
+            reason: placed.reason,
+            branch: null,
+            branchPlacement: 'not_applied'
+        });
+    }
+    const { ok, ...placement } = placed;
+    return closed({
+        id: 'thien_duc',
+        status: 'branch_placed',
+        ...placement
+    });
 }
