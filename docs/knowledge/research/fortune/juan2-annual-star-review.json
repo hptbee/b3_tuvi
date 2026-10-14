@@ -1,0 +1,27 @@
+{
+  "excerptFile": "docs/knowledge/research/fortune/ziwei-quanshu-juan2-annual-stars.txt",
+  "decision": "DO_NOT_IMPLEMENT",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "agentId": "bc-a74566ff-5e13-5f0c-ae16-e95d39b8f1e3",
+      "tangMonComplete": false,
+      "luuLocComplete": false,
+      "thienDucComplete": false,
+      "forwardDirection": null
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "agentId": "bc-ede9b5be-fde7-573d-be43-62ded2b9a29c",
+      "tangMonComplete": true,
+      "luuLocComplete": false,
+      "thienDucComplete": true,
+      "forwardDirection": null
+    }
+  ],
+  "agreement": {
+    "luu_loc": "Both reviewers: the 己丑 line is an example, not a general rule.",
+    "tang_mon": "Reviewers disagree, and neither states a branch order for 前/後.",
+    "thien_duc": "Reviewers disagree, and neither states a branch order for 順."
+  }
+}

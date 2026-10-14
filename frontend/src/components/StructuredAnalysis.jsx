@@ -181,6 +181,7 @@ export default function StructuredAnalysis({ userInfo }) {
             {blocked.length > 0 && (
               <p className="evidence-note">
                 {blocked.map(([id]) => CYCLE_LABELS[id] || id).join(', ')}: chưa áp dụng vì chưa có công thức được duyệt. Số đại hạn trên lá số là nhãn nguyên cục, không phải phép tính vận hạn đã duyệt.
+                {current.body?.time?.capabilities?.thien_duc?.status === 'branch_placed' && ' Thiên Đức chỉ ghi vị trí chi, không phải luận vận hạn.'}
               </p>
             )}
           </>
