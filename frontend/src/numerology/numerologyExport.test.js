@@ -10,7 +10,13 @@ const result = {
   birthGrid: { counts: {} },
   cycles: { targetDate: '2026-10-13' },
   pinnacles: { periods: [{ pinnacle: { value: 3 } }] },
-  nameAnalysis: { normalized: 'AN' }
+  nameAnalysis: { normalized: 'AN' },
+  nameChart: { status: 'available', counts: { 1: 1, 5: 1 }, normalized: 'AN', letters: [{ letter: 'A', value: 1 }, { letter: 'N', value: 5 }] },
+  combinedChart: { status: 'available', digits: [{ digit: 1, birth: 2, name: 1, presence: 'both' }] },
+  indicators: { version: '1.0.0', hiddenPassion: { status: 'available', values: [1, 5], counts: { 1: 1, 5: 1 } },
+    balance: { status: 'available', value: 1, initials: [{ letter: 'A', value: 1 }], parts: [{ values: [1], total: 1 }] },
+    rationalThought: { status: 'available', value: 3, token: 'AN', parts: [{ values: [1, 5], total: 6 }] },
+    bridges: [{ id: 'lifePath-expression', value: 2 }] }
 };
 
 it('exports the submitted date without the raw name unless opted in', () => {
@@ -23,6 +29,47 @@ it('exports the submitted date without the raw name unless opted in', () => {
   const shared = numerologyExportDocument(result, { birthDate, fullName: 'Nguyễn Văn An' }, { includeName: true });
   expect(shared.fullName).toBe('Nguyễn Văn An');
   expect(shared.nameAnalysis.normalized).toBe('AN');
+});
+
+it('exports all structured chapters with name traces omitted by default and preserves the source', () => {
+  const before = JSON.stringify(result);
+  const hidden = numerologyExportDocument(result, { birthDate, fullName: 'An' });
+  expect(hidden.nameChart.counts).toEqual({ 1: 1, 5: 1 });
+  expect(hidden.nameChart.normalized).toBeUndefined();
+  expect(hidden.nameChart.letters).toBeUndefined();
+  expect(hidden.combinedChart).toEqual(result.combinedChart);
+  expect(hidden.indicators.hiddenPassion).toEqual(result.indicators.hiddenPassion);
+  expect(hidden.indicators.bridges).toEqual(result.indicators.bridges);
+  expect(hidden.indicators.balance.initials).toBeUndefined();
+  expect(hidden.indicators.balance.parts).toEqual([{ values: [1], total: 1 }]);
+  expect(hidden.indicators.rationalThought.token).toBeUndefined();
+  expect(hidden.indicators.rationalThought.value).toBe(3);
+  expect(JSON.stringify(hidden)).not.toContain('AN');
+  expect(JSON.stringify(result)).toBe(before);
+  hidden.metrics.lifePath.value = 99;
+  hidden.nameChart.counts[1] = 99;
+  hidden.indicators.hiddenPassion.values.push(9);
+  hidden.combinedChart.digits[0].name = 99;
+  expect(JSON.stringify(result)).toBe(before);
+  const shared = numerologyExportDocument(result, { birthDate, fullName: 'An' }, { includeName: true });
+  expect(shared.nameChart).toEqual(result.nameChart);
+  expect(shared.indicators.balance.initials).toEqual([{ letter: 'A', value: 1 }]);
+  expect(shared.indicators.rationalThought.token).toBe('AN');
+});
+
+it('preserves unavailable name chapters and imports both prior and additive export 1.0.0 files', () => {
+  const missing = { status: 'unavailable', reason: 'missing_name' };
+  const file = numerologyExportDocument({ ...result, nameChart: { ...missing, letters: null, counts: null }, combinedChart: missing,
+    indicators: { balance: missing, rationalThought: missing } }, { birthDate });
+  expect(file.nameChart.status).toBe('unavailable');
+  expect(file.nameChart.counts).toBeNull();
+  expect(file.combinedChart).toEqual(missing);
+  expect(file.indicators.balance).toEqual(missing);
+  expect(parseNumerologyImport(JSON.stringify(file)).input).toEqual({ birthDate, targetDate: '2026-10-13' });
+  delete file.nameChart;
+  delete file.combinedChart;
+  delete file.indicators;
+  expect(parseNumerologyImport(JSON.stringify(file)).input).toEqual({ birthDate, targetDate: '2026-10-13' });
 });
 
 it('reimports only inputs and ignores tampered calculated values', () => {

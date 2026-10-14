@@ -318,6 +318,14 @@ async function blobText(blob) {
     reader.readAsText(blob);
   });
 }
+const savedReport = (day = 16) => JSON.stringify({
+  exportVersion: '1.0.0', schemaVersion: '1.2.0',
+  profile: { id: 'pythagorean-vn-v1', version: '1.2.0' },
+  birthDate: { year: 1990, month: 6, day },
+  metrics: { lifePath: { value: 33 } }, pinnacles: { periods: [] },
+  indicators: { balance: { value: 99 } }, nameChart: { normalized: 'FORGED' }
+});
+const savedFile = (day = 16, name = 'than-so-hoc.json') => new File([savedReport(day)], name, { type: 'application/json' });
 it('exports the report without the raw name until the user opts in', async () => {
   const body = result(4, 'AN');
   vi.stubGlobal('fetch', vi.fn(async () => success(body)));
@@ -502,23 +510,91 @@ it('explains an unsupported import without sending it', async () => {
   expect(fetch).toHaveBeenCalledTimes(1);
 });
 
-it('recalculates an imported file and does not send tampered results', async () => {
-  const fetch = vi.fn(async () => success(result()));
+it('imports on a fresh page and recalculates without sending tampered results', async () => {
+  const fetch = vi.fn(async () => success(result(5)));
   vi.stubGlobal('fetch', fetch);
   const user = userEvent.setup();
   render(<NumerologyPage />);
+  expect(screen.getByRole('button', { name: 'Nhập JSON' })).toBeVisible();
+  expect(screen.queryByRole('heading', { name: 'Các chỉ số của bạn' })).not.toBeInTheDocument();
+  await user.upload(screen.getByLabelText('Chọn tệp JSON đã xuất'), savedFile());
+  expect(await screen.findByRole('status', { name: 'Đường đời', exact: true })).toHaveTextContent('5');
+  expect(fetch).toHaveBeenCalledTimes(1);
+  expect(JSON.parse(fetch.mock.calls[0][1].body)).toEqual({ birthDate: { year: 1990, month: 6, day: 16 } });
+  expect(screen.getByRole('spinbutton', { name: 'Ngày', exact: true })).toHaveValue(16);
+  expect(screen.getByRole('heading', { name: 'Các chỉ số của bạn' })).toHaveFocus();
+});
+
+it('handles a rejected asynchronous file read without exposing its error', async () => {
+  const fetch = vi.fn();
+  vi.stubGlobal('fetch', fetch);
+  const user = userEvent.setup();
+  render(<NumerologyPage />);
+  const file = savedFile();
+  file.text = () => Promise.reject(new Error('sensitive filesystem error'));
+  await user.upload(screen.getByLabelText('Chọn tệp JSON đã xuất'), file);
+  expect(await screen.findByRole('alert')).toHaveTextContent('Không đọc được tệp JSON. Vui lòng chọn lại tệp.');
+  expect(screen.getByRole('alert')).not.toHaveTextContent('sensitive');
+  expect(fetch).not.toHaveBeenCalled();
+});
+
+it.each(['error', 'abort'])('handles FileReader %s and permits a later import', async outcome => {
+  vi.stubGlobal('FileReader', class {
+    readAsText() { this[`on${outcome}`](); }
+  });
+  const fetch = vi.fn(async () => success(result(5)));
+  vi.stubGlobal('fetch', fetch);
+  const user = userEvent.setup();
+  render(<NumerologyPage />);
+  await user.upload(screen.getByLabelText('Chọn tệp JSON đã xuất'), savedFile());
+  expect(await screen.findByRole('alert')).toHaveTextContent('Không đọc được tệp JSON');
+  expect(fetch).not.toHaveBeenCalled();
+  const valid = savedFile();
+  valid.text = async () => savedReport();
+  await user.upload(screen.getByLabelText('Chọn tệp JSON đã xuất'), valid);
+  expect(await screen.findByRole('status', { name: 'Đường đời', exact: true })).toHaveTextContent('5');
+  expect(screen.queryByRole('alert')).not.toBeInTheDocument();
+});
+
+it.each(['edit', 'submit', 'cycle', 'newer file', 'unmount'].flatMap(action => ['resolve', 'reject'].map(outcome => [action, outcome])))('ignores a delayed import after %s when the read later %s', async (action, outcome) => {
+  const fetch = vi.fn(async () => success(result()));
+  vi.stubGlobal('fetch', fetch);
+  const user = userEvent.setup();
+  const view = render(<NumerologyPage />);
   await fillDate(user);
   await user.click(screen.getByRole('button', { name: 'Xem kết quả' }));
-  await screen.findByRole('status', { name: 'Đường đời', exact: true });
-  const file = new File([JSON.stringify({
-    exportVersion: '1.0.0', schemaVersion: '1.2.0',
-    profile: { id: 'pythagorean-vn-v1', version: '1.2.0' },
-    birthDate: { year: 1990, month: 6, day: 16 },
-    metrics: { lifePath: { value: 33 } }, pinnacles: { periods: [] }
-  })], 'than-so-hoc.json', { type: 'application/json' });
-  await user.upload(screen.getByLabelText('Chọn tệp JSON đã xuất'), file);
-  await waitFor(() => expect(fetch).toHaveBeenCalledTimes(2));
-  expect(JSON.parse(fetch.mock.calls[1][1].body)).toEqual({ birthDate: { year: 1990, month: 6, day: 16 } });
+  await screen.findByRole('heading', { name: 'Các chỉ số của bạn' });
+  let finishRead;
+  let failRead;
+  const pending = savedFile();
+  pending.text = () => new Promise((resolve, reject) => { finishRead = resolve; failRead = reject; });
+  await user.upload(screen.getByLabelText('Chọn tệp JSON đã xuất'), pending);
+  let calls = 1;
+  let expectedDay = 15;
+  if (action === 'edit') {
+    const day = screen.getByRole('spinbutton', { name: 'Ngày', exact: true });
+    await user.clear(day); await user.type(day, '20');
+    expectedDay = 20;
+  } else if (action === 'submit') {
+    await user.click(screen.getByRole('button', { name: 'Xem kết quả' }));
+    calls = 2;
+  } else if (action === 'cycle') {
+    await user.click(screen.getByRole('button', { name: /^2027/ }));
+    calls = 2;
+  } else if (action === 'newer file') {
+    const newer = savedFile(17, 'newer.json');
+    newer.text = async () => savedReport(17);
+    await user.upload(screen.getByLabelText('Chọn tệp JSON đã xuất'), newer);
+    calls = 2; expectedDay = 17;
+  } else view.unmount();
+  await act(async () => {
+    if (outcome === 'resolve') finishRead(savedReport());
+    else failRead(new Error('stale error'));
+  });
+  expect(fetch).toHaveBeenCalledTimes(calls);
+  expect(screen.queryByRole('alert')).not.toBeInTheDocument();
+  if (action !== 'unmount') expect(screen.getByRole('spinbutton', { name: 'Ngày', exact: true })).toHaveValue(expectedDay);
+  if (action === 'cycle') expect(screen.getByLabelText(/Ngày xem chu kỳ/)).toHaveValue('2027-10-01');
 });
 
 it('shows master33 withholding without displaying a root6 substitute', async () => {

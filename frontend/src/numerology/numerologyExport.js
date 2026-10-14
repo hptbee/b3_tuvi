@@ -26,7 +26,7 @@ export function numerologyExportDocument(result, input, { includeName = false } 
   if (!birthDate) throw new TypeError('Thiếu ngày sinh của lần tính đã gửi.');
   const name = typeof input.fullName === 'string' ? input.fullName.trim() : '';
   const shareName = Boolean(includeName && name);
-  return {
+  const document = JSON.parse(JSON.stringify({
     exportVersion: NUMEROLOGY_EXPORT_VERSION,
     usage: 'user_requested_numerology_export',
     schemaVersion: SCHEMA_VERSION,
@@ -38,11 +38,23 @@ export function numerologyExportDocument(result, input, { includeName = false } 
     fullName: shareName ? name : null,
     metrics: result.metrics,
     birthGrid: result.birthGrid,
+    nameChart: result.nameChart,
+    combinedChart: result.combinedChart,
+    indicators: result.indicators,
     cycles: result.cycles,
     pinnacles: result.pinnacles,
     ...(shareName && result.nameAnalysis ? { nameAnalysis: result.nameAnalysis } : {}),
     disclaimer: 'Quy ước thử nghiệm pythagorean-vn-v1 1.2.0. Không phải đánh giá khoa học. Khi nhập lại, ứng dụng chỉ lấy ngày sinh, ngày xem và họ tên nếu có, rồi tính lại trên máy chủ.'
-  };
+  }));
+  if (!shareName) {
+    if (document.nameChart) {
+      delete document.nameChart.normalized;
+      delete document.nameChart.letters;
+    }
+    if (document.indicators?.balance) delete document.indicators.balance.initials;
+    if (document.indicators?.rationalThought) delete document.indicators.rationalThought.token;
+  }
+  return document;
 }
 
 export function parseNumerologyImport(text) {
