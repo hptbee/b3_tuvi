@@ -1,10 +1,12 @@
+import { thienDucBranch } from './thienDuc.js';
+
 const BLOCKED_REASON = 'no_approved_formula';
 
 function blocked(name) {
     return { id: name, status: 'blocked', reason: BLOCKED_REASON, interpretation: null };
 }
 
-export function timeOverlay(chart) {
+export function timeOverlay(chart, options = {}) {
     if (!chart?.ok || !Array.isArray(chart.palaces)) {
         return { ok: false, error: 'malformed_chart', interpretation: null };
     }
@@ -27,7 +29,10 @@ export function timeOverlay(chart) {
             luu_nien: blocked('luu_nien'),
             luu_tinh: blocked('luu_tinh'),
             tu_hoa_han: blocked('tu_hoa_han'),
-            leap_month_fortune: { id: 'leap_month_fortune', status: 'not_applied', reason: BLOCKED_REASON, interpretation: null }
+            leap_month_fortune: { id: 'leap_month_fortune', status: 'not_applied', reason: BLOCKED_REASON, interpretation: null },
+            thien_duc: options.viewYearBranch
+                ? { id: 'thien_duc', status: 'branch_only', ...thienDucBranch(options.viewYearBranch) }
+                : { id: 'thien_duc', status: 'not_applied', reason: 'missing_view_year_branch', publicFortune: false, interpretation: null }
         },
         interpretation: null,
         research: {
@@ -44,8 +49,13 @@ export function timeOverlay(chart) {
             blockReason: 'direction_without_age_step',
             annualStarReasons: {
                 luu_loc: 'example_only_not_a_general_rule',
-                tang_mon: 'reviewers_disagree_on_direction',
-                thien_duc: 'reviewers_disagree_on_direction'
+                tang_mon: 'opposite_offset_not_agreed',
+                thien_duc: 'branch_only_no_interpretation'
+            },
+            missingParameters: {
+                dai_han: ['starting_age', 'years_per_palace', 'yin_yang_definition'],
+                tieu_han: ['age_on_start_palace', 'step_size'],
+                tang_mon: ['opposite_offset']
             }
         },
         boundaries: {

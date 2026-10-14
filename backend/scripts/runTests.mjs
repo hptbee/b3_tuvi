@@ -27,6 +27,7 @@ export const unitTests = [
     'test/knowledgeCoverage.test.mjs',
     'test/wholeChart.test.mjs',
     'test/timeEngine.test.mjs',
+    'test/thienDuc.test.mjs',
     'test/fixtureClasses.test.mjs',
     'test/knowledgeCatalog.test.mjs',
     'test/sourceHygiene.test.mjs',
