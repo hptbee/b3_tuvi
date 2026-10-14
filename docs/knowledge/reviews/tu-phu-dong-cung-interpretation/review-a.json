@@ -1,0 +1,20 @@
+{
+  "subjectId": "interp-tu-phu-dong-cung-giap-menh",
+  "scope": "interpretation",
+  "model": "grok-4.7-high",
+  "agentId": "bc-f2233997-a2cb-5eed-9dd0-1dfac28c23e0",
+  "verdict": "INTERPRETATION_SUPPORTED_WITH_LIMITS",
+  "supportedQuotes": [
+    "Tuổi Giáp có cách này chắc chắn là được hưởng phúc trọn đời và dĩ nhiên là được hưởng phú qúy song toàn."
+  ],
+  "absoluteClaims": [
+    "chắc chắn là được hưởng phúc trọn đời",
+    "được hưởng phú qúy song toàn"
+  ],
+  "limitations": [
+    "The absolute blessing is stated for tuổi Giáp only.",
+    "The verse mentions vô Sát; the following prose does not repeat that condition.",
+    "This is a traditional school statement, not a verified life event."
+  ],
+  "expertVerified": false
+}

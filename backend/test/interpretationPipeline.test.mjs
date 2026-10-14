@@ -47,6 +47,8 @@ const eligibleClaim = {
     interpretationStatus: 'sourced',
     sourceReviewStatus: 'AI_CROSS_REVIEWED',
     formulaComparisonStatus: 'MATCH',
+    formulaCatalogId: 'fixture-catalog',
+    sourceProfile: 'tan-bien',
     sourceId: 'thai-thu-lang-tan-bien',
     relatedPalaces: [host.functionId],
     relatedStars: [starId],
@@ -54,7 +56,15 @@ const eligibleClaim = {
     schoolId: 'vn-tam-hop-default'
 };
 chart.schoolId = 'vn-tam-hop-default';
-const withClaim = interpretChart(chart, { claims: [eligibleClaim] });
+const fixtureHit = {
+    catalogId: 'fixture-catalog',
+    palaceId: String(host.id),
+    sourceProfile: 'tan-bien',
+    gradeStatus: 'not_certified',
+    formationStatus: 'unknown',
+    breakingStatus: 'not_implemented'
+};
+const withClaim = interpretChart(chart, { claims: [eligibleClaim], extraFormulaHits: [fixtureHit] });
 const hostStatement = withClaim.statements.find((item) => item.statementId === `palace:${host.functionId}`);
 assert.strictEqual(hostStatement.availabilityStatus, 'eligible_claims_present');
 assert.strictEqual(hostStatement.prose, null);
@@ -89,7 +99,7 @@ const absentStatement = absent.statements.find((item) => item.statementId === `p
 assert.notStrictEqual(absentStatement.availabilityStatus, 'eligible_claims_present');
 assert.ok(absentStatement.claimApplicability.find((item) => item.claimId === 'fixture-eligible-host').reasons.includes('conditions_not_met'));
 
-const proseCondition = claimEligibility({ ...eligibleClaim, claimId: 'fixture-prose', conditions: ['nếu hãm'] }, chart, host);
+const proseCondition = claimEligibility({ ...eligibleClaim, claimId: 'fixture-prose', conditions: ['nếu hãm'] }, chart, host, { formulaHits: [fixtureHit] });
 assert.strictEqual(proseCondition.eligible, false);
 assert.ok(proseCondition.reasons.includes('conditions_not_evaluated'));
 
@@ -153,7 +163,7 @@ const worded = {
     claimId: 'fixture-worded',
     approvedWording: 'cung này được sách ghi nhận trong điều kiện đã nêu.'
 };
-const internal = interpretChart(chart, { claims: [worded], includeInternal: true });
+const internal = interpretChart(chart, { claims: [worded], includeInternal: true, extraFormulaHits: [fixtureHit] });
 const internalHost = internal.statements.find((item) => item.statementId === `palace:${host.functionId}`);
 assert.strictEqual(internalHost.prose, null);
 assert.match(internalHost.internalProse, /thai-thu-lang-tan-bien/);

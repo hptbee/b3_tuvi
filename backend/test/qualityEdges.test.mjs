@@ -49,12 +49,22 @@ const approved = {
     interpretationStatus: 'sourced',
     sourceReviewStatus: 'AI_CROSS_REVIEWED',
     formulaComparisonStatus: 'MATCH',
+    formulaCatalogId: 'fixture-catalog',
+    sourceProfile: 'tan-bien',
     sourceId: 'src',
     relatedPalaces: [host.functionId],
     relatedStars: [star.starId]
 };
-assert.strictEqual(claimEligibility(approved, base, host).eligible, true);
-assert.strictEqual(claimEligibility({ ...approved, formulaComparisonStatus: 'CONFLICT' }).eligible, false);
+const fixtureHit = {
+    catalogId: 'fixture-catalog',
+    palaceId: String(host.id),
+    sourceProfile: 'tan-bien',
+    gradeStatus: 'not_certified',
+    formationStatus: 'unknown',
+    breakingStatus: 'not_implemented'
+};
+assert.strictEqual(claimEligibility(approved, base, host, { formulaHits: [fixtureHit] }).eligible, true);
+assert.strictEqual(claimEligibility({ ...approved, formulaComparisonStatus: 'CONFLICT' }, base, host, { formulaHits: [fixtureHit] }).eligible, false);
 assert.strictEqual(claimEligibility({ ...approved, sourceId: undefined, sourceReferences: [] }, base, host).reasons.includes('missing_source'), true);
 assert.strictEqual(claimEligibility({ ...approved, usage: 'synthetic_test_fixture' }, base, host).reasons.includes('synthetic_fixture'), true);
 assert.strictEqual(evaluateClaimConditions({ ...approved, conditions: [''] }, base, host).evaluated, false);

@@ -49,6 +49,7 @@ Dữ liệu dựng trong test, database tạm, hoặc lỗi giả. Không dùng 
 - `safeErrorLog.test.mjs`
 - `evidenceV3.test.mjs`
 - `interpretationPipeline.test.mjs`
+- `sprint11bInterpretation.test.mjs`
 - `internalSlice.test.mjs`
 - `knowledgeCoverage.test.mjs`
 - `wholeChart.test.mjs`

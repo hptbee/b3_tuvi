@@ -81,7 +81,7 @@ export function evaluateClaimConditions(claim, chart = {}, palace = null) {
  * Separate gates. Formula MATCH and AI formula review do not approve interpretation.
  * Public release stays withheld unless releasePermission is owner_released.
  */
-export function claimEligibility(claim, chart = {}, palace = null) {
+export function claimEligibility(claim, chart = {}, palace = null, runtime = {}) {
     const reasons = [];
     if (!claim || typeof claim !== 'object' || !claim.claimId) reasons.push('missing_claim');
     if (claim?.usage === 'synthetic_test_fixture') reasons.push('synthetic_fixture');
@@ -101,13 +101,37 @@ export function claimEligibility(claim, chart = {}, palace = null) {
         reasons.push('school_mismatch');
     }
     const conditions = evaluateClaimConditions(claim, chart, palace);
-    if (!conditions.evaluated) reasons.push('conditions_not_evaluated');
-    else if (!conditions.holds) reasons.push('conditions_not_met');
+    const formulaIsCondition = Boolean(claim?.formulaCatalogId) && !claim?.conditions && !(claim?.relatedStars || []).length && !claim?.rule;
+    if (!formulaIsCondition && !conditions.evaluated) reasons.push('conditions_not_evaluated');
+    else if (!formulaIsCondition && conditions.evaluated && !conditions.holds) reasons.push('conditions_not_met');
+    if (claim?.yearStem) {
+        const stem = chart?.lunar?.canName || null;
+        if (stem !== claim.yearStem) reasons.push('year_stem_not_met');
+    }
+    const hits = Array.isArray(runtime.formulaHits) ? runtime.formulaHits : [];
+    const bound = claim?.formulaCatalogId
+        ? hits.find((hit) => hit.catalogId === claim.formulaCatalogId
+            && (!palace || String(hit.palaceId) === String(palace.id))
+            && (!claim.sourceProfile || hit.sourceProfile === claim.sourceProfile))
+        : null;
+    if (claim?.formulaCatalogId && !bound) reasons.push('formula_runtime_not_matched');
+    if (claim?.approvedForInterpretation === true && !claim?.formulaCatalogId) reasons.push('formula_runtime_unbound');
+    if (bound && (bound.gradeStatus === 'satisfied' || bound.formationStatus === 'satisfied')) {
+        reasons.push('formation_or_grade_promoted');
+    }
+    if (claim?.breakingDependency === 'must_be_evaluated' && bound?.breakingStatus !== 'checked_clear' && bound?.breakingStatus !== 'checked_broken') {
+        reasons.push('breaking_not_evaluated');
+    }
     const releasePermission = claim?.releasePermission === 'owner_released' ? 'owner_released' : 'withheld';
     const layers = {
         sourceReview,
         formulaComparison: claim?.formulaComparisonStatus === 'MATCH' ? 'match' : 'not_match',
-        runtimeConditions: !conditions.evaluated ? 'not_evaluated' : (conditions.holds ? 'satisfied' : 'unsatisfied'),
+        runtimeConditions: formulaIsCondition
+            ? 'deferred_to_formula_runtime'
+            : (!conditions.evaluated ? 'not_evaluated' : (conditions.holds ? 'satisfied' : 'unsatisfied')),
+        formulaRuntime: claim?.formulaCatalogId ? (bound ? 'matched' : 'not_matched') : 'unbound',
+        grade: bound?.gradeStatus || 'not_recorded',
+        breaking: bound?.breakingStatus || 'not_implemented',
         interpretationApproval: claim?.approvedForInterpretation === true && claim?.interpretationStatus === 'sourced'
             ? 'approved'
             : 'not_approved',

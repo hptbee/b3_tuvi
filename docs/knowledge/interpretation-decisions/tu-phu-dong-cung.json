@@ -1,0 +1,32 @@
+{
+  "decisionId": "tu-phu-dong-cung-interpretation-2026-10-14",
+  "policyVersion": "dual-ai-interpretation-review-v1",
+  "subjectType": "interpretation_claim",
+  "subjectId": "interp-tu-phu-dong-cung-giap-menh",
+  "schoolId": "vn-tam-hop-default",
+  "sourceId": "thai-thu-lang-tan-bien",
+  "editionId": "tan-bien-retypeset-277-cover-1956",
+  "locator": "phu-giai/57",
+  "spanFile": "docs/knowledge/passages/tu-phu-dong-cung/span.txt",
+  "formulaDecisionId": "tu-phu-dong-cung-2026-10-12",
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "verdict": "INTERPRETATION_SUPPORTED_WITH_LIMITS",
+      "reviewRef": "docs/knowledge/reviews/tu-phu-dong-cung-interpretation/review-a.json",
+      "agentId": "bc-f2233997-a2cb-5eed-9dd0-1dfac28c23e0"
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "verdict": "INTERPRETATION_SUPPORTED_WITH_LIMITS",
+      "reviewRef": "docs/knowledge/reviews/tu-phu-dong-cung-interpretation/review-b.json",
+      "agentId": "bc-122a2db4-09d4-51f4-a029-2cd744690f1e"
+    }
+  ],
+  "decision": "AI_CROSS_REVIEWED",
+  "disagreement": "Review A records that the verse mentions vô Sát while the prose result does not repeat it. Review B does not treat vô Sát as part of the approved sentence. The approved sentence therefore uses only the shared Giáp prose quotation.",
+  "expertVerified": false,
+  "publicRelease": false,
+  "gradeStatus": "not_certified",
+  "breakingStatus": "not_implemented"
+}
