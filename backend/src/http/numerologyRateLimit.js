@@ -2,6 +2,7 @@ import { timingSafeEqual } from 'node:crypto';
 
 const DEFAULT_LIMIT = 120;
 const DEFAULT_WINDOW_MS = 60_000;
+const DEFAULT_MAX_KEYS = 4096;
 
 function tokenMatches(provided, expected) {
     if (typeof provided !== 'string' || typeof expected !== 'string' || expected.length === 0) return false;
@@ -29,23 +30,33 @@ export function createNumerologyRateLimit({
     trustProxy = process.env.NUMEROLOGY_TRUST_PROXY === '1',
     proxyToken = process.env.NUMEROLOGY_PROXY_TOKEN || '',
     now = () => Date.now(),
-    buckets = new Map()
+    buckets = new Map(),
+    maxKeys = DEFAULT_MAX_KEYS
 } = {}) {
     const safeLimit = Number.isInteger(limit) && limit > 0 ? limit : DEFAULT_LIMIT;
     const safeWindow = Number.isInteger(windowMs) && windowMs > 0 ? windowMs : DEFAULT_WINDOW_MS;
+    const safeMaxKeys = Number.isInteger(maxKeys) && maxKeys > 0 ? maxKeys : DEFAULT_MAX_KEYS;
+    const cleanupInterval = Math.min(safeWindow, 1000);
+    let nextCleanupAt = 0;
     return function numerologyRateLimit(req, res, next) {
         if (req.method === 'OPTIONS') return next();
         const time = now();
+        if (time >= nextCleanupAt) {
+            for (const [storedKey, stored] of buckets) if (time >= stored.resetAt) buckets.delete(storedKey);
+            nextCleanupAt = time + cleanupInterval;
+        }
         const key = numerologyClientKey(req, { trustProxy, proxyToken });
         let bucket = buckets.get(key);
         if (!bucket || time >= bucket.resetAt) {
-            bucket = { count: 0, resetAt: time + safeWindow };
-            buckets.set(key, bucket);
+            if (!bucket && buckets.size >= safeMaxKeys) {
+                // Fail closed without storing a new key or evicting an active budget.
+                bucket = { count: safeLimit, resetAt: nextCleanupAt };
+            } else {
+                bucket = { count: 0, resetAt: time + safeWindow };
+                buckets.set(key, bucket);
+            }
         }
-        if (buckets.size > 4096) {
-            for (const [storedKey, stored] of buckets) if (time >= stored.resetAt) buckets.delete(storedKey);
-        }
-        bucket.count += 1;
+        bucket.count = Math.min(bucket.count + 1, safeLimit + 1);
         res.set('RateLimit-Limit', String(safeLimit));
         res.set('RateLimit-Remaining', String(Math.max(0, safeLimit - bucket.count)));
         res.set('RateLimit-Reset', String(Math.ceil(bucket.resetAt / 1000)));
