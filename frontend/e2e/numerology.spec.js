@@ -301,7 +301,8 @@ test('print hides the form and import recalculates instead of trusting the file'
   await expect(page.getByText(/Ngày lập \d{2}\/\d{2}\/\d{4}/)).toBeVisible();
   await page.emulateMedia({ media: 'print' });
   await expect(page.locator('.num-form')).toBeHidden();
-  await expect(page.locator('.num-actions')).toBeHidden();
+  await expect(page.locator('.num-form .num-actions')).toBeHidden();
+  await expect(page.locator('.num-results .num-actions')).toBeHidden();
   await expect(page.locator('.site-nav')).toBeHidden();
   await expect(page.locator('.num-results')).toBeVisible();
   const printCss = await page.evaluate(async () => {
@@ -315,11 +316,15 @@ test('print hides the form and import recalculates instead of trusting the file'
   expect(printCss).toContain('@page { size: A4; margin: 14mm; }');
   expect(printCss).toContain('.num-omit-print { display: none !important; }');
   await page.emulateMedia({ media: 'screen' });
+  await page.reload();
+  await expect(page.locator('.num-results')).toHaveCount(0);
+  await expect(page.getByRole('button', { name: 'Nhập JSON', exact: true })).toBeVisible();
   const tampered = {
     exportVersion: '1.0.0', schemaVersion: '1.2.0',
     profile: { id: 'pythagorean-vn-v1', version: '1.2.0' },
     birthDate: { year: 1990, month: 6, day: 15 },
-    metrics: { lifePath: { value: 33 } }
+    metrics: { lifePath: { value: 33 } },
+    nameChart: { normalized: 'FORGED' }, indicators: { balance: { value: 99 } }
   };
   const responsePromise = page.waitForResponse(response => response.url().endsWith('/api/numerology/calculate'));
   await page.getByLabel('Chọn tệp JSON đã xuất').setInputFiles({
@@ -328,7 +333,57 @@ test('print hides the form and import recalculates instead of trusting the file'
   const response = await responsePromise;
   expect(response.request().postDataJSON()).toEqual({ birthDate: { year: 1990, month: 6, day: 15 } });
   expect(response.request().postDataJSON().metrics).toBeUndefined();
+  expect(response.request().postDataJSON().indicators).toBeUndefined();
   await expect(output(page, 'Đường đời')).toHaveText('4');
+  await expect(page.getByRole('heading', { name: 'Các chỉ số của bạn' })).toBeFocused();
+});
+
+test('download includes the complete report and shares name traces only when opted in', async ({ page }) => {
+  await page.goto('/than-so-hoc');
+  await fill(page, { name: 'Nguyễn Văn An' });
+  const responsePromise = page.waitForResponse(response => response.url().endsWith('/api/numerology/calculate'));
+  await submit(page);
+  const calculated = await (await responsePromise).json();
+  await expect(output(page, 'Đường đời')).toHaveText('4');
+  const downloadReport = async () => {
+    const downloading = page.waitForEvent('download');
+    await page.getByRole('button', { name: 'Tải JSON', exact: true }).click();
+    const download = await downloading;
+    expect(download.suggestedFilename()).toBe('than-so-hoc-1990-06-15.json');
+    const chunks = [];
+    for await (const chunk of await download.createReadStream()) chunks.push(chunk);
+    return JSON.parse(Buffer.concat(chunks).toString('utf8'));
+  };
+  const hidden = await downloadReport();
+  expect(hidden.exportVersion).toBe('1.0.0');
+  expect(hidden.fullName).toBeNull();
+  expect(hidden.nameAnalysis).toBeUndefined();
+  expect(hidden.nameChart.counts).toEqual(calculated.nameChart.counts);
+  expect(hidden.nameChart).not.toHaveProperty('normalized');
+  expect(hidden.nameChart).not.toHaveProperty('letters');
+  expect(hidden.combinedChart).toEqual(calculated.combinedChart);
+  expect(hidden.indicators.hiddenPassion).toEqual(calculated.indicators.hiddenPassion);
+  expect(hidden.indicators.balance).not.toHaveProperty('initials');
+  expect(hidden.indicators.rationalThought).not.toHaveProperty('token');
+  expect(JSON.stringify(hidden)).not.toContain('Nguyễn Văn An');
+  expect(JSON.stringify(hidden)).not.toContain('NGUYEN');
+  await page.getByRole('checkbox', { name: /Kèm họ tên/ }).check();
+  const shared = await downloadReport();
+  expect(shared.fullName).toBe('Nguyễn Văn An');
+  expect(shared.nameChart).toEqual(calculated.nameChart);
+  expect(shared.indicators).toEqual(calculated.indicators);
+  expect(shared.nameAnalysis).toEqual(calculated.nameAnalysis);
+  expect(await page.evaluate(() => ({ local: { ...localStorage }, session: { ...sessionStorage } }))).toEqual({ local: {}, session: {} });
+  await expect(page).toHaveURL(/\/than-so-hoc$/);
+  shared.metrics.lifePath.value = 33;
+  shared.indicators.balance.value = 99;
+  await page.reload();
+  await expect(page.locator('.num-results')).toHaveCount(0);
+  const reimporting = page.waitForResponse(response => response.url().endsWith('/api/numerology/calculate'));
+  await page.getByLabel('Chọn tệp JSON đã xuất').setInputFiles({ name: 'report.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify(shared)) });
+  expect((await reimporting).request().postDataJSON()).toEqual({ birthDate: { year: 1990, month: 6, day: 15 }, fullName: 'Nguyễn Văn An', targetDate: calculated.cycles.targetDate });
+  await expect(output(page, 'Đường đời')).toHaveText('4');
+  await expect(output(page, 'Biểu đạt')).toHaveText('3');
 });
 
 test('informational numerology page stays indexable without a birth-data canonical', async ({ page }) => {

@@ -46,9 +46,10 @@ export default function NumerologyPage() {
   const resultHeading = useRef(null);
   const focusResult = useRef(true);
   const fileInput = useRef(null);
+  const importSequence = useRef(0);
   const [includeName, setIncludeName] = useState(false);
   const [importError, setImportError] = useState('');
-  useEffect(() => () => { sequence.current += 1; controller.current?.abort(); }, []);
+  useEffect(() => () => { sequence.current += 1; importSequence.current += 1; controller.current?.abort(); }, []);
   useEffect(() => {
     const previousTitle = document.title;
     const previousLang = document.documentElement.lang;
@@ -83,8 +84,12 @@ export default function NumerologyPage() {
   const dateError = fields.find(field => field.path === 'birthDate');
   const nameError = fields.find(field => field.path === 'fullName');
   const targetError = fields.find(field => field.path === 'targetDate');
-  const change = event => setDraft(current => ({ ...current, [event.target.name]: event.target.value }));
+  const change = event => {
+    importSequence.current += 1;
+    setDraft(current => ({ ...current, [event.target.name]: event.target.value }));
+  };
   const run = async (input, { focus = true, keepResult = false } = {}) => {
+    importSequence.current += 1;
     focusResult.current = focus;
     controller.current?.abort();
     const next = new AbortController();
@@ -108,28 +113,35 @@ export default function NumerologyPage() {
     const file = event.target.files?.[0];
     event.target.value = '';
     if (!file) return;
-    if (file.size > 256 * 1024) {
+    const id = ++importSequence.current;
+    setImportError('');
+    if (file.size === 0 || file.size > 256 * 1024) {
       setImportError('Tệp trống hoặc lớn hơn 256 KB.');
       return;
     }
-    const text = typeof file.text === 'function' ? await file.text() : await new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = () => resolve(String(reader.result || ''));
-      reader.onerror = () => reject(reader.error);
-      reader.readAsText(file);
-    });
-    const parsed = parseNumerologyImport(text);
-    if (!parsed.ok) {
-      setImportError(parsed.message);
-      return;
+    try {
+      const text = typeof file.text === 'function' ? await file.text() : await new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(String(reader.result || ''));
+        reader.onerror = () => reject(reader.error);
+        reader.onabort = () => reject(new Error('File read aborted'));
+        reader.readAsText(file);
+      });
+      if (id !== importSequence.current) return;
+      const parsed = parseNumerologyImport(text);
+      if (!parsed.ok) {
+        setImportError(parsed.message);
+        return;
+      }
+      const birth = parsed.input.birthDate;
+      setDraft({
+        day: String(birth.day), month: String(birth.month), year: String(birth.year),
+        fullName: parsed.input.fullName || '', targetDate: parsed.input.targetDate || ''
+      });
+      run(parsed.input);
+    } catch {
+      if (id === importSequence.current) setImportError('Không đọc được tệp JSON. Vui lòng chọn lại tệp.');
     }
-    setImportError('');
-    const birth = parsed.input.birthDate;
-    setDraft({
-      day: String(birth.day), month: String(birth.month), year: String(birth.year),
-      fullName: parsed.input.fullName || '', targetDate: parsed.input.targetDate || ''
-    });
-    run(parsed.input);
   };
   const result = request.result;
   const resultInput = request.resultInput;
@@ -162,6 +174,11 @@ export default function NumerologyPage() {
           <button className="primary-button" disabled={request.status === 'loading' && Boolean(sameInput)} type="submit">{request.status === 'loading' && sameInput ? 'Đang tính…' : 'Xem kết quả'} <span aria-hidden="true">→</span></button>
           <p className="privacy-note">Không cần tài khoản. Tên và ngày sinh không được lưu vào cơ sở dữ liệu hoặc đường dẫn.</p>
         </form>
+        <div className="num-actions">
+          <button type="button" onClick={() => fileInput.current?.click()}>Nhập JSON</button>
+          <input ref={fileInput} className="num-file-input" type="file" accept="application/json,.json" aria-label="Chọn tệp JSON đã xuất" onChange={onImport} />
+        </div>
+        {importError && <p className="num-field-error" role="alert">{importError}</p>}
       </section>
     </section>
     {request.status === 'loading' && <div className="num-request-status" role="status">Đang tính các chỉ số theo thông tin bạn đã gửi…</div>}
@@ -182,11 +199,8 @@ export default function NumerologyPage() {
           try { downloadNumerologyJson(result, resultInput, { includeName }); setImportError(''); }
           catch (error) { setImportError(error instanceof Error ? error.message : 'Không xuất được tệp.'); }
         }}>Tải JSON</button>
-        <button type="button" onClick={() => fileInput.current?.click()}>Nhập JSON</button>
-        <input ref={fileInput} className="num-file-input" type="file" accept="application/json,.json" aria-label="Chọn tệp JSON đã xuất" onChange={onImport} />
         <button type="button" onClick={() => window.print()}>In kết quả</button>
       </div>
-      {importError && <p className="num-field-error" role="alert">{importError}</p>}
       {!sameResultInput && <p className="num-draft-note" role="status">Bạn đang chỉnh sửa thông tin. Kết quả vẫn thuộc dữ liệu đã gửi; chọn “Xem kết quả” để tính lại.</p>}
       {result.contentVersion && <aside className="num-content-notice" aria-label="Lời luận thử nghiệm"><h3>Một lời gợi mở, để bạn tự suy ngẫm</h3><p>Lời luận hiện ngay dưới mỗi chỉ số đã có bài. Chủ đề số được đối chiếu nguồn cộng đồng; nội dung và ngữ cảnh do ứng dụng biên tập, không quyết định tính cách hoặc tương lai của bạn.</p><p>Phiên bản nội dung {result.contentVersion} · biên tập thử nghiệm</p></aside>}
       <nav className="num-toc" aria-label="Mục lục lá số">
