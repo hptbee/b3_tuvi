@@ -376,6 +376,79 @@ it('follows the server view date and keeps focus on the selected year', async ()
   expect(screen.getByRole('button', { name: /^2027/ })).toHaveFocus();
 });
 
+it('exports the committed cycle snapshot while loading, after failure and during retry', async () => {
+  const first = result();
+  const second = result();
+  second.cycles.targetDate = '2027-10-01';
+  second.cycles.year = 2027;
+  second.cycles.personalYear.value = 5;
+  second.pinnacles.asOf = '2027-10-01';
+  second.cycles.yearBand.forEach(item => { item.selected = item.year === 2027; });
+  let finishYear;
+  let finishRetry;
+  const fetch = vi.fn().mockResolvedValueOnce(success(first))
+    .mockImplementationOnce(() => new Promise(resolve => { finishYear = resolve; }))
+    .mockImplementationOnce(() => new Promise(resolve => { finishRetry = resolve; }));
+  vi.stubGlobal('fetch', fetch);
+  const blobs = [];
+  vi.stubGlobal('URL', { createObjectURL: blob => { blobs.push(blob); return 'blob:report'; }, revokeObjectURL: vi.fn() });
+  vi.spyOn(HTMLAnchorElement.prototype, 'click').mockImplementation(() => {});
+  const user = userEvent.setup();
+  render(<NumerologyPage />);
+  await fillDate(user);
+  await user.click(screen.getByRole('button', { name: 'Xem kết quả' }));
+  await screen.findByRole('heading', { name: 'Các chỉ số của bạn' });
+  await user.click(screen.getByRole('button', { name: /^2027/ }));
+  const exportSnapshot = async expected => {
+    await user.click(screen.getByRole('button', { name: 'Tải JSON' }));
+    const exported = JSON.parse(await blobText(blobs.at(-1)));
+    expect(exported.targetDate).toBe(expected);
+    expect(exported.cycles.targetDate).toBe(expected);
+    expect(exported.pinnacles.asOf).toBe(expected);
+  };
+  await exportSnapshot('2026-10-13');
+  finishYear({ ok: false, status: 503, json: async () => ({ ok: false, error: { code: 'CALCULATION_FAILED', message: 'Thử lại sau.', fields: [] } }) });
+  await screen.findByRole('heading', { name: 'Chưa thể tính chỉ số' });
+  await exportSnapshot('2026-10-13');
+  await user.click(screen.getByRole('button', { name: 'Thử lại' }));
+  expect(JSON.parse(fetch.mock.calls[2][1].body).targetDate).toBe('2027-10-01');
+  await exportSnapshot('2026-10-13');
+  finishRetry(success(second));
+  await waitFor(() => expect(screen.queryByText(/Đang tính các chỉ số/)).not.toBeInTheDocument());
+  expect(screen.getByRole('heading', { name: 'Các chỉ số của bạn' })).toHaveFocus();
+  await exportSnapshot('2027-10-01');
+});
+
+it('ignores a stale cycle response and keeps cycle navigation on the committed birth input', async () => {
+  const first = result();
+  const latest = result();
+  latest.cycles.targetDate = '2028-10-01';
+  latest.cycles.year = 2028;
+  latest.cycles.personalYear.value = 6;
+  latest.pinnacles.asOf = '2028-10-01';
+  latest.cycles.yearBand.forEach(item => { item.selected = item.year === 2028; });
+  let finishOld;
+  const fetch = vi.fn().mockResolvedValueOnce(success(first))
+    .mockImplementationOnce(() => new Promise(resolve => { finishOld = resolve; }))
+    .mockResolvedValueOnce(success(latest));
+  vi.stubGlobal('fetch', fetch);
+  const user = userEvent.setup();
+  render(<NumerologyPage />);
+  await fillDate(user);
+  await user.click(screen.getByRole('button', { name: 'Xem kết quả' }));
+  await screen.findByRole('heading', { name: 'Các chỉ số của bạn' });
+  await user.clear(screen.getByRole('spinbutton', { name: 'Ngày', exact: true }));
+  await user.type(screen.getByRole('spinbutton', { name: 'Ngày', exact: true }), '20');
+  await user.click(screen.getByRole('button', { name: /^2027/ }));
+  await user.click(screen.getByRole('button', { name: /^2028/ }));
+  expect(JSON.parse(fetch.mock.calls[2][1].body)).toEqual({ birthDate: { day: 15, month: 6, year: 1990 }, targetDate: '2028-10-01' });
+  expect(fetch.mock.calls[1][1].signal.aborted).toBe(true);
+  await waitFor(() => expect(screen.getByRole('button', { name: /^2028/ })).toHaveAttribute('aria-pressed', 'true'));
+  await act(async () => { finishOld(success(first)); });
+  expect(screen.getByRole('button', { name: /^2028/ })).toHaveAttribute('aria-pressed', 'true');
+  expect(screen.getByText('Theo ngày sinh · 15/6/1990')).toBeVisible();
+});
+
 it('rejects an oversized import before sending it', async () => {
   const fetch = vi.fn(async () => success(result()));
   vi.stubGlobal('fetch', fetch);
