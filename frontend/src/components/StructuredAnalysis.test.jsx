@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from '@testing-library/react';
+import { act, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import StructuredAnalysis from './StructuredAnalysis';
 
@@ -117,5 +117,108 @@ describe('StructuredAnalysis', () => {
     expect(await screen.findByText(/Thiên Đức tại Dậu, chỉ là vị trí chi/)).toBeTruthy();
     expect(screen.getByText(/Nguyệt Đức tại Tí, chỉ là vị trí chi/)).toBeTruthy();
     expect(screen.queryByText(/dự đoán/i)).toBeNull();
+  });
+
+  it('retries the committed input and selected branch, then focuses the evidence heading', async () => {
+    const fetch = vi.fn().mockResolvedValueOnce({ ok: true, json: async () => analysisBody() })
+      .mockResolvedValueOnce({ ok: false, json: async () => ({ error: 'Lỗi phân tích lá số' }) })
+      .mockResolvedValueOnce({ ok: true, json: async () => analysisBody('recovered') });
+    vi.stubGlobal('fetch', fetch);
+    const user = userEvent.setup();
+    render(<StructuredAnalysis userInfo={birth} />);
+    await screen.findByRole('button', { name: /Mệnh:/ });
+    await user.selectOptions(screen.getByLabelText('Chi năm xem'), 'Tí');
+    expect(await screen.findByRole('alert')).toHaveTextContent('Lỗi phân tích lá số');
+    expect(screen.getByLabelText('Chi năm xem')).toHaveValue('Tí');
+    await user.click(screen.getByRole('button', { name: 'Thử lại chứng cứ' }));
+    const pick = await screen.findByRole('button', { name: /Mệnh:/ });
+    expect(fetch).toHaveBeenCalledTimes(3);
+    expect(JSON.parse(fetch.mock.calls[1][1].body)).toEqual({ ...birth, viewYearBranch: 'Tí' });
+    expect(JSON.parse(fetch.mock.calls[2][1].body)).toEqual({ ...birth, viewYearBranch: 'Tí' });
+    expect(screen.getByRole('heading', { name: 'Trạng thái chứng cứ' })).toHaveFocus();
+    await user.click(pick);
+    expect(screen.getByText('rule-recovered')).toBeVisible();
+  });
+
+  it('restores retry focus after a repeated network failure', async () => {
+    vi.stubGlobal('fetch', vi.fn(async () => { throw new Error('offline'); }));
+    const user = userEvent.setup();
+    render(<StructuredAnalysis userInfo={birth} />);
+    const retry = await screen.findByRole('button', { name: 'Thử lại chứng cứ' });
+    await user.click(retry);
+    expect(await screen.findByRole('button', { name: 'Thử lại chứng cứ' })).toHaveFocus();
+  });
+
+  it('suppresses an old response with the same birth key after a newer attempt succeeds', async () => {
+    let finish;
+    const fetch = vi.fn().mockImplementationOnce(() => new Promise(resolve => { finish = resolve; }))
+      .mockResolvedValueOnce({ ok: false, json: async () => ({ error: 'Tạm thời chưa sẵn sàng' }) })
+      .mockResolvedValueOnce({ ok: true, json: async () => analysisBody('new') });
+    vi.stubGlobal('fetch', fetch);
+    const user = userEvent.setup();
+    const view = render(<StructuredAnalysis userInfo={birth} />);
+    view.rerender(<StructuredAnalysis userInfo={{ ...birth }} />);
+    await user.click(await screen.findByRole('button', { name: 'Thử lại chứng cứ' }));
+    await user.click(await screen.findByRole('button', { name: /Mệnh:/ }));
+    expect(screen.getByText('rule-new')).toBeVisible();
+    expect(fetch.mock.calls[0][1].signal.aborted).toBe(true);
+    await act(async () => finish({ ok: true, json: async () => analysisBody('old') }));
+    expect(screen.queryByText('rule-old')).not.toBeInTheDocument();
+    expect(screen.getByText('rule-new')).toBeVisible();
+  });
+
+  it.each([
+    ['object statements', body => { body.statements = {}; }],
+    ['null statement', body => { body.statements = [null]; }],
+    ['object stars', body => { body.statements[0].stars = {}; }],
+    ['object star name', body => { body.statements[0].stars[0].displayName = {}; }],
+    ['object relations', body => { body.statements[0].relations.xungChieu = {}; }],
+    ['object rules', body => { body.statements[0].ruleEvidence = [null]; }],
+    ['object claim reasons', body => { body.statements[0].claimApplicability[0].reasons = {}; }],
+    ['object claim layer', body => { body.statements[0].claimApplicability[0].layers = { sourceReview: {} }; }],
+    ['object source', body => { body.statements[0].sourceReferences = [{ sourceId: {} }]; }],
+    ['object contradiction', body => { body.statements[0].contradictoryEvidence = [null]; }],
+    ['object time', body => { body.time.capabilities.thien_duc = { status: 'branch_placed', branch: {} }; }],
+    ['oversized status', body => { body.statements[0].availabilityStatus = 'x'.repeat(1001); }]
+  ])('rejects malformed successful %s with a recoverable bounded error', async (_name, mutate) => {
+    const body = analysisBody(); mutate(body);
+    vi.stubGlobal('fetch', vi.fn(async () => ({ ok: true, json: async () => body })));
+    render(<StructuredAnalysis userInfo={birth} />);
+    expect(await screen.findByRole('alert')).toHaveTextContent('Phản hồi trạng thái chứng cứ không hợp lệ. Vui lòng thử lại.');
+    expect(screen.getByRole('button', { name: 'Thử lại chứng cứ' })).toBeVisible();
+    expect(screen.queryByRole('button', { name: /Mệnh:/ })).not.toBeInTheDocument();
+  });
+
+  it.each([{}, 'x'.repeat(501)])('uses a constant message for nontext or oversized server errors', async error => {
+    vi.stubGlobal('fetch', vi.fn(async () => ({ ok: false, json: async () => ({ error }) })));
+    render(<StructuredAnalysis userInfo={birth} />);
+    expect(await screen.findByRole('alert')).toHaveTextContent('Không đọc được trạng thái chứng cứ');
+  });
+
+  it('handles a rejected JSON body and ignores nonconsumed prose fields', async () => {
+    const body = analysisBody();
+    body.statements[0].prose = 'FORGED PUBLIC PROSE';
+    body.statements[0].functionId = 'constructor';
+    body.statements[0].availabilityStatus = 'constructor';
+    const fetch = vi.fn().mockResolvedValueOnce({ ok: true, json: async () => { throw new SyntaxError('private'); } })
+      .mockResolvedValueOnce({ ok: true, json: async () => body });
+    vi.stubGlobal('fetch', fetch);
+    const user = userEvent.setup();
+    render(<StructuredAnalysis userInfo={birth} />);
+    expect(await screen.findByRole('alert')).toHaveTextContent('Phản hồi trạng thái chứng cứ không hợp lệ');
+    await user.click(screen.getByRole('button', { name: 'Thử lại chứng cứ' }));
+    await user.click(await screen.findByRole('button', { name: 'constructor: constructor' }));
+    expect(screen.queryByText('FORGED PUBLIC PROSE')).not.toBeInTheDocument();
+  });
+
+  it('aborts a pending analysis on unmount and ignores its late rejection', async () => {
+    let fail;
+    const fetch = vi.fn(() => new Promise((_resolve, reject) => { fail = reject; }));
+    vi.stubGlobal('fetch', fetch);
+    const view = render(<StructuredAnalysis userInfo={birth} />);
+    view.unmount();
+    expect(fetch.mock.calls[0][1].signal.aborted).toBe(true);
+    await act(async () => fail(new Error('late private error')));
+    expect(screen.queryByRole('alert')).not.toBeInTheDocument();
   });
 });
