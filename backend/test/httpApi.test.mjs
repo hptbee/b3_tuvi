@@ -22,6 +22,8 @@ repo.upsertPalace({
     short_name: 'Mệnh',
     core_meaning: 'Cung mệnh.'
 });
+repo.upsertStar({ name: 'Sao 100%', basic_meaning: 'Literal percent star.', palace_meanings: {} });
+repo.upsertPalace({ palace_name: 'CUNG 100%', short_name: 'Cung 100%', core_meaning: 'Literal percent palace.' });
 const before = repo.countHoroscopes();
 
 const app = createApp();
@@ -148,6 +150,21 @@ try {
     const starBody = await star.json();
     assert.strictEqual(star.status, 200);
     assert.strictEqual(starBody.text, 'Tại Mệnh.');
+    const alias = await fetch(`${base}/api/meanings/star/${encodeURIComponent('Tử Vi')}?palace=${encodeURIComponent('mệnh / Thân')}`);
+    assert.strictEqual(alias.status, 200);
+    assert.strictEqual((await alias.json()).text, 'Tại Mệnh.');
+    for (const starName of ['Tử Vi', 'Không Có']) {
+        const repeated = await fetch(`${base}/api/meanings/star/${encodeURIComponent(starName)}?palace=Mệnh&palace=Tài`);
+        assert.strictEqual(repeated.status, 400);
+        assert.deepStrictEqual(await repeated.json(), { error: 'Tên cung phải là một chuỗi.', code: 'INVALID_PALACE' });
+        assert.strictEqual(repeated.headers.get('cache-control'), 'no-store');
+    }
+    const percentStar = await fetch(`${base}/api/meanings/star/${encodeURIComponent('Sao 100%')}`);
+    assert.strictEqual(percentStar.status, 200);
+    assert.match((await percentStar.json()).text, /Literal percent star/);
+    const percentPalace = await fetch(`${base}/api/meanings/palace/${encodeURIComponent('Cung 100%')}`);
+    assert.strictEqual(percentPalace.status, 200);
+    assert.deepStrictEqual(await percentPalace.json(), [{ title: 'Cung 100%', desc: 'Literal percent palace.' }]);
     const palace = await fetch(`${base}/api/meanings/palace/${encodeURIComponent('Mệnh')}`);
     const palaceBody = await palace.json();
     assert.strictEqual(palace.status, 200);
