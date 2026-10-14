@@ -33,6 +33,13 @@ assert.equal(rulesBroken.length, 1);
 assert.equal(rulesBroken[0].kind, 'backtick');
 assert.equal(rulesBroken[0].reason, 'missing target');
 
+mkdirSync(join(tmp, 'rules', 'nested'), { recursive: true });
+writeFileSync(join(tmp, 'rules', 'nested', 'portable.md'), 'Use `docs/missing-nested.md`.\n');
+const nestedBroken = checkMarkdownFile(join(tmp, 'rules', 'nested', 'portable.md'), tmp);
+assert.equal(nestedBroken.length, 1);
+assert.equal(nestedBroken[0].file, 'rules/nested/portable.md');
+assert.equal(nestedBroken[0].reason, 'missing target');
+
 writeFileSync(
     join(tmp, 'rules', 'b3-only.md'),
     'See `{B3_HOME}/docs/precedence.md` — not checked.\n'

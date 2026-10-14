@@ -15,7 +15,7 @@
  * See docs/engineering/DOC_LINK_CHECKER.md
  */
 import { readFileSync, existsSync, statSync, readdirSync } from 'fs';
-import { join, dirname, resolve, normalize } from 'path';
+import { join, dirname, resolve, normalize, relative } from 'path';
 import { fileURLToPath } from 'url';
 
 const defaultRepoRoot = resolve(fileURLToPath(new URL('..', import.meta.url)));
@@ -102,7 +102,7 @@ export function checkMarkdownFile(filePath, repoRoot) {
     while ((m = LINK_RE.exec(text))) check(m[2], 'markdown');
     ANGLE_LINK_RE.lastIndex = 0;
     while ((m = ANGLE_LINK_RE.exec(text))) check(m[1], 'angle');
-    const relFromRoot = filePath.slice(repoRoot.length + 1);
+    const relFromRoot = relative(repoRoot, filePath).replace(/\\/g, '/');
     if (relFromRoot.startsWith('rules/')) {
         BACKTICK_DOC_RE.lastIndex = 0;
         while ((m = BACKTICK_DOC_RE.exec(text))) {
