@@ -1,0 +1,10 @@
+{
+  "subjectId": "interp-co-nguyet-dong-luong",
+  "scope": "interpretation_binding",
+  "model": "gpt-5.6-terra-medium",
+  "agentId": "bc-2af42617-f719-5d56-a62a-9744e4a05e75",
+  "verdict": "INTERPRETATION_SUPPORTED_WITH_LIMITS",
+  "bindToModern108s": true,
+  "reason": "The reviewer treated hội hợp as compatible with the modern-108s Mệnh tam hợp predicate. The other reviewer did not.",
+  "expertVerified": false
+}

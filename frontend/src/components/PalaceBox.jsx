@@ -20,7 +20,7 @@ function PalaceBox({ data, position, onStarClick, onPalaceClick }) {
                     onClick={() => onPalaceClick && onPalaceClick(cungName)}
                 >
                     <span className="cung-name">{cungName}</span>
-                    <span className="dai-han">{daiHan}</span>
+                    <span className="dai-han" title="Nhãn đại hạn trên lá số nguyên cục. Không phải luận vận hạn đã duyệt.">{daiHan}</span>
                 </button>
             </div>
 

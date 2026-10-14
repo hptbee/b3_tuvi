@@ -1,0 +1,10 @@
+{
+  "subjectId": "interp-co-nguyet-dong-luong",
+  "scope": "interpretation_binding",
+  "model": "grok-4.7-high",
+  "agentId": "bc-fc690678-56a5-53c2-9ed3-6829d6146af5",
+  "verdict": "DO_NOT_BIND_TO_CURRENT_FORMULA",
+  "bindToModern108s": false,
+  "reason": "The Tân Biên span does not state the modern-108s tam-hợp predicate, so its wording stays unbound from charts that formula matches.",
+  "expertVerified": false
+}

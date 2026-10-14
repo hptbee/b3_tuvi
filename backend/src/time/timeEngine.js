@@ -19,7 +19,9 @@ export function timeOverlay(chart) {
         capabilities: {
             dai_han_label: {
                 status: 'read_existing_natal_annotation',
-                interpretation: 'not_approved'
+                interpretation: 'not_approved',
+                fortuneFormula: 'not_applied',
+                reason: 'natal_label_is_not_a_reviewed_fortune_formula'
             },
             tieu_han: blocked('tieu_han'),
             luu_nien: blocked('luu_nien'),
@@ -27,6 +29,21 @@ export function timeOverlay(chart) {
             tu_hoa_han: blocked('tu_hoa_han'),
             leap_month_fortune: { id: 'leap_month_fortune', status: 'not_applied', reason: BLOCKED_REASON, interpretation: null }
         },
-        interpretation: null
+        interpretation: null,
+        research: {
+            dai_han: 'BLOCKED_SOURCE',
+            tieu_han: 'BLOCKED_SOURCE',
+            luu_nien: 'BLOCKED_SOURCE',
+            luu_tinh: 'BLOCKED_SOURCE',
+            tu_hoa_han: 'BLOCKED_SOURCE',
+            reviewedExcerpt: 'docs/knowledge/research/fortune/ziwei-quanshu-juan2-limits.txt',
+            blockReason: 'direction_without_age_step'
+        },
+        boundaries: {
+            timezone: 'Asia/Ho_Chi_Minh',
+            leapMonthFortune: 'not_evaluated',
+            genderEffect: 'not_evaluated',
+            ageConvention: 'not_approved'
+        }
     };
 }

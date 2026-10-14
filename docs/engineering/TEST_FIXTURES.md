@@ -50,6 +50,7 @@ Dữ liệu dựng trong test, database tạm, hoặc lỗi giả. Không dùng 
 - `evidenceV3.test.mjs`
 - `interpretationPipeline.test.mjs`
 - `sprint11bInterpretation.test.mjs`
+- `sprint11c12Evidence.test.mjs`
 - `internalSlice.test.mjs`
 - `knowledgeCoverage.test.mjs`
 - `wholeChart.test.mjs`

@@ -360,3 +360,9 @@ Baseline `18fab65` (PR #25, #27, #29, #32 on main). Formula V1 path: `backend/sr
 
 PR #33 was not merged at start. Stacked on that branch. Two interpretation reviews of the stored Tân Biên Tử Phủ span were executed (`grok-4.7-high` `bc-f2233997-a2cb-5eed-9dd0-1dfac28c23e0`, `gpt-5.6-terra-medium` `bc-122a2db4-09d4-51f4-a029-2cd744690f1e`). Claim `interp-tu-phu-dong-cung-giap-menh` requires a live Formula V1 hit, profile `tan-bien`, palace Mệnh, and year stem Giáp. Grade is not certified. Breaking is not promoted. Public prose stays null. Report: `docs/archive/sprints/tuvi/sprint-11/SPRINT_11B_REPORT.md`.
 
+## 26. Sprint 11C and Sprint 12 (2026-10-14)
+
+Baseline `b25478d`. Cơ Nguyệt Đồng Lương interpretation binding is `UNRESOLVED` because the two reviews disagree. Mệnh vô Chính diệu is `INSUFFICIENT_EVIDENCE`. No further interpretation claim was added. Fortune cycles stay `BLOCKED_SOURCE`; natal đại hạn labels are not a reviewed fortune formula. Reports: `docs/archive/sprints/tuvi/sprint-11/SPRINT_11C_REPORT.md` and `docs/archive/sprints/tuvi/sprint-12/SPRINT_12_REPORT.md`.
+
+**GO / NO-GO:** 11C gate CONDITIONAL GO, more readings NO-GO. Sprint 12 block CONDITIONAL GO, fortune calculation NO-GO. Sprint 13 narration NO-GO.
+

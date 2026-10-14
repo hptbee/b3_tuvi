@@ -1,0 +1,13 @@
+{
+  "decisionId": "co-nguyet-dong-luong-interpretation-2026-10-14",
+  "subjectId": "interp-co-nguyet-dong-luong",
+  "decision": "UNRESOLVED",
+  "reason": "The two interpretation reviews disagree on binding the Tân Biên sentence to Formula V1 profile modern-108s.",
+  "approvedForInterpretation": false,
+  "expertVerified": false,
+  "publicRelease": false,
+  "reviewers": [
+    "docs/knowledge/reviews/co-nguyet-dong-luong-interpretation/review-a.json",
+    "docs/knowledge/reviews/co-nguyet-dong-luong-interpretation/review-b.json"
+  ]
+}
