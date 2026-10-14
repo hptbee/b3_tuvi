@@ -10,7 +10,10 @@ const router = express.Router();
  */
 router.get('/star/:name', async (req, res) => {
     try {
-        const cleanName = decodeURIComponent(req.params.name)
+        if (req.query.palace !== undefined && typeof req.query.palace !== 'string') {
+            return res.status(400).json({ error: 'Tên cung phải là một chuỗi.', code: 'INVALID_PALACE' });
+        }
+        const cleanName = req.params.name
             .replace(/\s*\([a-zA-ZĐđ]\)/g, '').trim();
         const cungName = req.query.palace || '';
 
@@ -66,7 +69,7 @@ router.get('/star/:name', async (req, res) => {
  */
 router.get('/palace/:name', async (req, res) => {
     try {
-        const cungName = decodeURIComponent(req.params.name);
+        const cungName = req.params.name;
         // Hỗ trợ cung kép (ví dụ: "Mệnh / Thân")
         const parts = cungName.split('/').map(c => c.trim().toUpperCase());
 
