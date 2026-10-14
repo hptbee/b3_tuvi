@@ -26,6 +26,8 @@ Giữ hành vi đã có của engine, API, hoặc chuẩn hóa. Kết quả kỳ
 
 ## Synthetic test case
 
+- `apiErrors.test.mjs`: private-message error boundary and headers-sent forwarding; no domain/reference verification.
+
 - `numerologyApi.test.mjs`: real HTTP contract/validation/privacy and unchanged temp SQLite counts for the experimental calculator.
 - `numerologyRateLimit.test.mjs`: per-process window, proxy-token key, reset and HTTP 429. Not a multi-instance production proof.
 

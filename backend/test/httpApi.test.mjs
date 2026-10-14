@@ -46,6 +46,7 @@ try {
     const generated = await post('/api/charts/generate', JSON.stringify(birth));
     const chart = await generated.json();
     assert.strictEqual(generated.status, 200);
+    assert.strictEqual(generated.headers.get('cache-control'), 'no-store');
     assert.ok(chart.tuviInfo?.boxes);
     assert.ok(chart.normalizedChart?.palaces?.length === 12);
     assert.strictEqual(repo.countHoroscopes(), before);
@@ -58,6 +59,7 @@ try {
     const analyzed = await post('/api/interpretations/analyze', JSON.stringify(birth));
     const analysis = await analyzed.json();
     assert.strictEqual(analyzed.status, 200);
+    assert.strictEqual(analyzed.headers.get('cache-control'), 'no-store');
     assert.strictEqual(analysis.chartSource, 'server');
     assert.strictEqual(analysis.statements.filter((item) => !item.thanOverlay).length, 12);
     assert.ok(analysis.statements.every((item) => item.prose === null));
@@ -66,6 +68,7 @@ try {
     const asked = await post('/api/interpretations/ask', JSON.stringify({ ...birth, questionId: 'why_menh', topic: 'menh' }));
     const answer = await asked.json();
     assert.strictEqual(asked.status, 200);
+    assert.strictEqual(asked.headers.get('cache-control'), 'no-store');
     assert.strictEqual(answer.prose, null);
     assert.strictEqual(repo.countHoroscopes(), before);
 
@@ -83,6 +86,7 @@ try {
 
     const invalid = await post('/api/charts/generate', JSON.stringify({ day: 'nope', month: 6, year: 1990, hour: 8, gender: 1 }));
     assert.strictEqual(invalid.status, 400);
+    assert.strictEqual(invalid.headers.get('cache-control'), 'no-store');
     const missing = await post('/api/interpretations/analyze', JSON.stringify({}));
     assert.strictEqual(missing.status, 400);
 
@@ -90,10 +94,40 @@ try {
     const badJsonBody = await badJson.json();
     assert.strictEqual(badJson.status, 400);
     assert.strictEqual(badJsonBody.error, 'JSON không hợp lệ');
+    assert.strictEqual(badJson.headers.get('cache-control'), 'no-store');
 
     const huge = await post('/api/charts/generate', JSON.stringify({ blob: 'x'.repeat(300 * 1024) }));
     assert.strictEqual(huge.status, 413);
     assert.strictEqual((await huge.json()).error, 'Dữ liệu gửi lên quá lớn');
+
+    for (const pathname of ['/api/charts/generate', '/api/interpretations/analyze']) {
+        const preflight = await fetch(`${base}${pathname}`, { method: 'OPTIONS', headers: { Origin: 'https://example.com', 'Access-Control-Request-Method': 'POST' } });
+        assert.strictEqual(preflight.status, 204);
+        assert.strictEqual(preflight.headers.get('cache-control'), 'no-store');
+        for (const [headers, body, status, code] of [
+            [{ 'Content-Type': 'application/json; charset=garbage' }, '{}', 415, 'UNSUPPORTED_CHARSET'],
+            [{ 'Content-Encoding': 'garbage' }, '{}', 415, 'UNSUPPORTED_ENCODING'],
+            [{ 'Content-Encoding': 'gzip' }, 'Private Name 1990-06-15', 400, 'INVALID_BODY']
+        ]) {
+            const response = await post(pathname, body, headers);
+            assert.strictEqual(response.status, status);
+            assert.strictEqual(response.headers.get('cache-control'), 'no-store');
+            assert.match(response.headers.get('content-type'), /application\/json/);
+            const rejected = await response.json();
+            assert.strictEqual(rejected.code, code);
+            assert.doesNotMatch(JSON.stringify(rejected), /Private|1990|stack|node_modules|\.js/);
+        }
+    }
+    const badPath = await fetch(`${base}/api/meanings/star/%E0%A4%A`);
+    assert.strictEqual(badPath.status, 400);
+    assert.strictEqual((await badPath.json()).code, 'INVALID_PATH');
+    assert.strictEqual(badPath.headers.get('cache-control'), 'no-store');
+    const unknown = await fetch(`${base}/api/private-name-1990`);
+    assert.strictEqual(unknown.status, 404);
+    assert.deepStrictEqual(await unknown.json(), { error: 'Endpoint không tồn tại.', code: 'NOT_FOUND' });
+    const numUnknown = await fetch(`${base}/api/numerology/unknown`);
+    assert.strictEqual(numUnknown.status, 404);
+    assert.deepStrictEqual(await numUnknown.json(), { ok: false, error: { code: 'NOT_FOUND', message: 'Endpoint không tồn tại.', fields: [] } });
 
     const polluted = await post('/api/health', JSON.stringify({ __proto__: { polluted: true } }));
     assert.notStrictEqual(polluted.status, 500);
