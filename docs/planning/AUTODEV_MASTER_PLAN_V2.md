@@ -374,3 +374,7 @@ Baseline `1cd063d`. Volume 2 annual-star lines were reviewed separately. Lưu L�
 
 Hong Kong Observatory supplies the earthly-branch order. With that convention, both reviews allow Thiên Đức as a branch placement and still reject Đại hạn and Tiểu hạn for missing age parameters. Tang Môn stays blocked on the opposite-palace offset. `thienDucBranch` does not emit a reading.
 
+## 29. Nguyệt Đức and view year (2026-10-14)
+
+Both reviews accept 月德星從子上起子 as the year branch itself, using the same forward count as Thiên Đức. The chart UI can select a view-year branch. Interpretation stays blocked. Decision: `docs/knowledge/research/fortune/nguyet-duc-decision.json`.
+

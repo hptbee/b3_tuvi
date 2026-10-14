@@ -1,7 +1,13 @@
 import { DIA_CHI } from '../engine/constants.js';
 
 const ORDER = DIA_CHI.slice(1);
-const START = ORDER.indexOf('Dậu');
+
+export function forwardBranch(startBranch, yearBranch) {
+    const start = ORDER.indexOf(startBranch);
+    const index = ORDER.indexOf(yearBranch);
+    if (start < 0 || index < 0) return null;
+    return ORDER[(start + index) % ORDER.length];
+}
 
 /**
  * Thiên Đức branch for a lưu-niên year branch.
@@ -19,34 +25,42 @@ function closed(extra) {
     };
 }
 
-export function thienDucBranch(yearBranch) {
-    const index = ORDER.indexOf(yearBranch);
-    if (index < 0 || START < 0) {
+function placeFrom(startBranch, yearBranch) {
+    const branch = forwardBranch(startBranch, yearBranch);
+    if (!branch) {
         return closed({ ok: false, reason: 'unknown_year_branch', branch: null, branchPlacement: 'not_applied' });
     }
     return closed({
         ok: true,
-        branch: ORDER[(START + index) % ORDER.length],
+        branch,
         branchPlacement: 'supported',
         profile: 'ziwei-quanshu-wikisource-juan2',
         convention: 'hko-earthly-branch-forward'
     });
 }
 
-export function thienDucCapability(viewYearBranch) {
+export function thienDucBranch(yearBranch) {
+    return placeFrom('Dậu', yearBranch);
+}
+
+export function nguyetDucBranch(yearBranch) {
+    return placeFrom('Tí', yearBranch);
+}
+
+export function annualStarCapability(id, place, viewYearBranch) {
     if (viewYearBranch == null || viewYearBranch === '') {
         return closed({
-            id: 'thien_duc',
+            id,
             status: 'not_applied',
             reason: 'missing_view_year_branch',
             branch: null,
             branchPlacement: 'not_applied'
         });
     }
-    const placed = thienDucBranch(viewYearBranch);
+    const placed = place(viewYearBranch);
     if (!placed.ok) {
         return closed({
-            id: 'thien_duc',
+            id,
             status: 'not_applied',
             reason: placed.reason,
             branch: null,
@@ -55,8 +69,16 @@ export function thienDucCapability(viewYearBranch) {
     }
     const { ok, ...placement } = placed;
     return closed({
-        id: 'thien_duc',
+        id,
         status: 'branch_placed',
         ...placement
     });
+}
+
+export function thienDucCapability(viewYearBranch) {
+    return annualStarCapability('thien_duc', thienDucBranch, viewYearBranch);
+}
+
+export function nguyetDucCapability(viewYearBranch) {
+    return annualStarCapability('nguyet_duc', nguyetDucBranch, viewYearBranch);
 }

@@ -23,12 +23,16 @@ const AVAILABILITY_LABELS = {
   missing_palace: 'Thiếu cung'
 };
 
+const YEAR_BRANCHES = ['Tí', 'Sửu', 'Dần', 'Mão', 'Thìn', 'Tị', 'Ngọ', 'Mùi', 'Thân', 'Dậu', 'Tuất', 'Hợi'];
+
 const CYCLE_LABELS = {
   tieu_han: 'Tiểu hạn',
   luu_nien: 'Lưu niên',
   luu_tinh: 'Lưu tinh',
   tu_hoa_han: 'Tứ hóa hạn',
-  leap_month_fortune: 'Vận hạn tháng nhuận'
+  leap_month_fortune: 'Vận hạn tháng nhuận',
+  thien_duc: 'Thiên Đức',
+  nguyet_duc: 'Nguyệt Đức'
 };
 
 function palaceLabel(statement) {
@@ -108,9 +112,11 @@ export default function StructuredAnalysis({ userInfo }) {
   const activeKey = useRef(key);
   const [state, setState] = useState({ key: '', status: 'idle', body: null, error: '' });
   const [selectedId, setSelectedId] = useState(null);
+  const [viewYearBranch, setViewYearBranch] = useState('');
 
   useEffect(() => {
-    activeKey.current = key;
+    const requestKey = `${key}:${viewYearBranch}`;
+    activeKey.current = requestKey;
     const day = userInfo?.day;
     const month = userInfo?.month;
     const year = userInfo?.year;
@@ -119,11 +125,10 @@ export default function StructuredAnalysis({ userInfo }) {
     if (![day, month, year, hour, gender].every((value) => Number.isInteger(value))) return undefined;
 
     const controller = new AbortController();
-    const requestKey = key;
     fetch(`${API_BASE}/api/interpretations/analyze`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ day, month, year, hour, gender }),
+      body: JSON.stringify({ day, month, year, hour, gender, viewYearBranch }),
       signal: controller.signal
     })
       .then(async (response) => {
@@ -142,9 +147,9 @@ export default function StructuredAnalysis({ userInfo }) {
         setState({ key: requestKey, status: 'error', body: null, error: 'Không kết nối được máy chủ phân tích' });
       });
     return () => controller.abort();
-  }, [key, userInfo]);
+  }, [key, userInfo, viewYearBranch]);
 
-  const current = state.key === key ? state : { key, status: 'loading', body: null, error: '' };
+  const current = state.key === `${key}:${viewYearBranch}` ? state : { key, status: 'loading', body: null, error: '' };
   const loading = current.status === 'idle' || current.status === 'loading';
   const statements = current.body?.statements || [];
   const selected = statements.find((item) => item.statementId === selectedId) || null;
@@ -178,10 +183,17 @@ export default function StructuredAnalysis({ userInfo }) {
               ))}
             </div>
             {selected && <Detail statement={selected} />}
+            <label className="evidence-note">
+              Chi năm xem
+              <select aria-label="Chi năm xem" value={viewYearBranch} onChange={(event) => setViewYearBranch(event.target.value)}>
+                <option value="">Chưa chọn</option>
+                {YEAR_BRANCHES.map((branch) => <option key={branch} value={branch}>{branch}</option>)}
+              </select>
+            </label>
             {blocked.length > 0 && (
               <p className="evidence-note">
                 {blocked.map(([id]) => CYCLE_LABELS[id] || id).join(', ')}: chưa áp dụng vì chưa có công thức được duyệt. Số đại hạn trên lá số là nhãn nguyên cục, không phải phép tính vận hạn đã duyệt.
-                {current.body?.time?.capabilities?.thien_duc?.status === 'branch_placed' && ' Thiên Đức chỉ ghi vị trí chi, không phải luận vận hạn.'}
+                {['thien_duc', 'nguyet_duc'].filter((id) => current.body?.time?.capabilities?.[id]?.status === 'branch_placed').map((id) => ` ${CYCLE_LABELS[id] || id} tại ${current.body.time.capabilities[id].branch}, chỉ là vị trí chi.`)}
               </p>
             )}
           </>
