@@ -2,16 +2,15 @@
 
 Ngày: 2026-10-13. Profile giữ `pythagorean-vn-v1` `1.2.0`.
 
-Năm ứng viên không được đưa vào API công khai.
+Quyết định `REQUIRES_SPEC` phía dưới là kết luận của audit, khi mới có trang liệt kê tên chỉ số. Lượt nghiên cứu sau đó nằm ở `docs/numerology/knowledge-expansion/`. Năm chỉ số đã có công thức kiểm được và được tính trong `indicators` `1.0.0`. Số của profile `1.2.0` không đổi.
 
 | Chỉ số | Trường phái được trang công khai nhắc | Công thức đủ để viết fixture | Quyết định |
 |---|---|---|---|
-| Hidden Passion | Decoz, trang chart calculator | Không. Trang liệt kê tên, không nói cách xử lý hòa, master, hay chữ lặp. | `REQUIRES_SPEC` |
-| Karmic Lessons | Decoz, cùng trang | Không. Khác với ô trống của lưới ngày sinh. Chưa có quy tắc “thiếu trong tên” được ghim trong repo. | `REQUIRES_SPEC` |
-| Balance | Decoz | Không. Chưa có định nghĩa chữ cái đầu từng phần tên, có giữ master hay không. | `REQUIRES_SPEC` |
-| Rational Thought | Decoz và mục “tư duy” trên QuizVN | Không. Hai trang không công bố cùng một phép. QuizVN không chạy được trong audit. | `REQUIRES_SPEC` |
-| Bridge | Decoz kể Life Path–Expression và Life Path–Birthday | Hiệu tuyệt đối nghe đơn giản, nhưng trang không nói dùng số gốc hay số master, và không có fixture độc lập trong repo. | `REQUIRES_SPEC` |
+| Hidden Passion | Decoz, trang chart calculator | Không, tại thời điểm audit. | `REQUIRES_SPEC` lúc audit. Nay là `FORMULA_READY`. |
+| Karmic Lessons | Decoz, cùng trang | Không, tại thời điểm audit. | `REQUIRES_SPEC` lúc audit. Nay là `FORMULA_READY`. |
+| Balance | Decoz | Không, tại thời điểm audit. | `REQUIRES_SPEC` lúc audit. Nay là `FORMULA_READY`. |
+| Rational Thought | Decoz và mục “tư duy” trên QuizVN | Không, tại thời điểm audit. | `REQUIRES_SPEC` lúc audit. Nay là `FORMULA_READY` theo trang tính của Decoz. |
+| Bridge | Decoz kể Life Path–Expression và Life Path–Birthday | Hiệu tuyệt đối nghe đơn giản, nhưng trang không nói dùng số gốc hay số master, và không có fixture độc lập trong repo. | `REQUIRES_SPEC` lúc audit. Nay là `FORMULA_READY`: hiệu của số đã công bố, không rút tiếp. |
 
-Bằng chứng: `docs/numerology/product-gap/COMPETITOR_BENCHMARK.md`. Không có `LIVE_RESULT_VERIFIED` cho các chỉ số này.
+Bằng chứng audit: `docs/numerology/product-gap/COMPETITOR_BENCHMARK.md`. Bằng chứng công thức: `docs/numerology/knowledge-expansion/SOURCE_RESEARCH.md`.
 
-Khi có một đoạn đặc tả trong repo, kèm ví dụ tính tay và một profile hoặc capability version riêng, mới tính trên server. Không sửa số của bản 1.2.0 để nhét chúng vào.

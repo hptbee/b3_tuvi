@@ -18,5 +18,5 @@ export const PROFILE = Object.freeze({
 
 export function publicProfile() {
     const { vowels, ...metadata } = PROFILE;
-    return { ...metadata, capabilities: { core: 'available', birthGrid: 'available', cycles: 'available', pinnacles: 'available', nameChart: 'available', combinedChart: 'available', meanings: contentStore.contentVersion ? 'experimental_available' : 'withheld' } };
+    return { ...metadata, capabilities: { core: 'available', birthGrid: 'available', cycles: 'available', pinnacles: 'available', nameChart: 'available', combinedChart: 'available', indicators: 'available', meanings: contentStore.contentVersion ? 'experimental_available' : 'withheld' } };
 }

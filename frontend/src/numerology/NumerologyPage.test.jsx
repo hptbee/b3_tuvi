@@ -37,6 +37,19 @@ function result(value = 4, normalized = null) {
       months: Array.from({ length: 12 }, (_, index) => ({ month: index + 1, personalMonth: cycleValue(index === 9 ? 5 : 1), selected: index === 9, viewDate: `2026-${String(index + 1).padStart(2, '0')}-01` })) },
     pinnacles: samplePinnacles(),
     nameAnalysis: normalized ? { normalized, letters: [{ letter: 'A', value: 1 }] } : null,
+    indicators: (() => {
+      const held = { meaning: null, meaningStatus: 'withheld' };
+      const missing = { status: 'unavailable', reason: 'missing_name', value: null, ...held };
+      const link = (id, left, right, ready) => ready ? { id, status: 'available', operands: [left, right], value: Math.abs(left - right), ...held } : { id, ...missing };
+      return {
+        version: '1.0.0', policy: 'decoz-frequency-initials-bridge-v1',
+        hiddenPassion: normalized ? { status: 'available', values: [1], count: 1, counts: { 1: 1, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0 }, ...held } : missing,
+        karmicLessons: normalized ? { status: 'available', values: [2], ...held } : missing,
+        balance: normalized ? { status: 'available', value: 1, keepMasters: false, isMaster: false, parts: [{ label: 'initials', values: [1], total: 1 }], steps: [], ...held } : missing,
+        rationalThought: normalized ? { status: 'available', value: 7, keepMasters: false, isMaster: false, token: 'AN', calendarDay: 15, parts: [{ label: 'firstToken', values: [1], total: 1 }, { label: 'namePlusDay', values: [1, 15], total: 16 }], steps: [{ input: 16, digits: [1, 6], output: 7 }], ...held } : missing,
+        bridges: [link('lifePath-expression', value, 3, Boolean(normalized)), link('soulUrge-personality', 1, 5, Boolean(normalized)), link('lifePath-birthday', value, 6, true)]
+      };
+    })(),
     metrics: {
       lifePath: available(value), birthday: available(6), attitude: available(3),
       expression: { status: 'unavailable', value: null, reason: 'missing_name', meaning: null, meaningStatus: 'withheld' },
@@ -92,6 +105,8 @@ it('draws pinnacle edges, the challenge timeline, and the selected birth-grid li
   expect(track).toHaveLength(4);
   expect(Number(track[0].style.flexGrow)).toBeGreaterThan(Number(track[1].style.flexGrow));
   expect(track[3]).toHaveClass('is-open');
+  expect(screen.getByRole('heading', { name: 'Chỉ số bổ sung' })).toBeVisible();
+  expect(screen.getAllByText(/Đam mê ẩn/).length).toBeGreaterThan(0);
   expect(screen.getByRole('table', { name: 'Nguồn của từng chữ số' })).toBeVisible();
   expect(document.querySelector('.num-dual.is-both')).toBeTruthy();
   await user.click(screen.getByRole('button', { name: /1 – 5 – 9/ }));
@@ -323,10 +338,12 @@ it('exports the report without the raw name until the user opts in', async () =>
   expect(hidden.exportVersion).toBe('1.0.0');
   expect(document.querySelector('#bieu-do-ten p')).toHaveClass('num-omit-print');
   expect(document.querySelector('.num-name-trace')).toHaveClass('num-omit-print');
+  expect(document.querySelector('.num-indicator-token')).toHaveClass('num-omit-print');
   await user.click(screen.getByRole('checkbox', { name: /Kèm họ tên/ }));
   expect(screen.getByText('An · 15/6/1990')).not.toHaveClass('num-omit-print');
   expect(document.querySelector('#bieu-do-ten p')).not.toHaveClass('num-omit-print');
   expect(document.querySelector('.num-name-trace')).not.toHaveClass('num-omit-print');
+  expect(document.querySelector('.num-indicator-token')).not.toHaveClass('num-omit-print');
   await user.click(screen.getByRole('button', { name: 'Tải JSON' }));
   expect(JSON.parse(await blobText(blobs[1])).fullName).toBe('An');
 });

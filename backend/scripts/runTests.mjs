@@ -9,6 +9,7 @@ export const unitTests = [
     'test/numerologyAdvanced.test.mjs',
     'test/numerologyPinnacles.test.mjs',
     'test/numerologyCharts.test.mjs',
+    'test/numerologyIndicators.test.mjs',
     'test/numerologyContent.test.mjs',
     'test/engine.test.mjs',
     'test/placement.tables.test.mjs',

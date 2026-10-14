@@ -7,6 +7,7 @@ import { buildBirthGrid } from './birthGrid.js';
 import { calculateCycles } from './cycles.js';
 import { calculatePinnacles } from './pinnacles.js';
 import { buildCombinedChart, buildNameChart } from './charts.js';
+import { calculateIndicators } from './indicators.js';
 export { digitSum, reduceNumber } from './reduction.js';
 
 const missing = reason => ({ status: 'unavailable', reason, value: null, meaning: null, meaningStatus: 'withheld' });
@@ -63,6 +64,7 @@ export function calculateNumerology(body, referenceDate) {
         ok: true, schemaVersion: '1.2.0', profile: publicProfile(), referenceDate,
         contentVersion: contentStore.contentVersion, metrics, nameAnalysis: name,
         birthGrid, nameChart, combinedChart: buildCombinedChart(birthGrid, nameChart), cycles, pinnacles,
+        indicators: calculateIndicators({ name, metrics, birthDay: day }),
         capabilities: publicProfile().capabilities,
         warnings: name?.letters.some(letter => letter.letter === 'Y') ? [{ code: 'Y_AS_CONSONANT', field: 'fullName' }] : []
     };
