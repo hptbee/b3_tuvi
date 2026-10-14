@@ -20,6 +20,7 @@ export const unitTests = [
     'test/provenance.test.mjs',
     'test/knowledgeValidate.test.mjs',
     'test/safeErrorLog.test.mjs',
+    'test/apiErrors.test.mjs',
     'test/evidenceV3.test.mjs',
     'test/interpretationPipeline.test.mjs',
     'test/sprint11bInterpretation.test.mjs',

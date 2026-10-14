@@ -8,11 +8,12 @@ import interpretationRoutes from './routes/interpretationRoutes.js';
 import numerologyRoutes, { numerologyNoStore, numerologyErrorHandler } from './routes/numerologyRoutes.js';
 import { requestLogLine } from './http/requestLog.js';
 import { createNumerologyRateLimit } from './http/numerologyRateLimit.js';
+import { apiErrorHandler } from './http/apiErrors.js';
 
 export function createApp() {
     const app = express();
     app.disable('x-powered-by');
-    app.use('/api/numerology', numerologyNoStore);
+    app.use('/api', numerologyNoStore);
     app.use(cors());
     app.use('/api/numerology', createNumerologyRateLimit());
     app.use(express.json({ limit: '256kb' }));
@@ -34,15 +35,11 @@ export function createApp() {
         database: isDbReady() ? 'sqlite' : 'disconnected'
     }));
     app.get('/api/test-direct', (req, res) => res.json({ ok: true }));
+    app.use('/api/numerology', (req, res) => res.status(404).json({
+        ok: false, error: { code: 'NOT_FOUND', message: 'Endpoint không tồn tại.', fields: [] }
+    }));
+    app.use('/api', (req, res) => res.status(404).json({ error: 'Endpoint không tồn tại.', code: 'NOT_FOUND' }));
     app.use('/api/numerology', numerologyErrorHandler);
-    app.use((error, req, res, next) => {
-        if (error instanceof SyntaxError && error.status === 400 && Object.prototype.hasOwnProperty.call(error, 'body')) {
-            return res.status(400).json({ error: 'JSON không hợp lệ' });
-        }
-        if (error.status === 413 || error.type === 'entity.too.large') {
-            return res.status(413).json({ error: 'Dữ liệu gửi lên quá lớn' });
-        }
-        return next(error);
-    });
+    app.use(apiErrorHandler);
     return app;
 }
