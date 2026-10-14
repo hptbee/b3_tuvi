@@ -14,7 +14,9 @@
 - **API boundary:** `POST /api/interpretations/analyze` dựng lại lá số từ birth input, từ chối `normalizedChart` do client cung cấp và **không xuất `internalInterpretation` trong response mặc định**. `evaluateTuPhuDongCungSlice` vẫn là helper nội bộ; `auspicious: null` biểu thị chưa có phán đoán cát/hung.
 - **Sprint 10 — READY / CONDITIONAL GO:** chỉ được nghiên cứu/triển khai typed conditions, formation/breaking, provenance và independent negative tests trong PR có phạm vi rõ. Chưa mở public interpretation, fortune, AI prose, nâng `expertVerified`, tự đổi công thức, hay production SQLite migration.
 - **Sprint 11 — engineering CONDITIONAL GO; public interpretation NO-GO.** Report: `docs/archive/sprints/tuvi/sprint-11/SPRINT_11_FINAL_REPORT.md`. Sprint 11B adds one internal Giáp / Tử Phủ Đồng Cung claim; public release remains NO-GO. Report: `docs/archive/sprints/tuvi/sprint-11/SPRINT_11B_REPORT.md`.
-- **Sprint 12–14 — PLANNED / GATED:** các tính năng lần lượt phụ thuộc evidence và từng release gate.
+- **Sprint 11C — CONDITIONAL GO for the gate, NO-GO for more readings.** Cơ Nguyệt binding is unresolved between two reviews. Mệnh vô Chính diệu is a definition only. Report: `docs/archive/sprints/tuvi/sprint-11/SPRINT_11C_REPORT.md`.
+- **Sprint 12 — fortune formulas BLOCKED_SOURCE.** Natal đại hạn labels stay labels. Report: `docs/archive/sprints/tuvi/sprint-12/SPRINT_12_REPORT.md`.
+- **Sprint 13–14 — PLANNED / GATED.** Sprint 13 narration is NO-GO until more approved claims exist.
 
 Nguồn kiểm chứng: [Formula V1 implementation report](../archive/sprints/tuvi/sprint-9/SPRINT_9_FINAL_IMPLEMENTATION_REPORT.md), [Sprint 9 closure report](../archive/sprints/tuvi/sprint-9/SPRINT_9_CLOSURE_REPORT.md), các PR/CI trên. Các số liệu nghiên cứu 9B/9C bên dưới là snapshots lịch sử, **không được xem là độ phủ công thức đã xác thực hoặc lời luận đã được phê duyệt**.
 

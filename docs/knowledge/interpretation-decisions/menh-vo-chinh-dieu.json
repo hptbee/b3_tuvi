@@ -1,0 +1,13 @@
+{
+  "decisionId": "menh-vo-chinh-dieu-interpretation-2026-10-14",
+  "subjectId": "interp-menh-vo-chinh-dieu",
+  "decision": "INSUFFICIENT_EVIDENCE",
+  "reason": "Both reviewers found a formation name only, with no life-outcome sentence.",
+  "approvedForInterpretation": false,
+  "expertVerified": false,
+  "publicRelease": false,
+  "reviewers": [
+    "docs/knowledge/reviews/menh-vo-chinh-dieu-interpretation/review-a.json",
+    "docs/knowledge/reviews/menh-vo-chinh-dieu-interpretation/review-b.json"
+  ]
+}

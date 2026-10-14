@@ -1,0 +1,9 @@
+{
+  "subjectId": "interp-menh-vo-chinh-dieu",
+  "scope": "interpretation",
+  "model": "grok-4.7-high",
+  "agentId": "bc-0bb33d74-dc46-5c1e-891e-ca0d5b2f6a77",
+  "verdict": "INSUFFICIENT_EVIDENCE",
+  "reason": "The sentence only names the formation. It states no life outcome.",
+  "expertVerified": false
+}
