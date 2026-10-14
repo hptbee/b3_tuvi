@@ -36,7 +36,7 @@ function MetricSection({ id, metric }) {
 }
 export default function NumerologyPage() {
   const [draft, setDraft] = useState({ day: '', month: '', year: '', fullName: '', targetDate: '' });
-  const [request, setRequest] = useState({ status: 'idle', result: null, input: null, error: null });
+  const [request, setRequest] = useState({ status: 'idle', result: null, resultInput: null, input: null, error: null });
   const controller = useRef(null);
   const sequence = useRef(0);
   const dayInput = useRef(null);
@@ -90,14 +90,14 @@ export default function NumerologyPage() {
     const next = new AbortController();
     controller.current = next;
     const id = ++sequence.current;
-    setRequest(current => ({ status: 'loading', result: keepResult ? current.result : null, input, error: null }));
+    setRequest(current => ({ status: 'loading', result: keepResult ? current.result : null, resultInput: keepResult ? current.resultInput : null, input, error: null }));
     try {
       const result = await calculateRequest(input, next.signal);
       if (next.signal.aborted || id !== sequence.current) return;
-      setRequest({ status: 'ready', result, input, error: null });
+      setRequest({ status: 'ready', result, resultInput: input, input, error: null });
     } catch (error) {
       if (next.signal.aborted || id !== sequence.current || error.name === 'AbortError') return;
-      setRequest(current => ({ status: 'error', result: keepResult ? current.result : null, input, error }));
+      setRequest(current => ({ status: 'error', result: keepResult ? current.result : null, resultInput: keepResult ? current.resultInput : null, input, error }));
       if (error.fields?.some(field => field.path === 'targetDate')) targetInput.current?.focus();
       else if (error.fields?.some(field => field.path === 'fullName')) nameInput.current?.focus();
       else if (error.fields?.some(field => field.path === 'birthDate')) dayInput.current?.focus();
@@ -132,6 +132,8 @@ export default function NumerologyPage() {
     run(parsed.input);
   };
   const result = request.result;
+  const resultInput = request.resultInput;
+  const sameResultInput = resultInput && JSON.stringify(resultInput) === JSON.stringify(currentPayload);
   return <div className="numerology-page num-page">
     <section className="num-hero"><div>
       <div className="section-kicker">KHÔNG GIAN THẦN SỐ HỌC</div><span className="coming-badge">Bản thử nghiệm</span>
@@ -163,11 +165,11 @@ export default function NumerologyPage() {
       </section>
     </section>
     {request.status === 'loading' && <div className="num-request-status" role="status">Đang tính các chỉ số theo thông tin bạn đã gửi…</div>}
-    {request.status === 'error' && <div className="num-error" role="alert" ref={errorBox} tabIndex={-1}><h2>Chưa thể tính chỉ số</h2><p>{request.error.message}</p>{request.error.retryable && <button className="primary-button" onClick={() => run(request.input)}>Thử lại</button>}</div>}
+    {request.status === 'error' && <div className="num-error" role="alert" ref={errorBox} tabIndex={-1}><h2>Chưa thể tính chỉ số</h2><p>{request.error.message}</p>{request.error.retryable && <button className="primary-button" onClick={() => run(request.input, { keepResult: Boolean(result) })}>Thử lại</button>}</div>}
     {result && <section className="num-results" aria-labelledby="num-results-heading">
       <div className="num-results-heading"><div><div className="section-kicker">KẾT QUẢ CỦA BẠN</div><h2 id="num-results-heading" ref={resultHeading} tabIndex={-1}>Các chỉ số của bạn</h2>{(() => {
-        const enteredName = request.input.fullName?.trim();
-        const dateLabel = `${request.input.birthDate.day}/${request.input.birthDate.month}/${request.input.birthDate.year}`;
+        const enteredName = resultInput.fullName?.trim();
+        const dateLabel = `${resultInput.birthDate.day}/${resultInput.birthDate.month}/${resultInput.birthDate.year}`;
         const hideNameInPrint = Boolean(enteredName) && !includeName;
         return <>
           <p className={hideNameInPrint ? 'num-omit-print' : undefined}>{enteredName || 'Theo ngày sinh'} · {dateLabel}</p>
@@ -177,7 +179,7 @@ export default function NumerologyPage() {
       <div className="num-actions">
         <label className="num-include-name"><input type="checkbox" checked={includeName} onChange={event => setIncludeName(event.target.checked)} /> Kèm họ tên khi tải JSON và khi in</label>
         <button type="button" onClick={() => {
-          try { downloadNumerologyJson(result, request.input, { includeName }); setImportError(''); }
+          try { downloadNumerologyJson(result, resultInput, { includeName }); setImportError(''); }
           catch (error) { setImportError(error instanceof Error ? error.message : 'Không xuất được tệp.'); }
         }}>Tải JSON</button>
         <button type="button" onClick={() => fileInput.current?.click()}>Nhập JSON</button>
@@ -185,7 +187,7 @@ export default function NumerologyPage() {
         <button type="button" onClick={() => window.print()}>In kết quả</button>
       </div>
       {importError && <p className="num-field-error" role="alert">{importError}</p>}
-      {!sameInput && <p className="num-draft-note" role="status">Bạn đang chỉnh sửa thông tin. Kết quả vẫn thuộc dữ liệu đã gửi; chọn “Xem kết quả” để tính lại.</p>}
+      {!sameResultInput && <p className="num-draft-note" role="status">Bạn đang chỉnh sửa thông tin. Kết quả vẫn thuộc dữ liệu đã gửi; chọn “Xem kết quả” để tính lại.</p>}
       {result.contentVersion && <aside className="num-content-notice" aria-label="Lời luận thử nghiệm"><h3>Một lời gợi mở, để bạn tự suy ngẫm</h3><p>Lời luận hiện ngay dưới mỗi chỉ số đã có bài. Chủ đề số được đối chiếu nguồn cộng đồng; nội dung và ngữ cảnh do ứng dụng biên tập, không quyết định tính cách hoặc tương lai của bạn.</p><p>Phiên bản nội dung {result.contentVersion} · biên tập thử nghiệm</p></aside>}
       <nav className="num-toc" aria-label="Mục lục lá số">
         {[['#tong-quan', 'Tổng quan'], ['#chi-so-cot-loi', 'Chỉ số cốt lõi'], ['#bieu-do-ngay-sinh', 'Biểu đồ ngày sinh'], ['#bieu-do-ten', 'Biểu đồ tên'], ['#bieu-do-gop', 'Ngày sinh và tên'], ['#dinh-cao', 'Đỉnh cao và thử thách'], ['#chu-ky', 'Chu kỳ'], ['#chi-so-bo-sung', 'Chỉ số bổ sung'], ['#quan-he', 'Mối nối'], ['#nguon', 'Nguồn']].map(([href, label]) => <a key={href} href={href}>{label}</a>)}
@@ -194,7 +196,7 @@ export default function NumerologyPage() {
         <h3 id="num-overview-heading">Tổng quan</h3>
         {(() => {
           const active = result.pinnacles.periods.find(period => period.active);
-          const birthLabel = `${request.input.birthDate.day}/${request.input.birthDate.month}/${request.input.birthDate.year}`;
+          const birthLabel = `${resultInput.birthDate.day}/${resultInput.birthDate.month}/${resultInput.birthDate.year}`;
           const facts = [
             ['Đường đời', result.metrics.lifePath.value, result.metrics.lifePath.isMaster ? `Số đặc biệt, gốc ${result.metrics.lifePath.rootValue}` : 'Từ ngày sinh'],
             ['Ngày sinh', result.metrics.birthday.value, 'Từ số ngày'],
@@ -205,7 +207,7 @@ export default function NumerologyPage() {
           ];
           const named = result.metrics.expression.status === 'available';
           return <>
-            <p className="num-dash-identity">{birthLabel}{request.input.fullName ? ' · Tên đã nhập được chuẩn hóa khi tính các chỉ số từ tên.' : ' · Chưa nhập tên. Nhóm chỉ số từ tên không được tính.'}</p>
+            <p className="num-dash-identity">{birthLabel}{resultInput.fullName ? ' · Tên đã nhập được chuẩn hóa khi tính các chỉ số từ tên.' : ' · Chưa nhập tên. Nhóm chỉ số từ tên không được tính.'}</p>
             <div className="num-dash-grid">
               {facts.map(([label, value, note]) => <article key={label}><span>{label}</span><strong>{value}</strong><small>{note}</small></article>)}
               {named ? [['Biểu đạt', result.metrics.expression.value], ['Linh hồn', result.metrics.soulUrge.value], ['Nhân cách', result.metrics.personality.value], ['Trưởng thành', result.metrics.maturity.value]].map(([label, value]) => <article key={label}><span>{label}</span><strong>{value}</strong><small>Từ tên</small></article>) : <article className="num-dash-missing"><span>Chỉ số từ tên</span><strong>—</strong><small>Biểu đạt, Linh hồn, Nhân cách và Trưởng thành chưa có vì thiếu tên.</small></article>}
@@ -217,7 +219,7 @@ export default function NumerologyPage() {
       <div className="num-metric-grid" id="chi-so-cot-loi">{METRIC_IDS.map(id => <MetricSection key={id} id={id} metric={result.metrics[id]} />)}</div>
       {result.nameAnalysis && <details className={includeName ? 'num-name-trace' : 'num-name-trace num-omit-print'}><summary>Tên được chuyển sang chữ số như thế nào?</summary><p>Tên chuẩn hóa: <strong>{result.nameAnalysis.normalized}</strong></p><p>Đ → D · bỏ dấu · A, E, I, O, U là nguyên âm · Y là phụ âm.</p><div className="num-letter-list">{result.nameAnalysis.letters.map((item, index) => <span key={index} aria-label={`${item.letter} bằng ${item.value}`}>{item.letter}<b>{item.value}</b></span>)}</div></details>}
       <NumerologyAdvanced birthGrid={result.birthGrid} nameChart={result.nameChart} combinedChart={result.combinedChart} cycles={result.cycles} pinnacles={result.pinnacles} metrics={result.metrics} indicators={result.indicators} includeName={includeName} onViewDate={iso => {
-        const next = { birthDate: request.input.birthDate, ...(request.input.fullName ? { fullName: request.input.fullName } : {}), targetDate: iso };
+        const next = { birthDate: resultInput.birthDate, ...(resultInput.fullName ? { fullName: resultInput.fullName } : {}), targetDate: iso };
         setDraft(current => ({ ...current, targetDate: iso }));
         run(next, { focus: false, keepResult: true });
       }} />
