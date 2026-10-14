@@ -2,7 +2,7 @@
 
 > **Rebaseline 2026-10-14:** `main ed31ad1cae7b2411029cccbe8c87da533a996800`, PR #24 đã merge; report UI có bản visual finalization `d490703`. Profile `pythagorean-vn-v1` `1.2.0`, catalog `1.2.0`.
 > **Runtime/CI:** [main backend/frontend/e2e PASS](https://github.com/hptbee/b3_tuvi/actions/runs/38438302551).
-> **Theo dõi tiếp:** [Master Roadmap §12.9/§18](../../ROADMAP_NUMEROLOGY_A_TO_Z.md) và [Product Roadmap](../product-gap/PRODUCT_COMPLETION_ROADMAP.md).
+> **Theo dõi tiếp:** [Master Roadmap §12.9/§18](../../planning/ROADMAP_NUMEROLOGY_A_TO_Z.md) và [Product Roadmap](../product-gap/PRODUCT_COMPLETION_ROADMAP.md).
 
 Các nhãn dưới đây **không cộng** thành một phần trăm “toàn bộ Thần số học đã hoàn thành”:
 

@@ -8,7 +8,7 @@ const root = fileURLToPath(new URL('../../', import.meta.url));
 const matrix = JSON.parse(readFileSync(`${root}docs/knowledge/research/sprint-9-adjudication-matrix.json`, 'utf8'));
 const audit = JSON.parse(readFileSync(`${root}docs/knowledge/SOURCE_IDENTITY_AUDIT_39.json`, 'utf8'));
 const rules = JSON.parse(readFileSync(`${root}backend/src/data/rulesV2.json`, 'utf8'));
-const report = readFileSync(`${root}docs/knowledge/SPRINT_9_ADJUDICATION_MATRIX.md`, 'utf8');
+const report = readFileSync(`${root}docs/archive/sprints/tuvi/sprint-9/SPRINT_9_ADJUDICATION_MATRIX.md`, 'utf8');
 const allowed = new Set([
     'DOCUMENTED_SOURCE_VARIANT',
     'HISTORICAL_NAME_NOT_ESTABLISHED',

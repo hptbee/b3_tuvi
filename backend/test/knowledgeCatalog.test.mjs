@@ -9,7 +9,7 @@ import pilot from '../../docs/knowledge/pilotClaims.json' with { type: 'json' };
 import passagesDoc from '../../docs/knowledge/combination-passages.json' with { type: 'json' };
 
 const masterPlan = readFileSync(
-    fileURLToPath(new URL('../../docs/AUTODEV_MASTER_PLAN.md', import.meta.url)),
+    fileURLToPath(new URL('../../docs/archive/planning/AUTODEV_MASTER_PLAN.md', import.meta.url)),
     'utf8'
 );
 assert.match(masterPlan, /M0-01\s+Master Plan\s+completed/);
@@ -21,7 +21,7 @@ assert.match(masterPlan, /Không ấn bản in nào `authenticated: true`/);
 assert.match(masterPlan, /Không cách nào `formulaCheckedAgainstSource: true`/);
 
 const masterPlanV2 = readFileSync(
-    fileURLToPath(new URL('../../docs/AUTODEV_MASTER_PLAN_V2.md', import.meta.url)),
+    fileURLToPath(new URL('../../docs/planning/AUTODEV_MASTER_PLAN_V2.md', import.meta.url)),
     'utf8'
 );
 assert.match(masterPlanV2, /\| AUTH-01 \| — \| `EXCLUDED_BY_PRODUCT_SCOPE` \|/);

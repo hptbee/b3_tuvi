@@ -13,7 +13,7 @@
 4. **Release approval outstanding:** owner sign-off, scope/content limitations, agreed browser support, production monitoring and runbook are not confirmed.
 5. **Source verification independent:** book/edition and expert verification remain false. This does not turn code CI red or justify changing profile 1.2.0.
 
-The remaining tables and local probe measurements below are **historical evidence from the earlier stacked hardening branch**, not proof of staging/production at `ed31ad1`. Current task IDs: [master roadmap §15/§18](../ROADMAP_NUMEROLOGY_A_TO_Z.md) `NUM-R001–005`.
+The remaining tables and local probe measurements below are **historical evidence from the earlier stacked hardening branch**, not proof of staging/production at `ed31ad1`. Current task IDs: [master roadmap §15/§18](../planning/ROADMAP_NUMEROLOGY_A_TO_Z.md) `NUM-R001–005`.
 
 ---
 

@@ -58,8 +58,8 @@ Tasks: do not conflate `(a) luminaries in the target palace` and `(b) luminaries
 
 - `docs/knowledge/passages/nhat-nguyet-tinh-minh/span.txt`
 - `docs/knowledge/passages/nhat-nguyet-dong-lam/span.txt`
-- `docs/knowledge/SPRINT_9D_SEVEN_CASE_ADJUDICATION.md`
-- `docs/knowledge/SPRINT_9_ADJUDICATION_MATRIX.md`
+- `docs/archive/sprints/tuvi/sprint-9/SPRINT_9D_SEVEN_CASE_ADJUDICATION.md`
+- `docs/archive/sprints/tuvi/sprint-9/SPRINT_9_ADJUDICATION_MATRIX.md`
 - `docs/knowledge/sources.json`
 - `backend/src/data/rulesV2.json` (**READ ONLY** in research PR)
 - source binding, review replay and decision integrity modules.

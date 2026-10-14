@@ -1,0 +1,24 @@
+# Canonical sources of truth
+
+Last rebaseline: 2026-10-14 (documentation architecture cleanup).
+
+| Concern | Authoritative location | Notes |
+| --- | --- | --- |
+| Tử Vi AutoDev task tracking | [planning/AUTODEV_MASTER_PLAN_V2.md](../../planning/AUTODEV_MASTER_PLAN_V2.md) | V1 plan is historical only |
+| Tử Vi roadmap (Sprints 9–14) | [planning/ROADMAP_SPRINT_9_14.md](../../planning/ROADMAP_SPRINT_9_14.md) | § coordinates with Master Plan V2 |
+| Thần Số Học roadmap | [planning/ROADMAP_NUMEROLOGY_A_TO_Z.md](../../planning/ROADMAP_NUMEROLOGY_A_TO_Z.md) | |
+| System architecture | [architecture/ARCHITECTURAL_OVERVIEW.md](../../architecture/ARCHITECTURAL_OVERVIEW.md) | |
+| Normalized chart model | [architecture/CHART_DOMAIN_MODEL.md](../../architecture/CHART_DOMAIN_MODEL.md) | |
+| Agent / contributor rules | [engineering/AGENT_ENGINEERING.md](../AGENT_ENGINEERING.md), [engineering/CONTRIBUTING.md](../CONTRIBUTING.md) | |
+| Backend test fixtures | [engineering/TEST_FIXTURES.md](../TEST_FIXTURES.md) | Enforced by `fixtureClasses.test.mjs` |
+| Tử Vi domain terms | [tuvi/DOMAIN_KNOWLEDGE.md](../../tuvi/DOMAIN_KNOWLEDGE.md) | |
+| Source / provenance policy | [tuvi/KNOWLEDGE_CLAIM_MODEL.md](../../tuvi/KNOWLEDGE_CLAIM_MODEL.md), [knowledge/provenance-contract.json](../../knowledge/provenance-contract.json) | |
+| Runtime knowledge registry | [knowledge/sources.json](../../knowledge/sources.json), [knowledge/combination-source-matrix.json](../../knowledge/combination-source-matrix.json) | Imported by backend |
+| Formula V1 (executable) | `backend/src/engine/formulaV1.mjs`, `backend/src/data/formulaV1.mjs` | Human spec: [archive sprint 9 spec](../../archive/sprints/tuvi/sprint-9/SPRINT_9_FINAL_FORMULA_SPEC.md) |
+| Rule engine v2 snapshot | `backend/src/data/rulesV2.json` | Research/historical; not runtime matcher |
+| Condition engine (Sprint 10) | `backend/src/engine/conditionEval.js` | Report: [SPRINT_10_FINAL_REPORT.md](../../archive/sprints/tuvi/sprint-10/SPRINT_10_FINAL_REPORT.md) |
+| Thần Số Học formulas | [numerology/FORMULA_SPEC.md](../../numerology/FORMULA_SPEC.md) | |
+| Thần Số Học API | [numerology/API_CONTRACT.md](../../numerology/API_CONTRACT.md) | |
+| Thần Số Học release gates | [numerology/RELEASE_READINESS.md](../../numerology/RELEASE_READINESS.md) | |
+| CI / quality baselines | [engineering/quality/](../quality/) | |
+| Documentation index | [README.md](../../README.md) | This file’s parent index |

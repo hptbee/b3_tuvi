@@ -1,6 +1,6 @@
 {
   "status": "independent_tables",
-  "notes": "Bảng kỳ vọng không sinh từ calculateTuVi. Nguồn ghi trong từng mục. Dị bản xem docs/TU_VI_SCHOOL_VARIANTS.md.",
+  "notes": "Bảng kỳ vọng không sinh từ calculateTuVi. Nguồn ghi trong từng mục. Dị bản xem docs/tuvi/TU_VI_SCHOOL_VARIANTS.md.",
   "vanTinhByCan": {
     "source": "Bảng an sao theo thiên can: Kabala Huyền Học – Cách lập lá số; Xemsomenh; Phong Thủy Thanh Hóa.",
     "positions": { "0": 6, "1": 7, "2": 9, "3": 10, "4": 9, "5": 10, "6": 12, "7": 1, "8": 3, "9": 4 },

@@ -681,8 +681,8 @@ function testCounterexamples() {
 function testCoverageClosed() {
     assert.strictEqual(covered.size, 63, [...FORMULAS.map((item) => item.combination)].filter((name) => !covered.has(name)).join(','));
     const inventory = formulaInventory();
-    const report = readFileSync(fileURLToPath(new URL('../../docs/knowledge/SPRINT_9_FINAL_IMPLEMENTATION_REPORT.md', import.meta.url)), 'utf8');
-    const spec = readFileSync(fileURLToPath(new URL('../../docs/knowledge/SPRINT_9_FINAL_FORMULA_SPEC.md', import.meta.url)), 'utf8');
+    const report = readFileSync(fileURLToPath(new URL('../../docs/archive/sprints/tuvi/sprint-9/SPRINT_9_FINAL_IMPLEMENTATION_REPORT.md', import.meta.url)), 'utf8');
+    const spec = readFileSync(fileURLToPath(new URL('../../docs/archive/sprints/tuvi/sprint-9/SPRINT_9_FINAL_FORMULA_SPEC.md', import.meta.url)), 'utf8');
     const line = `COUNTS active=${inventory.byState.ACTIVE} variant=${inventory.byState.VARIANT} internal_only=${inventory.byState.INTERNAL_ONLY} disabled=${inventory.byState.DISABLED} sum=${inventory.stateSum} public_default=${inventory.publicEligible} executable=${inventory.executable} variant_implementations=${inventory.variantImplementations} unimplemented_supported=${inventory.unimplementedSupported} rules_v2_rows=58 missing_rules=${inventory.missingRules.length}`;
     assert.ok(report.includes(line), line);
     assert.strictEqual((report.match(/^\| \d+ \|/gm) || []).length, 63);

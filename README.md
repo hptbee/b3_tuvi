@@ -2,9 +2,9 @@
 
 Ứng dụng web giúp người dùng khám phá lá số Tử Vi và tìm hiểu các góc nhìn về bản thân. Giao diện theo hướng **landing page**, với menu ngang, phần giới thiệu, hai khu vực Tử Vi/Thần Số Học, form lập lá số và FAQ.
 
-**Tử Vi đã có công cụ tính. Thần Số Học đã có MVP thử nghiệm tính 7 chỉ số từ ngày sinh/họ tên, kèm cách tính.** Chưa có lời luận đã đối chiếu nguồn hoặc các chức năng V1 nâng cao. Xem [trạng thái triển khai](docs/numerology/IMPLEMENTATION_STATUS.md) và [Roadmap Thần Số Học từ A–Z](docs/ROADMAP_NUMEROLOGY_A_TO_Z.md).
+**Tử Vi đã có công cụ tính. Thần Số Học đã có MVP thử nghiệm tính 7 chỉ số từ ngày sinh/họ tên, kèm cách tính.** Chưa có lời luận đã đối chiếu nguồn hoặc các chức năng V1 nâng cao. Xem [trạng thái triển khai](docs/numerology/IMPLEMENTATION_STATUS.md) và [Roadmap Thần Số Học từ A–Z](docs/planning/ROADMAP_NUMEROLOGY_A_TO_Z.md).
 
-> Dành cho developers/agents: đọc [AI Context](docs/AI_CONTEXT.md), [Agent Engineering](docs/AGENT_ENGINEERING.md) và [Contributing](docs/CONTRIBUTING.md). Trước khi sửa công thức Tử Vi, đọc thêm [Domain Knowledge](docs/DOMAIN_KNOWLEDGE.md). Test phần mềm đạt không đồng nghĩa công thức hoặc lời luận đã được đối chiếu nguồn.
+> Dành cho developers/agents: bắt đầu tại [Documentation index](docs/README.md), rồi [AI Context](docs/engineering/AI_CONTEXT.md), [Agent Engineering](docs/engineering/AGENT_ENGINEERING.md) và [Contributing](docs/engineering/CONTRIBUTING.md). Trước khi sửa công thức Tử Vi, đọc thêm [Domain Knowledge](docs/tuvi/DOMAIN_KNOWLEDGE.md). Test phần mềm đạt không đồng nghĩa công thức hoặc lời luận đã được đối chiếu nguồn.
 
 ## Trạng thái tính năng
 
@@ -164,7 +164,7 @@ Bootstrap cài nguồn B3 được pin và dùng installer chính thức để t
 
 Kiểm tra hồi quy installer: `bash scripts/test-b3-cloud.sh` (có kiểm tra clone mới, cần mạng). Xem thêm [hướng dẫn Codex cloud](.cursor/README.md#codex-cloud--linux).
 
-Codex cloud không đăng ký B3 vào catalog chỉ bằng việc tạo liên kết trên filesystem. Dùng tin nhắn thường: **`B3: autodev status`**, **`B3: plan <yêu cầu>`**, **`B3: autodev <yêu cầu hoặc plan>`**. `AGENTS.md` hướng dẫn agent đọc và thực hiện thủ tục B3 gốc; không cần menu `$skill` hoặc slash command. Xem [hướng dẫn B3 trên Codex cloud](docs/CODEX_CLOUD_B3.md). Không coi restart/Publish là bằng chứng native discovery hoạt động.
+Codex cloud không đăng ký B3 vào catalog chỉ bằng việc tạo liên kết trên filesystem. Dùng tin nhắn thường: **`B3: autodev status`**, **`B3: plan <yêu cầu>`**, **`B3: autodev <yêu cầu hoặc plan>`**. `AGENTS.md` hướng dẫn agent đọc và thực hiện thủ tục B3 gốc; không cần menu `$skill` hoặc slash command. Xem [hướng dẫn B3 trên Codex cloud](docs/engineering/CODEX_CLOUD_B3.md). Không coi restart/Publish là bằng chứng native discovery hoạt động.
 
 ## API hiện có
 
@@ -281,13 +281,13 @@ Tử Vi và Thần Số Học là các hệ thống diễn giải mang tính tha
 | Tài liệu | Phạm vi |
 |---|---|
 | [Trạng thái Thần Số Học](docs/numerology/IMPLEMENTATION_STATUS.md) | Năng lực MVP hiện có, test evidence và backlog kế tiếp |
-| [Roadmap Thần Số Học A–Z](docs/ROADMAP_NUMEROLOGY_A_TO_Z.md) | Kế hoạch mới: công thức, chuẩn hóa tên, engine, API, nội dung, UX, tests và phát hành |
-| [Roadmap Tử Vi Sprint 9–14](docs/ROADMAP_SPRINT_9_14.md) | Tri thức Tử Vi, đối chiếu nguồn, vận hạn và AI có chứng cứ |
-| [Autodev Master Plan V2](docs/AUTODEV_MASTER_PLAN_V2.md) | Kế hoạch/điều phối hiện có; không thay bằng roadmap Thần Số Học |
-| [AI Context](docs/AI_CONTEXT.md) | Map file và hướng dẫn developers/agents |
-| [Architectural Overview](docs/ARCHITECTURAL_OVERVIEW.md) | Luồng dữ liệu và kiến trúc Tử Vi |
-| [Contributing](docs/CONTRIBUTING.md) | Quy tắc thay đổi mã nguồn, domain và dữ liệu |
-| [Domain Knowledge](docs/DOMAIN_KNOWLEDGE.md) | Thuật ngữ và quy tắc Tử Vi |
-| [Remaining Coverage Gaps](docs/quality/REMAINING_COVERAGE_GAPS.md) | Gaps của báo cáo Sprint 8; cần đối chiếu với tests mới |
+| [Roadmap Thần Số Học A–Z](docs/planning/ROADMAP_NUMEROLOGY_A_TO_Z.md) | Kế hoạch mới: công thức, chuẩn hóa tên, engine, API, nội dung, UX, tests và phát hành |
+| [Roadmap Tử Vi Sprint 9–14](docs/planning/ROADMAP_SPRINT_9_14.md) | Tri thức Tử Vi, đối chiếu nguồn, vận hạn và AI có chứng cứ |
+| [Autodev Master Plan V2](docs/planning/AUTODEV_MASTER_PLAN_V2.md) | Kế hoạch/điều phối hiện có; không thay bằng roadmap Thần Số Học |
+| [AI Context](docs/engineering/AI_CONTEXT.md) | Map file và hướng dẫn developers/agents |
+| [Architectural Overview](docs/architecture/ARCHITECTURAL_OVERVIEW.md) | Luồng dữ liệu và kiến trúc Tử Vi |
+| [Contributing](docs/engineering/CONTRIBUTING.md) | Quy tắc thay đổi mã nguồn, domain và dữ liệu |
+| [Domain Knowledge](docs/tuvi/DOMAIN_KNOWLEDGE.md) | Thuật ngữ và quy tắc Tử Vi |
+| [Remaining Coverage Gaps](docs/engineering/quality/REMAINING_COVERAGE_GAPS.md) | Gaps của báo cáo Sprint 8; cần đối chiếu với tests mới |
 
 Roadmap giữ backlog A–Z và snapshot triển khai thực tế. MVP thử nghiệm đã có profile/spec và fixture tính tay độc lập; nguồn bên ngoài, nội dung diễn giải, V1 nâng cao và release gates còn riêng biệt, chưa được đánh dấu hoàn thành.

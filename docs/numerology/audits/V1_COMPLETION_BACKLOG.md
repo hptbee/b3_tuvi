@@ -47,7 +47,7 @@ Không có mục P0. Không thấy phép tính lệch spec 1.2.0, không thấy 
 ### NUM-AUD-004 — Tài liệu lệch runtime
 
 - Mức: P1 vì có câu nói chưa có endpoint nội dung và `contentVersion=null` trong khi runtime đã có catalog.
-- File: `docs/numerology/IMPLEMENTATION_STATUS.md`, `docs/ROADMAP_NUMEROLOGY_A_TO_Z.md` §17, `docs/numerology/DECISIONS.md` D11, `docs/numerology/SOURCE_REGISTRY.md`.
+- File: `docs/numerology/IMPLEMENTATION_STATUS.md`, `docs/planning/ROADMAP_NUMEROLOGY_A_TO_Z.md` §17, `docs/numerology/DECISIONS.md` D11, `docs/numerology/SOURCE_REGISTRY.md`.
 - Bằng chứng: `GET /api/numerology/meanings/:metricId/:value`, catalog 102 mục, profile 1.2.0. Đợt này sửa các câu đó.
 - Nguyên nhân: snapshot 13/10 được viết tiếp nhưng còn câu của giai đoạn trước.
 - Ảnh hưởng: người đọc có thể tưởng lời luận chưa tồn tại, hoặc tưởng nguồn đã xác minh.

@@ -4,7 +4,7 @@
 > **Current:** `V1_FEATURE_COMPLETE` cho máy tính và báo cáo nhiều chương; `FORMULA_PROFILE_CONSISTENT` với profile `pythagorean-vn-v1` `1.2.0`; content catalog `1.2.0`. **Không** `FORMULA_SOURCE_VERIFIED`, **không** `PRODUCTION_READY`.
 > **Merged:** PR #18 và #20–#24. **CI:** [main backend/frontend/e2e PASS](https://github.com/hptbee/b3_tuvi/actions/runs/38438302551). Không triển khai staging hoặc production trong các PR này.
 
-Tài liệu này ghi **runtime hiện hành**, còn các commit ban đầu và phép đo ở SHA cũ là *historical evidence*. Roadmap cập nhật tại [ROADMAP_NUMEROLOGY_A_TO_Z](../ROADMAP_NUMEROLOGY_A_TO_Z.md) §12.9, §15–18.
+Tài liệu này ghi **runtime hiện hành**, còn các commit ban đầu và phép đo ở SHA cũ là *historical evidence*. Roadmap cập nhật tại [ROADMAP_NUMEROLOGY_A_TO_Z](../planning/ROADMAP_NUMEROLOGY_A_TO_Z.md) §12.9, §15–18.
 
 ## Năng lực đang hoạt động
 
@@ -77,7 +77,7 @@ T005 thêm tài liệu này và integrated E2E; tìm commit bằng lịch sử G
 | UX K4 | Progressive interpretation, chapter links, PDF page breaks | `FOLLOW-UP` |
 | Release R0 | Live staging, shared proxy limiter, rollback rehearsal, approval | `NOT READY` |
 
-Xem [PRODUCT_COMPLETION_ROADMAP](product-gap/PRODUCT_COMPLETION_ROADMAP.md) và [roadmap chính §18](../ROADMAP_NUMEROLOGY_A_TO_Z.md) cho `NUM-K001–009` / `NUM-R001–005`. Những giai đoạn khác như AI narration, alternate Decoz profiles, compatibility, baby-name recommendations hoặc user history không là release scope hiện tại.
+Xem [PRODUCT_COMPLETION_ROADMAP](product-gap/PRODUCT_COMPLETION_ROADMAP.md) và [roadmap chính §18](../planning/ROADMAP_NUMEROLOGY_A_TO_Z.md) cho `NUM-K001–009` / `NUM-R001–005`. Những giai đoạn khác như AI narration, alternate Decoz profiles, compatibility, baby-name recommendations hoặc user history không là release scope hiện tại.
 
 **Kết luận:** Không cần làm lại N0–N4 hoặc mở lại product gap audit; nên dùng một AutoDev scoped cho Knowledge Expansion nếu muốn tiến về nội dung sâu hơn. Hoặc đi track Release Validation riêng khi muốn phát hành công khai. Không auto merge/deploy.
 
