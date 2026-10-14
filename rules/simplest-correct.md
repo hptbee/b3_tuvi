@@ -20,4 +20,4 @@ Skip this guideline only with a **named requirement** (scale, team boundary, con
 
 Method: `.cursor/skills/architecture/simplest-correct/SKILL.md`.
 
-Hard rules (verification honesty, safety) still win (`docs/precedence.md`).
+Hard rules (verification honesty, safety) still win (`{B3_HOME}/docs/precedence.md` in the B3 system repository). See [rules/README.md](README.md).

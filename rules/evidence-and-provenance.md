@@ -20,4 +20,4 @@ Hard rule: do not present personal preference or personal experience as universa
 
 Hard rule: do not copy large amounts of external skill or prompt content verbatim. Research, adapt, personalize, verify, then record provenance under `research/`.
 
-Strong guideline: when an external pattern is adopted or rejected, record source, pattern, what changed, and why. See `docs/research-methodology.md` and `research/`.
+Strong guideline: when an external pattern is adopted or rejected, record source, pattern, what changed, and why. See `{B3_HOME}/docs/research-methodology.md` in the B3 system repository (not this product’s `docs/`), and product-local `research/` when present. See [rules/README.md](README.md).

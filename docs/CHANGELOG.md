@@ -8,13 +8,12 @@ Tất cả các thay đổi đáng chú ý của dự án **Tử Vi Việt Nam (
 
 ### Thêm mới (Added)
 
-- Documentation architecture: [docs/README.md](README.md) navigation index, [DOCUMENTATION_POLICY.md](DOCUMENTATION_POLICY.md), canonical map and migration manifest under `docs/engineering/meta/`, and `scripts/check-doc-links.mjs` (CI `docs` job).
+- Documentation architecture: [docs/README.md](README.md) navigation index, [DOCUMENTATION_POLICY.md](DOCUMENTATION_POLICY.md), canonical map and migration manifest under `docs/engineering/meta/`, [DOC_LINK_CHECKER.md](engineering/DOC_LINK_CHECKER.md), and `scripts/check-doc-links.mjs` + regression test (CI `docs` job).
 
 ### Thay đổi (Changed)
 
 - Reorganized human-readable docs into `planning/`, `architecture/`, `engineering/`, `tuvi/`, and `archive/`; runtime knowledge JSON and decision trees remain under `docs/knowledge/`.
-
-### Thêm mới (Added)
+- Root README and numerology roadmap/status reconciled with main after PR #31 (chaptered report, 154 readings, five formula-only advanced indicators).
 - Model lá số chuẩn hóa và quan hệ cung (P1.1): `normalizedChart` trên API lập lá số, không đổi `tuviInfo`.
 - Rule engine v2 cho 15 cách `matching_ok`, và các cách provisional có công thức vị trí, kể cả cung Phu Thê, Tật Ách, Tài Bạch, Thân và cờ Tuần/Triệt. Cách siết chặt hơn matcher cũ vẫn ghi `provisional`. Lưỡng Trùng Thiên Mã và Cát Xứ Tàng Hung chuyển sang `disabled`.
 - Backend chuyển từ MongoDB/Mongoose sang SQLite (`node:sqlite`, file `backend/data/tuvi.sqlite`). Bỏ `docker-compose.yml` và dependency `mongoose`.

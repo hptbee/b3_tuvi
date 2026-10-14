@@ -43,7 +43,7 @@ docs/
 | 6 | Path-sensitive list | [PATH_SENSITIVE_FILES.md](./PATH_SENSITIVE_FILES.md) |
 | 7 | Link validation | `scripts/check-doc-links.mjs` (CI `docs` job) |
 | 8 | Tests | Backend/frontend CI commands (see verification log in PR) |
-| 9 | Open issues | `rules/*.md` pointers to missing `docs/precedence.md` / `docs/research-methodology.md` (pre-existing; outside doc scan roots) |
+| 9 | Open issues | Portable `rules/*.md` now point at `{B3_HOME}/docs/precedence.md` and `{B3_HOME}/docs/research-methodology.md` (B3 system repo); see `rules/README.md` |
 | 10 | Maintenance rules | [DOCUMENTATION_POLICY.md](../../DOCUMENTATION_POLICY.md) |
 | 11 | PR | Draft PR on `cursor/docs-architecture-cleanup-69e0` |
 

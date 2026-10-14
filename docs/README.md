@@ -80,7 +80,8 @@ Do not create a competing “Master Plan V3”. Completed sprint **reports** liv
 Run from repository root:
 
 ```bash
-node scripts/check-doc-links.mjs
+npm run docs:links
+npm run docs:links:test
 ```
 
-CI runs the same check on every push and pull request.
+Details: [DOC_LINK_CHECKER.md](engineering/DOC_LINK_CHECKER.md). CI runs tests + link scan on every push and pull request.

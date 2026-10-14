@@ -2,7 +2,7 @@
 
 Ứng dụng web giúp người dùng khám phá lá số Tử Vi và tìm hiểu các góc nhìn về bản thân. Giao diện theo hướng **landing page**, với menu ngang, phần giới thiệu, hai khu vực Tử Vi/Thần Số Học, form lập lá số và FAQ.
 
-**Tử Vi đã có công cụ tính. Thần Số Học đã có MVP thử nghiệm tính 7 chỉ số từ ngày sinh/họ tên, kèm cách tính.** Chưa có lời luận đã đối chiếu nguồn hoặc các chức năng V1 nâng cao. Xem [trạng thái triển khai](docs/numerology/IMPLEMENTATION_STATUS.md) và [Roadmap Thần Số Học từ A–Z](docs/planning/ROADMAP_NUMEROLOGY_A_TO_Z.md).
+**Tử Vi đã có công cụ tính.** **Thần Số Học** có báo cáo nhiều chương trên `/than-so-hoc`: bảy chỉ số cốt lõi, lưới ngày sinh/tên/ghép, chu kỳ 9 năm/12 tháng, đỉnh/thử thách, **154 bài diễn giải** (catalog `1.2.0`), xuất/nhập JSON (tính lại trên server), in A4, và **năm nhóm chỉ số nâng cao chỉ công thức** (Hidden Passion, Karmic Lessons, Balance, Rational Thought, Bridge — PR #31): hiển thị số và trace, **lời luận withheld**. Quy ước `pythagorean-vn-v1` `1.2.0`; chưa `FORMULA_SOURCE_VERIFIED` hay phát hành production. Xem [trạng thái triển khai](docs/numerology/IMPLEMENTATION_STATUS.md) và [Roadmap Thần Số Học](docs/planning/ROADMAP_NUMEROLOGY_A_TO_Z.md).
 
 > Dành cho developers/agents: bắt đầu tại [Documentation index](docs/README.md), rồi [AI Context](docs/engineering/AI_CONTEXT.md), [Agent Engineering](docs/engineering/AGENT_ENGINEERING.md) và [Contributing](docs/engineering/CONTRIBUTING.md). Trước khi sửa công thức Tử Vi, đọc thêm [Domain Knowledge](docs/tuvi/DOMAIN_KNOWLEDGE.md). Test phần mềm đạt không đồng nghĩa công thức hoặc lời luận đã được đối chiếu nguồn.
 
@@ -16,7 +16,7 @@
 | Cách cục | Đối chiếu catalog JSON; hiển thị trạng thái và giới hạn | Khớp điều kiện runtime không tự chứng minh thành/phá cách theo nguồn |
 | Phân tích có cấu trúc | Cung, sao, quan hệ, rule và trạng thái chứng cứ | Chưa có lời luận tự do đã duyệt; hỏi đáp trả dữ liệu cấu trúc |
 | In / xuất JSON | In lá số, tải `la-so.json` | Không kèm luận giải đã duyệt |
-| Thần Số Học | Landing tím, form ngày sinh/tên tùy chọn, 7 chỉ số, chuẩn hóa tên và từng bước tính | Profile thử nghiệm; lời luận withheld; chưa có biểu đồ, chu kỳ, đỉnh cao/thử thách hoặc export |
+| Thần Số Học | Báo cáo nhiều chương: 7 chỉ số, lưới/tên/ghép, chu kỳ, đỉnh/thử thách, 154 bài đọc được, 5 chỉ số nâng cao (công thức), JSON import/export, in A4 | Catalog thử nghiệm; Master 33 / Challenge 0 / 5 chỉ số nâng cao: lời luận withheld; nguồn sách chưa xác minh; chưa staging/production |
 | Nội dung khác | Các route Kiến thức, Tài liệu, Luận giải, Liên hệ | Nội dung vẫn còn sơ khai/placeholder |
 
 ### Luồng sử dụng
@@ -31,10 +31,10 @@ Form đang sửa và dữ liệu lá số đã lập được tách riêng. Thay
 ### Luồng Thần Số Học
 
 1. Chọn **Thần Số Học** trên menu, nhập ngày sinh dương lịch; họ tên khai sinh không bắt buộc. Không cần giờ sinh hoặc giới tính.
-2. Chọn **Xem kết quả**: Đường đời, Ngày sinh, Thái độ; thêm tên để tính Biểu đạt, Linh hồn, Nhân cách và Trưởng thành.
-3. Mở **Cách tính** hoặc phần chuẩn hóa tên để xem phép cộng/rút gọn. Sửa form giữ kết quả của dữ liệu đã gửi đến khi tính lại; thử lại dùng input của request lỗi.
+2. Chọn **Xem kết quả** để mở báo cáo nhiều chương: tổng quan, bảy chỉ số (kèm bài đọc khi đủ điều kiện), lưới ngày sinh, biểu đồ tên/ghép, kim tự tháp đỉnh/thử thách, chu kỳ 9 năm/12 tháng, mối nối và (khi có tên) năm chỉ số nâng cao **chỉ hiển thị phép tính**, không kèm bài luận mới.
+3. Mở **Cách tính**, xuất/nhập JSON hoặc in A4. Họ tên chỉ vào JSON/bản in khi chọn. Sửa form giữ kết quả đã gửi đến khi tính lại.
 
-Quy ước `pythagorean-vn-v1` phiên bản `1.0.0`: Đường đời cộng tất cả chữ số ngày sinh; giữ 11/22/33 theo từng chỉ số, Thái độ rút gọn về 1–9. Tên tiếng Việt bỏ dấu, Đ → D, Y là phụ âm. Các ký tự ngoài bảng hỗ trợ bị từ chối; tên thiếu nguyên âm/phụ âm có trạng thái chưa đủ dữ liệu. Đây là quy ước sản phẩm thử nghiệm (`product_specification_only`), chưa phải công thức/nội dung được chuyên gia xác minh.
+Quy ước `pythagorean-vn-v1` **`1.2.0`**: Đường đời cộng tất cả chữ số ngày sinh; giữ 11/22/33 theo từng chỉ số (Thái độ về 1–9). Tên tiếng Việt chuẩn hóa theo spec; thiếu tên → chỉ số tên và chỉ số nâng cao unavailable. Catalog **`1.2.0`**: 154 bài (102 core/chu kỳ + 44 đỉnh + 8 thử thách); **33**, **Challenge 0** và lời luận cho chỉ số nâng cao **withheld**. `product_specification_only` — chưa đối chiếu ấn bản sách/chuyên gia.
 
 ### Route giao diện
 

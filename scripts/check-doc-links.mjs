@@ -1,13 +1,24 @@
 #!/usr/bin/env node
 /**
  * Deterministic Markdown link checker for repository documentation.
- * Validates relative file links and selected root entrypoints.
+ *
+ * Supported:
+ * - Markdown links: [text](relative-path)
+ * - Angle autolinks: <docs/...>
+ * - In rules/*.md only: backtick paths `docs/...` (product repo paths)
+ *
+ * Skipped (not validated here):
+ * - http(s), mailto, fragment-only (#anchor)
+ * - B3_HOME placeholders: {B3_HOME}/docs/...
+ * - .cursor command links into B3_HOME (../../review-loop/, ../../adapters/)
+ *
+ * See docs/engineering/DOC_LINK_CHECKER.md
  */
 import { readFileSync, existsSync, statSync, readdirSync } from 'fs';
 import { join, dirname, resolve, normalize } from 'path';
 import { fileURLToPath } from 'url';
 
-const repoRoot = resolve(fileURLToPath(new URL('..', import.meta.url)));
+const defaultRepoRoot = resolve(fileURLToPath(new URL('..', import.meta.url)));
 
 const SKIP_DIRS = new Set([
     'node_modules',
@@ -19,33 +30,34 @@ const SKIP_DIRS = new Set([
     'backend/data'
 ]);
 
-const SCAN_ROOTS = [
+const DEFAULT_SCAN_ROOTS = [
     'docs',
     'README.md',
     'AGENTS.md',
+    'rules',
     '.cursor',
     '.agents'
 ];
 
 const LINK_RE = /!?\[([^\]]*)\]\(([^)]+)\)/g;
 const ANGLE_LINK_RE = /<(docs\/[^>]+)>/g;
+const BACKTICK_DOC_RE = /`(docs\/[^`]+)`/g;
 
-function walkFiles(absPath, out) {
-    if (!existsSync(absPath)) return;
-    const st = statSync(absPath);
-    if (st.isFile()) {
-        if (absPath.endsWith('.md')) out.push(absPath);
-        return;
+export function walkMarkdownFiles(repoRoot, scanRoots) {
+    function walkFiles(absPath, out) {
+        if (!existsSync(absPath)) return;
+        const st = statSync(absPath);
+        if (st.isFile()) {
+            if (absPath.endsWith('.md')) out.push(absPath);
+            return;
+        }
+        for (const name of readdirSync(absPath)) {
+            if (SKIP_DIRS.has(name)) continue;
+            walkFiles(join(absPath, name), out);
+        }
     }
-    for (const name of readdirSync(absPath)) {
-        if (SKIP_DIRS.has(name)) continue;
-        walkFiles(join(absPath, name), out);
-    }
-}
-
-function collectMarkdownFiles() {
     const files = [];
-    for (const rel of SCAN_ROOTS) {
+    for (const rel of scanRoots) {
         walkFiles(join(repoRoot, rel), files);
     }
     return [...new Set(files)].sort();
@@ -55,9 +67,10 @@ function isExternal(target) {
     return /^(https?:|mailto:|#)/.test(target);
 }
 
-function resolveLink(fromFile, rawTarget) {
+export function resolveDocLink(fromFile, rawTarget, repoRoot) {
     let target = rawTarget.trim();
     if (!target || isExternal(target)) return { skip: true };
+    if (target.startsWith('{B3_HOME}/')) return { skip: true };
     const hashIdx = target.indexOf('#');
     const pathPart = hashIdx >= 0 ? target.slice(0, hashIdx) : target;
     if (!pathPart) return { skip: true };
@@ -70,11 +83,11 @@ function resolveLink(fromFile, rawTarget) {
     return { abs, display: pathPart };
 }
 
-function checkFile(filePath) {
+export function checkMarkdownFile(filePath, repoRoot) {
     const text = readFileSync(filePath, 'utf8');
     const broken = [];
     const check = (raw, kind) => {
-        const resolved = resolveLink(filePath, raw);
+        const resolved = resolveDocLink(filePath, raw, repoRoot);
         if (resolved.skip) return;
         if (!resolved.abs.startsWith(repoRoot)) {
             broken.push({ kind, raw, reason: 'escapes repository root' });
@@ -89,18 +102,37 @@ function checkFile(filePath) {
     while ((m = LINK_RE.exec(text))) check(m[2], 'markdown');
     ANGLE_LINK_RE.lastIndex = 0;
     while ((m = ANGLE_LINK_RE.exec(text))) check(m[1], 'angle');
-    return broken.map((b) => ({ file: filePath.slice(repoRoot.length + 1), ...b }));
-}
-
-const files = collectMarkdownFiles();
-const allBroken = files.flatMap(checkFile);
-
-if (allBroken.length) {
-    console.error(`Documentation link check FAILED (${allBroken.length} broken links)`);
-    for (const row of allBroken) {
-        console.error(`  ${row.file}: [${row.kind}] ${row.raw} — ${row.reason}`);
+    const relFromRoot = filePath.slice(repoRoot.length + 1);
+    if (relFromRoot.startsWith('rules/')) {
+        BACKTICK_DOC_RE.lastIndex = 0;
+        while ((m = BACKTICK_DOC_RE.exec(text))) {
+            if (m[1].startsWith('{B3_HOME}/')) continue;
+            check(m[1], 'backtick');
+        }
     }
-    process.exit(1);
+    return broken.map((b) => ({ file: relFromRoot, ...b }));
 }
 
-console.log(`Documentation link check PASSED (${files.length} markdown files scanned)`);
+export function runDocLinkCheck(options = {}) {
+    const repoRoot = options.repoRoot ?? defaultRepoRoot;
+    const scanRoots = options.scanRoots ?? DEFAULT_SCAN_ROOTS;
+    const files = walkMarkdownFiles(repoRoot, scanRoots);
+    const allBroken = files.flatMap((f) => checkMarkdownFile(f, repoRoot));
+    return { repoRoot, files, allBroken };
+}
+
+function main() {
+    const { files, allBroken } = runDocLinkCheck();
+    if (allBroken.length) {
+        console.error(`Documentation link check FAILED (${allBroken.length} broken links)`);
+        for (const row of allBroken) {
+            console.error(`  ${row.file}: [${row.kind}] ${row.raw} — ${row.reason}`);
+        }
+        process.exit(1);
+    }
+    console.log(`Documentation link check PASSED (${files.length} markdown files scanned)`);
+}
+
+if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1])) {
+    main();
+}

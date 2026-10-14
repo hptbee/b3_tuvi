@@ -1,8 +1,8 @@
 # Thần Số Học — trạng thái triển khai
 
-> **Rebaseline:** 2026-10-14 · baseline `main ed31ad1cae7b2411029cccbe8c87da533a996800`.
-> **Current:** `V1_FEATURE_COMPLETE` cho máy tính và báo cáo nhiều chương; `FORMULA_PROFILE_CONSISTENT` với profile `pythagorean-vn-v1` `1.2.0`; content catalog `1.2.0`. **Không** `FORMULA_SOURCE_VERIFIED`, **không** `PRODUCTION_READY`.
-> **Merged:** PR #18 và #20–#24. **CI:** [main backend/frontend/e2e PASS](https://github.com/hptbee/b3_tuvi/actions/runs/38438302551). Không triển khai staging hoặc production trong các PR này.
+> **Rebaseline:** 2026-10-14 · baseline `main 2d08b2e` (merge [PR #31](https://github.com/hptbee/b3_tuvi/pull/31) — năm chỉ số nâng cao, công thức-only).
+> **Current:** `V1_FEATURE_COMPLETE` cho calculator + báo cáo nhiều chương; `FORMULA_PROFILE_CONSISTENT` với `pythagorean-vn-v1` `1.2.0`; catalog `1.2.0` (154 bài). **Không** `FORMULA_SOURCE_VERIFIED`, **không** `PRODUCTION_READY`.
+> **Merged:** PR #18, #20–#24, **#31**. **CI:** xác nhận trên main sau merge #31 (backend/frontend/e2e). Không triển khai staging/production trong các PR này.
 
 Tài liệu này ghi **runtime hiện hành**, còn các commit ban đầu và phép đo ở SHA cũ là *historical evidence*. Roadmap cập nhật tại [ROADMAP_NUMEROLOGY_A_TO_Z](../planning/ROADMAP_NUMEROLOGY_A_TO_Z.md) §12.9, §15–18.
 
@@ -17,7 +17,7 @@ Tài liệu này ghi **runtime hiện hành**, còn các commit ban đầu và p
 | Trace | Thành phần phép cộng, từng bước rút gọn, master/root; tên chuẩn hóa và giá trị từng chữ |
 | Trạng thái thiếu dữ liệu | Không có tên → bốn chỉ số tên unavailable; thiếu nguyên âm/phụ âm → chỉ nhóm tương ứng unavailable |
 | API | `GET /api/numerology/profiles`, `GET /api/numerology/meanings/:metricId/:value`, `POST /api/numerology/calculate`; typed errors, scoped parser boundary, schema/profile/referenceDate |
-| UI | Báo cáo nhiều chương: overview, core metrics + inline readings, Birth Grid 8 tuyến có nét, Name Chart, Combined Chart 3×3, kim tự tháp P1–P4 có cạnh, challenge age track, 9-year/12-month cycle, phép tính, JSON/import/print và mobile 320/390 |
+| UI | Báo cáo nhiều chương: overview, core metrics + inline readings (154 bài), Birth Grid 8 tuyến, Name/Combined 3×3, pinnacles/challenges, 9-year/12-month cycle, bridges, **5 advanced indicators** (formula + trace, meaning withheld), JSON/import/print, mobile 320/390 |
 | Riêng tư | POST, no-store kể cả lỗi/preflight/429; không thêm persistence/URL/browser storage; không log tên/body/query; họ tên chỉ vào JSON/bản in khi opt-in; import chỉ đưa input sang backend để tính lại |
 
 Frontend chỉ hiển thị kết quả server, không copy công thức. Engine thuần nhận ngày tham chiếu được inject; API chụp ngày một lần theo `Asia/Ho_Chi_Minh`. Không thay công thức Tử Vi, không migration SQLite, không thêm dependency hoặc tài khoản.
@@ -70,7 +70,7 @@ T005 thêm tài liệu này và integrated E2E; tìm commit bằng lịch sử G
 
 | Track | Phạm vi | Trạng thái |
 |---|---|---|
-| Knowledge K0 | Hidden Passion, Karmic Lessons, Balance, Rational Thought, Bridge: source, spec, tie/master/fixture/compatibility | `REQUIRES_SPEC`; chưa có API |
+| Knowledge K0 | Hidden Passion, Karmic Lessons, Balance, Rational Thought, Bridge | **`FORMULA_COMPLETE` / PR #31**: tính trong `POST /calculate`, `indicators` `1.0.0`, `meaningStatus: withheld`; không đổi profile `1.2.0` |
 | Content K1 | Master 33 và Challenge 0 | `WITHHELD`; không fallback 33→6 hoặc 0→9 |
 | Content K2 | Độ sâu 154 bài, grid/arrow/name/combined chart semantics theo trường phái | `PARTIAL`; tiếp tục research/editorial |
 | Synthesis K3 | Quan hệ đa chỉ số có rule registry, không tự gán compatibility score | `NOT IMPLEMENTED` ở mức luận biểu tượng |

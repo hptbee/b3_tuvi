@@ -1,6 +1,6 @@
 # Roadmap Thần Số Học từ A–Z
 
-> **Roadmap:** v2.0 · **Cập nhật:** 2026-10-14 · **Baseline xác nhận:** `main` `ed31ad1cae7b2411029cccbe8c87da533a996800` (PR #20–#24 đã merge).
+> **Roadmap:** v2.1 · **Cập nhật:** 2026-10-14 · **Baseline xác nhận:** `main` `2d08b2e` (PR #20–#24, **#31** knowledge expansion — công thức 5 chỉ số nâng cao).
 > **Runtime:** profile `pythagorean-vn-v1` `1.2.0`, editorial catalog `1.2.0` (102 core/chu kỳ + 44 đỉnh + 8 thử thách = 154 bài), lớp nhãn `arrow-labels-vn-v1`.
 > **Scope:** `V1_FEATURE_COMPLETE` cho calculator + chaptered visual report; **chưa** `FORMULA_SOURCE_VERIFIED`, `RELEASE_GATES_PASSED` hoặc `PRODUCTION_READY`.
 > **CI:** Backend/frontend/e2e PASS tại [main run 38438302551](https://github.com/hptbee/b3_tuvi/actions/runs/38438302551). Không suy từ CI thành staging.
@@ -49,7 +49,7 @@ Thần Số Học giữ phong cách riêng, dự kiến tím/kem; dùng chung lo
 | N4 / P0b | 154 bài biên tập theo metric/giai đoạn, tên tuyến tách khỏi công thức | **PARTIAL CONTENT**: số 33, Challenge 0 và lớp luận sâu còn withheld |
 | N5 | JSON export/import có server recalculation, A4 print, in-process limiter, CI, local probe | **DEV COMPLETE / RELEASE OPEN** |
 | Source | Đối chiếu định nghĩa sách và chuyên gia | **NOT VERIFIED**: Decoz chỉ `source_read`, không sách |
-| N6 | Hidden Passion, Karmic Lessons, Balance, Rational Thought, Bridge; synthesis, alternative profiles, optional AI | **PLANNED / REQUIRES_SPEC** |
+| N6 | Hidden Passion, Karmic Lessons, Balance, Rational Thought, Bridge (+ synthesis, alt profiles, AI) | **FORMULA DONE / PR #31** cho 5 chỉ số (API + UI trace, **interpretation withheld**); synthesis/alt profile/AI vẫn **PLANNED** |
 | Production | Live staging/proxy/rollback/approval | **NOT READY** |
 
 ### 2.3. Ngoài phạm vi
@@ -62,16 +62,16 @@ Không dùng LLM để tính số, suy chữ nguyên âm hoặc quyết định 
 
 ### 3.1. Trạng thái runtime hiện hành
 
-| Hạng mục | Trạng thái tại `main ed31ad1` |
+| Hạng mục | Trạng thái tại `main 2d08b2e` |
 |---|---|
 | Landing/form | `/than-so-hoc`: ngày sinh, tên tùy chọn, ngày xem, validate, async snapshot |
-| Engine | `backend/src/numerology/`: 7 metrics, grids, cycles, pinnacles/challenges, trace |
+| Engine | `backend/src/numerology/`: 7 metrics, grids, cycles, pinnacles/challenges, **`indicators` (5 advanced)**, trace |
 | API | GET `/api/numerology/profiles`, GET `/api/numerology/meanings/:metricId/:value`, POST `/api/numerology/calculate` |
 | Content | Catalog `1.2.0` có 154 bài đã qua review AI độc lập; số 33 và Challenge 0 withheld |
 | UI | Báo cáo nhiều chương, overview, lưới ngày sinh và tên/ghép, tháp đỉnh, age track, 9 năm/12 tháng |
 | Tải/in | Export JSON, import tính lại trên server, in A4; opt-in họ tên, không tự lưu lịch sử |
 | Privacy | `no-store`, safe logging, limiter theo process, không thêm persistence |
-| Tests | CI backend/frontend/e2e trên `ed31ad1` PASS; chưa live staging |
+| Tests | CI backend/frontend/e2e trên main sau #31 PASS; chưa live staging |
 | Sources | Hồ sơ quy ước sản phẩm, 5 trang Decoz đọc được; chưa `edition_verified`/expert signoff |
 
 **Mốc lịch sử:** `8fc5a01` là preview (engine/API chưa có), không còn là baseline để giao task. Xem [IMPLEMENTATION_STATUS](../numerology/IMPLEMENTATION_STATUS.md) và [COMPLETION_MATRIX](../numerology/implementation/COMPLETION_MATRIX.md).
@@ -808,12 +808,12 @@ Các bảng dưới giữ **định nghĩa và acceptance ban đầu** để tru
 ### 12.8. N6 — Mở rộng có điều kiện
 
 - `NUM-060`: profile thứ hai (chẳng hạn Decoz) — NOT STARTED; phải có source/spec/version/UI phân biệt dị bản.
-- `NUM-061`: Hidden Passion, Karmic Lessons, Balance, Rational Thought, Bridge — REQUIRES_SPEC; nghiên cứu nguồn mới và fixture độc lập trước khi đưa API.
+- `NUM-061`: Hidden Passion, Karmic Lessons, Balance, Rational Thought, Bridge — **DONE (formula)** qua PR #31 (`indicators` `1.0.0`, meanings withheld); nội dung/catalog cho các chỉ số này vẫn **OUT OF SCOPE**.
 - `NUM-062`: nội dung sâu hơn, factual versus symbolic synthesis, mũi tên/lưới có tên trường phái — PLANNED.
 - `NUM-063–064`: optional AI narration/evaluator — NOT STARTED, không là điều kiện V1.
 - `NUM-065`: cross-browser và a11y theo browser support — NOT VERIFIED.
 
-### 12.9. Reconciled NUM task ledger — `ed31ad1`
+### 12.9. Reconciled NUM task ledger — `2d08b2e`
 
 | Task ID | Trạng thái | Bằng chứng / việc còn lại |
 |---|---|---|
@@ -835,7 +835,8 @@ Các bảng dưới giữ **định nghĩa và acceptance ban đầu** để tru
 | `NUM-055` | NOT DONE | Live staging deploy/smoke/proxy |
 | `NUM-056` | PARTIAL | Rollback documented, not rehearsed; no release approval |
 | `NUM-057` | IN PROGRESS | Documentation reconciliation in this roadmap PR |
-| `NUM-060–065` | PLANNED / CONDITIONAL | Details §18 and release gates |
+| `NUM-061` | DONE (FORMULA ONLY) | PR #31; `docs/numerology/knowledge-expansion/COMPLETION_REPORT.md` |
+| `NUM-060,062–065` | PLANNED / CONDITIONAL | Alt profile, deep content, AI, cross-browser — §18 |
 
 `DONE` chỉ xét scope triển khai/test; `SOURCE OPEN` và `PRODUCTION_READY=false` vẫn là các chiều độc lập.
 
@@ -953,20 +954,20 @@ Chuỗi ban đầu `NUM-001`–`NUM-017` trên baseline `8fc5a01` đã được 
 
 ## 17. Snapshot hiện hành — 2026-10-14
 
-**Git:** main `ed31ad1`, merged PR #20 (audit), #21 (content 1.1), #22 (export/import/print), #23 (hardening), #24 (product audit + visual report). Baseline gốc 2026-10-13 `f709e42` là historical. CI main [38438302551](https://github.com/hptbee/b3_tuvi/actions/runs/38438302551) thành công backend/frontend/e2e.
+**Git:** main `2d08b2e`, merged PR #20–#24 và **#31** (5 advanced indicators, formula-only). Baseline `ed31ad1` / `f709e42` là historical. CI main sau #31: backend/frontend/e2e (xác nhận trên merge commit).
 
 **User experience:** form → fact-only overview → 7 core numbers → 3×3 Birth Grid với 8 tuyến → 3×3 Name + dual-source combined chart → pyramid P1–P4 → challenge age track → personal-cycle 9-year/12-month chooser → formula-backed relationships → JSON import/export/A4 print. Trên mobile 320/390, các giai đoạn và hình đã được kiểm bằng screenshot của PR #24.
 
 **Rules:** `pythagorean-vn-v1` `1.2.0` không đổi từ audit; all-date-digits Life Path, Y là phụ âm, thành phần đỉnh rút master tắt. Ví dụ Nguyễn Văn An, 15/06/1990: Đường đời 4; Biểu đạt 3; Nhân cách 11; đỉnh 3/7/1/7; thử thách 0/5/5/5. Catalog `1.2.0`: 102 bài core/chu kỳ, 44 đỉnh, 8 thử thách. Challenge 0 và 33 vẫn không có lời; `expertVerified` và `bookVerified` chưa đạt.
 
-**Maturity:** V1 report feature-complete trong scope hiện hữu; không có năm chỉ số P2; không có nguồn sách xác minh; không staging hay rollback thực tế. Limiter chỉ in-process.
+**Maturity:** V1 report feature-complete; **năm chỉ số nâng cao có công thức** (PR #31) nhưng **không có bài luận mới**; không nguồn sách xác minh; không staging/rollback thực tế. Limiter in-process.
 
 ### Những khoảng trống sau merge — thứ tự đề xuất
 
 | Thứ tự | Workstream | Acceptance gate | Trạng thái |
 |---|---|---|---|
-| K0 | Research + công thức 5 indicators (Hidden Passion, Karmic Lessons, Balance, Rational Thought, Bridge) | Nguồn công thức, variant matrix, spec các trường hợp tie/master, ít nhất 3 fixture độc lập mỗi indicator | NEXT / `REQUIRES_SPEC` |
-| K1 | 33 và Challenge 0 | Dossier source-specific, không đổi số/fallback, editorial decision độc lập | NEXT / `SOURCE_GAP` |
+| K0 | 5 indicators (Hidden Passion, Karmic Lessons, Balance, Rational Thought, Bridge) | PR #31: spec + fixtures + API/UI trace; meanings withheld | **DONE (FORMULA)** — xem `knowledge-expansion/COMPLETION_REPORT.md` |
+| K1 | 33 và Challenge 0 | Dossier source-specific, không đổi số/fallback, editorial decision độc lập | **NEXT** / `SOURCE_GAP` |
 | K2 | Deep interpretations & charts | 154 bài hiện tại review theo metric/stage; arrow/name layers tách truyền thống; dài thêm chỉ nếu thêm được ý kiểm chứng | PLANNED |
 | K3 | Defined relationship synthesis | Registry các quan hệ có phép hoặc nguồn, đúng input, không điểm tâm lý tự tạo | PLANNED |
 | K4 | Report reading UX | Progressive disclosure, headings, contextual cross-links, print chapter breaks | AFTER K2/K3 |
