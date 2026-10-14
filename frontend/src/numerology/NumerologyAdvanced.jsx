@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import CalculationTrace from './CalculationTrace';
 import MetricMeaning from './MetricMeaning';
+import { unavailableMetricMessage } from './metricAvailability';
 
 const STATES = { present: 'Đủ 3 số', partial: 'Có một phần', absent: 'Không có số nào' };
 const PRESENCE = { both: 'Có trong ngày sinh và tên', birth: 'Chỉ có trong ngày sinh', name: 'Chỉ có trong tên', neither: 'Không có trong ngày sinh lẫn tên' };
@@ -183,7 +184,7 @@ export default function NumerologyAdvanced({ birthGrid, nameChart, combinedChart
       <div className="section-kicker">CHỈ NHỮNG MỐI NỐI CÓ PHÉP TÍNH</div><h2 id="num-relations-heading">Các mối nối đã định nghĩa</h2>
       <ul className="num-relations">
         <li>Từ ngày sinh: {DATE_METRICS.map(([id, label]) => `${label} ${metrics[id].value}`).join(', ')}.</li>
-        <li>{metrics.expression.status === 'available' ? `Từ tên: ${NAME_METRICS.map(([id, label]) => `${label} ${metrics[id].value}`).join(', ')}.` : 'Chưa có tên nên không có nhóm chỉ số từ tên, và không có số Trưởng thành.'}</li>
+        <li>{metrics.expression.status === 'available' ? `Từ tên: ${NAME_METRICS.map(([id, label]) => metrics[id].status === 'available' ? `${label} ${metrics[id].value}` : `${label}: ${unavailableMetricMessage(metrics[id]).replace(/\.$/, '')}`).join('; ')}.` : 'Chưa có tên nên không có nhóm chỉ số từ tên, và không có số Trưởng thành.'}</li>
         {metrics.maturity.status === 'available' && <li>Trưởng thành = Đường đời {metrics.lifePath.value} + Biểu đạt {metrics.expression.value}.</li>}
         {metrics.lifePath.isMaster && <li>Đường đời giữ số đặc biệt {metrics.lifePath.value}. Gốc dùng cho tuổi đỉnh là {metrics.lifePath.rootValue}.</li>}
         <li>Đỉnh 1 = tháng {month} + ngày {day}. Đỉnh 2 = ngày {day} + năm {year}. Đỉnh 3 = đỉnh 1 + đỉnh 2. Đỉnh 4 = tháng {month} + năm {year}.</li>

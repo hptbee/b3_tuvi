@@ -64,6 +64,36 @@ test('Vietnamese name produces seven independently expected values and a private
 });
 
 for (const fixture of [
+  { name: 'LY', missingId: 'soulUrge', label: 'Linh hồn', reason: 'no_vowels', message: 'Tên chuẩn hóa không có nguyên âm A, E, I, O, U.', companionLabel: 'Nhân cách', companion: 1, expression: 1, maturity: 5 },
+  { name: 'AE', missingId: 'personality', label: 'Nhân cách', reason: 'no_consonants', message: 'Tên chuẩn hóa không có phụ âm.', companionLabel: 'Linh hồn', companion: 6, expression: 6, maturity: 1 }
+]) {
+  test(`accepted ${fixture.name} explains its unavailable metric in overview and relationships`, async ({ page }) => {
+    await page.setViewportSize({ width: 320, height: 844 });
+    await page.goto('/than-so-hoc');
+    await fill(page, { name: fixture.name });
+    const responsePromise = page.waitForResponse(response => response.url().endsWith('/api/numerology/calculate'));
+    await submit(page);
+    const response = await responsePromise;
+    expect(response.status()).toBe(200);
+    const body = await response.json();
+    expect(body.metrics[fixture.missingId]).toMatchObject({ status: 'unavailable', reason: fixture.reason, value: null });
+    await expect(output(page, 'Biểu đạt')).toHaveText(String(fixture.expression));
+    await expect(output(page, fixture.companionLabel)).toHaveText(String(fixture.companion));
+    await expect(output(page, 'Trưởng thành')).toHaveText(String(fixture.maturity));
+    await expect(output(page, fixture.label)).toHaveCount(0);
+    const overview = page.getByRole('region', { name: 'Tổng quan' });
+    const missing = overview.getByRole('article').filter({ hasText: fixture.label });
+    await expect(missing.locator('strong')).toHaveText('Chưa tính được');
+    await expect(missing.locator('small')).toHaveText(fixture.message);
+    await expect(overview.getByRole('article').filter({ hasText: fixture.companionLabel }).locator('strong')).toHaveText(String(fixture.companion));
+    const relations = page.getByRole('region', { name: 'Các mối nối đã định nghĩa' });
+    await expect(relations).toContainText(`${fixture.label}: ${fixture.message.replace(/\.$/, '')}`);
+    await expect(relations).not.toContainText(/null|undefined/);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+  });
+}
+
+for (const fixture of [
   { day: 29, month: 9, year: 2007, value: 11, root: 2 },
   { day: 11, month: 1, year: 1990, value: 22, root: 4 },
   { day: 29, month: 3, year: 1990, value: 33, root: 6 }
