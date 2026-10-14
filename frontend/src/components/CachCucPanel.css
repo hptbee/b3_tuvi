@@ -1,0 +1,6 @@
+.cach-cuc-panel .cach-cuc-card { cursor: default; min-width: 0; overflow-wrap: anywhere; }
+.cach-cuc-panel .cach-cuc-toggle { display: flex; width: 100%; min-height: 44px; padding: 4px 0; border: 0; background: transparent; text-align: left; font: inherit; cursor: pointer; }
+.cach-cuc-panel .cach-cuc-toggle:focus-visible, .cach-cuc-panel .cach-cuc-retry:focus-visible { outline: 3px solid var(--accent, #265542); outline-offset: 3px; }
+.cach-cuc-panel .card-detail[hidden] { display: none; }
+.cach-cuc-panel .cach-cuc-retry { min-height: 44px; margin: 0 18px 18px; padding: 10px 14px; color: var(--ink, #213b32); background: var(--surface, #faf9f5); border: 1px solid var(--line, #e4e7dd); border-radius: 6px; cursor: pointer; }
+@media (max-width: 520px) { .cach-cuc-panel .cach-cuc-grid { grid-template-columns: minmax(0, 1fr); } }

@@ -1,11 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useId, useRef, useState } from 'react';
 import { API_BASE } from '../apiBase';
+import './CachCucPanel.css';
 
 const TYPE_CONFIG = {
   cat_cach:       { label: 'Cát Cách',       color: '#b8860b', bg: '#fffbeb', badge: '#ffd700', icon: '✦' },
   dac_biet_cach:   { label: 'Đặc Biệt Cách', color: '#6a0080', bg: '#fdf4ff', badge: '#d48aff', icon: '◈' },
   hung_bai_cach:   { label: 'Hung Bại Cách', color: '#8b0000', bg: '#fff5f5', badge: '#ff6b6b', icon: '⚠' },
 };
+
+function validCombinations(data) {
+  return Array.isArray(data?.combinations) && data.combinations.every(combo => (
+    combo && typeof combo.name === 'string' && combo.name.trim().length > 0
+    && Object.hasOwn(TYPE_CONFIG, combo.type)
+    && ['description', 'formula_text', 'summary', 'verification_status'].every(field => typeof combo[field] === 'string')
+    && (combo.disclaimer === undefined || typeof combo.disclaimer === 'string')
+    && (combo.tags === undefined || Array.isArray(combo.tags) && combo.tags.every(tag => typeof tag === 'string'))
+  ));
+}
 
 function chartFingerprint(chartData, userInfo) {
   const tv = chartData?.tuviInfo;
@@ -35,9 +46,25 @@ function chartFingerprint(chartData, userInfo) {
 
 export default function CachCucPanel({ chartData, userInfo }) {
   const chartKey = chartFingerprint(chartData, userInfo);
+  const instanceId = useId();
+  const [retry, setRetry] = useState(0);
+  const requestKey = `${chartKey}:${retry}`;
   const [result, setResult] = useState({ key: '', combinations: [], error: '' });
   const [expanded, setExpanded] = useState(null);
-  const loading = Boolean(chartData?.tuviInfo?.boxes) && result.key !== chartKey;
+  const heading = useRef(null);
+  const retryButton = useRef(null);
+  const focusAfterRetry = useRef(null);
+  const loading = Boolean(chartData?.tuviInfo?.boxes) && result.key !== requestKey;
+
+  useEffect(() => {
+    if (focusAfterRetry.current !== requestKey) {
+      focusAfterRetry.current = null;
+      return;
+    }
+    if (result.key !== requestKey) return;
+    focusAfterRetry.current = null;
+    (result.error ? retryButton.current : heading.current)?.focus();
+  }, [result, requestKey]);
 
   useEffect(() => {
     if (!chartData?.tuviInfo?.boxes) return;
@@ -50,7 +77,7 @@ export default function CachCucPanel({ chartData, userInfo }) {
       }
     });
 
-    const key = chartKey;
+    const key = requestKey;
     const controller = new AbortController();
     fetch(`${API_BASE}/api/combinations/match`, {
       method: 'POST',
@@ -64,20 +91,23 @@ export default function CachCucPanel({ chartData, userInfo }) {
     })
       .then(async response => {
         const data = await response.json();
-        if (!response.ok) throw new Error(data.error || 'Không đọc được cách cục');
+        if (!response.ok || !validCombinations(data)) throw new Error('Invalid combination response');
         return data;
       })
       .then(data => {
-        if (!controller.signal.aborted) setResult({ key, combinations: data.combinations || [], error: '' });
-      })
-      .catch(err => {
         if (controller.signal.aborted) return;
-        setResult({ key, combinations: [], error: err.message || 'Chưa kết nối được máy chủ.' });
+        setResult({ key, combinations: data.combinations, error: '' });
+        setExpanded(null);
+      })
+      .catch(() => {
+        if (controller.signal.aborted) return;
+        setResult({ key, combinations: [], error: 'Không tải được cách cục. Vui lòng thử lại.' });
       });
     return () => controller.abort();
-  }, [chartData, chartKey]);
+  }, [chartData, requestKey]);
 
-  const combinations = result.key === chartKey ? result.combinations : [];
+  const combinations = result.key === requestKey ? result.combinations : [];
+  const error = result.key === requestKey ? result.error : '';
 
   if (!chartData) return null;
 
@@ -90,8 +120,8 @@ export default function CachCucPanel({ chartData, userInfo }) {
   return (
     <div className="cach-cuc-panel">
       <div className="cach-cuc-header">
-        <h2 className="cach-cuc-title">
-          <span className="cach-cuc-title-icon">☯</span>
+        <h2 className="cach-cuc-title" ref={heading} tabIndex={-1}>
+          <span className="cach-cuc-title-icon" aria-hidden="true">☯</span>
           Cách cục
         </h2>
         <p className="cach-cuc-subtitle">
@@ -100,13 +130,16 @@ export default function CachCucPanel({ chartData, userInfo }) {
       </div>
 
       {loading && (
-        <div className="cach-cuc-loading">
+        <div className="cach-cuc-loading" role="status">
           <span className="spinner">⟳</span> Đang phân tích cách cục...
         </div>
       )}
 
-      {result.key === chartKey && result.error && <p className="cach-cuc-empty" role="alert">Không tải được cách cục. Vui lòng lập lại lá số để thử lại.</p>}
-      {!loading && !result.error && combinations.length === 0 && (
+      {error && <div className="cach-cuc-error"><p className="cach-cuc-empty" role="alert">{error}</p><button type="button" className="cach-cuc-retry" ref={retryButton} onClick={() => {
+        focusAfterRetry.current = `${chartKey}:${retry + 1}`;
+        setRetry(value => value + 1);
+      }}>Thử lại cách cục</button></div>}
+      {!loading && !error && combinations.length === 0 && (
         <div className="cach-cuc-empty">
           Không phát hiện cách cục đặc biệt nào trong lá số này.
         </div>
@@ -135,18 +168,20 @@ export default function CachCucPanel({ chartData, userInfo }) {
               {cfg.icon} {cfg.label} ({list.length})
             </h3>
             <div className="cach-cuc-grid">
-              {list.map(combo => (
+              {list.map((combo, index) => {
+                const detailId = `${instanceId}-${type}-${index}`;
+                const isExpanded = expanded?.key === requestKey && expanded?.id === detailId;
+                return (
                 <div
-                  key={combo._id || combo.name}
-                  className={`cach-cuc-card ${expanded === (combo._id || combo.name) ? 'expanded' : ''}`}
+                  key={index}
+                  className={`cach-cuc-card ${isExpanded ? 'expanded' : ''}`}
                   style={{ background: cfg.bg, borderColor: cfg.color }}
-                  onClick={() => setExpanded(expanded === (combo._id || combo.name) ? null : (combo._id || combo.name))}
                 >
-                  <div className="card-top">
-                    <span className="card-icon" style={{ color: cfg.color }}>{cfg.icon}</span>
+                  <button type="button" className="card-top cach-cuc-toggle" aria-expanded={isExpanded} aria-controls={detailId} onClick={() => setExpanded(isExpanded ? null : { key: requestKey, id: detailId })}>
+                    <span className="card-icon" style={{ color: cfg.color }} aria-hidden="true">{cfg.icon}</span>
                     <strong className="card-name" style={{ color: cfg.color }}>{combo.name}</strong>
-                    <span className="card-arrow">{expanded === (combo._id || combo.name) ? '▲' : '▼'}</span>
-                  </div>
+                    <span className="card-arrow" aria-hidden="true">{isExpanded ? '▲' : '▼'}</span>
+                  </button>
                   <p className="card-desc">{combo.description}</p>
                   {combo.verification_status !== 'matching_ok' && (
                     <p className="card-desc" style={{ fontSize: '12px', opacity: 0.85 }}>Chưa xác thực — không phải kết luận chắc chắn về cuộc đời.</p>
@@ -154,8 +189,7 @@ export default function CachCucPanel({ chartData, userInfo }) {
                   {combo.verification_status === 'matching_ok' && (
                     <p className="card-desc" style={{ fontSize: '12px', opacity: 0.75 }}>Chỉ khớp điều kiện sao đã khai báo.</p>
                   )}
-                  {expanded === (combo._id || combo.name) && (
-                    <div className="card-detail">
+                    <div className="card-detail" id={detailId} hidden={!isExpanded}>
                       <div className="card-formula">
                         <span className="formula-label">Điều kiện:</span>
                         <span>{combo.formula_text}</span>
@@ -169,15 +203,14 @@ export default function CachCucPanel({ chartData, userInfo }) {
                       )}
                       {combo.tags?.length > 0 && (
                         <div className="card-tags">
-                          {combo.tags.filter(t => t !== combo.type).map(t => (
-                            <span key={t} className="tag" style={{ borderColor: cfg.color, color: cfg.color }}>#{t}</span>
+                          {combo.tags.filter(t => t !== combo.type).map((t, tagIndex) => (
+                            <span key={tagIndex} className="tag" style={{ borderColor: cfg.color, color: cfg.color }}>#{t}</span>
                           ))}
                         </div>
                       )}
                     </div>
-                  )}
                 </div>
-              ))}
+              ); })}
             </div>
           </div>
         );
