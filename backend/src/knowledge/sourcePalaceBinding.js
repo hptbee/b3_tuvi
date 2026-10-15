@@ -14,23 +14,41 @@ const EDITION = 'iztro-juan2-2f00e2ab0c80';
 const COMPATIBILITY = 'condition_read_only_projection_not_natal_formula_certification';
 const VERDICT = 'INTERPRETATION_SUPPORTED_WITH_LIMITS';
 const RESEARCH = 'docs/knowledge/research/juan2-palace/';
-const REVIEW_A = 'docs/knowledge/reviews/juan2-palace/review-a.json';
-const REVIEW_B = 'docs/knowledge/reviews/juan2-palace/review-b.json';
+const ORIGINAL_RESOURCES = {
+    reviewA: 'docs/knowledge/reviews/juan2-palace/review-a.json',
+    reviewB: 'docs/knowledge/reviews/juan2-palace/review-b.json',
+    bundleFile: `${RESEARCH}review-bundle.json`, executionFile: `${RESEARCH}execution.json`
+};
+const QUAN_RESOURCES = {
+    reviewA: 'docs/knowledge/reviews/juan2-palace/review-quan-a.json',
+    reviewB: 'docs/knowledge/reviews/juan2-palace/review-quan-b.json',
+    bundleFile: `${RESEARCH}review-bundle-quan.json`, executionFile: `${RESEARCH}execution-quan.json`
+};
 const CLAIMS = 'docs/knowledge/interpretation-claims.json';
 const SOURCES = 'docs/knowledge/sources.json';
 const SUBJECTS = {
     'interp-quanshu-tai-bach-tu-vi-four-adverse-host': {
+        ...ORIGINAL_RESOURCES,
         decisionRef: 'docs/knowledge/interpretation-decisions/juan2-tai-tuvi.json',
         target: 'tai_bach', spanFile: 'tai-tuvi-span.txt', contextFile: 'I02-full-section.txt'
     },
     'interp-quanshu-phuc-duc-dong-luong-host': {
+        ...ORIGINAL_RESOURCES,
         decisionRef: 'docs/knowledge/interpretation-decisions/juan2-phuc-dong-luong.json',
         target: 'phuc_duc', spanFile: 'phuc-dong-span.txt', contextFile: 'I04-full-section.txt'
+    },
+    'interp-quanshu-quan-loc-co-cu-dau-host': {
+        ...QUAN_RESOURCES,
+        decisionRef: 'docs/knowledge/interpretation-decisions/juan2-quan-co-cu-dau.json',
+        target: 'quan_loc', spanFile: 'quan-co-cu-dau-source-span.txt', contextFile: 'quan-co-cu-dau-review-context.txt',
+        projectionA: ['sourceProjectionVerdict', 'SOURCE_BRANCH_PROJECTION_SUPPORTED_WITH_LIMITS'],
+        projectionB: ['projectionVerdict', 'MATCH']
     }
 };
 const FILES = new Set([
-    CLAIMS, SOURCES, REVIEW_A, REVIEW_B, `${RESEARCH}review-bundle.json`, `${RESEARCH}execution.json`,
-    ...Object.values(SUBJECTS).flatMap((subject) => [subject.decisionRef, RESEARCH + subject.spanFile, RESEARCH + subject.contextFile])
+    CLAIMS, SOURCES,
+    ...Object.values(SUBJECTS).flatMap((subject) => [subject.decisionRef, subject.reviewA, subject.reviewB,
+        subject.bundleFile, subject.executionFile, RESEARCH + subject.spanFile, RESEARCH + subject.contextFile])
 ]);
 const text = (value) => typeof value === 'string' && value.trim() !== '' && value === value.trim();
 const object = (value) => value !== null && typeof value === 'object' && !Array.isArray(value);
@@ -49,8 +67,8 @@ function loadEvidence(subject) {
     const json = (ref) => JSON.parse(read(ref));
     return {
         claims: json(CLAIMS).claims, sources: json(SOURCES),
-        decision: json(subject.decisionRef), bundle: json(`${RESEARCH}review-bundle.json`),
-        reviewA: json(REVIEW_A), reviewB: json(REVIEW_B), execution: json(`${RESEARCH}execution.json`),
+        decision: json(subject.decisionRef), bundle: json(subject.bundleFile),
+        reviewA: json(subject.reviewA), reviewB: json(subject.reviewB), execution: json(subject.executionFile),
         span: read(RESEARCH + subject.spanFile), context: read(RESEARCH + subject.contextFile)
     };
 }
@@ -103,7 +121,7 @@ export function verifyStoredSourcePalaceEvidence(claimId, evidence = {}) {
         || decision.formulaComparison !== 'MATCH' || decision.subjectType !== 'interpretation_claim'
         || decision.subjectId !== claimId || decision.claimId !== claimId || !text(decision.decisionId)
         || decision.interpretationDecision !== 'AI_CROSS_REVIEWED' || decision.interpretationVerdict !== VERDICT
-        || decision.reviewBundleFile !== `${RESEARCH}review-bundle.json` || decision.executionFile !== `${RESEARCH}execution.json`
+        || decision.reviewBundleFile !== subject.bundleFile || decision.executionFile !== subject.executionFile
         || decision.spanFile !== RESEARCH + subject.spanFile || decision.contextFile !== RESEARCH + subject.contextFile
         || decision.sourcePin !== PIN || decision.artifactSha256 !== HTML_DIGEST
         || decision.bookVerified !== false || decision.publicRelease !== false || decision.releasePermission !== 'withheld'
@@ -133,8 +151,8 @@ export function verifyStoredSourcePalaceEvidence(claimId, evidence = {}) {
         || reviewB.expertVerified !== false || reviewB.publicRelease !== false) return denied('source_palace_reviews_invalid');
     const actual = [];
     for (const reviewer of reviewers) {
-        const isA = reviewer.reviewRef === REVIEW_A;
-        if (!isA && reviewer.reviewRef !== REVIEW_B) return denied('source_palace_reviews_invalid');
+        const isA = reviewer.reviewRef === subject.reviewA;
+        if (!isA && reviewer.reviewRef !== subject.reviewB) return denied('source_palace_reviews_invalid');
         const review = one(isA ? reviewA : reviewB.reviews, (item) => item?.claimId === claimId);
         const executed = one(execution?.reviewers, (item) => item?.reviewRef === reviewer.reviewRef);
         if (!review || !executed || ['model', 'agentId', 'reviewRef', 'requestedModel', 'hostBuildId']
@@ -148,6 +166,8 @@ export function verifyStoredSourcePalaceEvidence(claimId, evidence = {}) {
             || !isDeepStrictEqual(review.conditionTree, candidate.conditionTree) || !isDeepStrictEqual(review.limitations, candidate.limitations)
             || (isA ? review.reviewedWording : review.approvedWording) !== candidate.proposedWording
             || Object.entries(digests).some(([key, value]) => review[key] !== value)) return denied('source_palace_reviews_invalid');
+        const projection = isA ? subject.projectionA : subject.projectionB;
+        if (projection && review[projection[0]] !== projection[1]) return denied('source_palace_reviews_invalid');
         if (isA) {
             const assessment = review.sourceAssessment;
             if (assessment?.pin !== PIN || assessment.rawHtmlSha256 !== HTML_DIGEST || assessment.editionAuthenticated !== false

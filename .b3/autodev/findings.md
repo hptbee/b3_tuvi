@@ -136,3 +136,12 @@ T021 iteration counts1→0; fresh FULL10file review2 no new confirmed findings; 
 - Review passes completed4/12 (sourceunit, runtime1, performance, runtime2); T018crosscut active, R801+ reserved.
 
 - Final T018 crosscut /tmp/tuvi-juan2-crosscut-review.md: zero concreteR801+findings; actual48HTTP→frontendvalidator responses,16internalfixturechecks,3legacyscripts,PR50→51→52 ancestry anddiffcheckPASS. ParentT018qualitygatePASS, all confirmedfindingsclosed. Actualcompleted reviewerpasses5/12; previous ui_fixer crosscut attempt produced no report and is not counted as a completed review.
+
+## T023 — Quan Lộc Dậu annotation
+- Taskbase67ff179c10e75bfd5d92b037702f7024014a76ae; LARGE2logicalunits sourceassembly/runtime. Sourceassembly reviewed first, then runtime; finalcrosscut reserved.
+- SourceUNIT1 /tmp/tuvi-quan-source-review.md zero concreteR901+findings. Independent pinnedbytes/context/refetch/fivedigests/rawmodelcopies/comparator/10realfixtures andold3subject/registry isolationPASS. ParentunitgatePASS.
+- RuntimeUNIT2 active; authorfrozen, targeted9scriptsPASS; backend56files47unit9integrationCI exit0 coverage87.45lines89.43branches. No newUIcode; old16source solarfixtures andlegacy gates still pass. Cachealgorithm unchanged, one additional finite subject; generalreview handles bounded3key performance lightly, no speedclaim/redundant specialist rerun.
+- Actual completed reviewerpasses6/12; runtime7thactive, crosscutreserved.
+
+- T023 RuntimeUNIT2 /tmp/tuvi-quan-runtime-review.md no concreteR1001+findings,6independentscriptsPASS. ParentunitgatePASS.
+- T023 finalcrosscut /tmp/tuvi-quan-crosscut-review.md no concreteR1101+findings,78actualHTTP→frontendvalidator /26solarfixtures/3yearstatesPASS; priorbindingisolationsurvivesnewQuanoutage. ParentT023qualitygatePASS. Actualreviewpasses8/12completed; T024source/backend/UI/performance/integrationbudget4remains, no reviewsinvented.

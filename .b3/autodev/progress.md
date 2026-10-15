@@ -2,16 +2,16 @@
 
 - b3_home: /workspace/b3_tuvi/.b3/runtime/b3_ai-engineering
 - product_root: /workspace/b3_tuvi
-- plan_id: Autonomous Product Completion version 10
-- plan_version: 10
-- branch: codex/tuvi-juan2-palace-interpretations
+- plan_id: Autonomous Product Completion version 11
+- plan_version: 11
+- branch: codex/tuvi-quan-loc-branch-annotation
 - run_base_sha: 52319c9c7123e4ff1ace74b7a81ab611df2acef5
 - preceding_invocation_base_sha: f0dec74973ef9d07129e19330356f8e6d2040227
 - previous_run_base_sha: 45615a48d0c75b90138cfc618320ffae6e9c34e0
 - current_task: none
-- last_completed_task: T018
-- next_source_task: T023
-- current_task_base_sha: 52319c9c7123e4ff1ace74b7a81ab611df2acef5
+- last_completed_task: T023
+- next_source_task: T024
+- current_task_base_sha: 67ff179c10e75bfd5d92b037702f7024014a76ae
 - run_status: running
 - updated: 2026-10-15
 
@@ -34,7 +34,7 @@ Main fetched and ff-only advanced to f0dec74973ef9d07129e19330356f8e6d2040227; #
 | T012 | completed | 45df02fbc8deb486201c3a203a1c1c5a005089f0 | 885adb65ddb68ccdb577b437b65446332a1cfd98 | mergedmain; backendCI PASS | existing recorded independent reviews | detailed | ready |
 | T016 | completed | f0dec74973ef9d07129e19330356f8e6d2040227 | c4281b0579d266419bf43f2de6bafb4b24daae12 | backendCI86.82/87.59;48placechecks | 2isolated passes R101/102closed | detailed | ready |
 | T017 | completed | c4281b0579d266419bf43f2de6bafb4b24daae12 | 8fbed3caff96ef326ac05fff659f6f61124b0b1e | frontend142/lint/build;8E2E,final25 | 2isolated passes R201–203closed | notes | ready |
-| T018 | completed | 52319c9c7123e4ff1ace74b7a81ab611df2acef5 | | dual-model source acceptance2; backend55files and16realfixtures PASS | allsource/runtime/perf/crosscut clear; R601closed | detailed | ready |
+| T018 | completed | 52319c9c7123e4ff1ace74b7a81ab611df2acef5 | 67ff179c10e75bfd5d92b037702f7024014a76ae | dual-model source acceptance2; backend55files and16realfixtures PASS | allsource/runtime/perf/crosscut clear; R601closed | detailed | ready |
 | T019 | incomplete | f0dec74973ef9d07129e19330356f8e6d2040227 | | pinnedmirror available; 吉星/拱照 and 正曜 identity unresolved; oldVCD decision preserved | no new claim approval | detailed | not_ready |
 | T020 | incomplete | f0dec74973ef9d07129e19330356f8e6d2040227 | | source-profile/ageparametersunresolved | no formula promoted | | |
 | T021 | completed | c4281b0579d266419bf43f2de6bafb4b24daae12 | cfd75fd7aaed597dd31cc9e9bf928c7013c4c808 | backend53files87.06/88.32;25E2E | 2isolatedpasses R301closed | detailed | ready |
@@ -346,3 +346,36 @@ The three feature branches are pushed as a stack; main has not merged them. GitH
 - finalchecks: backend55files46unit9integrationPASS87.42lines89.33branches after R601fix; StructuredAnalysis37PASS; Chromium25PASS after real localbackend startup; docs181PASS; gitdiffcheckPASS. No natal formulas/data/school/oldsource decisions changed.
 - independentreview: sourceunit clear; runtimeR601fixed+freshwholeunitclear; performance0.135ms measured warm overhead/finite2keycache/warmzeroIO; finalcrosscut /tmp/tuvi-juan2-crosscut-review.md48actualHTTP→frontendvalidator responses and16realfixturesPASS, no R801 findings. ParentqualitygatePASS,5of12reviewpassesused.
 - next executable:T023 separate QuanCơ–CựDậu annotation, using separately accepted fullpassage+10realfixtures, no integratedcareer/brightness/modifier verdict. Commit/push T018 then detailedready T023 on distinct stackedbranch. Existing#50→#51→#52 preserved; no merge/deploy.
+
+## Current next action — T023
+- T018 commit 67ff179c10e75bfd5d92b037702f7024014a76ae pushed on codex/tuvi-juan2-palace-interpretations, directlyabove existingPR52. Actual ghprcreate attempted with complete body/base: GraphQLForbidden. Gitpushsuccess; no newPRnumber invented. PRmaterial /tmp/tuvi-juan2-palace-pr.md, branch is reviewable; do notduplicate#50–52.
+- T023 detailedreadinessready at67ff179c10e75bfd5d92b037702f7024014a76ae; parent persists exact separatelyaccepted Quan evidence, isolatedauthor extendsfinitebinder+branchconsistency+dedicatedtest. Source/edition/old2packetsfrozen.
+- T024 newmodernminor actual2modelreviewsrunning after independent source+120endpoint/2880allage/24reachablechart validation; pending, no runtimeactivation.
+
+## T023 implementation readiness
+- depth: detailed
+- readiness: ready
+- plan_version: 11
+- approach_at_sha: 67ff179c10e75bfd5d92b037702f7024014a76ae
+- inspected: exact separate proposedpacket/full2paragraphs/context/sourcebrightness/10independent fixtures; actual gpt-6.1-sol andgpt-6-astra rawreviews; five digest groups and existingcompareReviewsAI_ACCEPTED; finitebinder+conditionEval+normalizer+test registration interfaces
+- changes: third finite source-palace subject with own immutable resources; branch name/ID coherence; dedicated meaningful regression file; no genericframework or calculator
+- contracts: existing interpretationKind and AST/sourceprofile/internal wording contracts; existing public API prose stripped; no new endpoint or formula catalog hit
+- data_flow: finite subject→separate exact bundle/execution/reviews→existingdecisionreplay+digest gates→actual QuanLoc samepalace+branchAST→exact attributed internal note
+- edge_cases: samepairMao, missingpartner, wronghost/TPTConly, adversecontext, wrongbranchlabel/ID, missingcorruptreview resources, callerclones, oldsubjectisolation
+- architecture: extend one finite helper via fixed per-subject literal resource metadata; existing comparator/AST/synthesis/matcher preserved
+- files: docs/knowledge/research/juan2-palace/review-bundle-quan.json, docs/knowledge/research/juan2-palace/execution-quan.json, docs/knowledge/research/juan2-palace/quan-co-cu-dau-source-span.txt, docs/knowledge/research/juan2-palace/quan-co-cu-dau-review-context.txt, docs/knowledge/research/juan2-palace/README.md, docs/knowledge/reviews/juan2-palace/review-quan-a.json, docs/knowledge/reviews/juan2-palace/review-quan-b.json, docs/knowledge/interpretation-decisions/juan2-quan-co-cu-dau.json, docs/knowledge/interpretation-claims.json, backend/src/knowledge/sourcePalaceBinding.js, backend/src/interpretation/eligibility.js, backend/test/sourcePalaceQuan.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md
+- verification: 10independent realfixtures3positive7negative beforeapproval; existing16/legacy regressions; scope/digest/review/path/branchmutation failures; fullbackendCI; independentfullfeature review/fix and final integration gate
+- approved_source_scope: exact attributed 在酉宮雖美無始終 branch note only; modifier_not_evaluated, no integratedcareer/brightness/empirical/publicjudgment
+- task_spec_fingerprint: depends_on=[T018]|scope=docs/knowledge/research/juan2-palace/review-bundle-quan.json, docs/knowledge/research/juan2-palace/execution-quan.json, docs/knowledge/research/juan2-palace/quan-co-cu-dau-source-span.txt, docs/knowledge/research/juan2-palace/quan-co-cu-dau-review-context.txt, docs/knowledge/research/juan2-palace/README.md, docs/knowledge/reviews/juan2-palace/review-quan-a.json, docs/knowledge/reviews/juan2-palace/review-quan-b.json, docs/knowledge/interpretation-decisions/juan2-quan-co-cu-dau.json, docs/knowledge/interpretation-claims.json, backend/src/knowledge/sourcePalaceBinding.js, backend/src/interpretation/eligibility.js, backend/test/sourcePalaceQuan.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md|acceptance_criteria=Separate complete Quan passage, modifiers, reciprocal/brightness context and10independent reachable fixtures have actual distinct-model approval before activation; Exact reviewed Co-Cu same QuanLoc plus Dau predicate emits only approved internal textual-branch note; following modifiers remain explicitly unevaluated; Distinct finite evidence resources and branch label/ID consistency fail closed on changed/missing evidence or malformed chart; Existing Tai/Phuc/TuPhu evidence and behavior, natal formulas/source decisions and public gates remain unchanged
+- watched_paths: docs/knowledge/research/juan2-palace/review-bundle-quan.json, docs/knowledge/research/juan2-palace/execution-quan.json, docs/knowledge/research/juan2-palace/quan-co-cu-dau-source-span.txt, docs/knowledge/research/juan2-palace/quan-co-cu-dau-review-context.txt, docs/knowledge/research/juan2-palace/README.md, docs/knowledge/reviews/juan2-palace/review-quan-a.json, docs/knowledge/reviews/juan2-palace/review-quan-b.json, docs/knowledge/interpretation-decisions/juan2-quan-co-cu-dau.json, docs/knowledge/interpretation-claims.json, backend/src/knowledge/sourcePalaceBinding.js, backend/src/interpretation/eligibility.js, backend/test/sourcePalaceQuan.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md, backend/src/engine/conditionEval.js, backend/src/interpretation/synthesis.js, backend/src/interpretation/pipeline.js, docs/knowledge/sources.json
+
+## T023 verification in progress
+- Sourceassemblyunit clear /tmp/tuvi-quan-source-review.md, parentgatePASS; separate runtime fullunit review active. Backend56files47unit9integrationPASS87.45/89.43;10newrealfixtures +old16PASS; nooldsource/formula/publicgatechange.
+- T024 actual gpt-6.1-sol andgpt-6-astra source reviews bothMATCH, existingcompareReviews replayAI_ACCEPTED after exactalgorithm/compatibility/five-digest agreement. Both independentlyverify19pinnedpayloads+3supplemental alias/locale files and120endpoint/2880allage/24chart/boundary/leapcases. Onlybranch-sex-callerage projection; no entirecalendar/classical/natal/interpretation/publicapproval. No modern productactivation yet; sourceassembly/runtime/UI implementation waits T023gate.
+
+## T023 completion receipt
+- taskbase67ff179c10e75bfd5d92b037702f7024014a76ae; sourceunit/runtimeunit/finalcrosscut allclear, parentqualitygatePASS. Approvedinternalinterpretationregistry3→4; threepalacesgainnewnarrowcoverage acrossT018/T023, no integratedlife/career conclusions.
+- Backend56files47unit9integrationPASS87.45lines89.43branches;10newreal solar/APIfixtures+16old remaincorrect, malformedbranchlabel/IDandborrowed/changed/missingevidence deny wording. Alloriginalsource/edition/3claims/natalformulas unchanged.
+- Independent source /tmp/tuvi-quan-source-review.md; runtime /tmp/tuvi-quan-runtime-review.md; crosscut /tmp/tuvi-quan-crosscut-review.md. Actual78HTTP→exactfrontendvalidator responses across26fixtures ×3yearstatesPASS; fresh-processQuanresourceoutageleavesall3oldapprovedbindingsvalid. No R901/R1001/R1101 findings.
+- Reviewbudget8/12actualpassesused; nextT024 has4passesavailable. Never bypassmissingreview; resourcecap requires resumableincompletecheckpoint ifnonconvergence.
+- Next action:commit/push focusedT023 stackedaboveT018, then detailedT024readiness andcomplete explicitage modernminorAPI/UI/sourcebinding. Actual modernsource2modelMATCH+comparatorAI_ACCEPTED alreadyavailable, approvalscopeonlyreviewedprojection; sourcecalendar/classical/default/predictionsnotpromoted.
