@@ -84,3 +84,10 @@ T01012unitPASS, firstnativekeyboardE2EfailedatShiftTabfocusboundary; smallfocusc
 
 T012iteration2 no blockers; R003CLOSED afterindependentSQLitetest andfullreview. Gate met.
 
+
+## Tu Vi resume T016
+- Review size SMALL, full task-base f0dec74 + working tree; no performance specialist (constant 12-palace lookup).
+- R101 medium CONFIRMED CLOSED: unknown functionId/mismatched label trusted with known flag.
+- R102 medium CONFIRMED CLOSED: sparse palace array throws in find after every skips holes.
+
+T016 iteration counts2→0, fresh full-scope review /tmp/tuvi-placement-review2.md found no blockers; targeted normalizer/time/annual-star checks and full backend CI PASS86.82/87.59. Orchestrator gate PASS.

@@ -1,6 +1,6 @@
 # Autonomous Product Completion
 
-- version: 5
+- version: 6
 - source: User mission 2026-10-14; fresh run from upstream main 45615a48d0c75b90138cfc618320ffae6e9c34e0
 
 ## Original requirements
@@ -156,7 +156,7 @@ Version 5: reassessment proves additional Tử Vi UI and data-safety defects. Pr
   - Disclosure/current-chart/retry/schema unit tests; keyboard/mobileE2E; frontendCI/lint/build
 
 ### T012 — Reject incompatible SQLite before writes
-- status: in_progress
+- status: completed
 - depends_on: []
 - scope: backend/src/db/sqlite.js, backend/test/sqlite.test.mjs
 - acceptance_criteria:
@@ -203,3 +203,61 @@ Version 5: reassessment proves additional Tử Vi UI and data-safety defects. Pr
 
 
 
+
+## Tu Vi resume — 2026-10-15 (version 6)
+User narrowed the active mission to Tử Vi domain completion. Preserve all prior task IDs, scope and completion evidence; T010–T015 remain historical/out-of-active-queue pending separate reconciliation, not silently completed. Active domain tasks below take priority by explicit user instruction. Main reconciled at f0dec74973ef9d07129e19330356f8e6d2040227; PR49 research-only head 7d151bfa78f3151c3e1bcc5a0f1bead7fbb66582 is unmerged and supplies locators, not approvals. Backend full CI passes at baseline (86.77 lines / 87.50 branches).
+
+### T016 — Complete source-supported annual star palace placement
+- status: in_progress
+- depends_on: []
+- scope: backend/src/time/thienDuc.js, backend/src/time/timeEngine.js, backend/test/thienDuc.test.mjs, backend/src/engine/normalizeChart.js
+- acceptance_criteria:
+  - Existing accepted Thiên Đức/Nguyệt Đức branches resolve to the unique canonical natal palace without modifying natal stars or formulas
+  - Invalid or ambiguous chart metadata never produces a palace placement
+  - Existing branch/status/profile contracts remain compatible; public fortune and prose remain withheld
+- verification:
+  - All twelve view branches on reachable calculated charts, contrasting natal palace layouts, malformed chart negatives, API and non-mutation checks; backend full CI; isolated full-diff review
+
+### T017 — Show source-scoped annual placements in chart evidence
+- status: pending
+- depends_on: [T016]
+- scope: frontend/src/components/StructuredAnalysis.jsx, frontend/src/components/StructuredAnalysis.test.jsx, frontend/e2e
+- acceptance_criteria:
+  - Selecting a view-year branch displays each supported annual star branch and mapped natal palace in a separate readable section
+  - Clear traditional source attribution and withheld interpretation remain visible; missing selection has a specific prompt, not an inaccurate unapproved-formula message
+  - Stale responses, invalid mapping data and retries never display stale or unsafe placements
+- verification:
+  - Frontend unit/CI, lint/build, real backend Chromium E2E, isolated review
+
+### T018 — Source-scoped Juan 2 palace interpretations
+- status: pending
+- depends_on: []
+- scope: Existing knowledge source registry, interpretation decisions/claims and runtime/tests
+- acceptance_criteria:
+  - Independently retrieved fixed source passages for Tài Bạch/Tử Vi, Quan Lộc/Thiên Phủ and Phúc Đức/Thiên Đồng receive two actual distinct-model reviews
+  - Only complete accepted conditions/modifiers implement internal source-scoped claims, with reachable positive and negative charts and no public prose
+- verification:
+  - Exact passage hashes and review replay, domain tests, API withheld-prose checks, independent implementation review
+
+### T019 — New-source Mệnh vô Chính diệu interpretation
+- status: pending
+- depends_on: []
+- scope: Existing knowledge and interpretation files/tests
+- acceptance_criteria:
+  - Define exact 吉星/拱照/target semantics from independently read Juan 3 evidence; preserve old Tân Biên insufficiency decision
+  - Implement only dual-AI accepted complete conditions and prove reachable matches and negatives
+- verification:
+  - Source-scoped review evidence and runtime chart witnesses, regression/release-gate tests
+
+### T020 — Reconcile complete fortune source profiles
+- status: pending
+- depends_on: []
+- scope: Existing fortune source decisions, timeEngine and tests if complete semantics become accepted
+- acceptance_criteria:
+  - Keep adjacent-palace Quanshu and existing Mệnh-anchor natal annotations distinct
+  - Establish full Đại hạn start age/span/age convention/yin-yang basis and Tiểu hạn start-age/step before any deterministic new placement
+  - No natal formula/default profile changes or public predictions
+- verification:
+  - Independent source retrieval, actual dual-AI reviews, source-scoped reachable chart/age-boundary goldens if implemented
+
+Version 6 prioritization: T018–T020 investigation runs in parallel; source-inaccessible candidates are recorded once and do not block independent T016/T017. Next capability selected from actual evidence, never source-intake alone. Existing .b3 checkpoint is tracked upstream despite AGENTS ignore policy; explicit user request to reconcile the committed checkpoint authorizes preserving and updating these two tracked files, excluding local runtime/history artifacts.
