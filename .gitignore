@@ -41,3 +41,6 @@ Desktop.ini
 
 # B3: local host skill link (do not commit)
 .agents/skills
+
+# Local B3 runtime; existing tracked checkpoint files remain tracked.
+.b3/

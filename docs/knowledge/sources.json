@@ -227,6 +227,25 @@
       "bibliographicStatus": "internal",
       "verificationNotes": "formula_text và lời luận là dữ liệu dự án. Không có trường nguồn thư tịch.",
       "copyrightNotes": null
+    },
+    {
+      "sourceId": "ziwei-quanshu-iztro-transcription",
+      "title": "紫微鬥數全書 — iztro pinned transcription",
+      "author": null,
+      "tradition": "Classical source text reproduced by a modern Zi Wei documentation project; original edition not authenticated",
+      "schoolId": null,
+      "sourceType": "secondary_transcription",
+      "publicationYear": null,
+      "edition": null,
+      "publisher": null,
+      "language": "zh",
+      "url": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/ancientBook-2.html",
+      "accessedAt": "2026-10-15",
+      "bibliographicStatus": "secondary",
+      "bookVerified": false,
+      "expertVerified": false,
+      "verificationNotes": "Git blob pin and HTML SHA independently checked. Exact source passages and context received distinct-model text/interpretation review only. No equality to Wikisource oldid or independent historical edition is established. Runtime school compatibility is a read-only condition projection, not source-school equivalence.",
+      "copyrightNotes": "Bounded classical-source passages/context and original Vietnamese annotations only; no mirror HTML/JS/software vendored. Repository MIT notice preserved; its footer separately states all rights reserved. License observation is not original-edition authentication."
     }
   ],
   "editions": [
@@ -291,6 +310,23 @@
       "originalEditionAuthenticated": false,
       "textCollatedAgainstOriginal": false,
       "verificationNotes": "Chủ dự án đặt authenticated true ngày 2026-10-12 cho item Internet Archive TuViDdauSoTanBien-VDThaiThuLang-DV, upload 2017-07-31. Phạm vi là item scan nhiều PDF. Metadata/bìa ghi 1956; năm in chưa được chứng minh thư viện. Chưa đếm trang và chưa đối mục 19 với PDF 277 trang. Không phải bản 2012 và không chứng minh bản in gốc. Không đổi formulaCheckedAgainstSource."
+    },
+    {
+      "editionId": "iztro-juan2-2f00e2ab0c80",
+      "sourceId": "ziwei-quanshu-iztro-transcription",
+      "documentType": "pinned_html_transcription",
+      "documentUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/ancientBook-2.html",
+      "gitRepository": "https://github.com/SylarLong/iztro",
+      "gitCommit": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+      "gitPath": "docs/zh_TW/learn/ancientBook-2.html",
+      "contentSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+      "authenticated": false,
+      "digitalArtifactVerified": true,
+      "originalEditionAuthenticated": false,
+      "textCollatedAgainstOriginal": false,
+      "bookVerified": false,
+      "expertVerified": false,
+      "verificationNotes": "Pinned modern reproduction only; paragraph/context digest review does not authenticate a historical edition or certify natal formulas."
     }
   ]
 }

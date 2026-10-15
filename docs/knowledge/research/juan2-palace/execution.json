@@ -1,0 +1,19 @@
+{
+  "note": "Orchestrator-captured tool execution metadata, not additional model-authored verdicts. Models independently read full context and reproduced all16 solar fixtures before approval; exact returned reviews remain unedited.",
+  "reviewers": [
+    {
+      "model": "gpt-6.1-sol",
+      "agentId": "/root/juan2_source_review_sol",
+      "reviewRef": "docs/knowledge/reviews/juan2-palace/review-a.json",
+      "requestedModel": "gpt-6.1-sol",
+      "hostBuildId": null
+    },
+    {
+      "model": "gpt-6-astra",
+      "agentId": "/root/juan2_source_review_astra",
+      "reviewRef": "docs/knowledge/reviews/juan2-palace/review-b.json",
+      "requestedModel": "gpt-6-astra",
+      "hostBuildId": null
+    }
+  ]
+}

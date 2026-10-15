@@ -39,4 +39,23 @@ assert.notStrictEqual(sourcesDoc.editions.find((edition) => edition.editionId ==
 assert.ok(sourcesDoc.sources.every((source) => source.bibliographicStatus !== 'primary'));
 assert.ok(matrix.rows.every((row) => row.formulaCheckedAgainstSource === false));
 
+const mirror = byId.get('ziwei-quanshu-iztro-transcription');
+const mirrorEdition = sourcesDoc.editions.find((edition) => edition.editionId === 'iztro-juan2-2f00e2ab0c80');
+assert.strictEqual(mirror.schoolId, null);
+assert.strictEqual(mirror.sourceType, 'secondary_transcription');
+assert.strictEqual(mirror.bibliographicStatus, 'secondary');
+assert.strictEqual(mirror.bookVerified, false);
+assert.strictEqual(mirror.expertVerified, false);
+assert.strictEqual(mirrorEdition.sourceId, mirror.sourceId);
+assert.strictEqual(mirrorEdition.documentType, 'pinned_html_transcription');
+assert.strictEqual(mirrorEdition.gitCommit, '2f00e2ab0c80b1632e55bc362f2ae26e121245cb');
+assert.strictEqual(mirrorEdition.contentSha256, '438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a');
+assert.strictEqual(mirrorEdition.gitPath, 'docs/zh_TW/learn/ancientBook-2.html');
+assert.ok(mirror.url.includes(mirrorEdition.gitCommit));
+assert.strictEqual(mirrorEdition.authenticated, false);
+assert.strictEqual(mirrorEdition.originalEditionAuthenticated, false);
+assert.strictEqual(mirrorEdition.textCollatedAgainstOriginal, false);
+assert.strictEqual(mirrorEdition.bookVerified, false);
+assert.strictEqual(mirrorEdition.expertVerified, false);
+
 console.log('source hygiene keeps wrong titles off the registry and does not promote formulas');

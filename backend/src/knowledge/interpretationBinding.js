@@ -3,6 +3,7 @@ import { isDeepStrictEqual } from 'node:util';
 import { FORMULAS } from '../data/formulaV1.mjs';
 import { bindStoredDecision, digestOf } from './combinationBatch.js';
 import { validateDecisionRecord } from './decisionRegistry.js';
+import { SOURCE_PALACE_KIND, verifySourcePalaceBinding } from './sourcePalaceBinding.js';
 
 // Only the existing registered subject is supported. These are evidence paths,
 // not additional approvals; all identity, scope and wording come from the files.
@@ -139,6 +140,7 @@ let stored = null;
 
 /** No caller-supplied evidence, flags or fixture overrides can grant approval. */
 export function verifyInterpretationBinding(claim) {
+    if (claim?.interpretationKind === SOURCE_PALACE_KIND) return verifySourcePalaceBinding(claim);
     if (!claim?.interpretationDecisionRef) return denied('interpretation_binding_missing');
     if (!stored) {
         try {
