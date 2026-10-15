@@ -230,7 +230,7 @@ User narrowed the active mission to Tử Vi domain completion. Preserve all prio
   - Frontend unit/CI, lint/build, real backend Chromium E2E, isolated review
 
 ### T018 — Source-scoped Juan 2 palace interpretations
-- status: pending
+- status: incomplete
 - depends_on: []
 - scope: Existing knowledge source registry, interpretation decisions/claims and runtime/tests
 - acceptance_criteria:
@@ -240,7 +240,7 @@ User narrowed the active mission to Tử Vi domain completion. Preserve all prio
   - Exact passage hashes and review replay, domain tests, API withheld-prose checks, independent implementation review
 
 ### T019 — New-source Mệnh vô Chính diệu interpretation
-- status: pending
+- status: incomplete
 - depends_on: []
 - scope: Existing knowledge and interpretation files/tests
 - acceptance_criteria:
@@ -250,7 +250,7 @@ User narrowed the active mission to Tử Vi domain completion. Preserve all prio
   - Source-scoped review evidence and runtime chart witnesses, regression/release-gate tests
 
 ### T020 — Reconcile complete fortune source profiles
-- status: pending
+- status: incomplete
 - depends_on: []
 - scope: Existing fortune source decisions, timeEngine and tests if complete semantics become accepted
 - acceptance_criteria:
@@ -276,3 +276,10 @@ Version 6 prioritization: T018–T020 investigation runs in parallel; source-ina
 Version7 adds T021 from reproduced internal provenance defect (arbitrary clone flags could emit unchecked internal prose). It executes independently of UI T017, in separate files, under explicit parallel-work mission; no new source approvals/framework. T018/T019/T020 require unavailable exact evidence and cannot be promoted by code tests.
 
 Version8 technical scope refinement from actual CI/review: classify the new .mjs once in TEST_FIXTURES and remove inherited extraFormulaHits pipeline bypass proved on a reachable negative chart. No source/fomula/public-release scope changes; T021 acceptance remains the same.
+
+## Current completion and resumable queue (2026-10-15)
+T016/T017/T021 implemented and independently reviewed. Coverage: one existing approved internal interpretation remains one; two previously approved annual branch formulas now map to natal palaces across all twelve view-year branches (48 placements checked on two reachable natal layouts). No new Juan2/3 claim, decade/minor-period formula, grade, breaking condition or release is approved by this run.
+
+T018/T019/T020 remain incomplete because exact source passages/complete profile parameters are unavailable, not because a software test disproves a traditional text. New dual-AI reviews are REVIEW_NOT_EXECUTED for unavailable new passages; no verdict records invented. Ordered next executable queue after access changes: (1) retrieve pinned Juan2 oldid1963110 and review full I02/I03/I04 clauses/modifiers; (2) retrieve Juan3 oldid2268626 and disambiguate I01吉星/拱照; (3) reconcile whole DaiHan/TieuHan school, age and boundary semantics with a matching witness. For each: genuinely distinct actual models → fail-closed comparison → exact conditions → reachable positive/negative chart → internal-only implementation → independent review/fixes/PR. If one remains insufficient, move to the next supported pilot without a research-only PR.
+
+Branch stack (none merged/deployed): codex/tuvi-annual-palace-placement → codex/tuvi-annual-placement-ui → codex/tuvi-interpretation-evidence-binding. Git pushes work; GitHub API PR creation is Forbidden. Existing PR49 remains unmerged and unapproved intake. Continue from the top branch after fetch/reconciliation; do not silently replay its code from main while unmerged.
