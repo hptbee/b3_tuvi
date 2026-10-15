@@ -17,11 +17,13 @@ Mười lớp: calculation, normalized chart, palace relations, rule engine, kno
 
 ## Trạng thái Tử Vi hiện tại — nhánh hoàn thiện nguồn, 2026-10-15
 
-- Giữ stack đã có #50 → #51 → #52; không tạo lại hoặc auto-merge. Tài Bạch/Phúc Đức (`67ff179`) và Quan Lộc Cơ–Cự tại Dậu (`0f0c1f8`) đã commit/push ở các nhánh phụ thuộc tiếp theo; API GitHub vẫn Forbidden nên chưa có PR mới.
+- Đã đối chiếu checkpoint `ace285c` với main `4c1761e`: #50–#55 đều đã merge; không tạo lại stack hoặc làm lại tác vụ hoàn tất. T025 bắt đầu ở nhánh mới từ main. Chủ dự án cho phép auto-merge khi đủ cổng; GitHub GraphQL/REST hiện trả Forbidden, nên không thể xác nhận CI hoặc thực hiện merge qua API. Không deploy.
 - Approved internal interpretation coverage tăng 1 → 4 claim: ba nhánh lời sách mới có điều kiện/phạm vi cụ thể, source/context/AST/wording/fixture được hai model độc lập xét trước triển khai. Public prose, kết luận toàn lá số và dự báo đời thực vẫn khóa; bản chép hiện đại không được nâng thành ấn bản cổ đã xác thực.
-- Tiểu hạn biến thể hiện đại `iztro-pinned-age1-sex-triad`: API/UI đã qua local CI/E2E và các vòng review độc lập; chưa merge hoặc phát hành production. Người dùng tự chọn hồ sơ và nhập tuổi mụ 1–120; chỉ chi → cung trên lá số hiện có, không tự tính tuổi hoặc chứng nhận toàn bộ lịch/an sao của iztro. Xem [hợp đồng và giới hạn](../tuvi/MODERN_MINOR_PROFILE.md).
+- Tiểu hạn biến thể hiện đại `iztro-pinned-age1-sex-triad`: đã merge qua #55, có local CI/E2E và các vòng review độc lập; chưa phát hành production. Người dùng tự chọn hồ sơ và nhập tuổi mụ 1–120; chỉ chi → cung trên lá số hiện có, không tự tính tuổi hoặc chứng nhận toàn bộ lịch/an sao của iztro. Xem [hợp đồng và giới hạn](../tuvi/MODERN_MINOR_PROFILE.md).
+- T025 Đại hạn hiện đại có quyết định riêng từ hai mô hình trên nguồn/phụ thuộc đầy đủ và 28 lá số độc lập; API/UI đã hoàn tất trên nhánh mới, qua bốn review độc lập và toàn bộ local CI/E2E. Hồ sơ chỉ chiếu Mệnh/Cục/chi năm sinh B3 với tuổi nhập trực tiếp 1–125, giới hạn 12 chặng Cục..Cục+119. Không thay nhãn natal hoặc đóng conflict Quanshu. Xem [hợp đồng Đại hạn](../tuvi/MODERN_MAJOR_PROFILE.md).
+- T027 ứng viên Phúc Đức Cơ–Cự có hai đoạn đầy đủ và 19 fixture độc lập; hai lần gọi mô hình nguồn bị lỗi giới hạn sử dụng, nên chưa được duyệt/triển khai. T026 câu Tài Bạch Juan3 vẫn chưa rõ phạm vi ngữ pháp theo cả hai review thực tế; không kích hoạt lời luận.
 - T019 Mệnh vô Chính diệu còn thiếu taxonomy 正曜/主星, 吉星 và 拱照 thống nhất; T022 Thiên Phủ còn thiếu nghĩa 空/耗, vùng quan hệ và brightness đúng nguồn; T020 Đại hạn/Tiểu hạn cổ điển giữ nguyên conflict/age blockers. Không mượn approval biến thể hiện đại để đóng các quyết định cổ điển.
-- Kế hoạch thực thi/checkpoint hiện hành là các file `.b3/autodev/` đã được theo dõi trong Git theo yêu cầu resume; bảng audit cũ bên dưới giữ nguyên làm lịch sử, không phải kết luận về mã hiện tại. Chưa merge/deploy hoặc đủ điều kiện production release.
+- Kế hoạch thực thi/checkpoint hiện hành là các file `.b3/autodev/` đã được theo dõi trong Git theo yêu cầu resume; bảng audit cũ bên dưới giữ nguyên làm lịch sử, không phải kết luận về mã hiện tại. Các thay đổi T025 chưa merge/deploy; sản phẩm chưa đủ điều kiện production release.
 
 ## 2. Baseline lịch sử lúc audit
 

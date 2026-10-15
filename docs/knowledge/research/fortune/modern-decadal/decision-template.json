@@ -1,0 +1,301 @@
+{
+  "status": "TEMPLATE_NOT_APPROVED",
+  "decision": null,
+  "algorithmApproval": null,
+  "subjectType": "fortune_placement_profile",
+  "subjectId": "iztro-pinned-menh-cuc-decadal",
+  "profileId": "iztro-pinned-menh-cuc-decadal",
+  "sourceId": "iztro-modern-software",
+  "editionId": "iztro-modern-2f00e2ab0c80",
+  "sourceProfile": "iztro-pinned-menh-cuc-decadal",
+  "sourcePin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "sourceDigest": "d5342272cab276bc6d17d1be3e837873a67410d4f961cd22bfc1975a843cc817",
+  "contextDigest": "ec445067020c392a2187fe2261e9c8ec53eb1cb679795d50acaed7febcca2321",
+  "algorithmSpec": {
+    "profileId": "iztro-pinned-menh-cuc-decadal",
+    "inputFields": [
+      "menhBranchId",
+      "cucNumber",
+      "birthYearBranch",
+      "gender",
+      "nominalAge"
+    ],
+    "branchOrder": [
+      "Tí",
+      "Sửu",
+      "Dần",
+      "Mão",
+      "Thìn",
+      "Tị",
+      "Ngọ",
+      "Mùi",
+      "Thân",
+      "Dậu",
+      "Tuất",
+      "Hợi"
+    ],
+    "branchIds": "one_based_1_to_12",
+    "firstPalace": "natal_menh",
+    "startingAge": "cuc_number",
+    "cucStartAges": [
+      {
+        "element": "water",
+        "number": 2
+      },
+      {
+        "element": "wood",
+        "number": 3
+      },
+      {
+        "element": "metal",
+        "number": 4
+      },
+      {
+        "element": "earth",
+        "number": 5
+      },
+      {
+        "element": "fire",
+        "number": 6
+      }
+    ],
+    "yearYangBranches": [
+      "Tí",
+      "Dần",
+      "Thìn",
+      "Ngọ",
+      "Thân",
+      "Tuất"
+    ],
+    "yearYinBranches": [
+      "Sửu",
+      "Mão",
+      "Tị",
+      "Mùi",
+      "Dậu",
+      "Hợi"
+    ],
+    "genderMapping": [
+      {
+        "gender": 1,
+        "sourceKey": "male",
+        "yinYang": "阳"
+      },
+      {
+        "gender": -1,
+        "sourceKey": "female",
+        "yinYang": "阴"
+      }
+    ],
+    "directionRule": "gender_yin_yang_equals_birth_year_branch_yin_yang_forward_else_reverse",
+    "forwardDirection": 1,
+    "reverseDirection": -1,
+    "periodCount": 12,
+    "yearsPerPeriod": 10,
+    "rangeEndOffset": 9,
+    "periodIndex": "zero_based_0_to_11",
+    "palacesPerPeriod": 1,
+    "wrap": 12,
+    "nominalAgeRange": {
+      "min": 1,
+      "max": 125,
+      "integer": true
+    },
+    "validPerChartAgeRange": "cucNumber_through_cucNumber_plus_119_inclusive",
+    "periodFormula": "floor((nominalAge - cucNumber) / 10)",
+    "outputFormula": "branchId = ((menhBranchId - 1 + direction * periodIndex) % 12 + 12) % 12 + 1",
+    "periodRangeFormula": "start = cucNumber + 10 * periodIndex; end = start + 9",
+    "sourcePalaceToProductBranchId": "((sourcePalaceIndex + 2) % 12) + 1",
+    "beforeFirstPeriod": "not_applied_no_placement",
+    "afterLastPeriod": "not_applied_no_placement",
+    "childhoodApplied": false,
+    "thirteenthPeriodApplied": false,
+    "calendarAgeDerivation": false,
+    "yearYinYangAffectsDirection": true,
+    "extendsBeyondSourceRange": false
+  },
+  "algorithmDigest": "329e8f639aae56a8515d4cdcafce42eee2a2b826f14d3cd7e18a89ba29f50b66",
+  "compatibilitySpec": {
+    "scope": "server_natal_menh_cuc_branch_sex_age_projection_not_full_iztro_astrolabe",
+    "receivingSchoolId": "vn-tam-hop-default",
+    "upstreamSchoolId": null,
+    "menh": "trusted_server_unique_menh_palace_and_consistent_menhPalaceId",
+    "cuc": "trusted_server_cuc_number_2_to_6_with_name_number_agreement",
+    "birthYearBranch": "trusted_server_natal_lunar_chiName_and_chiIndex_consistent",
+    "birthYearStem": "trusted_server_natal_lunar_canName_and_canIndex_consistent_and_sexagenary_parity_matches_branch",
+    "gender": "validated_product_gender_1_male_minus1_female",
+    "nominalAge": "caller_supplied_integer_1_to_125_not_date_derived",
+    "requestContract": {
+      "field": "majorPeriod",
+      "exactKeys": [
+        "profile",
+        "nominalAge"
+      ],
+      "profile": "iztro-pinned-menh-cuc-decadal",
+      "nominalAge": {
+        "integer": true,
+        "min": 1,
+        "max": 125
+      }
+    },
+    "sourceBranchAndGenderMapping": [
+      {
+        "key": "ziEarthly",
+        "chinese": "子",
+        "upstreamVi": "Tý",
+        "productVi": "Tí",
+        "productBranchId": 1,
+        "sourceBranchEnumIndex": 0,
+        "sourcePalaceIndex": 10
+      },
+      {
+        "key": "chouEarthly",
+        "chinese": "丑",
+        "upstreamVi": "Sửu",
+        "productVi": "Sửu",
+        "productBranchId": 2,
+        "sourceBranchEnumIndex": 1,
+        "sourcePalaceIndex": 11
+      },
+      {
+        "key": "yinEarthly",
+        "chinese": "寅",
+        "upstreamVi": "Dần",
+        "productVi": "Dần",
+        "productBranchId": 3,
+        "sourceBranchEnumIndex": 2,
+        "sourcePalaceIndex": 0
+      },
+      {
+        "key": "maoEarthly",
+        "chinese": "卯",
+        "upstreamVi": "Mão",
+        "productVi": "Mão",
+        "productBranchId": 4,
+        "sourceBranchEnumIndex": 3,
+        "sourcePalaceIndex": 1
+      },
+      {
+        "key": "chenEarthly",
+        "chinese": "辰",
+        "upstreamVi": "Thìn",
+        "productVi": "Thìn",
+        "productBranchId": 5,
+        "sourceBranchEnumIndex": 4,
+        "sourcePalaceIndex": 2
+      },
+      {
+        "key": "siEarthly",
+        "chinese": "巳",
+        "upstreamVi": "Tỵ",
+        "productVi": "Tị",
+        "productBranchId": 6,
+        "sourceBranchEnumIndex": 5,
+        "sourcePalaceIndex": 3
+      },
+      {
+        "key": "wuEarthly",
+        "chinese": "午",
+        "upstreamVi": "Ngọ",
+        "productVi": "Ngọ",
+        "productBranchId": 7,
+        "sourceBranchEnumIndex": 6,
+        "sourcePalaceIndex": 4
+      },
+      {
+        "key": "weiEarthly",
+        "chinese": "未",
+        "upstreamVi": "Mùi",
+        "productVi": "Mùi",
+        "productBranchId": 8,
+        "sourceBranchEnumIndex": 7,
+        "sourcePalaceIndex": 5
+      },
+      {
+        "key": "shenEarthly",
+        "chinese": "申",
+        "upstreamVi": "Thân",
+        "productVi": "Thân",
+        "productBranchId": 9,
+        "sourceBranchEnumIndex": 8,
+        "sourcePalaceIndex": 6
+      },
+      {
+        "key": "youEarthly",
+        "chinese": "酉",
+        "upstreamVi": "Dậu",
+        "productVi": "Dậu",
+        "productBranchId": 10,
+        "sourceBranchEnumIndex": 9,
+        "sourcePalaceIndex": 7
+      },
+      {
+        "key": "xuEarthly",
+        "chinese": "戌",
+        "upstreamVi": "Tuất",
+        "productVi": "Tuất",
+        "productBranchId": 11,
+        "sourceBranchEnumIndex": 10,
+        "sourcePalaceIndex": 8
+      },
+      {
+        "key": "haiEarthly",
+        "chinese": "亥",
+        "upstreamVi": "Hợi",
+        "productVi": "Hợi",
+        "productBranchId": 12,
+        "sourceBranchEnumIndex": 11,
+        "sourcePalaceIndex": 9
+      }
+    ],
+    "target": "resolve_reviewed_branch_on_unchanged_validated_12_palace_natal_chart",
+    "defaultActivated": false,
+    "calendarAgeDerivation": false,
+    "knownNatalDifference": "product_leap_month_changes_at_day15_while_upstream_fixLunarMonthIndex_requires_day_gt15_and_excludes_timeIndex12",
+    "existingNatalLabelComparison": "regression_comparison_only_not_an_approval_or_formula_oracle",
+    "classicalComparison": "Quanshu_committed_adjacent_parent_sibling_anchor_differs_and_remains_insufficient",
+    "exclusions": [
+      "upstream_calendar_equivalence",
+      "whole_upstream_natal_equivalence",
+      "upstream_yearDivide_selection",
+      "upstream_ageDivide_selection",
+      "upstream_dayDivide_selection",
+      "upstream_horoscopeDivide_selection",
+      "upstream_from_rearrangement",
+      "date_to_nominal_age",
+      "birthday_boundary",
+      "leap_month_age_semantics",
+      "classical_quanshu_approval",
+      "default_profile_change",
+      "existing_natal_label_or_formula_change",
+      "childhood_period",
+      "thirteenth_decadal_period",
+      "decadal_heavenly_stems",
+      "decadal_stars",
+      "fortune_tu_hoa",
+      "interpretation",
+      "public_predictions"
+    ]
+  },
+  "compatibilityDigest": "98a1a85d93566442c1c09520f336ec7066cdc70262c62e3c0b6ab68697ecbc0a",
+  "fixturesDigest": "d9a2a37c2c4235c05003994d818427903ce52db07946d133c7e8df9f37c7a1ca",
+  "conditions": [
+    "explicit_named_modern_profile",
+    "menh_first_palace",
+    "cuc_nominal_start_age_2_to_6",
+    "sex_birth_year_branch_yin_yang_direction",
+    "inclusive_ten_year_periods",
+    "twelve_periods_only_modulo_twelve_palaces",
+    "explicit_nominal_age_one_to_125",
+    "before_first_after_last_no_placement",
+    "server_natal_menh_cuc_branch_sex_projection",
+    "preserve_classical_conflict_and_natal_labels",
+    "no_calendar_age_derivation",
+    "not_classical_or_public_prediction_approval"
+  ],
+  "reviewers": [],
+  "expertVerified": false,
+  "bookVerified": false,
+  "publicRelease": false,
+  "runtimeRuleChangeApplied": false
+}

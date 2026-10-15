@@ -1,0 +1,25 @@
+# T025 cross-cutting independent review — pass 4/12
+
+Scope: current staged T025 diff against main `4c1761e`, reviewed as interactions between source/core and API/UI units. No product edits or Git mutations. No new confirmed findings; no R2001+ IDs allocated. This is a review-pass result, not a declaration about the orchestrator's complete review loop, hosted CI, PR, merge, deployment, or production readiness.
+
+## Interfaces examined
+
+- `/analyze` strict optional `majorPeriod` validation and shared `/ask` analysis entry point; validated birth gender remains a private time option. The client cannot choose source evidence, normalized natal metadata, algorithm constants, or approval. Omission retains opt-in semantics.
+- Fixed, deeply immutable algorithm and exact evidence/source/edition matching feed the source-gated projection. Approval of the separately named modern Đại hạn profile does not reuse minor-period approval or promote classical/release decisions. The fixed source registry identity is reused without modifying that registry. Inert raw source and license records are retained independently of executable runtime modules.
+- Trusted natal Mệnh/Cục/branch/can/sex consistency, finite 12-period ages, inclusive decade ends, no pre-period childhood substitution, no thirteenth-period wrap, and the existing strict whole-layout branch→palace mapper compose without an unvalidated mapping path. The API never calculates the result from unreviewed existing natal labels.
+- Combined frontend request signature includes birth, viewing branch, minor option, major option and retry. Sequence/abort/request-key guards and separate draft/committed option state prevent previous request results appearing for a newer applied combination. Birth changes clear both choices. Independent validators check profile/source pin/requested age and closed prose/public fields. Draft changes hide the previous displayed result.
+- Source-scoped UI language and docs distinguish the chosen structural projection, explicit caller-supplied age, finite range, and classical/natal labels. No source claim becomes a real-world prediction or automatically derived calendar age.
+- Registration includes new binding/core/API tests in the existing backend runner; existing CI executes that runner and discovers the new Playwright spec. Evidence LF attributes cover exact hashed input bytes across checkout platforms. The reported immutable whitespace exception is limited to the five named artifacts, not application files or a blanket directory exemption.
+- Read-only Git diff inspection found no edits to existing natal engine formulas, source registry, prior modern-minor evidence, or classical decisions. API response construction still removes internal prose; no persistence/logging path is added for the optional age selection.
+
+## Independent executed interaction probe
+
+Executed direct `analyzeChartRequest` calls on all 28 independently generated real birth fixtures, with major ages 1, 16, and 125, simultaneously setting minor age 120 and viewing branch Hợi. Total: 196 successful calls. Asserted exact equality of natal statements, whole-chart output, function list, and chart source against omission baseline. Asserted exact equality of the entire time overlay after removing only `dai_han_modern`, compared with the same minor/year request without the major option. Asserted the new capability retains `publicFortune:false` and `interpretation:null`. This demonstrates that selecting the modern major variant does not alter classical gates, existing labels, annual placements, minor placements, or natal interpretation on the reviewed fixture matrix.
+
+No full suite was rerun in this pass. Parent-supplied full backend/frontend/browser/documentation results remain separate evidence; I do not claim to have executed those runs.
+
+## Dimensions and limits
+
+Correctness, trust boundaries/privacy, architectural integration, test registration, documentation contract, and evidence provenance interactions were examined. Performance was considered lightly: this diff introduces one fixed-size 12-palace projection into a single shared request, while evidence validation has a single cached entry point; no new unbounded request loop or duplicate frontend network engine was found. Independent performance-depth measurements belong to the separate specialist pass. Simplification: parallel major/minor draft state has a current responsibility (independent age/profile selection); sharing the existing request engine and strict mapper avoids duplicate orchestration. No confirmed change residue or redundancy was found requiring cleanup.
+
+Source passage re-authentication and individual source judgments were not repeated: this is an interaction review, and those have separate independent dual-model artifacts. Browser layout/accessibility depth belongs to the API/UI unit and actual E2E evidence. Hosted GitHub status/merge permissions were not tested here and are not inferred from local results. Final checkpoint/status wording is expected to be refreshed by the parent after this pass.

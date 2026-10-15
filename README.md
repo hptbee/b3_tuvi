@@ -12,7 +12,7 @@
 |---|---|---|
 | Landing page | Hero, CTA đến form, hai lĩnh vực, hướng dẫn và FAQ | Không có tài khoản hoặc dashboard cá nhân |
 | Tử Vi | Đổi dương lịch sang âm lịch, an sao, 12 cung, Tuần/Triệt, nhãn Đại hạn | Độ đúng theo nguồn phải được đánh giá riêng với test kỹ thuật |
-| Vị trí theo nguồn | Thiên Đức / Nguyệt Đức theo năm xem; [Tiểu hạn iztro](docs/tuvi/MODERN_MINOR_PROFILE.md) khi tự chọn biến thể và nhập tuổi mụ 1–120 | Chỉ đối chiếu chi → cung; không tự suy tuổi, chưa có lời luận vận hạn; hồ sơ cổ điển giữ khóa riêng |
+| Vị trí theo nguồn | Thiên Đức / Nguyệt Đức theo năm xem; [Tiểu hạn iztro](docs/tuvi/MODERN_MINOR_PROFILE.md) tuổi mụ 1–120 và [Đại hạn iztro](docs/tuvi/MODERN_MAJOR_PROFILE.md) tuổi mụ 1–125, chọn riêng từng hồ sơ | Chỉ đối chiếu vị trí; Đại hạn chỉ 12 chặng Cục..Cục+119, không tự suy tuổi hoặc luận vận hạn; hồ sơ cổ điển giữ khóa riêng |
 | Ý nghĩa sao/cung | Chạm tên sao/cung để tra cứu API | Cần seed SQLite; nội dung tra cứu không phải luận giải cá nhân đã duyệt |
 | Cách cục | Đối chiếu catalog JSON; hiển thị trạng thái và giới hạn | Khớp điều kiện runtime không tự chứng minh thành/phá cách theo nguồn |
 | Phân tích có cấu trúc | Cung, sao, quan hệ, rule và trạng thái chứng cứ; 4 claim nội bộ được duyệt theo phạm vi nguồn, gồm Tài Bạch / Quan Lộc / Phúc Đức | Public prose vẫn khóa; claim truyền thống không xác minh sự kiện đời |

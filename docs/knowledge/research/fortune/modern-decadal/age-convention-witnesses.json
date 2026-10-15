@@ -1,0 +1,77 @@
+{
+  "birth": {
+    "day": 15,
+    "month": 6,
+    "year": 1990
+  },
+  "birthday": {
+    "lunarDay": 23,
+    "lunarMonth": 5,
+    "lunarYear": 1990,
+    "isLeapMonth": false,
+    "canName": "Canh",
+    "chiName": "Ngọ",
+    "canIndex": 6,
+    "chiIndex": 7
+  },
+  "warning": "Age demonstration uses this repository Vietnamese lunar conversion, not cross-calendar equivalence certification; strict upstream comparison is directly visible in pinned source.",
+  "cases": [
+    {
+      "solar": {
+        "day": 3,
+        "month": 7,
+        "year": 1991
+      },
+      "lunar": {
+        "lunarDay": 22,
+        "lunarMonth": 5,
+        "lunarYear": 1991,
+        "isLeapMonth": false,
+        "canName": "Tân",
+        "chiName": "Mùi",
+        "canIndex": 7,
+        "chiIndex": 8
+      },
+      "ageDivideNormal": 2,
+      "ageDivideBirthday": 1
+    },
+    {
+      "solar": {
+        "day": 4,
+        "month": 7,
+        "year": 1991
+      },
+      "lunar": {
+        "lunarDay": 23,
+        "lunarMonth": 5,
+        "lunarYear": 1991,
+        "isLeapMonth": false,
+        "canName": "Tân",
+        "chiName": "Mùi",
+        "canIndex": 7,
+        "chiIndex": 8
+      },
+      "ageDivideNormal": 2,
+      "ageDivideBirthday": 1
+    },
+    {
+      "solar": {
+        "day": 5,
+        "month": 7,
+        "year": 1991
+      },
+      "lunar": {
+        "lunarDay": 24,
+        "lunarMonth": 5,
+        "lunarYear": 1991,
+        "isLeapMonth": false,
+        "canName": "Tân",
+        "chiName": "Mùi",
+        "canIndex": 7,
+        "chiIndex": 8
+      },
+      "ageDivideNormal": 2,
+      "ageDivideBirthday": 2
+    }
+  ]
+}

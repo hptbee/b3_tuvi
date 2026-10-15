@@ -358,7 +358,7 @@ describe('explicit modern minor placement', () => {
     await user.click(screen.getByRole('button', { name: 'Áp dụng tuổi mụ' }));
     expect(await screen.findByText(`Tuổi mụ ${age}: chi Thìn — cung Mệnh.`)).toBeVisible();
     expect(JSON.parse(fetch.mock.calls.at(-1)[1].body).minorPeriod).toEqual({ profile: minorProfile, nominalAge: Number(age) });
-    expect(screen.getByRole('link', { name: /iztro — mã nguồn/ })).toHaveAttribute('href', expect.stringContaining(minorPin));
+    expect(screen.getByRole('link', { name: /iztro — mã nguồn Tiểu hạn/ })).toHaveAttribute('href', expect.stringContaining(minorPin));
     await user.selectOptions(screen.getByLabelText('Hồ sơ Tiểu hạn'), '');
     await waitFor(() => expect(JSON.parse(fetch.mock.calls.at(-1)[1].body)).not.toHaveProperty('minorPeriod'));
     expect(screen.queryByText(`Tuổi mụ ${age}: chi Thìn — cung Mệnh.`)).not.toBeInTheDocument();
@@ -489,5 +489,154 @@ describe('explicit modern minor placement', () => {
     view.unmount();
     expect(fetch.mock.calls.at(-1)[1].signal.aborted).toBe(true);
     await act(async () => rejectLate(new Error('private late error')));
+  });
+});
+
+const majorProfile = 'iztro-pinned-menh-cuc-decadal';
+function majorBody(request, patch = {}) {
+  const body = minorBody(request);
+  const option = request.majorPeriod;
+  const age = option?.nominalAge;
+  body.time.capabilities.dai_han_modern = {
+    id: 'dai_han_modern', profile: option?.profile ?? null, nominalAge: age ?? null,
+    sourceId: 'iztro-modern-software', sourcePin: minorPin,
+    calendarCompatibility: 'server_natal_menh_cuc_branch_sex_age_projection_not_full_iztro_astrolabe',
+    ageInput: 'caller_supplied', ageDerivation: 'not_applied', publicFortune: false,
+    interpretation: null, interpretationStatus: 'blocked',
+    branch: null, branchPlacement: 'not_applied', palaceMapping: 'not_applied',
+    palaceId: null, functionId: null, functionLabel: null,
+    decadeIndex: null, decadeStartAge: null, decadeEndAge: null,
+    status: 'not_applied', reason: option ? 'before_first_period' : 'missing_explicit_profile_and_nominal_age',
+    ...(option && age >= 6 ? { status: 'branch_placed', reason: null, branch: 'Thìn', branchPlacement: 'supported',
+      palaceMapping: 'mapped', palaceId: '5', functionId: 'menh', functionLabel: 'MỆNH',
+      decadeIndex: age === 125 ? 11 : age >= 16 ? 1 : 0,
+      decadeStartAge: age === 125 ? 116 : age >= 16 ? 16 : 6,
+      decadeEndAge: age === 125 ? 125 : age >= 16 ? 25 : 15 } : {}), ...patch
+  };
+  return body;
+}
+function stubMajorFetch(transform = body => body) {
+  const fetch = vi.fn(async (_url, init) => {
+    const request = JSON.parse(init.body);
+    return { ok: true, json: async () => transform(majorBody(request), request) };
+  });
+  vi.stubGlobal('fetch', fetch);
+  return fetch;
+}
+async function applyMajorAge(user, age = '6') {
+  await user.selectOptions(screen.getByLabelText('Hồ sơ Đại hạn'), majorProfile);
+  const input = screen.getByLabelText('Tuổi mụ cho Đại hạn');
+  await user.clear(input);
+  if (age) await user.type(input, age);
+  await user.click(screen.getByRole('button', { name: 'Áp dụng tuổi mụ Đại hạn' }));
+}
+
+describe('explicit modern major placement', () => {
+  afterEach(() => vi.unstubAllGlobals());
+  it.each(['6', '125'])('submits explicit age %s and clears the profile', async age => {
+    const fetch = stubMajorFetch(); const user = userEvent.setup();
+    render(<StructuredAnalysis userInfo={birth} />);
+    await screen.findByRole('button', { name: /Mệnh:/ });
+    expect(JSON.parse(fetch.mock.calls[0][1].body)).not.toHaveProperty('majorPeriod');
+    await applyMajorAge(user, age);
+    expect(await screen.findByText(new RegExp(`Đại hạn tuổi mụ ${age}: chi Thìn`))).toBeVisible();
+    expect(JSON.parse(fetch.mock.calls.at(-1)[1].body).majorPeriod).toEqual({ profile: majorProfile, nominalAge: Number(age) });
+    await user.selectOptions(screen.getByLabelText('Hồ sơ Đại hạn'), '');
+    await screen.findByText('Chọn hồ sơ và nhập tuổi mụ để đối chiếu vị trí Đại hạn.');
+    expect(screen.getByLabelText('Tuổi mụ cho Đại hạn')).toHaveValue(null);
+    expect(screen.queryByText(new RegExp(`Đại hạn tuổi mụ ${age}:`))).not.toBeInTheDocument();
+    await waitFor(() => expect(JSON.parse(fetch.mock.calls.at(-1)[1].body)).not.toHaveProperty('majorPeriod'));
+  });
+  it.each(['', '0', '-1', '126', '1.5'])('rejects invalid draft %j without sending it', async age => {
+    const fetch = stubMajorFetch(); const user = userEvent.setup();
+    render(<StructuredAnalysis userInfo={birth} />); await screen.findByRole('button', { name: /Mệnh:/ });
+    await applyMajorAge(user); await screen.findByText(/Đại hạn tuổi mụ 6:/);
+    const count = fetch.mock.calls.length;
+    const input = screen.getByLabelText('Tuổi mụ cho Đại hạn'); await user.clear(input); if (age) await user.type(input, age);
+    expect(screen.queryByText(/Đại hạn tuổi mụ 6:/)).not.toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: 'Áp dụng tuổi mụ Đại hạn' }));
+    expect(screen.getByRole('alert')).toHaveTextContent('số nguyên từ 1 đến 125');
+    expect(fetch).toHaveBeenCalledTimes(count);
+  });
+  it('shows before-first and after-last nonplacements distinctly', async () => {
+    stubMajorFetch((body, request) => {
+      if (request.majorPeriod?.nominalAge === 125) body.time.capabilities.dai_han_modern = {
+        ...majorBody({ majorPeriod: { profile: majorProfile, nominalAge: 1 } }).time.capabilities.dai_han_modern,
+        nominalAge: 125, reason: 'after_last_period' };
+      return body;
+    });
+    const user = userEvent.setup(); render(<StructuredAnalysis userInfo={birth} />);
+    await screen.findByRole('button', { name: /Mệnh:/ }); await applyMajorAge(user, '1');
+    expect(await screen.findByText(/Tuổi mụ 1 chưa đến khoảng Đại hạn đầu tiên/)).toBeVisible();
+    await applyMajorAge(user, '125');
+    expect(await screen.findByText(/Tuổi mụ 125 vượt khoảng Đại hạn cuối cùng/)).toBeVisible();
+    expect(screen.queryByText(/Đại hạn tuổi mụ 125: chi/)).not.toBeInTheDocument();
+  });
+  it.each([
+    { profile: 'classical' }, { nominalAge: 7 }, { sourceId: 'forged' }, { sourcePin: 'changed' },
+    { calendarCompatibility: 'whole_iztro' }, { ageDerivation: 'calendar' }, { ageInput: 'inferred' },
+    { publicFortune: true }, { interpretation: 'prediction' }, { interpretationStatus: 'released' },
+    { reason: 'invented' }, { palaceId: '6' }, { functionId: 'tai_bach' }, { functionLabel: 'UNKNOWN' },
+    { decadeIndex: 12 }, { decadeIndex: -1 }, { decadeStartAge: 7 }, { decadeEndAge: 16 },
+    { decadeIndex: 0.5 }, { decadeStartAge: null }, { decadeEndAge: '15' },
+    { status: 'not_applied', reason: 'before_first_period' }, { status: 'not_applied', reason: 'after_last_period' }
+  ])('rejects forged response %j', async patch => {
+    stubMajorFetch((body, request) => { if (request.majorPeriod) Object.assign(body.time.capabilities.dai_han_modern, patch); return body; });
+    const user = userEvent.setup(); render(<StructuredAnalysis userInfo={birth} />);
+    await screen.findByRole('button', { name: /Mệnh:/ }); await applyMajorAge(user);
+    expect(await screen.findByRole('alert')).toHaveTextContent('Phản hồi trạng thái chứng cứ không hợp lệ');
+    expect(screen.queryByText(/Đại hạn tuổi mụ 6: chi/)).not.toBeInTheDocument();
+  });
+  it.each([['modern_profile_not_approved', 'not_applied'], ['invalid_chart', 'invalid_chart']])('accepts blocked reason %s with empty placement', async (reason, palaceMapping) => {
+    stubMajorFetch((body, request) => {
+      if (request.majorPeriod) body.time.capabilities.dai_han_modern = {
+        ...majorBody({ majorPeriod: { profile: majorProfile, nominalAge: 1 } }).time.capabilities.dai_han_modern,
+        nominalAge: 6, status: 'blocked', reason, palaceMapping };
+      return body;
+    });
+    const user = userEvent.setup(); render(<StructuredAnalysis userInfo={birth} />);
+    await screen.findByRole('button', { name: /Mệnh:/ }); await applyMajorAge(user);
+    await screen.findByRole('button', { name: /Mệnh:/ });
+    expect(screen.queryByRole('alert')).not.toBeInTheDocument();
+    expect(screen.queryByText(/Đại hạn tuổi mụ 6: chi/)).not.toBeInTheDocument();
+  });
+  it('rejects a missing capability on an explicit request', async () => {
+    stubMajorFetch((body, request) => { if (request.majorPeriod) delete body.time.capabilities.dai_han_modern; return body; });
+    const user = userEvent.setup(); render(<StructuredAnalysis userInfo={birth} />);
+    await screen.findByRole('button', { name: /Mệnh:/ }); await applyMajorAge(user);
+    expect(await screen.findByRole('alert')).toHaveTextContent('Phản hồi trạng thái chứng cứ không hợp lệ');
+  });
+  it('keeps both periods and year independent and rejects an old major response', async () => {
+    let finishOld;
+    const fetch = vi.fn(async (_url, init) => { const request = JSON.parse(init.body);
+      if (request.majorPeriod?.nominalAge === 6) return new Promise(resolve => { finishOld = resolve; });
+      return { ok: true, json: async () => majorBody(request) }; });
+    vi.stubGlobal('fetch', fetch); const user = userEvent.setup(); render(<StructuredAnalysis userInfo={birth} />);
+    await screen.findByRole('button', { name: /Mệnh:/ }); await applyMinorAge(user, '2');
+    await screen.findByText('Tuổi mụ 2: chi Thìn — cung Mệnh.');
+    await applyMajorAge(user, '6'); await applyMajorAge(user, '16'); await screen.findByText(/Đại hạn tuổi mụ 16:/);
+    await user.selectOptions(screen.getByLabelText('Chi năm xem'), 'Ngọ'); await screen.findByText(/Đại hạn tuổi mụ 16:/);
+    expect(JSON.parse(fetch.mock.calls.at(-1)[1].body)).toMatchObject({ viewYearBranch: 'Ngọ', minorPeriod: { nominalAge: 2 }, majorPeriod: { nominalAge: 16 } });
+    await act(async () => finishOld({ ok: true, json: async () => majorBody({ majorPeriod: { profile: majorProfile, nominalAge: 6 } }) }));
+    expect(screen.getByText(/Đại hạn tuổi mụ 16:/)).toBeVisible(); expect(screen.queryByText(/Đại hạn tuổi mụ 6:/)).not.toBeInTheDocument();
+  });
+  it('clears both period options on birth change and navigation back', async () => {
+    const fetch = stubMajorFetch(); const user = userEvent.setup();
+    const { rerender } = render(<StructuredAnalysis userInfo={birth} />); await screen.findByRole('button', { name: /Mệnh:/ });
+    await applyMinorAge(user); await screen.findByText('Tuổi mụ 1: chi Thìn — cung Mệnh.');
+    await applyMajorAge(user); await screen.findByText(/Đại hạn tuổi mụ 6:/);
+    rerender(<StructuredAnalysis userInfo={{ ...birth, gender: -1 }} />); await screen.findByRole('button', { name: /Mệnh:/ });
+    rerender(<StructuredAnalysis userInfo={birth} />); await screen.findByRole('button', { name: /Mệnh:/ });
+    for (const label of ['Hồ sơ Đại hạn', 'Hồ sơ Tiểu hạn']) expect(screen.getByLabelText(label)).toHaveValue('');
+    for (const label of ['Tuổi mụ cho Đại hạn', 'Tuổi mụ nhập trực tiếp']) expect(screen.getByLabelText(label)).toHaveValue(null);
+    const request = JSON.parse(fetch.mock.calls.at(-1)[1].body); expect(request).not.toHaveProperty('minorPeriod'); expect(request).not.toHaveProperty('majorPeriod');
+  });
+  it('retries the committed major option and restores heading focus', async () => {
+    let failed = false;
+    const fetch = stubMajorFetch((body, request) => { if (request.majorPeriod && !failed) { failed = true; body.time.capabilities.dai_han_modern.sourcePin = 'forged'; } return body; });
+    const user = userEvent.setup(); render(<StructuredAnalysis userInfo={birth} />); await screen.findByRole('button', { name: /Mệnh:/ });
+    await applyMajorAge(user); await screen.findByRole('alert'); await user.click(screen.getByRole('button', { name: 'Thử lại chứng cứ' }));
+    await screen.findByText(/Đại hạn tuổi mụ 6:/); expect(JSON.parse(fetch.mock.calls.at(-1)[1].body).majorPeriod).toEqual({ profile: majorProfile, nominalAge: 6 });
+    await waitFor(() => expect(screen.getByRole('heading', { name: 'Trạng thái chứng cứ' })).toHaveFocus());
   });
 });

@@ -2,18 +2,18 @@
 
 - b3_home: /workspace/b3_tuvi/.b3/runtime/b3_ai-engineering
 - product_root: /workspace/b3_tuvi
-- plan_id: Autonomous Product Completion version 13
-- plan_version: 13
-- branch: codex/tuvi-modern-minor-placement
-- run_base_sha: 52319c9c7123e4ff1ace74b7a81ab611df2acef5
+- plan_id: Autonomous Product Completion version 16
+- plan_version: 16
+- branch: codex/tuvi-modern-decadal-placement
+- run_base_sha: 4c1761ea6448eeba0234c04405f9c9245eece320
 - preceding_invocation_base_sha: f0dec74973ef9d07129e19330356f8e6d2040227
 - previous_run_base_sha: 45615a48d0c75b90138cfc618320ffae6e9c34e0
-- current_task: none
-- last_completed_task: T024
-- next_source_task: T025
-- current_task_base_sha: 0f0c1f814e9a23c3f7c88c880240286eee9f1650
-- run_status: incomplete
-- stop_reason: review_pass_budget_exhausted_after_12_completed_passes
+- current_task: T027
+- last_completed_task: T025
+- next_source_task: T027
+- current_task_base_sha: 4c1761ea6448eeba0234c04405f9c9245eece320
+- run_status: running
+- preceding_invocation_stop_reason: review_pass_budget_exhausted_after_12_completed_passes
 - updated: 2026-10-15
 
 ## Historical reconciliation — preceding invocation
@@ -434,3 +434,36 @@ The three feature branches are pushed as a stack; main has not merged them. GitH
 - This finalcheckpoint/docs-only commit corrects the explicit immutable-source whitespace exception and saves remoteverifiedfeatureSHAs; it is pushedafterwriting. Onresume reconcileactualHEAD/remote ratherthanrecreateanycompletedfeature oroldPR. Runlevelhandoffdocisnotanewdomainfeature/research-onlyPR. Reviewcap12/12remainsreached; nexttaskT025pendingreadiness.
 
 - Finalhandoffdoclinkcheck afterdurablePRdraftaddition:184MarkdownfilesPASS (/tmp/tuvi-final-doc-links.log); earlier183countsarepre-handoff receipts. Application/docs cumulativewhitespacecheckPASS withonlyexplicitimmutablecontext exception; no application/source/math bytes changed duringhandoff.
+
+## New invocation — T025 resume from ace285c
+- Actual initialHEADace285c, cleanworkingtree, expectedbranchmatchedpriorcheckpoint; fetchedmain4c1761ea6448eeba0234c04405f9c9245eece320 andPR50–55heads. Allsixarealreadymerged (mainmergecommits61986c9,6409553,b09a275,0869c8b,3895baa,4c1761e). No duplicatePRs/features. Mainvsace adds only2PR49researchdossiers; all completed code/evidence stillpresent.
+- Newtopicbranchcodex/tuvi-modern-decadal-placement fromlatestmain; currenttaskbase/runbase4c1761e. CurrenttaskT025, source/readinessresearchphase; no modernDaiHanimplementationapprovedyet.
+- New invocation engineeringreviewbudget0/12used; previous12arehistorical. Sourceanalyst andseparatefixtureanalyst independentlyreadfullmodern/classical/legacycontexts BEFORE actualdualmodelapproval; separateJITdesigner inspects existingcontracts.
+- Latestuser explicitlyauthorizesauto-merge, supersedingolderno-auto-mergeinstruction. Onlyeligiblechangesafterallengineering/source/branch/releasegates; no defaultformula/sourceauth/publicprose/AI/deploygatebypass. PR50–55alreadymerged, donotmerge/recreateagain. GitHubGraphQLstillForbidden onactualnewread, Gitfetchworks; no missing-tokenassumption.
+- Currentnextaction:complete exactmodernage/Mệnh/Cục/direction/12decades/limits/projection+independentfixtures, compareclassicalQuanshuandnataldecadelabels, obtainactualnewtwo-modelapproval onlyforcompletevariant, thenJITready→API/UIimplementation→reviews/fixes/PR/eligibleautomerge.
+
+### T025 new invocation readiness
+- depth: detailed
+- readiness: ready
+- plan_version: 15
+- approach_at_sha: 4c1761ea6448eeba0234c04405f9c9245eece320
+- approach: approach/T025.md
+- task_spec_fingerprint: depends_on=T024|scope=docs/knowledge/research/fortune/modern-decadal/, docs/tuvi/MODERN_MAJOR_PROFILE.md, .gitattributes, README.md, docs/planning/AUTODEV_MASTER_PLAN_V2.md, backend/src/knowledge/modernMajorBinding.js, backend/src/time/modernMajor.js, backend/src/time/timeEngine.js, backend/src/interpretation/analyze.js, backend/test/modernMajorBinding.test.mjs, backend/test/modernMajor.test.mjs, backend/test/modernMajorApi.test.mjs, backend/test/timeEngine.test.mjs, backend/test/sourceHygiene.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md, frontend/src/components/StructuredAnalysis.jsx, frontend/src/components/StructuredAnalysis.test.jsx, frontend/src/App.css if layout requires, frontend/e2e/modern-major-placement.spec.js|acceptance_criteria=Independently validate complete Mệnh anchor, source Cục start-age/ten-year spans, yin-yang definition/sex direction, age range and wrap before any new placement; Explicitly model from/config/calendar dependencies and proposed product natal-Mệnh/Cục/year-branch projection; never certify whole upstream natal/calendar equivalence by assumption; Define pre-first-period and last-supported-age behavior without inventing childhood placement or extending source ranges; Independently generate real positive/negative and all period-boundary fixtures BEFORE actual distinct-model approval; no reuse of Tiểu hạn approval for Đại hạn; If accepted, deliver complete source-gated API/UI placement with exact current-input validation and no prose, while preserving classical Quanshu conflict/default labels
+- Actual independent distinct-model source judgments and parent unchanged comparator AI_ACCEPTED/MATCH complete; explicit finite modern projection only, not classical/calendar/expert/public approval. Independent source fixtures preceded reviews. Implement immediately under preserved gates; engineeringbudget0/12.
+
+T025 implementation receipt: source-gated backend/API and major UI implemented; three new backend tests and101 structured-analysis UI tests passed. Backend fullCI88.36/90.06 before final small gender guard; guard targeted passes, final fullCI pending stable reviewedtree. Portable dossier replay initially rejected legitimate same-root fileURL; original author fixed only new wrapper and actual replay28charts/1759comparisons/3agewitnessesPASS, frozen evidence unchanged. Independent technical reviews CORE1 and routedperformance2 dispatched (2/12), UI E2E/currenttree checks underway. No commit/PR/merge yet.
+T026 actual source models gpt-6.1-sol andgpt-6-astra bothreturn PARTIAL/interpretationUNRESOLVED: 財帛 clause following或作三方 has unresolvedattachment; no direct-host predicate/wording approval. Do not implement that candidate or repeat same evidence review; move to newly explicit reciprocal PhúcĐức Cơ+Cự candidate investigation. T019 generic VCD19/18taxonomy stillunresolved.
+
+## T025 final quality gate — current invocation
+- Parent outcome: PASS for T025, not production release. LARGE scope CORE + API/UI units, routed performance and crosscut; four technical reviewer passes, zero confirmed critical/high/medium findings, no unresolved fixes. Remaining budget8/12; old historical12 remain separate.
+- Full current backend CI62files: lines88.36/branches90.06 PASS; frontend206tests/9files lines89.07/branches89.71 PASS; lint/build PASS; all55 Chromium E2E PASS (55.8s), using existing frontend/.b3/playwright.cloud.mjs and /usr/bin/chromium. Default browser cache is absent in cloud; default invocation failure was environment setup, not a passed test.
+- Docs link self-tests +194markdown files PASS; portable dossier28fixtures/1759comparisons/3agewitnesses PASS. Independent CORE additionally enumerated180,000 pure ring inputs; API/UI163combinedrequests and crosscut196combinedrequests show existing natal/classical/minor/annual output unchanged.
+- Exact immutable upstream whitespace exception:147diagnostics on five named source/context snapshots only; application staged diff outside those exactfiles PASS. Byte identities kept; STATUS.md records exception. Actual independent engineering reports archived with dossier.
+- Capability growth: one additional optional modern Đại hạn placement with source identity, explicit supplied age1..125, Mệnh/Cục/sex/year-branch direction and finite12inclusive decades, actual natal palace mapping, complete UI and fail-closed evidence/response gates. Approved internal interpretation registry remains4; no new wording/public predictions, classical approval, natal formula/default changes or deployment.
+- Focused branch codex/tuvi-modern-decadal-placement basedmain4c1761e; commit/push/PR receipt follows. PRs50–55 were already merged; not duplicated.
+
+## Ordered resumable source queue
+1. T027 Phúc Đức Cơ–Cự: nineteen independently verified real fixtures, complete reciprocal paragraphs/fullsection and exact proposed wording frozen in successor source packet. Actual requested distinct models failed usage limit; REVIEW_NOT_EXECUTED. Retry when available, do not mark accepted or implement from structural tests alone.
+2. T026 Juan3 Tài TửVi/Tả/Hữu: both actual models PARTIAL / interpretationUNRESOLVED because 財帛 attachment after三方 is ambiguous. Preserve negative decision and investigate only genuinely new source evidence; no repeated same-packet NO-GO cycle.
+3. T019 generic VCD: literal nineteen-star list vs text18正曜 plus 吉星/拱照 relation unresolved; do not force taxonomy or invent conditions.
+4. T022 Thiên Phủ 空/耗/sourcebrightness/relationship and T020 original classical age/profile semantics require unavailable complete evidence. Modern variants do not close them.
