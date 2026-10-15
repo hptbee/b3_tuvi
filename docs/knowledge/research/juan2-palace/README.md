@@ -42,3 +42,12 @@ Both actual independent models accepted only the attributed `在酉宮雖美無�
 Ten unique real solar inputs were independently replayed before both model reviews: three structural positives and seven conjunction negatives. Mão with the same pair must not match Dậu; TPTC alone is insufficient. The fixture named `positive_dau_host_clean_TPTC_adverse` records Hóa Kỵ in an expanded engineering inventory, outside the paragraph's named adverse list. It establishes no source modifier applicability. The wrong-function witness also has a different branch, so it is not an isolated Dậu/function counterexample.
 
 The raw source span and context include final LF in their SHA-256 hashes. Quotations omit only terminal LF to satisfy the unchanged comparator's whitespace contract; both complete paragraphs and all required anchors remain. JSON tree/fixture hashing still uses compact `JSON.stringify` byte order. Both model responses bind all five digest groups, exact predicate, wording and limitations; the existing comparator replays `AI_ACCEPTED`. This separately approved internal note does not authenticate an original edition, certify natal formulas, release public prose or resolve the modifier system.
+
+
+## Phúc Đức Cơ–Cự: nhánh văn bản đối ứng
+
+Hai đoạn đầy đủ ghi `巨門同勞力欠安` và `天機同心忙不安`. Claim `interp-quanshu-phuc-co-cu-host` dùng đúng Thiên Cơ và Cự Môn đồng cung Phúc Đức, không thêm điều kiện Dậu, brightness hoặc vắng sát tinh. Lời chú giải trích dẫn phạm vi nguồn, không xác nhận tính cách/sức khỏe và nói rõ hai nhánh gia sát ở cuối đoạn chưa được đánh giá.
+
+[Packet gốc và trạng thái](phuc-co-cu-packet/STATUS.md), [bundle](review-bundle-phuc-co-cu.json), [execution](execution-phuc-co-cu.json) và [quyết định](../../interpretation-decisions/juan2-phuc-co-cu.json) giữ nguyên hai đánh giá thực tế cùng 19 lá số kiểm tra độc lập trước duyệt. Các phép biến đổi AST/lời văn/fixture dù tự tính lại hash cũng không thay được phạm vi đã khóa trong runtime. Đây là claim nội bộ thứ năm; nguồn/ấn bản cũ, công thức natal và public prose không thay đổi.
+
+Ứng viên Juan3 Tài Bạch Tử Vi/Tả/Hữu bị cả hai review giữ PARTIAL / UNRESOLVED do phạm vi ngữ pháp chưa rõ; [bằng chứng ứng viên](../juan3-palace/tai-ziwei-fubi-candidate/STATUS.md) được lưu để tiếp tục khi có nguồn mới, không kích hoạt claim.

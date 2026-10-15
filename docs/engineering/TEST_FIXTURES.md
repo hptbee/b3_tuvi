@@ -29,6 +29,7 @@ Giữ hành vi đã có của engine, API, hoặc chuẩn hóa. Kết quả kỳ
 - `modernMinorApi.test.mjs`: real HTTP explicit-age opt-in, privacy, no-store error responses and no persistence; modern structural placement only.
 - `sourcePalaceBinding.test.mjs`: pinned paragraph/context, actual distinct-model approval and digest binding; mutations never grant source approval.
 - `sourcePalaceQuan.test.mjs`: ten real solar witnesses of the separately reviewed Quan Lộc Cơ–Cự/Dậu textual branch, evidence mutations and branch-coherence guards; engineering regressions, not verified career outcomes.
+- `sourcePalacePhucCoCu.test.mjs`: nineteen independently replayed real solar witnesses of the source-scoped Phúc Đức Cơ–Cự baseline, immutable review/evidence mutations and withheld public output; engineering regressions, not health/personality or life-outcome goldens.
 - `sourcePalaceInterpretation.test.mjs`: real solar inputs exercise reviewed source-palace predicates and withheld public prose; engineering witnesses, not historical life-outcome goldens.
 - `combinationRoute.integration.test.mjs`
 - `chartGenerate.test.mjs`
