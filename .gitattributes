@@ -1,2 +1,5 @@
 # Source digests and extraction prompts bind to these exact LF text bytes.
 docs/knowledge/**/*.txt text eol=lf
+
+# Modern profile fixtures are approved as exact LF bytes, including JSON formatting.
+docs/knowledge/research/fortune/modern-minor/fixtures.json text eol=lf

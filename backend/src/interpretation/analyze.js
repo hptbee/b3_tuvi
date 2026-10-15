@@ -1,3 +1,4 @@
+import { validateMinorPeriod } from '../time/modernMinor.js';
 import { solarToLunar } from '../engine/lunar.js';
 import { calculateTuVi } from '../engine/tuviRules.mjs';
 import { validateChartInput } from '../engine/chartInput.js';
@@ -26,7 +27,7 @@ function chartFromBirth(value) {
     return chart;
 }
 
-function responseFor(chart, bodyViewYear) {
+function responseFor(chart, timeOptions) {
     const analysis = interpretChart(chart);
     if (!analysis.ok) {
         if (analysis.error === 'knowledge_bundle_invalid') {
@@ -42,7 +43,7 @@ function responseFor(chart, bodyViewYear) {
             chartSource: 'server',
             palaceFunctions: analysis.statements.filter((statement) => !statement.thanOverlay).map((statement) => statement.functionId),
             wholeChart: synthesize(analysis),
-            time: timeOverlay(chart, { viewYearBranch: bodyViewYear }),
+            time: timeOverlay(chart, timeOptions),
             palaceCount: PALACE_FUNCTIONS.length
         }
     };
@@ -54,11 +55,16 @@ export function analyzeChartRequest(body) {
     }
     const parsed = validateChartInput(body);
     if (!parsed.ok) return { status: 400, body: { error: 'Dữ liệu lập lá số không hợp lệ', details: parsed.errors } };
+    const hasMinorPeriod = Object.hasOwn(body, 'minorPeriod');
+    if (hasMinorPeriod && !validateMinorPeriod(body.minorPeriod)) {
+        return { status: 400, body: { error: 'Tùy chọn Tiểu hạn không hợp lệ', code: 'invalid_minor_period' } };
+    }
     const chart = chartFromBirth(parsed.value);
     if (!chart?.ok) return { status: 400, body: { error: 'Không đổi được ngày dương sang âm lịch' } };
     const viewYearBranch = body.viewYearBranch;
     if (viewYearBranch != null && viewYearBranch !== '' && typeof viewYearBranch !== 'string') {
         return { status: 400, body: { error: 'Chi năm xem không hợp lệ', code: 'invalid_view_year_branch' } };
     }
-    return responseFor(chart, viewYearBranch);
+    return responseFor(chart, { viewYearBranch, gender: parsed.value.gender,
+        ...(hasMinorPeriod ? { minorPeriod: body.minorPeriod } : {}) });
 }

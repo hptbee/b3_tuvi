@@ -32,6 +32,8 @@ export const unitTests = [
     'test/knowledgeCoverage.test.mjs',
     'test/wholeChart.test.mjs',
     'test/timeEngine.test.mjs',
+    'test/modernMinorBinding.test.mjs',
+    'test/modernMinor.test.mjs',
     'test/thienDuc.test.mjs',
     'test/fixtureClasses.test.mjs',
     'test/knowledgeCatalog.test.mjs',
@@ -55,6 +57,7 @@ export const unitTests = [
 ];
 
 export const integrationTests = [
+    'test/modernMinorApi.test.mjs',
     'test/numerologyApi.test.mjs',
     'test/numerologyRateLimit.test.mjs',
     'test/combinationRoute.integration.test.mjs',

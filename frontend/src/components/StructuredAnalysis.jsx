@@ -25,6 +25,40 @@ const AVAILABILITY_LABELS = {
 
 const YEAR_BRANCHES = ['Tí', 'Sửu', 'Dần', 'Mão', 'Thìn', 'Tị', 'Ngọ', 'Mùi', 'Thân', 'Dậu', 'Tuất', 'Hợi'];
 const ANNUAL_STARS = ['thien_duc', 'nguyet_duc'];
+const MINOR_PROFILE = 'iztro-pinned-age1-sex-triad';
+const MINOR_SOURCE = 'iztro-modern-software';
+const MINOR_PIN = '2f00e2ab0c80b1632e55bc362f2ae26e121245cb';
+const MINOR_COMPATIBILITY = 'branch_sex_age_projection_not_full_iztro_astrolabe';
+const EMPTY_MINOR_DRAFT = { profile: '', age: '' };
+
+function minorSignature(option) {
+  return option ? `${option.profile}:${option.nominalAge}` : 'omitted';
+}
+
+function validMinorResponse(body, option) {
+  const cap = body.time?.capabilities?.tieu_han_modern;
+  if (cap === undefined) return option === null;
+  if (!cap || typeof cap !== 'object' || cap.id !== 'tieu_han_modern'
+    || cap.publicFortune !== false || cap.interpretation !== null || cap.interpretationStatus !== 'blocked') return false;
+  const emptyPlacement = cap.branch === null && cap.palaceId === null
+    && cap.functionId === null && cap.functionLabel === null;
+  if (!option) return cap.status === 'not_applied'
+    && cap.reason === 'missing_explicit_profile_and_nominal_age'
+    && cap.profile === null && cap.nominalAge === null
+    && cap.palaceMapping === 'not_applied' && cap.branchPlacement === 'not_applied' && emptyPlacement;
+  if (cap.profile !== option.profile || cap.nominalAge !== option.nominalAge
+    || cap.sourceId !== MINOR_SOURCE || cap.sourcePin !== MINOR_PIN
+    || cap.ageInput !== 'caller_supplied' || cap.ageDerivation !== 'not_applied'
+    || cap.calendarCompatibility !== MINOR_COMPATIBILITY) return false;
+  if (cap.status === 'blocked') return ['modern_profile_not_approved', 'invalid_chart'].includes(cap.reason)
+    && cap.palaceMapping === 'not_applied' && emptyPlacement;
+  if (cap.status !== 'branch_placed' || cap.branchPlacement !== 'supported' || cap.palaceMapping !== 'mapped'
+    || !YEAR_BRANCHES.includes(cap.branch) || cap.palaceId !== String(YEAR_BRANCHES.indexOf(cap.branch) + 1)
+    || !Object.hasOwn(PALACE_LABELS, cap.functionId)
+    || cap.functionLabel !== PALACE_LABELS[cap.functionId].toLocaleUpperCase('vi')) return false;
+  return body.statements.filter(statement => !statement.thanOverlay
+    && statement.palaceId === cap.palaceId && statement.functionId === cap.functionId).length === 1;
+}
 
 const CYCLE_LABELS = {
   tieu_han: 'Tiểu hạn',
@@ -211,7 +245,23 @@ export default function StructuredAnalysis({ userInfo }) {
   const key = birthKey(userInfo);
   const [viewYearBranch, setViewYearBranch] = useState('');
   const [attempt, setAttempt] = useState(0);
-  const requestKey = `${key}:${viewYearBranch}:${attempt}`;
+  const [minorDraftState, setMinorDraftState] = useState(null);
+  const [minorCommittedState, setMinorCommittedState] = useState(null);
+  const [minorError, setMinorError] = useState('');
+  const [minorBirthKey, setMinorBirthKey] = useState(key);
+  // Supplied age belongs to one birth input, including when navigating back.
+  if (minorBirthKey !== key) {
+    setMinorBirthKey(key);
+    setMinorDraftState(null);
+    setMinorCommittedState(null);
+    setMinorError('');
+  }
+  const minorDraft = minorDraftState?.key === key ? minorDraftState : EMPTY_MINOR_DRAFT;
+  const minorOption = minorCommittedState?.key === key ? minorCommittedState.option : null;
+  const minorKey = minorSignature(minorOption);
+  const minorDirty = minorDraft.profile !== (minorOption?.profile || '')
+    || minorDraft.age !== (minorOption ? String(minorOption.nominalAge) : '');
+  const requestKey = `${key}:${viewYearBranch}:${minorKey}:${attempt}`;
   const [state, setState] = useState({ key: '', status: 'idle', body: null, error: '' });
   const [selectedId, setSelectedId] = useState(null);
   const sequence = useRef(0);
@@ -227,7 +277,7 @@ export default function StructuredAnalysis({ userInfo }) {
   }, []);
 
   useEffect(() => {
-    const nextRequestKey = `${key}:${viewYearBranch}:${attempt}`;
+    const nextRequestKey = `${key}:${viewYearBranch}:${minorKey}:${attempt}`;
     activeKey.current = nextRequestKey;
     const day = userInfo?.day;
     const month = userInfo?.month;
@@ -242,7 +292,7 @@ export default function StructuredAnalysis({ userInfo }) {
     fetch(`${API_BASE}/api/interpretations/analyze`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ day, month, year, hour, gender, viewYearBranch }),
+      body: JSON.stringify({ day, month, year, hour, gender, viewYearBranch, ...(minorOption ? { minorPeriod: minorOption } : {}) }),
       signal: controller.signal
     })
       .then(async (response) => {
@@ -257,7 +307,7 @@ export default function StructuredAnalysis({ userInfo }) {
           setState({ key: nextRequestKey, status: 'error', body: null, error: serverErrorMessage(body?.error) });
           return;
         }
-        if (!validAnalysisBody(body)) {
+        if (!validAnalysisBody(body) || !validMinorResponse(body, minorOption)) {
           setState({ key: nextRequestKey, status: 'error', body: null, error: INVALID_ANALYSIS_MESSAGE });
           return;
         }
@@ -274,7 +324,7 @@ export default function StructuredAnalysis({ userInfo }) {
         setState({ key: nextRequestKey, status: 'error', body: null, error: 'Không kết nối được máy chủ phân tích' });
       });
     return () => controller.abort();
-  }, [key, userInfo, viewYearBranch, attempt]);
+  }, [key, userInfo, viewYearBranch, minorKey, minorOption, attempt]);
 
   useEffect(() => {
     if (focusAfterRetry.current !== requestKey) {
@@ -292,13 +342,36 @@ export default function StructuredAnalysis({ userInfo }) {
   const selected = statements.find((item) => item.statementId === selectedId) || null;
   const blocked = Object.entries(current.body?.time?.capabilities || {}).filter(([, value]) => (
     value && (value.status === 'blocked' || value.status === 'not_applied')
-  )).filter(([id]) => !ANNUAL_STARS.includes(id));
+  )).filter(([id]) => !ANNUAL_STARS.includes(id) && id !== 'tieu_han_modern');
 
   const retry = () => {
     const nextAttempt = attempt + 1;
-    focusAfterRetry.current = `${key}:${viewYearBranch}:${nextAttempt}`;
+    focusAfterRetry.current = `${key}:${viewYearBranch}:${minorKey}:${nextAttempt}`;
     setAttempt(nextAttempt);
   };
+
+  const changeMinorDraft = (patch) => {
+    setMinorError('');
+    setMinorDraftState({ ...minorDraft, ...patch, key });
+    if (patch.profile === '') {
+      setMinorDraftState({ key, profile: '', age: '' });
+      setMinorCommittedState(null);
+    }
+  };
+  const applyMinor = (event) => {
+    event.preventDefault();
+    const age = Number(minorDraft.age);
+    if (minorDraft.profile !== MINOR_PROFILE || minorDraft.age.trim() === ''
+      || !Number.isInteger(age) || age < 1 || age > 120) {
+      setMinorDraftState({ ...minorDraft, key });
+      setMinorError('Chọn hồ sơ và nhập tuổi mụ là số nguyên từ 1 đến 120.');
+      return;
+    }
+    setMinorError('');
+    setMinorDraftState({ key, profile: MINOR_PROFILE, age: String(age) });
+    setMinorCommittedState({ key, option: { profile: MINOR_PROFILE, nominalAge: age } });
+  };
+  const minorPlacement = current.body?.time?.capabilities?.tieu_han_modern;
 
   return (
     <section className="evidence-panel" aria-labelledby="evidence-heading">
@@ -344,6 +417,36 @@ export default function StructuredAnalysis({ userInfo }) {
             </p>
           </section>
         )}
+        <section className="modern-minor-panel" aria-labelledby="modern-minor-heading">
+          <h3 id="modern-minor-heading">Vị trí Tiểu hạn — hồ sơ phần mềm iztro</h3>
+          <p id="modern-minor-help">Bạn nhập tuổi mụ; ứng dụng không tự tính tuổi từ ngày hoặc năm xem. Chỉ đối chiếu vị trí trên lá số, chưa có luận vận hạn.</p>
+          <p>Dùng chi năm sinh của lá số này; đây là phép đối chiếu theo hồ sơ phần mềm, không xác nhận toàn bộ lịch và lá số iztro.</p>
+          <form className="modern-minor-controls" onSubmit={applyMinor} noValidate>
+            <label>Hồ sơ Tiểu hạn
+              <select aria-label="Hồ sơ Tiểu hạn" value={minorDraft.profile} onChange={event => changeMinorDraft({ profile: event.target.value })}>
+                <option value="">Chưa chọn</option>
+                <option value={MINOR_PROFILE}>iztro — tuổi mụ nhập trực tiếp</option>
+              </select>
+            </label>
+            <label>Tuổi mụ nhập trực tiếp
+              <input aria-label="Tuổi mụ nhập trực tiếp" type="number" inputMode="numeric" min="1" max="120" step="1" value={minorDraft.age}
+                aria-describedby={`modern-minor-help${minorError && minorDraftState?.key === key ? ' modern-minor-error' : ''}`}
+                aria-invalid={Boolean(minorError && minorDraftState?.key === key)}
+                onChange={event => changeMinorDraft({ age: event.target.value })} />
+            </label>
+            <button type="submit">Áp dụng tuổi mụ</button>
+          </form>
+          {minorError && minorDraftState?.key === key && <p id="modern-minor-error" role="alert">{minorError}</p>}
+          <div aria-live="polite">
+            {minorDirty ? <p>Chưa áp dụng thay đổi. Chọn hồ sơ, nhập tuổi mụ rồi chọn “Áp dụng tuổi mụ”.</p>
+              : !minorOption ? <p>Chọn hồ sơ và nhập tuổi mụ để đối chiếu vị trí Tiểu hạn.</p>
+                : current.status === 'ready' && minorPlacement?.status === 'branch_placed'
+                  ? <p>Tuổi mụ {minorOption.nominalAge}: chi {minorPlacement.branch} — cung {PALACE_LABELS[minorPlacement.functionId]}.</p>
+                  : current.status === 'ready' ? <p>Chưa thể đối chiếu vị trí theo hồ sơ này; chưa có vị trí được xác nhận.</p>
+                    : <p>Chưa có vị trí được xác nhận cho tuổi mụ đã áp dụng.</p>}
+          </div>
+          <p>Nguồn phần mềm: <a href={`https://github.com/SylarLong/iztro/blob/${MINOR_PIN}/src/astro/palace.ts#L185-L233`}>iztro — mã nguồn Tiểu hạn tại phiên bản đã đối chiếu</a>.</p>
+        </section>
         {current.status === 'ready' && statements.length === 0 && <p>Phản hồi không có cung.</p>}
         {current.status === 'ready' && statements.length > 0 && (
           <>

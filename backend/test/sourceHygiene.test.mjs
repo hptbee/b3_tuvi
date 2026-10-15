@@ -58,4 +58,17 @@ assert.strictEqual(mirrorEdition.textCollatedAgainstOriginal, false);
 assert.strictEqual(mirrorEdition.bookVerified, false);
 assert.strictEqual(mirrorEdition.expertVerified, false);
 
+const modernSource = byId.get('iztro-modern-software');
+const modernEdition = sourcesDoc.editions.find((edition) => edition.editionId === 'iztro-modern-2f00e2ab0c80');
+assert.strictEqual(modernSource.sourceType, 'modern_software_reference');
+assert.strictEqual(modernSource.schoolId, null);
+assert.strictEqual(modernSource.bibliographicStatus, 'secondary');
+assert.strictEqual(modernSource.bookVerified, false);
+assert.strictEqual(modernSource.expertVerified, false);
+assert.strictEqual(modernEdition.gitCommit, '2f00e2ab0c80b1632e55bc362f2ae26e121245cb');
+assert.strictEqual(modernEdition.contentSha256, 'a9c6d8444d5edcd241068f5bd83fed3aa38a57b206cebb221f86b8d4057b5273');
+for (const key of ['authenticated','originalEditionAuthenticated','textCollatedAgainstOriginal','bookVerified','expertVerified']) {
+    assert.strictEqual(modernEdition[key], false);
+}
+
 console.log('source hygiene keeps wrong titles off the registry and does not promote formulas');

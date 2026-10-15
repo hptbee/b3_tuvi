@@ -15,7 +15,15 @@ Mười lớp: calculation, normalized chart, palace relations, rule engine, kno
 
 Ưu tiên **stateless chart generation**: API trả lá số mà không bắt buộc lưu ngày giờ sinh. Không tài khoản, không lịch sử lá số, không thanh toán.
 
-## 2. Current baseline
+## Trạng thái Tử Vi hiện tại — nhánh hoàn thiện nguồn, 2026-10-15
+
+- Giữ stack đã có #50 → #51 → #52; không tạo lại hoặc auto-merge. Tài Bạch/Phúc Đức (`67ff179`) và Quan Lộc Cơ–Cự tại Dậu (`0f0c1f8`) đã commit/push ở các nhánh phụ thuộc tiếp theo; API GitHub vẫn Forbidden nên chưa có PR mới.
+- Approved internal interpretation coverage tăng 1 → 4 claim: ba nhánh lời sách mới có điều kiện/phạm vi cụ thể, source/context/AST/wording/fixture được hai model độc lập xét trước triển khai. Public prose, kết luận toàn lá số và dự báo đời thực vẫn khóa; bản chép hiện đại không được nâng thành ấn bản cổ đã xác thực.
+- Tiểu hạn biến thể hiện đại `iztro-pinned-age1-sex-triad`: API/UI đã qua local CI/E2E và các vòng review độc lập; chưa merge hoặc phát hành production. Người dùng tự chọn hồ sơ và nhập tuổi mụ 1–120; chỉ chi → cung trên lá số hiện có, không tự tính tuổi hoặc chứng nhận toàn bộ lịch/an sao của iztro. Xem [hợp đồng và giới hạn](../tuvi/MODERN_MINOR_PROFILE.md).
+- T019 Mệnh vô Chính diệu còn thiếu taxonomy 正曜/主星, 吉星 và 拱照 thống nhất; T022 Thiên Phủ còn thiếu nghĩa 空/耗, vùng quan hệ và brightness đúng nguồn; T020 Đại hạn/Tiểu hạn cổ điển giữ nguyên conflict/age blockers. Không mượn approval biến thể hiện đại để đóng các quyết định cổ điển.
+- Kế hoạch thực thi/checkpoint hiện hành là các file `.b3/autodev/` đã được theo dõi trong Git theo yêu cầu resume; bảng audit cũ bên dưới giữ nguyên làm lịch sử, không phải kết luận về mã hiện tại. Chưa merge/deploy hoặc đủ điều kiện production release.
+
+## 2. Baseline lịch sử lúc audit
 
 | Kiểm tra | Kết quả lúc audit |
 |---|---|

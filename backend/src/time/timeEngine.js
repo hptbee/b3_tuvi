@@ -1,3 +1,4 @@
+import { modernMinorCapability } from './modernMinor.js';
 import { mapAnnualStarToPalace, nguyetDucCapability, thienDucCapability } from './thienDuc.js';
 
 const BLOCKED_REASON = 'no_approved_formula';
@@ -26,6 +27,7 @@ export function timeOverlay(chart, options = {}) {
                 reason: 'natal_label_is_not_a_reviewed_fortune_formula'
             },
             tieu_han: blocked('tieu_han'),
+            tieu_han_modern: modernMinorCapability(chart, options),
             luu_nien: blocked('luu_nien'),
             luu_tinh: blocked('luu_tinh'),
             tu_hoa_han: blocked('tu_hoa_han'),

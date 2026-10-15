@@ -302,3 +302,192 @@ describe('StructuredAnalysis', () => {
     expect(screen.queryByText('Nguyệt Đức: chi Tí — chưa xác định cung.')).not.toBeInTheDocument();
   });
 });
+
+const minorProfile = 'iztro-pinned-age1-sex-triad';
+const minorPin = '2f00e2ab0c80b1632e55bc362f2ae26e121245cb';
+function minorBody(request, patch = {}) {
+  const body = analysisBody();
+  const option = request.minorPeriod;
+  body.statements[0].palaceId = '5';
+  body.time.capabilities.tieu_han_modern = {
+    id: 'tieu_han_modern', publicFortune: false, interpretation: null, interpretationStatus: 'blocked',
+    profile: option?.profile ?? null, nominalAge: option?.nominalAge ?? null,
+    sourceId: 'iztro-modern-software', sourcePin: minorPin,
+    ageInput: 'caller_supplied', ageDerivation: 'not_applied',
+    calendarCompatibility: 'branch_sex_age_projection_not_full_iztro_astrolabe',
+    ...(option ? {
+      status: 'branch_placed', branch: 'Thìn', branchPlacement: 'supported',
+      palaceMapping: 'mapped', palaceId: '5', functionId: 'menh', functionLabel: 'MỆNH'
+    } : {
+      status: 'not_applied', reason: 'missing_explicit_profile_and_nominal_age', branch: null,
+      branchPlacement: 'not_applied', palaceMapping: 'not_applied', palaceId: null, functionId: null, functionLabel: null
+    }), ...patch
+  };
+  return body;
+}
+function stubMinorFetch(transform = body => body) {
+  const fetch = vi.fn(async (_url, init) => {
+    const request = JSON.parse(init.body);
+    return { ok: true, json: async () => transform(minorBody(request), request) };
+  });
+  vi.stubGlobal('fetch', fetch);
+  return fetch;
+}
+async function applyMinorAge(user, age = '1') {
+  await user.selectOptions(screen.getByLabelText('Hồ sơ Tiểu hạn'), minorProfile);
+  const input = screen.getByLabelText('Tuổi mụ nhập trực tiếp');
+  await user.clear(input);
+  if (age) await user.type(input, age);
+  await user.click(screen.getByRole('button', { name: 'Áp dụng tuổi mụ' }));
+}
+
+describe('explicit modern minor placement', () => {
+  afterEach(() => vi.unstubAllGlobals());
+
+  it.each(['1', '120'])('only submits an explicitly applied numeric age %s, then clears the profile', async age => {
+    const fetch = stubMinorFetch();
+    const user = userEvent.setup();
+    render(<StructuredAnalysis userInfo={birth} />);
+    await screen.findByRole('button', { name: /Mệnh:/ });
+    expect(screen.getByLabelText('Hồ sơ Tiểu hạn')).toHaveValue('');
+    expect(screen.getByLabelText('Tuổi mụ nhập trực tiếp')).toHaveValue(null);
+    expect(JSON.parse(fetch.mock.calls[0][1].body)).not.toHaveProperty('minorPeriod');
+    await user.selectOptions(screen.getByLabelText('Hồ sơ Tiểu hạn'), minorProfile);
+    await user.type(screen.getByLabelText('Tuổi mụ nhập trực tiếp'), age);
+    expect(fetch).toHaveBeenCalledTimes(1);
+    await user.click(screen.getByRole('button', { name: 'Áp dụng tuổi mụ' }));
+    expect(await screen.findByText(`Tuổi mụ ${age}: chi Thìn — cung Mệnh.`)).toBeVisible();
+    expect(JSON.parse(fetch.mock.calls.at(-1)[1].body).minorPeriod).toEqual({ profile: minorProfile, nominalAge: Number(age) });
+    expect(screen.getByRole('link', { name: /iztro — mã nguồn/ })).toHaveAttribute('href', expect.stringContaining(minorPin));
+    await user.selectOptions(screen.getByLabelText('Hồ sơ Tiểu hạn'), '');
+    await waitFor(() => expect(JSON.parse(fetch.mock.calls.at(-1)[1].body)).not.toHaveProperty('minorPeriod'));
+    expect(screen.queryByText(`Tuổi mụ ${age}: chi Thìn — cung Mệnh.`)).not.toBeInTheDocument();
+    expect(screen.getByLabelText('Tuổi mụ nhập trực tiếp')).toHaveValue(null);
+  });
+
+  it.each(['', '0', '-1', '121', '1.5'])('rejects draft age %j without losing the existing analysis or sending it', async age => {
+    const fetch = stubMinorFetch();
+    const user = userEvent.setup();
+    render(<StructuredAnalysis userInfo={birth} />);
+    await screen.findByRole('button', { name: /Mệnh:/ });
+    await applyMinorAge(user, age);
+    expect(await screen.findByRole('alert')).toHaveTextContent('số nguyên từ 1 đến 120');
+    expect(screen.getByRole('button', { name: /Mệnh:/ })).toBeVisible();
+    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(screen.getByLabelText('Tuổi mụ nhập trực tiếp')).toHaveAttribute('aria-invalid', 'true');
+  });
+
+  it.each([
+    { profile: 'another' }, { nominalAge: 2 }, { sourceId: 'forged' }, { sourcePin: 'changed' },
+    { ageDerivation: 'automatic' }, { ageInput: 'calculated' }, { calendarCompatibility: 'full_iztro' },
+    { publicFortune: true }, { interpretation: 'FORGED PUBLIC PROSE' }, { interpretationStatus: 'approved' },
+    { palaceMapping: 'invalid_chart', palaceId: null, functionId: null, functionLabel: null },
+    { functionId: 'tai_bach', functionLabel: 'TÀI BẠCH' }, { functionLabel: 'FAKE' },
+    { branch: 'Dậu' }, { branchPlacement: 'unknown' }
+  ])('withholds forged or unmapped capability %j', async patch => {
+    stubMinorFetch((body, request) => {
+      if (request.minorPeriod) Object.assign(body.time.capabilities.tieu_han_modern, patch);
+      return body;
+    });
+    const user = userEvent.setup();
+    render(<StructuredAnalysis userInfo={birth} />);
+    await screen.findByRole('button', { name: /Mệnh:/ });
+    await applyMinorAge(user);
+    expect(await screen.findByRole('alert')).toHaveTextContent('Phản hồi trạng thái chứng cứ không hợp lệ');
+    expect(screen.queryByText('Tuổi mụ 1: chi Thìn — cung Mệnh.')).not.toBeInTheDocument();
+    expect(screen.queryByText('FORGED PUBLIC PROSE')).not.toBeInTheDocument();
+  });
+
+  it('rejects unexpected placement while omitted and missing capability while enabled', async () => {
+    stubMinorFetch((body, request) => {
+      if (!request.minorPeriod) return minorBody({ minorPeriod: { profile: minorProfile, nominalAge: 1 } });
+      delete body.time.capabilities.tieu_han_modern;
+      return body;
+    });
+    const user = userEvent.setup();
+    render(<StructuredAnalysis userInfo={birth} />);
+    expect(await screen.findByRole('alert')).toHaveTextContent('Phản hồi trạng thái chứng cứ không hợp lệ');
+    await applyMinorAge(user);
+    expect(await screen.findByRole('alert')).toHaveTextContent('Phản hồi trạng thái chứng cứ không hợp lệ');
+  });
+
+  it('preserves the chart when accepted-profile evidence is unavailable', async () => {
+    stubMinorFetch((body, request) => {
+      if (request.minorPeriod) Object.assign(body.time.capabilities.tieu_han_modern, {
+        status: 'blocked', reason: 'modern_profile_not_approved', branch: null,
+        branchPlacement: 'not_applied', palaceMapping: 'not_applied', palaceId: null, functionId: null, functionLabel: null
+      });
+      return body;
+    });
+    const user = userEvent.setup();
+    render(<StructuredAnalysis userInfo={birth} />);
+    await applyMinorAge(user);
+    expect(await screen.findByText(/Chưa thể đối chiếu vị trí theo hồ sơ này/)).toBeVisible();
+    expect(screen.getByRole('button', { name: /Mệnh:/ })).toBeVisible();
+    expect(screen.queryByRole('alert')).not.toBeInTheDocument();
+  });
+
+  it('hides an unapplied edit and immediately clears supplied age on birth changes', async () => {
+    const fetch = stubMinorFetch();
+    const user = userEvent.setup();
+    const view = render(<StructuredAnalysis userInfo={birth} />);
+    await applyMinorAge(user);
+    expect(await screen.findByText('Tuổi mụ 1: chi Thìn — cung Mệnh.')).toBeVisible();
+    await user.clear(screen.getByLabelText('Tuổi mụ nhập trực tiếp'));
+    await user.type(screen.getByLabelText('Tuổi mụ nhập trực tiếp'), '2');
+    expect(screen.queryByText('Tuổi mụ 1: chi Thìn — cung Mệnh.')).not.toBeInTheDocument();
+    expect(screen.getByText(/Chưa áp dụng thay đổi/)).toBeVisible();
+    expect(fetch).toHaveBeenCalledTimes(2);
+    view.rerender(<StructuredAnalysis userInfo={{ ...birth, gender: -1 }} />);
+    expect(screen.getByLabelText('Hồ sơ Tiểu hạn')).toHaveValue('');
+    expect(screen.getByLabelText('Tuổi mụ nhập trực tiếp')).toHaveValue(null);
+    await waitFor(() => expect(JSON.parse(fetch.mock.calls.at(-1)[1].body)).not.toHaveProperty('minorPeriod'));
+    view.rerender(<StructuredAnalysis userInfo={birth} />);
+    expect(screen.getByLabelText('Hồ sơ Tiểu hạn')).toHaveValue('');
+    expect(screen.getByLabelText('Tuổi mụ nhập trực tiếp')).toHaveValue(null);
+    await screen.findByRole('button', { name: /Mệnh:/ });
+  });
+
+  it('ignores delayed age responses after newer age, annual change and clear', async () => {
+    let finishOld;
+    const fetch = vi.fn(async (_url, init) => {
+      const request = JSON.parse(init.body);
+      if (request.minorPeriod?.nominalAge === 1) return new Promise(resolve => { finishOld = resolve; });
+      return { ok: true, json: async () => minorBody(request) };
+    });
+    vi.stubGlobal('fetch', fetch);
+    const user = userEvent.setup();
+    render(<StructuredAnalysis userInfo={birth} />);
+    await applyMinorAge(user);
+    await applyMinorAge(user, '2');
+    expect(await screen.findByText('Tuổi mụ 2: chi Thìn — cung Mệnh.')).toBeVisible();
+    await user.selectOptions(screen.getByLabelText('Chi năm xem'), 'Ngọ');
+    expect(await screen.findByText('Tuổi mụ 2: chi Thìn — cung Mệnh.')).toBeVisible();
+    expect(JSON.parse(fetch.mock.calls.at(-1)[1].body)).toMatchObject({ viewYearBranch: 'Ngọ', minorPeriod: { nominalAge: 2 } });
+    await act(async () => finishOld({ ok: true, json: async () => minorBody({ minorPeriod: { profile: minorProfile, nominalAge: 1 } }) }));
+    expect(screen.queryByText('Tuổi mụ 1: chi Thìn — cung Mệnh.')).not.toBeInTheDocument();
+    await user.selectOptions(screen.getByLabelText('Hồ sơ Tiểu hạn'), '');
+    expect(screen.queryByText('Tuổi mụ 2: chi Thìn — cung Mệnh.')).not.toBeInTheDocument();
+    expect(fetch.mock.calls[1][1].signal.aborted).toBe(true);
+  });
+
+  it('retries committed input, ignores an invalid draft, then aborts on unmount', async () => {
+    let rejectLate;
+    const fetch = stubMinorFetch();
+    const user = userEvent.setup();
+    const view = render(<StructuredAnalysis userInfo={birth} />);
+    await applyMinorAge(user);
+    await screen.findByText('Tuổi mụ 1: chi Thìn — cung Mệnh.');
+    fetch.mockResolvedValueOnce({ ok: false, json: async () => ({ error: 'Tạm lỗi' }) });
+    await user.selectOptions(screen.getByLabelText('Chi năm xem'), 'Tí');
+    await screen.findByRole('alert');
+    await user.clear(screen.getByLabelText('Tuổi mụ nhập trực tiếp'));
+    await user.type(screen.getByLabelText('Tuổi mụ nhập trực tiếp'), '121');
+    fetch.mockImplementationOnce(() => new Promise((_resolve, reject) => { rejectLate = reject; }));
+    await user.click(screen.getByRole('button', { name: 'Thử lại chứng cứ' }));
+    expect(JSON.parse(fetch.mock.calls.at(-1)[1].body)).toMatchObject({ viewYearBranch: 'Tí', minorPeriod: { profile: minorProfile, nominalAge: 1 } });
+    view.unmount();
+    expect(fetch.mock.calls.at(-1)[1].signal.aborted).toBe(true);
+    await act(async () => rejectLate(new Error('private late error')));
+  });
+});

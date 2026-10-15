@@ -1,0 +1,573 @@
+{
+  "model": "gpt-6.1-sol",
+  "available": true,
+  "reviewMethod": "independent_source_inspection_and_own_fixture_reproduction",
+  "reviewStatus": "INDEPENDENT_SOURCE_REVIEW_COMPLETE",
+  "subjectType": "fortune_placement_profile",
+  "subjectId": "iztro-pinned-age1-sex-triad",
+  "profileId": "iztro-pinned-age1-sex-triad",
+  "sourceId": "iztro-modern-software",
+  "sourceProfile": "iztro-pinned-age1-sex-triad",
+  "editionId": "iztro-modern-2f00e2ab0c80",
+  "schoolId": "vn-tam-hop-default",
+  "schoolCompatibilityOnly": true,
+  "locator": "src/astro/palace.ts#getHoroscope",
+  "claimId": "iztro-pinned-age1-sex-triad",
+  "sourceRepository": "https://github.com/SylarLong/iztro",
+  "sourcePin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "sourceClass": "pinned_modern_software_and_documentation_not_classical_edition",
+  "sourceDigest": "d5342272cab276bc6d17d1be3e837873a67410d4f961cd22bfc1975a843cc817",
+  "quotation": "/**\n * 起大限\n *\n * - 大限由命宫起，阳男阴女顺行；\n * - 阴男阳女逆行，每十年过一宫限。\n *\n * @param solarDateStr 公历日期\n * @param timeIndex 出生时索引\n * @param gender 性别\n * @param fixLeap 是否修正闰月，若修正，则闰月前15天按上月算，后15天按下月算\n * @returns 从寅宫开始的大限年龄段\n */\nexport const getHoroscope = (param: AstrolabeParam): { decadals: Decadal[]; ages: number[][] } => {\n  const { solarDate, timeIndex, gender, from } = param;\n  const decadals: Decadal[] = [];\n  const genderKey = kot<GenderKey>(gender!);\n  const { yearly } = getHeavenlyStemAndEarthlyBranchBySolarDate(solarDate, timeIndex, {\n    // 起大限应该与配置同步\n    year: getConfig().yearDivide,\n  });\n  const heavenlyStem = kot<HeavenlyStemKey>(yearly[0], 'Heavenly');\n  const earthlyBranch = kot<EarthlyBranchKey>(yearly[1], 'Earthly');\n  const { soulIndex, heavenlyStemOfSoul, earthlyBranchOfSoul } = getSoulAndBody(param);\n  const fiveElementsClass = kot<FiveElementsClassKey>(\n    getFiveElementsClass(from?.heavenlyStem ?? heavenlyStemOfSoul, from?.earthlyBranch ?? earthlyBranchOfSoul),\n  );\n\n  // 用五虎遁获取大限起始天干\n  const startHeavenlyStem = TIGER_RULE[heavenlyStem];\n\n  for (let i = 0; i < 12; i++) {\n    const idx =\n      GENDER[genderKey] === earthlyBranches[earthlyBranch].yinYang ? fixIndex(soulIndex + i) : fixIndex(soulIndex - i);\n    const start = FiveElementsClass[fiveElementsClass] + 10 * i;\n    const heavenlyStemIndex = fixIndex(HEAVENLY_STEMS.indexOf(startHeavenlyStem) + idx, 10);\n    const earthlyBranchIndex = fixIndex(EARTHLY_BRANCHES.indexOf('yinEarthly') + idx);\n\n    decadals[idx] = {\n      range: [start, start + 9],\n      heavenlyStem: t(HEAVENLY_STEMS[heavenlyStemIndex]),\n      earthlyBranch: t(EARTHLY_BRANCHES[earthlyBranchIndex]),\n    };\n  }\n\n  const ageIdx = getAgeIndex(yearly[1]);\n  const ages = [];\n\n  for (let i = 0; i < 12; i++) {\n    const age = [];\n\n    for (let j = 0; j < 10; j++) {\n      age.push(12 * j + i + 1);\n    }\n\n    const idx = kot<GenderKey>(gender!) === 'male' ? fixIndex(ageIdx + i) : fixIndex(ageIdx - i);\n\n    ages[idx] = age;\n  }\n\n  return { decadals, ages };\n};",
+  "quotationDigestConvention": "quotation is the complete stored source span trimmed only at its outer boundaries for comparator compatibility; sourceDigest binds raw source-span.txt including its terminal LF, not the trimmed quotation",
+  "conditions": [
+    "explicit_named_modern_profile",
+    "four_birth_branch_triad_starts",
+    "male_forward_female_reverse",
+    "age_one_at_triad_start",
+    "one_palace_per_year_wrap_twelve",
+    "finite_integer_age_one_to_120",
+    "explicit_branch_sex_age_projection",
+    "no_calendar_age_derivation",
+    "not_classical_or_public_prediction_approval"
+  ],
+  "conditionIds": [
+    "explicit_named_modern_profile",
+    "four_birth_branch_triad_starts",
+    "male_forward_female_reverse",
+    "age_one_at_triad_start",
+    "one_palace_per_year_wrap_twelve",
+    "finite_integer_age_one_to_120",
+    "explicit_branch_sex_age_projection",
+    "no_calendar_age_derivation",
+    "not_classical_or_public_prediction_approval"
+  ],
+  "exceptions": [],
+  "requiredAnchors": [
+    "const ageIdx = getAgeIndex(yearly[1]);",
+    "age.push(12 * j + i + 1);",
+    "kot<GenderKey>(gender!) === 'male' ? fixIndex(ageIdx + i) : fixIndex(ageIdx - i)",
+    "ages[idx] = age;"
+  ],
+  "formulaComparison": "MATCH",
+  "verdict": "MATCH",
+  "formulaComparisonBasis": "The proposed algorithmSpec exactly restates the finite minor-age table in the pinned modern implementation for valid, explicit branch/sex/nominal-age inputs. This comparison does not assert that a new product adapter already exists or that full upstream astrolabe behavior is implemented.",
+  "algorithmSpec": {
+    "profileId": "iztro-pinned-age1-sex-triad",
+    "inputFields": [
+      "birthYearBranch",
+      "gender",
+      "nominalAge"
+    ],
+    "branchOrder": [
+      "Tí",
+      "Sửu",
+      "Dần",
+      "Mão",
+      "Thìn",
+      "Tị",
+      "Ngọ",
+      "Mùi",
+      "Thân",
+      "Dậu",
+      "Tuất",
+      "Hợi"
+    ],
+    "branchIds": "one_based_1_to_12",
+    "triadStarts": [
+      {
+        "birthBranches": [
+          "Dần",
+          "Ngọ",
+          "Tuất"
+        ],
+        "startBranch": "Thìn",
+        "startBranchId": 5
+      },
+      {
+        "birthBranches": [
+          "Thân",
+          "Tí",
+          "Thìn"
+        ],
+        "startBranch": "Tuất",
+        "startBranchId": 11
+      },
+      {
+        "birthBranches": [
+          "Tị",
+          "Dậu",
+          "Sửu"
+        ],
+        "startBranch": "Mùi",
+        "startBranchId": 8
+      },
+      {
+        "birthBranches": [
+          "Hợi",
+          "Mão",
+          "Mùi"
+        ],
+        "startBranch": "Sửu",
+        "startBranchId": 2
+      }
+    ],
+    "genderDirections": [
+      {
+        "gender": 1,
+        "sourceKey": "male",
+        "direction": 1
+      },
+      {
+        "gender": -1,
+        "sourceKey": "female",
+        "direction": -1
+      }
+    ],
+    "ageAtStart": 1,
+    "ageStep": 1,
+    "palacesPerAgeStep": 1,
+    "wrap": 12,
+    "nominalAgeRange": {
+      "min": 1,
+      "max": 120,
+      "integer": true
+    },
+    "outputFormula": "branchId = ((startBranchId - 1 + direction * (nominalAge - 1)) % 12 + 12) % 12 + 1",
+    "sourcePalaceToProductBranchId": "((sourcePalaceIndex + 2) % 12) + 1",
+    "yearYinYangAffectsDirection": false,
+    "calendarAgeDerivation": false,
+    "extendsBeyondSourceRange": false
+  },
+  "compatibilitySpec": {
+    "scope": "branch_sex_age_projection_not_full_iztro_astrolabe",
+    "receivingSchoolId": "vn-tam-hop-default",
+    "upstreamSchoolId": null,
+    "birthYearBranch": "trusted_server_natal_lunar_chiName_and_chiIndex_consistent",
+    "gender": "validated_product_gender_1_male_minus1_female",
+    "nominalAge": "caller_supplied_integer_1_to_120_not_date_derived",
+    "sourceBranchAndGenderMapping": [
+      {
+        "key": "ziEarthly",
+        "chinese": "子",
+        "upstreamVi": "Tý",
+        "productVi": "Tí",
+        "productBranchId": 1,
+        "sourceBranchEnumIndex": 0,
+        "sourcePalaceIndex": 10
+      },
+      {
+        "key": "chouEarthly",
+        "chinese": "丑",
+        "upstreamVi": "Sửu",
+        "productVi": "Sửu",
+        "productBranchId": 2,
+        "sourceBranchEnumIndex": 1,
+        "sourcePalaceIndex": 11
+      },
+      {
+        "key": "yinEarthly",
+        "chinese": "寅",
+        "upstreamVi": "Dần",
+        "productVi": "Dần",
+        "productBranchId": 3,
+        "sourceBranchEnumIndex": 2,
+        "sourcePalaceIndex": 0
+      },
+      {
+        "key": "maoEarthly",
+        "chinese": "卯",
+        "upstreamVi": "Mão",
+        "productVi": "Mão",
+        "productBranchId": 4,
+        "sourceBranchEnumIndex": 3,
+        "sourcePalaceIndex": 1
+      },
+      {
+        "key": "chenEarthly",
+        "chinese": "辰",
+        "upstreamVi": "Thìn",
+        "productVi": "Thìn",
+        "productBranchId": 5,
+        "sourceBranchEnumIndex": 4,
+        "sourcePalaceIndex": 2
+      },
+      {
+        "key": "siEarthly",
+        "chinese": "巳",
+        "upstreamVi": "Tỵ",
+        "productVi": "Tị",
+        "productBranchId": 6,
+        "sourceBranchEnumIndex": 5,
+        "sourcePalaceIndex": 3
+      },
+      {
+        "key": "wuEarthly",
+        "chinese": "午",
+        "upstreamVi": "Ngọ",
+        "productVi": "Ngọ",
+        "productBranchId": 7,
+        "sourceBranchEnumIndex": 6,
+        "sourcePalaceIndex": 4
+      },
+      {
+        "key": "weiEarthly",
+        "chinese": "未",
+        "upstreamVi": "Mùi",
+        "productVi": "Mùi",
+        "productBranchId": 8,
+        "sourceBranchEnumIndex": 7,
+        "sourcePalaceIndex": 5
+      },
+      {
+        "key": "shenEarthly",
+        "chinese": "申",
+        "upstreamVi": "Thân",
+        "productVi": "Thân",
+        "productBranchId": 9,
+        "sourceBranchEnumIndex": 8,
+        "sourcePalaceIndex": 6
+      },
+      {
+        "key": "youEarthly",
+        "chinese": "酉",
+        "upstreamVi": "Dậu",
+        "productVi": "Dậu",
+        "productBranchId": 10,
+        "sourceBranchEnumIndex": 9,
+        "sourcePalaceIndex": 7
+      },
+      {
+        "key": "xuEarthly",
+        "chinese": "戌",
+        "upstreamVi": "Tuất",
+        "productVi": "Tuất",
+        "productBranchId": 11,
+        "sourceBranchEnumIndex": 10,
+        "sourcePalaceIndex": 8
+      },
+      {
+        "key": "haiEarthly",
+        "chinese": "亥",
+        "upstreamVi": "Hợi",
+        "productVi": "Hợi",
+        "productBranchId": 12,
+        "sourceBranchEnumIndex": 11,
+        "sourcePalaceIndex": 9
+      }
+    ],
+    "genderMapping": [
+      {
+        "productCode": 1,
+        "sourceKey": "male",
+        "sourceLabel": "Nam"
+      },
+      {
+        "productCode": -1,
+        "sourceKey": "female",
+        "sourceLabel": "Nữ"
+      }
+    ],
+    "target": "resolve_reviewed_branch_on_unchanged_validated_12_palace_natal_chart",
+    "exclusions": [
+      "upstream_calendar_equivalence",
+      "yearDivide_selection",
+      "ageDivide_selection",
+      "date_to_nominal_age",
+      "birthday_boundary",
+      "leap_month_age_semantics",
+      "classical_quanshu_approval",
+      "default_profile_change",
+      "dai_han",
+      "childhood_periods",
+      "natal_formulas",
+      "fortune_interpretation",
+      "public_predictions"
+    ],
+    "invalidInputContract": "strict_adapter_proposal_not_observed_upstream_rejection",
+    "historicalAuthentication": false,
+    "bookVerified": false,
+    "expertVerified": false,
+    "publicRelease": false
+  },
+  "algorithmDigest": "73617dee8c9cc2b8ecc30a5e785139cc40fff6adda1f8b866db46f0b5497c50d",
+  "compatibilityDigest": "786bfeb18c04ad84371ecd0f526266a7aef55288d19aeee6c682f718a5b55344",
+  "contextDigest": "084984efdc46adbc115fc35707f80d1dfd28d114ac26645f3c8dd561f1b1cf09",
+  "fixturesDigest": "053fbdd20d76ce2e31da097dcfb991c969f333f8e19104c88374899f31883215",
+  "fixturesJsonDigest": "d99da18d0e94937712c862418b1ff47cd431d92ca887a4565e6169e6ffe99c29",
+  "approvalScope": "AI source/formula review of profile iztro-pinned-age1-sex-triad and its explicitly restricted birth-year-branch, sex, caller-supplied integer nominal-age projection onto an existing validated natal chart; no runtime integration or public release permission",
+  "conclusion": "The pinned modern source specifies all four starts, age one, sex-only directions, annual step, twelve-palace wrap, and the complete finite age table 1–120. The branch/sex/supplied-age projection is mathematically supportable with the declared compatibility exclusions. MATCH is confined to that named proposed profile.",
+  "conditionAssessments": [
+    {
+      "id": "explicit_named_modern_profile",
+      "result": "supported_as_adapter_scope",
+      "evidence": "A separately named pinned modern profile is an explicit proposal identity; the upstream repository does not identify itself as vn-tam-hop-default. Receiving schoolId records the unchanged product chart receiving the branch and is not a claim about upstream school or classical authority."
+    },
+    {
+      "id": "four_birth_branch_triad_starts",
+      "result": "source_supported",
+      "evidence": "Complete utils/index.ts#getAgeIndex partitions all twelve canonical branch keys into four disjoint triads. Its starts resolve to chenEarthly, xuEarthly, weiEarthly, chouEarthly through kot and the pinned English branch locale, giving Thìn, Tuất, Mùi, Sửu respectively. Modern learn/setup section 5 and learn/horoscope corroborate this."
+    },
+    {
+      "id": "male_forward_female_reverse",
+      "result": "source_supported",
+      "evidence": "The minor-age loop tests kot(gender) === 'male' and adds i for male, subtracts i otherwise. For valid male/female keys and explicit product 1/-1 mapping this is precisely +1/-1. The birth-year yin/yang comparison belongs to the preceding decadal loop; it is not read by minor-age placement."
+    },
+    {
+      "id": "age_one_at_triad_start",
+      "result": "source_supported",
+      "evidence": "At i=0 and j=0, age.push(12*j+i+1) inserts 1 at ageIdx. No dependency on decadal first age or five-elements class enters the age array assignment."
+    },
+    {
+      "id": "one_palace_per_year_wrap_twelve",
+      "result": "source_supported",
+      "evidence": "Increasing i increases the listed age by one and shifts its palace index by one in the sex-specific direction. Increasing j adds twelve at the same palace. Complete fixIndex recursively adds/subtracts twelve until the valid integer index is 0–11. Dần-zero palace index p converts to Tí-one branch ID ((p+2)%12)+1."
+    },
+    {
+      "id": "finite_integer_age_one_to_120",
+      "result": "source_table_supported_adapter_restriction_explicit",
+      "evidence": "The i<12 and j<10 loops enumerate each integer 1–120 exactly once. Restricting an adapter to these ages is supportable; this is not evidence of upstream throwing a range exception or of a universal astrological maximum. No beyond-120 extension is approved."
+    },
+    {
+      "id": "explicit_branch_sex_age_projection",
+      "result": "restricted_projection_supported",
+      "evidence": "Once a canonical birth-year branch and a valid sex key are fixed, the ages sub-result depends on those values alone. Constants/locales and product chartInput map the coordinates explicitly, including Tý/Tí and Tỵ/Tị. Reproduced 24 actual existing natal charts show the reviewed branch can select a concrete palace/function. That is a lookup on the receiving chart, with no claim that its calendar, stars, natal anchors or school are equivalent to upstream."
+    },
+    {
+      "id": "no_calendar_age_derivation",
+      "result": "exclusion_required_and_preserved",
+      "evidence": "Complete getHoroscope obtains yearly[1] from its own configured yearDivide path. FunctionalAstrolabe query separately computes lunar-year nominal age with normal/birthday handling and searches ages.includes(nominalAge). Those date semantics are excluded, and caller-supplied nominalAge must not be replaced by an inferred date-based age. In the birthday branch equality does not increment; the comparison is strictly greater lunar month/day and does not compare leap flags there."
+    },
+    {
+      "id": "not_classical_or_public_prediction_approval",
+      "result": "exclusion_required_and_preserved",
+      "evidence": "The material is a pinned modern software/docs source. It provides no independent authentication of a classical edition, no expert review and no evidence of predictive accuracy. No original/default profile, Đại Hạn, childhood, natal formulas, fortune interpretation or public predictions are approved."
+    }
+  ],
+  "adjacentContextReview": {
+    "completeGetHoroscopeRead": true,
+    "fullPalaceFileRead": true,
+    "completeGetAgeIndexRead": true,
+    "completeFixIndexRead": true,
+    "completeFixEarthlyBranchIndexRead": true,
+    "sourceEnumsAndRelevantLocalesRead": true,
+    "dateAgeQueryAndConfigurationRead": true,
+    "details": [
+      "from is used in soul/body and five-elements/decadal computation. The ages sub-result does not use from, soulIndex, heavenlyStemOfSoul, fiveElementsClass or the completed decadals.",
+      "Full upstream getHoroscope still performs the adjacent computations before returning. This review approves a restricted projection of its ages mathematics, not an equivalent replacement of that complete function or its error behavior.",
+      "yearDivide normal/exact can alter the branch selected from a birth date. The proposed adapter intentionally consumes the trusted existing product natal branch and does not certify it matches either upstream boundary choice.",
+      "ageDivide normal/birthday, horoscopeDivide, target-date handling, leap effects, dayDivide and childhood fallback remain outside the direct-age scope.",
+      "kot returns unknown values unchanged; getAgeIndex can return -1 for an unknown branch; non-male input follows the reverse loop. These permissive upstream details do not justify accepting invalid adapter inputs. Proposed strict invalid rows are extra API requirements, not observations of upstream rejection."
+    ]
+  },
+  "independentPinVerification": {
+    "method": "Independently ran git show <exact pin>:<path> on all 19 complete packet payloads and compared the resulting bytes to each dossier raw file and SHA-256. No upstream source was installed, imported, executed or built.",
+    "verifiedPayloads": [
+      {
+        "path": "LICENSE",
+        "bytes": 1073,
+        "sha256": "e6c7b6e313cbda3135b41bccc66c98be132cb8319d0d465903d17e669e748b36",
+        "method": "independent git show at exact pin; byte equality with dossier"
+      },
+      {
+        "path": "docs/zh_TW/learn/setup.html",
+        "bytes": 61628,
+        "sha256": "9e69805617313e8ae36805941e583f70f6e3a0a9c92411b1675b1e3df3cd9f40",
+        "method": "independent git show at exact pin; byte equality with dossier"
+      },
+      {
+        "path": "docs/zh_TW/learn/basis.html",
+        "bytes": 65268,
+        "sha256": "2aea62af92b36d4fcb8fe6f36eb02e5f91935477c8eae30f30d932c287cb4a2e",
+        "method": "independent git show at exact pin; byte equality with dossier"
+      },
+      {
+        "path": "docs/zh_TW/learn/horoscope.html",
+        "bytes": 47350,
+        "sha256": "e1bd9053258d022e2dc2295e23a6847a92eb004655090252a91494bcff48a0f4",
+        "method": "independent git show at exact pin; byte equality with dossier"
+      },
+      {
+        "path": "docs/zh_TW/posts/config-n-plugin.html",
+        "bytes": 79518,
+        "sha256": "145949e340fa8b0fe9cdd26fa892343ca7a5690491de7b27490d94c9f9ac9f19",
+        "method": "independent git show at exact pin; byte equality with dossier"
+      },
+      {
+        "path": "docs/zh_TW/posts/horoscope.html",
+        "bytes": 98965,
+        "sha256": "20271af792c0d11109ca8551b54e6f5d48e298937e8df07fb71b05d4891f8762",
+        "method": "independent git show at exact pin; byte equality with dossier"
+      },
+      {
+        "path": "src/astro/palace.ts",
+        "bytes": 7799,
+        "sha256": "a9c6d8444d5edcd241068f5bd83fed3aa38a57b206cebb221f86b8d4057b5273",
+        "method": "independent git show at exact pin; byte equality with dossier"
+      },
+      {
+        "path": "src/astro/FunctionalAstrolabe.ts",
+        "bytes": 19616,
+        "sha256": "584fd8d2d3ac76b3b8d7990ec6d26cac42eb5f1fcac9175326f29497d60d2d9c",
+        "method": "independent git show at exact pin; byte equality with dossier"
+      },
+      {
+        "path": "src/astro/config.ts",
+        "bytes": 3825,
+        "sha256": "e74d2bf23630f8faadfae9fd2d29c592ceb7a18d7396c0aba5d74959ea5d134e",
+        "method": "independent git show at exact pin; byte equality with dossier"
+      },
+      {
+        "path": "src/utils/index.ts",
+        "bytes": 7614,
+        "sha256": "9f3699115c9c149dc261f9a293e6c7ad40ac4f744884dba21b367b96d9bbfe16",
+        "method": "independent git show at exact pin; byte equality with dossier"
+      },
+      {
+        "path": "src/data/constants.ts",
+        "bytes": 3871,
+        "sha256": "e2411f73c7ea438b5186f2a3ef29fa54587ab78e25620b5a52b409ce9244043a",
+        "method": "independent git show at exact pin; byte equality with dossier"
+      },
+      {
+        "path": "src/data/earthlyBranches.ts",
+        "bytes": 3599,
+        "sha256": "3dd6e4b260a18a2a8c0e4aec2a12e766f29e52d7b4c01ecbf332f6066a3f1b34",
+        "method": "independent git show at exact pin; byte equality with dossier"
+      },
+      {
+        "path": "src/i18n/index.ts",
+        "bytes": 2943,
+        "sha256": "06da411d37e4e5f3dc7d922f3dbce0f9fcb2fe1125619873e6a651eabc63d558",
+        "method": "independent git show at exact pin; byte equality with dossier"
+      },
+      {
+        "path": "src/i18n/locales/vi-VN/gender.ts",
+        "bytes": 62,
+        "sha256": "79ab1b39e62fda211cd5b21e916446ee58d6afa10b3a639dd7799987ef7ef3d4",
+        "method": "independent git show at exact pin; byte equality with dossier"
+      },
+      {
+        "path": "src/i18n/locales/vi-VN/earthlyBranch.ts",
+        "bytes": 300,
+        "sha256": "933f9475bd0b580904515dc3198f059f8924310de10dd8538d2eb02e26311f0c",
+        "method": "independent git show at exact pin; byte equality with dossier"
+      },
+      {
+        "path": "src/i18n/locales/zh-CN/gender.ts",
+        "bytes": 61,
+        "sha256": "a19607ebf4055ed0f0daa3a78b21288185a67fdf8190e750251be72de19e5d8d",
+        "method": "independent git show at exact pin; byte equality with dossier"
+      },
+      {
+        "path": "src/i18n/locales/zh-CN/earthlyBranch.ts",
+        "bytes": 280,
+        "sha256": "8672f42c8460b8ae0079e643e1fe62db133fcd19879dd2ad08b5ab3b606a2ab8",
+        "method": "independent git show at exact pin; byte equality with dossier"
+      },
+      {
+        "path": "src/i18n/locales/zh-TW/gender.ts",
+        "bytes": 61,
+        "sha256": "a19607ebf4055ed0f0daa3a78b21288185a67fdf8190e750251be72de19e5d8d",
+        "method": "independent git show at exact pin; byte equality with dossier"
+      },
+      {
+        "path": "src/i18n/locales/zh-TW/earthlyBranch.ts",
+        "bytes": 280,
+        "sha256": "8672f42c8460b8ae0079e643e1fe62db133fcd19879dd2ad08b5ab3b606a2ab8",
+        "method": "independent git show at exact pin; byte equality with dossier"
+      }
+    ],
+    "packetPayloadCount": 19,
+    "packetPayloadsAreNotExhaustiveOfImports": true,
+    "supplementalPinnedSources": [
+      {
+        "path": "src/i18n/locales/en-US/earthlyBranch.ts",
+        "localPath": "review-sol-supplement/src__i18n__locales__en-US__earthlyBranch.ts",
+        "sha256": "dcf7ffb67233fede74de6290e2c341dce80bcbd81b053c48e9667f42ad0bd0f2",
+        "bytes": 280,
+        "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/en-US/earthlyBranch.ts"
+      },
+      {
+        "path": "src/i18n/locales/en-US/index.ts",
+        "localPath": "review-sol-supplement/src__i18n__locales__en-US__index.ts",
+        "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007",
+        "bytes": 503,
+        "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/en-US/index.ts"
+      },
+      {
+        "path": "src/i18n/starAliases.ts",
+        "localPath": "review-sol-supplement/src__i18n__starAliases.ts",
+        "sha256": "5db704982d754e9e9487c80dfc171b51584cb89014b68171f7c6b87171a49b14",
+        "bytes": 744,
+        "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/starAliases.ts"
+      }
+    ],
+    "supplementalConclusion": "The packet omits the English branch locale used by getAgeIndex's literal starts. Independent inspection of its pinned raw bytes resolves chen/xu/wei/chou to the intended canonical keys; its index merges that locale into the English resource, and STAR_ALIASES contains none of these four literals. This closes that dependency by separate evidence without changing or claiming it is part of the original contextDigest.",
+    "originalPacketUnchanged": true
+  },
+  "independentVerification": {
+    "script": "/tmp/tuvi-modern-minor/review-sol-verification.mjs",
+    "output": "/tmp/tuvi-modern-minor/review-sol-verification.json",
+    "command": "node /tmp/tuvi-modern-minor/review-sol-verification.mjs",
+    "exitCode": 0,
+    "digests": {
+      "sourceDigest": "d5342272cab276bc6d17d1be3e837873a67410d4f961cd22bfc1975a843cc817",
+      "contextDigest": "084984efdc46adbc115fc35707f80d1dfd28d114ac26645f3c8dd561f1b1cf09",
+      "algorithmDigest": "73617dee8c9cc2b8ecc30a5e785139cc40fff6adda1f8b866db46f0b5497c50d",
+      "compatibilityDigest": "786bfeb18c04ad84371ecd0f526266a7aef55288d19aeee6c682f718a5b55344",
+      "fixturesDigest": "053fbdd20d76ce2e31da097dcfb991c969f333f8e19104c88374899f31883215"
+    },
+    "originalContextEntriesVerified": 33,
+    "requiredAnchorsPreserved": true,
+    "counts": {
+      "endpointCases": 120,
+      "allAgeComparisons": 2880,
+      "fullNatalCharts": 24,
+      "negativeProposals": 39,
+      "productYearBoundaries": 8,
+      "productLeapMonthCases": 12
+    },
+    "description": "Own source-data extraction and English-locale resolution; finite table compared to independent cyclic walk and the exact proposed formula for all 2880 combinations; all endpoint expected branch/palace/function/star witnesses reproduced using existing product code; all 24 full natal snapshots reproduced; product Tết and leap witnesses reproduced. No upstream runtime or proposed product minor-period adapter was executed.",
+    "fixtureClass": "engineering_mathematical_comparative_not_independently_sourced_historical_goldens",
+    "scriptDigest": "49ca976150767a6bbf7b275e62a9fb233bccd1da1822f52425b509070a06c7d2",
+    "outputDigest": "f229022e27868289b6a98df239c1694c537eef7afe341b06ce259cdb9070f317"
+  },
+  "scopeLimitations": [
+    "upstream_calendar_equivalence",
+    "yearDivide_selection",
+    "ageDivide_selection",
+    "date_to_nominal_age",
+    "birthday_boundary",
+    "leap_month_age_semantics",
+    "classical_quanshu_approval",
+    "default_profile_change",
+    "dai_han",
+    "childhood_periods",
+    "natal_formulas",
+    "fortune_interpretation",
+    "public_predictions"
+  ],
+  "invalidInputContract": "strict_adapter_proposal_not_observed_upstream_rejection",
+  "productAdapterReviewed": false,
+  "sourceCodeExecuted": false,
+  "historicalAuthentication": false,
+  "expertVerified": false,
+  "bookVerified": false,
+  "publicRelease": false,
+  "releasePermission": "withheld",
+  "interpretationReviewed": false,
+  "runtimeRuleChangeApplied": false,
+  "independentReviewIsolation": "No other model verdict or prior classical review judgment was read. The provided fixture-verification evidence was inspected as engineering context and independently reproduced; it was not treated as a source approval.",
+  "reviewDimensions": {
+    "sourceCorrectness": "reviewed",
+    "compatibilityScope": "reviewed",
+    "fixtureReproduction": "executed",
+    "inputTrustBoundary": "reviewed as proposal only",
+    "sourceProvenance": "independently verified pinned raw blobs",
+    "performance": "No product implementation change in scope; finite bounded 12x10 mathematical source procedure examined, no runtime performance claim",
+    "simplification": "No product changes or cleanup proposed; adjacent decadal/date context is necessary evidence to delimit the projection",
+    "interpretation": "excluded",
+    "publicRelease": "withheld"
+  },
+  "findings": []
+}

@@ -1,0 +1,565 @@
+{
+  "model": "gpt-6-astra",
+  "available": true,
+  "reviewType": "independent_source_and_formula_review",
+  "reviewedAt": "2026-10-15",
+  "subjectType": "fortune_placement_profile",
+  "subjectId": "iztro-pinned-age1-sex-triad",
+  "profileId": "iztro-pinned-age1-sex-triad",
+  "sourceId": "iztro-modern-software",
+  "sourceProfile": "iztro-pinned-age1-sex-triad",
+  "editionId": "iztro-modern-2f00e2ab0c80",
+  "schoolId": "vn-tam-hop-default",
+  "schoolCompatibilityOnly": true,
+  "upstreamSchoolId": null,
+  "locator": "src/astro/palace.ts#getHoroscope",
+  "claimId": "iztro-pinned-age1-sex-triad",
+  "sourceClass": "pinned_modern_software_and_documentation_not_classical_edition",
+  "sourcePin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "sourceDigest": "d5342272cab276bc6d17d1be3e837873a67410d4f961cd22bfc1975a843cc817",
+  "contextDigest": "084984efdc46adbc115fc35707f80d1dfd28d114ac26645f3c8dd561f1b1cf09",
+  "algorithmDigest": "73617dee8c9cc2b8ecc30a5e785139cc40fff6adda1f8b866db46f0b5497c50d",
+  "compatibilityDigest": "786bfeb18c04ad84371ecd0f526266a7aef55288d19aeee6c682f718a5b55344",
+  "fixturesDigest": "053fbdd20d76ce2e31da097dcfb991c969f333f8e19104c88374899f31883215",
+  "quotation": "/**\n * 起大限\n *\n * - 大限由命宫起，阳男阴女顺行；\n * - 阴男阳女逆行，每十年过一宫限。\n *\n * @param solarDateStr 公历日期\n * @param timeIndex 出生时索引\n * @param gender 性别\n * @param fixLeap 是否修正闰月，若修正，则闰月前15天按上月算，后15天按下月算\n * @returns 从寅宫开始的大限年龄段\n */\nexport const getHoroscope = (param: AstrolabeParam): { decadals: Decadal[]; ages: number[][] } => {\n  const { solarDate, timeIndex, gender, from } = param;\n  const decadals: Decadal[] = [];\n  const genderKey = kot<GenderKey>(gender!);\n  const { yearly } = getHeavenlyStemAndEarthlyBranchBySolarDate(solarDate, timeIndex, {\n    // 起大限应该与配置同步\n    year: getConfig().yearDivide,\n  });\n  const heavenlyStem = kot<HeavenlyStemKey>(yearly[0], 'Heavenly');\n  const earthlyBranch = kot<EarthlyBranchKey>(yearly[1], 'Earthly');\n  const { soulIndex, heavenlyStemOfSoul, earthlyBranchOfSoul } = getSoulAndBody(param);\n  const fiveElementsClass = kot<FiveElementsClassKey>(\n    getFiveElementsClass(from?.heavenlyStem ?? heavenlyStemOfSoul, from?.earthlyBranch ?? earthlyBranchOfSoul),\n  );\n\n  // 用五虎遁获取大限起始天干\n  const startHeavenlyStem = TIGER_RULE[heavenlyStem];\n\n  for (let i = 0; i < 12; i++) {\n    const idx =\n      GENDER[genderKey] === earthlyBranches[earthlyBranch].yinYang ? fixIndex(soulIndex + i) : fixIndex(soulIndex - i);\n    const start = FiveElementsClass[fiveElementsClass] + 10 * i;\n    const heavenlyStemIndex = fixIndex(HEAVENLY_STEMS.indexOf(startHeavenlyStem) + idx, 10);\n    const earthlyBranchIndex = fixIndex(EARTHLY_BRANCHES.indexOf('yinEarthly') + idx);\n\n    decadals[idx] = {\n      range: [start, start + 9],\n      heavenlyStem: t(HEAVENLY_STEMS[heavenlyStemIndex]),\n      earthlyBranch: t(EARTHLY_BRANCHES[earthlyBranchIndex]),\n    };\n  }\n\n  const ageIdx = getAgeIndex(yearly[1]);\n  const ages = [];\n\n  for (let i = 0; i < 12; i++) {\n    const age = [];\n\n    for (let j = 0; j < 10; j++) {\n      age.push(12 * j + i + 1);\n    }\n\n    const idx = kot<GenderKey>(gender!) === 'male' ? fixIndex(ageIdx + i) : fixIndex(ageIdx - i);\n\n    ages[idx] = age;\n  }\n\n  return { decadals, ages };\n};",
+  "quotationPolicy": "min-40-v1",
+  "quotationExplanation": "Complete stored getHoroscope comment and function, trimmed only at outer boundary for comparator quotation validation. sourceDigest hashes original exact UTF-8 bytes including terminal LF, not this trimmed quotation.",
+  "conditions": [
+    "explicit_named_modern_profile",
+    "four_birth_branch_triad_starts",
+    "male_forward_female_reverse",
+    "age_one_at_triad_start",
+    "one_palace_per_year_wrap_twelve",
+    "finite_integer_age_one_to_120",
+    "explicit_branch_sex_age_projection",
+    "no_calendar_age_derivation",
+    "not_classical_or_public_prediction_approval"
+  ],
+  "conditionIds": [
+    "explicit_named_modern_profile",
+    "four_birth_branch_triad_starts",
+    "male_forward_female_reverse",
+    "age_one_at_triad_start",
+    "one_palace_per_year_wrap_twelve",
+    "finite_integer_age_one_to_120",
+    "explicit_branch_sex_age_projection",
+    "no_calendar_age_derivation",
+    "not_classical_or_public_prediction_approval"
+  ],
+  "requiredAnchors": [
+    "const ageIdx = getAgeIndex(yearly[1]);",
+    "age.push(12 * j + i + 1);",
+    "kot<GenderKey>(gender!) === 'male' ? fixIndex(ageIdx + i) : fixIndex(ageIdx - i)",
+    "ages[idx] = age;"
+  ],
+  "exceptions": [],
+  "algorithmSpec": {
+    "profileId": "iztro-pinned-age1-sex-triad",
+    "inputFields": [
+      "birthYearBranch",
+      "gender",
+      "nominalAge"
+    ],
+    "branchOrder": [
+      "Tí",
+      "Sửu",
+      "Dần",
+      "Mão",
+      "Thìn",
+      "Tị",
+      "Ngọ",
+      "Mùi",
+      "Thân",
+      "Dậu",
+      "Tuất",
+      "Hợi"
+    ],
+    "branchIds": "one_based_1_to_12",
+    "triadStarts": [
+      {
+        "birthBranches": [
+          "Dần",
+          "Ngọ",
+          "Tuất"
+        ],
+        "startBranch": "Thìn",
+        "startBranchId": 5
+      },
+      {
+        "birthBranches": [
+          "Thân",
+          "Tí",
+          "Thìn"
+        ],
+        "startBranch": "Tuất",
+        "startBranchId": 11
+      },
+      {
+        "birthBranches": [
+          "Tị",
+          "Dậu",
+          "Sửu"
+        ],
+        "startBranch": "Mùi",
+        "startBranchId": 8
+      },
+      {
+        "birthBranches": [
+          "Hợi",
+          "Mão",
+          "Mùi"
+        ],
+        "startBranch": "Sửu",
+        "startBranchId": 2
+      }
+    ],
+    "genderDirections": [
+      {
+        "gender": 1,
+        "sourceKey": "male",
+        "direction": 1
+      },
+      {
+        "gender": -1,
+        "sourceKey": "female",
+        "direction": -1
+      }
+    ],
+    "ageAtStart": 1,
+    "ageStep": 1,
+    "palacesPerAgeStep": 1,
+    "wrap": 12,
+    "nominalAgeRange": {
+      "min": 1,
+      "max": 120,
+      "integer": true
+    },
+    "outputFormula": "branchId = ((startBranchId - 1 + direction * (nominalAge - 1)) % 12 + 12) % 12 + 1",
+    "sourcePalaceToProductBranchId": "((sourcePalaceIndex + 2) % 12) + 1",
+    "yearYinYangAffectsDirection": false,
+    "calendarAgeDerivation": false,
+    "extendsBeyondSourceRange": false
+  },
+  "compatibilitySpec": {
+    "scope": "branch_sex_age_projection_not_full_iztro_astrolabe",
+    "receivingSchoolId": "vn-tam-hop-default",
+    "upstreamSchoolId": null,
+    "birthYearBranch": "trusted_server_natal_lunar_chiName_and_chiIndex_consistent",
+    "gender": "validated_product_gender_1_male_minus1_female",
+    "nominalAge": "caller_supplied_integer_1_to_120_not_date_derived",
+    "sourceBranchAndGenderMapping": [
+      {
+        "key": "ziEarthly",
+        "chinese": "子",
+        "upstreamVi": "Tý",
+        "productVi": "Tí",
+        "productBranchId": 1,
+        "sourceBranchEnumIndex": 0,
+        "sourcePalaceIndex": 10
+      },
+      {
+        "key": "chouEarthly",
+        "chinese": "丑",
+        "upstreamVi": "Sửu",
+        "productVi": "Sửu",
+        "productBranchId": 2,
+        "sourceBranchEnumIndex": 1,
+        "sourcePalaceIndex": 11
+      },
+      {
+        "key": "yinEarthly",
+        "chinese": "寅",
+        "upstreamVi": "Dần",
+        "productVi": "Dần",
+        "productBranchId": 3,
+        "sourceBranchEnumIndex": 2,
+        "sourcePalaceIndex": 0
+      },
+      {
+        "key": "maoEarthly",
+        "chinese": "卯",
+        "upstreamVi": "Mão",
+        "productVi": "Mão",
+        "productBranchId": 4,
+        "sourceBranchEnumIndex": 3,
+        "sourcePalaceIndex": 1
+      },
+      {
+        "key": "chenEarthly",
+        "chinese": "辰",
+        "upstreamVi": "Thìn",
+        "productVi": "Thìn",
+        "productBranchId": 5,
+        "sourceBranchEnumIndex": 4,
+        "sourcePalaceIndex": 2
+      },
+      {
+        "key": "siEarthly",
+        "chinese": "巳",
+        "upstreamVi": "Tỵ",
+        "productVi": "Tị",
+        "productBranchId": 6,
+        "sourceBranchEnumIndex": 5,
+        "sourcePalaceIndex": 3
+      },
+      {
+        "key": "wuEarthly",
+        "chinese": "午",
+        "upstreamVi": "Ngọ",
+        "productVi": "Ngọ",
+        "productBranchId": 7,
+        "sourceBranchEnumIndex": 6,
+        "sourcePalaceIndex": 4
+      },
+      {
+        "key": "weiEarthly",
+        "chinese": "未",
+        "upstreamVi": "Mùi",
+        "productVi": "Mùi",
+        "productBranchId": 8,
+        "sourceBranchEnumIndex": 7,
+        "sourcePalaceIndex": 5
+      },
+      {
+        "key": "shenEarthly",
+        "chinese": "申",
+        "upstreamVi": "Thân",
+        "productVi": "Thân",
+        "productBranchId": 9,
+        "sourceBranchEnumIndex": 8,
+        "sourcePalaceIndex": 6
+      },
+      {
+        "key": "youEarthly",
+        "chinese": "酉",
+        "upstreamVi": "Dậu",
+        "productVi": "Dậu",
+        "productBranchId": 10,
+        "sourceBranchEnumIndex": 9,
+        "sourcePalaceIndex": 7
+      },
+      {
+        "key": "xuEarthly",
+        "chinese": "戌",
+        "upstreamVi": "Tuất",
+        "productVi": "Tuất",
+        "productBranchId": 11,
+        "sourceBranchEnumIndex": 10,
+        "sourcePalaceIndex": 8
+      },
+      {
+        "key": "haiEarthly",
+        "chinese": "亥",
+        "upstreamVi": "Hợi",
+        "productVi": "Hợi",
+        "productBranchId": 12,
+        "sourceBranchEnumIndex": 11,
+        "sourcePalaceIndex": 9
+      }
+    ],
+    "genderMapping": [
+      {
+        "productCode": 1,
+        "sourceKey": "male",
+        "sourceLabel": "Nam"
+      },
+      {
+        "productCode": -1,
+        "sourceKey": "female",
+        "sourceLabel": "Nữ"
+      }
+    ],
+    "target": "resolve_reviewed_branch_on_unchanged_validated_12_palace_natal_chart",
+    "exclusions": [
+      "upstream_calendar_equivalence",
+      "yearDivide_selection",
+      "ageDivide_selection",
+      "date_to_nominal_age",
+      "birthday_boundary",
+      "leap_month_age_semantics",
+      "classical_quanshu_approval",
+      "default_profile_change",
+      "dai_han",
+      "childhood_periods",
+      "natal_formulas",
+      "fortune_interpretation",
+      "public_predictions"
+    ],
+    "invalidInputContract": "strict_adapter_proposal_not_observed_upstream_rejection",
+    "historicalAuthentication": false,
+    "bookVerified": false,
+    "expertVerified": false,
+    "publicRelease": false
+  },
+  "formulaComparison": "MATCH",
+  "verdict": "MATCH",
+  "approvalScope": "Source/formula correspondence for the explicitly named iztro-pinned-age1-sex-triad modern software profile and its declared branch/sex/caller-supplied-integer-nominal-age projection, ages 1–120. This is one independent reviewer opinion for later comparison, not approval of implemented product code, a parent review-loop decision, historical authentication, expert verification, interpretation, or release.",
+  "reasoning": [
+    "getAgeIndex partitions the twelve canonical birth-year branches into four disjoint complete triads: yin/wu/xu -> chen; shen/zi/chen -> xu; si/you/chou -> wei; hai/mao/wei -> chou. I inspected the complete function, not only its mnemonic comment. The comment uses 戍 in places, while the executable keys and canonical locale use xuEarthly/戌; this review binds the modern software keys and does not authenticate historical orthography.",
+    "The getHoroscope minor loop assigns 12*j+i+1 for i=0..11 and j=0..9 to ageIdx+i for male and ageIdx-i for female. Thus age 1 is at ageIdx, each additional age moves one palace in the sex-specific direction, and each palace receives its ten ages separated by 12. The union is exactly the integers 1..120. Valid-domain fixIndex performs modulo 12, including negative intermediate indices. The candidate formula is mathematically equivalent on precisely that finite domain.",
+    "The minor loop directly tests the normalized sex key. Birth-year yin/yang appears in the preceding decadal loop, not the minor direction. from may change soulIndex and the five-elements class used by decadal generation; once yearly[1] and sex are fixed, it does not change minor-age arrays. Reading the full function prevents importing decadal starting-age or direction rules.",
+    "EARTHLY_BRANCHES starts at zi, but fixEarthlyBranchIndex subtracts the yin index, so source palace index zero is Dần. The product uses Tí as branch ID 1. Therefore source palace p maps to ((p+2)%12)+1. VI locales supply Nam/Nữ and the branch mapping, including upstream Tý/Tỵ versus product Tí/Tị. The product chart validator documents 1 male and -1 female. These are explicit conversions, not inferred truthiness.",
+    "I additionally read pinned en-US/earthlyBranch.ts and its locale index because getAgeIndex passes pinyin chen/xu/wei/chou into fixEarthlyBranchIndex. The en-US resource maps those strings to their canonical Earthly keys; the index includes earthlyBranch and i18n resources include en-US. The pinned starAliases table does not intercept these strings. These supplemental blobs are separately hashed and are not represented as already contained in the original contextDigest.",
+    "The full upstream procedure derives yearly[1] using configured yearDivide. The query function derives nominalAge from lunar-year differences; normal adds one and birthday uses a strict lunar month/day comparison without leap-flag comparison in that branch. This does not authorize a Gregorian-year subtraction or automatic age conversion. The reviewed receiving-school compatibility is only a new explicitly named projection using the product natal branch and caller-supplied nominal age. It makes no claim that either the natal chart or birth-year/date controls reproduce the complete upstream astrolabe.",
+    "The complete modern documentation corroborates one palace per year, nominal age, male-forward/female-reverse and birth-year triads. Nearby decadal and childhood rules are distinct and excluded. Interpretive statements and fortune claims in the pages were not approved.",
+    "The 120 endpoint fixtures and all 2880 valid-domain combinations agree with a separately written year-by-year walk, a source-table transcription, and the proposed formula. All 24 natal records, including palace functions and major-star records, reproduce through the existing product engine. Eight Tết and twelve leap projections also reproduce. These are engineering witnesses to a branch lookup on the existing chart; they are not historical goldens or a validation of a new production minor-period implementation.",
+    "Unknown translations can pass through kot; an unknown branch can leave getAgeIndex at -1; non-male inputs select the reverse branch in the inspected loop. The source table itself has no strict proposed adapter exception contract. The 39 invalid examples must remain identified as proposed fail-closed API requirements rather than observed upstream rejection. Range support 1–120 describes the finite table, not a universal doctrinal age limit."
+  ],
+  "conditionAssessments": [
+    {
+      "id": "explicit_named_modern_profile",
+      "supported": true,
+      "basis": "profileId and sourceClass explicitly distinguish this modern pinned method from classical/default methods"
+    },
+    {
+      "id": "four_birth_branch_triad_starts",
+      "supported": true,
+      "basis": "Complete getAgeIndex, canonical branch enum/locales and supplementary pinyin resolution"
+    },
+    {
+      "id": "male_forward_female_reverse",
+      "supported": true,
+      "basis": "Complete minor loop explicitly tests male; female is the reviewed valid-domain alternative"
+    },
+    {
+      "id": "age_one_at_triad_start",
+      "supported": true,
+      "basis": "i=0 and j=0 yield age 1 at ageIdx"
+    },
+    {
+      "id": "one_palace_per_year_wrap_twelve",
+      "supported": true,
+      "basis": "i increments both age residue and signed palace offset; complete fixIndex wraps 0..11"
+    },
+    {
+      "id": "finite_integer_age_one_to_120",
+      "supported": true,
+      "basis": "i<12 and j<10 enumerate 1..120 exactly; strict rejection outside domain is an added adapter requirement"
+    },
+    {
+      "id": "explicit_branch_sex_age_projection",
+      "supported": true,
+      "basis": "Mapped canonical branch identities and sex codes; chart lookup witnesses; no upstream calendar/natal equivalence asserted"
+    },
+    {
+      "id": "no_calendar_age_derivation",
+      "supported": true,
+      "basis": "A necessary explicit exclusion: pinned yearDivide/ageDivide and query date controls were read and are not imported"
+    },
+    {
+      "id": "not_classical_or_public_prediction_approval",
+      "supported": true,
+      "basis": "Review identity and scope expressly limit this opinion to a modern source/formula projection"
+    }
+  ],
+  "scopeLimitations": [
+    "upstream_calendar_equivalence",
+    "yearDivide_selection",
+    "ageDivide_selection",
+    "date_to_nominal_age",
+    "birthday_boundary",
+    "leap_month_age_semantics",
+    "classical_quanshu_approval",
+    "default_profile_change",
+    "dai_han",
+    "childhood_periods",
+    "natal_formulas",
+    "fortune_interpretation",
+    "public_predictions",
+    "One reviewer opinion only; cross-review outcome belongs to the parent comparator.",
+    "No new product minor-period implementation was executed or reviewed.",
+    "No claim that all source imports are exhausted by the original 19 payloads.",
+    "Direct primary raw fetching failed with EAI_AGAIN; actual independent pin verification was git show at the exact commit in the local pinned repository.",
+    "Git content correspondence is not proof of historical authenticity or external author identity.",
+    "All invalid-input policy remains an explicitly proposed adapter boundary, not an upstream behavioral match."
+  ],
+  "pinVerification": {
+    "method": "independent_git_show_exact_commit",
+    "repositoryPath": "/tmp/tuvi-iztro-pinned",
+    "verifiedPayloads": [
+      {
+        "path": "LICENSE",
+        "sha256": "e6c7b6e313cbda3135b41bccc66c98be132cb8319d0d465903d17e669e748b36",
+        "verification": "independent_git_show_exact_commit"
+      },
+      {
+        "path": "docs/zh_TW/learn/setup.html",
+        "sha256": "9e69805617313e8ae36805941e583f70f6e3a0a9c92411b1675b1e3df3cd9f40",
+        "verification": "independent_git_show_exact_commit"
+      },
+      {
+        "path": "docs/zh_TW/learn/basis.html",
+        "sha256": "2aea62af92b36d4fcb8fe6f36eb02e5f91935477c8eae30f30d932c287cb4a2e",
+        "verification": "independent_git_show_exact_commit"
+      },
+      {
+        "path": "docs/zh_TW/learn/horoscope.html",
+        "sha256": "e1bd9053258d022e2dc2295e23a6847a92eb004655090252a91494bcff48a0f4",
+        "verification": "independent_git_show_exact_commit"
+      },
+      {
+        "path": "docs/zh_TW/posts/config-n-plugin.html",
+        "sha256": "145949e340fa8b0fe9cdd26fa892343ca7a5690491de7b27490d94c9f9ac9f19",
+        "verification": "independent_git_show_exact_commit"
+      },
+      {
+        "path": "docs/zh_TW/posts/horoscope.html",
+        "sha256": "20271af792c0d11109ca8551b54e6f5d48e298937e8df07fb71b05d4891f8762",
+        "verification": "independent_git_show_exact_commit"
+      },
+      {
+        "path": "src/astro/palace.ts",
+        "sha256": "a9c6d8444d5edcd241068f5bd83fed3aa38a57b206cebb221f86b8d4057b5273",
+        "verification": "independent_git_show_exact_commit"
+      },
+      {
+        "path": "src/astro/FunctionalAstrolabe.ts",
+        "sha256": "584fd8d2d3ac76b3b8d7990ec6d26cac42eb5f1fcac9175326f29497d60d2d9c",
+        "verification": "independent_git_show_exact_commit"
+      },
+      {
+        "path": "src/astro/config.ts",
+        "sha256": "e74d2bf23630f8faadfae9fd2d29c592ceb7a18d7396c0aba5d74959ea5d134e",
+        "verification": "independent_git_show_exact_commit"
+      },
+      {
+        "path": "src/utils/index.ts",
+        "sha256": "9f3699115c9c149dc261f9a293e6c7ad40ac4f744884dba21b367b96d9bbfe16",
+        "verification": "independent_git_show_exact_commit"
+      },
+      {
+        "path": "src/data/constants.ts",
+        "sha256": "e2411f73c7ea438b5186f2a3ef29fa54587ab78e25620b5a52b409ce9244043a",
+        "verification": "independent_git_show_exact_commit"
+      },
+      {
+        "path": "src/data/earthlyBranches.ts",
+        "sha256": "3dd6e4b260a18a2a8c0e4aec2a12e766f29e52d7b4c01ecbf332f6066a3f1b34",
+        "verification": "independent_git_show_exact_commit"
+      },
+      {
+        "path": "src/i18n/index.ts",
+        "sha256": "06da411d37e4e5f3dc7d922f3dbce0f9fcb2fe1125619873e6a651eabc63d558",
+        "verification": "independent_git_show_exact_commit"
+      },
+      {
+        "path": "src/i18n/locales/vi-VN/gender.ts",
+        "sha256": "79ab1b39e62fda211cd5b21e916446ee58d6afa10b3a639dd7799987ef7ef3d4",
+        "verification": "independent_git_show_exact_commit"
+      },
+      {
+        "path": "src/i18n/locales/vi-VN/earthlyBranch.ts",
+        "sha256": "933f9475bd0b580904515dc3198f059f8924310de10dd8538d2eb02e26311f0c",
+        "verification": "independent_git_show_exact_commit"
+      },
+      {
+        "path": "src/i18n/locales/zh-CN/gender.ts",
+        "sha256": "a19607ebf4055ed0f0daa3a78b21288185a67fdf8190e750251be72de19e5d8d",
+        "verification": "independent_git_show_exact_commit"
+      },
+      {
+        "path": "src/i18n/locales/zh-CN/earthlyBranch.ts",
+        "sha256": "8672f42c8460b8ae0079e643e1fe62db133fcd19879dd2ad08b5ab3b606a2ab8",
+        "verification": "independent_git_show_exact_commit"
+      },
+      {
+        "path": "src/i18n/locales/zh-TW/gender.ts",
+        "sha256": "a19607ebf4055ed0f0daa3a78b21288185a67fdf8190e750251be72de19e5d8d",
+        "verification": "independent_git_show_exact_commit"
+      },
+      {
+        "path": "src/i18n/locales/zh-TW/earthlyBranch.ts",
+        "sha256": "8672f42c8460b8ae0079e643e1fe62db133fcd19879dd2ad08b5ab3b606a2ab8",
+        "verification": "independent_git_show_exact_commit"
+      }
+    ],
+    "supplementalEvidence": [
+      {
+        "path": "src/i18n/locales/en-US/earthlyBranch.ts",
+        "localFile": "review-astra-supplement/src__i18n__locales__en-US__earthlyBranch.ts",
+        "bytes": 280,
+        "sha256": "dcf7ffb67233fede74de6290e2c341dce80bcbd81b053c48e9667f42ad0bd0f2",
+        "sourcePin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+        "verification": "independent_git_show_exact_commit",
+        "includedInOriginalContextDigest": false
+      },
+      {
+        "path": "src/i18n/locales/en-US/index.ts",
+        "localFile": "review-astra-supplement/src__i18n__locales__en-US__index.ts",
+        "bytes": 503,
+        "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007",
+        "sourcePin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+        "verification": "independent_git_show_exact_commit",
+        "includedInOriginalContextDigest": false
+      },
+      {
+        "path": "src/i18n/starAliases.ts",
+        "localFile": "review-astra-supplement/src__i18n__starAliases.ts",
+        "bytes": 744,
+        "sha256": "5db704982d754e9e9487c80dfc171b51584cb89014b68171f7c6b87171a49b14",
+        "sourcePin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+        "verification": "independent_git_show_exact_commit",
+        "includedInOriginalContextDigest": false
+      }
+    ],
+    "primaryRawFetches": [],
+    "primaryRawFetchFailures": [
+      {
+        "url": "https://raw.githubusercontent.com/SylarLong/iztro/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/astro/palace.ts",
+        "error": "TypeError: fetch failed",
+        "cause": "Error: getaddrinfo EAI_AGAIN raw.githubusercontent.com"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/SylarLong/iztro/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/utils/index.ts",
+        "error": "TypeError: fetch failed",
+        "cause": "Error: getaddrinfo EAI_AGAIN raw.githubusercontent.com"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/SylarLong/iztro/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/en-US/earthlyBranch.ts",
+        "error": "TypeError: fetch failed",
+        "cause": "Error: getaddrinfo EAI_AGAIN raw.githubusercontent.com"
+      }
+    ]
+  },
+  "verification": {
+    "script": "/tmp/tuvi-modern-minor/review-astra-verify.mjs",
+    "output": "/tmp/tuvi-modern-minor/review-astra-verification.json",
+    "command": "node /tmp/tuvi-modern-minor/review-astra-verify.mjs",
+    "finalExitCode": 0,
+    "digests": {
+      "sourceDigest": "d5342272cab276bc6d17d1be3e837873a67410d4f961cd22bfc1975a843cc817",
+      "contextDigest": "084984efdc46adbc115fc35707f80d1dfd28d114ac26645f3c8dd561f1b1cf09",
+      "algorithmDigest": "73617dee8c9cc2b8ecc30a5e785139cc40fff6adda1f8b866db46f0b5497c50d",
+      "compatibilityDigest": "786bfeb18c04ad84371ecd0f526266a7aef55288d19aeee6c682f718a5b55344",
+      "fixturesDigest": "053fbdd20d76ce2e31da097dcfb991c969f333f8e19104c88374899f31883215"
+    },
+    "counts": {
+      "endpointCases": 120,
+      "allAgeComparisons": 2880,
+      "reachableNatalCharts": 24,
+      "proposedInvalidExamples": 39,
+      "tetBoundaryCases": 8,
+      "leapCases": 12
+    },
+    "upstreamCodeExecuted": false,
+    "productMinorFormulaExecuted": false,
+    "calendarEquivalenceCertified": false,
+    "historicalGoldens": false
+  },
+  "findings": [],
+  "expertVerified": false,
+  "bookVerified": false,
+  "historicalAuthenticated": false,
+  "publicRelease": false,
+  "releasePermission": "withheld",
+  "interpretationReviewed": false,
+  "runtimeRuleChangeApplied": false,
+  "productFilesEdited": false,
+  "independence": {
+    "otherModelVerdictRead": false,
+    "previousClassicalJudgmentsRead": false,
+    "parentVerdictAdopted": false,
+    "fixtureEngineeringReportRead": true,
+    "ownFixtureVerificationExecuted": true
+  }
+}

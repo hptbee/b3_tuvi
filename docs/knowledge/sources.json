@@ -246,6 +246,25 @@
       "expertVerified": false,
       "verificationNotes": "Git blob pin and HTML SHA independently checked. Exact source passages and context received distinct-model text/interpretation review only. No equality to Wikisource oldid or independent historical edition is established. Runtime school compatibility is a read-only condition projection, not source-school equivalence.",
       "copyrightNotes": "Bounded classical-source passages/context and original Vietnamese annotations only; no mirror HTML/JS/software vendored. Repository MIT notice preserved; its footer separately states all rights reserved. License observation is not original-edition authentication."
+    },
+    {
+      "sourceId": "iztro-modern-software",
+      "title": "iztro pinned modern software — explicit nominal-age minor-period mapping",
+      "author": "SylarLong and contributors",
+      "tradition": "Modern Zi Wei software documentation and source implementation; separately named structural projection",
+      "schoolId": null,
+      "sourceType": "modern_software_reference",
+      "publicationYear": null,
+      "edition": null,
+      "publisher": null,
+      "language": "zh/en/vi",
+      "url": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/astro/palace.ts",
+      "accessedAt": "2026-10-15",
+      "bibliographicStatus": "secondary",
+      "bookVerified": false,
+      "expertVerified": false,
+      "verificationNotes": "Exact Git pin and source/locale payloads independently checked by two actual models. Approval covers a branch/sex/explicit nominal-age projection, not an authenticated historical edition or full upstream/product calendar/natal equivalence.",
+      "copyrightNotes": "MIT software reference; full notice preserved. Source/context and supplemental code are inert evidence text, not imported, installed, executed or served as application assets."
     }
   ],
   "editions": [
@@ -327,6 +346,23 @@
       "bookVerified": false,
       "expertVerified": false,
       "verificationNotes": "Pinned modern reproduction only; paragraph/context digest review does not authenticate a historical edition or certify natal formulas."
+    },
+    {
+      "editionId": "iztro-modern-2f00e2ab0c80",
+      "sourceId": "iztro-modern-software",
+      "documentType": "pinned_modern_software_reference",
+      "documentUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/astro/palace.ts",
+      "gitRepository": "https://github.com/SylarLong/iztro",
+      "gitCommit": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+      "gitPath": "src/astro/palace.ts",
+      "contentSha256": "a9c6d8444d5edcd241068f5bd83fed3aa38a57b206cebb221f86b8d4057b5273",
+      "authenticated": false,
+      "digitalArtifactVerified": true,
+      "originalEditionAuthenticated": false,
+      "textCollatedAgainstOriginal": false,
+      "bookVerified": false,
+      "expertVerified": false,
+      "verificationNotes": "Modern implementation identity only. Primary full-file hash differs deliberately from the bounded reviewed function span hash. No historical/classical-source or natal-school authentication."
     }
   ]
 }

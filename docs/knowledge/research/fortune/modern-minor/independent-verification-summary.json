@@ -1,0 +1,24 @@
+{
+  "status": "INDEPENDENT_ENGINEERING_FIXTURE_VERIFIED_NOT_SOURCE_APPROVAL",
+  "sourceRevision": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "upstreamCodeExecuted": false,
+  "productMinorFormulaExecuted": false,
+  "calendarEquivalenceCertified": false,
+  "sourceGoldens": false,
+  "counts": {
+    "endpointCases": 120,
+    "allAgeComparisons": 2880,
+    "reachableNatalCharts": 24,
+    "priorIndependentProbeExamples": 24,
+    "proposedInvalidCases": 39,
+    "boundaryCases": 8,
+    "leapCases": 12
+  },
+  "limitations": [
+    "Explicit supplied nominal age only; no date-to-age derivation",
+    "Product calendar/year boundary verified, not certified equivalent to upstream yearDivide",
+    "Invalid cases validate a proposed strict adapter contract, not upstream error behavior",
+    "No source approval, runtime approval, historical authenticity or public prediction approval"
+  ],
+  "findings": []
+}

@@ -859,3 +859,17 @@ h1, h2, h3 { font-weight: 500; }
   .resource-nav { width: 100%; justify-content: flex-end; }
   .resource-nav a { padding: 8px 12px; }
 }
+
+/* Explicit-age structural projection, kept within the existing results page. */
+.modern-minor-panel { margin: 22px 0; padding: 18px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.modern-minor-panel h3 { margin: 0 0 10px; color: var(--ink); }
+.modern-minor-panel p { margin: 10px 0; }
+.modern-minor-controls { display: flex; flex-wrap: wrap; align-items: end; gap: 12px; margin: 16px 0; }
+.modern-minor-controls label { display: grid; gap: 6px; flex: 1 1 180px; min-width: 0; }
+.modern-minor-controls input, .modern-minor-controls select, .modern-minor-controls button { box-sizing: border-box; min-height: 44px; max-width: 100%; padding: 9px 12px; font: inherit; border: 1px solid var(--muted); border-radius: 7px; color: var(--ink); background: white; }
+.modern-minor-controls input, .modern-minor-controls select { width: 100%; }
+.modern-minor-controls button { background: var(--accent); color: white; cursor: pointer; }
+.modern-minor-controls :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.modern-minor-panel a { color: var(--accent); text-underline-offset: 3px; overflow-wrap: anywhere; }
+.modern-minor-controls [aria-invalid="true"] { border-color: #a12d25; }
+@media (max-width: 600px) { .modern-minor-panel { padding: 14px; }.modern-minor-controls label, .modern-minor-controls button { flex-basis: 100%; } }
