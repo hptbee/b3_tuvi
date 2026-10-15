@@ -2,13 +2,13 @@
 
 - b3_home: /workspace/b3_tuvi/.b3/runtime/b3_ai-engineering
 - product_root: /workspace/b3_tuvi
-- plan_id: Autonomous Product Completion version 6
-- plan_version: 6
-- branch: codex/tuvi-annual-palace-placement
+- plan_id: Autonomous Product Completion version 7
+- plan_version: 7
+- branch: codex/tuvi-annual-placement-ui
 - run_base_sha: f0dec74973ef9d07129e19330356f8e6d2040227
 - previous_run_base_sha: 45615a48d0c75b90138cfc618320ffae6e9c34e0
-- current_task: T016
-- current_task_base_sha: f0dec74973ef9d07129e19330356f8e6d2040227
+- current_task: T017
+- current_task_base_sha: c4281b0579d266419bf43f2de6bafb4b24daae12
 - run_status: running
 - updated: 2026-10-15
 
@@ -191,7 +191,7 @@ Eightcode capabilitytaskscommitted. NeworderedqueueT012,T010/T011,T013,T014,T015
 ### T016
 - depth: detailed
 - readiness: ready
-- plan_version: 6
+- plan_version: 7
 - approach_at_sha: f0dec74973ef9d07129e19330356f8e6d2040227
 - task_spec_fingerprint: depends_on=[]|scope=backend/src/time/thienDuc.js, backend/src/time/timeEngine.js, backend/test/thienDuc.test.mjs, backend/src/engine/normalizeChart.js|acceptance_criteria=Existing accepted Thiên Đức/Nguyệt Đức branches resolve to the unique canonical natal palace without modifying natal stars or formulas; Invalid or ambiguous chart metadata never produces a palace placement; Existing branch/status/profile contracts remain compatible; public fortune and prose remain withheld
 - watched_paths: backend/src/time/thienDuc.js, backend/src/time/timeEngine.js, backend/test/thienDuc.test.mjs, backend/src/engine/normalizeChart.js, backend/src/engine/normalizeChart.js, backend/src/engine/constants.js, backend/src/interpretation/analyze.js, docs/knowledge/research/fortune/nguyet-duc-decision.json, docs/knowledge/research/fortune/thien-duc-convention-decision.json
@@ -214,3 +214,47 @@ T020: existing Quanshu adjacent Phụ Mẫu/Huynh Đệ versus natal Mệnh anch
 T016 depth correction before final gate: additive HTTP capability fields require detailed rather than notes. Existing monolith/module architecture retained (simplest-correct read); no service/layer/schema added. Optional design-only isolated pass skipped; full post-code review owns contract verification.
 
 T016 acceptance complete: both accepted branches map safely to canonical unique natal palaces; no branch formula/annotation mutation, no prose/public fortune. Full backend CI exit0 coverage86.82/87.59, docs links180 PASS and diff check PASS. Independent full-scope review2 closes R101/R102; orchestrator quality gate PASS. Commit pending immediately; next T017.
+
+## T016 completion receipt
+- commit: c4281b0579d266419bf43f2de6bafb4b24daae12; ancestor of current HEAD; push origin/codex/tuvi-annual-palace-placement succeeded
+- PR creation attempted with prepared /tmp/tuvi-placement-pr.md, GitHub GraphQL POST Forbidden. Branch is reviewable; PR not created. URL https://github.com/hptbee/b3_tuvi/compare/main...codex/tuvi-annual-palace-placement
+- review: SMALL full-scope two passes, R101/R102 CLOSED, orchestrator PASS; CI86.82/87.59
+
+### T017
+- task_base: c4281b0579d266419bf43f2de6bafb4b24daae12
+- depth: notes
+- readiness: ready
+- plan_version: 7
+- approach_at_sha: c4281b0579d266419bf43f2de6bafb4b24daae12
+- task_spec_fingerprint: depends_on=T016|scope=frontend/src/components/StructuredAnalysis.jsx, frontend/src/components/StructuredAnalysis.test.jsx, frontend/e2e|acceptance_criteria=Selecting a view-year branch displays each supported annual star branch and mapped natal palace in a separate readable section; Clear traditional source attribution and withheld interpretation remain visible; missing selection has a specific prompt, not an inaccurate unapproved-formula message; Stale responses, invalid mapping data and retries never display stale or unsafe placements
+- watched_paths: frontend/src/components/StructuredAnalysis.jsx, frontend/src/components/StructuredAnalysis.test.jsx, frontend/e2e/chart.spec.js, frontend/e2e/annual-placement.spec.js, frontend/playwright.config.js, backend/src/time/thienDuc.js, backend/src/time/timeEngine.js, backend/src/interpretation/analyze.js
+- inspected: Existing StructuredAnalysis request key/abort/sequence gates, bounded schema guard, current approved-star branch text hidden inside blocked-cycle paragraph; existing PALACE_LABELS and year branch list; source excerpt and mapping API from T016; real chart E2E harness
+- files: frontend/src/components/StructuredAnalysis.jsx, frontend/src/components/StructuredAnalysis.test.jsx, frontend/e2e/annual-placement.spec.js (new)
+- contracts: consumes additive existing T016 fields; no API/storage change
+- data_flow: committed birth/viewYear request → accepted current response → validate mapping → dedicated annual-star section, no invented prose
+- edge_cases: no year selection, old backend without mapping, invalid mapping enum/branch/id/function, retry, stale year response, removed selection; blocked cycles distinct from approved missing-input stars
+- changes: source-attributed annual placement list shows canonical palace name; preserve old branch-only fallback with unmapped label; exclude accepted annual stars from unapproved-formula warning; reuse existing request state
+- tests: selected/missing/unmapped/invalid/stale-year UI cases plus real-API year select/change/reset E2E
+- verification: frontend CI, lint/build; Chromium real backend E2E; isolated full-scope review
+- architecture: render in existing component, no new framework/dependency/state
+
+### T021
+- depth: detailed
+- readiness: ready
+- plan_version: 7
+- approach_at_sha: c4281b0579d266419bf43f2de6bafb4b24daae12
+- task_spec_fingerprint: depends_on=[]|scope=backend/src/knowledge/interpretationBinding.js, backend/src/interpretation/eligibility.js, backend/src/interpretation/synthesis.js, backend/src/interpretation/pipeline.js only if duplicate-ID reproduction warrants it, backend/test/interpretationBinding.test.mjs, backend/test/interpretationPipeline.test.mjs, backend/test/qualityEdges.test.mjs, backend/test/sprint11bInterpretation.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md|acceptance_criteria=Actual stored interpretation decision, two distinct-model review documents, exact shared source quotation and underlying formula binding are checked before approved internal wording is emitted; Modified identity, wording, school/profile/conditions/limits or missing/malformed evidence fail closed; flags alone never create internal prose; Existing reachable approved Tu Phu/Giáp positive remains internal-only; public prose and all old source decisions/formulas remain unchanged
+- watched_paths: scope paths plus docs/knowledge/interpretation-claims.json, docs/knowledge/interpretation-decisions/tu-phu-dong-cung.json, docs/knowledge/reviews/tu-phu-dong-cung-interpretation, docs/knowledge/passages/tu-phu-dong-cung/span.txt, docs/knowledge/decisions/tu-phu-dong-cung.json, docs/knowledge/combination-passages.json, backend/src/knowledge/combinationBatch.js, backend/src/knowledge/decisionRegistry.js, backend/src/knowledge/sourceBinding.js, docs/knowledge/sources.json
+- inspected: /tmp/tuvi-binding-approach.md read-only exact proposal; arbitrary clone/internal wording defect reproduced, existing reachable Tu Phu positive passes. Formula and interpretation review schemas intentionally differ; keep formula compareReviews unchanged.
+- files: scope above; no evidence decisions/reviews/span edits
+- contracts: existing eligibility layers gain evidence binding reason/status, otherwise internal API signatures stable; public API prose stays stripped
+- data_flow: caller claim → exact existing registry projection → actual decision/reviews/shared quotation/span → existing formula replay → runtime-condition eligibility; direct synthesis repeats binding
+- edge_cases: missing/unreadable malformed evidence, traversal refs, same-ID modified clone, duplicate IDs, weakened year/palace/profile/limits, removed caveat, one-review-only quote, copied model labels, synthetic fixture approval bypass, exact legitimate positive
+- changes: one local binder in existing knowledge module, use existing manifest/decision/source helpers; gate eligibility/synthesis, migrate fabricated positive tests to real existing chart; no injected production verifier or fixture allowlist
+- tests: named binding negatives and legitimate positive through real engine, public withheld-prose integration, direct sentence denial, duplicate clone test
+- verification: targeted tests plus backend full CI, isolated full-scope code review/fix/fresh review
+- architecture: existing modular monolith and repository evidence only; no parallel truth registry, service or release policy; optional design-only review skipped, implementation review covers final boundary
+
+T017 verification so far: frontend CI140 PASS (87.86 lines/87.67 branches); lint/build PASS. Real backend Chromium E2E7PASS/1FAIL due ambiguous test selector (R201), not yet quality-gated. Year selector stays usable during requests; added actual delayed prior-year response suppression test.
+
+T017 accepted: frontend142/lint/build and real backend Chromium E2E8PASS, isolatedfresh wholeUIreview2 closes R201–203, mobile320px/keyboardprobes supportscope. Orchestrator gate PASS, no public interpretation. T021 full CI initially failed only fixture registry requirement; add required Regression entry to TEST_FIXTURES (readiness scope updated) then rerunfullCI.
