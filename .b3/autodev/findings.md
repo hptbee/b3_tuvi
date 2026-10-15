@@ -91,3 +91,13 @@ T012iteration2 no blockers; R003CLOSED afterindependentSQLitetest andfullreview.
 - R102 medium CONFIRMED CLOSED: sparse palace array throws in find after every skips holes.
 
 T016 iteration counts2→0, fresh full-scope review /tmp/tuvi-placement-review2.md found no blockers; targeted normalizer/time/annual-star checks and full backend CI PASS86.82/87.59. Orchestrator gate PASS.
+
+## T017 UI review
+- Size MEDIUM fullscope, target c4281b0 + frontend workingtree. General review includes a11y/performance; no specialist needed for bounded two-row text.
+- R201 medium CONFIRMED CLOSED: E2E partial label matches select and labelled region. Existing full frontend CI140, lint/build pass; E2E7pass1fail reproduces selector issue. Fixer dispatched, fresh review required.
+
+- R201 fixer exact combobox selector, real backend E2E8/8 PASS /tmp/tuvi-ui-e2e-fixed.log.
+- R202 low CONFIRMED CLOSED: coercible array functionId accepted by own-property lookup; require string, add regression.
+- R203 low CONFIRMED REDUNDANCY CLOSED: showYearBranch guard always true with current states; remove derived guard only, keep selector whileloading.
+
+T017 iteration counts1medium+2low→0 after fixes. Fresh fullscope /tmp/tuvi-ui-review2.md no new confirmedfindings, independent14targeted PASS; fullfrontend142/lint/build+E2E8PASS. Orchestrator T017 gate PASS.

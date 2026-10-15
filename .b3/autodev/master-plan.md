@@ -1,6 +1,6 @@
 # Autonomous Product Completion
 
-- version: 6
+- version: 7
 - source: User mission 2026-10-14; fresh run from upstream main 45615a48d0c75b90138cfc618320ffae6e9c34e0
 
 ## Original requirements
@@ -208,7 +208,7 @@ Version 5: reassessment proves additional Tử Vi UI and data-safety defects. Pr
 User narrowed the active mission to Tử Vi domain completion. Preserve all prior task IDs, scope and completion evidence; T010–T015 remain historical/out-of-active-queue pending separate reconciliation, not silently completed. Active domain tasks below take priority by explicit user instruction. Main reconciled at f0dec74973ef9d07129e19330356f8e6d2040227; PR49 research-only head 7d151bfa78f3151c3e1bcc5a0f1bead7fbb66582 is unmerged and supplies locators, not approvals. Backend full CI passes at baseline (86.77 lines / 87.50 branches).
 
 ### T016 — Complete source-supported annual star palace placement
-- status: in_progress
+- status: completed
 - depends_on: []
 - scope: backend/src/time/thienDuc.js, backend/src/time/timeEngine.js, backend/test/thienDuc.test.mjs, backend/src/engine/normalizeChart.js
 - acceptance_criteria:
@@ -219,7 +219,7 @@ User narrowed the active mission to Tử Vi domain completion. Preserve all prio
   - All twelve view branches on reachable calculated charts, contrasting natal palace layouts, malformed chart negatives, API and non-mutation checks; backend full CI; isolated full-diff review
 
 ### T017 — Show source-scoped annual placements in chart evidence
-- status: pending
+- status: in_progress
 - depends_on: [T016]
 - scope: frontend/src/components/StructuredAnalysis.jsx, frontend/src/components/StructuredAnalysis.test.jsx, frontend/e2e
 - acceptance_criteria:
@@ -261,3 +261,16 @@ User narrowed the active mission to Tử Vi domain completion. Preserve all prio
   - Independent source retrieval, actual dual-AI reviews, source-scoped reachable chart/age-boundary goldens if implemented
 
 Version 6 prioritization: T018–T020 investigation runs in parallel; source-inaccessible candidates are recorded once and do not block independent T016/T017. Next capability selected from actual evidence, never source-intake alone. Existing .b3 checkpoint is tracked upstream despite AGENTS ignore policy; explicit user request to reconcile the committed checkpoint authorizes preserving and updating these two tracked files, excluding local runtime/history artifacts.
+
+### T021 — Bind internal interpretation to actual approved evidence
+- status: in_progress
+- depends_on: []
+- scope: backend/src/knowledge/interpretationBinding.js, backend/src/interpretation/eligibility.js, backend/src/interpretation/synthesis.js, backend/src/interpretation/pipeline.js only if duplicate-ID reproduction warrants it, backend/test/interpretationBinding.test.mjs, backend/test/interpretationPipeline.test.mjs, backend/test/qualityEdges.test.mjs, backend/test/sprint11bInterpretation.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md
+- acceptance_criteria:
+  - Actual stored interpretation decision, two distinct-model review documents, exact shared source quotation and underlying formula binding are checked before approved internal wording is emitted
+  - Modified identity, wording, school/profile/conditions/limits or missing/malformed evidence fail closed; flags alone never create internal prose
+  - Existing reachable approved Tu Phu/Giáp positive remains internal-only; public prose and all old source decisions/formulas remain unchanged
+- verification:
+  - Real positive/negative chart integration, mutated binding evidence and duplicate-ID/clone regressions, direct synthesis tests, backend full CI and independent whole-scope review
+
+Version7 adds T021 from reproduced internal provenance defect (arbitrary clone flags could emit unchecked internal prose). It executes independently of UI T017, in separate files, under explicit parallel-work mission; no new source approvals/framework. T018/T019/T020 require unavailable exact evidence and cannot be promoted by code tests.

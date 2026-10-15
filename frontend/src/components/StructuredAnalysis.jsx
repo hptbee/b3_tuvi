@@ -24,6 +24,7 @@ const AVAILABILITY_LABELS = {
 };
 
 const YEAR_BRANCHES = ['Tí', 'Sửu', 'Dần', 'Mão', 'Thìn', 'Tị', 'Ngọ', 'Mùi', 'Thân', 'Dậu', 'Tuất', 'Hợi'];
+const ANNUAL_STARS = ['thien_duc', 'nguyet_duc'];
 
 const CYCLE_LABELS = {
   tieu_han: 'Tiểu hạn',
@@ -127,6 +128,17 @@ function validAnalysisBody(body) {
       if (!value || typeof value !== 'object') return false;
       if (value.branch !== undefined && value.branch !== null && typeof value.branch !== 'string') return false;
       if (value.status !== undefined && typeof value.status !== 'string') return false;
+      if (value.palaceMapping !== undefined) {
+        if (!['mapped', 'invalid_chart', 'not_applied'].includes(value.palaceMapping)) return false;
+        if (value.palaceMapping === 'mapped' && (
+          value.status !== 'branch_placed'
+          || typeof value.palaceId !== 'string'
+          || !/^(?:[1-9]|1[0-2])$/.test(value.palaceId)
+          || YEAR_BRANCHES[Number(value.palaceId) - 1] !== value.branch
+          || typeof value.functionId !== 'string'
+          || !Object.hasOwn(PALACE_LABELS, value.functionId)
+        )) return false;
+      }
       return true;
     })) return false;
   }
@@ -280,15 +292,13 @@ export default function StructuredAnalysis({ userInfo }) {
   const selected = statements.find((item) => item.statementId === selectedId) || null;
   const blocked = Object.entries(current.body?.time?.capabilities || {}).filter(([, value]) => (
     value && (value.status === 'blocked' || value.status === 'not_applied')
-  ));
+  )).filter(([id]) => !ANNUAL_STARS.includes(id));
 
   const retry = () => {
     const nextAttempt = attempt + 1;
     focusAfterRetry.current = `${key}:${viewYearBranch}:${nextAttempt}`;
     setAttempt(nextAttempt);
   };
-
-  const showYearBranch = current.status === 'ready' || current.status === 'error';
 
   return (
     <section className="evidence-panel" aria-labelledby="evidence-heading">
@@ -304,14 +314,35 @@ export default function StructuredAnalysis({ userInfo }) {
             <button type="button" ref={retryButton} onClick={retry}>Thử lại chứng cứ</button>
           </>
         )}
-        {showYearBranch && (
-          <label className="evidence-note">
-            Chi năm xem
-            <select aria-label="Chi năm xem" value={viewYearBranch} onChange={(event) => setViewYearBranch(event.target.value)}>
-              <option value="">Chưa chọn</option>
-              {YEAR_BRANCHES.map((branch) => <option key={branch} value={branch}>{branch}</option>)}
-            </select>
-          </label>
+        <label className="evidence-note">
+          Chi năm xem
+          <select aria-label="Chi năm xem" value={viewYearBranch} onChange={(event) => setViewYearBranch(event.target.value)}>
+            <option value="">Chưa chọn</option>
+            {YEAR_BRANCHES.map((branch) => <option key={branch} value={branch}>{branch}</option>)}
+          </select>
+        </label>
+        {current.status === 'ready' && (
+          <section aria-labelledby="annual-placement-heading" className="evidence-note">
+            <h3 id="annual-placement-heading">Vị trí sao theo chi năm xem</h3>
+            {!viewYearBranch ? <p>Chọn chi năm xem để xem vị trí Thiên Đức và Nguyệt Đức trên lá số.</p> : (
+              <ul>
+                {ANNUAL_STARS.map((id) => {
+                  const placement = current.body?.time?.capabilities?.[id];
+                  return (
+                    <li key={id}>
+                      {CYCLE_LABELS[id]}: {placement?.status === 'branch_placed' && YEAR_BRANCHES.includes(placement.branch)
+                        ? `chi ${placement.branch} — ${placement.palaceMapping === 'mapped' ? `cung ${PALACE_LABELS[placement.functionId]}` : 'chưa xác định cung'}`
+                        : 'chưa xác định vị trí'}.
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
+            <p>
+              Nguồn truyền thống: <a href="https://zh.wikisource.org/zh-hant/紫微斗數全書/卷二">Tử Vi Đẩu Số Toàn Thư, quyển 2</a>, mục an Thiên Đức, Nguyệt Đức; bản chép Wikisource.
+              {' '}Chỉ hiển thị vị trí trên lá số, chưa có lời luận vận hạn được duyệt.
+            </p>
+          </section>
         )}
         {current.status === 'ready' && statements.length === 0 && <p>Phản hồi không có cung.</p>}
         {current.status === 'ready' && statements.length > 0 && (
@@ -333,7 +364,6 @@ export default function StructuredAnalysis({ userInfo }) {
             {blocked.length > 0 && (
               <p className="evidence-note">
                 {blocked.map(([id]) => CYCLE_LABELS[id] || id).join(', ')}: chưa áp dụng vì chưa có công thức được duyệt. Số đại hạn trên lá số là nhãn nguyên cục, không phải phép tính vận hạn đã duyệt.
-                {['thien_duc', 'nguyet_duc'].filter((id) => current.body?.time?.capabilities?.[id]?.status === 'branch_placed').map((id) => ` ${CYCLE_LABELS[id] || id} tại ${current.body.time.capabilities[id].branch}, chỉ là vị trí chi.`)}
               </p>
             )}
           </>

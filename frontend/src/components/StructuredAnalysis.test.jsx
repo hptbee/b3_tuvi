@@ -39,6 +39,7 @@ describe('StructuredAnalysis', () => {
     const user = userEvent.setup();
     render(<StructuredAnalysis userInfo={birth} />);
     expect(screen.getByRole('status')).toHaveTextContent('Đang đọc');
+    expect(screen.getByRole('combobox', { name: 'Chi năm xem', exact: true })).toBeEnabled();
     const pick = await screen.findByRole('button', { name: /Mệnh: Chưa đủ chứng cứ/ });
     await user.click(pick);
     expect(screen.getByText(/Công thức chưa được duyệt nguồn/)).toBeTruthy();
@@ -114,8 +115,8 @@ describe('StructuredAnalysis', () => {
       const body = JSON.parse(fetchMock.mock.calls.at(-1)[1].body);
       expect(body.viewYearBranch).toBe('Tí');
     });
-    expect(await screen.findByText(/Thiên Đức tại Dậu, chỉ là vị trí chi/)).toBeTruthy();
-    expect(screen.getByText(/Nguyệt Đức tại Tí, chỉ là vị trí chi/)).toBeTruthy();
+    expect(await screen.findByText('Thiên Đức: chi Dậu — chưa xác định cung.')).toBeVisible();
+    expect(screen.getByText('Nguyệt Đức: chi Tí — chưa xác định cung.')).toBeVisible();
     expect(screen.queryByText(/dự đoán/i)).toBeNull();
   });
 
@@ -220,5 +221,84 @@ describe('StructuredAnalysis', () => {
     expect(fetch.mock.calls[0][1].signal.aborted).toBe(true);
     await act(async () => fail(new Error('late private error')));
     expect(screen.queryByRole('alert')).not.toBeInTheDocument();
+  });
+
+  it('shows source-scoped annual branches and palaces, then clears the selected year', async () => {
+    vi.stubGlobal('fetch', vi.fn(async (_url, request) => {
+      const body = analysisBody();
+      const selected = JSON.parse(request.body).viewYearBranch;
+      body.time.capabilities.thien_duc = selected ? {
+        status: 'branch_placed', branch: 'Dậu', palaceMapping: 'mapped', palaceId: '10', functionId: 'tai_bach'
+      } : { status: 'not_applied', reason: 'missing_view_year_branch' };
+      body.time.capabilities.nguyet_duc = selected ? {
+        status: 'branch_placed', branch: 'Tí', palaceMapping: 'mapped', palaceId: '1', functionId: 'phuc_duc'
+      } : { status: 'not_applied', reason: 'missing_view_year_branch' };
+      return { ok: true, json: async () => body };
+    }));
+    const user = userEvent.setup();
+    render(<StructuredAnalysis userInfo={birth} />);
+    expect(await screen.findByText(/Chọn chi năm xem để xem vị trí/)).toBeVisible();
+    expect(screen.getByText(/chưa áp dụng vì chưa có công thức/)).not.toHaveTextContent('Thiên Đức');
+    await user.selectOptions(screen.getByLabelText('Chi năm xem'), 'Tí');
+    expect(await screen.findByText('Thiên Đức: chi Dậu — cung Tài bạch.')).toBeVisible();
+    expect(screen.getByText('Nguyệt Đức: chi Tí — cung Phúc đức.')).toBeVisible();
+    expect(screen.getByRole('link', { name: 'Tử Vi Đẩu Số Toàn Thư, quyển 2' })).toHaveAttribute('href', expect.stringContaining('wikisource.org'));
+    expect(screen.getByText(/chưa có lời luận vận hạn được duyệt/)).toBeVisible();
+    await user.selectOptions(screen.getByLabelText('Chi năm xem'), '');
+    expect(await screen.findByText(/Chọn chi năm xem để xem vị trí/)).toBeVisible();
+    expect(screen.queryByText('Thiên Đức: chi Dậu — cung Tài bạch.')).not.toBeInTheDocument();
+  });
+
+  it('keeps an older branch-only response readable without inventing a palace', async () => {
+    const body = analysisBody();
+    body.time.capabilities.thien_duc = { status: 'branch_placed', branch: 'Dậu' };
+    vi.stubGlobal('fetch', vi.fn(async () => ({ ok: true, json: async () => body })));
+    const user = userEvent.setup();
+    render(<StructuredAnalysis userInfo={birth} />);
+    await user.selectOptions(await screen.findByLabelText('Chi năm xem'), 'Tí');
+    expect(await screen.findByText('Thiên Đức: chi Dậu — chưa xác định cung.')).toBeVisible();
+  });
+
+  it.each([
+    { palaceMapping: 'forged' },
+    { palaceId: {} },
+    { palaceId: 10 },
+    { palaceId: '0' },
+    { palaceId: '1' },
+    { functionId: 'constructor' },
+    { functionId: {} },
+    { functionId: [] },
+    { functionId: ['tai_bach'] },
+    { status: 'not_applied' }
+  ])('rejects inconsistent annual mapping %j', async patch => {
+    const body = analysisBody();
+    body.time.capabilities.thien_duc = {
+      status: 'branch_placed', branch: 'Dậu', palaceMapping: 'mapped', palaceId: '10', functionId: 'tai_bach', ...patch
+    };
+    vi.stubGlobal('fetch', vi.fn(async () => ({ ok: true, json: async () => body })));
+    render(<StructuredAnalysis userInfo={birth} />);
+    expect(await screen.findByRole('alert')).toHaveTextContent('Phản hồi trạng thái chứng cứ không hợp lệ');
+  });
+
+  it('ignores the late placement for a previously selected year', async () => {
+    let finishOldYear;
+    const fetch = vi.fn(async (_url, request) => {
+      const branch = JSON.parse(request.body).viewYearBranch;
+      if (branch === 'Tí') return new Promise(resolve => { finishOldYear = resolve; });
+      const body = analysisBody();
+      body.time.capabilities.nguyet_duc = { status: 'branch_placed', branch };
+      return { ok: true, json: async () => body };
+    });
+    vi.stubGlobal('fetch', fetch);
+    const user = userEvent.setup();
+    render(<StructuredAnalysis userInfo={birth} />);
+    await user.selectOptions(await screen.findByLabelText('Chi năm xem'), 'Tí');
+    await user.selectOptions(screen.getByLabelText('Chi năm xem'), 'Ngọ');
+    expect(await screen.findByText('Nguyệt Đức: chi Ngọ — chưa xác định cung.')).toBeVisible();
+    const stale = analysisBody();
+    stale.time.capabilities.nguyet_duc = { status: 'branch_placed', branch: 'Tí' };
+    await act(async () => finishOldYear({ ok: true, json: async () => stale }));
+    expect(screen.getByText('Nguyệt Đức: chi Ngọ — chưa xác định cung.')).toBeVisible();
+    expect(screen.queryByText('Nguyệt Đức: chi Tí — chưa xác định cung.')).not.toBeInTheDocument();
   });
 });
