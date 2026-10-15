@@ -23,3 +23,5 @@ The [MIT notice](LICENSE.txt) is preserved. Context contains inert original HTML
 ## Runtime boundary
 
 A fixed profile-specific verifier must bind the source/edition, actual distinct model records, execution identities, exact algorithm/compatibility/fixtures, supplemental bytes and existing comparison result before placement. Public API requests cannot supply evidence or approval. Omitted profile/age means no placement; calendar-age derivation and classical/default fortune capabilities retain their separate gates. Existing annual placements remain independent of the supplied nominal age.
+
+The immutable review context retains 45 upstream lines with trailing whitespace. A complete `git diff --check` reports them; the application/documentation check excludes only this explicit byte-preserved artifact. Removing the whitespace would invalidate the approved context hash. This exception is recorded rather than disabling checks, changing the source bytes or describing the entire diff as whitespace-clean.
