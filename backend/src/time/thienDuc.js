@@ -1,4 +1,5 @@
 import { DIA_CHI } from '../engine/constants.js';
+import { FUNCTION_BY_LABEL } from '../engine/normalizeChart.js';
 
 const ORDER = DIA_CHI.slice(1);
 
@@ -81,4 +82,34 @@ export function thienDucCapability(viewYearBranch) {
 
 export function nguyetDucCapability(viewYearBranch) {
     return annualStarCapability('nguyet_duc', nguyetDucBranch, viewYearBranch);
+}
+
+/** Resolve an accepted annual branch on the natal layout; never insert a natal star. */
+export function mapAnnualStarToPalace(capability, chart) {
+    const unmapped = { ...capability, palaceMapping: 'not_applied', palaceId: null, functionId: null, functionLabel: null };
+    if (capability.status !== 'branch_placed') return unmapped;
+    const palaces = chart?.palaces;
+    if (!chart?.ok || !Array.isArray(palaces) || palaces.length !== 12
+        || new Set(palaces.map((palace) => palace?.branchId)).size !== 12
+        || new Set(palaces.map((palace) => palace?.functionId)).size !== 12
+        || !Array.from(palaces).every((palace) => palace && Number.isInteger(palace.branchId)
+            && palace.branchId >= 1 && palace.branchId <= 12
+            && palace.id === String(palace.branchId)
+            && palace.branchName === DIA_CHI[palace.branchId]
+            && palace.functionStatus === 'known'
+            && typeof palace.functionId === 'string'
+            && typeof palace.functionLabel === 'string'
+            && Object.hasOwn(FUNCTION_BY_LABEL, palace.functionLabel)
+            && FUNCTION_BY_LABEL[palace.functionLabel] === palace.functionId)) {
+        return { ...unmapped, palaceMapping: 'invalid_chart' };
+    }
+    const palace = palaces.find((item) => item.branchName === capability.branch);
+    if (!palace) return { ...unmapped, palaceMapping: 'invalid_chart' };
+    return {
+        ...capability,
+        palaceMapping: 'mapped',
+        palaceId: palace.id,
+        functionId: palace.functionId,
+        functionLabel: palace.functionLabel
+    };
 }

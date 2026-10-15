@@ -1,5 +1,5 @@
 import assert from 'assert';
-import { nguyetDucBranch, thienDucBranch, thienDucCapability } from '../src/time/thienDuc.js';
+import { mapAnnualStarToPalace, nguyetDucBranch, thienDucBranch, thienDucCapability } from '../src/time/thienDuc.js';
 import { analyzeChartRequest } from '../src/interpretation/analyze.js';
 import { timeOverlay } from '../src/time/timeEngine.js';
 import { calculateTuVi } from '../src/engine/tuviRules.mjs';
@@ -96,5 +96,86 @@ assert.strictEqual(plain.body.time.capabilities.nguyet_duc.status, 'not_applied'
 const badType = analyzeChartRequest({ day: 15, month: 6, year: 1990, hour: 8, gender: 1, viewYearBranch: 2026 });
 assert.strictEqual(badType.status, 400);
 assert.strictEqual(badType.body.code, 'invalid_view_year_branch');
+
+// Branch placement is independent of the natal layout; palace function is not.
+const other = normalizeChart({ tuviInfo: calculateTuVi(0, 0, 6, 4, 1, 0, false) });
+assert.strictEqual(other.ok, true);
+for (const natal of [chart, other]) {
+    const snapshot = JSON.stringify(natal);
+    for (const [viewYearBranch, expectedBranch] of Object.entries(EXPECTED)) {
+        const placements = timeOverlay(natal, { viewYearBranch }).capabilities;
+        for (const [id, branch] of [['thien_duc', expectedBranch], ['nguyet_duc', viewYearBranch]]) {
+            const placement = placements[id];
+            const palace = natal.palaces.find((item) => item.branchName === branch);
+            assert.strictEqual(placement.branch, branch);
+            assert.strictEqual(placement.status, 'branch_placed');
+            assert.strictEqual(placement.palaceMapping, 'mapped');
+            assert.strictEqual(placement.palaceId, palace.id);
+            assert.strictEqual(placement.functionId, palace.functionId);
+            assert.strictEqual(placement.functionLabel, palace.functionLabel);
+            assert.strictEqual(placement.interpretation, null);
+            assert.strictEqual(placement.publicFortune, false);
+        }
+    }
+    assert.strictEqual(JSON.stringify(natal), snapshot);
+}
+assert.notStrictEqual(
+    timeOverlay(chart, { viewYearBranch: 'Tí' }).capabilities.nguyet_duc.functionId,
+    timeOverlay(other, { viewYearBranch: 'Tí' }).capabilities.nguyet_duc.functionId
+);
+
+const shuffled = { ...chart, palaces: [...chart.palaces].reverse() };
+const beforeShuffled = structuredClone(shuffled);
+assert.deepStrictEqual(
+    mapAnnualStarToPalace(thienDucCapability('Tí'), shuffled),
+    mapAnnualStarToPalace(thienDucCapability('Tí'), chart)
+);
+assert.deepStrictEqual(shuffled, beforeShuffled);
+
+for (const mutate of [
+    palaces => palaces.pop(),
+    palaces => { palaces[1] = { ...palaces[0] }; },
+    palaces => { palaces[0].branchName = 'Hợi'; },
+    palaces => { palaces[0].branchId = 0; },
+    palaces => { palaces[0].id = 'other'; },
+    palaces => { palaces[0].functionId = null; },
+    palaces => { palaces[0].functionId = 'not_a_palace'; },
+    palaces => { palaces[0].functionId = '__proto__'; },
+    palaces => { palaces[0].functionLabel = ''; },
+    palaces => { palaces[0].functionLabel = ' '; },
+    palaces => { palaces[0].functionLabel = 'UNKNOWN'; },
+    palaces => { palaces[0].functionLabel = '__proto__'; },
+    palaces => { palaces[0].functionLabel = 'toString'; },
+    palaces => { palaces[0].functionLabel = palaces[1].functionLabel; },
+    palaces => { palaces[0].functionStatus = 'unknown'; },
+    palaces => { palaces[0].functionId = palaces[1].functionId; },
+    palaces => { palaces[0] = null; },
+    palaces => { delete palaces[0]; },
+    palaces => { delete palaces[6]; },
+    palaces => { delete palaces[11]; }
+]) {
+    const broken = structuredClone(chart);
+    mutate(broken.palaces);
+    const beforeBroken = structuredClone(broken);
+    // Exercise the shared mapper directly: unrelated natal annotation reading is unchanged.
+    let placement;
+    assert.doesNotThrow(() => { placement = mapAnnualStarToPalace(thienDucCapability('Tí'), broken); });
+    assert.strictEqual(placement.palaceMapping, 'invalid_chart');
+    assert.strictEqual(placement.palaceId, null);
+    assert.strictEqual(placement.functionId, null);
+    assert.strictEqual(placement.functionLabel, null);
+    assert.strictEqual(placement.branch, 'Dậu');
+    assert.strictEqual(placement.status, 'branch_placed');
+    assert.strictEqual(placement.branchPlacement, 'supported');
+    assert.strictEqual(placement.publicFortune, false);
+    assert.strictEqual(placement.interpretation, null);
+    assert.strictEqual(placement.interpretationStatus, 'blocked');
+    assert.deepStrictEqual(broken, beforeBroken);
+}
+assert.strictEqual(hidden.capabilities.thien_duc.palaceMapping, 'not_applied');
+assert.strictEqual(rejected.capabilities.nguyet_duc.palaceId, null);
+assert.strictEqual(served.body.time.capabilities.thien_duc.palaceMapping, 'mapped');
+assert.strictEqual(served.body.time.capabilities.thien_duc.palaceId, '4');
+assert.ok(served.body.statements.every((item) => item.prose === null && item.internalProse == null));
 
 console.log('thiên đức and nguyệt đức place branches for a chosen view year');

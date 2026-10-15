@@ -1,4 +1,4 @@
-import { nguyetDucCapability, thienDucCapability } from './thienDuc.js';
+import { mapAnnualStarToPalace, nguyetDucCapability, thienDucCapability } from './thienDuc.js';
 
 const BLOCKED_REASON = 'no_approved_formula';
 
@@ -30,8 +30,8 @@ export function timeOverlay(chart, options = {}) {
             luu_tinh: blocked('luu_tinh'),
             tu_hoa_han: blocked('tu_hoa_han'),
             leap_month_fortune: { id: 'leap_month_fortune', status: 'not_applied', reason: BLOCKED_REASON, interpretation: null },
-            thien_duc: thienDucCapability(options.viewYearBranch),
-            nguyet_duc: nguyetDucCapability(options.viewYearBranch)
+            thien_duc: mapAnnualStarToPalace(thienDucCapability(options.viewYearBranch), chart),
+            nguyet_duc: mapAnnualStarToPalace(nguyetDucCapability(options.viewYearBranch), chart)
         },
         interpretation: null,
         research: {
