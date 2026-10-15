@@ -1,0 +1,554 @@
+{
+  "status": "PROPOSED_NOT_APPROVED",
+  "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "rawHtmlSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+  "parsing": "HTML inert text. I02 joins both adjacent continuation paragraphs. Source/context UTF8 hashes measured; JSON digests use JSON.stringify compact ordered objects.",
+  "policy": "dual-ai-source-review-v1 plus explicit interpretation/condition-tree/wording/fixture agreement. Never authorize original-edition authentication, default natal formula change, public release, or empirical life-outcome truth.",
+  "candidates": [
+    {
+      "claimId": "interp-quanshu-tai-bach-tu-vi-four-adverse-host",
+      "locator": "juan2/財帛宮/紫微",
+      "target": "tai_bach",
+      "spanFile": "tai-tuvi-span.txt",
+      "contextFile": "I02-full-section.txt",
+      "conditionTree": {
+        "op": "and",
+        "items": [
+          {
+            "op": "star_present",
+            "target": "tai_bach",
+            "star": "Tử Vi"
+          },
+          {
+            "op": "or",
+            "items": [
+              {
+                "op": "star_present",
+                "target": "tai_bach",
+                "star": "Kình Dương"
+              },
+              {
+                "op": "star_present",
+                "target": "tai_bach",
+                "star": "Đà La"
+              },
+              {
+                "op": "star_present",
+                "target": "tai_bach",
+                "star": "Hỏa Tinh"
+              },
+              {
+                "op": "star_present",
+                "target": "tai_bach",
+                "star": "Linh Tinh"
+              }
+            ]
+          }
+        ]
+      },
+      "conditions": [
+        "palace_tai_bach",
+        "tu_vi_in_host",
+        "any_kinh_da_hoa_linh_in_host",
+        "direct_host_only"
+      ],
+      "limitations": [
+        "paragraph_scoped_only",
+        "direct_host_sufficient_subset_only",
+        "khong_kiep_aliases_not_implemented",
+        "not_a_brightness_change",
+        "not_a_verified_life_event",
+        "no_whole_chart_or_public_release"
+      ],
+      "proposedWording": "Riêng mục Tử Vi tại Tài Bạch của bản chép này dùng mệnh đề “不旺” khi thêm nhóm sát tinh được nêu. Phạm vi đang xét là Kình Dương, Đà La, Hỏa Tinh hoặc Linh Tinh đồng cung; không dùng riêng câu mở đầu về sự sung túc làm lời kết cho cung này. Đây là lời sách truyền thống, không phải sự kiện đời đã kiểm chứng.",
+      "fixtures": [
+        {
+          "id": "I02/host_adverse_Linh Tinh",
+          "input": {
+            "day": 1,
+            "month": 1,
+            "year": 1980,
+            "hour": 10,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 14,
+            "lunarMonth": 11,
+            "lunarYear": 1979,
+            "isLeapMonth": false,
+            "canName": "Kỷ",
+            "chiName": "Mùi",
+            "canIndex": 5,
+            "chiIndex": 8
+          },
+          "host": {
+            "id": "4",
+            "functionId": "tai_bach",
+            "branchName": "Mão"
+          },
+          "expected": true
+        },
+        {
+          "id": "I02/host_adverse_Hỏa Tinh",
+          "input": {
+            "day": 22,
+            "month": 1,
+            "year": 1980,
+            "hour": 14,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 5,
+            "lunarMonth": 12,
+            "lunarYear": 1979,
+            "isLeapMonth": false,
+            "canName": "Kỷ",
+            "chiName": "Mùi",
+            "canIndex": 5,
+            "chiIndex": 8
+          },
+          "host": {
+            "id": "3",
+            "functionId": "tai_bach",
+            "branchName": "Dần"
+          },
+          "expected": true
+        },
+        {
+          "id": "I02/host_adverse_Kình Dương",
+          "input": {
+            "day": 8,
+            "month": 2,
+            "year": 1980,
+            "hour": 4,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 22,
+            "lunarMonth": 12,
+            "lunarYear": 1979,
+            "isLeapMonth": false,
+            "canName": "Kỷ",
+            "chiName": "Mùi",
+            "canIndex": 5,
+            "chiIndex": 8
+          },
+          "host": {
+            "id": "8",
+            "functionId": "tai_bach",
+            "branchName": "Mùi"
+          },
+          "expected": true
+        },
+        {
+          "id": "I02/host_adverse_Đà La",
+          "input": {
+            "day": 22,
+            "month": 3,
+            "year": 1980,
+            "hour": 8,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 6,
+            "lunarMonth": 2,
+            "lunarYear": 1980,
+            "isLeapMonth": false,
+            "canName": "Canh",
+            "chiName": "Thân",
+            "canIndex": 6,
+            "chiIndex": 9
+          },
+          "host": {
+            "id": "8",
+            "functionId": "tai_bach",
+            "branchName": "Mùi"
+          },
+          "expected": true
+        },
+        {
+          "id": "I02/no_expanded_adverses_in_host",
+          "input": {
+            "day": 8,
+            "month": 1,
+            "year": 1980,
+            "hour": 8,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 21,
+            "lunarMonth": 11,
+            "lunarYear": 1979,
+            "isLeapMonth": false,
+            "canName": "Kỷ",
+            "chiName": "Mùi",
+            "canIndex": 5,
+            "chiIndex": 8
+          },
+          "host": {
+            "id": "5",
+            "functionId": "tai_bach",
+            "branchName": "Thìn"
+          },
+          "expected": false
+        },
+        {
+          "id": "I02/host_absent",
+          "input": {
+            "day": 1,
+            "month": 1,
+            "year": 1980,
+            "hour": 2,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 14,
+            "lunarMonth": 11,
+            "lunarYear": 1979,
+            "isLeapMonth": false,
+            "canName": "Kỷ",
+            "chiName": "Mùi",
+            "canIndex": 5,
+            "chiIndex": 8
+          },
+          "host": {
+            "id": "8",
+            "functionId": "tai_bach",
+            "branchName": "Mùi"
+          },
+          "expected": false
+        },
+        {
+          "id": "I02/target_in_TPTC_wrong_host",
+          "input": {
+            "day": 1,
+            "month": 1,
+            "year": 1980,
+            "hour": 14,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 14,
+            "lunarMonth": 11,
+            "lunarYear": 1979,
+            "isLeapMonth": false,
+            "canName": "Kỷ",
+            "chiName": "Mùi",
+            "canIndex": 5,
+            "chiIndex": 8
+          },
+          "host": {
+            "id": "2",
+            "functionId": "tai_bach",
+            "branchName": "Sửu"
+          },
+          "expected": false
+        },
+        {
+          "id": "I02/host_clean_TPTC_adverse",
+          "input": {
+            "day": 15,
+            "month": 1,
+            "year": 1980,
+            "hour": 14,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 28,
+            "lunarMonth": 11,
+            "lunarYear": 1979,
+            "isLeapMonth": false,
+            "canName": "Kỷ",
+            "chiName": "Mùi",
+            "canIndex": 5,
+            "chiIndex": 8
+          },
+          "host": {
+            "id": "2",
+            "functionId": "tai_bach",
+            "branchName": "Sửu"
+          },
+          "expected": false
+        }
+      ],
+      "requiredAnchors": [
+        "加羊陀火鈴空劫不旺",
+        "天府同富足終身保守"
+      ],
+      "schoolId": "vn-tam-hop-default",
+      "sourceId": "ziwei-quanshu-iztro-transcription",
+      "editionId": "iztro-juan2-2f00e2ab0c80",
+      "sourceProfile": "quanshu-iztro-2f00e2ab",
+      "usage": "internal_research",
+      "releasePermission": "withheld",
+      "expertVerified": false,
+      "bookVerified": false,
+      "sourceDigest": "e1775da2696c9c9069a6f6229b7bb606bfebad004c9e41dc38bab1eb6928599c",
+      "contextDigest": "d01cdb3c1b04aefd5a835d6829c416cab5ccdb46a257d55c4466dfb4288430f5",
+      "conditionTreeDigest": "7d3498099f34478b9faeaad33abcfe3ed10f0f29a1a797141e579807d31d3d72",
+      "wordingDigest": "9547777c07d6557d074baf62d5669d78b53f03caaa92ed90604a538f39866067",
+      "fixturesDigest": "506cd41cd337060be344dd8acd97565fec50fd19fbbeebe298d49511b01178eb",
+      "quotationPolicy": "source-sentence-v2",
+      "sourceSpan": "紫微豐足倉箱，加羊陀火鈴空劫不旺，破軍同先難後易，天相同財帛蓄積，\n天府同富足終身保守，加左右為財富之官，七殺同加吉財帛橫發。"
+    },
+    {
+      "claimId": "interp-quanshu-phuc-duc-dong-luong-host",
+      "locator": "juan2/福德宮/天同",
+      "target": "phuc_duc",
+      "spanFile": "phuc-dong-span.txt",
+      "contextFile": "I04-full-section.txt",
+      "conditionTree": {
+        "op": "same_palace",
+        "target": "phuc_duc",
+        "stars": [
+          "Thiên Đồng",
+          "Thiên Lương"
+        ]
+      },
+      "conditions": [
+        "palace_phuc_duc",
+        "thien_dong_in_host",
+        "thien_luong_in_host",
+        "direct_host_only"
+      ],
+      "limitations": [
+        "paragraph_scoped_only",
+        "dong_cu_tension_not_adjudicated",
+        "no_inherited_longevity_claim",
+        "not_a_whole_chart_judgment",
+        "not_a_verified_life_event",
+        "no_public_release"
+      ],
+      "proposedWording": "Riêng mục Thiên Đồng tại Phúc Đức của bản chép này, Thiên Lương đồng cung được mô tả bằng nhánh “清閑快樂”, nghĩa là thanh nhàn, vui vẻ. Câu này chỉ phản ánh nhánh đồng cung đang xét, không tổng kết toàn bộ lá số và không suy ra tuổi thọ. Đây là lời sách truyền thống, không phải sự kiện đời đã kiểm chứng.",
+      "fixtures": [
+        {
+          "id": "I04/thien_luong_no_expanded_adverses_in_TPTC",
+          "input": {
+            "day": 8,
+            "month": 3,
+            "year": 1983,
+            "hour": 4,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 24,
+            "lunarMonth": 1,
+            "lunarYear": 1983,
+            "isLeapMonth": false,
+            "canName": "Quý",
+            "chiName": "Hợi",
+            "canIndex": 9,
+            "chiIndex": 12
+          },
+          "host": {
+            "id": "3",
+            "functionId": "phuc_duc",
+            "branchName": "Dần"
+          },
+          "expected": true
+        },
+        {
+          "id": "I04/costar_Thiên Lương",
+          "input": {
+            "day": 8,
+            "month": 3,
+            "year": 1980,
+            "hour": 4,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 22,
+            "lunarMonth": 1,
+            "lunarYear": 1980,
+            "isLeapMonth": false,
+            "canName": "Canh",
+            "chiName": "Thân",
+            "canIndex": 6,
+            "chiIndex": 9
+          },
+          "host": {
+            "id": "3",
+            "functionId": "phuc_duc",
+            "branchName": "Dần"
+          },
+          "expected": true
+        },
+        {
+          "id": "I04/costar_Thiên Lương_adverse_host",
+          "input": {
+            "day": 1,
+            "month": 9,
+            "year": 1980,
+            "hour": 16,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 22,
+            "lunarMonth": 7,
+            "lunarYear": 1980,
+            "isLeapMonth": false,
+            "canName": "Canh",
+            "chiName": "Thân",
+            "canIndex": 6,
+            "chiIndex": 9
+          },
+          "host": {
+            "id": "3",
+            "functionId": "phuc_duc",
+            "branchName": "Dần"
+          },
+          "expected": true
+        },
+        {
+          "id": "I04/thien_luong_missing_from_host",
+          "input": {
+            "day": 1,
+            "month": 1,
+            "year": 1980,
+            "hour": 22,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 14,
+            "lunarMonth": 11,
+            "lunarYear": 1979,
+            "isLeapMonth": false,
+            "canName": "Kỷ",
+            "chiName": "Mùi",
+            "canIndex": 5,
+            "chiIndex": 8
+          },
+          "host": {
+            "id": "4",
+            "functionId": "phuc_duc",
+            "branchName": "Mão"
+          },
+          "expected": false
+        },
+        {
+          "id": "I04/thien_luong_only_in_TPTC_not_host",
+          "input": {
+            "day": 8,
+            "month": 1,
+            "year": 1980,
+            "hour": 6,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 21,
+            "lunarMonth": 11,
+            "lunarYear": 1979,
+            "isLeapMonth": false,
+            "canName": "Kỷ",
+            "chiName": "Mùi",
+            "canIndex": 5,
+            "chiIndex": 8
+          },
+          "host": {
+            "id": "12",
+            "functionId": "phuc_duc",
+            "branchName": "Hợi"
+          },
+          "expected": false
+        },
+        {
+          "id": "I04/host_absent",
+          "input": {
+            "day": 1,
+            "month": 1,
+            "year": 1980,
+            "hour": 0,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 14,
+            "lunarMonth": 11,
+            "lunarYear": 1979,
+            "isLeapMonth": false,
+            "canName": "Kỷ",
+            "chiName": "Mùi",
+            "canIndex": 5,
+            "chiIndex": 8
+          },
+          "host": {
+            "id": "3",
+            "functionId": "phuc_duc",
+            "branchName": "Dần"
+          },
+          "expected": false
+        },
+        {
+          "id": "I04/costar_Thái Âm",
+          "input": {
+            "day": 8,
+            "month": 2,
+            "year": 1980,
+            "hour": 18,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 22,
+            "lunarMonth": 12,
+            "lunarYear": 1979,
+            "isLeapMonth": false,
+            "canName": "Kỷ",
+            "chiName": "Mùi",
+            "canIndex": 5,
+            "chiIndex": 8
+          },
+          "host": {
+            "id": "7",
+            "functionId": "phuc_duc",
+            "branchName": "Ngọ"
+          },
+          "expected": false
+        },
+        {
+          "id": "I04/costar_Cự Môn",
+          "input": {
+            "day": 28,
+            "month": 2,
+            "year": 1980,
+            "hour": 6,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 13,
+            "lunarMonth": 1,
+            "lunarYear": 1980,
+            "isLeapMonth": false,
+            "canName": "Canh",
+            "chiName": "Thân",
+            "canIndex": 6,
+            "chiIndex": 9
+          },
+          "host": {
+            "id": "2",
+            "functionId": "phuc_duc",
+            "branchName": "Sửu"
+          },
+          "expected": false
+        }
+      ],
+      "requiredAnchors": [
+        "天同快樂有福有壽",
+        "天梁同清閑快樂"
+      ],
+      "schoolId": "vn-tam-hop-default",
+      "sourceId": "ziwei-quanshu-iztro-transcription",
+      "editionId": "iztro-juan2-2f00e2ab0c80",
+      "sourceProfile": "quanshu-iztro-2f00e2ab",
+      "usage": "internal_research",
+      "releasePermission": "withheld",
+      "expertVerified": false,
+      "bookVerified": false,
+      "sourceDigest": "d0ef3ada30bc2f7c5a9ec33e3d94ad295a05ba621db929c8812b11cffe711798",
+      "contextDigest": "94595d84e838faa7e43d2c424c63d0268e10eb77789f0c37a36f857b0b658039",
+      "conditionTreeDigest": "37aec8b410db5dcb291c5574446b87577d966104f2386fca9b8b6434590cd5e8",
+      "wordingDigest": "21613f14fa8a4527bd816f43e9ed5b2b894071b77a2df3bb857a17a195ce27bd",
+      "fixturesDigest": "ef558ca0eda2f9025b526796a4abaa3813d88c9584f80c1fdda74739ab0e25ba",
+      "quotationPolicy": "source-sentence-v2",
+      "sourceSpan": "天同快樂有福有壽，巨門同多憂少喜，太陰同享福，天梁同清閑快樂。"
+    }
+  ]
+}

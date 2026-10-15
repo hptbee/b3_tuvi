@@ -1,0 +1,702 @@
+{
+  "available": true,
+  "model": "gpt-6-astra",
+  "independent": true,
+  "otherReviewerVerdictsRead": false,
+  "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "rawHtmlSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+  "provenanceLimit": "Pinned public Git mirror transcription only; neither authenticated book edition nor fixed-revision Wikisource authentication nor empirical life-outcome truth.",
+  "expertVerified": false,
+  "publicRelease": false,
+  "reviews": [
+    {
+      "available": true,
+      "model": "gpt-6-astra",
+      "reviewerRole": "independent_source_domain_reviewer_B",
+      "claimId": "interp-quanshu-tai-bach-tu-vi-four-adverse-host",
+      "schoolId": "vn-tam-hop-default",
+      "sourceId": "ziwei-quanshu-iztro-transcription",
+      "sourceProfile": "quanshu-iztro-2f00e2ab",
+      "target": "tai_bach",
+      "editionId": "iztro-juan2-2f00e2ab0c80",
+      "locator": "juan2/財帛宮/紫微",
+      "sourceDigest": "e1775da2696c9c9069a6f6229b7bb606bfebad004c9e41dc38bab1eb6928599c",
+      "quotation": "紫微豐足倉箱，加羊陀火鈴空劫不旺，破軍同先難後易，天相同財帛蓄積，\n天府同富足終身保守，加左右為財富之官，七殺同加吉財帛橫發。",
+      "quotationPolicy": "source-sentence-v2",
+      "conditions": [
+        "palace_tai_bach",
+        "tu_vi_in_host",
+        "any_kinh_da_hoa_linh_in_host",
+        "direct_host_only"
+      ],
+      "exceptions": [],
+      "conditionTree": {
+        "op": "and",
+        "items": [
+          {
+            "op": "star_present",
+            "target": "tai_bach",
+            "star": "Tử Vi"
+          },
+          {
+            "op": "or",
+            "items": [
+              {
+                "op": "star_present",
+                "target": "tai_bach",
+                "star": "Kình Dương"
+              },
+              {
+                "op": "star_present",
+                "target": "tai_bach",
+                "star": "Đà La"
+              },
+              {
+                "op": "star_present",
+                "target": "tai_bach",
+                "star": "Hỏa Tinh"
+              },
+              {
+                "op": "star_present",
+                "target": "tai_bach",
+                "star": "Linh Tinh"
+              }
+            ]
+          }
+        ]
+      },
+      "approvedWording": "Riêng mục Tử Vi tại Tài Bạch của bản chép này dùng mệnh đề “不旺” khi thêm nhóm sát tinh được nêu. Phạm vi đang xét là Kình Dương, Đà La, Hỏa Tinh hoặc Linh Tinh đồng cung; không dùng riêng câu mở đầu về sự sung túc làm lời kết cho cung này. Đây là lời sách truyền thống, không phải sự kiện đời đã kiểm chứng.",
+      "formulaComparison": "MATCH",
+      "verdict": "MATCH",
+      "interpretationVerdict": "INTERPRETATION_SUPPORTED_WITH_LIMITS",
+      "conditionTreeDigest": "7d3498099f34478b9faeaad33abcfe3ed10f0f29a1a797141e579807d31d3d72",
+      "wordingDigest": "9547777c07d6557d074baf62d5669d78b53f03caaa92ed90604a538f39866067",
+      "fixturesDigest": "506cd41cd337060be344dd8acd97565fec50fd19fbbeebe298d49511b01178eb",
+      "contextDigest": "d01cdb3c1b04aefd5a835d6829c416cab5ccdb46a257d55c4466dfb4288430f5",
+      "verifiedDigests": {
+        "sourceDigest": "e1775da2696c9c9069a6f6229b7bb606bfebad004c9e41dc38bab1eb6928599c",
+        "contextDigest": "d01cdb3c1b04aefd5a835d6829c416cab5ccdb46a257d55c4466dfb4288430f5",
+        "conditionTreeDigest": "7d3498099f34478b9faeaad33abcfe3ed10f0f29a1a797141e579807d31d3d72",
+        "wordingDigest": "9547777c07d6557d074baf62d5669d78b53f03caaa92ed90604a538f39866067",
+        "fixturesDigest": "506cd41cd337060be344dd8acd97565fec50fd19fbbeebe298d49511b01178eb"
+      },
+      "contextVerification": {
+        "claimId": "interp-quanshu-tai-bach-tu-vi-four-adverse-host",
+        "fullContextMatchesHtmlBlocks": true,
+        "numberedLinesMatchStoredText": true,
+        "fullSpanMatchesContext": true,
+        "contextLineCount": 30,
+        "htmlBlockStart": 389
+      },
+      "expertVerified": false,
+      "bookVerified": false,
+      "publicRelease": false,
+      "releasePermission": "withheld",
+      "usage": "internal_research",
+      "defaultFormulaChangeAuthorized": false,
+      "empiricalTruthVerified": false,
+      "limitations": [
+        "paragraph_scoped_only",
+        "direct_host_sufficient_subset_only",
+        "khong_kiep_aliases_not_implemented",
+        "not_a_brightness_change",
+        "not_a_verified_life_event",
+        "no_whole_chart_or_public_release"
+      ],
+      "additionalLimitations": [
+        "No ranking or override rule between adverse and favorable co-star clauses is approved.",
+        "A false direct-host predicate is absence of this implemented subset, not proof that the broader 加 clause does not apply.",
+        "MATCH refers to exact proposed clause-reporting scope, not a complete executable formalization of the source entry."
+      ],
+      "reasons": [
+        "The complete Purple Emperor entry spans two adjacent HTML paragraphs. It expressly contains 加羊陀火鈴空劫不旺. Its subject remains 紫微 in 財帛宮; the following 破軍同, 天相同, 天府同, 左右, and 七殺同加吉 clauses are retained in the quotation and were inspected in context.",
+        "羊/陀/火/鈴 are an enumerated set of adverse stars; the wording does not require simultaneous presence of all listed stars. Taking one of the four named stars directly in the same palace is a sufficient narrow instance of addition. This approval does not define the complete reach of 加 and does not turn direct-host into an exclusive source requirement.",
+        "The proposed Vietnamese sentence reports that this entry uses the modifier 不旺 and declines to conclude from the abundance opening alone. It does not claim that the complete palace is inevitably poor or that 不旺 overrides every co-star clause. In that exact limited wording the continuation 天府同富足終身保守 and reciprocal 天府 entry do not contradict the reported presence of the adverse modifier.",
+        "不旺 here qualifies the wealth discussion. Neither this condition tree nor the approved wording changes the technical brightness table or infers a numerical brightness downgrade.",
+        "The OR leaves correctly cover Kình Dương, Đà La, Hỏa Tinh, and Linh Tinh at Tài Bạch; Tử Vi must occupy that same functional palace. 空/劫 aliases and adverse stars solely in surrounding palaces remain unimplemented, not disproved."
+      ],
+      "fixtureResult": {
+        "count": 8,
+        "passed": 8,
+        "kind": "independently_replayed_engineering_regressions_not_source_goldens",
+        "results": [
+          {
+            "id": "I02/host_adverse_Linh Tinh",
+            "input": {
+              "day": 1,
+              "month": 1,
+              "year": 1980,
+              "hour": 10,
+              "gender": 1
+            },
+            "hourBranchIndex": 6,
+            "host": {
+              "id": "4",
+              "functionId": "tai_bach",
+              "branchName": "Mão"
+            },
+            "hostStarNames": [
+              "Tử Vi",
+              "Tham Lang",
+              "Phượng Các",
+              "Giải Thần",
+              "Tam Thai",
+              "Hóa Quyền",
+              "Tiểu Hao",
+              "Bạch Hổ",
+              "Linh Tinh"
+            ],
+            "expected": true,
+            "status": "satisfied"
+          },
+          {
+            "id": "I02/host_adverse_Hỏa Tinh",
+            "input": {
+              "day": 22,
+              "month": 1,
+              "year": 1980,
+              "hour": 14,
+              "gender": 1
+            },
+            "hourBranchIndex": 8,
+            "host": {
+              "id": "3",
+              "functionId": "tai_bach",
+              "branchName": "Dần"
+            },
+            "hostStarNames": [
+              "Tử Vi",
+              "Thiên Phủ",
+              "Tướng Quân",
+              "Quốc Ấn",
+              "Long Đức",
+              "Thiên Hỷ",
+              "Thiên Phúc",
+              "Hỏa Tinh"
+            ],
+            "expected": true,
+            "status": "satisfied"
+          },
+          {
+            "id": "I02/host_adverse_Kình Dương",
+            "input": {
+              "day": 8,
+              "month": 2,
+              "year": 1980,
+              "hour": 4,
+              "gender": 1
+            },
+            "hourBranchIndex": 3,
+            "host": {
+              "id": "8",
+              "functionId": "tai_bach",
+              "branchName": "Mùi"
+            },
+            "hostStarNames": [
+              "Tử Vi",
+              "Phá Quân",
+              "Thiên Giải",
+              "Hoa Cái",
+              "Kình Dương",
+              "Quan Phủ",
+              "Thái Tuế",
+              "Hỏa Tinh"
+            ],
+            "expected": true,
+            "status": "satisfied"
+          },
+          {
+            "id": "I02/host_adverse_Đà La",
+            "input": {
+              "day": 22,
+              "month": 3,
+              "year": 1980,
+              "hour": 8,
+              "gender": 1
+            },
+            "hourBranchIndex": 5,
+            "host": {
+              "id": "8",
+              "functionId": "tai_bach",
+              "branchName": "Mùi"
+            },
+            "hostStarNames": [
+              "Tử Vi",
+              "Phá Quân",
+              "Thiên Việt",
+              "Hồng Loan",
+              "Thiên Tài",
+              "Đà La",
+              "Quan Phủ",
+              "Trực Phù",
+              "Địa Không",
+              "Quả Tú"
+            ],
+            "expected": true,
+            "status": "satisfied"
+          },
+          {
+            "id": "I02/no_expanded_adverses_in_host",
+            "input": {
+              "day": 8,
+              "month": 1,
+              "year": 1980,
+              "hour": 8,
+              "gender": 1
+            },
+            "hourBranchIndex": 5,
+            "host": {
+              "id": "5",
+              "functionId": "tai_bach",
+              "branchName": "Thìn"
+            },
+            "hostStarNames": [
+              "Tử Vi",
+              "Thiên Tướng",
+              "Thanh Long",
+              "Phúc Đức",
+              "Bát Tọa",
+              "Thiên Đức",
+              "Quả Tú",
+              "Thiên La"
+            ],
+            "expected": false,
+            "status": "not_satisfied"
+          },
+          {
+            "id": "I02/host_absent",
+            "input": {
+              "day": 1,
+              "month": 1,
+              "year": 1980,
+              "hour": 2,
+              "gender": 1
+            },
+            "hourBranchIndex": 2,
+            "host": {
+              "id": "8",
+              "functionId": "tai_bach",
+              "branchName": "Mùi"
+            },
+            "hostStarNames": [
+              "Thiên Cơ",
+              "Thai Phụ",
+              "Hoa Cái",
+              "Kình Dương",
+              "Quan Phủ",
+              "Thái Tuế",
+              "Thiên Hình"
+            ],
+            "expected": false,
+            "status": "not_satisfied"
+          },
+          {
+            "id": "I02/target_in_TPTC_wrong_host",
+            "input": {
+              "day": 1,
+              "month": 1,
+              "year": 1980,
+              "hour": 14,
+              "gender": 1
+            },
+            "hourBranchIndex": 8,
+            "host": {
+              "id": "2",
+              "functionId": "tai_bach",
+              "branchName": "Sửu"
+            },
+            "hostStarNames": [
+              "Tham Lang",
+              "Vũ Khúc",
+              "Tấu Thư",
+              "Thai Phụ",
+              "Hóa Lộc",
+              "Hóa Quyền",
+              "Tuế Phá",
+              "Thiên Hư",
+              "Phá Toái"
+            ],
+            "expected": false,
+            "status": "not_satisfied"
+          },
+          {
+            "id": "I02/host_clean_TPTC_adverse",
+            "input": {
+              "day": 15,
+              "month": 1,
+              "year": 1980,
+              "hour": 14,
+              "gender": 1
+            },
+            "hourBranchIndex": 8,
+            "host": {
+              "id": "2",
+              "functionId": "tai_bach",
+              "branchName": "Sửu"
+            },
+            "hostStarNames": [
+              "Tử Vi",
+              "Phá Quân",
+              "Tấu Thư",
+              "Thai Phụ",
+              "Tuế Phá",
+              "Thiên Hư",
+              "Phá Toái"
+            ],
+            "expected": false,
+            "status": "not_satisfied"
+          }
+        ]
+      },
+      "commandsAndResults": [
+        {
+          "command": "curl -fLsS --max-time 30 https://raw.githubusercontent.com/SylarLong/iztro/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/ancientBook-2.html -o /tmp/tuvi-juan-pinned/astra-refetched-juan2.html",
+          "result": "Exit 0; refetched pinned raw HTML byte-equal to stored HTML."
+        },
+        {
+          "command": "python3 /tmp/tuvi-juan-pinned/astra-verify-context.py",
+          "result": "Exit 0; raw HTML digest matched; complete numbered context lines and contiguous HTML blocks matched for both candidates."
+        },
+        {
+          "command": "node /tmp/tuvi-juan-pinned/astra-replay-review.mjs",
+          "result": "Exit 0; all five per-candidate digests matched; all 16 solar-input fixtures reproduced with actual solarToLunar/hourBranchIndex/calculateTuVi/normalizeChart/evaluateCondition and matching lunar and host records."
+        }
+      ]
+    },
+    {
+      "available": true,
+      "model": "gpt-6-astra",
+      "reviewerRole": "independent_source_domain_reviewer_B",
+      "claimId": "interp-quanshu-phuc-duc-dong-luong-host",
+      "schoolId": "vn-tam-hop-default",
+      "sourceId": "ziwei-quanshu-iztro-transcription",
+      "sourceProfile": "quanshu-iztro-2f00e2ab",
+      "target": "phuc_duc",
+      "editionId": "iztro-juan2-2f00e2ab0c80",
+      "locator": "juan2/福德宮/天同",
+      "sourceDigest": "d0ef3ada30bc2f7c5a9ec33e3d94ad295a05ba621db929c8812b11cffe711798",
+      "quotation": "天同快樂有福有壽，巨門同多憂少喜，太陰同享福，天梁同清閑快樂。",
+      "quotationPolicy": "source-sentence-v2",
+      "conditions": [
+        "palace_phuc_duc",
+        "thien_dong_in_host",
+        "thien_luong_in_host",
+        "direct_host_only"
+      ],
+      "exceptions": [],
+      "conditionTree": {
+        "op": "same_palace",
+        "target": "phuc_duc",
+        "stars": [
+          "Thiên Đồng",
+          "Thiên Lương"
+        ]
+      },
+      "approvedWording": "Riêng mục Thiên Đồng tại Phúc Đức của bản chép này, Thiên Lương đồng cung được mô tả bằng nhánh “清閑快樂”, nghĩa là thanh nhàn, vui vẻ. Câu này chỉ phản ánh nhánh đồng cung đang xét, không tổng kết toàn bộ lá số và không suy ra tuổi thọ. Đây là lời sách truyền thống, không phải sự kiện đời đã kiểm chứng.",
+      "formulaComparison": "MATCH",
+      "verdict": "MATCH",
+      "interpretationVerdict": "INTERPRETATION_SUPPORTED_WITH_LIMITS",
+      "conditionTreeDigest": "37aec8b410db5dcb291c5574446b87577d966104f2386fca9b8b6434590cd5e8",
+      "wordingDigest": "21613f14fa8a4527bd816f43e9ed5b2b894071b77a2df3bb857a17a195ce27bd",
+      "fixturesDigest": "ef558ca0eda2f9025b526796a4abaa3813d88c9584f80c1fdda74739ab0e25ba",
+      "contextDigest": "94595d84e838faa7e43d2c424c63d0268e10eb77789f0c37a36f857b0b658039",
+      "verifiedDigests": {
+        "sourceDigest": "d0ef3ada30bc2f7c5a9ec33e3d94ad295a05ba621db929c8812b11cffe711798",
+        "contextDigest": "94595d84e838faa7e43d2c424c63d0268e10eb77789f0c37a36f857b0b658039",
+        "conditionTreeDigest": "37aec8b410db5dcb291c5574446b87577d966104f2386fca9b8b6434590cd5e8",
+        "wordingDigest": "21613f14fa8a4527bd816f43e9ed5b2b894071b77a2df3bb857a17a195ce27bd",
+        "fixturesDigest": "ef558ca0eda2f9025b526796a4abaa3813d88c9584f80c1fdda74739ab0e25ba"
+      },
+      "contextVerification": {
+        "claimId": "interp-quanshu-phuc-duc-dong-luong-host",
+        "fullContextMatchesHtmlBlocks": true,
+        "numberedLinesMatchStoredText": true,
+        "fullSpanMatchesContext": true,
+        "contextLineCount": 28,
+        "htmlBlockStart": 545
+      },
+      "expertVerified": false,
+      "bookVerified": false,
+      "publicRelease": false,
+      "releasePermission": "withheld",
+      "usage": "internal_research",
+      "defaultFormulaChangeAuthorized": false,
+      "empiricalTruthVerified": false,
+      "limitations": [
+        "paragraph_scoped_only",
+        "dong_cu_tension_not_adjudicated",
+        "no_inherited_longevity_claim",
+        "not_a_whole_chart_judgment",
+        "not_a_verified_life_event",
+        "no_public_release"
+      ],
+      "additionalLimitations": [
+        "No guaranteed favorable overall Phúc Đức interpretation is approved.",
+        "No reciprocal Đồng-Cự conflict resolution and no inherited longevity claim are approved.",
+        "The 31-character complete source sentence satisfies the existing source-sentence-v2 quotation policy without modifying its comparator."
+      ],
+      "reasons": [
+        "The full 天同 sentence at 福德宮 explicitly ends 天梁同清閑快樂. The subject of 同 is the 天同 entry, so the proposed two named stars occupying Phúc Đức together matches the stated branch.",
+        "清閑快樂 is faithfully rendered thanh nhàn, vui vẻ. The Vietnamese wording confines this to the selected branch and explicitly declines a longevity inference. It does not inherit 有壽 or every predicate from the opening 天同快樂有福有壽.",
+        "The full section includes other-star adverse modifiers and the reciprocal 巨門/天同 tension. Those were read. The 天同 sentence does not attach an additional no-adverse condition to 天梁同清閑快樂; borrowing conditions from a neighboring entry would add unsupported constraints. The proposed statement remains a report of that branch, not a synthesized judgment of a chart containing adverse stars.",
+        "The 巨門同多憂少喜 versus 巨門 entry 天同同享福 tension is outside this Thiên Đồng plus Thiên Lương condition and is not adjudicated. The inspected 福德宮 section supplies no separate 天梁 paragraph that cancels the quoted branch.",
+        "same_palace at phuc_duc requires both stars at the host. Co-stars at TPTC only and unrelated Thái Âm/Cự Môn pairings correctly fail. The adverse-host positive fixture means the narrow branch is present, not that its native has a favorable verified outcome."
+      ],
+      "fixtureResult": {
+        "count": 8,
+        "passed": 8,
+        "kind": "independently_replayed_engineering_regressions_not_source_goldens",
+        "results": [
+          {
+            "id": "I04/thien_luong_no_expanded_adverses_in_TPTC",
+            "input": {
+              "day": 8,
+              "month": 3,
+              "year": 1983,
+              "hour": 4,
+              "gender": 1
+            },
+            "hourBranchIndex": 3,
+            "host": {
+              "id": "3",
+              "functionId": "phuc_duc",
+              "branchName": "Dần"
+            },
+            "hostStarNames": [
+              "Thiên Đồng",
+              "Thiên Lương",
+              "Thiếu Âm",
+              "Phục Binh",
+              "Cô Thần",
+              "Lưu Hà"
+            ],
+            "expected": true,
+            "status": "satisfied"
+          },
+          {
+            "id": "I04/costar_Thiên Lương",
+            "input": {
+              "day": 8,
+              "month": 3,
+              "year": 1980,
+              "hour": 4,
+              "gender": 1
+            },
+            "hourBranchIndex": 3,
+            "host": {
+              "id": "3",
+              "functionId": "phuc_duc",
+              "branchName": "Dần"
+            },
+            "hostStarNames": [
+              "Thiên Đồng",
+              "Thiên Lương",
+              "Phượng Các",
+              "Thiên Mã",
+              "Giải Thần",
+              "Thiên Trù",
+              "Phi Liêm",
+              "Tuế Phá",
+              "Thiên Hư",
+              "Hóa Kỵ"
+            ],
+            "expected": true,
+            "status": "satisfied"
+          },
+          {
+            "id": "I04/costar_Thiên Lương_adverse_host",
+            "input": {
+              "day": 1,
+              "month": 9,
+              "year": 1980,
+              "hour": 16,
+              "gender": 1
+            },
+            "hourBranchIndex": 9,
+            "host": {
+              "id": "3",
+              "functionId": "phuc_duc",
+              "branchName": "Dần"
+            },
+            "hostStarNames": [
+              "Thiên Đồng",
+              "Thiên Lương",
+              "Văn Xương",
+              "Phượng Các",
+              "Thiên Mã",
+              "Thiên Giải",
+              "Giải Thần",
+              "Thai Phụ",
+              "Thiên Trù",
+              "Phi Liêm",
+              "Tuế Phá",
+              "Linh Tinh",
+              "Thiên Hư",
+              "Hóa Kỵ"
+            ],
+            "expected": true,
+            "status": "satisfied"
+          },
+          {
+            "id": "I04/thien_luong_missing_from_host",
+            "input": {
+              "day": 1,
+              "month": 1,
+              "year": 1980,
+              "hour": 22,
+              "gender": 1
+            },
+            "hourBranchIndex": 12,
+            "host": {
+              "id": "4",
+              "functionId": "phuc_duc",
+              "branchName": "Mão"
+            },
+            "hostStarNames": [
+              "Thiên Đồng",
+              "Văn Khúc",
+              "Phượng Các",
+              "Giải Thần",
+              "Thiên Quý",
+              "Tam Thai",
+              "Tiểu Hao",
+              "Bạch Hổ",
+              "Hóa Kỵ"
+            ],
+            "expected": false,
+            "status": "not_satisfied"
+          },
+          {
+            "id": "I04/thien_luong_only_in_TPTC_not_host",
+            "input": {
+              "day": 8,
+              "month": 1,
+              "year": 1980,
+              "hour": 6,
+              "gender": 1
+            },
+            "hourBranchIndex": 4,
+            "host": {
+              "id": "12",
+              "functionId": "phuc_duc",
+              "branchName": "Hợi"
+            },
+            "hostStarNames": [
+              "Thiên Đồng",
+              "Hỉ Thần",
+              "Quan Phù",
+              "Long Trì",
+              "Thiên Y",
+              "Đường Phù",
+              "Thiên Khốc",
+              "Thiên Diêu"
+            ],
+            "expected": false,
+            "status": "not_satisfied"
+          },
+          {
+            "id": "I04/host_absent",
+            "input": {
+              "day": 1,
+              "month": 1,
+              "year": 1980,
+              "hour": 0,
+              "gender": 1
+            },
+            "hourBranchIndex": 1,
+            "host": {
+              "id": "3",
+              "functionId": "phuc_duc",
+              "branchName": "Dần"
+            },
+            "hostStarNames": [
+              "Thất Sát",
+              "Tướng Quân",
+              "Quốc Ấn",
+              "Long Đức",
+              "Tả Phù",
+              "Thiên Hỷ",
+              "Phong Cáo",
+              "Thiên Phúc"
+            ],
+            "expected": false,
+            "status": "not_satisfied"
+          },
+          {
+            "id": "I04/costar_Thái Âm",
+            "input": {
+              "day": 8,
+              "month": 2,
+              "year": 1980,
+              "hour": 18,
+              "gender": 1
+            },
+            "hourBranchIndex": 10,
+            "host": {
+              "id": "7",
+              "functionId": "phuc_duc",
+              "branchName": "Ngọ"
+            },
+            "hostStarNames": [
+              "Thái Âm",
+              "Thiên Đồng",
+              "Lộc Tồn",
+              "Bác Sĩ",
+              "Địa Giải",
+              "Trực Phù",
+              "Lưu Hà"
+            ],
+            "expected": false,
+            "status": "not_satisfied"
+          },
+          {
+            "id": "I04/costar_Cự Môn",
+            "input": {
+              "day": 28,
+              "month": 2,
+              "year": 1980,
+              "hour": 6,
+              "gender": 1
+            },
+            "hourBranchIndex": 4,
+            "host": {
+              "id": "2",
+              "functionId": "phuc_duc",
+              "branchName": "Sửu"
+            },
+            "hostStarNames": [
+              "Cự Môn",
+              "Thiên Đồng",
+              "Tấu Thư",
+              "Thiên Khôi",
+              "Thiên Hỷ",
+              "Thiên Y",
+              "Đường Phù",
+              "Thiên Thọ",
+              "Nguyệt Đức",
+              "Tử Phù",
+              "Thiên Diêu",
+              "Hóa Kỵ"
+            ],
+            "expected": false,
+            "status": "not_satisfied"
+          }
+        ]
+      },
+      "commandsAndResults": [
+        {
+          "command": "curl -fLsS --max-time 30 https://raw.githubusercontent.com/SylarLong/iztro/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/ancientBook-2.html -o /tmp/tuvi-juan-pinned/astra-refetched-juan2.html",
+          "result": "Exit 0; refetched pinned raw HTML byte-equal to stored HTML."
+        },
+        {
+          "command": "python3 /tmp/tuvi-juan-pinned/astra-verify-context.py",
+          "result": "Exit 0; raw HTML digest matched; complete numbered context lines and contiguous HTML blocks matched for both candidates."
+        },
+        {
+          "command": "node /tmp/tuvi-juan-pinned/astra-replay-review.mjs",
+          "result": "Exit 0; all five per-candidate digests matched; all 16 solar-input fixtures reproduced with actual solarToLunar/hourBranchIndex/calculateTuVi/normalizeChart/evaluateCondition and matching lunar and host records."
+        }
+      ]
+    }
+  ]
+}

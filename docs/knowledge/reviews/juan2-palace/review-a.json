@@ -1,0 +1,292 @@
+[
+  {
+    "available": true,
+    "model": "gpt-6.1-sol",
+    "claimId": "interp-quanshu-tai-bach-tu-vi-four-adverse-host",
+    "schoolId": "vn-tam-hop-default",
+    "sourceId": "ziwei-quanshu-iztro-transcription",
+    "sourceProfile": "quanshu-iztro-2f00e2ab",
+    "target": "tai_bach",
+    "editionId": "iztro-juan2-2f00e2ab0c80",
+    "locator": "juan2/財帛宮/紫微",
+    "sourceDigest": "e1775da2696c9c9069a6f6229b7bb606bfebad004c9e41dc38bab1eb6928599c",
+    "quotation": "紫微豐足倉箱，加羊陀火鈴空劫不旺，破軍同先難後易，天相同財帛蓄積，\n天府同富足終身保守，加左右為財富之官，七殺同加吉財帛橫發。",
+    "quotationPolicy": "source-sentence-v2",
+    "conditions": [
+      "palace_tai_bach",
+      "tu_vi_in_host",
+      "any_kinh_da_hoa_linh_in_host",
+      "direct_host_only"
+    ],
+    "exceptions": [],
+    "formulaComparison": "MATCH",
+    "verdict": "MATCH",
+    "interpretationVerdict": "INTERPRETATION_SUPPORTED_WITH_LIMITS",
+    "conditionTreeDigest": "7d3498099f34478b9faeaad33abcfe3ed10f0f29a1a797141e579807d31d3d72",
+    "wordingDigest": "9547777c07d6557d074baf62d5669d78b53f03caaa92ed90604a538f39866067",
+    "fixturesDigest": "506cd41cd337060be344dd8acd97565fec50fd19fbbeebe298d49511b01178eb",
+    "contextDigest": "d01cdb3c1b04aefd5a835d6829c416cab5ccdb46a257d55c4466dfb4288430f5",
+    "conditionTree": {
+      "op": "and",
+      "items": [
+        {
+          "op": "star_present",
+          "target": "tai_bach",
+          "star": "Tử Vi"
+        },
+        {
+          "op": "or",
+          "items": [
+            {
+              "op": "star_present",
+              "target": "tai_bach",
+              "star": "Kình Dương"
+            },
+            {
+              "op": "star_present",
+              "target": "tai_bach",
+              "star": "Đà La"
+            },
+            {
+              "op": "star_present",
+              "target": "tai_bach",
+              "star": "Hỏa Tinh"
+            },
+            {
+              "op": "star_present",
+              "target": "tai_bach",
+              "star": "Linh Tinh"
+            }
+          ]
+        }
+      ]
+    },
+    "reviewedWording": "Riêng mục Tử Vi tại Tài Bạch của bản chép này dùng mệnh đề “不旺” khi thêm nhóm sát tinh được nêu. Phạm vi đang xét là Kình Dương, Đà La, Hỏa Tinh hoặc Linh Tinh đồng cung; không dùng riêng câu mở đầu về sự sung túc làm lời kết cho cung này. Đây là lời sách truyền thống, không phải sự kiện đời đã kiểm chứng.",
+    "limitations": [
+      "paragraph_scoped_only",
+      "direct_host_sufficient_subset_only",
+      "khong_kiep_aliases_not_implemented",
+      "not_a_brightness_change",
+      "not_a_verified_life_event",
+      "no_whole_chart_or_public_release"
+    ],
+    "usage": "internal_research",
+    "releasePermission": "withheld",
+    "expertVerified": false,
+    "bookVerified": false,
+    "publicRelease": false,
+    "runtimeRuleChangeApplied": false,
+    "sourceAssessment": {
+      "repository": "SylarLong/iztro",
+      "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+      "rawHtmlSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+      "independentPinnedRawFetch": {
+        "status": 200,
+        "sha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a"
+      },
+      "classification": "Modern web transcription/mirror; exact pinned bytes confirmed, not an authenticated original edition",
+      "editionAuthenticated": false,
+      "wikisourceRevisionEquivalence": "NOT_VERIFIED",
+      "empiricalPredictiveValidation": false,
+      "schoolScope": "vn-tam-hop-default is the receiving engineering profile; the mirror does not independently establish Vietnamese school lineage."
+    },
+    "notes": [
+      "Read the entire 財帛宮 section, including both adjacent 紫微 paragraphs. HTML paragraph 380 ends with 天相同財帛蓄積， and paragraph 381 continues 天府同富足終身保守，加左右為財富之官，七殺同加吉財帛橫發。 The stored newline joins them correctly and does not truncate the continuation.",
+      "紫微 is the subject of this palace entry; 加羊陀火鈴空劫不旺 is the adverse modifier before separate 破軍同, 天相同, 天府同, 左右 and 七殺同加吉 clauses. The proposed text reports this local modifier and declines to use the unqualified opening as a final palace judgment. It does not erase or adjudicate the later favorable branches.",
+      "羊, 陀, 火, 鈴 are conventional abbreviated star references to Kình Dương, Đà La, Hỏa Tinh, Linh Tinh. The list is a class of adverse additions rather than a requirement that all six listed stars coexist. Any one of the four implemented names directly sharing the host with Tử Vi is a narrow sufficient case. 加 can encompass broader association in traditional reading; the tree and wording deliberately claim only direct host co-location. This MATCH is for that stated sufficient subset, not completeness or equivalence to the entire source rule.",
+      "空/劫 are present in the source but are not implemented by this tree. A false tree result therefore establishes only that the narrow four-star host case was not met. It cannot establish absence of the full adverse class, prosperous wealth, or a favorable reading. TPTC-only adverse cases and Tử Vi in another palace correctly fail this local tree.",
+      "不旺 is read in its wealth-palace textual setting. Neither the wording nor tree changes an engine brightness/miếu-vượng status. The wording preserves the Chinese phrase rather than supplying a stronger deterministic Vietnamese wealth-loss prediction.",
+      "The eight actual reachable inputs cover every OR leaf, a host without those adverse stars, absent Tử Vi, Tử Vi only in TPTC, and adverse stars only in TPTC. All returned exact expected statuses."
+    ],
+    "verification": {
+      "command": "node /tmp/tuvi-juan-pinned/verify-review-sol.mjs",
+      "result": "PASS: 16/16 reachable solar fixtures across both candidates; this candidate 8/8. All candidate/source/context/tree/wording/fixture digests match.",
+      "evidenceFile": "/tmp/tuvi-juan-pinned/review-sol-verification.json",
+      "fixtures": [
+        {
+          "id": "I02/host_adverse_Linh Tinh",
+          "status": "satisfied",
+          "expected": true
+        },
+        {
+          "id": "I02/host_adverse_Hỏa Tinh",
+          "status": "satisfied",
+          "expected": true
+        },
+        {
+          "id": "I02/host_adverse_Kình Dương",
+          "status": "satisfied",
+          "expected": true
+        },
+        {
+          "id": "I02/host_adverse_Đà La",
+          "status": "satisfied",
+          "expected": true
+        },
+        {
+          "id": "I02/no_expanded_adverses_in_host",
+          "status": "not_satisfied",
+          "expected": false
+        },
+        {
+          "id": "I02/host_absent",
+          "status": "not_satisfied",
+          "expected": false
+        },
+        {
+          "id": "I02/target_in_TPTC_wrong_host",
+          "status": "not_satisfied",
+          "expected": false
+        },
+        {
+          "id": "I02/host_clean_TPTC_adverse",
+          "status": "not_satisfied",
+          "expected": false
+        }
+      ],
+      "additionalCommands": [
+        {
+          "command": "Python HTMLParser inert parse of /tmp/tuvi-juan-pinned/juan2.html with SHA256",
+          "result": "I02 full span = adjacent paragraphs 380 and 381; I04 = complete paragraph 536; raw SHA matches bundle."
+        },
+        {
+          "command": "Python urllib.request.urlopen pinned raw.githubusercontent.com/SylarLong/iztro/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/ancientBook-2.html; hashlib.sha256",
+          "result": "HTTP 200; remote SHA256 matches stored HTML and bundle."
+        }
+      ],
+      "historicalGoldens": false
+    },
+    "approvalScope": "Independent model source/condition/wording review only. MATCH is relative to the exact narrowed candidate; this single review does not satisfy the two-distinct-model gate or authorize runtime/public release."
+  },
+  {
+    "available": true,
+    "model": "gpt-6.1-sol",
+    "claimId": "interp-quanshu-phuc-duc-dong-luong-host",
+    "schoolId": "vn-tam-hop-default",
+    "sourceId": "ziwei-quanshu-iztro-transcription",
+    "sourceProfile": "quanshu-iztro-2f00e2ab",
+    "target": "phuc_duc",
+    "editionId": "iztro-juan2-2f00e2ab0c80",
+    "locator": "juan2/福德宮/天同",
+    "sourceDigest": "d0ef3ada30bc2f7c5a9ec33e3d94ad295a05ba621db929c8812b11cffe711798",
+    "quotation": "天同快樂有福有壽，巨門同多憂少喜，太陰同享福，天梁同清閑快樂。",
+    "quotationPolicy": "source-sentence-v2",
+    "conditions": [
+      "palace_phuc_duc",
+      "thien_dong_in_host",
+      "thien_luong_in_host",
+      "direct_host_only"
+    ],
+    "exceptions": [],
+    "formulaComparison": "MATCH",
+    "verdict": "MATCH",
+    "interpretationVerdict": "INTERPRETATION_SUPPORTED_WITH_LIMITS",
+    "conditionTreeDigest": "37aec8b410db5dcb291c5574446b87577d966104f2386fca9b8b6434590cd5e8",
+    "wordingDigest": "21613f14fa8a4527bd816f43e9ed5b2b894071b77a2df3bb857a17a195ce27bd",
+    "fixturesDigest": "ef558ca0eda2f9025b526796a4abaa3813d88c9584f80c1fdda74739ab0e25ba",
+    "contextDigest": "94595d84e838faa7e43d2c424c63d0268e10eb77789f0c37a36f857b0b658039",
+    "conditionTree": {
+      "op": "same_palace",
+      "target": "phuc_duc",
+      "stars": [
+        "Thiên Đồng",
+        "Thiên Lương"
+      ]
+    },
+    "reviewedWording": "Riêng mục Thiên Đồng tại Phúc Đức của bản chép này, Thiên Lương đồng cung được mô tả bằng nhánh “清閑快樂”, nghĩa là thanh nhàn, vui vẻ. Câu này chỉ phản ánh nhánh đồng cung đang xét, không tổng kết toàn bộ lá số và không suy ra tuổi thọ. Đây là lời sách truyền thống, không phải sự kiện đời đã kiểm chứng.",
+    "limitations": [
+      "paragraph_scoped_only",
+      "dong_cu_tension_not_adjudicated",
+      "no_inherited_longevity_claim",
+      "not_a_whole_chart_judgment",
+      "not_a_verified_life_event",
+      "no_public_release"
+    ],
+    "usage": "internal_research",
+    "releasePermission": "withheld",
+    "expertVerified": false,
+    "bookVerified": false,
+    "publicRelease": false,
+    "runtimeRuleChangeApplied": false,
+    "sourceAssessment": {
+      "repository": "SylarLong/iztro",
+      "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+      "rawHtmlSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+      "independentPinnedRawFetch": {
+        "status": 200,
+        "sha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a"
+      },
+      "classification": "Modern web transcription/mirror; exact pinned bytes confirmed, not an authenticated original edition",
+      "editionAuthenticated": false,
+      "wikisourceRevisionEquivalence": "NOT_VERIFIED",
+      "empiricalPredictiveValidation": false,
+      "schoolScope": "vn-tam-hop-default is the receiving engineering profile; the mirror does not independently establish Vietnamese school lineage."
+    },
+    "notes": [
+      "Read the entire 福德宮 section and the complete 天同 sentence, not just the opening. The stored sentence is exactly present as a complete HTML paragraph: 天同快樂有福有壽，巨門同多憂少喜，太陰同享福，天梁同清閑快樂。 It is 31 characters, so source-sentence-v2 legitimately permits this complete punctuated quotation without padding from another entry.",
+      "Within the 天同 entry, 天梁同 denotes Thiên Lương sharing the palace with the entry subject Thiên Đồng. 清閑快樂 supports the restrained gloss thanh nhàn, vui vẻ. The exact same_palace tree for both stars at Phúc Đức is sufficient for this specific quoted branch. No source condition here adds an adverse-star absence or a brightness requirement; adding such tests would invent restrictions. Presence of adverse stars in one positive fixture is therefore not a reason to reject this explicitly branch-scoped textual description.",
+      "The source opening 有壽 is not inherited into the proposed Thiên Lương branch wording. The wording expressly forbids a lifespan inference and a whole-chart summary. It does not claim a verified psychological state or life outcome.",
+      "The 天同 entry describes 巨門同 as 多憂少喜, whereas the separate 巨門 entry in the same palace section says 天同同享福. This textual tension remains unresolved. The proposed tree excludes the Đồng-Cự pairing and the wording describes only the Thiên Lương branch, so accepting this branch does not settle or harmonize the contradiction.",
+      "The eight reachable inputs cover three Thiên Đồng/Thiên Lương positives (including an adverse-star host and one without expanded adverse stars in host/TPTC), missing Thiên Lương, Thiên Lương only in TPTC, absent Thiên Đồng, and the separate Thái Âm and Cự Môn co-stars. All returned exact expected statuses."
+    ],
+    "verification": {
+      "command": "node /tmp/tuvi-juan-pinned/verify-review-sol.mjs",
+      "result": "PASS: 16/16 reachable solar fixtures across both candidates; this candidate 8/8. All candidate/source/context/tree/wording/fixture digests match.",
+      "evidenceFile": "/tmp/tuvi-juan-pinned/review-sol-verification.json",
+      "fixtures": [
+        {
+          "id": "I04/thien_luong_no_expanded_adverses_in_TPTC",
+          "status": "satisfied",
+          "expected": true
+        },
+        {
+          "id": "I04/costar_Thiên Lương",
+          "status": "satisfied",
+          "expected": true
+        },
+        {
+          "id": "I04/costar_Thiên Lương_adverse_host",
+          "status": "satisfied",
+          "expected": true
+        },
+        {
+          "id": "I04/thien_luong_missing_from_host",
+          "status": "not_satisfied",
+          "expected": false
+        },
+        {
+          "id": "I04/thien_luong_only_in_TPTC_not_host",
+          "status": "not_satisfied",
+          "expected": false
+        },
+        {
+          "id": "I04/host_absent",
+          "status": "not_satisfied",
+          "expected": false
+        },
+        {
+          "id": "I04/costar_Thái Âm",
+          "status": "not_satisfied",
+          "expected": false
+        },
+        {
+          "id": "I04/costar_Cự Môn",
+          "status": "not_satisfied",
+          "expected": false
+        }
+      ],
+      "additionalCommands": [
+        {
+          "command": "Python HTMLParser inert parse of /tmp/tuvi-juan-pinned/juan2.html with SHA256",
+          "result": "I02 full span = adjacent paragraphs 380 and 381; I04 = complete paragraph 536; raw SHA matches bundle."
+        },
+        {
+          "command": "Python urllib.request.urlopen pinned raw.githubusercontent.com/SylarLong/iztro/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/ancientBook-2.html; hashlib.sha256",
+          "result": "HTTP 200; remote SHA256 matches stored HTML and bundle."
+        }
+      ],
+      "historicalGoldens": false
+    },
+    "approvalScope": "Independent model source/condition/wording review only. MATCH is relative to the exact narrowed candidate; this single review does not satisfy the two-distinct-model gate or authorize runtime/public release."
+  }
+]

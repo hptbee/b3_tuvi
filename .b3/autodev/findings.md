@@ -116,3 +116,23 @@ T021 iteration counts1→0; fresh FULL10file review2 no new confirmed findings; 
 - R402 medium CONFIRMED CLOSED: pass2 early remote snapshot saw only first two pushed branches; actual authorized third push completed, and fresh ls-remote verified all three exact feature SHAs. No stale push claim remains.
 - Final cross-cut pass2 /tmp/tuvi-crosscut-review2.md: no remaining confirmed findings; independent 26 real API→UI validator payloads, 13 selected UI tests, real matched/nonmatched chart probes, source/formula/profile unchanged checks support integration. Total reviewer passes8/12 (6 task +2 crosscut).
 - Orchestrator cumulative engineering gate PASS for T016/T017/T021; mission INCOMPLETE because new source passages/approvals and GitHub PR API access are unavailable. No merge, deploy, public release or source promotion.
+
+
+## Resume from 52319c9 — T018 source-palace integration
+- Invocation review budget resets for the new 52319c9 run; old R101–R402 remain closed historical receipts. No old completed unit is rerun as implementation.
+- Scope LARGE, two logical units: (1) independently approved source artifacts/registry/claims and (2) finite runtime binding/eligibility/synthesis plus meaningful tests. Performance specialist routed because cold evidence replay is cached and warm request paths compare stored claim data.
+- UNIT1 source assembly review /tmp/tuvi-juan2-source-unit-review.md: zero concrete R501+ findings, actual pin refetch/context/hash/review replay succeeds. Parent source-unit engineering gate PASS. This is separate from actual independent gpt-6.1-sol and gpt-6-astra domain judgments.
+- UNIT2 runtime review R601+ and performance review R701+ dispatched after author freeze. Full backend CI55files46unit9integration PASS87.41lines89.29branches; frontend consumer37PASS; browser regression running.
+- Review passes used:1/12 completed; unit2 and specialist active, final cross-cut reserved.
+
+- UNIT2 pass1 /tmp/tuvi-juan2-runtime-unit-review.md: R601 medium CONFIRMED OPEN. New source predicate projection accepted malformed null index instances/null palace records/missing branchId and conditionEval threw instead of unknown. Internal API accepts normalized charts; this is a fail-closed robustness contract defect, not an external chart injection finding. Separate author/fixer assigned minimal projection validation and both-claim no-throw regressions; fresh whole-unit review required. Blocking count1.
+- Review passes completed2/12 (sourceunit +runtimeunit); specialist active. Initial25browserrun interrupted after backend-unavailable failures: proxy-assisted readiness incorrectly reused absent backend. Parent started backend, direct no-proxy health verifies SQLite ready; rerun uses explicit loopback NO_PROXY and passes progressing cases. No test assertion disabled/product change for environment issue.
+
+- Performance specialist /tmp/tuvi-juan2-performance-review.md: no concrete R701+ finding. Actual paired pipeline0.505ms vs0.370ms baseline (+0.135ms); cold binding18reads176KB, warmzeroIO and finite2subject cache. Actual HTTP p95 ranges30.5–59.8ms vs19.8–40.1ms on sharedhost; overhead acknowledged, no productionSLO claim. Parent accepts bounded intentional complexity; no speculativeoptimization.
+- R601 fixer reproduced original TypeError before shapevalidation, then verified22corruptions acrossbothclaims unknown/ineligible/no throw/no mutation and all16realwitnesses. FullbackendCI55files exit0,87.42lines89.33branches afterfix. Fresh fullunit review dispatched. R601 pending independent closure; reviewpasses completed3/12, freshunitactive.
+- Browser25/25Chromium PASS with actualbackend after environmentalrepair; sourceartifact doclink181PASS anddiffcheckPASS.
+
+- R601 CLOSED: fresh entire runtimeunit /tmp/tuvi-juan2-runtime-unit-review2.md validates all original probes and22shape negatives, seven scriptsPASS, no new scoped finding/residue. ParentUNIT2 engineeringgatePASS; explicit literalnullchart inherited behavior remains outside normalized-chart contract, not claimedfixed.
+- Review passes completed4/12 (sourceunit, runtime1, performance, runtime2); T018crosscut active, R801+ reserved.
+
+- Final T018 crosscut /tmp/tuvi-juan2-crosscut-review.md: zero concreteR801+findings; actual48HTTP→frontendvalidator responses,16internalfixturechecks,3legacyscripts,PR50→51→52 ancestry anddiffcheckPASS. ParentT018qualitygatePASS, all confirmedfindingsclosed. Actualcompleted reviewerpasses5/12; previous ui_fixer crosscut attempt produced no report and is not counted as a completed review.

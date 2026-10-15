@@ -2,19 +2,20 @@
 
 - b3_home: /workspace/b3_tuvi/.b3/runtime/b3_ai-engineering
 - product_root: /workspace/b3_tuvi
-- plan_id: Autonomous Product Completion version 8
-- plan_version: 8
-- branch: codex/tuvi-interpretation-evidence-binding
-- run_base_sha: f0dec74973ef9d07129e19330356f8e6d2040227
+- plan_id: Autonomous Product Completion version 10
+- plan_version: 10
+- branch: codex/tuvi-juan2-palace-interpretations
+- run_base_sha: 52319c9c7123e4ff1ace74b7a81ab611df2acef5
+- preceding_invocation_base_sha: f0dec74973ef9d07129e19330356f8e6d2040227
 - previous_run_base_sha: 45615a48d0c75b90138cfc618320ffae6e9c34e0
-- current_task: none (no implementation running)
-- last_completed_task: T021
-- next_source_task: T018
-- current_task_base_sha: c4281b0579d266419bf43f2de6bafb4b24daae12
-- run_status: INCOMPLETE
+- current_task: none
+- last_completed_task: T018
+- next_source_task: T023
+- current_task_base_sha: 52319c9c7123e4ff1ace74b7a81ab611df2acef5
+- run_status: running
 - updated: 2026-10-15
 
-## Reconciliation
+## Historical reconciliation — preceding invocation
 Main fetched and ff-only advanced to f0dec74973ef9d07129e19330356f8e6d2040227; #49 is a separate research-only PR at 7d151bfa78f3151c3e1bcc5a0f1bead7fbb66582, read using its actual Git ref because GitHub GraphQL/REST return Forbidden. Previous checkpoint branch/path/table are historical; append-only completion receipts below remain evidence. T001–T006,T008,T009,T012 completion commits exist in merged main. T010/T011/T013–T015 not claimed complete by this resume. Backend full CI at current main PASS, coverage86.77/87.50. No domain formula/decision/release edits. User explicitly prioritizes Tử Vi source capabilities over previous queue; existing task IDs are preserved.
 
 ## Tasks
@@ -33,8 +34,8 @@ Main fetched and ff-only advanced to f0dec74973ef9d07129e19330356f8e6d2040227; #
 | T012 | completed | 45df02fbc8deb486201c3a203a1c1c5a005089f0 | 885adb65ddb68ccdb577b437b65446332a1cfd98 | mergedmain; backendCI PASS | existing recorded independent reviews | detailed | ready |
 | T016 | completed | f0dec74973ef9d07129e19330356f8e6d2040227 | c4281b0579d266419bf43f2de6bafb4b24daae12 | backendCI86.82/87.59;48placechecks | 2isolated passes R101/102closed | detailed | ready |
 | T017 | completed | c4281b0579d266419bf43f2de6bafb4b24daae12 | 8fbed3caff96ef326ac05fff659f6f61124b0b1e | frontend142/lint/build;8E2E,final25 | 2isolated passes R201–203closed | notes | ready |
-| T018 | incomplete | f0dec74973ef9d07129e19330356f8e6d2040227 | | SOURCE_INACCESSIBLE; no newapproval | REVIEW_NOT_EXECUTED on unreadnewtext | | |
-| T019 | incomplete | f0dec74973ef9d07129e19330356f8e6d2040227 | | SOURCE_INACCESSIBLE; oldVCDdecisionpreserved | REVIEW_NOT_EXECUTED on unreadnewtext | | |
+| T018 | completed | 52319c9c7123e4ff1ace74b7a81ab611df2acef5 | | dual-model source acceptance2; backend55files and16realfixtures PASS | allsource/runtime/perf/crosscut clear; R601closed | detailed | ready |
+| T019 | incomplete | f0dec74973ef9d07129e19330356f8e6d2040227 | | pinnedmirror available; 吉星/拱照 and 正曜 identity unresolved; oldVCD decision preserved | no new claim approval | detailed | not_ready |
 | T020 | incomplete | f0dec74973ef9d07129e19330356f8e6d2040227 | | source-profile/ageparametersunresolved | no formula promoted | | |
 | T021 | completed | c4281b0579d266419bf43f2de6bafb4b24daae12 | cfd75fd7aaed597dd31cc9e9bf928c7013c4c808 | backend53files87.06/88.32;25E2E | 2isolatedpasses R301closed | detailed | ready |
 
@@ -293,7 +294,7 @@ T021 qualitygatePASS: complete existing-source binding, no synthetic runtime-hit
 - checkpoint_policy: only existing tracked .b3/autodev masterplan/progress/findings updated per explicit committed-checkpoint mission; local runtime/home/history and approach files remain unstaged/ignored.
 - run_outcome: INCOMPLETE because requested new source approval/evidence and PR creation unavailable; completed units' gates PASS, no remaining confirmed defect claimed.
 
-## Next action
+## Historical source handoff — superseded by active resume below
 No implementation is running: T016, T017 and T021 are completed. Resume the source queue at T018, then T019/T020, only after exact fixed-revision passages/page witnesses are accessible and the required source/formula reviews can actually run. T018–T020 remain incomplete; there is no ready implementation unit that completes the requested source-approval goal.
 
 The three feature branches are pushed as a stack; main has not merged them. GitHub GraphQL/REST return Forbidden, so no PR was created. After a meaningful access change, retry the affected source reads and PR API, then create the prepared PRs in stack order. Do not merge, deploy, or promote interpretations/formulas without the required evidence and approvals.
@@ -305,3 +306,43 @@ The three feature branches are pushed as a stack; main has not merged them. GitH
 - Remote feature heads independently verified for all three branches. This final checkpoint-only commit is pushed on the top branch after saving; feature commit SHAs above remain the task receipts. No PR created through the denied GitHub API; prepared bodies and branch dependencies remain in handoff.
 - Current-instance checks used Node24.19.0 and system Chromium. Hosted GitHub CI, Node22/Windows execution and Firefox/WebKit were not revalidated for these branches; do not infer them from local test:ci success. Production/staging/rollback and owner release remain unverified/withheld.
 - Final repository state is intended clean after this checkpoint commit; local runtime/history/approach artifacts preserved and excluded. The current source mission remains INCOMPLETE, with no ready implementation claiming to solve unavailable evidence. Continue the explicit source queue after access changes.
+
+## Active resume 2026-10-15 — supersedes previous external-access handoff
+- resume_checkpoint:52319c9c7123e4ff1ace74b7a81ab611df2acef5, exact current initial HEAD; clean tree, original completed task SHAs remain ancestors and their product code remains present.
+- existing_PR_stack:#50 c4281b0 → #51 8fbed3c → #52 52319c9; refs independently fetched; never duplicate. Main stillf0dec74. Work continues on new topic branch above#52.
+- new_source_intake:PR49head298937d; pinnediztrocommit2f00e2ab0c80b1632e55bc362f2ae26e121245cb successfully fetched; actual HTML bytes and inert parsed text available /tmp/tuvi-juan-pinned. No mirror JS executed, external repo not built/installed/vendored.
+- T018 task_base:52319c9c7123e4ff1ace74b7a81ab611df2acef5; phase implementation/review; detailed readiness ready after actual complete predicates, independent fixtures and dual-model verdicts. R601 malformed-chart correction verified closed by fresh full runtime review. Previous source-access blocker is superseded for this mirror only; original Wikisource/page-witness status not upgraded.
+- independent_preapproval_work:sourceanalyst reads full3palace sections and reciprocal clauses; separate agent computes reachable solar positives/negatives and reports brightness/alias/context gaps. Neither issues model approval.
+- active_next_action:finish cross-cut gate and commit/push T018; continue separate Quan Cơ–Cự/Dậu full-passage +10fixture dual review, then implement only if accepted. Old current Nextaction sections above are prior-run receipts, not instructions to recreatePRs.
+
+## T018 implementation readiness
+- depth: detailed
+- readiness: ready
+- plan_version: 10
+- approach_at_sha: 52319c9c7123e4ff1ace74b7a81ab611df2acef5
+- inspected: complete actual pinned Juan2palace sections/adjacent clauses; independently acquired HTML hash; sourceanalyst and independent fixture search/replay; actual model reviews/replay; existing conditionEval, eligibility, source binder, synthesis, pipeline callers, source/provenance schema and fixture registrations
+- changes: finite source-palace evidence binder + verified-subtype AST eligibility + exact reviewed annotation; no new calculator, fake formula catalog hit, public prose or source-status promotion
+- contracts: existing claimType interpretation plus interpretationKind source_palace_interpretation; verified binding result kind; eligibility adds real predicate trace with matched/not-matched source conditions; public HTTP prose contract unchanged
+- data_flow: registry subject→finite local source/decision/review/fixture data→compareReviews and extra digest/verdict gates→real normalized chart conditionEval→exact internal source-profile annotation
+- edge_cases: unknown/unapproved type, changed tree/wording/limits, wrong target/school/profile, missing/ambiguous chart data, missing/corrupt evidence, partial or duplicate model reviews, same-ID clones, synthetic extra hits, unrelated future entries, source alias ambiguity and reciprocal-clause contradiction
+- files: exactly T018 scope above; old source decisions/reviews and formulas excluded. Root writes source artifacts/registries; isolated author writes binder/eligibility/synthesis/tests; no overlapping edits.
+- verification: actual model source replay AI_ACCEPTED for both candidates; 16 solar witnesses, mutation/clone/direct-synthesis tests, old TuPhu regressions, all backend CI + frontend consumer regression; independent code review/fixes/fresh review
+- architecture: one helper inside existing knowledge area; reuse existing comparator/conditionEval/source registry; no framework/service/schema migration. Optional design-only pass skipped; post-code architecture review required. Full inspected proposal stored in approach/T018.md.
+- approved_source_scope: I04 only Đồng+Lương same Phúc→清閑快樂, no longevity/whole-chart inference; I02 only Tử Vi Tài with directly co-hosted Kình/Đà/Hỏa/Linh as sufficient modifier subset→不旺 note, no full 加/空alias/brightness reinterpretation. Quan movedT022; insufficient meanings not forced.
+
+- task_spec_fingerprint: depends_on=[]|scope=docs/knowledge/research/juan2-palace/, docs/knowledge/reviews/juan2-palace/, docs/knowledge/interpretation-decisions/juan2-*.json (new only), docs/knowledge/interpretation-claims.json, docs/knowledge/sources.json, backend/src/knowledge/sourcePalaceBinding.js, backend/src/knowledge/interpretationBinding.js, backend/src/interpretation/eligibility.js, backend/src/interpretation/synthesis.js, backend/test/sourcePalaceBinding.test.mjs, backend/test/sourcePalaceInterpretation.test.mjs, backend/test/sprint11c12Evidence.test.mjs, backend/test/sourceHygiene.test.mjs, backend/test/knowledgeCatalog.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md, .gitignore|acceptance_criteria=Actual pinned complete passages/context and independent reachable fixtures receive distinct-model source and interpretation approval before activation; Two narrowly accepted claims match only the reviewed direct-host predicates and emit exactly approved internal wording, with no invented catalog/formula hit; Changed identity, scope, source/context/tree/wording/fixture bytes, partial or duplicate model reviews and unreviewed claims fail closed; Existing Tu Phu, old source decisions, natal formulas/school defaults and public-release gates remain intact
+- watched_paths: docs/knowledge/research/juan2-palace/, docs/knowledge/reviews/juan2-palace/, docs/knowledge/interpretation-decisions/juan2-*.json (new only), docs/knowledge/interpretation-claims.json, docs/knowledge/sources.json, backend/src/knowledge/sourcePalaceBinding.js, backend/src/knowledge/interpretationBinding.js, backend/src/interpretation/eligibility.js, backend/src/interpretation/synthesis.js, backend/test/sourcePalaceBinding.test.mjs, backend/test/sourcePalaceInterpretation.test.mjs, backend/test/sprint11c12Evidence.test.mjs, backend/test/sourceHygiene.test.mjs, backend/test/knowledgeCatalog.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md, .gitignore, backend/src/engine/conditionEval.js, backend/src/interpretation/pipeline.js, backend/src/interpretation/analyze.js, backend/src/knowledge/crossReview.js, backend/src/knowledge/decisionRegistry.js, backend/src/knowledge/sourceBinding.js, backend/src/knowledge/validateKnowledge.js, backend/test/interpretationBinding.test.mjs, backend/test/sprint11bInterpretation.test.mjs, .gitattributes
+
+## Current verification update
+- T018 backend CI55files46unit9integration PASS87.41/89.29 before R601 correction; StructuredAnalysis37PASS. Browser25/25Chromium PASS after actual local backend startup and loopback proxy override; initial backend-unavailable run is not counted as product success.
+- Source assembly review clear; runtime R601 fixed and independently closed; performance specialist no material finding with bounded cache and measured0.135ms warm pipeline overhead. Cross-cut integration review active.
+- Quan distinct packet prepared from complete two-paragraph 巨門 section, reciprocal and source brightness contexts;10unique independently replayed inputs (3positive7negative). New actual gpt-6.1-sol and gpt-6-astra reviews running independently; no transferred approval.
+
+- Post-R601 fullbackendCI55files PASS87.42/89.33; fresh whole runtimeunit7independent scriptsPASS including22malformedregressions; source/runtime unit engineering gates PASS, final crosscut pending.
+- Quan separate actualmodel source/wording reviews both MATCH+INTERPRETATION_SUPPORTED_WITH_LIMITS; all10realfixtures/digests independentlychecked and originalcompareReviews replayAI_ACCEPTED. Only exact attributed Dậu textual branch note; followingmodifiers unevaluated, no whole-career/publicclaim. Productactivation waits T018gate/commit and distinct T023 readiness.
+
+## T018 completion receipt — current invocation
+- task_base52319c9; engineeringgatePASS. Completed two exact source-scoped internal annotations, finite stored-evidence gate and actual-chart predicate evaluation; registered approved internal subjects1→3. Source registry remains secondary/unauthenticated, public prose/predictions/AI still withheld.
+- finalchecks: backend55files46unit9integrationPASS87.42lines89.33branches after R601fix; StructuredAnalysis37PASS; Chromium25PASS after real localbackend startup; docs181PASS; gitdiffcheckPASS. No natal formulas/data/school/oldsource decisions changed.
+- independentreview: sourceunit clear; runtimeR601fixed+freshwholeunitclear; performance0.135ms measured warm overhead/finite2keycache/warmzeroIO; finalcrosscut /tmp/tuvi-juan2-crosscut-review.md48actualHTTP→frontendvalidator responses and16realfixturesPASS, no R801 findings. ParentqualitygatePASS,5of12reviewpassesused.
+- next executable:T023 separate QuanCơ–CựDậu annotation, using separately accepted fullpassage+10realfixtures, no integratedcareer/brightness/modifier verdict. Commit/push T018 then detailedready T023 on distinct stackedbranch. Existing#50→#51→#52 preserved; no merge/deploy.

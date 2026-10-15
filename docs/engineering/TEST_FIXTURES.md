@@ -21,6 +21,8 @@ Giữ hành vi đã có của engine, API, hoặc chuẩn hóa. Kết quả kỳ
 - `normalizeChart.test.mjs`
 - `ruleEngine.test.mjs`
 - `interpretationBinding.test.mjs`: existing interpretation evidence binding and unreviewed-clone regressions; no new source approval or expert verification.
+- `sourcePalaceBinding.test.mjs`: pinned paragraph/context, actual distinct-model approval and digest binding; mutations never grant source approval.
+- `sourcePalaceInterpretation.test.mjs`: real solar inputs exercise reviewed source-palace predicates and withheld public prose; engineering witnesses, not historical life-outcome goldens.
 - `combinationRoute.integration.test.mjs`
 - `chartGenerate.test.mjs`
 - `httpApi.test.mjs`

@@ -23,7 +23,11 @@ export function renderInternalProse(eligibleClaims) {
         if (!sentence) continue;
         const source = claim.sourceId;
         const school = claim.schoolId;
-        sentences.push(`Theo nguồn ${source}, trường phái ${school}, khi điều kiện đã ghi được thỏa: ${sentence}`);
+        if (claim.interpretationKind === 'source_palace_interpretation') {
+            sentences.push(`Theo nguồn ${source}, hồ sơ ${claim.sourceProfile}, đối chiếu vị trí sao trên lá số hiện tại (không xác nhận công thức an sao của nguồn): ${sentence}`);
+        } else {
+            sentences.push(`Theo nguồn ${source}, trường phái ${school}, khi điều kiện đã ghi được thỏa: ${sentence}`);
+        }
     }
     sentences.sort();
     return sentences.length ? sentences.join(' ') : null;

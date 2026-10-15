@@ -1,6 +1,6 @@
 # Autonomous Product Completion
 
-- version: 8
+- version: 10
 - source: User mission 2026-10-14; fresh run from upstream main 45615a48d0c75b90138cfc618320ffae6e9c34e0
 
 ## Original requirements
@@ -229,15 +229,17 @@ User narrowed the active mission to Tử Vi domain completion. Preserve all prio
 - verification:
   - Frontend unit/CI, lint/build, real backend Chromium E2E, isolated review
 
-### T018 — Source-scoped Juan 2 palace interpretations
-- status: incomplete
+### T018 — Approved source-scoped Tài Bạch and Phúc Đức interpretations
+- status: completed
 - depends_on: []
-- scope: Existing knowledge source registry, interpretation decisions/claims and runtime/tests
+- scope: docs/knowledge/research/juan2-palace/, docs/knowledge/reviews/juan2-palace/, docs/knowledge/interpretation-decisions/juan2-*.json (new only), docs/knowledge/interpretation-claims.json, docs/knowledge/sources.json, backend/src/knowledge/sourcePalaceBinding.js, backend/src/knowledge/interpretationBinding.js, backend/src/interpretation/eligibility.js, backend/src/interpretation/synthesis.js, backend/test/sourcePalaceBinding.test.mjs, backend/test/sourcePalaceInterpretation.test.mjs, backend/test/sprint11c12Evidence.test.mjs, backend/test/sourceHygiene.test.mjs, backend/test/knowledgeCatalog.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md, .gitignore
 - acceptance_criteria:
-  - Independently retrieved fixed source passages for Tài Bạch/Tử Vi, Quan Lộc/Thiên Phủ and Phúc Đức/Thiên Đồng receive two actual distinct-model reviews
-  - Only complete accepted conditions/modifiers implement internal source-scoped claims, with reachable positive and negative charts and no public prose
+  - Actual pinned complete passages/context and independent reachable fixtures receive distinct-model source and interpretation approval before activation
+  - Two narrowly accepted claims match only the reviewed direct-host predicates and emit exactly approved internal wording, with no invented catalog/formula hit
+  - Changed identity, scope, source/context/tree/wording/fixture bytes, partial or duplicate model reviews and unreviewed claims fail closed
+  - Existing Tu Phu, old source decisions, natal formulas/school defaults and public-release gates remain intact
 - verification:
-  - Exact passage hashes and review replay, domain tests, API withheld-prose checks, independent implementation review
+  - Source comparison replay and mutation tests; all16 independently reviewed real solar fixtures and API no-public-prose checks; backend full CI; frontend API consumer regression; independent source/runtime review and fix loop
 
 ### T019 — New-source Mệnh vô Chính diệu interpretation
 - status: incomplete
@@ -283,3 +285,23 @@ T016/T017/T021 implemented and independently reviewed. Coverage: one existing ap
 T018/T019/T020 remain incomplete because exact source passages/complete profile parameters are unavailable, not because a software test disproves a traditional text. New dual-AI reviews are REVIEW_NOT_EXECUTED for unavailable new passages; no verdict records invented. Ordered next executable queue after access changes: (1) retrieve pinned Juan2 oldid1963110 and review full I02/I03/I04 clauses/modifiers; (2) retrieve Juan3 oldid2268626 and disambiguate I01吉星/拱照; (3) reconcile whole DaiHan/TieuHan school, age and boundary semantics with a matching witness. For each: genuinely distinct actual models → fail-closed comparison → exact conditions → reachable positive/negative chart → internal-only implementation → independent review/fixes/PR. If one remains insufficient, move to the next supported pilot without a research-only PR.
 
 Branch stack (none merged/deployed): codex/tuvi-annual-palace-placement → codex/tuvi-annual-placement-ui → codex/tuvi-interpretation-evidence-binding. Git pushes work; GitHub API PR creation is Forbidden. Existing PR49 remains unmerged and unapproved intake. Continue from the top branch after fetch/reconciliation; do not silently replay its code from main while unmerged.
+
+## Resume at 52319c9 — source packet now readable (version 9)
+Latest user confirms existing dependency PRs #50→#51→#52; Git pull refs independently match c4281b0,8fbed3c,52319c9. Main remains f0dec74. Do not duplicate these PRs or replay T016/T017/T021. New branch extends #52; no merge/deploy.
+PR49 is now298937d and contains the source-access packet with SylarLong/iztro pin2f00e2ab0c80b1632e55bc362f2ae26e121245cb. Pin fetched via Git; Juan2/3 HTML blobs extracted as inert text, script/style ignored. HTML SHA256 Juan2 438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a, Juan3 3b85b99796ee0dbf0f6285bd5c60f7b590e8d124fa52fe229413309dd495245c. This unblocks actual source context for T018/T019, not original-edition authentication or a claim of equality to fixed Wikisource revisions.
+T018 current phase: independent complete-passage analysis and reachable solar fixture search BEFORE independent distinct-model review. Favor exact explicit co-location clauses or conservative sufficient modifier subsets; never force ambiguous 空/耗, 見/加 scope, source 入廟 versus legacy brightness equivalence or contradictory reciprocal paragraphs. Implement accepted claims end-to-end and preserve old decisions/release gates. If one candidate lacks semantics, record once and move to another eligible candidate, as latest mission requires.
+
+### T022 — Resolve Quan Lộc source-profile semantics before an internal claim
+- status: incomplete
+- depends_on: [T018]
+- scope: Existing source research and later interpretation files/tests only after complete evidence
+- acceptance_criteria:
+  - Resolve exact 空/耗 identities and 見/無 relation scope in full Thiên Phủ/Quan Lộc passage
+  - Bind 入廟 to this transcription's own branch table or documented accepted profile, never silently equate legacy M marks
+  - Obtain real distinct-model approval and reachable positive/negative fixtures before an eligible internal interpretation
+- verification:
+  - Exact new corroborating evidence, fail-closed review replay and complete chart witnesses
+
+Version10 evidence-based refinement: original T018 three-palace pilot is split into the first independently verifiable accepted two-claim runtime integration (T018) and still-required Quan Lộc semantic resolution (T022). All original requirements retained. Source/fullsection analysts and independent 15,120-input/60-replay search preceded dual review; gpt-6.1-sol and gpt-6-astra each independently checked all16 selected fixtures and all digests, returning MATCH plus INTERPRETATION_SUPPORTED_WITH_LIMITS. Existing compareReviews replay returns AI_ACCEPTED for both exact narrowed candidates. This does not authenticate an edition, certify natal formulas, adjudicate Đồng-Cự, resolve 空/耗 or release public prose.
+
+T018 completion gate: sourceunit+fresh runtime+performance+crosscut clear, R601closed; backend55files87.42/89.33, frontendconsumer37, Chromium25, docs181PASS. Approved internal registry1→3, two narrow newly covered palace conditions; all original/public gates preserved. Next supported candidate is distinct T023 Quan Cơ–CựDậu (actual dualmodel source approval and10fixtures complete, JIT approach inspected; activate only in next focused task).
