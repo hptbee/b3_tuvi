@@ -2,12 +2,12 @@
 
 - b3_home: /workspace/b3_tuvi/.b3/runtime/b3_ai-engineering
 - product_root: /workspace/b3_tuvi
-- plan_id: Autonomous Product Completion version 7
-- plan_version: 7
-- branch: codex/tuvi-annual-placement-ui
+- plan_id: Autonomous Product Completion version 8
+- plan_version: 8
+- branch: codex/tuvi-interpretation-evidence-binding
 - run_base_sha: f0dec74973ef9d07129e19330356f8e6d2040227
 - previous_run_base_sha: 45615a48d0c75b90138cfc618320ffae6e9c34e0
-- current_task: T017
+- current_task: T021
 - current_task_base_sha: c4281b0579d266419bf43f2de6bafb4b24daae12
 - run_status: running
 - updated: 2026-10-15
@@ -243,7 +243,7 @@ T016 acceptance complete: both accepted branches map safely to canonical unique 
 - readiness: ready
 - plan_version: 7
 - approach_at_sha: c4281b0579d266419bf43f2de6bafb4b24daae12
-- task_spec_fingerprint: depends_on=[]|scope=backend/src/knowledge/interpretationBinding.js, backend/src/interpretation/eligibility.js, backend/src/interpretation/synthesis.js, backend/src/interpretation/pipeline.js only if duplicate-ID reproduction warrants it, backend/test/interpretationBinding.test.mjs, backend/test/interpretationPipeline.test.mjs, backend/test/qualityEdges.test.mjs, backend/test/sprint11bInterpretation.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md|acceptance_criteria=Actual stored interpretation decision, two distinct-model review documents, exact shared source quotation and underlying formula binding are checked before approved internal wording is emitted; Modified identity, wording, school/profile/conditions/limits or missing/malformed evidence fail closed; flags alone never create internal prose; Existing reachable approved Tu Phu/Giáp positive remains internal-only; public prose and all old source decisions/formulas remain unchanged
+- task_spec_fingerprint: depends_on=[]|scope=backend/src/knowledge/interpretationBinding.js, backend/src/interpretation/eligibility.js, backend/src/interpretation/synthesis.js, backend/src/interpretation/pipeline.js (remove reproduced synthetic runtime-hit bypass), backend/test/interpretationBinding.test.mjs, backend/test/interpretationPipeline.test.mjs, backend/test/qualityEdges.test.mjs, backend/test/sprint11bInterpretation.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md|acceptance_criteria=Actual stored interpretation decision, two distinct-model review documents, exact shared source quotation and underlying formula binding are checked before approved internal wording is emitted; Modified identity, wording, school/profile/conditions/limits or missing/malformed evidence fail closed; flags alone never create internal prose; Existing reachable approved Tu Phu/Giáp positive remains internal-only; public prose and all old source decisions/formulas remain unchanged
 - watched_paths: scope paths plus docs/knowledge/interpretation-claims.json, docs/knowledge/interpretation-decisions/tu-phu-dong-cung.json, docs/knowledge/reviews/tu-phu-dong-cung-interpretation, docs/knowledge/passages/tu-phu-dong-cung/span.txt, docs/knowledge/decisions/tu-phu-dong-cung.json, docs/knowledge/combination-passages.json, backend/src/knowledge/combinationBatch.js, backend/src/knowledge/decisionRegistry.js, backend/src/knowledge/sourceBinding.js, docs/knowledge/sources.json
 - inspected: /tmp/tuvi-binding-approach.md read-only exact proposal; arbitrary clone/internal wording defect reproduced, existing reachable Tu Phu positive passes. Formula and interpretation review schemas intentionally differ; keep formula compareReviews unchanged.
 - files: scope above; no evidence decisions/reviews/span edits
@@ -258,3 +258,11 @@ T016 acceptance complete: both accepted branches map safely to canonical unique 
 T017 verification so far: frontend CI140 PASS (87.86 lines/87.67 branches); lint/build PASS. Real backend Chromium E2E7PASS/1FAIL due ambiguous test selector (R201), not yet quality-gated. Year selector stays usable during requests; added actual delayed prior-year response suppression test.
 
 T017 accepted: frontend142/lint/build and real backend Chromium E2E8PASS, isolatedfresh wholeUIreview2 closes R201–203, mobile320px/keyboardprobes supportscope. Orchestrator gate PASS, no public interpretation. T021 full CI initially failed only fixture registry requirement; add required Regression entry to TEST_FIXTURES (readiness scope updated) then rerunfullCI.
+
+T017 completion commit 8fbed3caff96ef326ac05fff659f6f61124b0b1e; stack base c4281b0579d266419bf43f2de6bafb4b24daae12, independent review2 and allchecksPASS. Focused branch codex/tuvi-annual-placement-ui; third stack binding task began independently at c4281b0 while UI implementation remained separate. T021 review scope excludes the alreadyreviewed UI commit.
+
+T021 adds pipeline dependency to remove reproduced synthetic-hit option; real solar API positive1984-02-07h0 and negative1984-02-02h0 match expected internal eligibility with no public prose. Final Tu Vi browser regression before this unused-option removal:25/25 Chromium tests PASS across chart/year/error/dialog/disclosure/landing; fullbackendCI after removal pending.
+
+Plan_version8 records actual fixture/pipeline dependency refinement; T021 current approach refreshed after watched changes. Full backend fixed CI exit0:44unit+9integration files,87.06lines/88.32branches. Final Chromium Tu Vi regressions AFTER pipeline hook removal25/25PASS; docs180links+diffcheckPASS. GitHub API remainsForbidden whileGit fetch/pushworks; no missing-token assumption. Existing network allowlist unavailable; per setup policy do not replace an unknown list. Required external additions for continuation: zh.wikisource.org and api.github.com; page witnesses may require upload.wikimedia.org. No environment draft/network changes applied.
+
+T021 qualitygatePASS: complete existing-source binding, no synthetic runtime-hit override, real solar positive/negative/no-public-prose checks,53backend testfiles and25ChromiumE2EPASS, isolatedfreshreview2 R301CLOSED. Commit immediately then cumulativecrosscut review and durablehandoff; userfocus sourceintake remainsINCOMPLETE dueexactevidenceaccess, no inventedclaims.

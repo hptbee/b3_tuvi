@@ -32,14 +32,43 @@ assert.strictEqual(menh.availabilityStatus, 'eligible_claims_present');
 assert.strictEqual(menh.prose, null);
 assert.match(menh.internalProse, /Tuổi Giáp có cách này/);
 assert.match(menh.internalProse, /không phải sự kiện đời đã kiểm chứng/);
+assert.strictEqual(menh.claimApplicability.find((item) => item.claimId === claim.claimId).layers.interpretationBinding, 'verified');
 assert.ok(menh.claimApplicability.find((item) => item.claimId === claim.claimId).layers.grade !== 'satisfied');
 assert.notStrictEqual(menh.breakingConditions, 'checked_clear');
+
+// Real runtime matches do not make copied approval flags or duplicate IDs an
+// approval of different wording or weaker conditions.
+for (const clone of [
+    { ...claim, claimId: 'interp-unreviewed-clone', approvedWording: 'UNREVIEWED SENTENCE' },
+    { ...claim, approvedWording: 'UNREVIEWED SAME-ID SENTENCE' },
+    { ...claim, yearStem: undefined },
+    { ...claim, limitations: [] },
+    { ...claim, conditions: [] },
+    { ...claim, interpretationDecisionRef: 'docs/knowledge/interpretation-decisions/missing.json' }
+]) {
+    const withClone = interpretChart(positive, { includeInternal: true, claims: [clone] })
+        .statements.find((item) => item.statementId === 'palace:menh');
+    assert.strictEqual(withClone.internalProse, menh.internalProse);
+    assert.strictEqual(withClone.prose, null);
+    const outcomes = withClone.claimApplicability.filter((item) => item.claimId === clone.claimId);
+    assert.strictEqual(outcomes.at(-1).eligible, false);
+    assert.ok(outcomes.at(-1).reasons.includes('interpretation_binding_mismatch'));
+}
+assert.strictEqual(interpretChart(positive).statements.find((item) => item.statementId === 'palace:menh').internalProse, null);
 
 const missed = chartFrom(0, 0, 1, 1, 1);
 const missedMenh = interpretChart(missed, { includeInternal: true }).statements.find((item) => item.statementId === 'palace:menh');
 assert.notStrictEqual(missedMenh.availabilityStatus, 'eligible_claims_present');
 assert.strictEqual(missedMenh.internalProse, null);
 assert.ok(missedMenh.claimApplicability.find((item) => item.claimId === claim.claimId).reasons.includes('formula_runtime_not_matched'));
+const injectedMenh = interpretChart(missed, {
+    includeInternal: true,
+    extraFormulaHits: [{
+        catalogId: 'tu_phu_dong_cung', palaceId: missed.menhPalaceId, sourceProfile: 'tan-bien',
+        gradeStatus: 'not_certified', formationStatus: 'unknown', breakingStatus: 'not_implemented'
+    }]
+}).statements.find((item) => item.statementId === 'palace:menh');
+assert.deepStrictEqual(injectedMenh, missedMenh);
 
 const otherStem = chartFrom(1, 0, 6, 1, 1);
 const stemGate = claimEligibility(claim, otherStem, otherStem.palaces.find((palace) => palace.functionId === 'menh'), {
@@ -67,7 +96,7 @@ const unapproved = interpretChart(positive, {
     includeInternal: true,
     claims: [{ ...claim, claimId: 'interp-unapproved', approvedForInterpretation: false }]
 });
-assert.strictEqual(unapproved.statements.find((item) => item.statementId === 'palace:menh').internalProse.includes('interp-unapproved') || true, true);
+assert.strictEqual(unapproved.statements.find((item) => item.statementId === 'palace:menh').internalProse, menh.internalProse);
 assert.ok(!String(unapproved.statements.find((item) => item.statementId === 'palace:menh').internalProse || '').includes('interp-unapproved'));
 
 const promoted = claimEligibility(claim, positive, positive.palaces.find((palace) => palace.functionId === 'menh'), {
@@ -77,5 +106,19 @@ assert.ok(promoted.reasons.includes('formation_or_grade_promoted'));
 
 const publicBody = analyzeChartRequest({ day: 15, month: 6, year: 1990, hour: 8, gender: 1 });
 assert.ok(publicBody.body.statements.every((item) => item.internalProse == null && item.prose == null));
+for (const [day, expectedStatus, eligible] of [
+    [7, 'eligible_claims_present', true],
+    [2, 'insufficient_evidence', false]
+]) {
+    const api = analyzeChartRequest({ day, month: 2, year: 1984, hour: 0, gender: 1 });
+    assert.strictEqual(api.status, 200);
+    assert.strictEqual(api.body.chartSource, 'server');
+    const apiMenh = api.body.statements.find((item) => item.statementId === 'palace:menh');
+    assert.strictEqual(apiMenh.availabilityStatus, expectedStatus);
+    assert.strictEqual(apiMenh.claimApplicability.find((item) => item.claimId === claim.claimId).eligible, eligible);
+    assert.ok(api.body.statements.every((item) => item.prose === null
+        && !Object.hasOwn(item, 'internalProse') && item.publicInterpretationReleased === false));
+    assert.ok(api.body.wholeChart.topics.every((topic) => topic.prose === null));
+}
 
 console.log('sprint 11b internal interpretation stays source-bound and withheld from public');

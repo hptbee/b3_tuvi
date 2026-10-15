@@ -20,6 +20,7 @@ Giữ hành vi đã có của engine, API, hoặc chuẩn hóa. Kết quả kỳ
 - `engine.test.mjs`
 - `normalizeChart.test.mjs`
 - `ruleEngine.test.mjs`
+- `interpretationBinding.test.mjs`: existing interpretation evidence binding and unreviewed-clone regressions; no new source approval or expert verification.
 - `combinationRoute.integration.test.mjs`
 - `chartGenerate.test.mjs`
 - `httpApi.test.mjs`

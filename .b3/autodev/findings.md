@@ -101,3 +101,9 @@ T016 iteration counts2→0, fresh full-scope review /tmp/tuvi-placement-review2.
 - R203 low CONFIRMED REDUNDANCY CLOSED: showYearBranch guard always true with current states; remove derived guard only, keep selector whileloading.
 
 T017 iteration counts1medium+2low→0 after fixes. Fresh fullscope /tmp/tuvi-ui-review2.md no new confirmedfindings, independent14targeted PASS; fullfrontend142/lint/build+E2E8PASS. Orchestrator T017 gate PASS.
+
+## T021 evidence binding review
+- Size MEDIUM fullscope, c4281b0 + named backend/docs workingtree, excludes separatelyreviewed UI.
+- R301 medium CONFIRMED CLOSED (dependency/runtime): options.extraFormulaHits promotes real reviewed prose on actual negative chart despite absence of calculated formula hit. Parent accepts scope refinement to pipeline/test and removes synthetic hit injection; direct helper signature remains internal while pipeline output must depend on real matches.
+
+T021 iteration counts1→0; fresh FULL10file review2 no new confirmed findings; independent7testscriptspass and injected-negative originalprobe nowdeepEqual ordinarynegative. FullCI87.06/88.32 and final25E2EPASS. Orchestrator gatePASS. Total task reviewerpasses6/12 (T016two,T017two,T021two), finalcrosscut reserved.

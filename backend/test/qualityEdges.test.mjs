@@ -63,7 +63,9 @@ const fixtureHit = {
     formationStatus: 'unknown',
     breakingStatus: 'not_implemented'
 };
-assert.strictEqual(claimEligibility(approved, base, host, { formulaHits: [fixtureHit] }).eligible, true);
+const fabricatedApproval = claimEligibility(approved, base, host, { formulaHits: [fixtureHit] });
+assert.strictEqual(fabricatedApproval.eligible, false);
+assert.ok(fabricatedApproval.reasons.includes('interpretation_binding_missing'));
 assert.strictEqual(claimEligibility({ ...approved, formulaComparisonStatus: 'CONFLICT' }, base, host, { formulaHits: [fixtureHit] }).eligible, false);
 assert.strictEqual(claimEligibility({ ...approved, sourceId: undefined, sourceReferences: [] }, base, host).reasons.includes('missing_source'), true);
 assert.strictEqual(claimEligibility({ ...approved, usage: 'synthetic_test_fixture' }, base, host).reasons.includes('synthetic_fixture'), true);

@@ -1,4 +1,5 @@
 import { evaluateRule } from '../engine/ruleEngine.js';
+import { verifyInterpretationBinding } from '../knowledge/interpretationBinding.js';
 
 function listedIds(value) {
     if (!Array.isArray(value)) return [];
@@ -97,6 +98,8 @@ export function claimEligibility(claim, chart = {}, palace = null, runtime = {})
     }
     if (claim?.approvedForInterpretation !== true) reasons.push('not_approved_for_interpretation');
     if (claim?.interpretationStatus !== 'sourced') reasons.push('interpretation_not_sourced');
+    const binding = verifyInterpretationBinding(claim);
+    if (!binding.ok) reasons.push(binding.reason);
     if (claim?.schoolId && claim.schoolId !== chart.schoolId) {
         reasons.push('school_mismatch');
     }
@@ -132,7 +135,8 @@ export function claimEligibility(claim, chart = {}, palace = null, runtime = {})
         formulaRuntime: claim?.formulaCatalogId ? (bound ? 'matched' : 'not_matched') : 'unbound',
         grade: bound?.gradeStatus || 'not_recorded',
         breaking: bound?.breakingStatus || 'not_implemented',
-        interpretationApproval: claim?.approvedForInterpretation === true && claim?.interpretationStatus === 'sourced'
+        interpretationBinding: binding.ok ? 'verified' : 'not_verified',
+        interpretationApproval: binding.ok && claim?.approvedForInterpretation === true && claim?.interpretationStatus === 'sourced'
             ? 'approved'
             : 'not_approved',
         releasePermission
