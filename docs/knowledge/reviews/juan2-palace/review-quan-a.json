@@ -1,0 +1,163 @@
+[
+  {
+    "available": true,
+    "model": "gpt-6.1-sol",
+    "claimId": "interp-quanshu-quan-loc-co-cu-dau-host",
+    "schoolId": "vn-tam-hop-default",
+    "sourceId": "ziwei-quanshu-iztro-transcription",
+    "sourceProfile": "quanshu-iztro-2f00e2ab",
+    "target": "quan_loc",
+    "editionId": "iztro-juan2-2f00e2ab0c80",
+    "locator": "juan2/官祿宮/巨門",
+    "sourceDigest": "fbc4fea90b59869622d5fc3a06dd1ecdbb69060d3d7226135cb0af4d23f60f77",
+    "quotation": "巨門入廟武職權貴，文人不耐久，太陽同有進退，入廟久長，天機同在卯宮吉美，在酉宮雖美無始終，\n陷宮遭悔吝，加羊陀火鈴空劫更不美，退宮卸職。",
+    "quotationPolicy": "source-sentence-v2",
+    "conditions": [
+      "palace_quan_loc",
+      "thien_co_in_host",
+      "cu_mon_in_host",
+      "host_branch_dau",
+      "direct_host_only"
+    ],
+    "exceptions": [],
+    "formulaComparison": "MATCH",
+    "verdict": "MATCH",
+    "sourceProjectionVerdict": "SOURCE_BRANCH_PROJECTION_SUPPORTED_WITH_LIMITS",
+    "interpretationVerdict": "INTERPRETATION_SUPPORTED_WITH_LIMITS",
+    "conditionTreeDigest": "360c7d7f9919725e2acce8bb17613b7bb9829fdcde52b8ca995fb5c6083d5f62",
+    "wordingDigest": "50de43c0de63e3c1476c087ce1405a0da32df7c3039d64595df6261a7b664e1f",
+    "fixturesDigest": "e1aa4f4d95bdd64f1db9bdb062b69adb9653ccf2c924c108d5f5c9b8a518ce0c",
+    "contextDigest": "e9e86155c9bf6d83741aeb4cbca33bd577033e48f64522cf2da1535ec91062eb",
+    "conditionTree": {
+      "op": "and",
+      "items": [
+        {
+          "op": "same_palace",
+          "target": "quan_loc",
+          "stars": [
+            "Thiên Cơ",
+            "Cự Môn"
+          ]
+        },
+        {
+          "op": "branch",
+          "target": "quan_loc",
+          "branches": [
+            "Dậu"
+          ]
+        }
+      ]
+    },
+    "reviewedWording": "Trong mục Quan Lộc của bản chép này, trường hợp Cự Môn đồng cung Thiên Cơ tại Dậu được ghi ‘雖美無始終’. Đây là ghi chú về đúng nhánh văn bản, không phải kết luận toàn bộ công danh hay sự kiện đời đã kiểm chứng; các điều kiện gia sát trong đoạn chưa được đánh giá.",
+    "limitations": [
+      "paragraph_scoped_only",
+      "textual_branch_clause_only",
+      "modifier_not_evaluated",
+      "following_adverse_clause_not_omitted",
+      "not_an_integrated_career_judgment",
+      "not_a_whole_chart_judgment",
+      "not_a_brightness_change",
+      "source_brightness_not_engine_equivalence",
+      "not_a_verified_life_event",
+      "no_public_release"
+    ],
+    "usage": "internal_research",
+    "releasePermission": "withheld",
+    "expertVerified": false,
+    "bookVerified": false,
+    "publicRelease": false,
+    "runtimeRuleChangeApplied": false,
+    "sourceAssessment": {
+      "repository": "SylarLong/iztro",
+      "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+      "rawHtmlSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+      "independentPinnedRawFetch": {
+        "url": "https://raw.githubusercontent.com/SylarLong/iztro/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/ancientBook-2.html",
+        "status": 200,
+        "sha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a"
+      },
+      "classification": "Modern secondary web transcription/mirror; exact pinned bytes verified, not an authenticated original edition",
+      "editionAuthenticated": false,
+      "wikisourceRevisionEquivalence": "NOT_VERIFIED",
+      "empiricalPredictiveValidation": false,
+      "schoolScope": "vn-tam-hop-default is the receiving engineering profile; the mirror does not establish Vietnamese school lineage."
+    },
+    "notes": [
+      "This is a new independent review of the Quan bundle. No Tai/Phuc verdict or other model response was used to infer acceptance.",
+      "The full 官祿宮 section, reciprocal 天機 row, and complete general-star/branch blocks for 天機 and 巨門 were read. Inert HTML parsing verifies all 45 source context lines, and verifies that the stored 巨門 span is two adjacent HTML paragraphs (paragraph indices 490 and 491 in the source-only p extraction). The entire stored textual content and all six anchors are quoted; only the terminal LF is excluded from quotation to meet the comparator trim contract. sourceDigest remains over the original complete span including its terminal LF.",
+      "The local syntax 天機同在卯宮吉美，在酉宮雖美無始終 contrasts the same 巨門 + 天機 co-location at 卯 and 酉. In this 官祿宮 entry, direct co-location of Cự Môn and Thiên Cơ in Quan Lộc at Dậu identifies the latter textual branch. The proposed and/same_palace/branch AST expresses exactly that selector. It does not use unsupported palace_branch, broader tam hợp association, or a Mão alternative.",
+      "The wording says this case is recorded as 雖美無始終 in this transcription, and expressly describes a branch note with gia sát conditions not yet evaluated. This is a defensible source-attribution statement about which clause the text contains. It does not assert that the quoted result holds as a complete chart judgment. For this precise attribution, resolving the following modifier system is not necessary; for an integrated career judgment it would be necessary and remains unresolved. Thus MATCH here means the textual branch selector supports the exact reviewed wording, not that the complete historical rule has been modeled.",
+      "The following complete continuation 陷宮遭悔吝，加羊陀火鈴空劫更不美，退宮卸職 is retained and materially limits any fuller reading. 陷宮 and 加... introduce additional conditions; 更不美 intensifies a reading. The exact scope of 陷宮, adverse association/aliases, and the attachment of 退宮卸職 have not been resolved by this AST. None is asserted, negated, or silently replaced with an absence predicate. In particular, a positive adverse-host chart does not receive a dismissal prediction or a completed favorable/adverse assessment under this approval.",
+      "The reciprocal 天機 row discusses 入廟, 文曲, 見羊陀火鈴方宜, other co-stars, and 陷宮退官失職, but does not contradict the literal presence of the Dậu-specific 巨門 clause. It cannot be used to impose an invented universal absence-of-adverses rule. The general-star branch blocks state 天機 卯酉宮旺地與巨門同度 and 巨門 卯酉宮入廟，與天機同度. Those are separate source contexts, not additional executable Quan conditions. They do not authorize equating source 天機 旺 with the engine M mark or importing their birth-stem 財官格 clauses. No yin-stem, gender, brightness or whole-career condition is added here.",
+      "Independent engine replay reproduced all 10 solar inputs, exact lunar conversions and host identities, with 3 satisfied and 7 not_satisfied results. Positives include a clean host/TPTC chart, a Kình Dương host chart, and a clean host with Hóa Kỵ in TPTC; all three satisfy only the textual selector. Mão pair co-location fails the Dậu leaf, and a Dậu palace without the pair fails same_palace. Partner-only/TPTC-only and both-absent cases fail direct host co-location.",
+      "Coverage detail: negative_partner_TPTC_only is Cự Môn in Quan at Tí with Thiên Cơ opposite at Ngọ. negative_pair_wrong_function has the pair in Thiên Di at Mão, not Dậu, so it jointly differs by function and branch and is not an isolated wrong-function-at-Dậu test. This does not invalidate the exact observed negative or the conjunctive AST, whose palace scoping was separately inspected in evaluateCondition. These are reachable engineering fixtures, not independent historical goldens or evidence of predictive accuracy.",
+      "Engine Thiên Cơ and Cự Môn are both M in the positive Dậu fixtures. That observation is only a recorded engine output; no source-to-engine brightness equivalence is inferred. No engine or source decision was edited."
+    ],
+    "verification": {
+      "command": "node /tmp/tuvi-juan-pinned/verify-quan-sol.mjs",
+      "result": "PASS: 10/10 reachable solar fixtures; exact supported AST; all five digests, all six source anchors; host/TPTC/branch/wrong-function assertions.",
+      "evidenceFile": "/tmp/tuvi-juan-pinned/review-quan-sol-verification.json",
+      "fixtures": [
+        {
+          "id": "positive_dau_no_TPTC_adverses",
+          "status": "satisfied",
+          "expected": true
+        },
+        {
+          "id": "positive_dau_adverse_host",
+          "status": "satisfied",
+          "expected": true
+        },
+        {
+          "id": "positive_dau_host_clean_TPTC_adverse",
+          "status": "satisfied",
+          "expected": true
+        },
+        {
+          "id": "negative_mao_pair_no_host_adverses",
+          "status": "not_satisfied",
+          "expected": false
+        },
+        {
+          "id": "negative_dau_host_missing_pair",
+          "status": "not_satisfied",
+          "expected": false
+        },
+        {
+          "id": "negative_partner_TPTC_only",
+          "status": "not_satisfied",
+          "expected": false
+        },
+        {
+          "id": "negative_partner_CuMon_absent_host",
+          "status": "not_satisfied",
+          "expected": false
+        },
+        {
+          "id": "negative_target_TPTC_only",
+          "status": "not_satisfied",
+          "expected": false
+        },
+        {
+          "id": "negative_pair_wrong_function",
+          "status": "not_satisfied",
+          "expected": false
+        },
+        {
+          "id": "negative_both_absent_host",
+          "status": "not_satisfied",
+          "expected": false
+        }
+      ],
+      "additionalCommands": [
+        {
+          "command": "python3 /tmp/tuvi-juan-pinned/verify-quan-sol-source.py",
+          "result": "PASS: independent pinned remote HTTP 200, byte-for-byte identical SHA; adjacent complete paragraphs; all 45 context source lines exactly match inertly parsed HTML.",
+          "evidenceFile": "/tmp/tuvi-juan-pinned/review-quan-sol-source-verification.json"
+        }
+      ],
+      "historicalGoldens": false
+    },
+    "approvalScope": "Independent source/projection/wording review of this exact textual_branch_clause_only annotation. Does not approve any integrated modifier formula, career event, runtime change, public release, or empirical claim; does not itself satisfy the two-distinct-model gate."
+  }
+]

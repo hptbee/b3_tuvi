@@ -1,6 +1,8 @@
 import { evaluateRule } from '../engine/ruleEngine.js';
 import { verifyInterpretationBinding } from '../knowledge/interpretationBinding.js';
 import { evaluateCondition } from '../engine/conditionEval.js';
+import { DIA_CHI } from '../engine/constants.js';
+import { normalizeChi } from '../engine/starNames.js';
 import { SOURCE_PALACE_KIND } from '../knowledge/sourcePalaceBinding.js';
 
 function listedIds(value) {
@@ -88,6 +90,7 @@ function sourcePalaceConditions(claim, binding, chart, palace) {
     const target = targets[0];
     if (chart?.ok !== true || targets.length !== 1 || !Array.from(palaces).every(record) || target.functionStatus !== 'known'
         || !validPalaceId(target.branchId) || !validPalaceId(target.id) || String(target.id) !== String(target.branchId)
+        || typeof target.branchName !== 'string' || normalizeChi(target.branchName) !== DIA_CHI[Number(target.branchId)]
         || !Array.isArray(target.stars) || !Array.from(target.stars).every(record) || !record(chart.byStarId)
         || !Object.values(chart.byStarId).every((instances) => Array.isArray(instances)
             && Array.from(instances).every((hit) => record(hit) && validPalaceId(hit.palaceId)))) {

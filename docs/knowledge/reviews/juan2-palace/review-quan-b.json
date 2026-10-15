@@ -1,0 +1,703 @@
+{
+  "available": true,
+  "model": "gpt-6-astra",
+  "independent": true,
+  "otherReviewerVerdictsRead": false,
+  "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "rawHtmlSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+  "provenanceLimit": "Pinned secondary public Git transcription only. No authenticated book edition, fixed-revision Wikisource equivalence, or empirical life-outcome truth.",
+  "expertVerified": false,
+  "bookVerified": false,
+  "publicRelease": false,
+  "releasePermission": "withheld",
+  "reviews": [
+    {
+      "available": true,
+      "model": "gpt-6-astra",
+      "reviewerRole": "independent_source_domain_reviewer_B",
+      "claimId": "interp-quanshu-quan-loc-co-cu-dau-host",
+      "schoolId": "vn-tam-hop-default",
+      "sourceId": "ziwei-quanshu-iztro-transcription",
+      "sourceProfile": "quanshu-iztro-2f00e2ab",
+      "target": "quan_loc",
+      "editionId": "iztro-juan2-2f00e2ab0c80",
+      "locator": "juan2/官祿宮/巨門",
+      "sourceDigest": "fbc4fea90b59869622d5fc3a06dd1ecdbb69060d3d7226135cb0af4d23f60f77",
+      "quotation": "巨門入廟武職權貴，文人不耐久，太陽同有進退，入廟久長，天機同在卯宮吉美，在酉宮雖美無始終，\n陷宮遭悔吝，加羊陀火鈴空劫更不美，退宮卸職。",
+      "fullStoredSpan": "巨門入廟武職權貴，文人不耐久，太陽同有進退，入廟久長，天機同在卯宮吉美，在酉宮雖美無始終，\n陷宮遭悔吝，加羊陀火鈴空劫更不美，退宮卸職。\n",
+      "quotationSerialization": "Both complete paragraphs and all anchors retained. Only the terminal LF is omitted from quotation to satisfy unchanged compareReviews trim requirement; sourceDigest binds raw stored bytes including LF.",
+      "quotationPolicy": "source-sentence-v2",
+      "requiredAnchors": [
+        "巨門入廟武職權貴",
+        "天機同在卯宮吉美",
+        "在酉宮雖美無始終",
+        "陷宮遭悔吝",
+        "加羊陀火鈴空劫更不美",
+        "退宮卸職"
+      ],
+      "conditions": [
+        "palace_quan_loc",
+        "thien_co_in_host",
+        "cu_mon_in_host",
+        "host_branch_dau",
+        "direct_host_only"
+      ],
+      "exceptions": [],
+      "conditionTree": {
+        "op": "and",
+        "items": [
+          {
+            "op": "same_palace",
+            "target": "quan_loc",
+            "stars": [
+              "Thiên Cơ",
+              "Cự Môn"
+            ]
+          },
+          {
+            "op": "branch",
+            "target": "quan_loc",
+            "branches": [
+              "Dậu"
+            ]
+          }
+        ]
+      },
+      "approvedWording": "Trong mục Quan Lộc của bản chép này, trường hợp Cự Môn đồng cung Thiên Cơ tại Dậu được ghi ‘雖美無始終’. Đây là ghi chú về đúng nhánh văn bản, không phải kết luận toàn bộ công danh hay sự kiện đời đã kiểm chứng; các điều kiện gia sát trong đoạn chưa được đánh giá.",
+      "formulaComparison": "MATCH",
+      "verdict": "MATCH",
+      "projectionVerdict": "MATCH",
+      "interpretationVerdict": "INTERPRETATION_SUPPORTED_WITH_LIMITS",
+      "conditionTreeDigest": "360c7d7f9919725e2acce8bb17613b7bb9829fdcde52b8ca995fb5c6083d5f62",
+      "wordingDigest": "50de43c0de63e3c1476c087ce1405a0da32df7c3039d64595df6261a7b664e1f",
+      "fixturesDigest": "e1aa4f4d95bdd64f1db9bdb062b69adb9653ccf2c924c108d5f5c9b8a518ce0c",
+      "contextDigest": "e9e86155c9bf6d83741aeb4cbca33bd577033e48f64522cf2da1535ec91062eb",
+      "verifiedDigests": {
+        "sourceDigest": "fbc4fea90b59869622d5fc3a06dd1ecdbb69060d3d7226135cb0af4d23f60f77",
+        "contextDigest": "e9e86155c9bf6d83741aeb4cbca33bd577033e48f64522cf2da1535ec91062eb",
+        "conditionTreeDigest": "360c7d7f9919725e2acce8bb17613b7bb9829fdcde52b8ca995fb5c6083d5f62",
+        "wordingDigest": "50de43c0de63e3c1476c087ce1405a0da32df7c3039d64595df6261a7b664e1f",
+        "fixturesDigest": "e1aa4f4d95bdd64f1db9bdb062b69adb9653ccf2c924c108d5f5c9b8a518ce0c"
+      },
+      "allFiveDigestsVerified": true,
+      "contextVerification": {
+        "rawHtmlSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+        "pinnedRefetchByteEqual": true,
+        "fullContextSourceBlocksMatch": true,
+        "sections": [
+          {
+            "label": "Full Quan Loc source section, derived Juan2 lines737–764; includes reciprocal Tianji paragraph739 and full Jumen continuation749",
+            "htmlBlockStart": 493,
+            "htmlBlockCount": 28,
+            "matchedContextLines": 28,
+            "normalization": "whitespace only; branch lines reside within a single HTML paragraph"
+          },
+          {
+            "label": "Full Tianji general-star/branch block under Menh, derived Juan2 lines146–153; distinct context, not extra Quan predicates",
+            "htmlBlockStart": 66,
+            "htmlBlockCount": 3,
+            "matchedContextLines": 8,
+            "normalization": "whitespace only; branch lines reside within a single HTML paragraph"
+          },
+          {
+            "label": "Full Jumen general-star/branch block under Menh, derived Juan2 lines291–299; distinct context, not extra Quan predicates",
+            "htmlBlockStart": 138,
+            "htmlBlockCount": 4,
+            "matchedContextLines": 9,
+            "normalization": "whitespace only; branch lines reside within a single HTML paragraph"
+          }
+        ],
+        "sourceSpanMatches": true,
+        "allRequiredAnchorsPresent": true
+      },
+      "expertVerified": false,
+      "bookVerified": false,
+      "publicRelease": false,
+      "releasePermission": "withheld",
+      "usage": "internal_research",
+      "defaultFormulaChangeAuthorized": false,
+      "empiricalTruthVerified": false,
+      "limitations": [
+        "paragraph_scoped_only",
+        "textual_branch_clause_only",
+        "modifier_not_evaluated",
+        "following_adverse_clause_not_omitted",
+        "not_an_integrated_career_judgment",
+        "not_a_whole_chart_judgment",
+        "not_a_brightness_change",
+        "source_brightness_not_engine_equivalence",
+        "not_a_verified_life_event",
+        "no_public_release"
+      ],
+      "reasons": [
+        "This is a fresh review of the Quan Lộc candidate; no earlier Tài Bạch or Phúc Đức acceptance is used as evidence or authorization.",
+        "The 巨門 entry explicitly juxtaposes 天機同在卯宮吉美 and 在酉宮雖美無始終. The latter inherits the immediately named Thiên Cơ co-location subject and selects Dậu, so the proposed host pair plus Dậu AST is an exact locator for this textual branch.",
+        "The immediately following paragraph is retained and was read in full: 陷宮遭悔吝，加羊陀火鈴空劫更不美，退宮卸職. It matters to an integrated interpretation. The proposal explicitly says the adverse conditions have not been evaluated and makes no dismissal, failed-career, or other whole-career assertion.",
+        "For this exact attributed annotation, resolving the full modifier system is not necessary: the claim is that the source records the quoted words for the named branch, not that the branch supplies a sufficient final prediction despite every modifier. Therefore adverse-host and expanded-TPTC-adverse fixtures can legitimately match this annotation. This reasoning would not authorize the same AST attached to an unqualified career conclusion.",
+        "The complete Quan section, including the reciprocal 天機 paragraph with 見羊陀火鈴方宜 and 陷宮退官失職, was inspected. Those clauses cannot be silently promoted to exceptions, absence requirements, or override rules for this specific textual branch. No reconciliation of the complete modifier system is claimed.",
+        "The full general-star context records Thiên Cơ at 卯酉 as 旺地 and Cự Môn at 卯酉 as 入廟. The fixture engine marks observed at Dậu do not authenticate equivalence between source 旺 and engine M. No brightness operator is used, and the separate Menh/general-star birth-stem conditions are not imported into Quan.",
+        "The exact Vietnamese wording leaves 雖美無始終 as a source quotation, names the correct co-located stars and Dậu, and expressly limits itself to the textual branch with unevaluated adverse modifiers. It does not import the Mão 吉美 conclusion, impose yin-stem conditions, or assert an observed life event.",
+        "Independent replay of all 10 supplied solar inputs used repository solarToLunar, hourBranchIndex, calculateTuVi, normalizeChart, and evaluateCondition. Lunar records, functional hosts, branch values, and all expected predicate statuses matched. The branch operator with branches array is executable; no palace_branch operator or handwritten chart is used."
+      ],
+      "additionalLimitations": [
+        "Approval applies only to the precise approvedWording and textual_branch_clause_only projection. It cannot be reused as a full career interpretation.",
+        "Source modifier presence, absence, scope, precedence, and consequences remain unevaluated. False predicate means only that this exact pair/host/branch is absent.",
+        "The positive_dau_host_clean_TPTC_adverse label refers to an expanded engineering set: the reproduced TPTC contains Hóa Kỵ but none of the checked 羊陀火鈴/Không/Kiếp names. Hóa Kỵ is not named in the quoted Quan adverse list. The label does not prove applicability of that source modifier.",
+        "No authenticated historical edition, fixed Wikisource revision equivalence, empirical prediction accuracy, public release, or natal-formula alteration is approved."
+      ],
+      "fixtureResult": {
+        "count": 10,
+        "passed": 10,
+        "kind": "independently_replayed_engineering_regressions_not_source_goldens",
+        "results": [
+          {
+            "id": "positive_dau_no_TPTC_adverses",
+            "input": {
+              "day": 15,
+              "month": 2,
+              "year": 1985,
+              "hour": 18,
+              "gender": 1
+            },
+            "lunar": {
+              "lunarDay": 26,
+              "lunarMonth": 1,
+              "lunarYear": 1985,
+              "isLeapMonth": false,
+              "canName": "Ất",
+              "chiName": "Sửu",
+              "canIndex": 1,
+              "chiIndex": 2
+            },
+            "hourBranchIndex": 10,
+            "host": {
+              "id": "10",
+              "functionId": "quan_loc",
+              "branchName": "Dậu"
+            },
+            "hostStars": [
+              "Thiên Cơ",
+              "Cự Môn",
+              "Phượng Các",
+              "Giải Thần",
+              "Bát Tọa",
+              "Hóa Lộc",
+              "Phi Liêm",
+              "Bạch Hổ",
+              "Thiên Hình"
+            ],
+            "hostBrightness": [
+              {
+                "name": "Thiên Cơ",
+                "brightness": "M"
+              },
+              {
+                "name": "Cự Môn",
+                "brightness": "M"
+              }
+            ],
+            "hostAdverse": [],
+            "tptcAdverse": [],
+            "expandedEngineeringTptcAdverse": [],
+            "expected": true,
+            "status": "satisfied"
+          },
+          {
+            "id": "positive_dau_adverse_host",
+            "input": {
+              "day": 8,
+              "month": 6,
+              "year": 1980,
+              "hour": 0,
+              "gender": 1
+            },
+            "lunar": {
+              "lunarDay": 26,
+              "lunarMonth": 4,
+              "lunarYear": 1980,
+              "isLeapMonth": false,
+              "canName": "Canh",
+              "chiName": "Thân",
+              "canIndex": 6,
+              "chiIndex": 9
+            },
+            "hourBranchIndex": 1,
+            "host": {
+              "id": "10",
+              "functionId": "quan_loc",
+              "branchName": "Dậu"
+            },
+            "hostStars": [
+              "Thiên Cơ",
+              "Cự Môn",
+              "Lực Sĩ",
+              "Thiếu Dương",
+              "Đào Hoa",
+              "Kình Dương",
+              "Thiên Không",
+              "Phá Toái"
+            ],
+            "hostBrightness": [
+              {
+                "name": "Thiên Cơ",
+                "brightness": "M"
+              },
+              {
+                "name": "Cự Môn",
+                "brightness": "M"
+              }
+            ],
+            "hostAdverse": [
+              "Kình Dương",
+              "Thiên Không"
+            ],
+            "tptcAdverse": [
+              "Kình Dương",
+              "Thiên Không"
+            ],
+            "expandedEngineeringTptcAdverse": [
+              "Kình Dương",
+              "Thiên Không",
+              "Hóa Kỵ"
+            ],
+            "expected": true,
+            "status": "satisfied"
+          },
+          {
+            "id": "positive_dau_host_clean_TPTC_adverse",
+            "input": {
+              "day": 22,
+              "month": 2,
+              "year": 1981,
+              "hour": 18,
+              "gender": 1
+            },
+            "lunar": {
+              "lunarDay": 18,
+              "lunarMonth": 1,
+              "lunarYear": 1981,
+              "isLeapMonth": false,
+              "canName": "Tân",
+              "chiName": "Dậu",
+              "canIndex": 7,
+              "chiIndex": 10
+            },
+            "hourBranchIndex": 10,
+            "host": {
+              "id": "10",
+              "functionId": "quan_loc",
+              "branchName": "Dậu"
+            },
+            "hostStars": [
+              "Thiên Cơ",
+              "Cự Môn",
+              "Lộc Tồn",
+              "Bác Sĩ",
+              "Thiên Quý",
+              "Tam Thai",
+              "Thiên Quan",
+              "Hóa Lộc",
+              "Thái Tuế",
+              "Thiên Khốc",
+              "Thiên Hình"
+            ],
+            "hostBrightness": [
+              {
+                "name": "Thiên Cơ",
+                "brightness": "M"
+              },
+              {
+                "name": "Cự Môn",
+                "brightness": "M"
+              }
+            ],
+            "hostAdverse": [],
+            "tptcAdverse": [],
+            "expandedEngineeringTptcAdverse": [
+              "Hóa Kỵ"
+            ],
+            "expected": true,
+            "status": "satisfied"
+          },
+          {
+            "id": "negative_mao_pair_no_host_adverses",
+            "input": {
+              "day": 1,
+              "month": 3,
+              "year": 1980,
+              "hour": 6,
+              "gender": 1
+            },
+            "lunar": {
+              "lunarDay": 15,
+              "lunarMonth": 1,
+              "lunarYear": 1980,
+              "isLeapMonth": false,
+              "canName": "Canh",
+              "chiName": "Thân",
+              "canIndex": 6,
+              "chiIndex": 9
+            },
+            "hourBranchIndex": 4,
+            "host": {
+              "id": "4",
+              "functionId": "quan_loc",
+              "branchName": "Mão"
+            },
+            "hostStars": [
+              "Thiên Cơ",
+              "Cự Môn",
+              "Hỉ Thần",
+              "Long Đức",
+              "Lưu Hà"
+            ],
+            "hostBrightness": [
+              {
+                "name": "Thiên Cơ",
+                "brightness": "M"
+              },
+              {
+                "name": "Cự Môn",
+                "brightness": "M"
+              }
+            ],
+            "hostAdverse": [],
+            "tptcAdverse": [
+              "Đà La",
+              "Linh Tinh",
+              "Kình Dương",
+              "Thiên Không"
+            ],
+            "expandedEngineeringTptcAdverse": [
+              "Đà La",
+              "Linh Tinh",
+              "Hóa Kỵ",
+              "Kình Dương",
+              "Thiên Không"
+            ],
+            "expected": false,
+            "status": "not_satisfied"
+          },
+          {
+            "id": "negative_dau_host_missing_pair",
+            "input": {
+              "day": 1,
+              "month": 1,
+              "year": 1980,
+              "hour": 14,
+              "gender": 1
+            },
+            "lunar": {
+              "lunarDay": 14,
+              "lunarMonth": 11,
+              "lunarYear": 1979,
+              "isLeapMonth": false,
+              "canName": "Kỷ",
+              "chiName": "Mùi",
+              "canIndex": 5,
+              "chiIndex": 8
+            },
+            "hourBranchIndex": 8,
+            "host": {
+              "id": "10",
+              "functionId": "quan_loc",
+              "branchName": "Dậu"
+            },
+            "hostStars": [
+              "Liêm Trinh",
+              "Phá Quân",
+              "Phong Cáo",
+              "Văn Tinh",
+              "Thiên Quan",
+              "Đại Hao",
+              "Tang Môn"
+            ],
+            "hostBrightness": [],
+            "hostAdverse": [],
+            "tptcAdverse": [
+              "Đà La",
+              "Linh Tinh"
+            ],
+            "expandedEngineeringTptcAdverse": [
+              "Đà La",
+              "Linh Tinh"
+            ],
+            "expected": false,
+            "status": "not_satisfied"
+          },
+          {
+            "id": "negative_partner_TPTC_only",
+            "input": {
+              "day": 1,
+              "month": 1,
+              "year": 1980,
+              "hour": 8,
+              "gender": 1
+            },
+            "lunar": {
+              "lunarDay": 14,
+              "lunarMonth": 11,
+              "lunarYear": 1979,
+              "isLeapMonth": false,
+              "canName": "Kỷ",
+              "chiName": "Mùi",
+              "canIndex": 5,
+              "chiIndex": 8
+            },
+            "hourBranchIndex": 5,
+            "host": {
+              "id": "1",
+              "functionId": "quan_loc",
+              "branchName": "Tí"
+            },
+            "hostStars": [
+              "Cự Môn",
+              "Hữu Bật",
+              "Thiên Khôi",
+              "Đào Hoa",
+              "Nguyệt Đức",
+              "Phi Liêm",
+              "Tử Phù"
+            ],
+            "hostBrightness": [
+              {
+                "name": "Cự Môn",
+                "brightness": "V"
+              }
+            ],
+            "hostAdverse": [],
+            "tptcAdverse": [
+              "Thiên Không"
+            ],
+            "expandedEngineeringTptcAdverse": [
+              "Thiên Không",
+              "Hóa Kỵ"
+            ],
+            "expected": false,
+            "status": "not_satisfied"
+          },
+          {
+            "id": "negative_partner_CuMon_absent_host",
+            "input": {
+              "day": 1,
+              "month": 1,
+              "year": 1980,
+              "hour": 18,
+              "gender": 1
+            },
+            "lunar": {
+              "lunarDay": 14,
+              "lunarMonth": 11,
+              "lunarYear": 1979,
+              "isLeapMonth": false,
+              "canName": "Kỷ",
+              "chiName": "Mùi",
+              "canIndex": 5,
+              "chiIndex": 8
+            },
+            "hourBranchIndex": 10,
+            "host": {
+              "id": "8",
+              "functionId": "quan_loc",
+              "branchName": "Mùi"
+            },
+            "hostStars": [
+              "Thiên Cơ",
+              "Hoa Cái",
+              "Kình Dương",
+              "Quan Phủ",
+              "Thái Tuế",
+              "Linh Tinh",
+              "Thiên Hình"
+            ],
+            "hostBrightness": [
+              {
+                "name": "Thiên Cơ",
+                "brightness": "Đ"
+              }
+            ],
+            "hostAdverse": [
+              "Kình Dương",
+              "Linh Tinh"
+            ],
+            "tptcAdverse": [
+              "Kình Dương",
+              "Linh Tinh"
+            ],
+            "expandedEngineeringTptcAdverse": [
+              "Kình Dương",
+              "Linh Tinh",
+              "Hóa Kỵ"
+            ],
+            "expected": false,
+            "status": "not_satisfied"
+          },
+          {
+            "id": "negative_target_TPTC_only",
+            "input": {
+              "day": 1,
+              "month": 1,
+              "year": 1980,
+              "hour": 2,
+              "gender": 1
+            },
+            "lunar": {
+              "lunarDay": 14,
+              "lunarMonth": 11,
+              "lunarYear": 1979,
+              "isLeapMonth": false,
+              "canName": "Kỷ",
+              "chiName": "Mùi",
+              "canIndex": 5,
+              "chiIndex": 8
+            },
+            "hourBranchIndex": 2,
+            "host": {
+              "id": "4",
+              "functionId": "quan_loc",
+              "branchName": "Mão"
+            },
+            "hostStars": [
+              "Thiên Đồng",
+              "Phượng Các",
+              "Giải Thần",
+              "Phong Cáo",
+              "Tam Thai",
+              "Tiểu Hao",
+              "Bạch Hổ"
+            ],
+            "hostBrightness": [],
+            "hostAdverse": [],
+            "tptcAdverse": [
+              "Kình Dương",
+              "Linh Tinh"
+            ],
+            "expandedEngineeringTptcAdverse": [
+              "Kình Dương",
+              "Linh Tinh"
+            ],
+            "expected": false,
+            "status": "not_satisfied"
+          },
+          {
+            "id": "negative_pair_wrong_function",
+            "input": {
+              "day": 8,
+              "month": 1,
+              "year": 1980,
+              "hour": 6,
+              "gender": 1
+            },
+            "lunar": {
+              "lunarDay": 21,
+              "lunarMonth": 11,
+              "lunarYear": 1979,
+              "isLeapMonth": false,
+              "canName": "Kỷ",
+              "chiName": "Mùi",
+              "canIndex": 5,
+              "chiIndex": 8
+            },
+            "hourBranchIndex": 4,
+            "host": {
+              "id": "2",
+              "functionId": "quan_loc",
+              "branchName": "Sửu"
+            },
+            "hostStars": [
+              "Thái Âm",
+              "Thái Dương",
+              "Tấu Thư",
+              "Tuế Phá",
+              "Linh Tinh",
+              "Thiên Hư",
+              "Phá Toái"
+            ],
+            "hostBrightness": [],
+            "hostAdverse": [
+              "Linh Tinh"
+            ],
+            "tptcAdverse": [
+              "Linh Tinh",
+              "Đà La",
+              "Kình Dương"
+            ],
+            "expandedEngineeringTptcAdverse": [
+              "Linh Tinh",
+              "Đà La",
+              "Kình Dương",
+              "Hóa Kỵ"
+            ],
+            "expected": false,
+            "status": "not_satisfied"
+          },
+          {
+            "id": "negative_both_absent_host",
+            "input": {
+              "day": 1,
+              "month": 1,
+              "year": 1980,
+              "hour": 0,
+              "gender": 1
+            },
+            "lunar": {
+              "lunarDay": 14,
+              "lunarMonth": 11,
+              "lunarYear": 1979,
+              "isLeapMonth": false,
+              "canName": "Kỷ",
+              "chiName": "Mùi",
+              "canIndex": 5,
+              "chiIndex": 8
+            },
+            "hourBranchIndex": 1,
+            "host": {
+              "id": "5",
+              "functionId": "quan_loc",
+              "branchName": "Thìn"
+            },
+            "hostStars": [
+              "Vũ Khúc",
+              "Thanh Long",
+              "Phúc Đức",
+              "Văn Khúc",
+              "Thiên Quý",
+              "Thiên Đức",
+              "Hóa Lộc",
+              "Quả Tú",
+              "Thiên La",
+              "Hóa Kỵ"
+            ],
+            "hostBrightness": [],
+            "hostAdverse": [],
+            "tptcAdverse": [
+              "Thiên Không",
+              "Linh Tinh"
+            ],
+            "expandedEngineeringTptcAdverse": [
+              "Hóa Kỵ",
+              "Thiên Không",
+              "Linh Tinh"
+            ],
+            "expected": false,
+            "status": "not_satisfied"
+          }
+        ]
+      },
+      "commandsAndResults": [
+        {
+          "command": "python3 /tmp/tuvi-juan-pinned/astra-verify-quan-context.py",
+          "result": "Final exit 0. Independently refetched pinned Git raw HTML is byte-equal; SHA256 matches. Full Quan section and full Tianji/Jumen general-star sections match contiguous HTML content; whitespace-only normalization accounts for line breaks within source paragraphs. Both complete source paragraphs and every required anchor match."
+        },
+        {
+          "command": "node /tmp/tuvi-juan-pinned/astra-replay-quan.mjs",
+          "result": "Final exit 0. All five digests verified; 10/10 solar fixtures matched with actual repository functions. Host/TPTC distinctions and positive adverse-label variants additionally inspected."
+        },
+        {
+          "command": "Initial stricter context-block and adverse-label diagnostics",
+          "result": "First context check failed because source branch lines occupy a single HTML paragraph; corrected verifier to compare exact text with whitespace normalization only. First label check failed because TPTC adverse was Hóa Kỵ rather than a named source-list star; retained that distinction in final evidence and limitations. Neither diagnostic changed candidate bytes, conditions, fixtures, or product code."
+        }
+      ]
+    }
+  ]
+}

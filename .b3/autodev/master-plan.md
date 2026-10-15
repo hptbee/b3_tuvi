@@ -1,6 +1,6 @@
 # Autonomous Product Completion
 
-- version: 10
+- version: 11
 - source: User mission 2026-10-14; fresh run from upstream main 45615a48d0c75b90138cfc618320ffae6e9c34e0
 
 ## Original requirements
@@ -305,3 +305,31 @@ T018 current phase: independent complete-passage analysis and reachable solar fi
 Version10 evidence-based refinement: original T018 three-palace pilot is split into the first independently verifiable accepted two-claim runtime integration (T018) and still-required Quan Lộc semantic resolution (T022). All original requirements retained. Source/fullsection analysts and independent 15,120-input/60-replay search preceded dual review; gpt-6.1-sol and gpt-6-astra each independently checked all16 selected fixtures and all digests, returning MATCH plus INTERPRETATION_SUPPORTED_WITH_LIMITS. Existing compareReviews replay returns AI_ACCEPTED for both exact narrowed candidates. This does not authenticate an edition, certify natal formulas, adjudicate Đồng-Cự, resolve 空/耗 or release public prose.
 
 T018 completion gate: sourceunit+fresh runtime+performance+crosscut clear, R601closed; backend55files87.42/89.33, frontendconsumer37, Chromium25, docs181PASS. Approved internal registry1→3, two narrow newly covered palace conditions; all original/public gates preserved. Next supported candidate is distinct T023 Quan Cơ–CựDậu (actual dualmodel source approval and10fixtures complete, JIT approach inspected; activate only in next focused task).
+
+### T023 — Quan Lộc Cơ–Cự tại Dậu source branch annotation
+- status: completed
+- depends_on: [T018]
+- scope: docs/knowledge/research/juan2-palace/review-bundle-quan.json, docs/knowledge/research/juan2-palace/execution-quan.json, docs/knowledge/research/juan2-palace/quan-co-cu-dau-source-span.txt, docs/knowledge/research/juan2-palace/quan-co-cu-dau-review-context.txt, docs/knowledge/research/juan2-palace/README.md, docs/knowledge/reviews/juan2-palace/review-quan-a.json, docs/knowledge/reviews/juan2-palace/review-quan-b.json, docs/knowledge/interpretation-decisions/juan2-quan-co-cu-dau.json, docs/knowledge/interpretation-claims.json, backend/src/knowledge/sourcePalaceBinding.js, backend/src/interpretation/eligibility.js, backend/test/sourcePalaceQuan.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md
+- acceptance_criteria:
+  - Separate complete Quan passage, modifiers, reciprocal/brightness context and10independent reachable fixtures have actual distinct-model approval before activation
+  - Exact reviewed Co-Cu same QuanLoc plus Dau predicate emits only approved internal textual-branch note; following modifiers remain explicitly unevaluated
+  - Distinct finite evidence resources and branch label/ID consistency fail closed on changed/missing evidence or malformed chart
+  - Existing Tai/Phuc/TuPhu evidence and behavior, natal formulas/source decisions and public gates remain unchanged
+- verification:
+  - Separate actual dual source review replay,10realfixtures and branch-negative/malformed/evidence-mutation tests; full backend CI and independent fullfeature review/fixes
+
+### T024 — Explicit-age Tiểu hạn under a separate modern software profile
+- status: pending
+- depends_on: []
+- scope: Named modern source dossier/decision; finite profile binding; existing time/analyze pipeline and StructuredAnalysis UI; targeted source/formula/API/UI/E2E tests (exact JIT file list before implementation)
+- acceptance_criteria:
+  - Independently approve complete age1/step/sex/triad/range semantics and declared branch-sex-explicit-age projection before implementation
+  - Caller explicitly opts into the named profile and supplies integer nominal age1–120; no calendar-age/default/classical-profile inference
+  - Complete API/UI maps branch to actual natal palace with source identity and no fortune prose; stale/forged/malformed responses fail closed
+  - Preserve all existing formulas/source decisions, natal labels, independent annual controls and public gates
+- verification:
+  - Actual distinct-model source approval; independently checked120endpoint/2880all-age cases and reachable24chart/boundary/leap witnesses; backend/frontend CI and realbackend E2E; independent review/fix
+
+Version11 priority: T018 is completed and pushed67ff179. T023 independently accepted Quan branch note is ready; original T022 ThienPhu remains unresolved. T024 is a newly evidenced explicit-age modern-software alternative, pending actual source review, not a substitute approval for classical Quanshu. No research-only PR and no unreviewed placement activation.
+
+T023 completed gate: separately accepted exactsourcebranch note nowmapped throughactualchartAST withbranchlabel/IDcoherence. Registeredinternalclaims3→4 (TaiBach/QuanLoc/PhucDuc have newlyaccepted narrowcoverage). Backend56files87.45/89.43; source/runtime/crosscutclear,78actualHTTP→frontendvalidator checks across26fixtures/3yearstates; no public/natal/source-statuschange. T022ThienPhu andT019genericVCD remain incomplete.

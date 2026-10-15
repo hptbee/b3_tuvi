@@ -1,0 +1,19 @@
+{
+  "note": "Orchestrator-captured execution metadata for separate actual Quan reviews after complete source/predicate and10independent solar fixtures. Raw model judgments remain unedited; prior Tai/Phuc acceptance is not Quan approval.",
+  "reviewers": [
+    {
+      "model": "gpt-6.1-sol",
+      "agentId": "/root/juan2_source_review_sol",
+      "reviewRef": "docs/knowledge/reviews/juan2-palace/review-quan-a.json",
+      "requestedModel": "gpt-6.1-sol",
+      "hostBuildId": null
+    },
+    {
+      "model": "gpt-6-astra",
+      "agentId": "/root/juan2_source_review_astra",
+      "reviewRef": "docs/knowledge/reviews/juan2-palace/review-quan-b.json",
+      "requestedModel": "gpt-6-astra",
+      "hostBuildId": null
+    }
+  ]
+}
