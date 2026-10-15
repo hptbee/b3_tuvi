@@ -1,3 +1,5 @@
+import { verifyInterpretationBinding } from '../knowledge/interpretationBinding.js';
+
 /**
  * Deterministic wording. Only copies a stored approved sentence.
  * Does not invent Vietnamese from star names or formula MATCH.
@@ -10,7 +12,8 @@ export function approvedSentence(claim) {
     if (claim.interpretationStatus !== 'sourced') return null;
     if (!claim.sourceId || !claim.schoolId) return null;
     if (Array.isArray(claim.contradicts) && claim.contradicts.length > 0) return null;
-    return text;
+    const binding = verifyInterpretationBinding(claim);
+    return binding.ok ? binding.approvedWording : null;
 }
 
 export function renderInternalProse(eligibleClaims) {

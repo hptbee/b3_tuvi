@@ -108,19 +108,16 @@ function rollupFormation(hits) {
 function statementFor(chart, palace, spec, hits, claims, options) {
     const palaceHits = palace ? hits.filter((hit) => hit.palaceId === palace.id) : [];
     const applied = applicableClaims(claims, chart, spec.functionId, palaceHits);
-        const eligibility = applied.map((claim) => claimEligibility(claim, chart, palace, {
-            formulaHits: [
-                ...hits.map((hit) => ({
-                    catalogId: hit.formula.catalogId,
-                    palaceId: hit.palaceId,
-                    sourceProfile: hit.formula.sourceProfile,
-                    gradeStatus: hit.formula.gradeStatus,
-                    formationStatus: hit.formula.formationStatus,
-                    breakingStatus: hit.evidence?.breakingConditions || 'not_implemented'
-                })),
-                ...(options.extraFormulaHits || [])
-            ]
-        }));
+    const eligibility = applied.map((claim) => claimEligibility(claim, chart, palace, {
+        formulaHits: hits.map((hit) => ({
+            catalogId: hit.formula.catalogId,
+            palaceId: hit.palaceId,
+            sourceProfile: hit.formula.sourceProfile,
+            gradeStatus: hit.formula.gradeStatus,
+            formationStatus: hit.formula.formationStatus,
+            breakingStatus: hit.evidence?.breakingConditions || 'not_implemented'
+        }))
+    }));
     const links = linkEvidence(applied);
     const eligible = eligibility.filter((item) => item.eligible);
     let availabilityStatus = 'insufficient_evidence';

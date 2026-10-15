@@ -101,3 +101,18 @@ T016 iteration counts2→0, fresh full-scope review /tmp/tuvi-placement-review2.
 - R203 low CONFIRMED REDUNDANCY CLOSED: showYearBranch guard always true with current states; remove derived guard only, keep selector whileloading.
 
 T017 iteration counts1medium+2low→0 after fixes. Fresh fullscope /tmp/tuvi-ui-review2.md no new confirmedfindings, independent14targeted PASS; fullfrontend142/lint/build+E2E8PASS. Orchestrator T017 gate PASS.
+
+## T021 evidence binding review
+- Size MEDIUM fullscope, c4281b0 + named backend/docs workingtree, excludes separatelyreviewed UI.
+- R301 medium CONFIRMED CLOSED (dependency/runtime): options.extraFormulaHits promotes real reviewed prose on actual negative chart despite absence of calculated formula hit. Parent accepts scope refinement to pipeline/test and removes synthetic hit injection; direct helper signature remains internal while pipeline output must depend on real matches.
+
+T021 iteration counts1→0; fresh FULL10file review2 no new confirmed findings; independent7testscriptspass and injected-negative originalprobe nowdeepEqual ordinarynegative. FullCI87.06/88.32 and final25E2EPASS. Orchestrator gatePASS. Total task reviewerpasses6/12 (T016two,T017two,T021two), finalcrosscut reserved.
+
+## Final cumulative cross-cut review
+- Range f0dec74973ef9d07129e19330356f8e6d2040227..cfd75fd7aaed597dd31cc9e9bf928c7013c4c808 plus final checkpoint work. LARGE three coherent units already independently gated; crosscut considers interactions only.
+- R401 medium CONFIRMED CLOSED: historical active Next action still directs T001/T002 and current-task pointer implies T021running despite completed3units. Final current receipts drafted, isolated fixer retires superseded instruction and clarifies source-onlyqueue. No product integration defect found so far; freshcrosscut required.
+
+- R401 CLOSED by checkpoint-only fixer and fresh cross-cut review: one active source queue; old next action explicitly historical; no implementation running, T021 complete, T018 next incomplete.
+- R402 medium CONFIRMED CLOSED: pass2 early remote snapshot saw only first two pushed branches; actual authorized third push completed, and fresh ls-remote verified all three exact feature SHAs. No stale push claim remains.
+- Final cross-cut pass2 /tmp/tuvi-crosscut-review2.md: no remaining confirmed findings; independent 26 real API→UI validator payloads, 13 selected UI tests, real matched/nonmatched chart probes, source/formula/profile unchanged checks support integration. Total reviewer passes8/12 (6 task +2 crosscut).
+- Orchestrator cumulative engineering gate PASS for T016/T017/T021; mission INCOMPLETE because new source passages/approvals and GitHub PR API access are unavailable. No merge, deploy, public release or source promotion.

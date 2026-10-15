@@ -1,6 +1,6 @@
 # Autonomous Product Completion
 
-- version: 7
+- version: 8
 - source: User mission 2026-10-14; fresh run from upstream main 45615a48d0c75b90138cfc618320ffae6e9c34e0
 
 ## Original requirements
@@ -13,7 +13,7 @@ Stateless product within CONTRIBUTING scope. Highest priority: verified defects,
 Accounts/history/payments; auto-merge/deploy; invented formulas; unverified public fortune/prose/narration; production SQLite migration without approval.
 
 ## Technical context
-React 19/Vite, Express 5/Node 22/SQLite, Node assertion tests, Vitest, Playwright, Actions. Main and origin/main equal 45615a4, clean at start. Frontend baseline 57 tests PASS. Backend baseline fails storedDecision hash replay because core.autocrlf=true converts LF source evidence to CRLF.
+React 19/Vite, Express 5/Node 22/SQLite, Node assertion tests, Vitest, Playwright, Actions. Historical 2026-10-14 baseline: main/origin main45615a4; current resume fetched main f0dec74973ef9d07129e19330356f8e6d2040227, preserving the prior receipts. Frontend baseline 57 tests PASS. Backend baseline fails storedDecision hash replay because core.autocrlf=true converts LF source evidence to CRLF.
 
 ## Architecture
 Reuse existing app/routes, numerology request state/export, and page components. Preserve byte-exact evidence and published profiles. No new service or persistence.
@@ -219,7 +219,7 @@ User narrowed the active mission to Tử Vi domain completion. Preserve all prio
   - All twelve view branches on reachable calculated charts, contrasting natal palace layouts, malformed chart negatives, API and non-mutation checks; backend full CI; isolated full-diff review
 
 ### T017 — Show source-scoped annual placements in chart evidence
-- status: in_progress
+- status: completed
 - depends_on: [T016]
 - scope: frontend/src/components/StructuredAnalysis.jsx, frontend/src/components/StructuredAnalysis.test.jsx, frontend/e2e
 - acceptance_criteria:
@@ -230,7 +230,7 @@ User narrowed the active mission to Tử Vi domain completion. Preserve all prio
   - Frontend unit/CI, lint/build, real backend Chromium E2E, isolated review
 
 ### T018 — Source-scoped Juan 2 palace interpretations
-- status: pending
+- status: incomplete
 - depends_on: []
 - scope: Existing knowledge source registry, interpretation decisions/claims and runtime/tests
 - acceptance_criteria:
@@ -240,7 +240,7 @@ User narrowed the active mission to Tử Vi domain completion. Preserve all prio
   - Exact passage hashes and review replay, domain tests, API withheld-prose checks, independent implementation review
 
 ### T019 — New-source Mệnh vô Chính diệu interpretation
-- status: pending
+- status: incomplete
 - depends_on: []
 - scope: Existing knowledge and interpretation files/tests
 - acceptance_criteria:
@@ -250,7 +250,7 @@ User narrowed the active mission to Tử Vi domain completion. Preserve all prio
   - Source-scoped review evidence and runtime chart witnesses, regression/release-gate tests
 
 ### T020 — Reconcile complete fortune source profiles
-- status: pending
+- status: incomplete
 - depends_on: []
 - scope: Existing fortune source decisions, timeEngine and tests if complete semantics become accepted
 - acceptance_criteria:
@@ -263,9 +263,9 @@ User narrowed the active mission to Tử Vi domain completion. Preserve all prio
 Version 6 prioritization: T018–T020 investigation runs in parallel; source-inaccessible candidates are recorded once and do not block independent T016/T017. Next capability selected from actual evidence, never source-intake alone. Existing .b3 checkpoint is tracked upstream despite AGENTS ignore policy; explicit user request to reconcile the committed checkpoint authorizes preserving and updating these two tracked files, excluding local runtime/history artifacts.
 
 ### T021 — Bind internal interpretation to actual approved evidence
-- status: in_progress
+- status: completed
 - depends_on: []
-- scope: backend/src/knowledge/interpretationBinding.js, backend/src/interpretation/eligibility.js, backend/src/interpretation/synthesis.js, backend/src/interpretation/pipeline.js only if duplicate-ID reproduction warrants it, backend/test/interpretationBinding.test.mjs, backend/test/interpretationPipeline.test.mjs, backend/test/qualityEdges.test.mjs, backend/test/sprint11bInterpretation.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md
+- scope: backend/src/knowledge/interpretationBinding.js, backend/src/interpretation/eligibility.js, backend/src/interpretation/synthesis.js, backend/src/interpretation/pipeline.js (remove reproduced synthetic runtime-hit bypass), backend/test/interpretationBinding.test.mjs, backend/test/interpretationPipeline.test.mjs, backend/test/qualityEdges.test.mjs, backend/test/sprint11bInterpretation.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md
 - acceptance_criteria:
   - Actual stored interpretation decision, two distinct-model review documents, exact shared source quotation and underlying formula binding are checked before approved internal wording is emitted
   - Modified identity, wording, school/profile/conditions/limits or missing/malformed evidence fail closed; flags alone never create internal prose
@@ -274,3 +274,12 @@ Version 6 prioritization: T018–T020 investigation runs in parallel; source-ina
   - Real positive/negative chart integration, mutated binding evidence and duplicate-ID/clone regressions, direct synthesis tests, backend full CI and independent whole-scope review
 
 Version7 adds T021 from reproduced internal provenance defect (arbitrary clone flags could emit unchecked internal prose). It executes independently of UI T017, in separate files, under explicit parallel-work mission; no new source approvals/framework. T018/T019/T020 require unavailable exact evidence and cannot be promoted by code tests.
+
+Version8 technical scope refinement from actual CI/review: classify the new .mjs once in TEST_FIXTURES and remove inherited extraFormulaHits pipeline bypass proved on a reachable negative chart. No source/fomula/public-release scope changes; T021 acceptance remains the same.
+
+## Current completion and resumable queue (2026-10-15)
+T016/T017/T021 implemented and independently reviewed. Coverage: one existing approved internal interpretation remains one; two previously approved annual branch formulas now map to natal palaces across all twelve view-year branches (48 placements checked on two reachable natal layouts). No new Juan2/3 claim, decade/minor-period formula, grade, breaking condition or release is approved by this run.
+
+T018/T019/T020 remain incomplete because exact source passages/complete profile parameters are unavailable, not because a software test disproves a traditional text. New dual-AI reviews are REVIEW_NOT_EXECUTED for unavailable new passages; no verdict records invented. Ordered next executable queue after access changes: (1) retrieve pinned Juan2 oldid1963110 and review full I02/I03/I04 clauses/modifiers; (2) retrieve Juan3 oldid2268626 and disambiguate I01吉星/拱照; (3) reconcile whole DaiHan/TieuHan school, age and boundary semantics with a matching witness. For each: genuinely distinct actual models → fail-closed comparison → exact conditions → reachable positive/negative chart → internal-only implementation → independent review/fixes/PR. If one remains insufficient, move to the next supported pilot without a research-only PR.
+
+Branch stack (none merged/deployed): codex/tuvi-annual-palace-placement → codex/tuvi-annual-placement-ui → codex/tuvi-interpretation-evidence-binding. Git pushes work; GitHub API PR creation is Forbidden. Existing PR49 remains unmerged and unapproved intake. Continue from the top branch after fetch/reconciliation; do not silently replay its code from main while unmerged.
