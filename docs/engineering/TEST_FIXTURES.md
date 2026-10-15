@@ -21,6 +21,9 @@ Giữ hành vi đã có của engine, API, hoặc chuẩn hóa. Kết quả kỳ
 - `normalizeChart.test.mjs`
 - `ruleEngine.test.mjs`
 - `interpretationBinding.test.mjs`: existing interpretation evidence binding and unreviewed-clone regressions; no new source approval or expert verification.
+- `modernMinorBinding.test.mjs`: exact pinned modern-software profile evidence, distinct actual model replay and tamper withholding; no historical authentication or interpretation approval.
+- `modernMinor.test.mjs`: 120 source-comparative endpoints, 2880 independent finite age allocations, reachable natal layouts and strict option/chart boundaries; engineering mathematical witnesses, not historical goldens.
+- `modernMinorApi.test.mjs`: real HTTP explicit-age opt-in, privacy, no-store error responses and no persistence; modern structural placement only.
 - `sourcePalaceBinding.test.mjs`: pinned paragraph/context, actual distinct-model approval and digest binding; mutations never grant source approval.
 - `sourcePalaceQuan.test.mjs`: ten real solar witnesses of the separately reviewed Quan Lộc Cơ–Cự/Dậu textual branch, evidence mutations and branch-coherence guards; engineering regressions, not verified career outcomes.
 - `sourcePalaceInterpretation.test.mjs`: real solar inputs exercise reviewed source-palace predicates and withheld public prose; engineering witnesses, not historical life-outcome goldens.

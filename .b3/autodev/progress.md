@@ -2,17 +2,18 @@
 
 - b3_home: /workspace/b3_tuvi/.b3/runtime/b3_ai-engineering
 - product_root: /workspace/b3_tuvi
-- plan_id: Autonomous Product Completion version 11
-- plan_version: 11
-- branch: codex/tuvi-quan-loc-branch-annotation
+- plan_id: Autonomous Product Completion version 13
+- plan_version: 13
+- branch: codex/tuvi-modern-minor-placement
 - run_base_sha: 52319c9c7123e4ff1ace74b7a81ab611df2acef5
 - preceding_invocation_base_sha: f0dec74973ef9d07129e19330356f8e6d2040227
 - previous_run_base_sha: 45615a48d0c75b90138cfc618320ffae6e9c34e0
 - current_task: none
-- last_completed_task: T023
-- next_source_task: T024
-- current_task_base_sha: 67ff179c10e75bfd5d92b037702f7024014a76ae
-- run_status: running
+- last_completed_task: T024
+- next_source_task: T025
+- current_task_base_sha: 0f0c1f814e9a23c3f7c88c880240286eee9f1650
+- run_status: incomplete
+- stop_reason: review_pass_budget_exhausted_after_12_completed_passes
 - updated: 2026-10-15
 
 ## Historical reconciliation — preceding invocation
@@ -38,6 +39,9 @@ Main fetched and ff-only advanced to f0dec74973ef9d07129e19330356f8e6d2040227; #
 | T019 | incomplete | f0dec74973ef9d07129e19330356f8e6d2040227 | | pinnedmirror available; 吉星/拱照 and 正曜 identity unresolved; oldVCD decision preserved | no new claim approval | detailed | not_ready |
 | T020 | incomplete | f0dec74973ef9d07129e19330356f8e6d2040227 | | source-profile/ageparametersunresolved | no formula promoted | | |
 | T021 | completed | c4281b0579d266419bf43f2de6bafb4b24daae12 | cfd75fd7aaed597dd31cc9e9bf928c7013c4c808 | backend53files87.06/88.32;25E2E | 2isolatedpasses R301closed | detailed | ready |
+| T022 | incomplete | 52319c9 | | Thiên Phủ source semantics unresolved | no new approval | detailed | not_ready |
+| T023 | completed | 67ff179c10e75bfd5d92b037702f7024014a76ae | 0f0c1f814e9a23c3f7c88c880240286eee9f1650 | backend56files87.45/89.43;26fixtures;78HTTPvalidatorchecks | source/runtime/crosscutclear | detailed | ready |
+| T024 | completed | 0f0c1f814e9a23c3f7c88c880240286eee9f1650 | | backend59files87.96/89.95;frontend169/lint/build;29ChromiumE2E | source/backend/UI/perf/finalcrosscutclear;R1401accepted | detailed | ready |
 
 Finding log: findings.md. Historical Sprint 8 checkpoint archived, not deleted.
 
@@ -379,3 +383,43 @@ The three feature branches are pushed as a stack; main has not merged them. GitH
 - Independent source /tmp/tuvi-quan-source-review.md; runtime /tmp/tuvi-quan-runtime-review.md; crosscut /tmp/tuvi-quan-crosscut-review.md. Actual78HTTP→exactfrontendvalidator responses across26fixtures ×3yearstatesPASS; fresh-processQuanresourceoutageleavesall3oldapprovedbindingsvalid. No R901/R1001/R1101 findings.
 - Reviewbudget8/12actualpassesused; nextT024 has4passesavailable. Never bypassmissingreview; resourcecap requires resumableincompletecheckpoint ifnonconvergence.
 - Next action:commit/push focusedT023 stackedaboveT018, then detailedT024readiness andcomplete explicitage modernminorAPI/UI/sourcebinding. Actual modernsource2modelMATCH+comparatorAI_ACCEPTED alreadyavailable, approvalscopeonlyreviewedprojection; sourcecalendar/classical/default/predictionsnotpromoted.
+
+## Current next action — T024
+- T023 committed0f0c1f814e9a23c3f7c88c880240286eee9f1650 andpushedcodex/tuvi-quan-loc-branch-annotation, baseT01867ff179; no newPRthroughforbiddenAPI, preparedbody/tmp/tuvi-quan-pr.md. Existing#50–52 unchanged.
+- T024 detailedready at0f0c1f814e9a23c3f7c88c880240286eee9f1650; parentpersists separatelyacceptedmodern evidence/sourceedition, backendandUI isolatedauthors own disjointfiles; no sourceauthentication/publicprosechange.
+- Next sourcequeue afterT024:T019 precise正曜taxonomy/吉星/拱照; T022ThiênPhủ空/耗/brightness/geometry; T020classicalage/profileconflict. Recordexistingblockersonce, do notinheritmodernapproval.
+
+## T024 implementation readiness
+- depth: detailed
+- readiness: ready
+- plan_version: 12
+- approach_at_sha: 0f0c1f814e9a23c3f7c88c880240286eee9f1650
+- inspected: pinned completegetHoroscope/getAgeIndex/fixIndex/docs/enums/locales/year+ageDividecontrols; independentfixture verifier and actual2modelresults; exactalgorithm/compatibility/5digests/comparator; currenttime/analyze/ask/privategender/mapper/UIvalidator/fetch/lifecycle/tests
+- changes: one fixed modern-profile evidence gate and pureplacement mapper; additive strictoptionalrequest and capability; existing StructuredAnalysis opt-in age form, same request lifecycle, exact responsebinding; no newservice/framework/persistence/dependencies
+- contracts: minorPeriod absent or exact{profile:iztro-pinned-age1-sex-triad,nominalAge:numberinteger1..120}; actualserverbirthlunarbranch+validatedgender private; time.capabilities.tieu_han_modern; source/profile/age/placement/closedprose flags validatedbeforeUI display
+- data_flow: calleroptsin+age→existingbirthvalidation→fixedevidencereplay→serverlunarbranch/sex+acceptedage1triadformula→strict12palacemapper→existinganalysisrequest→currentresponsevalidator→sourceattributedplacementonly
+- edge_cases: missing/invalid/extraoptionkeys/coercion, unknownprofile, age0/121/fraction, badgender/lunarbranch, inconsistentchart, source/digest/spec/review/supplementtamper, staleage/profile/birth/year/retry/unmount, invaliddraft, absentlegacyservercapability, borrowedsourceapproval andpublicprose
+- architecture: knowledge/modernMinorBinding +time/modernMinor reuseexistingcomparator andstrictmapper; existingclassicaltieu_hanblockedrecord untouched, independentannualcontrols unchanged; onlyone UI fetchpipeline and explicittransactional ageapply
+- files: docs/knowledge/research/fortune/modern-minor/, .gitattributes, README.md, docs/planning/AUTODEV_MASTER_PLAN_V2.md, docs/knowledge/sources.json, docs/tuvi/MODERN_MINOR_PROFILE.md, backend/src/knowledge/modernMinorBinding.js, backend/src/time/modernMinor.js, backend/src/time/timeEngine.js, backend/src/interpretation/analyze.js, backend/test/modernMinorBinding.test.mjs, backend/test/modernMinor.test.mjs, backend/test/modernMinorApi.test.mjs, backend/test/timeEngine.test.mjs, backend/test/sourceHygiene.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md, frontend/src/components/StructuredAnalysis.jsx, frontend/src/App.css, frontend/src/components/StructuredAnalysis.test.jsx, frontend/e2e/modern-minor-placement.spec.js
+- verification: 120endpoints+2880all-age+24reachablecharts andTết/leap/hourboundaries independentlyverifiedbeforeactualdualAI; strict API/unit/evidence negatives; UI held/stale/forged/retry tests; fullbackend/frontendCI/lint/build; realbackendChromium; source/backendunit andUIunit independentreviews, routedperformance andfinalcrosscut. Reviewbudget4passesleft; missingfreshreview meansINCOMPLETE, neverautoPASS.
+- approved_source_scope: modernsoftware branch+sex+explicitnominalage1..120 projection only; no upstreamcalendar/natal-equivalence, historicalauthentication, classicalQuanshu/defaultapproval, derivedage, DaiHan, fortuneinterpretation/publicprediction
+- task_spec_fingerprint: depends_on=[]|scope=docs/knowledge/research/fortune/modern-minor/, .gitattributes, README.md, docs/planning/AUTODEV_MASTER_PLAN_V2.md, docs/knowledge/sources.json, docs/tuvi/MODERN_MINOR_PROFILE.md, backend/src/knowledge/modernMinorBinding.js, backend/src/time/modernMinor.js, backend/src/time/timeEngine.js, backend/src/interpretation/analyze.js, backend/test/modernMinorBinding.test.mjs, backend/test/modernMinor.test.mjs, backend/test/modernMinorApi.test.mjs, backend/test/timeEngine.test.mjs, backend/test/sourceHygiene.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md, frontend/src/components/StructuredAnalysis.jsx, frontend/src/App.css, frontend/src/components/StructuredAnalysis.test.jsx, frontend/e2e/modern-minor-placement.spec.js|acceptance_criteria=Independently approve complete age1/step/sex/triad/range semantics and declared branch-sex-explicit-age projection before implementation; Caller explicitly opts into the named profile and supplies integer nominal age1–120; no calendar-age/default/classical-profile inference; Complete API/UI maps branch to actual natal palace with source identity and no fortune prose; stale/forged/malformed responses fail closed; Preserve all existing formulas/source decisions, natal labels, independent annual controls and public gates
+- watched_paths: docs/knowledge/research/fortune/modern-minor/, .gitattributes, README.md, docs/planning/AUTODEV_MASTER_PLAN_V2.md, docs/knowledge/sources.json, docs/tuvi/MODERN_MINOR_PROFILE.md, backend/src/knowledge/modernMinorBinding.js, backend/src/time/modernMinor.js, backend/src/time/timeEngine.js, backend/src/interpretation/analyze.js, backend/test/modernMinorBinding.test.mjs, backend/test/modernMinor.test.mjs, backend/test/modernMinorApi.test.mjs, backend/test/timeEngine.test.mjs, backend/test/sourceHygiene.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md, frontend/src/components/StructuredAnalysis.jsx, frontend/src/App.css, frontend/src/components/StructuredAnalysis.test.jsx, frontend/e2e/modern-minor-placement.spec.js, backend/src/time/thienDuc.js, backend/src/routes/interpretationRoutes.js, backend/src/knowledge/decisionRegistry.js, backend/src/knowledge/decisionIntegrity.js, backend/src/knowledge/crossReview.js
+
+## T024 verification before final crosscut
+- Source/backendunit /tmp/tuvi-modern-minor-backend-review.md noR1201findings, sixindependentscripts andactualpinnedGit/supplement/comparator/loaderoutageprobesPASS. ParentunitgatePASS.
+- Frontendunit /tmp/tuvi-modern-minor-ui-review.md noR1301findings; independent64componenttests+4realbackendChromiumPASS. ParentunitgatePASS; authorfullfrontend169tests/lint/buildPASS88.48/88.72.
+- Fullbackend59files49unit10integrationPASS87.96/89.95. ParentfinalTuViChromium29/29PASS(/tmp/tuvi-modern-minor-all-e2e.log), docs183PASS; isolatedcore.autocrlftrue checkoutpreservesrawJSONfixturehash withnarrow.gitattributesrule.
+- Performance /tmp/tuvi-modern-minor-performance-review.md: firstopt-in14fixedreads936815bytes,14.78–18.54ms; omission0modernevidenceIO;100000warmcachechecks2.27–4.30mstotaland0additionalreads, bounded≤18.4KBpostGCgrowth. R1401LOW intentionalone-timecoldvalidationcost ACCEPTED; no blockingdefect/prematureoptimization orproductionSLOclaim.
+- Actualcompletedreviewpasses11/12; finalcumulativecrosscutpass12next, scopedinteractions/receiptcoherence. No furtherreviewspastcap; preservecheckpointandstopINCOMPLETEifanynewconfirmedblockerrequiresfreshreview. Publicprose/predictions/AI/staging/productionremainwithheld.
+
+## Current final checkpoint — review budget reached
+- Completed this invocation:T01867ff179c10e75bfd5d92b037702f7024014a76ae (TàiBạch+PhúcĐức); T0230f0c1f814e9a23c3f7c88c880240286eee9f1650 (QuanLộc Cơ–CựDậu); T024 modernminor implementationinthiscompletioncommit (exactSHA recordedafteractualcommit/push). Bothpriornewheads alreadyverifiedremote; T024pendingactualpush, noPRnumberclaimed.
+- T024 engineeringqualitygatePASS: source/backendunit,UIunit,routedperformanceandfinalcumulativecrosscutclear. Finalpass12 /tmp/tuvi-modern-minor-final-crosscut-review.md hasnoR1501findings;283actualHTTPresponsespass exactgeneric+minorfrontendvalidators plus2outageprobes. Old4interpretationbindings/natalstatements/annualresults preserved; omissionbypassesmodernevidenceIO andcorruptmodernapprovalblocks onlyopt-inprofile.
+- Measurablecoverage: approvedinternalinterpretation1→4 (threeexactnewsourceconditions); annualbranchformulas2→2 retained; newmodernminorprofile0→1 withall12birthbranches×2sexes×120ages independentlychecked andactualnatalpalacemapping/API/UI. Thesearestructural/traditional-text capabilities, notverifiedlifeoutcomes orcompletepalace/fortune coverage.
+- Finalchecks: backend59files49unit10integrationPASS87.96lines89.95branches;frontend169tests88.48/88.72+lint/buildPASS;post-last-changeChromium29/29PASS;docs183PASS;isolatedcore.autocrlftrue fixturebytecheckoutPASS;diffcheckPASS. ActualNode24.19/systemChromium only, no claimofhostedCI/Node22Windows/FirefoxWebKit/staging/rollback verification.
+- Sourcepolicy: actual distinct-model reviews precedeactivation; rawjudgments/execution/provenance/digests preserved; newtranscription/softwareeditions historicallyunauthenticated/bookfalse/expertfalse. Defaults/natalformulas/oldsource decisionsnotpromoted. Publicprose/AI/narration/predictionsremainwithheld; no merge/deploy.
+- Reviewbudget12/12 used: T0185passes;T0233;T0244. R601CLOSEDafterfix+freshfullreview;R1401LOWACCEPTEDone-timecoldcost14.78–18.54ms, warmzeroIO. No confirmedblockingOPENfindings. OverallmissionINCOMPLETEbecauseproductdomain/releasestillunfinishedandcanonicalreviewbudgetisexhausted, notbecausecompleted3featuresfailed.
+- Orderednextqueue:T025 pending source/readiness formodernĐạihạn projection usingnewlyavailablecompleteprocedure;T019 exact正曜/主星/吉星/拱照 semantics;T022 ThiênPhủ空/耗/brightness/geometry;T020classicalprofile+ageparameters. StartfromactualnewHEAD, fetch/reconcilemainandexistingPRs;neverduplicated50–52orrestartcompletedT018/T023/T024.
+- Preciseblockers:T019Juan2defines18正曜including昌曲左右 whileJuan3左右單守 canstill say無正曜;notno14byassumption. T022 bare耗hasmultipleowntextuses andsourcebrightness/見/無zonesnotaccepted. T020pinnedJuan2/3doesnotcontaintheold adjacent-anchorF03 witness;modernminorapprovaldoesnotadjudicateit. Preserveold source hashes/decisions untilnewaccepted evidence.
+- PRcreation remainsGraphQLForbidden afteractualattempt;Gitfetch/pushworks. No newtoken/approvalrequested. Preparedbodies:/tmp/tuvi-juan2-palace-pr.md,/tmp/tuvi-quan-pr.md,/tmp/tuvi-modern-minor-pr.md. Newdependencyorderabove#52:T018branch→T023branch→T024branch. CreatefocusedPRsfromthoseconcretediffsafterAPIaccess;noauto-merge/deploy.

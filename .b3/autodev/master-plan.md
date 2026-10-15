@@ -1,6 +1,6 @@
 # Autonomous Product Completion
 
-- version: 11
+- version: 13
 - source: User mission 2026-10-14; fresh run from upstream main 45615a48d0c75b90138cfc618320ffae6e9c34e0
 
 ## Original requirements
@@ -319,9 +319,9 @@ T018 completion gate: sourceunit+fresh runtime+performance+crosscut clear, R601c
   - Separate actual dual source review replay,10realfixtures and branch-negative/malformed/evidence-mutation tests; full backend CI and independent fullfeature review/fixes
 
 ### T024 — Explicit-age Tiểu hạn under a separate modern software profile
-- status: pending
+- status: completed
 - depends_on: []
-- scope: Named modern source dossier/decision; finite profile binding; existing time/analyze pipeline and StructuredAnalysis UI; targeted source/formula/API/UI/E2E tests (exact JIT file list before implementation)
+- scope: docs/knowledge/research/fortune/modern-minor/, .gitattributes, README.md, docs/planning/AUTODEV_MASTER_PLAN_V2.md, docs/knowledge/sources.json, docs/tuvi/MODERN_MINOR_PROFILE.md, backend/src/knowledge/modernMinorBinding.js, backend/src/time/modernMinor.js, backend/src/time/timeEngine.js, backend/src/interpretation/analyze.js, backend/test/modernMinorBinding.test.mjs, backend/test/modernMinor.test.mjs, backend/test/modernMinorApi.test.mjs, backend/test/timeEngine.test.mjs, backend/test/sourceHygiene.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md, frontend/src/components/StructuredAnalysis.jsx, frontend/src/App.css, frontend/src/components/StructuredAnalysis.test.jsx, frontend/e2e/modern-minor-placement.spec.js
 - acceptance_criteria:
   - Independently approve complete age1/step/sex/triad/range semantics and declared branch-sex-explicit-age projection before implementation
   - Caller explicitly opts into the named profile and supplies integer nominal age1–120; no calendar-age/default/classical-profile inference
@@ -333,3 +333,22 @@ T018 completion gate: sourceunit+fresh runtime+performance+crosscut clear, R601c
 Version11 priority: T018 is completed and pushed67ff179. T023 independently accepted Quan branch note is ready; original T022 ThienPhu remains unresolved. T024 is a newly evidenced explicit-age modern-software alternative, pending actual source review, not a substitute approval for classical Quanshu. No research-only PR and no unreviewed placement activation.
 
 T023 completed gate: separately accepted exactsourcebranch note nowmapped throughactualchartAST withbranchlabel/IDcoherence. Registeredinternalclaims3→4 (TaiBach/QuanLoc/PhucDuc have newlyaccepted narrowcoverage). Backend56files87.45/89.43; source/runtime/crosscutclear,78actualHTTP→frontendvalidator checks across26fixtures/3yearstates; no public/natal/source-statuschange. T022ThienPhu andT019genericVCD remain incomplete.
+
+Version12 detailedT024 readiness: actual source models gpt-6.1-sol/gpt-6-astra independentlyverify completealgorithm+projection, all19payloads and3additional locale/alias dependencies,120endpoints/2880all-agecomparisons/24natal/boundary/leap cases. Existingcomparator AI_ACCEPTED and all5digests/exactalgorithm+compatibilitymatch. This authorizes only explicitly selected modern projection, not calendar-age derivation/classical-defaultsource approval/predictions. Backend andUI namedapproaches inspected before implementation.
+
+T024 completion: source/backend andUIunits clear; routedperformanceLOW coldvalidationcostaccepted; finalcumulativecrosscut285actualHTTP/validator/outagechecks clear. All59backendfiles169frontendtests29ChromiumE2E183doclinksPASS; parentqualitygatePASS. OptionalnamedmodernTiểuhạn explicitage1–120 placementcomplete; no calendarage/classicaldefault/natal/prediction/publicproseapproval. Total12/12reviewpasses exhausted; stopthisinvocation withresumablequeue, notanunreviewednextimplementation.
+
+### T025 — Review a separate explicit-age modern Đại hạn projection
+- status: pending
+- depends_on: [T024]
+- scope: Research complete already pinned modern getHoroscope decadal path, existing strict natal metadata and profile/API/UI reuse; exact implementation files only after JIT readiness and actual source approval
+- acceptance_criteria:
+  - Independently validate complete Mệnh anchor, source Cục start-age/ten-year spans, yin-yang definition/sex direction, age range and wrap before any new placement
+  - Explicitly model from/config/calendar dependencies and proposed product natal-Mệnh/Cục/year-branch projection; never certify whole upstream natal/calendar equivalence by assumption
+  - Define pre-first-period and last-supported-age behavior without inventing childhood placement or extending source ranges
+  - Independently generate real positive/negative and all period-boundary fixtures BEFORE actual distinct-model approval; no reuse of Tiểu hạn approval for Đại hạn
+  - If accepted, deliver complete source-gated API/UI placement with exact current-input validation and no prose, while preserving classical Quanshu conflict/default labels
+- verification:
+  - Fresh source/fixture/model approval; current-time pipeline/mapper reuse, boundary/API/UI/outage tests, full CI and independent review budget in next invocation
+
+Version13 resumable next queue after12-review cap: (1)T025 newly actionable modern Đại hạn source projection; (2)T019 source-specific 正曜/主星 taxonomy and complete 吉星/拱照; (3)T022 precise Thiên Phủ 空/耗/brightness/geometry; (4)T020 original classical profile/age conflict. T025 is pending research/readiness, not an approved formula or a request to bypass original source decisions. Existing #50–52 and all completed task IDs preserved.

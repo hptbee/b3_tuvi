@@ -1,0 +1,19 @@
+{
+  "note": "Orchestrator-captured actual tool task/model metadata. Raw independent model judgments are preserved unedited; explicit-age modern profile only, no interpretation/public release. Independent pre-review fixture verification preceded both models.",
+  "reviewers": [
+    {
+      "model": "gpt-6.1-sol",
+      "agentId": "/root/modern_minor_review_sol",
+      "reviewRef": "docs/knowledge/research/fortune/modern-minor/review-a.json",
+      "requestedModel": "gpt-6.1-sol",
+      "hostBuildId": null
+    },
+    {
+      "model": "gpt-6-astra",
+      "agentId": "/root/modern_minor_review_astra",
+      "reviewRef": "docs/knowledge/research/fortune/modern-minor/review-b.json",
+      "requestedModel": "gpt-6-astra",
+      "hostBuildId": null
+    }
+  ]
+}
