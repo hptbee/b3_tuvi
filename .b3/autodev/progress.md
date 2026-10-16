@@ -748,3 +748,11 @@ Nextaction: applythistitle/bodyONLYtoexistingPR60whenAPIaccessreturns, verifyhos
 - Evidence files source dossier retained; applicability audit and T035 ignored handoff under new-invocation/. Preserve on this checkout; do not lose when switching hosts.
 - Checkpoint-specific verification: frozen manifest64filesexact; docs selftestsPASS and links255PASS; no backend/frontend runtime or test diff. Checkpoint+STATUS+execution+attributes whitespacePASS; preserved exact review-context.txt has63source-whitespace diagnostics, no trimming/re-hash. These are evidence-preservation checks, not T034 source/technical acceptance.
 - Explicit user checkpoint preservation authorizes committing selected .b3/autodev/ records despite default ignore policy. This is an incomplete handoff commit; no task marked completed and no formula/code quality gate PASS. Preliminary ignored audit/candidate scripts and fixtures included explicitly for reproducible cross-host handoff; no broad git add.
+
+## Single draft PR delivery receipt — current invocation
+- Checkpoint commit:9cff66271b171049f7dea0da75f1505a47fae28f; not a completed product task.
+- Actual gitpush origin/codex/tuvi-minor-stem-continuation succeeded; GitHub create_pull_request confirms exacthead9cff662,targetmain3613b68,drafttrue,open.
+- Single PR:https://github.com/hptbee/b3_tuvi/pull/62, attached to current chat. No other PR/branch created for this invocation.
+- Actual hostedCI run38926208446 queued for9cff662 at receipt time; no hostedPASS claim. Prior main/#61CI success remains separate evidence.
+- Local worktree was clean after checkpoint commit. Subsequent sandbox-only ls-remote failed DNS-thread initialization; successful push and GitHub exact head are actual delivery proof, no fabricated remote command success.
+- Current stop/next action unchanged: INCOMPLETE required-model usage limits; preserve original index-defective packet and obtain fresh corrected-packet actual dual review before implementation. Technical reviews0/12, no feature tasks completed, coverage7claims4palaces92/1152 unchanged.
