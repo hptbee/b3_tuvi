@@ -307,6 +307,68 @@
         "no_public_release"
       ],
       "compatibilityNote": "condition_read_only_projection_not_natal_formula_certification"
+    },
+    {
+      "claimId": "interp-quanshu-quan-co-cu-mao-host",
+      "claimType": "interpretation",
+      "interpretationKind": "source_palace_interpretation",
+      "sourceId": "ziwei-quanshu-iztro-transcription",
+      "editionId": "iztro-juan2-2f00e2ab0c80",
+      "section": "juan2/官祿宮/巨門",
+      "schoolId": "vn-tam-hop-default",
+      "sourceProfile": "quanshu-iztro-2f00e2ab",
+      "sourceReviewStatus": "AI_CROSS_REVIEWED",
+      "interpretationDecisionRef": "docs/knowledge/interpretation-decisions/juan2-quan-co-cu-mao.json",
+      "formulaComparisonStatus": "MATCH",
+      "approvedForInterpretation": true,
+      "interpretationStatus": "sourced",
+      "releasePermission": "withheld",
+      "expertVerified": false,
+      "bookVerified": false,
+      "relatedPalaces": [
+        "quan_loc"
+      ],
+      "conditionTree": {
+        "op": "and",
+        "items": [
+          {
+            "op": "same_palace",
+            "target": "quan_loc",
+            "stars": [
+              "Thiên Cơ",
+              "Cự Môn"
+            ]
+          },
+          {
+            "op": "branch",
+            "target": "quan_loc",
+            "branches": [
+              "Mão"
+            ]
+          }
+        ]
+      },
+      "conditionIds": [
+        "palace_quan_loc",
+        "thien_co_in_host",
+        "cu_mon_in_host",
+        "host_branch_mao",
+        "direct_host_only"
+      ],
+      "approvedWording": "Trong mục Quan Lộc của bản chép này, trường hợp Cự Môn đồng cung Thiên Cơ tại Mão được ghi “吉美”. Đây là ghi chú về đúng nhánh văn bản, không phải xếp hạng, kết luận toàn bộ công danh hay sự kiện đời đã kiểm chứng; các điều kiện gia sát trong đoạn chưa được đánh giá.",
+      "limitations": [
+        "paragraph_scoped_only",
+        "textual_branch_clause_only",
+        "modifier_not_evaluated",
+        "following_adverse_clause_not_omitted",
+        "not_an_integrated_career_judgment",
+        "not_a_whole_chart_judgment",
+        "not_a_brightness_change",
+        "source_brightness_not_engine_equivalence",
+        "not_a_verified_life_event",
+        "no_public_release"
+      ],
+      "compatibilityNote": "condition_read_only_projection_not_natal_formula_certification"
     }
   ]
 }

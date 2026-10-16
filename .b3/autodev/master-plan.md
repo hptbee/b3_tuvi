@@ -1,6 +1,6 @@
 # Autonomous Product Completion
 
-- version: 21
+- version: 22
 - source: User mission 2026-10-14; fresh run from upstream main 45615a48d0c75b90138cfc618320ffae6e9c34e0
 
 ## Original requirements
@@ -410,9 +410,9 @@ Version19 T028 actualmodels independently8fixtures+fullsource/modifiers21manifes
 Version20 concreteT028testcontract refinement: oldTai-negative1980-01-15h14 is a verifiednewpairpositive, so blanket internalProse===null inoldtestisobsolete. Preserveoldcondition/releaseassertions and assertabsenceofTHAToldclaimwording, notabsenceofallotherapprovednotes; newtest independentlyassertsexactnew/coexistingwording. No skipping/weakeningoldpredicatefailurecoverage. StrictsourceBheaderavailableguardcaughtserializationgap; originalreviewersuppliedtruthfulavailableflag, actualreviewpinsrefreshedwithoutsource/wordingchange.
 
 ### T029 — Quan Lộc Cơ–Cự tại Mão exact-source annotation
-- status: pending
+- status: completed
 - depends_on: [T028]
-- scope: Complete pinned Juan2 Quan Lộc reciprocal/brightness/adverse context, independent valid-input chart witnesses and exact dual source/wording review; finite existing sourcePalaceBinding/registry/new and relevant older branch-regression tests only after accepted fresh JIT readiness
+- scope: backend/src/knowledge/sourcePalaceBinding.js, backend/test/sourcePalaceQuanMao.test.mjs, backend/test/sourcePalaceQuan.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md, docs/knowledge/interpretation-claims.json, docs/knowledge/interpretation-decisions/juan2-quan-co-cu-mao.json, docs/knowledge/research/juan2-palace/, docs/knowledge/reviews/juan2-palace/review-quan-mao-a.json, docs/knowledge/reviews/juan2-palace/review-quan-mao-b.json, .gitattributes, README.md, docs/planning/AUTODEV_MASTER_PLAN_V2.md
 - acceptance_criteria:
   - Validate only the new 天機同在卯宮吉美 source branch; preserve existing Dậu claim/approval without duplication or unreviewed reuse
   - Preserve full reciprocal, 入廟/陷宮 and terminal adverse context; no grade, engine-brightness equivalence, integrated career or real-life outcome inference
@@ -422,3 +422,20 @@ Version20 concreteT028testcontract refinement: oldTai-negative1980-01-15h14 is a
   - Actual distinct-model exact source/interpretation review, independent valid-input source/chart/AST replay, coherent-reshash/cache/public-output regressions, full relevant CI and independent full-feature review plus routed performance within remaining invocation budget
 
 Version21 T028 complete:64backendfiles88.41/90.09PASS, independentfullfeature8/performance9/crosscut10clear; internalcoverage5→6, exactnew/oldTaiannotationscoexistwithoutpublicprose. Remainingtechnicalbudget2/12. T029 is evidence-backed nextsmallfiniteclaim, MEDIUMfullfeatureloop coversallinterfaces plusroutedperformance (two passesfit); no LARGEpartition/separatecrosscut required. Initialindependentninthcandidate usedinvalidgender0; rejectthatwitness and correctvalid±1search+metadata/APIreachability BEFOREanypacketfreeze/dualapproval. Originaleightmaleinputsremainvalid. NoT029implementationfrominvalidresearch.
+
+Version22 T029 independentlyverified9API-validfixtures+completepinnedsource21manifest BEFOREactualsol/astra. BothactualMATCH+INTERPRETATION_SUPPORTED_WITH_LIMITS; ownBclarified4scope-disclosuresnotruntimeexceptions, retainedfulltextsunderlimitationAnalysis andexceptions[]; parentunchangedcomparatornowAI_ACCEPTED/MATCH. No forced sourceconditionagreement. Source/wording/AST/fivedigestsunaltered. ExistingDậufalsecaseMãonownewapprovedpositive, nameoldQuanregressiontestinadvanceandpreserveoldclaim-wordingabsence plusnewexactmutualexclusiontests. Onefiniteexistingbinderentryno newlogic/helper.
+
+
+T029 final quality gate PASS (2026-10-16): exact pair AND Mão approved by both actual source models; nine valid real fixtures, immutable actual reviews and full-source context retained. Full backend65files88.43/90.09, frontend206/lint/build, all55 Chromium E2E PASS. Independent full-feature pass11 and performance pass12 clear; no confirmed blocking finding/fix. Approved internal coverage6→7. All original formulas/source/public/release gates unchanged. Invocation review budget12/12 exhausted; overall run INCOMPLETE, not product-complete. No further implementation this invocation.
+
+## Ordered next invocation queue (supersedes historical queues)
+1. T030 — candidate modern Đại hạn heavenly-stem extension: inspect complete pinned iztro dependency chain (TIGER_RULE, lunar year stem, index/config semantics) against B3 natal metadata; independently replay positive/negative real charts, then actual distinct-model source review BEFORE any implementation. T025 explicitly did not approve stems; existing profile/source/public contracts cannot silently expand. Status pending; source approval absent.
+2. Restore GitHub PR API access for the delivered T025→T027→T028→T029 branch stack; create focused PRs in dependency order, verify hosted CI and branch/domain gates before authorized auto-merge. No direct-main bypass or deployment.
+3. T026/T019/T022/T020 remain evidence-blocked as previously recorded; investigate only meaningful new passages/parameters, do not repeat identical NO-GO reviews or reinterpret modern approval as classical approval.
+
+### T030 — validate modern Đại hạn heavenly-stem candidate
+- status: pending
+- depends_on: [T025]
+- scope: pinned modern source/dependency research and independent fixture packet first; product implementation scope requires fresh JIT and actual source approval
+- acceptance_criteria: establish source identity, complete year-stem/TIGER_RULE/index/config semantics and projection boundary; independent valid-input positive/negative fixtures; actual dual approval before activation; preserve T025 approved branch/age semantics and all public gates
+- verification: independent source and runtime replay, actual dual judgments, fresh engineering review budget and complete relevant CI before any completion claim

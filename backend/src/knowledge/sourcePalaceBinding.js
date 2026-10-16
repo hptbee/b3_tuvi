@@ -73,6 +73,24 @@ const SUBJECTS = {
             '90fbeabf5fbcb3dbc61c1692d3519e59ddd37bcc7a75497dadd0aa865510d550'
         ]
     },
+    'interp-quanshu-quan-co-cu-mao-host': {
+        reviewA: 'docs/knowledge/reviews/juan2-palace/review-quan-mao-a.json',
+        reviewB: 'docs/knowledge/reviews/juan2-palace/review-quan-mao-b.json',
+        bundleFile: `${RESEARCH}review-bundle-quan-mao.json`, executionFile: `${RESEARCH}execution-quan-mao.json`,
+        decisionRef: 'docs/knowledge/interpretation-decisions/juan2-quan-co-cu-mao.json',
+        target: 'quan_loc', spanFile: 'quan-co-cu-mao-source-span.txt', contextFile: 'quan-co-cu-mao-context.txt',
+        acceptedDigests: {
+            sourceDigest: 'ae7aec7a8cb175d88b956f6562e7ccc138b45c65268c7bd0f7a7aba5a0966443',
+            contextDigest: 'bc5cb3737a70e083f983b4498af51281a266ae35ba2df71aa75fa46e7ad42ba4',
+            conditionTreeDigest: '712cb19572c1e5e54708fdc1055c14c6b1cda46e38bd34d7273e1f79aba05e51',
+            wordingDigest: '4ac9b9acbb853b7c601c5d2df4e13c2b41522eb489125177ad101fc500efbb62',
+            fixturesDigest: '62310a0b6c2ef5b3fe6e32d13aefeebccaa4fa66c3fd4ef234a8f23fd7730c7b'
+        },
+        reviewDocumentDigests: [
+            'ac4e78696d2b65991bb8bb1c7dd83aac1904be97ef06066eb7f2e089c7024e83',
+            'f3b5605b9b4a0a5e4d1ad58a61b6f6f2115fd476d0a9082a85b16ae1a2bba19a'
+        ]
+    },
     'interp-quanshu-quan-loc-co-cu-dau-host': {
         ...QUAN_RESOURCES,
         decisionRef: 'docs/knowledge/interpretation-decisions/juan2-quan-co-cu-dau.json',

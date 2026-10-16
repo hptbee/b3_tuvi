@@ -29,6 +29,7 @@ export const unitTests = [
     'test/sourcePalaceQuan.test.mjs',
     'test/sourcePalacePhucCoCu.test.mjs',
     'test/sourcePalaceTaiTuViPha.test.mjs',
+    'test/sourcePalaceQuanMao.test.mjs',
     'test/sprint11bInterpretation.test.mjs',
     'test/sprint11c12Evidence.test.mjs',
     'test/knowledgeCoverage.test.mjs',

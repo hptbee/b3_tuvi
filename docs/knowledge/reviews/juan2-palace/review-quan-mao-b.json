@@ -1,0 +1,146 @@
+{
+  "model": "gpt-6-astra",
+  "modelIdentityBasis": "orchestrator-assigned model",
+  "hostBuild": null,
+  "hostBuildExposed": false,
+  "available": true,
+  "independent": true,
+  "otherReviewerVerdictsRead": false,
+  "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "rawHtmlSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+  "expertVerified": false,
+  "bookVerified": false,
+  "publicRelease": false,
+  "runtimeRuleChangeApplied": false,
+  "defaultFormulaChangeAuthorized": false,
+  "empiricalTruthVerified": false,
+  "releasePermission": "withheld",
+  "reviews": [
+    {
+      "model": "gpt-6-astra",
+      "available": true,
+      "independent": true,
+      "otherReviewerVerdictsRead": false,
+      "sourceId": "ziwei-quanshu-iztro-transcription",
+      "sourceProfile": "quanshu-iztro-2f00e2ab",
+      "claimId": "interp-quanshu-quan-co-cu-mao-host",
+      "target": "quan_loc",
+      "editionId": "iztro-juan2-2f00e2ab0c80",
+      "schoolId": "vn-tam-hop-default",
+      "locator": "juan2/官祿宮/巨門",
+      "quotationPolicy": "source-sentence-v2",
+      "sourceDigest": "ae7aec7a8cb175d88b956f6562e7ccc138b45c65268c7bd0f7a7aba5a0966443",
+      "contextDigest": "bc5cb3737a70e083f983b4498af51281a266ae35ba2df71aa75fa46e7ad42ba4",
+      "conditionTreeDigest": "712cb19572c1e5e54708fdc1055c14c6b1cda46e38bd34d7273e1f79aba05e51",
+      "wordingDigest": "4ac9b9acbb853b7c601c5d2df4e13c2b41522eb489125177ad101fc500efbb62",
+      "fixturesDigest": "62310a0b6c2ef5b3fe6e32d13aefeebccaa4fa66c3fd4ef234a8f23fd7730c7b",
+      "verifiedDigests": {
+        "sourceDigest": "ae7aec7a8cb175d88b956f6562e7ccc138b45c65268c7bd0f7a7aba5a0966443",
+        "contextDigest": "bc5cb3737a70e083f983b4498af51281a266ae35ba2df71aa75fa46e7ad42ba4",
+        "conditionTreeDigest": "712cb19572c1e5e54708fdc1055c14c6b1cda46e38bd34d7273e1f79aba05e51",
+        "wordingDigest": "4ac9b9acbb853b7c601c5d2df4e13c2b41522eb489125177ad101fc500efbb62",
+        "fixturesDigest": "62310a0b6c2ef5b3fe6e32d13aefeebccaa4fa66c3fd4ef234a8f23fd7730c7b"
+      },
+      "quotation": "巨門入廟武職權貴，文人不耐久，太陽同有進退，入廟久長，天機同在卯宮吉美，在酉宮雖美無始終，\n陷宮遭悔吝，加羊陀火鈴空劫更不美，退宮卸職。",
+      "conditionTree": {
+        "op": "and",
+        "items": [
+          {
+            "op": "same_palace",
+            "target": "quan_loc",
+            "stars": [
+              "Thiên Cơ",
+              "Cự Môn"
+            ]
+          },
+          {
+            "op": "branch",
+            "target": "quan_loc",
+            "branches": [
+              "Mão"
+            ]
+          }
+        ]
+      },
+      "conditions": [
+        "palace_quan_loc",
+        "thien_co_in_host",
+        "cu_mon_in_host",
+        "host_branch_mao",
+        "direct_host_only"
+      ],
+      "exceptions": [],
+      "limitations": [
+        "paragraph_scoped_only",
+        "textual_branch_clause_only",
+        "modifier_not_evaluated",
+        "following_adverse_clause_not_omitted",
+        "not_an_integrated_career_judgment",
+        "not_a_whole_chart_judgment",
+        "not_a_brightness_change",
+        "source_brightness_not_engine_equivalence",
+        "not_a_verified_life_event",
+        "no_public_release"
+      ],
+      "approvedWording": "Trong mục Quan Lộc của bản chép này, trường hợp Cự Môn đồng cung Thiên Cơ tại Mão được ghi “吉美”. Đây là ghi chú về đúng nhánh văn bản, không phải xếp hạng, kết luận toàn bộ công danh hay sự kiện đời đã kiểm chứng; các điều kiện gia sát trong đoạn chưa được đánh giá.",
+      "reviewedWording": "Trong mục Quan Lộc của bản chép này, trường hợp Cự Môn đồng cung Thiên Cơ tại Mão được ghi “吉美”. Đây là ghi chú về đúng nhánh văn bản, không phải xếp hạng, kết luận toàn bộ công danh hay sự kiện đời đã kiểm chứng; các điều kiện gia sát trong đoạn chưa được đánh giá.",
+      "usage": "internal_research",
+      "formulaComparison": "MATCH",
+      "verdict": "MATCH",
+      "interpretationVerdict": "INTERPRETATION_SUPPORTED_WITH_LIMITS",
+      "expertVerified": false,
+      "bookVerified": false,
+      "publicRelease": false,
+      "runtimeRuleChangeApplied": false,
+      "defaultFormulaChangeAuthorized": false,
+      "empiricalTruthVerified": false,
+      "releasePermission": "withheld",
+      "rationale": "MATCH concerns only the direct-host same-palace pair AND Mão textual selector, whose actual engine evaluation agrees with independent Set membership and branch checks for nine API-valid births. It does not certify any natal formula or brightness mapping. In the complete 官祿巨門 entry, 天機同在卯宮吉美 explicitly records the branch named by the selector. The exact Vietnamese wording reports that textual fact and explicitly withholds integrated judgment and evaluation of adverse modifiers. The subsequent adverse/dismissal closure could change a synthesized career interpretation, but cannot erase that the transcription records 吉美 in this branch. It therefore does not prevent this attributed internal annotation under the stated limitations. The preceding military/civil/太陽 clauses and the reciprocal 天機 entry supply no warrant to convert this annotation into rank, profession, grade, actual career prediction or unqualified favorable result. 命宮 stem/sex material is not silently imported as a Quan condition.",
+      "fixtureAssessment": {
+        "count": 9,
+        "positive": 2,
+        "negative": 7,
+        "allInputsValidatedBeforeCalculation": true,
+        "allAnalyzerStatuses200": true,
+        "independentOracle": "Set of direct Quan host canonicalName values contains both stars AND host branchName equals Mão",
+        "canonicalMetadataRecorded": true,
+        "immutabilityChecked": true,
+        "ninthGender": -1,
+        "invalidGender0Excluded": true,
+        "missingPartnerLimit": "The two individual missing-partner negatives are at non-Mão branches and only discriminate the pair subtrace. The Mão neither-partner case discriminates dropping the entire pair. Frozen finite search reports 0 Mão single-partner charts in 35064 validated inputs; I did not rerun that search and do not assert a universal invariant. Exact source-binding AST checks must reject either partner deletion even when reachable fixtures cannot distinguish it.",
+        "scope": "engineering witnesses, not historical-source or natal-formula goldens"
+      },
+      "sourceAssessment": {
+        "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+        "rawHtmlSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+        "manifestFilesVerified": 21,
+        "sourceMethod": "git show pinned object in /tmp/tuvi-iztro-pinned; no HTTP request or HTTP status asserted",
+        "derivedMethod": "Inert standard HTMLParser data extraction excluding script/style; entire derived text equals raw extracted visible text after whitespace normalization. Exact derived byte hash also verified.",
+        "sourceClass": "secondary pinned modern transcription",
+        "MITNoticeVerified": true,
+        "historicalEditionAuthenticated": false,
+        "textCollatedAgainstHistoricalOriginal": false,
+        "fullQuanRead": true,
+        "fullReciprocalRead": true,
+        "fullGiantGateSpanRead": true,
+        "brightnessBranchContextRead": true,
+        "allRequiredAnchorsRetained": true,
+        "upstreamCodeExecuted": false
+      },
+      "proofFiles": [
+        "/tmp/t029/reviewer-b-verify.mjs",
+        "/tmp/t029/reviewer-b-verify.log",
+        "/tmp/t029/reviewer-b-proof.json",
+        "/tmp/t029/reviewer-b-source.py",
+        "/tmp/t029/reviewer-b-source-proof.json"
+      ],
+      "limitationAnalysis": [
+        "The terminal 陷宮遭悔吝，加羊陀火鈴空劫更不美，退宮卸職 remains source context and is unevaluated; no absence of adverse stars is inferred.",
+        "The reciprocal 天機 entry says 見羊陀火鈴方宜; this is retained without silently emending or reconciling it with 巨門.",
+        "Source 旺地 for 天機 and 入廟 for 巨門 at 卯酉 are distinct; engine M does not establish source equivalence.",
+        "Dậu fails this new Mão predicate. No old Dậu approval is reused or renewed."
+      ],
+      "exceptionSemanticsClarification": "After inspecting crossReview.js and decisionIntegrity.js, exceptions is encoded as additional source predicates required for this exact attributed wording. None are required beyond the approved exact condition tree. The four prior prose entries are scope disclosures, now preserved verbatim in limitationAnalysis, and remain binding interpretive restrictions. In particular neither absence of adverse stars nor a brightness threshold is added as a runtime condition. This clarification does not approve an integrated favorable career result or reevaluate any modifier; MATCH and INTERPRETATION_SUPPORTED_WITH_LIMITS retain their original narrow meaning. No other reviewer output was read."
+    }
+  ]
+}

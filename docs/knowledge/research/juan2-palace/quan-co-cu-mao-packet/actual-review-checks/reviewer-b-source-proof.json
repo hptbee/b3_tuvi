@@ -1,0 +1,8 @@
+{
+  "fullDerivedTextMatchesRawIgnoringWhitespace": true,
+  "fullQuanSectionMatches": true,
+  "completeSpanMatches": true,
+  "upstreamCodeExecuted": false,
+  "method": "Python standard HTMLParser inert data extraction; raw previously verified against pinned git object",
+  "historicalAuthentication": false
+}
