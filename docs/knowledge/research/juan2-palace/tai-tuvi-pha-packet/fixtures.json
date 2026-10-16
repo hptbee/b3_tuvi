@@ -1,0 +1,210 @@
+[
+  {
+    "id": "T028/01/negative_missing_pha",
+    "input": {
+      "day": 1,
+      "month": 1,
+      "year": 1980,
+      "hour": 0,
+      "gender": 1
+    },
+    "lunar": {
+      "lunarDay": 14,
+      "lunarMonth": 11,
+      "lunarYear": 1979,
+      "canIndex": 5,
+      "chiIndex": 8,
+      "canName": "Kỷ",
+      "chiName": "Mùi",
+      "isLeapMonth": false
+    },
+    "host": {
+      "id": "9",
+      "functionId": "tai_bach",
+      "branchName": "Thân"
+    },
+    "expected": false
+  },
+  {
+    "id": "T028/02/negative_missing_tuvi",
+    "input": {
+      "day": 1,
+      "month": 1,
+      "year": 1980,
+      "hour": 4,
+      "gender": 1
+    },
+    "lunar": {
+      "lunarDay": 14,
+      "lunarMonth": 11,
+      "lunarYear": 1979,
+      "canIndex": 5,
+      "chiIndex": 8,
+      "canName": "Kỷ",
+      "chiName": "Mùi",
+      "isLeapMonth": false
+    },
+    "host": {
+      "id": "7",
+      "functionId": "tai_bach",
+      "branchName": "Ngọ"
+    },
+    "expected": false
+  },
+  {
+    "id": "T028/03/positive_Sửu_no_four_adverse",
+    "input": {
+      "day": 15,
+      "month": 1,
+      "year": 1980,
+      "hour": 14,
+      "gender": 1
+    },
+    "lunar": {
+      "lunarDay": 28,
+      "lunarMonth": 11,
+      "lunarYear": 1979,
+      "canIndex": 5,
+      "chiIndex": 8,
+      "canName": "Kỷ",
+      "chiName": "Mùi",
+      "isLeapMonth": false
+    },
+    "host": {
+      "id": "2",
+      "functionId": "tai_bach",
+      "branchName": "Sửu"
+    },
+    "expected": true
+  },
+  {
+    "id": "T028/04/positive_Mùi_adverse",
+    "input": {
+      "day": 8,
+      "month": 2,
+      "year": 1980,
+      "hour": 4,
+      "gender": 1
+    },
+    "lunar": {
+      "lunarDay": 22,
+      "lunarMonth": 12,
+      "lunarYear": 1979,
+      "canIndex": 5,
+      "chiIndex": 8,
+      "canName": "Kỷ",
+      "chiName": "Mùi",
+      "isLeapMonth": false
+    },
+    "host": {
+      "id": "8",
+      "functionId": "tai_bach",
+      "branchName": "Mùi"
+    },
+    "expected": true
+  },
+  {
+    "id": "T028/05/negative_wrong_host_quan",
+    "input": {
+      "day": 8,
+      "month": 2,
+      "year": 1980,
+      "hour": 20,
+      "gender": 1
+    },
+    "lunar": {
+      "lunarDay": 22,
+      "lunarMonth": 12,
+      "lunarYear": 1979,
+      "canIndex": 5,
+      "chiIndex": 8,
+      "canName": "Kỷ",
+      "chiName": "Mùi",
+      "isLeapMonth": false
+    },
+    "host": {
+      "id": "12",
+      "functionId": "tai_bach",
+      "branchName": "Hợi"
+    },
+    "expected": false
+  },
+  {
+    "id": "T028/06/negative_wrong_host_menh",
+    "input": {
+      "day": 1,
+      "month": 3,
+      "year": 1980,
+      "hour": 2,
+      "gender": 1
+    },
+    "lunar": {
+      "lunarDay": 15,
+      "lunarMonth": 1,
+      "lunarYear": 1980,
+      "canIndex": 6,
+      "chiIndex": 9,
+      "canName": "Canh",
+      "chiName": "Thân",
+      "isLeapMonth": false
+    },
+    "host": {
+      "id": "10",
+      "functionId": "tai_bach",
+      "branchName": "Dậu"
+    },
+    "expected": false
+  },
+  {
+    "id": "T028/07/positive_Mùi_no_four_adverse",
+    "input": {
+      "day": 22,
+      "month": 2,
+      "year": 1981,
+      "hour": 6,
+      "gender": 1
+    },
+    "lunar": {
+      "lunarDay": 18,
+      "lunarMonth": 1,
+      "lunarYear": 1981,
+      "canIndex": 7,
+      "chiIndex": 10,
+      "canName": "Tân",
+      "chiName": "Dậu",
+      "isLeapMonth": false
+    },
+    "host": {
+      "id": "8",
+      "functionId": "tai_bach",
+      "branchName": "Mùi"
+    },
+    "expected": true
+  },
+  {
+    "id": "T028/08/positive_Sửu_adverse",
+    "input": {
+      "day": 28,
+      "month": 4,
+      "year": 1982,
+      "hour": 0,
+      "gender": 1
+    },
+    "lunar": {
+      "lunarDay": 5,
+      "lunarMonth": 4,
+      "lunarYear": 1982,
+      "canIndex": 8,
+      "chiIndex": 11,
+      "canName": "Nhâm",
+      "chiName": "Tuất",
+      "isLeapMonth": false
+    },
+    "host": {
+      "id": "2",
+      "functionId": "tai_bach",
+      "branchName": "Sửu"
+    },
+    "expected": true
+  }
+]

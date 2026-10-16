@@ -1,0 +1,236 @@
+[
+  {
+    "id": "T029/01/negative_missing_co",
+    "input": {
+      "day": 1,
+      "month": 1,
+      "year": 1980,
+      "hour": 8,
+      "gender": 1
+    },
+    "lunar": {
+      "lunarDay": 14,
+      "lunarMonth": 11,
+      "lunarYear": 1979,
+      "canIndex": 5,
+      "chiIndex": 8,
+      "canName": "Kỷ",
+      "chiName": "Mùi",
+      "isLeapMonth": false
+    },
+    "host": {
+      "id": "1",
+      "functionId": "quan_loc",
+      "branchName": "Tí"
+    },
+    "expected": false
+  },
+  {
+    "id": "T029/02/negative_missing_cu",
+    "input": {
+      "day": 1,
+      "month": 1,
+      "year": 1980,
+      "hour": 18,
+      "gender": 1
+    },
+    "lunar": {
+      "lunarDay": 14,
+      "lunarMonth": 11,
+      "lunarYear": 1979,
+      "canIndex": 5,
+      "chiIndex": 8,
+      "canName": "Kỷ",
+      "chiName": "Mùi",
+      "isLeapMonth": false
+    },
+    "host": {
+      "id": "8",
+      "functionId": "quan_loc",
+      "branchName": "Mùi"
+    },
+    "expected": false
+  },
+  {
+    "id": "T029/03/negative_wrong_host_tai",
+    "input": {
+      "day": 1,
+      "month": 2,
+      "year": 1980,
+      "hour": 12,
+      "gender": 1
+    },
+    "lunar": {
+      "lunarDay": 15,
+      "lunarMonth": 12,
+      "lunarYear": 1979,
+      "canIndex": 5,
+      "chiIndex": 8,
+      "canName": "Kỷ",
+      "chiName": "Mùi",
+      "isLeapMonth": false
+    },
+    "host": {
+      "id": "12",
+      "functionId": "quan_loc",
+      "branchName": "Hợi"
+    },
+    "expected": false
+  },
+  {
+    "id": "T029/04/negative_dau_four_adverse_absent",
+    "input": {
+      "day": 15,
+      "month": 2,
+      "year": 1980,
+      "hour": 16,
+      "gender": 1
+    },
+    "lunar": {
+      "lunarDay": 29,
+      "lunarMonth": 12,
+      "lunarYear": 1979,
+      "canIndex": 5,
+      "chiIndex": 8,
+      "canName": "Kỷ",
+      "chiName": "Mùi",
+      "isLeapMonth": false
+    },
+    "host": {
+      "id": "10",
+      "functionId": "quan_loc",
+      "branchName": "Dậu"
+    },
+    "expected": false
+  },
+  {
+    "id": "T029/05/positive_mao_four_adverse_absent",
+    "input": {
+      "day": 1,
+      "month": 3,
+      "year": 1980,
+      "hour": 6,
+      "gender": 1
+    },
+    "lunar": {
+      "lunarDay": 15,
+      "lunarMonth": 1,
+      "lunarYear": 1980,
+      "canIndex": 6,
+      "chiIndex": 9,
+      "canName": "Canh",
+      "chiName": "Thân",
+      "isLeapMonth": false
+    },
+    "host": {
+      "id": "4",
+      "functionId": "quan_loc",
+      "branchName": "Mão"
+    },
+    "expected": true
+  },
+  {
+    "id": "T029/06/negative_wrong_host_menh",
+    "input": {
+      "day": 1,
+      "month": 3,
+      "year": 1980,
+      "hour": 22,
+      "gender": 1
+    },
+    "lunar": {
+      "lunarDay": 15,
+      "lunarMonth": 1,
+      "lunarYear": 1980,
+      "canIndex": 6,
+      "chiIndex": 9,
+      "canName": "Canh",
+      "chiName": "Thân",
+      "isLeapMonth": false
+    },
+    "host": {
+      "id": "8",
+      "functionId": "quan_loc",
+      "branchName": "Mùi"
+    },
+    "expected": false
+  },
+  {
+    "id": "T029/07/negative_dau_four_adverse_present",
+    "input": {
+      "day": 8,
+      "month": 6,
+      "year": 1980,
+      "hour": 0,
+      "gender": 1
+    },
+    "lunar": {
+      "lunarDay": 26,
+      "lunarMonth": 4,
+      "lunarYear": 1980,
+      "canIndex": 6,
+      "chiIndex": 9,
+      "canName": "Canh",
+      "chiName": "Thân",
+      "isLeapMonth": false
+    },
+    "host": {
+      "id": "10",
+      "functionId": "quan_loc",
+      "branchName": "Dậu"
+    },
+    "expected": false
+  },
+  {
+    "id": "T029/08/positive_mao_four_adverse_present",
+    "input": {
+      "day": 15,
+      "month": 6,
+      "year": 1980,
+      "hour": 14,
+      "gender": 1
+    },
+    "lunar": {
+      "lunarDay": 3,
+      "lunarMonth": 5,
+      "lunarYear": 1980,
+      "canIndex": 6,
+      "chiIndex": 9,
+      "canName": "Canh",
+      "chiName": "Thân",
+      "isLeapMonth": false
+    },
+    "host": {
+      "id": "4",
+      "functionId": "quan_loc",
+      "branchName": "Mão"
+    },
+    "expected": true
+  },
+  {
+    "id": "T029/09/negative_mao_both_partners_absent",
+    "input": {
+      "day": 1,
+      "month": 1,
+      "year": 1991,
+      "hour": 2,
+      "gender": -1
+    },
+    "lunar": {
+      "lunarDay": 16,
+      "lunarMonth": 11,
+      "lunarYear": 1990,
+      "canIndex": 6,
+      "chiIndex": 7,
+      "canName": "Canh",
+      "chiName": "Ngọ",
+      "isLeapMonth": false
+    },
+    "host": {
+      "id": "4",
+      "functionId": "quan_loc",
+      "branchName": "Mão"
+    },
+    "expected": false
+  }
+]

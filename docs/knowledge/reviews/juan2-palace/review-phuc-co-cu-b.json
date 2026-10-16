@@ -1,0 +1,141 @@
+{
+  "model": "gpt-6-astra",
+  "requestedModel": "gpt-6-astra",
+  "hostBuildId": null,
+  "modelIdentityBasis": "orchestrator-requested model; host build identity unavailable",
+  "agentId": "/root/phuc_cocu_astra",
+  "reviewRef": "/tmp/t027/review-b.json",
+  "available": true,
+  "independent": true,
+  "otherReviewerVerdictsRead": false,
+  "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "rawHtmlSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+  "expertVerified": false,
+  "bookVerified": false,
+  "historicalAuthenticated": false,
+  "publicRelease": false,
+  "releasePermission": "withheld",
+  "reviews": [
+    {
+      "claimId": "interp-quanshu-phuc-co-cu-host",
+      "schoolId": "vn-tam-hop-default",
+      "sourceId": "ziwei-quanshu-iztro-transcription",
+      "editionId": "iztro-juan2-2f00e2ab0c80",
+      "sourceProfile": "quanshu-iztro-2f00e2ab",
+      "target": "phuc_duc",
+      "locator": "juan2/福德宮/天機+巨門",
+      "quotationPolicy": "source-sentence-v2",
+      "conditionTree": {
+        "op": "same_palace",
+        "target": "phuc_duc",
+        "stars": [
+          "Thiên Cơ",
+          "Cự Môn"
+        ]
+      },
+      "conditions": [
+        "palace_phuc_duc",
+        "thien_co_in_host",
+        "cu_mon_in_host",
+        "direct_host_only"
+      ],
+      "limitations": [
+        "reciprocal_paragraph_baseline_only",
+        "direct_host_only",
+        "added_adverse_clauses_retained_but_not_evaluated",
+        "kong_kiep_aliases_not_implemented",
+        "no_invented_brightness_or_branch_requirement",
+        "not_personality_or_health_diagnosis",
+        "not_a_whole_chart_judgment",
+        "not_a_verified_life_event",
+        "no_natal_formula_change",
+        "no_public_release"
+      ],
+      "proposedWording": "Riêng hai mục Thiên Cơ và Cự Môn tại Phúc Đức của bản chép này, nhánh hai sao đồng cung được ghi “勞力欠安” và “心忙不安”, gợi hình ảnh lao lực, lòng bận bịu, chưa yên. Đây là lời mô tả truyền thống cho đúng nhánh văn bản, không xác nhận tính cách hay tình trạng sức khỏe; các điều kiện gia sát ở cuối đoạn chưa được đánh giá.",
+      "usage": "internal_research",
+      "releasePermission": "withheld",
+      "sourceDigest": "ecab3739a743b233911914a43ef297847c2328b60254bddbed4e69c559f7b186",
+      "contextDigest": "1ad123491278d5fcc8c568956085100468f59e45bc57035339586d3387bc5757",
+      "conditionTreeDigest": "2b53a285d252dc8a7183322d9bd76fe1891fb8ec980ecc50b13118428c5e61b8",
+      "wordingDigest": "5804e6d68fb5de7bdd03d50decc0280aaf2faaae002296f31409c16ace3fe9ac",
+      "fixturesDigest": "fc389b054837ae2eb3369b62cbb8f7cd8464403f06389bf84740edccadc46487",
+      "model": "gpt-6-astra",
+      "requestedModel": "gpt-6-astra",
+      "modelIdentityBasis": "orchestrator-requested model; host build identity unavailable",
+      "hostBuildId": null,
+      "agentId": "/root/phuc_cocu_astra",
+      "reviewRef": "/tmp/t027/review-b.json",
+      "available": true,
+      "independent": true,
+      "otherReviewerVerdictsRead": false,
+      "formulaComparison": "MATCH",
+      "verdict": "MATCH",
+      "interpretationVerdict": "INTERPRETATION_SUPPORTED_WITH_LIMITS",
+      "exceptions": [],
+      "quotation": "天機先勞後逸，巨門同勞力欠安，天梁同享福，太陰同主快樂，加羊陀火鈴空劫奔走不得寧靜。\n巨門勞力不安，太陽同有憂有喜，天機同心忙不安，天同同享福，加羊陀火鈴空劫生平多憂。",
+      "approvedWording": "Riêng hai mục Thiên Cơ và Cự Môn tại Phúc Đức của bản chép này, nhánh hai sao đồng cung được ghi “勞力欠安” và “心忙不安”, gợi hình ảnh lao lực, lòng bận bịu, chưa yên. Đây là lời mô tả truyền thống cho đúng nhánh văn bản, không xác nhận tính cách hay tình trạng sức khỏe; các điều kiện gia sát ở cuối đoạn chưa được đánh giá.",
+      "reviewedWording": "Riêng hai mục Thiên Cơ và Cự Môn tại Phúc Đức của bản chép này, nhánh hai sao đồng cung được ghi “勞力欠安” và “心忙不安”, gợi hình ảnh lao lực, lòng bận bịu, chưa yên. Đây là lời mô tả truyền thống cho đúng nhánh văn bản, không xác nhận tính cách hay tình trạng sức khỏe; các điều kiện gia sát ở cuối đoạn chưa được đánh giá.",
+      "verifiedDigests": {
+        "sourceDigest": "ecab3739a743b233911914a43ef297847c2328b60254bddbed4e69c559f7b186",
+        "contextDigest": "1ad123491278d5fcc8c568956085100468f59e45bc57035339586d3387bc5757",
+        "conditionTreeDigest": "2b53a285d252dc8a7183322d9bd76fe1891fb8ec980ecc50b13118428c5e61b8",
+        "wordingDigest": "5804e6d68fb5de7bdd03d50decc0280aaf2faaae002296f31409c16ace3fe9ac",
+        "fixturesDigest": "fc389b054837ae2eb3369b62cbb8f7cd8464403f06389bf84740edccadc46487"
+      },
+      "expertVerified": false,
+      "bookVerified": false,
+      "historicalAuthenticated": false,
+      "originalEditionAuthenticated": false,
+      "publicRelease": false,
+      "defaultFormulaChangeAuthorized": false,
+      "empiricalTruthVerified": false,
+      "runtimeRuleChangeApplied": false,
+      "modifierGrammarAssessment": "The headings supply 天機 and 巨門 as subjects. 巨門同勞力欠安 and reciprocal 天機同心忙不安 are coordinate co-presence branches with their own predicates. Later 加羊陀火鈴空劫 introduces an added-condition clause; it may qualify the paragraph broadly but does not grammatically turn the preceding quotation into a claim restricted to absence of adverse stars. The two complete paragraphs are retained. This is support for reporting what those baseline textual branches say, expressly leaving the added-condition branches unevaluated; it is not support for a final chart judgment under those modifiers. No 無殺, 不見, brightness, or 卯/酉 restriction appears in these two cohost clauses. Other Juan2 passages expressly write such qualifiers where intended; the distinct 官祿 and 田宅 卯/酉 wording cannot be transferred.",
+      "wordingAssessment": "Exact Vietnamese wording is supported as an internally attributed textual paraphrase. 勞力 supports lao lực; 心忙 supports lòng bận bịu; 欠安 and 不安 support chưa yên in this contextual imagery. It quotes both Chinese phrases, limits itself to these two entries of this transcription, and expressly disclaims personality or health confirmation and unevaluated gia sát conditions. It does not assert observed traits, health, lifespan, wealth, grade or life events.",
+      "scopeAssessment": "MATCH applies only to exact same_palace phuc_duc with both named stars and the exact baseline-only wording/limitations. Both Mão and Dậu, with or without four directly hosted named adverse stars, may retrieve this annotation. Without those four is not a clean or favorable chart. 空劫 aliases and all added-adverse consequences remain unevaluated, not false. TPTC-only presence and a pair in another palace do not satisfy 同 in this branch.",
+      "independentChecks": {
+        "proofFile": "/tmp/t027/reviewer-b-proof.json",
+        "chartScript": "/tmp/t027/reviewer-b-check.mjs",
+        "chartLog": "/tmp/t027/reviewer-b-check.log",
+        "sourceScript": "/tmp/t027/reviewer-b-source.py",
+        "sourceLog": "/tmp/t027/reviewer-b-source.log",
+        "rawFetch": {
+          "url": "https://raw.githubusercontent.com/SylarLong/iztro/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/ancientBook-2.html",
+          "status": 200,
+          "sha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a"
+        },
+        "manifestFilesVerified": 16,
+        "fiveDigestClassesExact": true,
+        "derivedVisibleTextVerifiedIgnoringWhitespace": true,
+        "rawParagraphsVerified": true,
+        "realDOBCharts": 19,
+        "positive": 7,
+        "negative": 12,
+        "immutableCharts": 19,
+        "astVersusIndependentDirectSetOracle": true,
+        "negativeCategoriesIndependentlyAsserted": true,
+        "branchAdverseCoverage": [
+          "Dậu:false",
+          "Mão:false",
+          "Dậu:true",
+          "Mão:true"
+        ],
+        "networkNote": "Node fetch failed DNS; curl successfully downloaded the same pinned raw URL. Download bytes independently matched frozen raw artifact. No HTML or embedded script execution."
+      },
+      "sourceAssessment": {
+        "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+        "rawHtmlSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+        "editionAuthenticated": false,
+        "independentPinnedRawFetch": {
+          "url": "https://raw.githubusercontent.com/SylarLong/iztro/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/ancientBook-2.html",
+          "status": 200,
+          "sha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a"
+        },
+        "licenseRead": "Frozen mirror MIT license read; web footer also retained. No historical edition or rights authentication inferred.",
+        "fullDerivedJuan2Read": true,
+        "completePhucSectionRead": true,
+        "completeReciprocalParagraphsRead": true
+      }
+    }
+  ]
+}

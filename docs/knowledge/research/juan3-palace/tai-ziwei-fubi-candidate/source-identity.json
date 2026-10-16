@@ -1,0 +1,22 @@
+{
+  "sourceId": "ziwei-quanshu-iztro-transcription",
+  "editionId": "iztro-juan3-2f00e2ab0c80",
+  "sourceType": "secondary_transcription",
+  "schoolId": null,
+  "documentType": "pinned_html_transcription",
+  "documentUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/ancientBook-3.html",
+  "gitRepository": "https://github.com/SylarLong/iztro",
+  "gitCommit": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "gitPath": "docs/zh_TW/learn/ancientBook-3.html",
+  "contentSha256": "3b85b99796ee0dbf0f6285bd5c60f7b590e8d124fa52fe229413309dd495245c",
+  "derivedTextSha256": "bc1a8d8f3d124c06c3845b6a687149bd9900f06b97d86db202b6016dfeffe35b",
+  "authenticated": false,
+  "digitalArtifactVerified": true,
+  "originalEditionAuthenticated": false,
+  "textCollatedAgainstOriginal": false,
+  "bookVerified": false,
+  "expertVerified": false,
+  "publicRelease": false,
+  "compatibilityNote": "condition_read_only_projection_not_natal_formula_certification",
+  "rightsNote": "Bounded classical transcription retained with repository MIT notice. Modern mirror does not authenticate original edition or establish equality to unavailable Wikisource revisions."
+}

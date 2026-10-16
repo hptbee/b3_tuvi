@@ -4,7 +4,7 @@ import tuHoaMap from '../data/tuHoaMap.json' with { type: 'json' };
 
 const HOA_ORDER = ['Hóa Lộc', 'Hóa Quyền', 'Hóa Khoa', 'Hóa Kỵ'];
 
-const FUNCTION_BY_LABEL = {
+export const FUNCTION_BY_LABEL = Object.freeze({
     'MỆNH': 'menh',
     'PHỤ MẪU': 'phu_mau',
     'PHÚC ĐỨC': 'phuc_duc',
@@ -17,7 +17,7 @@ const FUNCTION_BY_LABEL = {
     'TỬ TỨC': 'tu_tuc',
     'PHU THÊ': 'phu_the',
     'HUYNH ĐỆ': 'huynh_de'
-};
+});
 
 const CUC_NUMBER_BY_NAME = Object.fromEntries(
     Object.entries(CUC_SO_MAP).map(([number, name]) => [name, Number(number)])

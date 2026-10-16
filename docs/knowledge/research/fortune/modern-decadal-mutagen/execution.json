@@ -1,0 +1,23 @@
+{
+  "note": "Actual independent model assignments and raw author judgments. Original actual author judgments retained without edited verdicts or semantic conditions. Host build identifiers unavailable. Fixtures froze before actual reviewers and before product implementation.",
+  "reviewers": [
+    {
+      "model": "gpt-6.1-sol",
+      "requestedModel": "gpt-6.1-sol",
+      "agentId": "/root/t032_sol",
+      "hostBuildId": null,
+      "available": true,
+      "reviewRef": "docs/knowledge/research/fortune/modern-decadal-mutagen/review-a.json",
+      "verdict": "MATCH"
+    },
+    {
+      "model": "gpt-6-astra",
+      "requestedModel": "gpt-6-astra",
+      "agentId": "/root/t032_astra",
+      "hostBuildId": null,
+      "available": true,
+      "reviewRef": "docs/knowledge/research/fortune/modern-decadal-mutagen/review-b.json",
+      "verdict": "MATCH"
+    }
+  ]
+}

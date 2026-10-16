@@ -1,0 +1,18 @@
+
+> tuvi-b@0.0.0 build
+> vite build
+
+vite v5.4.21 building for production...
+transforming...
+✓ 65 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.60 kB │ gzip:   0.43 kB
+dist/assets/index-Bvl3SNXL.css   48.01 kB │ gzip:  10.83 kB
+dist/assets/index-B9pBfyAD.js   345.33 kB │ gzip: 107.93 kB
+✓ built in 1.15s
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

@@ -1,0 +1,79 @@
+{
+  "policyVersion": "dual-ai-source-review-v1",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "decision": "AI_ACCEPTED",
+  "crossReviewOutcome": "AI_CROSS_REVIEWED",
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "iztro-juan2-2f00e2ab0c80",
+  "locator": "juan2/福德宮/天同",
+  "sourceDigest": "d0ef3ada30bc2f7c5a9ec33e3d94ad295a05ba621db929c8812b11cffe711798",
+  "claimId": "interp-quanshu-phuc-duc-dong-luong-host",
+  "formulaComparison": "MATCH",
+  "conditions": [
+    "direct_host_only",
+    "palace_phuc_duc",
+    "thien_dong_in_host",
+    "thien_luong_in_host"
+  ],
+  "exceptions": [],
+  "decisionId": "juan2-phuc-dong-luong-interpretation-2026-10-15",
+  "subjectType": "interpretation_claim",
+  "subjectId": "interp-quanshu-phuc-duc-dong-luong-host",
+  "sourceId": "ziwei-quanshu-iztro-transcription",
+  "sourceProfile": "quanshu-iztro-2f00e2ab",
+  "target": "phuc_duc",
+  "interpretationDecision": "AI_CROSS_REVIEWED",
+  "interpretationVerdict": "INTERPRETATION_SUPPORTED_WITH_LIMITS",
+  "reviewBundleFile": "docs/knowledge/research/juan2-palace/review-bundle.json",
+  "spanFile": "docs/knowledge/research/juan2-palace/phuc-dong-span.txt",
+  "contextFile": "docs/knowledge/research/juan2-palace/I04-full-section.txt",
+  "executionFile": "docs/knowledge/research/juan2-palace/execution.json",
+  "sourcePin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "artifactSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+  "contextDigest": "94595d84e838faa7e43d2c424c63d0268e10eb77789f0c37a36f857b0b658039",
+  "conditionTreeDigest": "37aec8b410db5dcb291c5574446b87577d966104f2386fca9b8b6434590cd5e8",
+  "wordingDigest": "21613f14fa8a4527bd816f43e9ed5b2b894071b77a2df3bb857a17a195ce27bd",
+  "fixturesDigest": "ef558ca0eda2f9025b526796a4abaa3813d88c9584f80c1fdda74739ab0e25ba",
+  "quotationPolicy": "source-sentence-v2",
+  "requiredAnchors": [
+    "天同快樂有福有壽",
+    "天梁同清閑快樂"
+  ],
+  "limitations": [
+    "paragraph_scoped_only",
+    "dong_cu_tension_not_adjudicated",
+    "no_inherited_longevity_claim",
+    "not_a_whole_chart_judgment",
+    "not_a_verified_life_event",
+    "no_public_release"
+  ],
+  "reviewers": [
+    {
+      "model": "gpt-6.1-sol",
+      "agentId": "/root/juan2_source_review_sol",
+      "reviewRef": "docs/knowledge/reviews/juan2-palace/review-a.json",
+      "requestedModel": "gpt-6.1-sol",
+      "hostBuildId": null,
+      "available": true,
+      "verdict": "MATCH",
+      "interpretationVerdict": "INTERPRETATION_SUPPORTED_WITH_LIMITS"
+    },
+    {
+      "model": "gpt-6-astra",
+      "agentId": "/root/juan2_source_review_astra",
+      "reviewRef": "docs/knowledge/reviews/juan2-palace/review-b.json",
+      "requestedModel": "gpt-6-astra",
+      "hostBuildId": null,
+      "available": true,
+      "verdict": "MATCH",
+      "interpretationVerdict": "INTERPRETATION_SUPPORTED_WITH_LIMITS"
+    }
+  ],
+  "bookVerified": false,
+  "publicRelease": false,
+  "releasePermission": "withheld",
+  "compatibilityNote": "condition_read_only_projection_not_natal_formula_certification",
+  "approvalScope": "Only the exact source-paragraph annotation and direct-host predicate; not original-edition authentication, whole-chart priority, empirical truth or default natal formula certification."
+}

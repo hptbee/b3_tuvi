@@ -1,0 +1,15 @@
+
+ RUN  v2.1.9 /workspace/b3_tuvi/frontend
+
+ ✓ src/components/StructuredAnalysis.test.jsx (209 tests) 14623ms
+
+ Test Files  1 passed (1)
+      Tests  209 passed (209)
+   Start at  13:22:20
+   Duration  15.37s (transform 126ms, setup 35ms, collect 202ms, tests 14.62s, environment 267ms, prepare 61ms)
+
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

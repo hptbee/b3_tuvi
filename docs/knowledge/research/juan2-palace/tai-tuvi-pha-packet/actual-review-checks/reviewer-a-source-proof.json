@@ -1,0 +1,11 @@
+{
+  "status": 200,
+  "url": "https://raw.githubusercontent.com/SylarLong/iztro/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/ancientBook-2.html",
+  "sha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+  "rawMatchesFrozen": true,
+  "completeEntriesMatch": true,
+  "allDerivedLinesInRaw": true,
+  "fullTaiAndBranchContextMatch": true,
+  "upstreamCodeExecuted": false,
+  "editionAuthenticated": false
+}

@@ -1,0 +1,37 @@
+{
+  "reviewers": [
+    {
+      "model": "gpt-6.1-sol",
+      "agentId": "/root/phuc_cocu_sol",
+      "reviewRef": "docs/knowledge/reviews/juan2-palace/review-phuc-co-cu-a.json",
+      "requestedModel": "gpt-6.1-sol",
+      "hostBuildId": null
+    },
+    {
+      "model": "gpt-6-astra",
+      "agentId": "/root/phuc_cocu_astra",
+      "reviewRef": "docs/knowledge/reviews/juan2-palace/review-phuc-co-cu-b.json",
+      "requestedModel": "gpt-6-astra",
+      "hostBuildId": null
+    }
+  ],
+  "attemptHistory": [
+    {
+      "status": "REVIEW_NOT_EXECUTED",
+      "reason": "Both initial tool turns failed usage limit; no judgments produced."
+    },
+    {
+      "status": "EXECUTED",
+      "reason": "User continuation triggered one actual retry; both independent tool tasks returned genuine reviews after source/fixture verification."
+    }
+  ],
+  "rawReviewSha256": {
+    "a": "50ccc3320ad82d45a4c83252ef190bf97c46d08c4eb7a04e217c2ab95605bd16",
+    "b": "e9bc282991c7981fd88a2d103c7a934d5ea32e0eb67988aaac5177ffc9233cd0"
+  },
+  "canonicalReviewDocumentSha256": {
+    "a": "ba606fb765e0281b4ec034cd034dda177005d1caa0993a405ffcbc12e459a87f",
+    "b": "791a98d5fba2e309528cb233fbefb83d69c839e03ad760b94b616dc495749ce1"
+  },
+  "note": "Actual requested tool models/tasks; hostBuildId unavailable/null. Raw outputs preserved verbatim. Independent19fixtures preceded review."
+}

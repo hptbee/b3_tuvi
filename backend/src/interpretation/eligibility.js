@@ -1,4 +1,9 @@
 import { evaluateRule } from '../engine/ruleEngine.js';
+import { verifyInterpretationBinding } from '../knowledge/interpretationBinding.js';
+import { evaluateCondition } from '../engine/conditionEval.js';
+import { DIA_CHI } from '../engine/constants.js';
+import { normalizeChi } from '../engine/starNames.js';
+import { SOURCE_PALACE_KIND } from '../knowledge/sourcePalaceBinding.js';
 
 function listedIds(value) {
     if (!Array.isArray(value)) return [];
@@ -77,6 +82,34 @@ export function evaluateClaimConditions(claim, chart = {}, palace = null) {
     return { evaluated: true, holds: true };
 }
 
+function sourcePalaceConditions(claim, binding, chart, palace) {
+    const record = (value) => value !== null && typeof value === 'object' && !Array.isArray(value);
+    const validPalaceId = (value) => ['string', 'number'].includes(typeof value) && /^(?:[1-9]|1[0-2])$/.test(String(value));
+    const palaces = Array.isArray(chart?.palaces) ? chart.palaces : [];
+    const targets = palaces.filter((item) => item?.functionId === binding.target);
+    const target = targets[0];
+    if (chart?.ok !== true || targets.length !== 1 || !Array.from(palaces).every(record) || target.functionStatus !== 'known'
+        || !validPalaceId(target.branchId) || !validPalaceId(target.id) || String(target.id) !== String(target.branchId)
+        || typeof target.branchName !== 'string' || normalizeChi(target.branchName) !== DIA_CHI[Number(target.branchId)]
+        || !Array.isArray(target.stars) || !Array.from(target.stars).every(record) || !record(chart.byStarId)
+        || !Object.values(chart.byStarId).every((instances) => Array.isArray(instances)
+            && Array.from(instances).every((hit) => record(hit) && validPalaceId(hit.palaceId)))) {
+        return { status: 'unknown', op: 'source_palace', reason: 'missing_or_ambiguous_palace', children: [] };
+    }
+    // conditionEval reads the star index; inconsistent host/index data cannot
+    // establish the source predicate. This check never changes placements.
+    const hostStars = new Set(target.stars.map((star) => star?.starId).filter(Boolean));
+    const indexedStars = Object.entries(chart.byStarId).filter(([, instances]) => instances.some((star) => String(star?.palaceId) === String(target.id)))
+        .map(([starId]) => starId);
+    if (hostStars.size !== indexedStars.length || indexedStars.some((starId) => !hostStars.has(starId))) {
+        return { status: 'unknown', op: 'source_palace', reason: 'inconsistent_star_index', children: [] };
+    }
+    if (palace && (palace.functionId !== binding.target || String(palace.id) !== String(target.id))) {
+        return { status: 'not_satisfied', op: 'source_palace', reason: 'statement_palace_mismatch', children: [] };
+    }
+    return evaluateCondition(claim.conditionTree, chart, { schoolId: chart.schoolId, profile: binding.sourceProfile });
+}
+
 /**
  * Separate gates. Formula MATCH and AI formula review do not approve interpretation.
  * Public release stays withheld unless releasePermission is owner_released.
@@ -97,10 +130,16 @@ export function claimEligibility(claim, chart = {}, palace = null, runtime = {})
     }
     if (claim?.approvedForInterpretation !== true) reasons.push('not_approved_for_interpretation');
     if (claim?.interpretationStatus !== 'sourced') reasons.push('interpretation_not_sourced');
+    const binding = verifyInterpretationBinding(claim);
+    if (!binding.ok) reasons.push(binding.reason);
     if (claim?.schoolId && claim.schoolId !== chart.schoolId) {
         reasons.push('school_mismatch');
     }
-    const conditions = evaluateClaimConditions(claim, chart, palace);
+    const sourcePalace = binding.ok && binding.kind === SOURCE_PALACE_KIND;
+    const conditionTrace = sourcePalace ? sourcePalaceConditions(claim, binding, chart, palace) : null;
+    const conditions = sourcePalace
+        ? { evaluated: ['satisfied', 'not_satisfied'].includes(conditionTrace.status), holds: conditionTrace.status === 'satisfied' }
+        : evaluateClaimConditions(claim, chart, palace);
     const formulaIsCondition = Boolean(claim?.formulaCatalogId) && !claim?.conditions && !(claim?.relatedStars || []).length && !claim?.rule;
     if (!formulaIsCondition && !conditions.evaluated) reasons.push('conditions_not_evaluated');
     else if (!formulaIsCondition && conditions.evaluated && !conditions.holds) reasons.push('conditions_not_met');
@@ -115,7 +154,7 @@ export function claimEligibility(claim, chart = {}, palace = null, runtime = {})
             && (!claim.sourceProfile || hit.sourceProfile === claim.sourceProfile))
         : null;
     if (claim?.formulaCatalogId && !bound) reasons.push('formula_runtime_not_matched');
-    if (claim?.approvedForInterpretation === true && !claim?.formulaCatalogId) reasons.push('formula_runtime_unbound');
+    if (claim?.approvedForInterpretation === true && !claim?.formulaCatalogId && !sourcePalace) reasons.push('formula_runtime_unbound');
     if (bound && (bound.gradeStatus === 'satisfied' || bound.formationStatus === 'satisfied')) {
         reasons.push('formation_or_grade_promoted');
     }
@@ -129,10 +168,11 @@ export function claimEligibility(claim, chart = {}, palace = null, runtime = {})
         runtimeConditions: formulaIsCondition
             ? 'deferred_to_formula_runtime'
             : (!conditions.evaluated ? 'not_evaluated' : (conditions.holds ? 'satisfied' : 'unsatisfied')),
-        formulaRuntime: claim?.formulaCatalogId ? (bound ? 'matched' : 'not_matched') : 'unbound',
+        formulaRuntime: sourcePalace ? 'not_applicable_source_predicate' : (claim?.formulaCatalogId ? (bound ? 'matched' : 'not_matched') : 'unbound'),
         grade: bound?.gradeStatus || 'not_recorded',
         breaking: bound?.breakingStatus || 'not_implemented',
-        interpretationApproval: claim?.approvedForInterpretation === true && claim?.interpretationStatus === 'sourced'
+        interpretationBinding: binding.ok ? 'verified' : 'not_verified',
+        interpretationApproval: binding.ok && claim?.approvedForInterpretation === true && claim?.interpretationStatus === 'sourced'
             ? 'approved'
             : 'not_approved',
         releasePermission
@@ -142,6 +182,7 @@ export function claimEligibility(claim, chart = {}, palace = null, runtime = {})
         eligible: reasons.length === 0,
         reasons,
         layers,
+        ...(sourcePalace ? { conditionTrace } : {}),
         publicRelease: releasePermission === 'owner_released' && reasons.length === 0
     };
 }

@@ -1,0 +1,170 @@
+{
+  "repository": "https://github.com/SylarLong/iztro",
+  "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "gitOrigin": "https://github.com/SylarLong/iztro.git",
+  "commitType": "commit",
+  "claim": "Pinned modern software formula, not classical book or real-world prediction evidence",
+  "files": [
+    {
+      "path": "src/astro/palace.ts",
+      "sha256": "a9c6d8444d5edcd241068f5bd83fed3aa38a57b206cebb221f86b8d4057b5273",
+      "bytes": 7799,
+      "method": "git show exact pinned object",
+      "gitBlob": "5a6912b9aaae65d24af32c8137c46442dd8cf4b4",
+      "existingSnapshotMatch": true,
+      "url": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/astro/palace.ts"
+    },
+    {
+      "path": "src/astro/astro.ts",
+      "sha256": "84e1fd5121bc6c5e7fb17ef3d8aadd0f8473ff8f2704c17c1af96e77388d49f8",
+      "bytes": 19029,
+      "method": "git show exact pinned object",
+      "gitBlob": "4111d5f58804e22de3664e0b008cbfb36bb2389e",
+      "existingSnapshotMatch": true,
+      "url": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/astro/astro.ts"
+    },
+    {
+      "path": "src/astro/config.ts",
+      "sha256": "e74d2bf23630f8faadfae9fd2d29c592ceb7a18d7396c0aba5d74959ea5d134e",
+      "bytes": 3825,
+      "method": "git show exact pinned object",
+      "gitBlob": "14ce2e513ac697d871e205f0f1f5e97c6d0b2c73",
+      "existingSnapshotMatch": true,
+      "url": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/astro/config.ts"
+    },
+    {
+      "path": "src/data/constants.ts",
+      "sha256": "e2411f73c7ea438b5186f2a3ef29fa54587ab78e25620b5a52b409ce9244043a",
+      "bytes": 3871,
+      "method": "git show exact pinned object",
+      "gitBlob": "5fd18072bb84a7ff8998ca739fd62269a9aa1ce1",
+      "existingSnapshotMatch": true,
+      "url": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/data/constants.ts"
+    },
+    {
+      "path": "src/data/types/astro.ts",
+      "sha256": "b24c25fa535e6b89fbe9b0e93deebe3851dd943cdd3baa290747b863506e3b85",
+      "bytes": 7671,
+      "method": "git show exact pinned object",
+      "gitBlob": "d120c6d4527a00b2a35547ef235fa1a5a13b5cb1",
+      "existingSnapshotMatch": true,
+      "url": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/data/types/astro.ts"
+    },
+    {
+      "path": "src/utils/index.ts",
+      "sha256": "9f3699115c9c149dc261f9a293e6c7ad40ac4f744884dba21b367b96d9bbfe16",
+      "bytes": 7614,
+      "method": "git show exact pinned object",
+      "gitBlob": "9d4d230fff5427ebef3014f45a0ce69356e8c936",
+      "existingSnapshotMatch": true,
+      "url": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/utils/index.ts"
+    },
+    {
+      "path": "src/i18n/index.ts",
+      "sha256": "06da411d37e4e5f3dc7d922f3dbce0f9fcb2fe1125619873e6a651eabc63d558",
+      "bytes": 2943,
+      "method": "git show exact pinned object",
+      "gitBlob": "2243e4011b72296aed066f7e12acde8bdb2f496d",
+      "existingSnapshotMatch": true,
+      "url": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/index.ts"
+    },
+    {
+      "path": "src/i18n/locales/vi-VN/index.ts",
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007",
+      "bytes": 503,
+      "method": "git show exact pinned object",
+      "gitBlob": "61981406edb70a3e2afc5a348d34e4bd32caf170",
+      "existingSnapshotMatch": true,
+      "url": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/vi-VN/index.ts"
+    },
+    {
+      "path": "src/i18n/locales/vi-VN/heavenlyStem.ts",
+      "sha256": "4b0805baf3aa2555e4db3c804e6947f179e5905b1e73c9c261cbd35e38d6b2ea",
+      "bytes": 264,
+      "method": "git show exact pinned object",
+      "gitBlob": "b4841e7c96f3459164c814691737823bfe48b785",
+      "existingSnapshotMatch": null,
+      "url": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/vi-VN/heavenlyStem.ts"
+    },
+    {
+      "path": "src/i18n/locales/vi-VN/earthlyBranch.ts",
+      "sha256": "933f9475bd0b580904515dc3198f059f8924310de10dd8538d2eb02e26311f0c",
+      "bytes": 300,
+      "method": "git show exact pinned object",
+      "gitBlob": "e2a21af03d63a279e9b629039e7573301b3b4aad",
+      "existingSnapshotMatch": true,
+      "url": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/vi-VN/earthlyBranch.ts"
+    },
+    {
+      "path": "package.json",
+      "sha256": "2b7d04100c48599e4fe02f5ec1521f5ca45b41914adf5a5472e86abc6dfa1ee6",
+      "bytes": 2732,
+      "method": "git show exact pinned object",
+      "gitBlob": "148bb95862f9fe623f828b872b62f3ba578c114f",
+      "existingSnapshotMatch": null,
+      "url": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/package.json"
+    },
+    {
+      "path": "yarn.lock",
+      "sha256": "0a20660c41f9fe4ae7138fd508dd60a3399146a41bcc741bde375a1a285a2111",
+      "bytes": 225441,
+      "method": "git show exact pinned object",
+      "gitBlob": "e6622cb10daad796215c2312250ac7617319b54e",
+      "existingSnapshotMatch": null,
+      "url": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/yarn.lock"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "e6c7b6e313cbda3135b41bccc66c98be132cb8319d0d465903d17e669e748b36",
+      "bytes": 1073,
+      "method": "git show exact pinned object",
+      "gitBlob": "af1e0c83c0a8095bd9faa83265ba67a441422657",
+      "existingSnapshotMatch": true,
+      "url": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/LICENSE"
+    }
+  ],
+  "rawRefetch": {
+    "url": "https://raw.githubusercontent.com/SylarLong/iztro/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/astro/palace.ts",
+    "method": "curl --fail --location exact commit URL",
+    "httpStatus": 200,
+    "bytes": 7799,
+    "sha256": "a9c6d8444d5edcd241068f5bd83fed3aa38a57b206cebb221f86b8d4057b5273",
+    "agreesWithGitObject": true
+  },
+  "derived": [
+    {
+      "path": "review-context.txt",
+      "sha256": "8abb9bcfb763e1e5c8e4ee6f6892a46a0983f13a92ba538bcff85e4712d21267"
+    },
+    {
+      "path": "source-span.txt",
+      "sha256": "d5342272cab276bc6d17d1be3e837873a67410d4f961cd22bfc1975a843cc817"
+    },
+    {
+      "path": "decadal-main-block.txt",
+      "sha256": "ff1cd395ccd3bb912d5f96391138007e2514c1f0d1fa84300b8375fa1739d6e7"
+    }
+  ],
+  "dependencyInspection": {
+    "package": "lunar-lite",
+    "version": "0.2.8",
+    "url": "https://registry.npmjs.org/lunar-lite/-/lunar-lite-0.2.8.tgz",
+    "httpStatus": 200,
+    "integrity": "sha512-Y4tba4RaIFI0ikImJhgoEsyqtDE64lJIM3yFwRX01dbmagCDq7rNmpDQFrSFFy4WXeuywdRVFpIBoT1GGCEizw==",
+    "matchesPinnedYarnLockIntegrity": true,
+    "sha256": "963f134a8a46b92ec6e243a98be90dc5a33c33637581b151b7c11e5833d0b157",
+    "readOnlyInspection": true,
+    "executed": false,
+    "extractedGanzhiSha256": "5b7ec19b55f1d703bce40694a7dfb172ddbf3358cef2682f7c048c65b01cba2d",
+    "conclusion": "year normal dispatches getYearGan/getYearZhi; otherwise getYearGanByLiChun/getYearZhiByLiChun; lunar-typescript implementation not verified or declared equal to B3 calendar"
+  },
+  "spanExtraction": {
+    "source": "src/astro/palace.ts",
+    "startLine": 174,
+    "endLine": 234,
+    "method": "join original raw byte lines retaining line endings",
+    "mainBlockArchive": "decadal-main-block.txt",
+    "mainBlockStartLine": 186,
+    "mainBlockEndLine": 217
+  }
+}

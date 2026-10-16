@@ -1,0 +1,79 @@
+{
+  "policyVersion": "dual-ai-source-review-v1",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "decision": "AI_ACCEPTED",
+  "crossReviewOutcome": "AI_CROSS_REVIEWED",
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "iztro-juan2-2f00e2ab0c80",
+  "locator": "juan2/財帛宮/紫微",
+  "sourceDigest": "e1775da2696c9c9069a6f6229b7bb606bfebad004c9e41dc38bab1eb6928599c",
+  "claimId": "interp-quanshu-tai-bach-tu-vi-four-adverse-host",
+  "formulaComparison": "MATCH",
+  "conditions": [
+    "any_kinh_da_hoa_linh_in_host",
+    "direct_host_only",
+    "palace_tai_bach",
+    "tu_vi_in_host"
+  ],
+  "exceptions": [],
+  "decisionId": "juan2-tai-tuvi-interpretation-2026-10-15",
+  "subjectType": "interpretation_claim",
+  "subjectId": "interp-quanshu-tai-bach-tu-vi-four-adverse-host",
+  "sourceId": "ziwei-quanshu-iztro-transcription",
+  "sourceProfile": "quanshu-iztro-2f00e2ab",
+  "target": "tai_bach",
+  "interpretationDecision": "AI_CROSS_REVIEWED",
+  "interpretationVerdict": "INTERPRETATION_SUPPORTED_WITH_LIMITS",
+  "reviewBundleFile": "docs/knowledge/research/juan2-palace/review-bundle.json",
+  "spanFile": "docs/knowledge/research/juan2-palace/tai-tuvi-span.txt",
+  "contextFile": "docs/knowledge/research/juan2-palace/I02-full-section.txt",
+  "executionFile": "docs/knowledge/research/juan2-palace/execution.json",
+  "sourcePin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "artifactSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+  "contextDigest": "d01cdb3c1b04aefd5a835d6829c416cab5ccdb46a257d55c4466dfb4288430f5",
+  "conditionTreeDigest": "7d3498099f34478b9faeaad33abcfe3ed10f0f29a1a797141e579807d31d3d72",
+  "wordingDigest": "9547777c07d6557d074baf62d5669d78b53f03caaa92ed90604a538f39866067",
+  "fixturesDigest": "506cd41cd337060be344dd8acd97565fec50fd19fbbeebe298d49511b01178eb",
+  "quotationPolicy": "source-sentence-v2",
+  "requiredAnchors": [
+    "加羊陀火鈴空劫不旺",
+    "天府同富足終身保守"
+  ],
+  "limitations": [
+    "paragraph_scoped_only",
+    "direct_host_sufficient_subset_only",
+    "khong_kiep_aliases_not_implemented",
+    "not_a_brightness_change",
+    "not_a_verified_life_event",
+    "no_whole_chart_or_public_release"
+  ],
+  "reviewers": [
+    {
+      "model": "gpt-6.1-sol",
+      "agentId": "/root/juan2_source_review_sol",
+      "reviewRef": "docs/knowledge/reviews/juan2-palace/review-a.json",
+      "requestedModel": "gpt-6.1-sol",
+      "hostBuildId": null,
+      "available": true,
+      "verdict": "MATCH",
+      "interpretationVerdict": "INTERPRETATION_SUPPORTED_WITH_LIMITS"
+    },
+    {
+      "model": "gpt-6-astra",
+      "agentId": "/root/juan2_source_review_astra",
+      "reviewRef": "docs/knowledge/reviews/juan2-palace/review-b.json",
+      "requestedModel": "gpt-6-astra",
+      "hostBuildId": null,
+      "available": true,
+      "verdict": "MATCH",
+      "interpretationVerdict": "INTERPRETATION_SUPPORTED_WITH_LIMITS"
+    }
+  ],
+  "bookVerified": false,
+  "publicRelease": false,
+  "releasePermission": "withheld",
+  "compatibilityNote": "condition_read_only_projection_not_natal_formula_certification",
+  "approvalScope": "Only the exact source-paragraph annotation and direct-host predicate; not original-edition authentication, whole-chart priority, empirical truth or default natal formula certification."
+}

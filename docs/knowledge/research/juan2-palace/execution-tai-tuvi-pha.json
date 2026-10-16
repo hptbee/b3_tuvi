@@ -1,0 +1,33 @@
+{
+  "reviewers": [
+    {
+      "model": "gpt-6.1-sol",
+      "agentId": "/root/tai_pha_sol",
+      "reviewRef": "docs/knowledge/reviews/juan2-palace/review-tai-tuvi-pha-a.json",
+      "requestedModel": "gpt-6.1-sol",
+      "hostBuildId": null
+    },
+    {
+      "model": "gpt-6-astra",
+      "agentId": "/root/tai_pha_astra",
+      "reviewRef": "docs/knowledge/reviews/juan2-palace/review-tai-tuvi-pha-b.json",
+      "requestedModel": "gpt-6-astra",
+      "hostBuildId": null
+    }
+  ],
+  "attemptHistory": [
+    {
+      "status": "EXECUTED",
+      "reason": "Both independent tool tasks returned genuine source/wording reviews after eight independent fixture witnesses. B initial DNS failed, proxy-aware curl independently fetched actualHTTP200. Intake factual erratum separately assessed by both reviewers without changing source approval."
+    }
+  ],
+  "rawReviewSha256": {
+    "a": "d772a3c96102d448199e8ac4570b217fbdafe9d9e23053a758ace419ca939173",
+    "b": "b7c1268dc0cfa954093533a32f3c77b8dbf3942c42d224601884dc540a8410f6"
+  },
+  "canonicalReviewDocumentSha256": {
+    "a": "bdf3f1cdd4215f4ce52e6b2d71dbd86a222831acb338d36bc50955acd771462b",
+    "b": "90fbeabf5fbcb3dbc61c1692d3519e59ddd37bcc7a75497dadd0aa865510d550"
+  },
+  "note": "Actual requested tool models/tasks; hostBuildId unavailable/null. Raw outputs preserved verbatim. Independent8fixtures preceded review."
+}

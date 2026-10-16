@@ -1,2 +1,30 @@
 # Source digests and extraction prompts bind to these exact LF text bytes.
 docs/knowledge/**/*.txt text eol=lf
+
+# Modern profile fixtures are approved as exact LF bytes, including JSON formatting.
+docs/knowledge/research/fortune/modern-minor/fixtures.json text eol=lf
+
+# T025 immutable review/input artifacts, including raw source snapshots, hash exact LF bytes.
+docs/knowledge/research/fortune/modern-decadal/** text eol=lf
+
+# Exact frozen source/wording/review inputs for the next internal palace claim.
+docs/knowledge/research/juan2-palace/phuc-co-cu-packet/** text eol=lf
+docs/knowledge/research/juan2-palace/review-bundle-phuc-co-cu.json text eol=lf
+docs/knowledge/reviews/juan2-palace/review-phuc-co-cu-*.json text eol=lf
+docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/** text eol=lf
+
+# T028 exact frozen source, wording and actual review inputs.
+docs/knowledge/research/juan2-palace/tai-tuvi-pha-packet/** text eol=lf
+docs/knowledge/research/juan2-palace/review-bundle-tai-tuvi-pha.json text eol=lf
+docs/knowledge/reviews/juan2-palace/review-tai-tuvi-pha-*.json text eol=lf
+
+# T029 exact frozen source, wording and actual review inputs.
+docs/knowledge/research/juan2-palace/quan-co-cu-mao-packet/** text eol=lf
+docs/knowledge/research/juan2-palace/review-bundle-quan-mao.json text eol=lf
+docs/knowledge/reviews/juan2-palace/review-quan-mao-*.json text eol=lf
+
+# T030 separately approved modern stem profile: preserve exact reviewed bytes.
+docs/knowledge/research/fortune/modern-decadal-stem/** text eol=lf
+
+# T032 independent default decadal transformation association evidence.
+docs/knowledge/research/fortune/modern-decadal-mutagen/** text eol=lf

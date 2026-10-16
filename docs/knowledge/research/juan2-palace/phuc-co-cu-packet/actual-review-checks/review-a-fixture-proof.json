@@ -1,0 +1,778 @@
+{
+  "status": "PASS",
+  "verifiedDigests": {
+    "sourceDigest": "ecab3739a743b233911914a43ef297847c2328b60254bddbed4e69c559f7b186",
+    "contextDigest": "1ad123491278d5fcc8c568956085100468f59e45bc57035339586d3387bc5757",
+    "conditionTreeDigest": "2b53a285d252dc8a7183322d9bd76fe1891fb8ec980ecc50b13118428c5e61b8",
+    "wordingDigest": "5804e6d68fb5de7bdd03d50decc0280aaf2faaae002296f31409c16ace3fe9ac",
+    "fixturesDigest": "fc389b054837ae2eb3369b62cbb8f7cd8464403f06389bf84740edccadc46487"
+  },
+  "fixtures": 19,
+  "positive": 7,
+  "negative": 12,
+  "cells": {
+    "Dậu/without": 1,
+    "Mão/without": 2,
+    "Dậu/with": 3,
+    "Mão/with": 1
+  },
+  "chartImmutability": true,
+  "rows": [
+    {
+      "id": "T027/01/negative_cu_only_in_relation",
+      "input": {
+        "day": 8,
+        "month": 1,
+        "year": 1980,
+        "hour": 2,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 21,
+        "lunarMonth": 11,
+        "lunarYear": 1979,
+        "canIndex": 5,
+        "chiIndex": 8,
+        "canName": "Kỷ",
+        "chiName": "Mùi",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "2",
+        "branch": "Sửu",
+        "stars": [
+          "Thiên Cơ",
+          "Tấu Thư",
+          "Tuế Phá",
+          "Thiên Hư",
+          "Phá Toái"
+        ]
+      },
+      "co": true,
+      "cu": false,
+      "oracle": false,
+      "ast": "not_satisfied",
+      "directNamedAdverse": []
+    },
+    {
+      "id": "T027/02/negative_cu_only_in_relation",
+      "input": {
+        "day": 8,
+        "month": 1,
+        "year": 1980,
+        "hour": 14,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 21,
+        "lunarMonth": 11,
+        "lunarYear": 1979,
+        "canIndex": 5,
+        "chiIndex": 8,
+        "canName": "Kỷ",
+        "chiName": "Mùi",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "8",
+        "branch": "Mùi",
+        "stars": [
+          "Thiên Cơ",
+          "Hoa Cái",
+          "Kình Dương",
+          "Quan Phủ",
+          "Thái Tuế",
+          "Thiên Hình"
+        ]
+      },
+      "co": true,
+      "cu": false,
+      "oracle": false,
+      "ast": "not_satisfied",
+      "directNamedAdverse": [
+        "Kình Dương"
+      ]
+    },
+    {
+      "id": "T027/03/negative_cu_only_in_relation",
+      "input": {
+        "day": 22,
+        "month": 1,
+        "year": 1980,
+        "hour": 6,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 5,
+        "lunarMonth": 12,
+        "lunarYear": 1979,
+        "canIndex": 5,
+        "chiIndex": 8,
+        "canName": "Kỷ",
+        "chiName": "Mùi",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "1",
+        "branch": "Tí",
+        "stars": [
+          "Thiên Cơ",
+          "Thiên Khôi",
+          "Đào Hoa",
+          "Thiên Y",
+          "Nguyệt Đức",
+          "Phi Liêm",
+          "Tử Phù",
+          "Thiên Diêu"
+        ]
+      },
+      "co": true,
+      "cu": false,
+      "oracle": false,
+      "ast": "not_satisfied",
+      "directNamedAdverse": []
+    },
+    {
+      "id": "T027/04/negative_wrong_host",
+      "input": {
+        "day": 8,
+        "month": 1,
+        "year": 1980,
+        "hour": 6,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 21,
+        "lunarMonth": 11,
+        "lunarYear": 1979,
+        "canIndex": 5,
+        "chiIndex": 8,
+        "canName": "Kỷ",
+        "chiName": "Mùi",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "12",
+        "branch": "Hợi",
+        "stars": [
+          "Thiên Đồng",
+          "Hỉ Thần",
+          "Quan Phù",
+          "Long Trì",
+          "Thiên Y",
+          "Đường Phù",
+          "Thiên Khốc",
+          "Thiên Diêu"
+        ]
+      },
+      "co": false,
+      "cu": false,
+      "oracle": false,
+      "ast": "not_satisfied",
+      "directNamedAdverse": []
+    },
+    {
+      "id": "T027/05/negative_wrong_host",
+      "input": {
+        "day": 8,
+        "month": 1,
+        "year": 1980,
+        "hour": 8,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 21,
+        "lunarMonth": 11,
+        "lunarYear": 1979,
+        "canIndex": 5,
+        "chiIndex": 8,
+        "canName": "Kỷ",
+        "chiName": "Mùi",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "11",
+        "branch": "Tuất",
+        "stars": [
+          "Phá Quân",
+          "Thiếu Âm",
+          "Thai Phụ",
+          "Tam Thai",
+          "Bệnh Phù",
+          "Địa Võng"
+        ]
+      },
+      "co": false,
+      "cu": false,
+      "oracle": false,
+      "ast": "not_satisfied",
+      "directNamedAdverse": []
+    },
+    {
+      "id": "T027/06/negative_wrong_host",
+      "input": {
+        "day": 8,
+        "month": 1,
+        "year": 1980,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 21,
+        "lunarMonth": 11,
+        "lunarYear": 1979,
+        "canIndex": 5,
+        "chiIndex": 8,
+        "canName": "Kỷ",
+        "chiName": "Mùi",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "9",
+        "branch": "Thân",
+        "stars": [
+          "Tham Lang",
+          "Thiếu Dương",
+          "Thiên Việt",
+          "Hồng Loan",
+          "Phong Cáo",
+          "Thiên Trù",
+          "Hóa Quyền",
+          "Phục Binh",
+          "Cô Thần",
+          "Thiên Không",
+          "Kiếp Sát"
+        ]
+      },
+      "co": false,
+      "cu": false,
+      "oracle": false,
+      "ast": "not_satisfied",
+      "directNamedAdverse": []
+    },
+    {
+      "id": "T027/07/positive_cohost_clean",
+      "input": {
+        "day": 8,
+        "month": 1,
+        "year": 1980,
+        "hour": 10,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 21,
+        "lunarMonth": 11,
+        "lunarYear": 1979,
+        "canIndex": 5,
+        "chiIndex": 8,
+        "canName": "Kỷ",
+        "chiName": "Mùi",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "10",
+        "branch": "Dậu",
+        "stars": [
+          "Thiên Cơ",
+          "Cự Môn",
+          "Văn Khúc",
+          "Văn Tinh",
+          "Thiên Quan",
+          "Đại Hao",
+          "Tang Môn",
+          "Hóa Kỵ"
+        ]
+      },
+      "co": true,
+      "cu": true,
+      "oracle": true,
+      "ast": "satisfied",
+      "directNamedAdverse": []
+    },
+    {
+      "id": "T027/08/positive_cohost_clean",
+      "input": {
+        "day": 8,
+        "month": 4,
+        "year": 1980,
+        "hour": 4,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 23,
+        "lunarMonth": 2,
+        "lunarYear": 1980,
+        "canIndex": 6,
+        "chiIndex": 9,
+        "canName": "Canh",
+        "chiName": "Thân",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "4",
+        "branch": "Mão",
+        "stars": [
+          "Thiên Cơ",
+          "Cự Môn",
+          "Hỉ Thần",
+          "Long Đức",
+          "Tam Thai",
+          "Lưu Hà"
+        ]
+      },
+      "co": true,
+      "cu": true,
+      "oracle": true,
+      "ast": "satisfied",
+      "directNamedAdverse": []
+    },
+    {
+      "id": "T027/09/positive_cohost_clean",
+      "input": {
+        "day": 15,
+        "month": 7,
+        "year": 1980,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 4,
+        "lunarMonth": 6,
+        "lunarYear": 1980,
+        "canIndex": 6,
+        "chiIndex": 9,
+        "canName": "Canh",
+        "chiName": "Thân",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "4",
+        "branch": "Mão",
+        "stars": [
+          "Thiên Cơ",
+          "Cự Môn",
+          "Hỉ Thần",
+          "Long Đức",
+          "Lưu Hà"
+        ]
+      },
+      "co": true,
+      "cu": true,
+      "oracle": true,
+      "ast": "satisfied",
+      "directNamedAdverse": []
+    },
+    {
+      "id": "T027/10/negative_cu_only",
+      "input": {
+        "day": 8,
+        "month": 1,
+        "year": 1980,
+        "hour": 18,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 21,
+        "lunarMonth": 11,
+        "lunarYear": 1979,
+        "canIndex": 5,
+        "chiIndex": 8,
+        "canName": "Kỷ",
+        "chiName": "Mùi",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "6",
+        "branch": "Tị",
+        "stars": [
+          "Cự Môn",
+          "Lực Sĩ",
+          "Thiên Mã",
+          "Địa Giải",
+          "Đà La",
+          "Điếu Khách"
+        ]
+      },
+      "co": false,
+      "cu": true,
+      "oracle": false,
+      "ast": "not_satisfied",
+      "directNamedAdverse": [
+        "Đà La"
+      ]
+    },
+    {
+      "id": "T027/11/negative_cu_only",
+      "input": {
+        "day": 15,
+        "month": 1,
+        "year": 1980,
+        "hour": 6,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 28,
+        "lunarMonth": 11,
+        "lunarYear": 1979,
+        "canIndex": 5,
+        "chiIndex": 8,
+        "canName": "Kỷ",
+        "chiName": "Mùi",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "12",
+        "branch": "Hợi",
+        "stars": [
+          "Cự Môn",
+          "Hỉ Thần",
+          "Quan Phù",
+          "Long Trì",
+          "Thiên Y",
+          "Đường Phù",
+          "Thiên Khốc",
+          "Thiên Diêu"
+        ]
+      },
+      "co": false,
+      "cu": true,
+      "oracle": false,
+      "ast": "not_satisfied",
+      "directNamedAdverse": []
+    },
+    {
+      "id": "T027/12/negative_cu_only",
+      "input": {
+        "day": 15,
+        "month": 1,
+        "year": 1980,
+        "hour": 16,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 28,
+        "lunarMonth": 11,
+        "lunarYear": 1979,
+        "canIndex": 5,
+        "chiIndex": 8,
+        "canName": "Kỷ",
+        "chiName": "Mùi",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "7",
+        "branch": "Ngọ",
+        "stars": [
+          "Cự Môn",
+          "Lộc Tồn",
+          "Bác Sĩ",
+          "Thiên Giải",
+          "Trực Phù",
+          "Linh Tinh",
+          "Lưu Hà"
+        ]
+      },
+      "co": false,
+      "cu": true,
+      "oracle": false,
+      "ast": "not_satisfied",
+      "directNamedAdverse": [
+        "Linh Tinh"
+      ]
+    },
+    {
+      "id": "T027/13/negative_co_only",
+      "input": {
+        "day": 15,
+        "month": 1,
+        "year": 1980,
+        "hour": 0,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 28,
+        "lunarMonth": 11,
+        "lunarYear": 1979,
+        "canIndex": 5,
+        "chiIndex": 8,
+        "canName": "Kỷ",
+        "chiName": "Mùi",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "3",
+        "branch": "Dần",
+        "stars": [
+          "Thiên Cơ",
+          "Thái Âm",
+          "Tướng Quân",
+          "Quốc Ấn",
+          "Long Đức",
+          "Tả Phù",
+          "Thiên Hỷ",
+          "Phong Cáo",
+          "Thiên Quý",
+          "Thiên Phúc"
+        ]
+      },
+      "co": true,
+      "cu": false,
+      "oracle": false,
+      "ast": "not_satisfied",
+      "directNamedAdverse": []
+    },
+    {
+      "id": "T027/14/negative_co_only",
+      "input": {
+        "day": 15,
+        "month": 1,
+        "year": 1980,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 28,
+        "lunarMonth": 11,
+        "lunarYear": 1979,
+        "canIndex": 5,
+        "chiIndex": 8,
+        "canName": "Kỷ",
+        "chiName": "Mùi",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "9",
+        "branch": "Thân",
+        "stars": [
+          "Thiên Cơ",
+          "Thái Âm",
+          "Thiếu Dương",
+          "Thiên Việt",
+          "Hồng Loan",
+          "Phong Cáo",
+          "Thiên Quý",
+          "Thiên Trù",
+          "Phục Binh",
+          "Cô Thần",
+          "Thiên Không",
+          "Kiếp Sát"
+        ]
+      },
+      "co": true,
+      "cu": false,
+      "oracle": false,
+      "ast": "not_satisfied",
+      "directNamedAdverse": []
+    },
+    {
+      "id": "T027/15/negative_co_only",
+      "input": {
+        "day": 22,
+        "month": 1,
+        "year": 1980,
+        "hour": 2,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 5,
+        "lunarMonth": 12,
+        "lunarYear": 1979,
+        "canIndex": 5,
+        "chiIndex": 8,
+        "canName": "Kỷ",
+        "chiName": "Mùi",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "3",
+        "branch": "Dần",
+        "stars": [
+          "Thiên Cơ",
+          "Thái Âm",
+          "Tướng Quân",
+          "Quốc Ấn",
+          "Long Đức",
+          "Thiên Hỷ",
+          "Thiên Quý",
+          "Thiên Phúc"
+        ]
+      },
+      "co": true,
+      "cu": false,
+      "oracle": false,
+      "ast": "not_satisfied",
+      "directNamedAdverse": []
+    },
+    {
+      "id": "T027/16/positive_cohost_adverse",
+      "input": {
+        "day": 15,
+        "month": 3,
+        "year": 1980,
+        "hour": 14,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 29,
+        "lunarMonth": 1,
+        "lunarYear": 1980,
+        "canIndex": 6,
+        "chiIndex": 9,
+        "canName": "Canh",
+        "chiName": "Thân",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "10",
+        "branch": "Dậu",
+        "stars": [
+          "Thiên Cơ",
+          "Cự Môn",
+          "Lực Sĩ",
+          "Thiếu Dương",
+          "Đào Hoa",
+          "Phong Cáo",
+          "Kình Dương",
+          "Hỏa Tinh",
+          "Thiên Hình",
+          "Thiên Không",
+          "Phá Toái"
+        ]
+      },
+      "co": true,
+      "cu": true,
+      "oracle": true,
+      "ast": "satisfied",
+      "directNamedAdverse": [
+        "Kình Dương",
+        "Hỏa Tinh"
+      ]
+    },
+    {
+      "id": "T027/17/positive_cohost_adverse",
+      "input": {
+        "day": 1,
+        "month": 6,
+        "year": 1980,
+        "hour": 20,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 19,
+        "lunarMonth": 4,
+        "lunarYear": 1980,
+        "canIndex": 6,
+        "chiIndex": 9,
+        "canName": "Canh",
+        "chiName": "Thân",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "10",
+        "branch": "Dậu",
+        "stars": [
+          "Thiên Cơ",
+          "Cự Môn",
+          "Lực Sĩ",
+          "Thiếu Dương",
+          "Đào Hoa",
+          "Thiên Quý",
+          "Kình Dương",
+          "Địa Kiếp",
+          "Thiên Không",
+          "Phá Toái"
+        ]
+      },
+      "co": true,
+      "cu": true,
+      "oracle": true,
+      "ast": "satisfied",
+      "directNamedAdverse": [
+        "Kình Dương"
+      ]
+    },
+    {
+      "id": "T027/18/positive_cohost_adverse",
+      "input": {
+        "day": 1,
+        "month": 7,
+        "year": 1980,
+        "hour": 22,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 19,
+        "lunarMonth": 5,
+        "lunarYear": 1980,
+        "canIndex": 6,
+        "chiIndex": 9,
+        "canName": "Canh",
+        "chiName": "Thân",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "10",
+        "branch": "Dậu",
+        "stars": [
+          "Thiên Cơ",
+          "Cự Môn",
+          "Lực Sĩ",
+          "Thiếu Dương",
+          "Đào Hoa",
+          "Kình Dương",
+          "Thiên Không",
+          "Phá Toái"
+        ]
+      },
+      "co": true,
+      "cu": true,
+      "oracle": true,
+      "ast": "satisfied",
+      "directNamedAdverse": [
+        "Kình Dương"
+      ]
+    },
+    {
+      "id": "T027/19/independently_added_mao_positive_with_direct_four_adverse",
+      "input": {
+        "day": 28,
+        "month": 8,
+        "year": 1980,
+        "hour": 14,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 18,
+        "lunarMonth": 7,
+        "lunarYear": 1980,
+        "canIndex": 6,
+        "chiIndex": 9,
+        "canName": "Canh",
+        "chiName": "Thân",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "4",
+        "branch": "Mão",
+        "stars": [
+          "Thiên Cơ",
+          "Cự Môn",
+          "Hỉ Thần",
+          "Long Đức",
+          "Văn Xương",
+          "Tam Thai",
+          "Linh Tinh",
+          "Thiên Hình",
+          "Lưu Hà"
+        ]
+      },
+      "co": true,
+      "cu": true,
+      "oracle": true,
+      "ast": "satisfied",
+      "directNamedAdverse": [
+        "Linh Tinh"
+      ]
+    }
+  ]
+}

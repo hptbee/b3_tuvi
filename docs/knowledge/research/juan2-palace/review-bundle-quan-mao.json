@@ -1,0 +1,356 @@
+{
+  "status": "PROPOSED_NOT_APPROVED",
+  "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "rawHtmlSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+  "parsing": "Inert pinned HTML plus full derived Juan2. Both complete Quan巨門paragraphs retain terminal adverse/dismissal clauses. Context retains full官祿section/reciprocal天機 plus completesourceCơ/Cựbranch descriptions. ExactUTF8 source/context/wording; compactJSON.stringify ordered tree/fixtures.",
+  "policy": "dual-ai-source-review-v1 plus exact interpretation/tree/wording/fixture agreement. Actual distinct independent source reviews required; oldDậu approval does not transfer. No authentication, formula/default change, public prose or empirical outcome promotion.",
+  "sourceIdentity": {
+    "editionId": "iztro-juan2-2f00e2ab0c80",
+    "sourceId": "ziwei-quanshu-iztro-transcription",
+    "documentType": "pinned_html_transcription",
+    "documentUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/ancientBook-2.html",
+    "gitRepository": "https://github.com/SylarLong/iztro",
+    "gitCommit": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+    "gitPath": "docs/zh_TW/learn/ancientBook-2.html",
+    "contentSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+    "authenticated": false,
+    "digitalArtifactVerified": true,
+    "originalEditionAuthenticated": false,
+    "textCollatedAgainstOriginal": false,
+    "bookVerified": false,
+    "expertVerified": false,
+    "verificationNotes": "Pinned modern reproduction only; paragraph/context digest review does not authenticate a historical edition or certify natal formulas.",
+    "sourceType": "secondary_transcription",
+    "derivedTextSha256": "b824c61e1bdec55ecdc7123ff1e79bce9648f07d67d054c43a59ce731572d4a7",
+    "publicRelease": false,
+    "compatibilityNote": "condition_read_only_projection_not_natal_formula_certification",
+    "registryMutation": "none_existing_source_and_edition_reused_unchanged"
+  },
+  "reviewQuestions": [
+    "Can the exact MÃO clause 天機同在卯宮吉美 be annotated internally as a literal attributed source branch while complete terminal 陷宮遭悔吝，加羊陀火鈴空劫更不美，退宮卸職 remains retained but unevaluated? If modifier closure makes even this wording misleading, reject/unresolved rather than inventing adverse absence.",
+    "Read full巨門entry, all官祿section and reciprocal天機 including 見羊陀火鈴方宜. No blanket favorable career judgment, profession/rank/grade, guaranteed real-life result or dismissal claim is proposed.",
+    "Source says ThiênCơ卯酉旺地 and CựMôn卯酉入廟; currentengine M does not certify source-equivalence. Do not change brightness or add an unstated threshold/stem/sex/age condition.",
+    "AST must be AND of directsamepalace Cơ+Cự inQuan and hostbranchMÃO. DẬU is a negative for this newclaim, though existingapprovedDậuclaim remains unchanged and separately eligible. Do not reuse its review/approve it again.",
+    "Independently verify source identity, all5digests, exactwording/limitations and everyrealfixture, including Mãowith/withoutnamedadverses, Dậupairwrongbranch, missingpartner andwronghost. Missingpartnerexamples are atotherbranches: no independent fullAND operanddiscrimination atreachableMão is claimed.",
+    "Candidate search found0singlepartner among1260Quan-Mãocharts, consistent withnatalcohostinvariant. Binding exacttree tampertests must preserve bothstars; do not invent/relabelsyntheticMãomissingpartner fixtures asreal.",
+    "Reject missingsemantics; actualreviews are independent, no forcedagreement. Publicrelease/expert/book/natalformula/classicalfortune gates remainclosed."
+  ],
+  "fixtureLimitations": {
+    "searchInputs": 15120,
+    "quanMaoCharts": 1260,
+    "maoSinglePartnerFound": 0,
+    "statement": "No reachable same-Mão missing-partner witness found. Existing missing-partner negatives atotherbranches testpairsubtrace but not fullAND independentoperanddiscrimination. Exact sourcebinding ASTmutationtests needed; no syntheticfixtureclaimedreal.",
+    "allInputsMale": true,
+    "coverage": "sourcepredicateengineeringwitnesses_not_sex_calendar_or_natal_formula_certification"
+  },
+  "existingClaimDistinction": [
+    "Newclaim exclusivelyMÃO; old interp-quanshu-quan-loc-co-cu-dau-host atDẬU preserved and not reapproved.",
+    "No genericVCD taxonomy, natal/sourcebrightness equivalence, fortune or publicrelease approval follows."
+  ],
+  "candidates": [
+    {
+      "claimId": "interp-quanshu-quan-co-cu-mao-host",
+      "locator": "juan2/官祿宮/巨門",
+      "target": "quan_loc",
+      "spanFile": "quan-co-cu-mao-source-span.txt",
+      "contextFile": "quan-co-cu-mao-context.txt",
+      "conditionTree": {
+        "op": "and",
+        "items": [
+          {
+            "op": "same_palace",
+            "target": "quan_loc",
+            "stars": [
+              "Thiên Cơ",
+              "Cự Môn"
+            ]
+          },
+          {
+            "op": "branch",
+            "target": "quan_loc",
+            "branches": [
+              "Mão"
+            ]
+          }
+        ]
+      },
+      "conditions": [
+        "palace_quan_loc",
+        "thien_co_in_host",
+        "cu_mon_in_host",
+        "host_branch_mao",
+        "direct_host_only"
+      ],
+      "limitations": [
+        "paragraph_scoped_only",
+        "textual_branch_clause_only",
+        "modifier_not_evaluated",
+        "following_adverse_clause_not_omitted",
+        "not_an_integrated_career_judgment",
+        "not_a_whole_chart_judgment",
+        "not_a_brightness_change",
+        "source_brightness_not_engine_equivalence",
+        "not_a_verified_life_event",
+        "no_public_release"
+      ],
+      "proposedWording": "Trong mục Quan Lộc của bản chép này, trường hợp Cự Môn đồng cung Thiên Cơ tại Mão được ghi “吉美”. Đây là ghi chú về đúng nhánh văn bản, không phải xếp hạng, kết luận toàn bộ công danh hay sự kiện đời đã kiểm chứng; các điều kiện gia sát trong đoạn chưa được đánh giá.",
+      "fixtures": [
+        {
+          "id": "T029/01/negative_missing_co",
+          "input": {
+            "day": 1,
+            "month": 1,
+            "year": 1980,
+            "hour": 8,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 14,
+            "lunarMonth": 11,
+            "lunarYear": 1979,
+            "canIndex": 5,
+            "chiIndex": 8,
+            "canName": "Kỷ",
+            "chiName": "Mùi",
+            "isLeapMonth": false
+          },
+          "host": {
+            "id": "1",
+            "functionId": "quan_loc",
+            "branchName": "Tí"
+          },
+          "expected": false
+        },
+        {
+          "id": "T029/02/negative_missing_cu",
+          "input": {
+            "day": 1,
+            "month": 1,
+            "year": 1980,
+            "hour": 18,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 14,
+            "lunarMonth": 11,
+            "lunarYear": 1979,
+            "canIndex": 5,
+            "chiIndex": 8,
+            "canName": "Kỷ",
+            "chiName": "Mùi",
+            "isLeapMonth": false
+          },
+          "host": {
+            "id": "8",
+            "functionId": "quan_loc",
+            "branchName": "Mùi"
+          },
+          "expected": false
+        },
+        {
+          "id": "T029/03/negative_wrong_host_tai",
+          "input": {
+            "day": 1,
+            "month": 2,
+            "year": 1980,
+            "hour": 12,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 15,
+            "lunarMonth": 12,
+            "lunarYear": 1979,
+            "canIndex": 5,
+            "chiIndex": 8,
+            "canName": "Kỷ",
+            "chiName": "Mùi",
+            "isLeapMonth": false
+          },
+          "host": {
+            "id": "12",
+            "functionId": "quan_loc",
+            "branchName": "Hợi"
+          },
+          "expected": false
+        },
+        {
+          "id": "T029/04/negative_dau_four_adverse_absent",
+          "input": {
+            "day": 15,
+            "month": 2,
+            "year": 1980,
+            "hour": 16,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 29,
+            "lunarMonth": 12,
+            "lunarYear": 1979,
+            "canIndex": 5,
+            "chiIndex": 8,
+            "canName": "Kỷ",
+            "chiName": "Mùi",
+            "isLeapMonth": false
+          },
+          "host": {
+            "id": "10",
+            "functionId": "quan_loc",
+            "branchName": "Dậu"
+          },
+          "expected": false
+        },
+        {
+          "id": "T029/05/positive_mao_four_adverse_absent",
+          "input": {
+            "day": 1,
+            "month": 3,
+            "year": 1980,
+            "hour": 6,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 15,
+            "lunarMonth": 1,
+            "lunarYear": 1980,
+            "canIndex": 6,
+            "chiIndex": 9,
+            "canName": "Canh",
+            "chiName": "Thân",
+            "isLeapMonth": false
+          },
+          "host": {
+            "id": "4",
+            "functionId": "quan_loc",
+            "branchName": "Mão"
+          },
+          "expected": true
+        },
+        {
+          "id": "T029/06/negative_wrong_host_menh",
+          "input": {
+            "day": 1,
+            "month": 3,
+            "year": 1980,
+            "hour": 22,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 15,
+            "lunarMonth": 1,
+            "lunarYear": 1980,
+            "canIndex": 6,
+            "chiIndex": 9,
+            "canName": "Canh",
+            "chiName": "Thân",
+            "isLeapMonth": false
+          },
+          "host": {
+            "id": "8",
+            "functionId": "quan_loc",
+            "branchName": "Mùi"
+          },
+          "expected": false
+        },
+        {
+          "id": "T029/07/negative_dau_four_adverse_present",
+          "input": {
+            "day": 8,
+            "month": 6,
+            "year": 1980,
+            "hour": 0,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 26,
+            "lunarMonth": 4,
+            "lunarYear": 1980,
+            "canIndex": 6,
+            "chiIndex": 9,
+            "canName": "Canh",
+            "chiName": "Thân",
+            "isLeapMonth": false
+          },
+          "host": {
+            "id": "10",
+            "functionId": "quan_loc",
+            "branchName": "Dậu"
+          },
+          "expected": false
+        },
+        {
+          "id": "T029/08/positive_mao_four_adverse_present",
+          "input": {
+            "day": 15,
+            "month": 6,
+            "year": 1980,
+            "hour": 14,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 3,
+            "lunarMonth": 5,
+            "lunarYear": 1980,
+            "canIndex": 6,
+            "chiIndex": 9,
+            "canName": "Canh",
+            "chiName": "Thân",
+            "isLeapMonth": false
+          },
+          "host": {
+            "id": "4",
+            "functionId": "quan_loc",
+            "branchName": "Mão"
+          },
+          "expected": true
+        },
+        {
+          "id": "T029/09/negative_mao_both_partners_absent",
+          "input": {
+            "day": 1,
+            "month": 1,
+            "year": 1991,
+            "hour": 2,
+            "gender": -1
+          },
+          "lunar": {
+            "lunarDay": 16,
+            "lunarMonth": 11,
+            "lunarYear": 1990,
+            "canIndex": 6,
+            "chiIndex": 7,
+            "canName": "Canh",
+            "chiName": "Ngọ",
+            "isLeapMonth": false
+          },
+          "host": {
+            "id": "4",
+            "functionId": "quan_loc",
+            "branchName": "Mão"
+          },
+          "expected": false
+        }
+      ],
+      "requiredAnchors": [
+        "天機同在卯宮吉美",
+        "在酉宮雖美無始終",
+        "加羊陀火鈴空劫更不美",
+        "退宮卸職"
+      ],
+      "schoolId": "vn-tam-hop-default",
+      "sourceId": "ziwei-quanshu-iztro-transcription",
+      "editionId": "iztro-juan2-2f00e2ab0c80",
+      "sourceProfile": "quanshu-iztro-2f00e2ab",
+      "usage": "internal_research",
+      "releasePermission": "withheld",
+      "expertVerified": false,
+      "bookVerified": false,
+      "sourceDigest": "ae7aec7a8cb175d88b956f6562e7ccc138b45c65268c7bd0f7a7aba5a0966443",
+      "contextDigest": "bc5cb3737a70e083f983b4498af51281a266ae35ba2df71aa75fa46e7ad42ba4",
+      "conditionTreeDigest": "712cb19572c1e5e54708fdc1055c14c6b1cda46e38bd34d7273e1f79aba05e51",
+      "wordingDigest": "4ac9b9acbb853b7c601c5d2df4e13c2b41522eb489125177ad101fc500efbb62",
+      "fixturesDigest": "62310a0b6c2ef5b3fe6e32d13aefeebccaa4fa66c3fd4ef234a8f23fd7730c7b",
+      "quotationPolicy": "source-sentence-v2",
+      "sourceSpan": "巨門入廟武職權貴，文人不耐久，太陽同有進退，入廟久長，天機同在卯宮吉美，在酉宮雖美無始終，\n陷宮遭悔吝，加羊陀火鈴空劫更不美，退宮卸職。"
+    }
+  ]
+}

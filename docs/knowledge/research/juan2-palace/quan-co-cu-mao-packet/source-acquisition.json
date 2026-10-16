@@ -1,0 +1,21 @@
+{
+  "status": "INERT_SOURCE_IDENTITY_CHECK_NOT_APPROVAL",
+  "repository": "https://github.com/SylarLong/iztro",
+  "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "gitPath": "docs/zh_TW/learn/ancientBook-2.html",
+  "rawHtmlSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+  "derivedTextSha256": "b824c61e1bdec55ecdc7123ff1e79bce9648f07d67d054c43a59ce731572d4a7",
+  "exactGitObjectRead": true,
+  "upstreamCodeExecuted": false,
+  "completeSourceParagraphs": [
+    "巨門入廟武職權貴，文人不耐久，太陽同有進退，入廟久長，天機同在卯宮吉美，在酉宮雖美無始終，",
+    "陷宮遭悔吝，加羊陀火鈴空劫更不美，退宮卸職。"
+  ],
+  "fullReciprocalQuanThienCo": "天機入廟權貴，會文曲為良巨，見羊陀火鈴方宜，天梁同文武之材，太陰同名振邊夷，陷宮退官失職，吏員立腳。",
+  "spanExactHtmlMatch": true,
+  "sourceIdentity": "existing Juan2 secondary mirror source and edition unchanged",
+  "existingDauApprovalReused": false,
+  "expertVerified": false,
+  "bookVerified": false,
+  "publicRelease": false
+}

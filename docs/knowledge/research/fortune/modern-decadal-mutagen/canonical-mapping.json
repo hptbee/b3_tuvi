@@ -1,0 +1,329 @@
+{
+  "order": [
+    "sihuaLu",
+    "sihuaQuan",
+    "sihuaKe",
+    "sihuaJi"
+  ],
+  "b3Labels": [
+    "Hóa Lộc",
+    "Hóa Quyền",
+    "Hóa Khoa",
+    "Hóa Kỵ"
+  ],
+  "sourceVietnameseLabels": [
+    "Lộc",
+    "Quyền",
+    "Khoa",
+    "Kỵ"
+  ],
+  "rows": [
+    {
+      "stemIndex": 0,
+      "sourceStemKey": "jiaHeavenly",
+      "stemName": "Giáp",
+      "sourceStarKeys": [
+        "lianzhenMaj",
+        "pojunMaj",
+        "wuquMaj",
+        "taiyangMaj"
+      ],
+      "canonicalStarNames": [
+        "Liêm Trinh",
+        "Phá Quân",
+        "Vũ Khúc",
+        "Thái Dương"
+      ]
+    },
+    {
+      "stemIndex": 1,
+      "sourceStemKey": "yiHeavenly",
+      "stemName": "Ất",
+      "sourceStarKeys": [
+        "tianjiMaj",
+        "tianliangMaj",
+        "ziweiMaj",
+        "taiyinMaj"
+      ],
+      "canonicalStarNames": [
+        "Thiên Cơ",
+        "Thiên Lương",
+        "Tử Vi",
+        "Thái Âm"
+      ]
+    },
+    {
+      "stemIndex": 2,
+      "sourceStemKey": "bingHeavenly",
+      "stemName": "Bính",
+      "sourceStarKeys": [
+        "tiantongMaj",
+        "tianjiMaj",
+        "wenchangMin",
+        "lianzhenMaj"
+      ],
+      "canonicalStarNames": [
+        "Thiên Đồng",
+        "Thiên Cơ",
+        "Văn Xương",
+        "Liêm Trinh"
+      ]
+    },
+    {
+      "stemIndex": 3,
+      "sourceStemKey": "dingHeavenly",
+      "stemName": "Đinh",
+      "sourceStarKeys": [
+        "taiyinMaj",
+        "tiantongMaj",
+        "tianjiMaj",
+        "jumenMaj"
+      ],
+      "canonicalStarNames": [
+        "Thái Âm",
+        "Thiên Đồng",
+        "Thiên Cơ",
+        "Cự Môn"
+      ]
+    },
+    {
+      "stemIndex": 4,
+      "sourceStemKey": "wuHeavenly",
+      "stemName": "Mậu",
+      "sourceStarKeys": [
+        "tanlangMaj",
+        "taiyinMaj",
+        "youbiMin",
+        "tianjiMaj"
+      ],
+      "canonicalStarNames": [
+        "Tham Lang",
+        "Thái Âm",
+        "Hữu Bật",
+        "Thiên Cơ"
+      ]
+    },
+    {
+      "stemIndex": 5,
+      "sourceStemKey": "jiHeavenly",
+      "stemName": "Kỷ",
+      "sourceStarKeys": [
+        "wuquMaj",
+        "tanlangMaj",
+        "tianliangMaj",
+        "wenquMin"
+      ],
+      "canonicalStarNames": [
+        "Vũ Khúc",
+        "Tham Lang",
+        "Thiên Lương",
+        "Văn Khúc"
+      ]
+    },
+    {
+      "stemIndex": 6,
+      "sourceStemKey": "gengHeavenly",
+      "stemName": "Canh",
+      "sourceStarKeys": [
+        "taiyangMaj",
+        "wuquMaj",
+        "taiyinMaj",
+        "tiantongMaj"
+      ],
+      "canonicalStarNames": [
+        "Thái Dương",
+        "Vũ Khúc",
+        "Thái Âm",
+        "Thiên Đồng"
+      ]
+    },
+    {
+      "stemIndex": 7,
+      "sourceStemKey": "xinHeavenly",
+      "stemName": "Tân",
+      "sourceStarKeys": [
+        "jumenMaj",
+        "taiyangMaj",
+        "wenquMin",
+        "wenchangMin"
+      ],
+      "canonicalStarNames": [
+        "Cự Môn",
+        "Thái Dương",
+        "Văn Khúc",
+        "Văn Xương"
+      ]
+    },
+    {
+      "stemIndex": 8,
+      "sourceStemKey": "renHeavenly",
+      "stemName": "Nhâm",
+      "sourceStarKeys": [
+        "tianliangMaj",
+        "ziweiMaj",
+        "zuofuMin",
+        "wuquMaj"
+      ],
+      "canonicalStarNames": [
+        "Thiên Lương",
+        "Tử Vi",
+        "Tả Phù",
+        "Vũ Khúc"
+      ]
+    },
+    {
+      "stemIndex": 9,
+      "sourceStemKey": "guiHeavenly",
+      "stemName": "Quý",
+      "sourceStarKeys": [
+        "pojunMaj",
+        "jumenMaj",
+        "taiyinMaj",
+        "tanlangMaj"
+      ],
+      "canonicalStarNames": [
+        "Phá Quân",
+        "Cự Môn",
+        "Thái Âm",
+        "Tham Lang"
+      ]
+    }
+  ],
+  "stars": [
+    {
+      "sourceStarKey": "jumenMaj",
+      "sourceClass": "major",
+      "canonicalName": "Cự Môn",
+      "b3StarId": "cu_mon",
+      "b3Category": "chinh_tinh",
+      "b3ExpectedList": "major",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "lianzhenMaj",
+      "sourceClass": "major",
+      "canonicalName": "Liêm Trinh",
+      "b3StarId": "liem_trinh",
+      "b3Category": "chinh_tinh",
+      "b3ExpectedList": "major",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "pojunMaj",
+      "sourceClass": "major",
+      "canonicalName": "Phá Quân",
+      "b3StarId": "pha_quan",
+      "b3Category": "chinh_tinh",
+      "b3ExpectedList": "major",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "taiyangMaj",
+      "sourceClass": "major",
+      "canonicalName": "Thái Dương",
+      "b3StarId": "thai_duong",
+      "b3Category": "chinh_tinh",
+      "b3ExpectedList": "major",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "taiyinMaj",
+      "sourceClass": "major",
+      "canonicalName": "Thái Âm",
+      "b3StarId": "thai_am",
+      "b3Category": "chinh_tinh",
+      "b3ExpectedList": "major",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "tanlangMaj",
+      "sourceClass": "major",
+      "canonicalName": "Tham Lang",
+      "b3StarId": "tham_lang",
+      "b3Category": "chinh_tinh",
+      "b3ExpectedList": "major",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "tianjiMaj",
+      "sourceClass": "major",
+      "canonicalName": "Thiên Cơ",
+      "b3StarId": "thien_co",
+      "b3Category": "chinh_tinh",
+      "b3ExpectedList": "major",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "tianliangMaj",
+      "sourceClass": "major",
+      "canonicalName": "Thiên Lương",
+      "b3StarId": "thien_luong",
+      "b3Category": "chinh_tinh",
+      "b3ExpectedList": "major",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "tiantongMaj",
+      "sourceClass": "major",
+      "canonicalName": "Thiên Đồng",
+      "b3StarId": "thien_dong",
+      "b3Category": "chinh_tinh",
+      "b3ExpectedList": "major",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "wenchangMin",
+      "sourceClass": "minor",
+      "canonicalName": "Văn Xương",
+      "b3StarId": "van_xuong",
+      "b3Category": "phu_tinh",
+      "b3ExpectedList": "good",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "wenquMin",
+      "sourceClass": "minor",
+      "canonicalName": "Văn Khúc",
+      "b3StarId": "van_khuc",
+      "b3Category": "phu_tinh",
+      "b3ExpectedList": "good",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "wuquMaj",
+      "sourceClass": "major",
+      "canonicalName": "Vũ Khúc",
+      "b3StarId": "vu_khuc",
+      "b3Category": "chinh_tinh",
+      "b3ExpectedList": "major",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "youbiMin",
+      "sourceClass": "minor",
+      "canonicalName": "Hữu Bật",
+      "b3StarId": "huu_bat",
+      "b3Category": "phu_tinh",
+      "b3ExpectedList": "good",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "ziweiMaj",
+      "sourceClass": "major",
+      "canonicalName": "Tử Vi",
+      "b3StarId": "tu_vi",
+      "b3Category": "chinh_tinh",
+      "b3ExpectedList": "major",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "zuofuMin",
+      "sourceClass": "minor",
+      "canonicalName": "Tả Phù",
+      "b3StarId": "ta_phu",
+      "b3Category": "phu_tinh",
+      "b3ExpectedList": "good",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    }
+  ]
+}

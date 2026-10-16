@@ -1,0 +1,11 @@
+SQLite ready at /tmp/t030-api-ui-uMub8f/review.sqlite
+{
+  requests: 114,
+  realResponsesAcceptedByGenuineValidators: 99,
+  malformedResponseMutationsRejected: 865,
+  states: { not_applied: 44, branch_placed: 52 },
+  dbCountUnchanged: true,
+  noStore: true,
+  nameNotEchoedOrLogged: true,
+  browserRun: false
+}

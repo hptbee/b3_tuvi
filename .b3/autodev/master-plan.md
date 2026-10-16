@@ -1,6 +1,6 @@
 # Autonomous Product Completion
 
-- version: 5
+- version: 27
 - source: User mission 2026-10-14; fresh run from upstream main 45615a48d0c75b90138cfc618320ffae6e9c34e0
 
 ## Original requirements
@@ -13,7 +13,7 @@ Stateless product within CONTRIBUTING scope. Highest priority: verified defects,
 Accounts/history/payments; auto-merge/deploy; invented formulas; unverified public fortune/prose/narration; production SQLite migration without approval.
 
 ## Technical context
-React 19/Vite, Express 5/Node 22/SQLite, Node assertion tests, Vitest, Playwright, Actions. Main and origin/main equal 45615a4, clean at start. Frontend baseline 57 tests PASS. Backend baseline fails storedDecision hash replay because core.autocrlf=true converts LF source evidence to CRLF.
+React 19/Vite, Express 5/Node 22/SQLite, Node assertion tests, Vitest, Playwright, Actions. Historical 2026-10-14 baseline: main/origin main45615a4; current resume fetched main f0dec74973ef9d07129e19330356f8e6d2040227, preserving the prior receipts. Frontend baseline 57 tests PASS. Backend baseline fails storedDecision hash replay because core.autocrlf=true converts LF source evidence to CRLF.
 
 ## Architecture
 Reuse existing app/routes, numerology request state/export, and page components. Preserve byte-exact evidence and published profiles. No new service or persistence.
@@ -156,7 +156,7 @@ Version 5: reassessment proves additional Tử Vi UI and data-safety defects. Pr
   - Disclosure/current-chart/retry/schema unit tests; keyboard/mobileE2E; frontendCI/lint/build
 
 ### T012 — Reject incompatible SQLite before writes
-- status: in_progress
+- status: completed
 - depends_on: []
 - scope: backend/src/db/sqlite.js, backend/test/sqlite.test.mjs
 - acceptance_criteria:
@@ -203,3 +203,346 @@ Version 5: reassessment proves additional Tử Vi UI and data-safety defects. Pr
 
 
 
+
+## Tu Vi resume — 2026-10-15 (version 6)
+User narrowed the active mission to Tử Vi domain completion. Preserve all prior task IDs, scope and completion evidence; T010–T015 remain historical/out-of-active-queue pending separate reconciliation, not silently completed. Active domain tasks below take priority by explicit user instruction. Main reconciled at f0dec74973ef9d07129e19330356f8e6d2040227; PR49 research-only head 7d151bfa78f3151c3e1bcc5a0f1bead7fbb66582 is unmerged and supplies locators, not approvals. Backend full CI passes at baseline (86.77 lines / 87.50 branches).
+
+### T016 — Complete source-supported annual star palace placement
+- status: completed
+- depends_on: []
+- scope: backend/src/time/thienDuc.js, backend/src/time/timeEngine.js, backend/test/thienDuc.test.mjs, backend/src/engine/normalizeChart.js
+- acceptance_criteria:
+  - Existing accepted Thiên Đức/Nguyệt Đức branches resolve to the unique canonical natal palace without modifying natal stars or formulas
+  - Invalid or ambiguous chart metadata never produces a palace placement
+  - Existing branch/status/profile contracts remain compatible; public fortune and prose remain withheld
+- verification:
+  - All twelve view branches on reachable calculated charts, contrasting natal palace layouts, malformed chart negatives, API and non-mutation checks; backend full CI; isolated full-diff review
+
+### T017 — Show source-scoped annual placements in chart evidence
+- status: completed
+- depends_on: [T016]
+- scope: frontend/src/components/StructuredAnalysis.jsx, frontend/src/components/StructuredAnalysis.test.jsx, frontend/e2e
+- acceptance_criteria:
+  - Selecting a view-year branch displays each supported annual star branch and mapped natal palace in a separate readable section
+  - Clear traditional source attribution and withheld interpretation remain visible; missing selection has a specific prompt, not an inaccurate unapproved-formula message
+  - Stale responses, invalid mapping data and retries never display stale or unsafe placements
+- verification:
+  - Frontend unit/CI, lint/build, real backend Chromium E2E, isolated review
+
+### T018 — Approved source-scoped Tài Bạch and Phúc Đức interpretations
+- status: completed
+- depends_on: []
+- scope: docs/knowledge/research/juan2-palace/, docs/knowledge/reviews/juan2-palace/, docs/knowledge/interpretation-decisions/juan2-*.json (new only), docs/knowledge/interpretation-claims.json, docs/knowledge/sources.json, backend/src/knowledge/sourcePalaceBinding.js, backend/src/knowledge/interpretationBinding.js, backend/src/interpretation/eligibility.js, backend/src/interpretation/synthesis.js, backend/test/sourcePalaceBinding.test.mjs, backend/test/sourcePalaceInterpretation.test.mjs, backend/test/sprint11c12Evidence.test.mjs, backend/test/sourceHygiene.test.mjs, backend/test/knowledgeCatalog.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md, .gitignore
+- acceptance_criteria:
+  - Actual pinned complete passages/context and independent reachable fixtures receive distinct-model source and interpretation approval before activation
+  - Two narrowly accepted claims match only the reviewed direct-host predicates and emit exactly approved internal wording, with no invented catalog/formula hit
+  - Changed identity, scope, source/context/tree/wording/fixture bytes, partial or duplicate model reviews and unreviewed claims fail closed
+  - Existing Tu Phu, old source decisions, natal formulas/school defaults and public-release gates remain intact
+- verification:
+  - Source comparison replay and mutation tests; all16 independently reviewed real solar fixtures and API no-public-prose checks; backend full CI; frontend API consumer regression; independent source/runtime review and fix loop
+
+### T019 — New-source Mệnh vô Chính diệu interpretation
+- status: incomplete
+- depends_on: []
+- scope: Existing knowledge and interpretation files/tests
+- acceptance_criteria:
+  - Define exact 吉星/拱照/target semantics from independently read Juan 3 evidence; preserve old Tân Biên insufficiency decision
+  - Implement only dual-AI accepted complete conditions and prove reachable matches and negatives
+- verification:
+  - Source-scoped review evidence and runtime chart witnesses, regression/release-gate tests
+
+### T020 — Reconcile complete fortune source profiles
+- status: incomplete
+- depends_on: []
+- scope: Existing fortune source decisions, timeEngine and tests if complete semantics become accepted
+- acceptance_criteria:
+  - Keep adjacent-palace Quanshu and existing Mệnh-anchor natal annotations distinct
+  - Establish full Đại hạn start age/span/age convention/yin-yang basis and Tiểu hạn start-age/step before any deterministic new placement
+  - No natal formula/default profile changes or public predictions
+- verification:
+  - Independent source retrieval, actual dual-AI reviews, source-scoped reachable chart/age-boundary goldens if implemented
+
+Version 6 prioritization: T018–T020 investigation runs in parallel; source-inaccessible candidates are recorded once and do not block independent T016/T017. Next capability selected from actual evidence, never source-intake alone. Existing .b3 checkpoint is tracked upstream despite AGENTS ignore policy; explicit user request to reconcile the committed checkpoint authorizes preserving and updating these two tracked files, excluding local runtime/history artifacts.
+
+### T021 — Bind internal interpretation to actual approved evidence
+- status: completed
+- depends_on: []
+- scope: backend/src/knowledge/interpretationBinding.js, backend/src/interpretation/eligibility.js, backend/src/interpretation/synthesis.js, backend/src/interpretation/pipeline.js (remove reproduced synthetic runtime-hit bypass), backend/test/interpretationBinding.test.mjs, backend/test/interpretationPipeline.test.mjs, backend/test/qualityEdges.test.mjs, backend/test/sprint11bInterpretation.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md
+- acceptance_criteria:
+  - Actual stored interpretation decision, two distinct-model review documents, exact shared source quotation and underlying formula binding are checked before approved internal wording is emitted
+  - Modified identity, wording, school/profile/conditions/limits or missing/malformed evidence fail closed; flags alone never create internal prose
+  - Existing reachable approved Tu Phu/Giáp positive remains internal-only; public prose and all old source decisions/formulas remain unchanged
+- verification:
+  - Real positive/negative chart integration, mutated binding evidence and duplicate-ID/clone regressions, direct synthesis tests, backend full CI and independent whole-scope review
+
+Version7 adds T021 from reproduced internal provenance defect (arbitrary clone flags could emit unchecked internal prose). It executes independently of UI T017, in separate files, under explicit parallel-work mission; no new source approvals/framework. T018/T019/T020 require unavailable exact evidence and cannot be promoted by code tests.
+
+Version8 technical scope refinement from actual CI/review: classify the new .mjs once in TEST_FIXTURES and remove inherited extraFormulaHits pipeline bypass proved on a reachable negative chart. No source/fomula/public-release scope changes; T021 acceptance remains the same.
+
+## Current completion and resumable queue (2026-10-15)
+T016/T017/T021 implemented and independently reviewed. Coverage: one existing approved internal interpretation remains one; two previously approved annual branch formulas now map to natal palaces across all twelve view-year branches (48 placements checked on two reachable natal layouts). No new Juan2/3 claim, decade/minor-period formula, grade, breaking condition or release is approved by this run.
+
+T018/T019/T020 remain incomplete because exact source passages/complete profile parameters are unavailable, not because a software test disproves a traditional text. New dual-AI reviews are REVIEW_NOT_EXECUTED for unavailable new passages; no verdict records invented. Ordered next executable queue after access changes: (1) retrieve pinned Juan2 oldid1963110 and review full I02/I03/I04 clauses/modifiers; (2) retrieve Juan3 oldid2268626 and disambiguate I01吉星/拱照; (3) reconcile whole DaiHan/TieuHan school, age and boundary semantics with a matching witness. For each: genuinely distinct actual models → fail-closed comparison → exact conditions → reachable positive/negative chart → internal-only implementation → independent review/fixes/PR. If one remains insufficient, move to the next supported pilot without a research-only PR.
+
+Branch stack (none merged/deployed): codex/tuvi-annual-palace-placement → codex/tuvi-annual-placement-ui → codex/tuvi-interpretation-evidence-binding. Git pushes work; GitHub API PR creation is Forbidden. Existing PR49 remains unmerged and unapproved intake. Continue from the top branch after fetch/reconciliation; do not silently replay its code from main while unmerged.
+
+## Resume at 52319c9 — source packet now readable (version 9)
+Latest user confirms existing dependency PRs #50→#51→#52; Git pull refs independently match c4281b0,8fbed3c,52319c9. Main remains f0dec74. Do not duplicate these PRs or replay T016/T017/T021. New branch extends #52; no merge/deploy.
+PR49 is now298937d and contains the source-access packet with SylarLong/iztro pin2f00e2ab0c80b1632e55bc362f2ae26e121245cb. Pin fetched via Git; Juan2/3 HTML blobs extracted as inert text, script/style ignored. HTML SHA256 Juan2 438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a, Juan3 3b85b99796ee0dbf0f6285bd5c60f7b590e8d124fa52fe229413309dd495245c. This unblocks actual source context for T018/T019, not original-edition authentication or a claim of equality to fixed Wikisource revisions.
+T018 current phase: independent complete-passage analysis and reachable solar fixture search BEFORE independent distinct-model review. Favor exact explicit co-location clauses or conservative sufficient modifier subsets; never force ambiguous 空/耗, 見/加 scope, source 入廟 versus legacy brightness equivalence or contradictory reciprocal paragraphs. Implement accepted claims end-to-end and preserve old decisions/release gates. If one candidate lacks semantics, record once and move to another eligible candidate, as latest mission requires.
+
+### T022 — Resolve Quan Lộc source-profile semantics before an internal claim
+- status: incomplete
+- depends_on: [T018]
+- scope: Existing source research and later interpretation files/tests only after complete evidence
+- acceptance_criteria:
+  - Resolve exact 空/耗 identities and 見/無 relation scope in full Thiên Phủ/Quan Lộc passage
+  - Bind 入廟 to this transcription's own branch table or documented accepted profile, never silently equate legacy M marks
+  - Obtain real distinct-model approval and reachable positive/negative fixtures before an eligible internal interpretation
+- verification:
+  - Exact new corroborating evidence, fail-closed review replay and complete chart witnesses
+
+Version10 evidence-based refinement: original T018 three-palace pilot is split into the first independently verifiable accepted two-claim runtime integration (T018) and still-required Quan Lộc semantic resolution (T022). All original requirements retained. Source/fullsection analysts and independent 15,120-input/60-replay search preceded dual review; gpt-6.1-sol and gpt-6-astra each independently checked all16 selected fixtures and all digests, returning MATCH plus INTERPRETATION_SUPPORTED_WITH_LIMITS. Existing compareReviews replay returns AI_ACCEPTED for both exact narrowed candidates. This does not authenticate an edition, certify natal formulas, adjudicate Đồng-Cự, resolve 空/耗 or release public prose.
+
+T018 completion gate: sourceunit+fresh runtime+performance+crosscut clear, R601closed; backend55files87.42/89.33, frontendconsumer37, Chromium25, docs181PASS. Approved internal registry1→3, two narrow newly covered palace conditions; all original/public gates preserved. Next supported candidate is distinct T023 Quan Cơ–CựDậu (actual dualmodel source approval and10fixtures complete, JIT approach inspected; activate only in next focused task).
+
+### T023 — Quan Lộc Cơ–Cự tại Dậu source branch annotation
+- status: completed
+- depends_on: [T018]
+- scope: docs/knowledge/research/juan2-palace/review-bundle-quan.json, docs/knowledge/research/juan2-palace/execution-quan.json, docs/knowledge/research/juan2-palace/quan-co-cu-dau-source-span.txt, docs/knowledge/research/juan2-palace/quan-co-cu-dau-review-context.txt, docs/knowledge/research/juan2-palace/README.md, docs/knowledge/reviews/juan2-palace/review-quan-a.json, docs/knowledge/reviews/juan2-palace/review-quan-b.json, docs/knowledge/interpretation-decisions/juan2-quan-co-cu-dau.json, docs/knowledge/interpretation-claims.json, backend/src/knowledge/sourcePalaceBinding.js, backend/src/interpretation/eligibility.js, backend/test/sourcePalaceQuan.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md
+- acceptance_criteria:
+  - Separate complete Quan passage, modifiers, reciprocal/brightness context and10independent reachable fixtures have actual distinct-model approval before activation
+  - Exact reviewed Co-Cu same QuanLoc plus Dau predicate emits only approved internal textual-branch note; following modifiers remain explicitly unevaluated
+  - Distinct finite evidence resources and branch label/ID consistency fail closed on changed/missing evidence or malformed chart
+  - Existing Tai/Phuc/TuPhu evidence and behavior, natal formulas/source decisions and public gates remain unchanged
+- verification:
+  - Separate actual dual source review replay,10realfixtures and branch-negative/malformed/evidence-mutation tests; full backend CI and independent fullfeature review/fixes
+
+### T024 — Explicit-age Tiểu hạn under a separate modern software profile
+- status: completed
+- depends_on: []
+- scope: docs/knowledge/research/fortune/modern-minor/, .gitattributes, README.md, docs/planning/AUTODEV_MASTER_PLAN_V2.md, docs/knowledge/sources.json, docs/tuvi/MODERN_MINOR_PROFILE.md, backend/src/knowledge/modernMinorBinding.js, backend/src/time/modernMinor.js, backend/src/time/timeEngine.js, backend/src/interpretation/analyze.js, backend/test/modernMinorBinding.test.mjs, backend/test/modernMinor.test.mjs, backend/test/modernMinorApi.test.mjs, backend/test/timeEngine.test.mjs, backend/test/sourceHygiene.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md, frontend/src/components/StructuredAnalysis.jsx, frontend/src/App.css, frontend/src/components/StructuredAnalysis.test.jsx, frontend/e2e/modern-minor-placement.spec.js
+- acceptance_criteria:
+  - Independently approve complete age1/step/sex/triad/range semantics and declared branch-sex-explicit-age projection before implementation
+  - Caller explicitly opts into the named profile and supplies integer nominal age1–120; no calendar-age/default/classical-profile inference
+  - Complete API/UI maps branch to actual natal palace with source identity and no fortune prose; stale/forged/malformed responses fail closed
+  - Preserve all existing formulas/source decisions, natal labels, independent annual controls and public gates
+- verification:
+  - Actual distinct-model source approval; independently checked120endpoint/2880all-age cases and reachable24chart/boundary/leap witnesses; backend/frontend CI and realbackend E2E; independent review/fix
+
+Version11 priority: T018 is completed and pushed67ff179. T023 independently accepted Quan branch note is ready; original T022 ThienPhu remains unresolved. T024 is a newly evidenced explicit-age modern-software alternative, pending actual source review, not a substitute approval for classical Quanshu. No research-only PR and no unreviewed placement activation.
+
+T023 completed gate: separately accepted exactsourcebranch note nowmapped throughactualchartAST withbranchlabel/IDcoherence. Registeredinternalclaims3→4 (TaiBach/QuanLoc/PhucDuc have newlyaccepted narrowcoverage). Backend56files87.45/89.43; source/runtime/crosscutclear,78actualHTTP→frontendvalidator checks across26fixtures/3yearstates; no public/natal/source-statuschange. T022ThienPhu andT019genericVCD remain incomplete.
+
+Version12 detailedT024 readiness: actual source models gpt-6.1-sol/gpt-6-astra independentlyverify completealgorithm+projection, all19payloads and3additional locale/alias dependencies,120endpoints/2880all-agecomparisons/24natal/boundary/leap cases. Existingcomparator AI_ACCEPTED and all5digests/exactalgorithm+compatibilitymatch. This authorizes only explicitly selected modern projection, not calendar-age derivation/classical-defaultsource approval/predictions. Backend andUI namedapproaches inspected before implementation.
+
+T024 completion: source/backend andUIunits clear; routedperformanceLOW coldvalidationcostaccepted; finalcumulativecrosscut285actualHTTP/validator/outagechecks clear. All59backendfiles169frontendtests29ChromiumE2E183doclinksPASS; parentqualitygatePASS. OptionalnamedmodernTiểuhạn explicitage1–120 placementcomplete; no calendarage/classicaldefault/natal/prediction/publicproseapproval. Total12/12reviewpasses exhausted; stopthisinvocation withresumablequeue, notanunreviewednextimplementation.
+
+### T025 — Review a separate explicit-age modern Đại hạn projection
+- status: completed
+- depends_on: [T024]
+- scope: docs/knowledge/research/fortune/modern-decadal/, docs/tuvi/MODERN_MAJOR_PROFILE.md, .gitattributes, README.md, docs/planning/AUTODEV_MASTER_PLAN_V2.md, backend/src/knowledge/modernMajorBinding.js, backend/src/time/modernMajor.js, backend/src/time/timeEngine.js, backend/src/interpretation/analyze.js, backend/test/modernMajorBinding.test.mjs, backend/test/modernMajor.test.mjs, backend/test/modernMajorApi.test.mjs, backend/test/timeEngine.test.mjs, backend/test/sourceHygiene.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md, frontend/src/components/StructuredAnalysis.jsx, frontend/src/components/StructuredAnalysis.test.jsx, frontend/src/App.css if layout requires, frontend/e2e/modern-major-placement.spec.js
+- acceptance_criteria:
+  - Independently validate complete Mệnh anchor, source Cục start-age/ten-year spans, yin-yang definition/sex direction, age range and wrap before any new placement
+  - Explicitly model from/config/calendar dependencies and proposed product natal-Mệnh/Cục/year-branch projection; never certify whole upstream natal/calendar equivalence by assumption
+  - Define pre-first-period and last-supported-age behavior without inventing childhood placement or extending source ranges
+  - Independently generate real positive/negative and all period-boundary fixtures BEFORE actual distinct-model approval; no reuse of Tiểu hạn approval for Đại hạn
+  - If accepted, deliver complete source-gated API/UI placement with exact current-input validation and no prose, while preserving classical Quanshu conflict/default labels
+- verification:
+  - Fresh source/fixture/model approval; current-time pipeline/mapper reuse, boundary/API/UI/outage tests, full CI and independent review budget in next invocation
+
+Version13 resumable next queue after12-review cap: (1)T025 newly actionable modern Đại hạn source projection; (2)T019 source-specific 正曜/主星 taxonomy and complete 吉星/拱照; (3)T022 precise Thiên Phủ 空/耗/brightness/geometry; (4)T020 original classical profile/age conflict. T025 is pending research/readiness, not an approved formula or a request to bypass original source decisions. Existing #50–52 and all completed task IDs preserved.
+
+T025 newinvocation reconciliation: ace285cfeaturesalreadymergedvia#50–55; latestmain4c1761e. Newreviewbudget0/12. Latestuserauthorizeseligibleauto-mergeaftergates; oldno-auto-mergeexclusionissupersededonlyforthisauthorization, no deployment/publicrelease/defaultformulaapprovalimplied. T025researchphase, readinessnotyetready, fullseparatevalidationbeforeimplementation.
+
+Version14 T025 inspected scope: complete independent source analysis and 28 actual natal witnesses cover all five Cục, sexes, birth-year polarities, all twelve Mệnh branches and 1,759 independently replayed comparisons. Candidate explicitly accepts caller integer nominal age1–125, projects only twelve source decades Cục..Cục+119, and returns no placement before/after; no calendar age or childhood fallback. Existing modern-minor source identity is shared without changing its record, but algorithm/decision/reviews are entirely distinct. Actual dual-model approval remains pending; product implementation is not yet authorized by source readiness. One focused complete API/UI capability, not a new master plan.
+
+### T026 — Juan3 Tài Bạch Tử Vi/Tả Phù/Hữu Bật source-scoped annotation
+- status: incomplete
+- depends_on: [T025]
+- scope: Complete pinned Juan3 Tử Vi subsection and distinct source/interpretation packet, existing interpretation registry/binding/eligibility, narrow real-fixture regression tests only after exact independent dual approval
+- acceptance_criteria:
+  - Validate full verse including 或作三方為次吉 and 財帛 branch; no assumption that direct host subset is complete without independent source approval
+  - Independently verify ten real positive/negative fixtures, discriminating each missing star and wrong host, before actual distinct-model source and exact-wording review
+  - If accepted, activate only attributed internal 財賦之官 imagery for exact reviewed predicate, without grade, profession, wealth, whole-chart or public outcome claims
+  - Preserve generic VCD taxonomy blocker, all existing claims/decisions, natal formulas and public gates
+- verification:
+  - Actual source/interpretation review and fail-closed digest/AST/wording/fixture binding, ten real fixtures, API public-prose regression, full relevant CI and independent engineering review
+
+T019 follow-up inspection found a concrete textual conflict: the Juan2 list names19 star entities including祿存 but calls them18正曜. Keep generic VCD incomplete; do not drop a star to force the count. This is recorded once, not a research-only PR. T026 is a distinct newly actionable named-star/host candidate from Juan3 with independent fixture replay; it does not close T019 and remains unapproved until actual dual review.
+
+Version15 adds only evidence-backed successor T026 after independent fullsection/fixture investigation, preserving all unfinished T019/T020/T022 requirements and existing task IDs. T025 implementation scope/acceptance unchanged.
+
+### T027 — Juan2 Phúc Đức Cơ–Cự baseline source annotation
+- status: completed
+- depends_on: [T025]
+- scope: backend/src/knowledge/sourcePalaceBinding.js, backend/test/sourcePalacePhucCoCu.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md, docs/knowledge/interpretation-claims.json, docs/knowledge/interpretation-decisions/juan2-phuc-co-cu.json, docs/knowledge/research/juan2-palace/, docs/knowledge/reviews/juan2-palace/review-phuc-co-cu-a.json, docs/knowledge/reviews/juan2-palace/review-phuc-co-cu-b.json, docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/, .gitattributes, README.md, docs/planning/AUTODEV_MASTER_PLAN_V2.md
+- acceptance_criteria:
+  - Independently adjudicate whether exact same-host Thiên Cơ/Cự Môn baseline wording is supported while terminal 加羊陀火鈴空劫 branches remain explicitly unevaluated
+  - Preserve full reciprocal clauses, all source/context/AST/wording/fixture hashes and nineteen pre-review real charts including Mão/Dậu with/without named adverse-star witnesses
+  - Activate only actual distinct-model accepted exact internal attribution; no invented absent-adverse, brightness, branch, personality, health or real-life outcome condition
+  - Keep all original formulas/decisions/public-release gates and other approved claims unchanged
+- verification:
+  - Actual two-model source plus exact interpretation review, strict stored evidence/AST/wording replay, nineteen real positive/negative charts, API public-prose checks and independent engineering review/fix loop
+
+Version16 completion: T025 complete source-gated API/UI passes all four independent technical reviews, full current backend/frontend CI and all55 Chromium tests. T026 remains unresolved by both actual source models (財帛-clause attachment); do not repeat review without new evidence. T027 is structurally ready for source review: independent analyst/replayer added the nineteenth Mão-with-adverse witness before packet freeze. Actual gpt-6.1-sol andgpt-6-astra attempts both failed with usage-limit errors: REVIEW_NOT_EXECUTED, no verdict/approval invented. New engineering review budget4/12 used, not exhausted; source-model resources are unavailable. Next executable action when models recover is T027 actual source/interpretation review, then fresh JIT and implementation only if accepted.
+
+Version17 T027 actual retry after user continuation recovered model access: both genuine gpt-6.1-sol/gpt-6-astra judgments MATCH plus INTERPRETATION_SUPPORTED_WITH_LIMITS; parent verifies exact5digests/AST/wording/limitations and existing comparator AI_ACCEPTED/MATCH. Nineteen independent fixtures predate reviews. Precise baseline attribution only; source/natal/public flags unchanged. Minimal inspected scope one existing production binder, no new framework/API/UI. Preserve T026 rejected exact-scope evidence in same capability-delivery checkpoint, not another research-only PR.
+
+### T028 — Tài Bạch Tử Vi/Phá Quân exact-source branch annotation
+- status: completed
+- depends_on: [T027]
+- scope: backend/src/knowledge/sourcePalaceBinding.js, backend/test/sourcePalaceTaiTuViPha.test.mjs, backend/test/sourcePalaceInterpretation.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md, docs/knowledge/interpretation-claims.json, docs/knowledge/interpretation-decisions/juan2-tai-tuvi-pha.json, docs/knowledge/research/juan2-palace/, docs/knowledge/reviews/juan2-palace/review-tai-tuvi-pha-a.json, docs/knowledge/reviews/juan2-palace/review-tai-tuvi-pha-b.json, .gitattributes, README.md, docs/planning/AUTODEV_MASTER_PLAN_V2.md
+- acceptance_criteria:
+  - Independently validate exact 破軍同先難後易 branch and complete reciprocal 紫微同先去後生 context, preceding/following adverse and brightness/branch modifiers without invented semantic equivalence
+  - Verify reachable Sửu/Mùi with/without named-four-adverse positives, each missing partner and wrong-host negatives before actual distinct-model review
+  - If accepted, enable only exact attributed internal primary-branch wording; no real financial outcome, age/calendar prediction, grade, absence-of-adverse or source/default/natal change
+  - Preserve all existing claim approvals, complete source provenance and public interpretation/release gates
+- verification:
+  - Complete source+interpretation actual dual review, immutable five-digest and actual-document binding, independent real fixtures/tamper/public-output regressions, full relevant CI and independent review/fix cycle
+
+Version18 adds evidence-backed successor T028 after actual complete-passage/real-chart research. T027 behavior/scope/fingerprint unchanged, code/review already underway; newtask is not source approval or a request to activate unsupported modifiers.
+
+T027 parentqualitygatePASS: exactsourceapprovedinternalclaimintegratedwithonly24productionlines,new19fixture/mutation/publictests,63backendfiles88.39/90.09PASS. Independentfullfeaturepass5/performance6/crosscut7clear, actualHTTP→frontendvalidators19fixturesnopublicleak. Internalcoverage4→5, no other formula/source/default/public changes. Initial source-modelerror records arehistoricalattemptsnotremainingblockers; exactretryreviewsapproved and archived. T026remainsnotapproved. NextT028independentfixturepackaging/review, engineeringbudget7/12used.
+
+Version19 T028 actualmodels independently8fixtures+fullsource/modifiers21manifest/5digests return MATCH+INTERPRETATION_SUPPORTED_WITH_LIMITS; parentcomparatorAI_ACCEPTED/MATCH. Factualintakeerratum: T026wasnotactive despite frozen existingClaimDistinction wording, bothactualreviewers independentlyaffirmed noapprovaldependency. Preservefrozeninputandseparateerratum. ExistingTaiadverseclaim maycoexistwithnewexactpairannotation; testsmustpreservebothwithoutblendedjudgment/publicrelease. MinimalnewfinitebinderentryreusesT027checks, no newlogic/framework.
+
+Version20 concreteT028testcontract refinement: oldTai-negative1980-01-15h14 is a verifiednewpairpositive, so blanket internalProse===null inoldtestisobsolete. Preserveoldcondition/releaseassertions and assertabsenceofTHAToldclaimwording, notabsenceofallotherapprovednotes; newtest independentlyassertsexactnew/coexistingwording. No skipping/weakeningoldpredicatefailurecoverage. StrictsourceBheaderavailableguardcaughtserializationgap; originalreviewersuppliedtruthfulavailableflag, actualreviewpinsrefreshedwithoutsource/wordingchange.
+
+### T029 — Quan Lộc Cơ–Cự tại Mão exact-source annotation
+- status: completed
+- depends_on: [T028]
+- scope: backend/src/knowledge/sourcePalaceBinding.js, backend/test/sourcePalaceQuanMao.test.mjs, backend/test/sourcePalaceQuan.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md, docs/knowledge/interpretation-claims.json, docs/knowledge/interpretation-decisions/juan2-quan-co-cu-mao.json, docs/knowledge/research/juan2-palace/, docs/knowledge/reviews/juan2-palace/review-quan-mao-a.json, docs/knowledge/reviews/juan2-palace/review-quan-mao-b.json, .gitattributes, README.md, docs/planning/AUTODEV_MASTER_PLAN_V2.md
+- acceptance_criteria:
+  - Validate only the new 天機同在卯宮吉美 source branch; preserve existing Dậu claim/approval without duplication or unreviewed reuse
+  - Preserve full reciprocal, 入廟/陷宮 and terminal adverse context; no grade, engine-brightness equivalence, integrated career or real-life outcome inference
+  - Require independently verified API-valid positive/negative charts at Mão, Dậu wrong-branch and missing-pair/wrong-host conditions; never fabricate unreachable single-partner Mão witnesses
+  - If accepted, exact pair-and-Mão AST, immutable actual evidence and attributed internal wording only; existing formulas/source identities/public/default gates unchanged
+- verification:
+  - Actual distinct-model exact source/interpretation review, independent valid-input source/chart/AST replay, coherent-reshash/cache/public-output regressions, full relevant CI and independent full-feature review plus routed performance within remaining invocation budget
+
+Version21 T028 complete:64backendfiles88.41/90.09PASS, independentfullfeature8/performance9/crosscut10clear; internalcoverage5→6, exactnew/oldTaiannotationscoexistwithoutpublicprose. Remainingtechnicalbudget2/12. T029 is evidence-backed nextsmallfiniteclaim, MEDIUMfullfeatureloop coversallinterfaces plusroutedperformance (two passesfit); no LARGEpartition/separatecrosscut required. Initialindependentninthcandidate usedinvalidgender0; rejectthatwitness and correctvalid±1search+metadata/APIreachability BEFOREanypacketfreeze/dualapproval. Originaleightmaleinputsremainvalid. NoT029implementationfrominvalidresearch.
+
+Version22 T029 independentlyverified9API-validfixtures+completepinnedsource21manifest BEFOREactualsol/astra. BothactualMATCH+INTERPRETATION_SUPPORTED_WITH_LIMITS; ownBclarified4scope-disclosuresnotruntimeexceptions, retainedfulltextsunderlimitationAnalysis andexceptions[]; parentunchangedcomparatornowAI_ACCEPTED/MATCH. No forced sourceconditionagreement. Source/wording/AST/fivedigestsunaltered. ExistingDậufalsecaseMãonownewapprovedpositive, nameoldQuanregressiontestinadvanceandpreserveoldclaim-wordingabsence plusnewexactmutualexclusiontests. Onefiniteexistingbinderentryno newlogic/helper.
+
+
+T029 final quality gate PASS (2026-10-16): exact pair AND Mão approved by both actual source models; nine valid real fixtures, immutable actual reviews and full-source context retained. Full backend65files88.43/90.09, frontend206/lint/build, all55 Chromium E2E PASS. Independent full-feature pass11 and performance pass12 clear; no confirmed blocking finding/fix. Approved internal coverage6→7. All original formulas/source/public/release gates unchanged. Invocation review budget12/12 exhausted; overall run INCOMPLETE, not product-complete. No further implementation this invocation.
+
+## Historical queue before T030 recovery (superseded by final receipt)
+1. T030 — candidate modern Đại hạn heavenly-stem extension: inspect complete pinned iztro dependency chain (TIGER_RULE, lunar year stem, index/config semantics) against B3 natal metadata; independently replay positive/negative real charts, then actual distinct-model source review BEFORE any implementation. T025 explicitly did not approve stems; existing profile/source/public contracts cannot silently expand. Status pending; source approval absent.
+2. Restore GitHub PR API access for the delivered T025→T027→T028→T029 branch stack; create focused PRs in dependency order, verify hosted CI and branch/domain gates before authorized auto-merge. No direct-main bypass or deployment.
+3. T026/T019/T022/T020 remain evidence-blocked as previously recorded; investigate only meaningful new passages/parameters, do not repeat identical NO-GO reviews or reinterpret modern approval as classical approval.
+
+### T030 — source-scoped modern Đại hạn heavenly stems
+- status: completed
+- depends_on: [T025]
+- task_base: 774ac6cff4b74e273a9bdf3a9c1ffa180d3d6b7b
+- scope: backend/src/time/modernMajor.js, backend/src/knowledge/modernMajorStemBinding.js, backend/test/modernMajorStem.test.mjs, backend/test/modernMajorStemBinding.test.mjs, backend/test/modernMajorStemApi.test.mjs, backend/scripts/runTests.mjs, frontend/src/components/StructuredAnalysis.jsx, frontend/src/components/StructuredAnalysis.test.jsx, docs/knowledge/research/fortune/modern-decadal-stem/, docs/engineering/TEST_FIXTURES.md, docs/tuvi/MODERN_MAJOR_PROFILE.md, README.md, docs/planning/AUTODEV_MASTER_PLAN_V2.md, .gitattributes
+- acceptance_criteria:
+  - Independently validate complete pinned getHoroscope, TIGER_RULE, Dần-relative palace index, year/config/from and canonical Vietnamese stem dependencies; independently replay valid real charts before actual distinct-model comparison
+  - Only after actual dual approval, implement explicit separate iztro-pinned-menh-cuc-decadal-stem with old strict two-key request and age1..125, unchanged approved branch/age projection plus server lunar birth-stem projection
+  - Preserve old profile and omitted/malformed response fields exactly; new profile requires both old and new immutable bindings, trusted metadata and mapped branch; every closed new state has heavenlyStem null and stemPlacement not_applied
+  - UI offers distinct profile and shows canonical can with chi only for validated current mapped response, rejects malformed/closed/stale/wrong-profile evidence, preserves existing input reset and optional minor/year behavior
+  - No client stem/year overrides, natal/default/source/classical changes, upstream calendar/from equivalence, stars/Tứ Hóa/interpretation/public release or deployment
+- verification:
+  - Full-source/digest and actual dual-model decision replay, independent24chart/288period fixtures and wrong-algorithm witnesses, source/evidence/metadata tamper and closed-path tests, HTTP/ask/privacy compatibility, frontend component tests/lint/build (because existing local UI changed); no new browser tests or browser requirement, independent CORE and API/UI loops plus performance and cross-cut review
+
+Version23: explicit fresh T030 invocation reconciles merged PR56–59 at main774ac6c; T030 source/independent-fixture investigation begins, retaining prior exact approvals and all release gates. No old task recreated; product scope remains gated pending actual source review and fresh implementation readiness.
+
+Version24: actual independent source and 24-chart/288period investigation proves one complete optional API/UI profile fits the existing architecture. Enumerate exact minimal files/conditions before product edits; original T030 stem intent retained, no new source approval inferred. Distinct actual source models now reviewing frozen packet; readiness remains draft until judgments/replay.
+
+
+### T031 — project unit-first testing policy and exceptional browser CI routing
+- status: completed
+- depends_on: []
+- task_base: 774ac6cff4b74e273a9bdf3a9c1ffa180d3d6b7b
+- scope: AGENTS.md, docs/engineering/quality/TEST_STRATEGY.md, docs/engineering/quality/E2E_TEST_MATRIX.md, .cursor/rules/verification.mdc, .github/workflows/ci.yml, .github/scripts/browser-test-scope.mjs, .github/scripts/browser-test-scope.test.mjs
+- acceptance_criteria:
+  - Canonical B3 Tử Vi policy prioritizes domain Node unit tests, targeted HTTP/cross-module integration, meaningful non-browser smoke and exceptional browser-only risks; no global B3 skill edits
+  - Distinguish independent domain references, source-comparative fixtures, regressions, synthetic cases and genuinely expert-verified goldens; coverage never grants formula/source/public approval
+  - Preserve existing browser specs and all lower-level/security/privacy checks; keep e2e job identity, explicitly report browser NOT RUN when unselected and fail unknown Git comparisons
+  - Select browser CI for explicit browser spec/config/toolchain changes or manual request, with meaningful non-browser routing verification and concise project instruction references
+  - Keep policy commit separate from pending T030 source/domain/UI work, with actual independent review and docs/routing checks
+- verification:
+  - Node browser-routing checks including real temporary Git history, policy/link validation, independent full policy review and no browser launch
+
+Version25: owner explicitly changes test selection policy. Reconcile actual T030 partial implementation and actual dual source approval rather than oldpending hints; source scope/approval stays unchanged. Remove four newlyauthored uncommitted browser scenarios and restore original tracked major spec exactly; retain current UI component work and verify with Vitest (it already exists, not silently discarded). Existing59passed browser log is historical pre-policy, not revised T030 acceptance evidence; no new browser launch. User-prioritized T031 testing policy is a separate logical commit; no new Master Plan/global testing skill. T031 mutagen opportunity report was exploratory only, never a task/approval; its candidate work deferred while current requested policy/T030 verification takes priority.
+
+T031 completed5383854: canonical projectunit-firstpolicy/references/exceptionalbrowserCIrouting committedseparately afteractualindependentfullpolicyreviewclear androuting/docschecksPASS. Existingbrowsermajor specidentical774ac6c; no newT030Playwright ornewbrowserlaunch. Existingdocs/backend/frontendCIjobsunchanged; browserunselectedreportedNOTRUN, notbrowserPASS.
+
+
+## T030/T031 final parent gate and delivery — 2026-10-16
+T031completed538385457c30e0259088994f1a94ef6a12267c2d (policyonly); T030completedcc206bdd163cf5cc44cae1a946b36d9b89a0d7ca (separateapprovedstemprofile/runtime/API/UI/tests/sourceevidence). Bothactualcommitsunique/ancestorsofcurrentsourcebranch, descendants774ac6c. No duplicateT029 orPR50–59work. Actualdual sourceapprovalseparatefromT025, immutable source/conditions/algorithm/fixture binding accepted; allpublic/default/classical/natal/releasegatesunchanged.
+
+Current invocation technical reviews5/12 completed: policy, CORE, API/UI, performance, crosscut; allclear/no confirmed findings/nofixrequired. Root targeted3Nodefiles and fullunit56/integration12/CI68 passed88.67/90.03; frontend231/lint/buildpassedbecauseexistingUIchanged. Browsertestsoriginalunchanged; new4withdrawn; no browserlaunchafterpolicy. Routing/docschecksPASS. Forty-fivewhitespacediagnosticsonexacttwofrozenartifactsonly, allotherchangesPASS.
+
+Bothfeature/policycommitspushedandgitls-remoteverifiedcc206bd. ActualghPRcreate --basemain failed POSThttps://api.github.com/graphql Forbidden(exit1); no PRnumber/hostedCI/merge/deployclaimed, mainstill774ac6c. OveralldeliveryrunINCOMPLETEbecauseexternalPRAPIaccess, NOTbecause reviewbudgetexhausted orT030sourceunapproved. LocalrequestedengineeringtasksPASS.
+
+## Historical ordered actions before T032 (superseded below)
+1. Reconcile this checkpoint and source branch against latestmain; T030/T031alreadycomplete, do not reimplement or rerun sourceapprovals without new evidence. Restore GitHubPRAPIaccess, create focusedPR fromcodex/tuvi-modern-decadal-stems tomain, verify actualhostedCI and retainedbranch/domain/releasegates before any authorizedauto-merge. Neverdirectpushmain ordeploy.
+2. Source-scope research candidate: modern selected-decadal-stem TứHóa physical natal-star associations. Fulltable/defaultconfiguration/starcanonical/duplicate-missing semantics need their OWNindependentfixtures+actualdualapproval andfreshJIT; T030explicitlyexcludes it. No task/activation/approval is inferred from exploratoryopportunitynotes.
+3. T026/T019/T022/T020 preciseexistingunresolvedpassage/taxonomy/brightness/classicalageblocksremain; pursue genuinelynew evidence, notidenticalNO-GOreviews.
+
+
+### T032 — separately source-scoped modern decadal Tứ Hóa associations
+- status: completed
+- commit: 394a0c573e5c2d64979b989ba53b9554d060055f
+- depends_on: [T030]
+- task_base: 655c2190e017c710ea0dcad08e2c3d722138a339
+- scope: backend/src/time/modernMajor.js, backend/src/knowledge/modernMajorMutagenBinding.js, backend/test/modernMajorMutagen.test.mjs, backend/test/modernMajorMutagenBinding.test.mjs, backend/test/modernMajorMutagenApi.test.mjs, backend/scripts/runTests.mjs, frontend/src/components/StructuredAnalysis.jsx, frontend/src/components/StructuredAnalysis.test.jsx, docs/knowledge/research/fortune/modern-decadal-mutagen/, docs/engineering/TEST_FIXTURES.md, docs/tuvi/MODERN_MAJOR_PROFILE.md, README.md, docs/planning/AUTODEV_MASTER_PLAN_V2.md, .gitattributes
+- acceptance_criteria:
+  - Independently inspect full pinned selected-decadal-stem to default Tứ Hóa table to natal major/minor star membership chain, configuration snapshot/override boundaries, all40cells and15canonicalnames before actual distinct-model source approval
+  - Independent valid real-chart fixtures cover all10selectedstems, four associations per selected decade, shared-palace cases and non-equivalence to birth/view-year transforms; synthetic missing/duplicate/conflicting metadata are not real-chart witnesses
+  - Only after actual dual approval, implement explicit iztro-pinned-menh-cuc-decadal-mutagen requiring accepted branch/stem and separate mutagen binding, exact two-key age1..125 request, pinned built-in table only and unique trusted source-star mapping to existing natal physical palaces
+  - Keep four ordered records even when source stars share a palace; every closed new-profile state returns no associations; old/omitted profiles and their exact outputs remain unchanged
+  - Display associations only for current validated explicit new-profile response with clear placement-only scope; no inserted natal stars, rotated decadal palace roles, custom config, generic classical tu_hoa_han activation, interpretation/public/default/source/release changes
+- verification:
+  - Actual source/comparator and immutable input/digest replay; independent table/chart fixtures and trust/source tamper tests; targeted Node unit/integration then fullbackendCI; component tests/lint/build only for changed UI; no new Playwright or browser launch; independent CORE and API/UI, routed performance and final crosscut within remaining invocation budget
+
+Version26: after T030/T031actualcommits/clean-tree verified and latestmain774ac6c unchanged, GitHubAPIstillForbidden. Continue independently actionable nextcapability from committedqueue. Newbranchcodex/tuvi-modern-decadal-mutagens from655c219 stacks on unmergedT030; no duplication/auto-mainmerge. Existing pinned source opportunity has concrete40-cell table/natalmembership chain; T032 is source/fixture investigation only untilactualdualapproval andfreshJITready. Currentinvocationtechnicalbudget5/12alreadyused, notresetbyContinue; reserve atmostremaining7includinganyfix/reviewloops. Existing unit-first/no-browser policy remains.
+
+
+## T032 final receipt — 2026-10-16
+T032 local engineering PASS, feature394a0c573e5c2d64979b989ba53b9554d060055f pushed and remote SHA verified oncodex/tuvi-modern-decadal-mutagens. Actual separate dualsourceMATCH/AI_ACCEPTED preserved; 40cells15targets/24realcharts288periods/1152independentassociations and101sharedperiods. Backend71scripts89.15/90.00, repairedfrontend314tests89.37/90.36/lint/build, docs248PASS. CORE6/performance7clear, initialAPIUI8confirmedHIGH R3501; isolatedfrontendfix/red-green andfreshfullAPIUI9clear→R3501CLOSED; crosscut10clear after674actualHTTP/576endpointqueries/2304rows. No confirmedblockingOPENfindings. Fullwhitespacecheckonly1immutableEOFblanksource-span.txt; allotherfeaturefilesPASS, reviewedbytesunchanged.
+
+Currentinvocation10/12actualtechnicalreviewsused, NOTexhausted; no budgetreset, no newpublicapproval. HostedNode22CIunverified(localNode24), no newbrowserexecution/specchanges. Approvedinternalinterpretationcoverage7unchanged; deliveredcapabilityisnewoptionalplacementprojectionnotprose.
+
+ActualPRcreate--basecodex/tuvi-modern-decadal-stems--headcodex/tuvi-modern-decadal-mutagens failedPOSThttps://api.github.com/graphql Forbidden(exit1). mainstill774ac6c, parentbranch655c219. No PRnumber/hostedCI/merge/deployinvented; overallrunINCOMPLETEfordeliveryandremainingproductscope.
+
+## Historical T032 queue before same-PR recovery (superseded below)
+1. Reconcilelatestmainandbothremoteheads, preserve completedT029/T030/T031/T032 andR3501closure. WhenGitHubAPIaccessisavailable, createT030/T031PRcodex/tuvi-modern-decadal-stems→main FIRST, thenT032codex/tuvi-modern-decadal-mutagens→parentbranch(orretargetmainafterparentmerge). Actualhostedchecks/branch/source/domain/releasegatesbeforeauthorizedauto-merge; no direct-mainpush/deployment. DurablePRbodyandcommandsbelowinprogress.md.
+2. Nextsourceinvestigation: inspectwhetherpinnedmodernTiểuhạnmetadatahasacompletesource-scopedheavenly-stemprojectionanalogousbutNOTapprovedbyT030/T032. Firstcheckcompletecall/index/config/year/agechainandindependentvalidfixtures; do notreuseapprovaljustbecausefieldslooksimilar. Thisisresearchcandidate/notapprovedruntime/notanimplementation-readytask. Currentremaining2reviewslotscannotcoveranewLARGEsource+API/UIcapabilitywithmandatoryCORE/APIUI/performance/crosscut; preservecheckpointinsteadofstartingunreviewablecode. Currentbudgetis10/12,notexhausted.
+3. T026/T019/T022/T020remainpreciselyevidence-blocked: clauseattachment,19vs18正曜taxonomy/吉星拱照,ThiênPhủsemantics,classicaldecadeage/startandTiểuhạnparameters. Pursueonlymeaningfulnewevidence; no repeatedidenticalNO-GOpackets, no inventedtraditionalconditions.
+4. Productionreadinessstillrequiresunresolveddomain/public/source/releaseapprovalsandactualhostedoperationalchecks. Localtestcoverageorsoftware-sourcecomparisoncannotreplacehistorical/expertverification.
+
+
+### T033 — permanent real HTTP to production client contract regression
+- status: completed
+- commit: ff153baee9914b1bc8fb5d6a9916469cf55992bc
+- depends_on: [T032]
+- task_base: dd92577c99b071afb12fec3dc8c400bd3da997d0
+- scope: frontend/src/components/StructuredAnalysis.jsx, frontend/src/components/structuredAnalysisContract.js, backend/test/structuredAnalysisContract.integration.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md, docs/knowledge/research/fortune/modern-decadal-mutagen/STATUS.md, docs/knowledge/research/fortune/modern-decadal-mutagen/engineering-review/
+- acceptance_criteria:
+  - Use the same unchanged pure response validators in production React and permanent Node HTTP integration tests without source-text slicing, VM execution, copied predicates, new framework or browser
+  - Reachable accepted charts cover all source stems/targets and shared palaces plus closed/legacy/combined contracts and brightness-name regression, synthetic forgeries remain clearly classified
+  - New integration is registered in existing backend CI, retains privacy/no-store/no-persistence and deterministic temporary-resource cleanup
+  - Preserve all formulas, source approvals, public gates, response/render/state behavior, existing component/browser tests and current branch
+- verification:
+  - Existing314frontendcharacterization, newfocusedNodeintegration+fixtureclassification thenfullbackendCI; frontendfullCI/lint/buildbecauseproductionimportschange; demonstrateR3501regressionwouldfailthepermanenttest; fullMEDIUMindependentreview+fix/freshreviewifneededwithinremaining2passes. No browser.
+
+Version27: ownerasksnextstepONSAMEPR; currentbranchdd92577cleanandremotesreconciled, GitHubPRliststillForbidden. T032sourcefeaturecomplete; prioritize actualdiscoveredR3501testgap before newunapprovedformula. PriorrealHTTP/frontendprobeswereonlyscratch/archivedscripts,noteffectiveCIgates. BoundedpurecontractextractionenablesdurableNodeintegrationusinggenuineproductionexports, preservingallbehavior/source. MEDIUMsinglecoherentcontracttestabilitychangefitsremaining2reviews; no budgetreset(total10/12alreadyused). No newT033formula/sourceapprovalrequiredorclaimed. Keep branchcodex/tuvi-modern-decadal-mutagens;no newbranch/PR.
+
+
+## T033 completion and recovered existing PR60 delivery
+T033completedff153baee9914b1bc8fb5d6a9916469cf55992bc, actualnonforcefast-forwardpush655c219→ff153ba oncodex/tuvi-modern-decadal-stems. NativeGitPR60/headalsoff153baandnewmerge-refb418b42090f114156df8a4268f001667fc2a7b2c,main774ac6cunchanged. UserSAMEPRrequirementsatisfiedwithoutnewPR/cherry-pick/historyrewrite; T032/T033historypreserved andbothbranchrefsretained. CheckpointwillbeconsumedonexistingPR60headbranch.
+
+Pureproductionclientcontractextractionbyte-identical25declarations/220lines; permanentNodeHTTPgate32requests26periods/24chartsall40cells15targets13sharedactualB/H/M/V/Đsuffixes,16syntheticrejections. Scratchpre-fixmutantexpectedfailureprovesR3501sensitivity. FullNode22.23.2backend72scripts(58unit14integration)89.15/89.99andfrontend314tests89.38/90.36/lint/buildPASS. Fullreview11andcumulativesame-PRcrosscut12clear, independent674HTTP/576endpoints2304rows40warmmutationsoldprofileexact. Noconfirmedblockingfindings; nofixrequired. All44sourceinputsfrozen/runtime/sourcebytesunchanged; no approvalfromcoverage.
+
+Currentinvocation12/12actualreviewcapEXHAUSTEDafterfinalcrosscut12; no13threview/newimplementation. CurrenttasklocalPASS; overallproductrunINCOMPLETEforremainingdomain/releaseworkandhostedgateaccess. T033fullstagedwhitespacePASS; cumulativePR46previouslyacceptedsourceformatdiagnosticsexactthreefiles(modern-decadal-stem/review-context.txt44,decadal-main-block.txt1;modern-decadal-mutagen/source-span.txt1), allotherfilesPASS. Nevertrim/re-hashsources. Docs251+selftestsPASS. No browserlaunch/specchange, no mainmerge/deploy.
+
+Actualgh pr edit60(title/body)operationreturnedPOSTGraphQLForbidden(exit1); branch/PRheadupdateDIDworkthroughnativeGit. Title/body/APIopen-state/hostedCIunverified, no PRcreationblockedclaimnowsincePR60exists. UpdatedcompletePRdraftpersistedinprogress.md.
+
+## Current ordered resumable queue after PR60 update
+1. ReconcilelatestmainandPR60/head/branchcodex/tuvi-modern-decadal-stems; T030/T031/T032/T033completed, noreimplementation. RecoverGitHubAPItoapplydurablePR60title/bodyandreadactualhostedNode22Linux/Windows/backend/frontend/docs/browser-routingchecks. Authorizedauto-mergeonlyafteractualchecksandretainedsource/domain/releasegates; neverdirectmainpush/deploy. Do notcreateanotherPRforT032/T033.
+2. Freshinvocationreviewbudgetrequiredfornewimplementation. ModernTiểuhạnstempositiveintakehascompletefiniteoperandsbutdistinctnatalpalace-vs-decadalstemsourcepath: freezefullcombinedsource/dependency/locale/120mapping/independentvalidfixturepacket andobtainactualdualsourceapprovalBEFOREnewoptionalprofile. SOURCE_INSPECTED_NOT_APPROVED; T024/T030/T032donotapprovethisextension. Exactintakeandremaininggatesareinprogresscheckpoint; no same-NO-GOrepetition.
+3. T026/T019/T022/T020retainexactpriorclassical/text/parameterblockers; investigateonlynewmeaningfulevidence. Publicinterpretation7internalclaims/sourceidentity/default/natal/classical/releasegatesunchanged.

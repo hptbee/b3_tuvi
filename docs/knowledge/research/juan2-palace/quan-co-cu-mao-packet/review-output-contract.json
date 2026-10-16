@@ -1,0 +1,39 @@
+{
+  "status": "REVIEWER_INSTRUCTIONS_ONLY_NO_ACTUAL_REVIEW_METADATA",
+  "reviewA": "array containing exactly one actual review",
+  "reviewB": "object with reviews array containing exactly one actual review",
+  "required": [
+    "model",
+    "available:true only when actually executed",
+    "sourceId",
+    "sourceProfile",
+    "claimId",
+    "target",
+    "editionId",
+    "schoolId",
+    "locator",
+    "sourceDigest",
+    "contextDigest",
+    "conditionTreeDigest",
+    "wordingDigest",
+    "fixturesDigest",
+    "quotation (verbatim span substring containing all required anchors)",
+    "conditions",
+    "exceptions",
+    "formulaComparison",
+    "verdict",
+    "interpretationVerdict",
+    "conditionTree",
+    "reviewedWording or approvedWording",
+    "limitations",
+    "expertVerified:false",
+    "publicRelease:false"
+  ],
+  "allowedFormulaVerdicts": [
+    "MATCH",
+    "PARTIAL",
+    "CONFLICT",
+    "NOT_IMPLEMENTED"
+  ],
+  "instruction": "No decision, execution.json or reviewer model/task metadata exists yet. Actual independent reviewers must produce their own verdict and independently reproduce fixtures, without reading the other model response. Reject ambiguity or unsupported semantics."
+}

@@ -1,0 +1,15 @@
+# Exact source-scoped Quan Lộc Cơ–Cự at Mão annotation
+
+Claim `interp-quanshu-quan-co-cu-mao-host` requires both Thiên Cơ and Cự Môn at Quan Lộc AND branch Mão. It attributes only `天機同在卯宮吉美`; the existing Dậu claim remains independently bound and mutually exclusive. Complete reciprocal entries, source brightness/branch modifiers and terminal adverse clauses remain retained and explicitly unevaluated. No engine brightness equivalence, integrated career judgment, grade or real-world outcome is approved. Public prose remains withheld; source/edition, natal/default formulas and original decisions are unchanged.
+
+Both actual independent requested models returned MATCH and INTERPRETATION_SUPPORTED_WITH_LIMITS after complete source and nine independently verified API-valid real fixtures were frozen. Parent comparison is AI_ACCEPTED/MATCH. Two positives cover Mão with/without the named four adverse stars; seven negatives include Dậu, missing partners, wrong host and a female Mão/neither-partner chart. A preliminary invalid gender=0 witness was rejected before packet freeze and actual review. The replacement and all accepted fixtures use validated ±1 inputs. A finite search of 35,064 validated charts found 2,922 Quan-Mão charts but no single-partner Mão witness; this is not proof of universal impossibility. Exact AST mutation tests independently reject each dropped-star or branch-only predicate.
+
+[Actual independent source checks](actual-review-checks/README.md) preserve source provenance, genuine model proofs and the author's exception/disclosure clarification. Original frozen evidence and final actual reviewer judgments are not rewritten. Historical scripts do not replace those judgments.
+
+## Engineering checks
+
+Parent quality gate PASS. Full backend CI: 54 unit + 11 integration = 65 files, 88.43% lines / 90.09% branches. Final cumulative frontend: 206 tests, lint and production build PASS. All 55 Chromium E2E tests PASS using the existing cloud configuration and system Chromium. [Full-feature review](engineering-review/feature-review-1.md) and [performance review](engineering-review/performance-review.md) found no confirmed blocking defects. Feature review independently exercised 23 actual HTTP requests and genuine frontend response validators. Performance review measured 7,530 successful requests against baseline 3679916, bounded additional cold reads and zero file reads over 3,750 current warm requests. No SLA is inferred.
+
+The old Quan negative witness now matches the new Mão claim. Its regression still asserts absence of the specific old Dậu wording; new tests independently verify exact branch-specific notes and public withholding. No old predicate or release assertion is removed.
+
+Full staged whitespace checking reports four upstream trailing-whitespace diagnostics on exactly two original HTML snapshots: `raw-juan2.html` and `actual-review-checks/a-raw.html` (lines 9 and 32 in each). Their reviewed bytes are preserved. All changes outside those exact files pass; no broad directory or application exemption applies.

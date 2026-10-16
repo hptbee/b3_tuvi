@@ -1,0 +1,30 @@
+{
+  "status": "FROZEN_PROPOSAL_NOT_APPROVED",
+  "candidateCount": 1,
+  "fixtureCount": 19,
+  "positiveCount": 7,
+  "negativeCount": 12,
+  "files": {
+    "README.md": "bd1a1f90535ec324554631c941226e861821241798f3d886faf32a49dba65232",
+    "candidate-report.md": "5b0297b0cd5e8aa0880770dddbcf8537ea8c06ec906e030037b07db61839dd7d",
+    "derived-juan2.txt": "b824c61e1bdec55ecdc7123ff1e79bce9648f07d67d054c43a59ce731572d4a7",
+    "fixtures.json": "820a582ec69a0e741a6bd5adcefb9687511c97dc511e66a23c40f0d4b293d567",
+    "independent-fixtures.json": "6f8371431e7df123fa1b195a97f96f6ce8f73287b56933dea9e741e5abd4998c",
+    "independent-fixtures.md": "ac9b3e458949014b2c0b8a0a9353350dc2f018c241146ca69010646087f46033",
+    "independent-replay.mjs": "1deb5f47551b84e5afe0c9e98cd0b453ef71e8a430ba997a22a4172e7a69ee48",
+    "independent-source.json": "5c3e12ecf7be6ec9350c8167aa88bb943cb8d899d4fa604341c3b130f30fec03",
+    "independent-source.py": "502165681a414d0d93323b9a27e4356dd3bcfa126ea13e47969a72fc7b8043ea",
+    "mirror-LICENSE.txt": "e6c7b6e313cbda3135b41bccc66c98be132cb8319d0d465903d17e669e748b36",
+    "phuc-co-cu-complete-spans.txt": "ecab3739a743b233911914a43ef297847c2328b60254bddbed4e69c559f7b186",
+    "phuc-full-section.txt": "1ad123491278d5fcc8c568956085100468f59e45bc57035339586d3387bc5757",
+    "raw-juan2.html": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+    "review-bundle.json": "f0d2069fa7db008f2fe18224a5bdc3d2d210d52b5b7a9066181d28db4a4d90e1",
+    "source-identity.json": "e64bea56180e457366e8bd134d66310af27ff419954f20593fa2f65c8e656ceb",
+    "verify-proposal.mjs": "f16586cc2cb4729650b87b5d7b58abc85f50e61b661dad01a75d32c9478c7233"
+  },
+  "sourceDigest": "ecab3739a743b233911914a43ef297847c2328b60254bddbed4e69c559f7b186",
+  "contextDigest": "1ad123491278d5fcc8c568956085100468f59e45bc57035339586d3387bc5757",
+  "conditionTreeDigest": "2b53a285d252dc8a7183322d9bd76fe1891fb8ec980ecc50b13118428c5e61b8",
+  "wordingDigest": "5804e6d68fb5de7bdd03d50decc0280aaf2faaae002296f31409c16ace3fe9ac",
+  "fixturesDigest": "fc389b054837ae2eb3369b62cbb8f7cd8464403f06389bf84740edccadc46487"
+}

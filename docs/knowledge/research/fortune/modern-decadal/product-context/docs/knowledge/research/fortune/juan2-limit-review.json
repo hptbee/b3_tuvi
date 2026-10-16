@@ -1,0 +1,25 @@
+{
+  "sourceUrl": "https://zh.wikisource.org/zh-hant/紫微斗數全書/卷二",
+  "excerptFile": "docs/knowledge/research/fortune/ziwei-quanshu-juan2-limits.txt",
+  "editionStatus": "wikisource_transcription_not_authenticated",
+  "decision": "INSUFFICIENT_FOR_FORMULA",
+  "mayImplement": false,
+  "reviewers": [
+    {
+      "model": "grok-4.7-high",
+      "agentId": "bc-3c27df54-6d4a-50a5-ab5c-83fe79a92e85",
+      "sufficientForDeterministicFormula": false
+    },
+    {
+      "model": "gpt-5.6-terra-medium",
+      "agentId": "bc-76771a62-4ee3-5fa1-9aff-3dcff412f703",
+      "sufficientForDeterministicFormula": false
+    }
+  ],
+  "missing": [
+    "decade length and starting age for đại hạn",
+    "year step and starting age for tiểu hạn",
+    "definition of 陽/陰",
+    "lưu niên, lưu tinh, and tứ hóa hạn are not in this excerpt"
+  ]
+}

@@ -1,0 +1,645 @@
+{
+  "status": "INDEPENDENT_REPLAY_COMPLETED_NOT_SOURCE_APPROVAL",
+  "sourcePin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "spanSha256": "bac2c2992bfbd705187c18fffffd7e7f819de053ecb9e227e01cb3b6122e0c87",
+  "contextSha256": "750f2cb32f124562bb12608eeebe485ad6f3fe3d9ecd5122aa70ce1984f2f537",
+  "sourceSpan": "紫微輔弼同宮一呼百諾居上品 或作三方為次吉，在財帛宮則為財賦之官。",
+  "conditionTree": {
+    "op": "same_palace",
+    "target": "tai_bach",
+    "stars": [
+      "Tử Vi",
+      "Tả Phù",
+      "Hữu Bật"
+    ]
+  },
+  "replayCount": 9,
+  "positiveCount": 3,
+  "negativeCount": 6,
+  "allExpected": true,
+  "metadataReplayAllExact": true,
+  "chartMutation": false,
+  "results": [
+    {
+      "id": "independent-1",
+      "case": "juan3_tai_tuvi_ta_huu_positive",
+      "expected": true,
+      "input": {
+        "day": 28,
+        "month": 10,
+        "year": 1981,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 1,
+        "lunarMonth": 10,
+        "lunarYear": 1981,
+        "canIndex": 7,
+        "chiIndex": 10,
+        "canName": "Tân",
+        "chiName": "Dậu",
+        "isLeapMonth": false
+      },
+      "cuc": {
+        "name": "Thủy nhị cục",
+        "number": 2
+      },
+      "menhPalaceId": "6",
+      "anSaoMonth": 10,
+      "host": {
+        "id": "2",
+        "branchName": "Sửu",
+        "functionId": "tai_bach",
+        "stars": [
+          "Tử Vi",
+          "Phá Quân",
+          "Quan Phù",
+          "Tả Phù",
+          "Hữu Bật",
+          "Long Trì",
+          "Phượng Các",
+          "Giải Thần",
+          "Hoa Cái",
+          "Tam Thai",
+          "Bát Tọa",
+          "Bệnh Phù"
+        ]
+      },
+      "present": [
+        "Tử Vi",
+        "Tả Phù",
+        "Hữu Bật"
+      ],
+      "missing": [],
+      "allThreePalaces": [
+        {
+          "id": "2",
+          "functionId": "tai_bach",
+          "branchName": "Sửu"
+        }
+      ],
+      "actual": true,
+      "conditionTrace": {
+        "status": "satisfied",
+        "op": "same_palace",
+        "children": []
+      }
+    },
+    {
+      "id": "independent-2",
+      "case": "juan3_tai_tuvi_ta_huu_positive",
+      "expected": true,
+      "input": {
+        "day": 8,
+        "month": 11,
+        "year": 1983,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 4,
+        "lunarMonth": 10,
+        "lunarYear": 1983,
+        "canIndex": 9,
+        "chiIndex": 12,
+        "canName": "Quý",
+        "chiName": "Hợi",
+        "isLeapMonth": false
+      },
+      "cuc": {
+        "name": "Thổ ngũ cục",
+        "number": 5
+      },
+      "menhPalaceId": "6",
+      "anSaoMonth": 10,
+      "host": {
+        "id": "2",
+        "branchName": "Sửu",
+        "functionId": "tai_bach",
+        "stars": [
+          "Tử Vi",
+          "Phá Quân",
+          "Tả Phù",
+          "Hữu Bật",
+          "Hóa Lộc",
+          "Kình Dương",
+          "Quan Phủ",
+          "Tang Môn"
+        ]
+      },
+      "present": [
+        "Tử Vi",
+        "Tả Phù",
+        "Hữu Bật"
+      ],
+      "missing": [],
+      "allThreePalaces": [
+        {
+          "id": "2",
+          "functionId": "tai_bach",
+          "branchName": "Sửu"
+        }
+      ],
+      "actual": true,
+      "conditionTrace": {
+        "status": "satisfied",
+        "op": "same_palace",
+        "children": []
+      }
+    },
+    {
+      "id": "independent-3",
+      "case": "juan3_tai_tuvi_ta_huu_positive",
+      "expected": true,
+      "input": {
+        "day": 8,
+        "month": 5,
+        "year": 1984,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 8,
+        "lunarMonth": 4,
+        "lunarYear": 1984,
+        "canIndex": 0,
+        "chiIndex": 1,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "isLeapMonth": false
+      },
+      "cuc": {
+        "name": "Hỏa lục cục",
+        "number": 6
+      },
+      "menhPalaceId": "12",
+      "anSaoMonth": 4,
+      "host": {
+        "id": "8",
+        "branchName": "Mùi",
+        "functionId": "tai_bach",
+        "stars": [
+          "Tử Vi",
+          "Phá Quân",
+          "Tấu Thư",
+          "Long Đức",
+          "Tả Phù",
+          "Hữu Bật",
+          "Thiên Việt",
+          "Đường Phù",
+          "Thiên Quan",
+          "Hóa Quyền"
+        ]
+      },
+      "present": [
+        "Tử Vi",
+        "Tả Phù",
+        "Hữu Bật"
+      ],
+      "missing": [],
+      "allThreePalaces": [
+        {
+          "id": "8",
+          "functionId": "tai_bach",
+          "branchName": "Mùi"
+        }
+      ],
+      "actual": true,
+      "conditionTrace": {
+        "status": "satisfied",
+        "op": "same_palace",
+        "children": []
+      }
+    },
+    {
+      "id": "independent-4",
+      "case": "juan3_tai_tuvi_missing_one_negative",
+      "expected": false,
+      "input": {
+        "day": 8,
+        "month": 2,
+        "year": 1980,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 22,
+        "lunarMonth": 12,
+        "lunarYear": 1979,
+        "canIndex": 5,
+        "chiIndex": 8,
+        "canName": "Kỷ",
+        "chiName": "Mùi",
+        "isLeapMonth": false
+      },
+      "cuc": {
+        "name": "Thổ ngũ cục",
+        "number": 5
+      },
+      "menhPalaceId": "8",
+      "anSaoMonth": 12,
+      "host": {
+        "id": "4",
+        "branchName": "Mão",
+        "functionId": "tai_bach",
+        "stars": [
+          "Tử Vi",
+          "Tham Lang",
+          "Tả Phù",
+          "Phượng Các",
+          "Giải Thần",
+          "Hóa Quyền",
+          "Tiểu Hao",
+          "Bạch Hổ",
+          "Hỏa Tinh"
+        ]
+      },
+      "present": [
+        "Tử Vi",
+        "Tả Phù"
+      ],
+      "missing": [
+        "Hữu Bật"
+      ],
+      "allThreePalaces": [],
+      "actual": false,
+      "conditionTrace": {
+        "status": "not_satisfied",
+        "op": "same_palace",
+        "children": []
+      }
+    },
+    {
+      "id": "independent-5",
+      "case": "juan3_tai_tuvi_missing_one_negative",
+      "expected": false,
+      "input": {
+        "day": 22,
+        "month": 2,
+        "year": 1980,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 7,
+        "lunarMonth": 1,
+        "lunarYear": 1980,
+        "canIndex": 6,
+        "chiIndex": 9,
+        "canName": "Canh",
+        "chiName": "Thân",
+        "isLeapMonth": false
+      },
+      "cuc": {
+        "name": "Thủy nhị cục",
+        "number": 2
+      },
+      "menhPalaceId": "9",
+      "anSaoMonth": 1,
+      "host": {
+        "id": "5",
+        "branchName": "Thìn",
+        "functionId": "tai_bach",
+        "stars": [
+          "Tử Vi",
+          "Thiên Tướng",
+          "Quốc Ấn",
+          "Tả Phù",
+          "Văn Xương",
+          "Hoa Cái",
+          "Bát Tọa",
+          "Thiên Tài",
+          "Thiên Thọ",
+          "Bệnh Phù",
+          "Bạch Hổ",
+          "Linh Tinh",
+          "Thiên La"
+        ]
+      },
+      "present": [
+        "Tử Vi",
+        "Tả Phù"
+      ],
+      "missing": [
+        "Hữu Bật"
+      ],
+      "allThreePalaces": [],
+      "actual": false,
+      "conditionTrace": {
+        "status": "not_satisfied",
+        "op": "same_palace",
+        "children": []
+      }
+    },
+    {
+      "id": "independent-6",
+      "case": "juan3_tai_no_tuvi_negative",
+      "expected": false,
+      "input": {
+        "day": 15,
+        "month": 5,
+        "year": 1980,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 2,
+        "lunarMonth": 4,
+        "lunarYear": 1980,
+        "canIndex": 6,
+        "chiIndex": 9,
+        "canName": "Canh",
+        "chiName": "Thân",
+        "isLeapMonth": false
+      },
+      "cuc": {
+        "name": "Thổ ngũ cục",
+        "number": 5
+      },
+      "menhPalaceId": "12",
+      "anSaoMonth": 4,
+      "host": {
+        "id": "8",
+        "branchName": "Mùi",
+        "functionId": "tai_bach",
+        "stars": [
+          "Tham Lang",
+          "Vũ Khúc",
+          "Tả Phù",
+          "Hữu Bật",
+          "Thiên Việt",
+          "Hồng Loan",
+          "Thiên Tài",
+          "Thiên Thọ",
+          "Hóa Quyền",
+          "Đà La",
+          "Quan Phủ",
+          "Trực Phù",
+          "Quả Tú"
+        ]
+      },
+      "present": [
+        "Tả Phù",
+        "Hữu Bật"
+      ],
+      "missing": [
+        "Tử Vi"
+      ],
+      "allThreePalaces": [],
+      "actual": false,
+      "conditionTrace": {
+        "status": "not_satisfied",
+        "op": "same_palace",
+        "children": []
+      }
+    },
+    {
+      "id": "independent-7",
+      "case": "juan3_tai_no_tuvi_negative",
+      "expected": false,
+      "input": {
+        "day": 22,
+        "month": 5,
+        "year": 1980,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 9,
+        "lunarMonth": 4,
+        "lunarYear": 1980,
+        "canIndex": 6,
+        "chiIndex": 9,
+        "canName": "Canh",
+        "chiName": "Thân",
+        "isLeapMonth": false
+      },
+      "cuc": {
+        "name": "Thổ ngũ cục",
+        "number": 5
+      },
+      "menhPalaceId": "12",
+      "anSaoMonth": 4,
+      "host": {
+        "id": "8",
+        "branchName": "Mùi",
+        "functionId": "tai_bach",
+        "stars": [
+          "Thiên Lương",
+          "Tả Phù",
+          "Hữu Bật",
+          "Thiên Việt",
+          "Hồng Loan",
+          "Thiên Tài",
+          "Thiên Thọ",
+          "Đà La",
+          "Quan Phủ",
+          "Trực Phù",
+          "Quả Tú"
+        ]
+      },
+      "present": [
+        "Tả Phù",
+        "Hữu Bật"
+      ],
+      "missing": [
+        "Tử Vi"
+      ],
+      "allThreePalaces": [],
+      "actual": false,
+      "conditionTrace": {
+        "status": "not_satisfied",
+        "op": "same_palace",
+        "children": []
+      }
+    },
+    {
+      "id": "independent-8",
+      "case": "juan3_tai_wrong_host_negative",
+      "expected": false,
+      "input": {
+        "day": 22,
+        "month": 11,
+        "year": 1980,
+        "hour": 20,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 15,
+        "lunarMonth": 10,
+        "lunarYear": 1980,
+        "canIndex": 6,
+        "chiIndex": 9,
+        "canName": "Canh",
+        "chiName": "Thân",
+        "isLeapMonth": false
+      },
+      "cuc": {
+        "name": "Hỏa lục cục",
+        "number": 6
+      },
+      "menhPalaceId": "2",
+      "anSaoMonth": 10,
+      "host": {
+        "id": "10",
+        "branchName": "Dậu",
+        "functionId": "tai_bach",
+        "stars": [
+          "Vũ Khúc",
+          "Thất Sát",
+          "Lực Sĩ",
+          "Thiếu Dương",
+          "Đào Hoa",
+          "Thiên Tài",
+          "Hóa Quyền",
+          "Kình Dương",
+          "Địa Kiếp",
+          "Đẩu Quân",
+          "Thiên Không",
+          "Phá Toái"
+        ]
+      },
+      "present": [],
+      "missing": [
+        "Tử Vi",
+        "Tả Phù",
+        "Hữu Bật"
+      ],
+      "allThreePalaces": [
+        {
+          "id": "2",
+          "functionId": "menh",
+          "branchName": "Sửu"
+        }
+      ],
+      "actual": false,
+      "conditionTrace": {
+        "status": "not_satisfied",
+        "op": "same_palace",
+        "children": []
+      }
+    },
+    {
+      "id": "independent-9",
+      "case": "juan3_tai_wrong_host_negative",
+      "expected": false,
+      "input": {
+        "day": 8,
+        "month": 11,
+        "year": 1981,
+        "hour": 20,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 12,
+        "lunarMonth": 10,
+        "lunarYear": 1981,
+        "canIndex": 7,
+        "chiIndex": 10,
+        "canName": "Tân",
+        "chiName": "Dậu",
+        "isLeapMonth": false
+      },
+      "cuc": {
+        "name": "Thổ ngũ cục",
+        "number": 5
+      },
+      "menhPalaceId": "2",
+      "anSaoMonth": 10,
+      "host": {
+        "id": "10",
+        "branchName": "Dậu",
+        "functionId": "tai_bach",
+        "stars": [
+          "Vũ Khúc",
+          "Thất Sát",
+          "Lộc Tồn",
+          "Bác Sĩ",
+          "Thiên Quan",
+          "Thái Tuế",
+          "Địa Kiếp",
+          "Thiên Khốc"
+        ]
+      },
+      "present": [],
+      "missing": [
+        "Tử Vi",
+        "Tả Phù",
+        "Hữu Bật"
+      ],
+      "allThreePalaces": [
+        {
+          "id": "2",
+          "functionId": "menh",
+          "branchName": "Sửu"
+        }
+      ],
+      "actual": false,
+      "conditionTrace": {
+        "status": "not_satisfied",
+        "op": "same_palace",
+        "children": []
+      }
+    }
+  ],
+  "additionalMissingTaFixture": {
+    "searched": 233,
+    "input": {
+      "day": 28,
+      "month": 4,
+      "year": 1980,
+      "hour": 8,
+      "gender": 1
+    },
+    "lunar": {
+      "lunarDay": 14,
+      "lunarMonth": 3,
+      "lunarYear": 1980,
+      "canIndex": 6,
+      "chiIndex": 9,
+      "canName": "Canh",
+      "chiName": "Thân",
+      "isLeapMonth": false
+    },
+    "cuc": {
+      "name": "Hỏa lục cục",
+      "number": 6
+    },
+    "menhPalaceId": "1",
+    "anSaoMonth": 3,
+    "host": {
+      "id": "9",
+      "branchName": "Thân",
+      "functionId": "tai_bach",
+      "stars": [
+        "Tử Vi",
+        "Thiên Phủ",
+        "Lộc Tồn",
+        "Bác Sĩ",
+        "Hữu Bật",
+        "Văn Khúc",
+        "Thiên Quý",
+        "Thiên Tài",
+        "Thái Tuế"
+      ]
+    },
+    "present": [
+      "Tử Vi",
+      "Hữu Bật"
+    ],
+    "missing": [
+      "Tả Phù"
+    ],
+    "allThreePalaces": [],
+    "actual": false,
+    "conditionTrace": {
+      "status": "not_satisfied",
+      "op": "same_palace",
+      "children": []
+    }
+  },
+  "publicRelease": false,
+  "expertVerified": false,
+  "bookVerified": false
+}

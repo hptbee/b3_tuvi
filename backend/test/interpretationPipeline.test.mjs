@@ -64,11 +64,12 @@ const fixtureHit = {
     formationStatus: 'unknown',
     breakingStatus: 'not_implemented'
 };
-const withClaim = interpretChart(chart, { claims: [eligibleClaim], extraFormulaHits: [fixtureHit] });
+const withClaim = interpretChart(chart, { claims: [eligibleClaim] });
 const hostStatement = withClaim.statements.find((item) => item.statementId === `palace:${host.functionId}`);
-assert.strictEqual(hostStatement.availabilityStatus, 'eligible_claims_present');
+assert.strictEqual(hostStatement.availabilityStatus, 'insufficient_evidence');
 assert.strictEqual(hostStatement.prose, null);
 assert.ok(hostStatement.claimIds.includes('fixture-eligible-host'));
+assert.ok(hostStatement.claimApplicability.find((item) => item.claimId === eligibleClaim.claimId).reasons.includes('interpretation_binding_missing'));
 
 const flagsOnly = {
     claimId: 'fixture-flags-only',
@@ -155,7 +156,7 @@ const matchOnly = claimEligibility({
 assert.strictEqual(matchOnly.eligible, false);
 assert.ok(matchOnly.reasons.includes('source_review_not_recorded'));
 assert.strictEqual(matchOnly.layers.formulaComparison, 'match');
-assert.strictEqual(matchOnly.layers.interpretationApproval, 'approved');
+assert.strictEqual(matchOnly.layers.interpretationApproval, 'not_approved');
 assert.strictEqual(matchOnly.publicRelease, false);
 
 const worded = {
@@ -163,11 +164,10 @@ const worded = {
     claimId: 'fixture-worded',
     approvedWording: 'cung này được sách ghi nhận trong điều kiện đã nêu.'
 };
-const internal = interpretChart(chart, { claims: [worded], includeInternal: true, extraFormulaHits: [fixtureHit] });
+const internal = interpretChart(chart, { claims: [worded], includeInternal: true });
 const internalHost = internal.statements.find((item) => item.statementId === `palace:${host.functionId}`);
 assert.strictEqual(internalHost.prose, null);
-assert.match(internalHost.internalProse, /thai-thu-lang-tan-bien/);
-assert.match(internalHost.internalProse, /cung này được sách ghi nhận/);
+assert.strictEqual(internalHost.internalProse, null);
 assert.strictEqual(internalHost.publicInterpretationReleased, false);
 const hidden = interpretChart(chart, { claims: [worded] });
 assert.strictEqual(hidden.statements.find((item) => item.statementId === `palace:${host.functionId}`).internalProse, null);

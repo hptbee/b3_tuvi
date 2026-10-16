@@ -100,8 +100,14 @@ assert.strictEqual(archiveMultipart.archiveItemVerified, true);
 assert.strictEqual(archiveMultipart.digitalArtifactVerified, false);
 assert.strictEqual(archiveMultipart.originalEditionAuthenticated, false);
 assert.strictEqual(archiveMultipart.publicationYear, 1956);
-assert.ok(sourcesDoc.editions.every((edition) => edition.authenticationBasis === 'project_owner'));
-assert.ok(sourcesDoc.editions.every((edition) => edition.authenticated === true));
+assert.ok(sourcesDoc.editions.filter((edition) => edition.authenticated === true)
+    .every((edition) => edition.authenticationBasis === 'project_owner'));
+assert.ok([accepted, print2012, archiveMultipart].every((edition) => edition.authenticated === true));
+const mirror = sourcesDoc.editions.find((edition) => edition.editionId === 'iztro-juan2-2f00e2ab0c80');
+assert.strictEqual(mirror.authenticated, false);
+assert.strictEqual(mirror.originalEditionAuthenticated, false);
+assert.strictEqual(mirror.bookVerified, false);
+assert.strictEqual(mirror.expertVerified, false);
 assert.ok(accepted.authenticated && accepted.textCollatedAgainstOriginal === false);
 assert.notStrictEqual(sourcesDoc.editions[0].pageCount, sourcesDoc.editions[1].pageCount);
 

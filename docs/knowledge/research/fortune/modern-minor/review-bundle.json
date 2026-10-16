@@ -1,0 +1,680 @@
+{
+  "status": "PROPOSED_NOT_APPROVED",
+  "subjectType": "fortune_placement_profile",
+  "subjectId": "iztro-pinned-age1-sex-triad",
+  "profileId": "iztro-pinned-age1-sex-triad",
+  "sourceId": "iztro-modern-software",
+  "editionId": "iztro-modern-2f00e2ab0c80",
+  "sourceProfile": "iztro-pinned-age1-sex-triad",
+  "schoolId": "vn-tam-hop-default",
+  "schoolCompatibilityOnly": true,
+  "sourceClass": "pinned_modern_software_and_documentation_not_classical_edition",
+  "sourceRepository": "https://github.com/SylarLong/iztro",
+  "sourcePin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "locator": "src/astro/palace.ts#getHoroscope",
+  "sourceLines": [
+    174,
+    234
+  ],
+  "sourceSpanFile": "source-span.txt",
+  "sourceSpan": "/**\n * 起大限\n *\n * - 大限由命宫起，阳男阴女顺行；\n * - 阴男阳女逆行，每十年过一宫限。\n *\n * @param solarDateStr 公历日期\n * @param timeIndex 出生时索引\n * @param gender 性别\n * @param fixLeap 是否修正闰月，若修正，则闰月前15天按上月算，后15天按下月算\n * @returns 从寅宫开始的大限年龄段\n */\nexport const getHoroscope = (param: AstrolabeParam): { decadals: Decadal[]; ages: number[][] } => {\n  const { solarDate, timeIndex, gender, from } = param;\n  const decadals: Decadal[] = [];\n  const genderKey = kot<GenderKey>(gender!);\n  const { yearly } = getHeavenlyStemAndEarthlyBranchBySolarDate(solarDate, timeIndex, {\n    // 起大限应该与配置同步\n    year: getConfig().yearDivide,\n  });\n  const heavenlyStem = kot<HeavenlyStemKey>(yearly[0], 'Heavenly');\n  const earthlyBranch = kot<EarthlyBranchKey>(yearly[1], 'Earthly');\n  const { soulIndex, heavenlyStemOfSoul, earthlyBranchOfSoul } = getSoulAndBody(param);\n  const fiveElementsClass = kot<FiveElementsClassKey>(\n    getFiveElementsClass(from?.heavenlyStem ?? heavenlyStemOfSoul, from?.earthlyBranch ?? earthlyBranchOfSoul),\n  );\n\n  // 用五虎遁获取大限起始天干\n  const startHeavenlyStem = TIGER_RULE[heavenlyStem];\n\n  for (let i = 0; i < 12; i++) {\n    const idx =\n      GENDER[genderKey] === earthlyBranches[earthlyBranch].yinYang ? fixIndex(soulIndex + i) : fixIndex(soulIndex - i);\n    const start = FiveElementsClass[fiveElementsClass] + 10 * i;\n    const heavenlyStemIndex = fixIndex(HEAVENLY_STEMS.indexOf(startHeavenlyStem) + idx, 10);\n    const earthlyBranchIndex = fixIndex(EARTHLY_BRANCHES.indexOf('yinEarthly') + idx);\n\n    decadals[idx] = {\n      range: [start, start + 9],\n      heavenlyStem: t(HEAVENLY_STEMS[heavenlyStemIndex]),\n      earthlyBranch: t(EARTHLY_BRANCHES[earthlyBranchIndex]),\n    };\n  }\n\n  const ageIdx = getAgeIndex(yearly[1]);\n  const ages = [];\n\n  for (let i = 0; i < 12; i++) {\n    const age = [];\n\n    for (let j = 0; j < 10; j++) {\n      age.push(12 * j + i + 1);\n    }\n\n    const idx = kot<GenderKey>(gender!) === 'male' ? fixIndex(ageIdx + i) : fixIndex(ageIdx - i);\n\n    ages[idx] = age;\n  }\n\n  return { decadals, ages };\n};\n",
+  "sourceDigest": "d5342272cab276bc6d17d1be3e837873a67410d4f961cd22bfc1975a843cc817",
+  "contextFile": "review-context.txt",
+  "contextDigest": "084984efdc46adbc115fc35707f80d1dfd28d114ac26645f3c8dd561f1b1cf09",
+  "contextManifest": [
+    {
+      "path": "raw/LICENSE",
+      "bytes": 1073,
+      "sha256": "e6c7b6e313cbda3135b41bccc66c98be132cb8319d0d465903d17e669e748b36"
+    },
+    {
+      "path": "raw/docs/zh_TW/learn/setup.html",
+      "bytes": 61628,
+      "sha256": "9e69805617313e8ae36805941e583f70f6e3a0a9c92411b1675b1e3df3cd9f40"
+    },
+    {
+      "path": "raw/docs/zh_TW/learn/basis.html",
+      "bytes": 65268,
+      "sha256": "2aea62af92b36d4fcb8fe6f36eb02e5f91935477c8eae30f30d932c287cb4a2e"
+    },
+    {
+      "path": "raw/docs/zh_TW/learn/horoscope.html",
+      "bytes": 47350,
+      "sha256": "e1bd9053258d022e2dc2295e23a6847a92eb004655090252a91494bcff48a0f4"
+    },
+    {
+      "path": "raw/docs/zh_TW/posts/config-n-plugin.html",
+      "bytes": 79518,
+      "sha256": "145949e340fa8b0fe9cdd26fa892343ca7a5690491de7b27490d94c9f9ac9f19"
+    },
+    {
+      "path": "raw/docs/zh_TW/posts/horoscope.html",
+      "bytes": 98965,
+      "sha256": "20271af792c0d11109ca8551b54e6f5d48e298937e8df07fb71b05d4891f8762"
+    },
+    {
+      "path": "raw/src/astro/palace.ts",
+      "bytes": 7799,
+      "sha256": "a9c6d8444d5edcd241068f5bd83fed3aa38a57b206cebb221f86b8d4057b5273"
+    },
+    {
+      "path": "raw/src/astro/FunctionalAstrolabe.ts",
+      "bytes": 19616,
+      "sha256": "584fd8d2d3ac76b3b8d7990ec6d26cac42eb5f1fcac9175326f29497d60d2d9c"
+    },
+    {
+      "path": "raw/src/astro/config.ts",
+      "bytes": 3825,
+      "sha256": "e74d2bf23630f8faadfae9fd2d29c592ceb7a18d7396c0aba5d74959ea5d134e"
+    },
+    {
+      "path": "raw/src/utils/index.ts",
+      "bytes": 7614,
+      "sha256": "9f3699115c9c149dc261f9a293e6c7ad40ac4f744884dba21b367b96d9bbfe16"
+    },
+    {
+      "path": "raw/src/data/constants.ts",
+      "bytes": 3871,
+      "sha256": "e2411f73c7ea438b5186f2a3ef29fa54587ab78e25620b5a52b409ce9244043a"
+    },
+    {
+      "path": "raw/src/data/earthlyBranches.ts",
+      "bytes": 3599,
+      "sha256": "3dd6e4b260a18a2a8c0e4aec2a12e766f29e52d7b4c01ecbf332f6066a3f1b34"
+    },
+    {
+      "path": "raw/src/i18n/index.ts",
+      "bytes": 2943,
+      "sha256": "06da411d37e4e5f3dc7d922f3dbce0f9fcb2fe1125619873e6a651eabc63d558"
+    },
+    {
+      "path": "raw/src/i18n/locales/vi-VN/gender.ts",
+      "bytes": 62,
+      "sha256": "79ab1b39e62fda211cd5b21e916446ee58d6afa10b3a639dd7799987ef7ef3d4"
+    },
+    {
+      "path": "raw/src/i18n/locales/vi-VN/earthlyBranch.ts",
+      "bytes": 300,
+      "sha256": "933f9475bd0b580904515dc3198f059f8924310de10dd8538d2eb02e26311f0c"
+    },
+    {
+      "path": "raw/src/i18n/locales/zh-CN/gender.ts",
+      "bytes": 61,
+      "sha256": "a19607ebf4055ed0f0daa3a78b21288185a67fdf8190e750251be72de19e5d8d"
+    },
+    {
+      "path": "raw/src/i18n/locales/zh-CN/earthlyBranch.ts",
+      "bytes": 280,
+      "sha256": "8672f42c8460b8ae0079e643e1fe62db133fcd19879dd2ad08b5ab3b606a2ab8"
+    },
+    {
+      "path": "raw/src/i18n/locales/zh-TW/gender.ts",
+      "bytes": 61,
+      "sha256": "a19607ebf4055ed0f0daa3a78b21288185a67fdf8190e750251be72de19e5d8d"
+    },
+    {
+      "path": "raw/src/i18n/locales/zh-TW/earthlyBranch.ts",
+      "bytes": 280,
+      "sha256": "8672f42c8460b8ae0079e643e1fe62db133fcd19879dd2ad08b5ab3b606a2ab8"
+    },
+    {
+      "path": "context/complete_getHoroscope_including_decadal_and_minor_conditions.txt",
+      "bytes": 2521,
+      "sha256": "fc81f2c53ecbbb329a597741129bef615e672e9eede1e2c3a3f64ec4bbe62ec0"
+    },
+    {
+      "path": "context/complete_fixIndex.txt",
+      "bytes": 634,
+      "sha256": "d80681721bd0038d14450fd449ee64ae417e43efb342748eede5ae58d1542d43"
+    },
+    {
+      "path": "context/complete_fixEarthlyBranchIndex.txt",
+      "bytes": 546,
+      "sha256": "dade66fc05e018da6904e6e29dc36dc8b0447f9e7ec336e1ad9737c17a0e2a91"
+    },
+    {
+      "path": "context/complete_getAgeIndex.txt",
+      "bytes": 1123,
+      "sha256": "51b11b546fc82828ac4a031d852045e1cfbd15a8cbf56d3b1a5e786804d081bd"
+    },
+    {
+      "path": "context/date_age_derivation_and_adjacent_lookup_context_excluded_from_candidate.txt",
+      "bytes": 6094,
+      "sha256": "fe1dfdae81bff08f210f9b48f1565c4c3ce72921db9a45b3860b35e0ef3d57f1"
+    },
+    {
+      "path": "context/complete_branch_enum.txt",
+      "bytes": 322,
+      "sha256": "24ef8ed25673f13160372998d9ee9c6c78afe567f173a54ee77420a4092f9dd5"
+    },
+    {
+      "path": "context/complete_gender_enum.txt",
+      "bytes": 138,
+      "sha256": "422a641885148e379960c08f3cd172edc015d25e995baf16a9f672fd2a0f483b"
+    },
+    {
+      "path": "text/docs/zh_TW/learn/setup.txt",
+      "bytes": 10517,
+      "sha256": "cf387e59c24e2eeb19913b97a6081291fefd693dc860cf2b6dd5d057ded48ff8"
+    },
+    {
+      "path": "text/docs/zh_TW/learn/basis.txt",
+      "bytes": 16884,
+      "sha256": "5701e569d34f7d57cc604dd1713534e10255643eaf1071a00df5c5578da5dab2"
+    },
+    {
+      "path": "text/docs/zh_TW/learn/horoscope.txt",
+      "bytes": 6988,
+      "sha256": "63d0bddb30b286b01bc5f298c1d4cb0c982efb4a454352bce137cc1e38acfbf0"
+    },
+    {
+      "path": "text/docs/zh_TW/posts/config-n-plugin.txt",
+      "bytes": 6640,
+      "sha256": "bb62104d6ac17521130813b4f3a3e107e0cac9517bd244fa5264e52886963a66"
+    },
+    {
+      "path": "text/docs/zh_TW/posts/horoscope.txt",
+      "bytes": 8175,
+      "sha256": "9b2bae4d346cd02bd4fe88aba3558276eb8bb494883dbc8ffd8cbc31b3a1fcc6"
+    },
+    {
+      "path": "product-context/backend/src/engine/chartInput.js",
+      "bytes": 2129,
+      "sha256": "df1bb9ff0c0286998229199311e1b625a326851470dd1ce9aa6062f3db633866"
+    },
+    {
+      "path": "product-context/backend/src/engine/constants.js",
+      "bytes": 5504,
+      "sha256": "849e69d15a2709e7350f09b673fe558774db9eb3d02116a1b5c23a0d38da18ef"
+    }
+  ],
+  "payloadHashManifest": [
+    {
+      "upstreamPath": "LICENSE",
+      "localPath": "raw/LICENSE",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/LICENSE",
+      "bytes": 1073,
+      "sha256": "e6c7b6e313cbda3135b41bccc66c98be132cb8319d0d465903d17e669e748b36"
+    },
+    {
+      "upstreamPath": "docs/zh_TW/learn/setup.html",
+      "localPath": "raw/docs/zh_TW/learn/setup.html",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/setup.html",
+      "bytes": 61628,
+      "sha256": "9e69805617313e8ae36805941e583f70f6e3a0a9c92411b1675b1e3df3cd9f40"
+    },
+    {
+      "upstreamPath": "docs/zh_TW/learn/basis.html",
+      "localPath": "raw/docs/zh_TW/learn/basis.html",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/basis.html",
+      "bytes": 65268,
+      "sha256": "2aea62af92b36d4fcb8fe6f36eb02e5f91935477c8eae30f30d932c287cb4a2e"
+    },
+    {
+      "upstreamPath": "docs/zh_TW/learn/horoscope.html",
+      "localPath": "raw/docs/zh_TW/learn/horoscope.html",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/horoscope.html",
+      "bytes": 47350,
+      "sha256": "e1bd9053258d022e2dc2295e23a6847a92eb004655090252a91494bcff48a0f4"
+    },
+    {
+      "upstreamPath": "docs/zh_TW/posts/config-n-plugin.html",
+      "localPath": "raw/docs/zh_TW/posts/config-n-plugin.html",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/posts/config-n-plugin.html",
+      "bytes": 79518,
+      "sha256": "145949e340fa8b0fe9cdd26fa892343ca7a5690491de7b27490d94c9f9ac9f19"
+    },
+    {
+      "upstreamPath": "docs/zh_TW/posts/horoscope.html",
+      "localPath": "raw/docs/zh_TW/posts/horoscope.html",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/posts/horoscope.html",
+      "bytes": 98965,
+      "sha256": "20271af792c0d11109ca8551b54e6f5d48e298937e8df07fb71b05d4891f8762"
+    },
+    {
+      "upstreamPath": "src/astro/palace.ts",
+      "localPath": "raw/src/astro/palace.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/astro/palace.ts",
+      "bytes": 7799,
+      "sha256": "a9c6d8444d5edcd241068f5bd83fed3aa38a57b206cebb221f86b8d4057b5273"
+    },
+    {
+      "upstreamPath": "src/astro/FunctionalAstrolabe.ts",
+      "localPath": "raw/src/astro/FunctionalAstrolabe.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/astro/FunctionalAstrolabe.ts",
+      "bytes": 19616,
+      "sha256": "584fd8d2d3ac76b3b8d7990ec6d26cac42eb5f1fcac9175326f29497d60d2d9c"
+    },
+    {
+      "upstreamPath": "src/astro/config.ts",
+      "localPath": "raw/src/astro/config.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/astro/config.ts",
+      "bytes": 3825,
+      "sha256": "e74d2bf23630f8faadfae9fd2d29c592ceb7a18d7396c0aba5d74959ea5d134e"
+    },
+    {
+      "upstreamPath": "src/utils/index.ts",
+      "localPath": "raw/src/utils/index.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/utils/index.ts",
+      "bytes": 7614,
+      "sha256": "9f3699115c9c149dc261f9a293e6c7ad40ac4f744884dba21b367b96d9bbfe16"
+    },
+    {
+      "upstreamPath": "src/data/constants.ts",
+      "localPath": "raw/src/data/constants.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/data/constants.ts",
+      "bytes": 3871,
+      "sha256": "e2411f73c7ea438b5186f2a3ef29fa54587ab78e25620b5a52b409ce9244043a"
+    },
+    {
+      "upstreamPath": "src/data/earthlyBranches.ts",
+      "localPath": "raw/src/data/earthlyBranches.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/data/earthlyBranches.ts",
+      "bytes": 3599,
+      "sha256": "3dd6e4b260a18a2a8c0e4aec2a12e766f29e52d7b4c01ecbf332f6066a3f1b34"
+    },
+    {
+      "upstreamPath": "src/i18n/index.ts",
+      "localPath": "raw/src/i18n/index.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/index.ts",
+      "bytes": 2943,
+      "sha256": "06da411d37e4e5f3dc7d922f3dbce0f9fcb2fe1125619873e6a651eabc63d558"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/vi-VN/gender.ts",
+      "localPath": "raw/src/i18n/locales/vi-VN/gender.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/vi-VN/gender.ts",
+      "bytes": 62,
+      "sha256": "79ab1b39e62fda211cd5b21e916446ee58d6afa10b3a639dd7799987ef7ef3d4"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/vi-VN/earthlyBranch.ts",
+      "localPath": "raw/src/i18n/locales/vi-VN/earthlyBranch.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/vi-VN/earthlyBranch.ts",
+      "bytes": 300,
+      "sha256": "933f9475bd0b580904515dc3198f059f8924310de10dd8538d2eb02e26311f0c"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/zh-CN/gender.ts",
+      "localPath": "raw/src/i18n/locales/zh-CN/gender.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/zh-CN/gender.ts",
+      "bytes": 61,
+      "sha256": "a19607ebf4055ed0f0daa3a78b21288185a67fdf8190e750251be72de19e5d8d"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/zh-CN/earthlyBranch.ts",
+      "localPath": "raw/src/i18n/locales/zh-CN/earthlyBranch.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/zh-CN/earthlyBranch.ts",
+      "bytes": 280,
+      "sha256": "8672f42c8460b8ae0079e643e1fe62db133fcd19879dd2ad08b5ab3b606a2ab8"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/zh-TW/gender.ts",
+      "localPath": "raw/src/i18n/locales/zh-TW/gender.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/zh-TW/gender.ts",
+      "bytes": 61,
+      "sha256": "a19607ebf4055ed0f0daa3a78b21288185a67fdf8190e750251be72de19e5d8d"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/zh-TW/earthlyBranch.ts",
+      "localPath": "raw/src/i18n/locales/zh-TW/earthlyBranch.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/zh-TW/earthlyBranch.ts",
+      "bytes": 280,
+      "sha256": "8672f42c8460b8ae0079e643e1fe62db133fcd19879dd2ad08b5ab3b606a2ab8"
+    }
+  ],
+  "license": {
+    "spdx": "MIT",
+    "file": "raw/LICENSE",
+    "sha256": "e6c7b6e313cbda3135b41bccc66c98be132cb8319d0d465903d17e669e748b36",
+    "upstreamNoticePreserved": true
+  },
+  "algorithmSpec": {
+    "profileId": "iztro-pinned-age1-sex-triad",
+    "inputFields": [
+      "birthYearBranch",
+      "gender",
+      "nominalAge"
+    ],
+    "branchOrder": [
+      "Tí",
+      "Sửu",
+      "Dần",
+      "Mão",
+      "Thìn",
+      "Tị",
+      "Ngọ",
+      "Mùi",
+      "Thân",
+      "Dậu",
+      "Tuất",
+      "Hợi"
+    ],
+    "branchIds": "one_based_1_to_12",
+    "triadStarts": [
+      {
+        "birthBranches": [
+          "Dần",
+          "Ngọ",
+          "Tuất"
+        ],
+        "startBranch": "Thìn",
+        "startBranchId": 5
+      },
+      {
+        "birthBranches": [
+          "Thân",
+          "Tí",
+          "Thìn"
+        ],
+        "startBranch": "Tuất",
+        "startBranchId": 11
+      },
+      {
+        "birthBranches": [
+          "Tị",
+          "Dậu",
+          "Sửu"
+        ],
+        "startBranch": "Mùi",
+        "startBranchId": 8
+      },
+      {
+        "birthBranches": [
+          "Hợi",
+          "Mão",
+          "Mùi"
+        ],
+        "startBranch": "Sửu",
+        "startBranchId": 2
+      }
+    ],
+    "genderDirections": [
+      {
+        "gender": 1,
+        "sourceKey": "male",
+        "direction": 1
+      },
+      {
+        "gender": -1,
+        "sourceKey": "female",
+        "direction": -1
+      }
+    ],
+    "ageAtStart": 1,
+    "ageStep": 1,
+    "palacesPerAgeStep": 1,
+    "wrap": 12,
+    "nominalAgeRange": {
+      "min": 1,
+      "max": 120,
+      "integer": true
+    },
+    "outputFormula": "branchId = ((startBranchId - 1 + direction * (nominalAge - 1)) % 12 + 12) % 12 + 1",
+    "sourcePalaceToProductBranchId": "((sourcePalaceIndex + 2) % 12) + 1",
+    "yearYinYangAffectsDirection": false,
+    "calendarAgeDerivation": false,
+    "extendsBeyondSourceRange": false
+  },
+  "algorithmDigest": "73617dee8c9cc2b8ecc30a5e785139cc40fff6adda1f8b866db46f0b5497c50d",
+  "compatibilitySpec": {
+    "scope": "branch_sex_age_projection_not_full_iztro_astrolabe",
+    "receivingSchoolId": "vn-tam-hop-default",
+    "upstreamSchoolId": null,
+    "birthYearBranch": "trusted_server_natal_lunar_chiName_and_chiIndex_consistent",
+    "gender": "validated_product_gender_1_male_minus1_female",
+    "nominalAge": "caller_supplied_integer_1_to_120_not_date_derived",
+    "sourceBranchAndGenderMapping": [
+      {
+        "key": "ziEarthly",
+        "chinese": "子",
+        "upstreamVi": "Tý",
+        "productVi": "Tí",
+        "productBranchId": 1,
+        "sourceBranchEnumIndex": 0,
+        "sourcePalaceIndex": 10
+      },
+      {
+        "key": "chouEarthly",
+        "chinese": "丑",
+        "upstreamVi": "Sửu",
+        "productVi": "Sửu",
+        "productBranchId": 2,
+        "sourceBranchEnumIndex": 1,
+        "sourcePalaceIndex": 11
+      },
+      {
+        "key": "yinEarthly",
+        "chinese": "寅",
+        "upstreamVi": "Dần",
+        "productVi": "Dần",
+        "productBranchId": 3,
+        "sourceBranchEnumIndex": 2,
+        "sourcePalaceIndex": 0
+      },
+      {
+        "key": "maoEarthly",
+        "chinese": "卯",
+        "upstreamVi": "Mão",
+        "productVi": "Mão",
+        "productBranchId": 4,
+        "sourceBranchEnumIndex": 3,
+        "sourcePalaceIndex": 1
+      },
+      {
+        "key": "chenEarthly",
+        "chinese": "辰",
+        "upstreamVi": "Thìn",
+        "productVi": "Thìn",
+        "productBranchId": 5,
+        "sourceBranchEnumIndex": 4,
+        "sourcePalaceIndex": 2
+      },
+      {
+        "key": "siEarthly",
+        "chinese": "巳",
+        "upstreamVi": "Tỵ",
+        "productVi": "Tị",
+        "productBranchId": 6,
+        "sourceBranchEnumIndex": 5,
+        "sourcePalaceIndex": 3
+      },
+      {
+        "key": "wuEarthly",
+        "chinese": "午",
+        "upstreamVi": "Ngọ",
+        "productVi": "Ngọ",
+        "productBranchId": 7,
+        "sourceBranchEnumIndex": 6,
+        "sourcePalaceIndex": 4
+      },
+      {
+        "key": "weiEarthly",
+        "chinese": "未",
+        "upstreamVi": "Mùi",
+        "productVi": "Mùi",
+        "productBranchId": 8,
+        "sourceBranchEnumIndex": 7,
+        "sourcePalaceIndex": 5
+      },
+      {
+        "key": "shenEarthly",
+        "chinese": "申",
+        "upstreamVi": "Thân",
+        "productVi": "Thân",
+        "productBranchId": 9,
+        "sourceBranchEnumIndex": 8,
+        "sourcePalaceIndex": 6
+      },
+      {
+        "key": "youEarthly",
+        "chinese": "酉",
+        "upstreamVi": "Dậu",
+        "productVi": "Dậu",
+        "productBranchId": 10,
+        "sourceBranchEnumIndex": 9,
+        "sourcePalaceIndex": 7
+      },
+      {
+        "key": "xuEarthly",
+        "chinese": "戌",
+        "upstreamVi": "Tuất",
+        "productVi": "Tuất",
+        "productBranchId": 11,
+        "sourceBranchEnumIndex": 10,
+        "sourcePalaceIndex": 8
+      },
+      {
+        "key": "haiEarthly",
+        "chinese": "亥",
+        "upstreamVi": "Hợi",
+        "productVi": "Hợi",
+        "productBranchId": 12,
+        "sourceBranchEnumIndex": 11,
+        "sourcePalaceIndex": 9
+      }
+    ],
+    "genderMapping": [
+      {
+        "productCode": 1,
+        "sourceKey": "male",
+        "sourceLabel": "Nam"
+      },
+      {
+        "productCode": -1,
+        "sourceKey": "female",
+        "sourceLabel": "Nữ"
+      }
+    ],
+    "target": "resolve_reviewed_branch_on_unchanged_validated_12_palace_natal_chart",
+    "exclusions": [
+      "upstream_calendar_equivalence",
+      "yearDivide_selection",
+      "ageDivide_selection",
+      "date_to_nominal_age",
+      "birthday_boundary",
+      "leap_month_age_semantics",
+      "classical_quanshu_approval",
+      "default_profile_change",
+      "dai_han",
+      "childhood_periods",
+      "natal_formulas",
+      "fortune_interpretation",
+      "public_predictions"
+    ],
+    "invalidInputContract": "strict_adapter_proposal_not_observed_upstream_rejection",
+    "historicalAuthentication": false,
+    "bookVerified": false,
+    "expertVerified": false,
+    "publicRelease": false
+  },
+  "compatibilityDigest": "786bfeb18c04ad84371ecd0f526266a7aef55288d19aeee6c682f718a5b55344",
+  "conditions": [
+    {
+      "id": "explicit_named_modern_profile",
+      "anchor": "profileId and separately scoped modern source identity",
+      "classification": "adapter_scope"
+    },
+    {
+      "id": "four_birth_branch_triad_starts",
+      "anchor": "src/utils/index.ts#getAgeIndex:181-206",
+      "classification": "source_algorithm"
+    },
+    {
+      "id": "male_forward_female_reverse",
+      "anchor": "src/astro/palace.ts#getHoroscope:228 kot<GenderKey>(gender!) === 'male'",
+      "classification": "source_algorithm"
+    },
+    {
+      "id": "age_one_at_triad_start",
+      "anchor": "src/astro/palace.ts#getHoroscope:218-230; i=0,j=0 gives 1",
+      "classification": "source_algorithm"
+    },
+    {
+      "id": "one_palace_per_year_wrap_twelve",
+      "anchor": "src/astro/palace.ts#getHoroscope:221-230; src/utils/index.ts#fixIndex:34-53",
+      "classification": "source_algorithm"
+    },
+    {
+      "id": "finite_integer_age_one_to_120",
+      "anchor": "src/astro/palace.ts#getHoroscope:221-225 i<12,j<10",
+      "classification": "source_finite_table_and_strict_adapter_boundary"
+    },
+    {
+      "id": "explicit_branch_sex_age_projection",
+      "anchor": "compatibilitySpec; product-context/backend/src/engine/chartInput.js; source constants/locales",
+      "classification": "compatibility_projection"
+    },
+    {
+      "id": "no_calendar_age_derivation",
+      "anchor": "src/astro/FunctionalAstrolabe.ts:28-178 deliberately excluded; source config yearDivide/ageDivide retained in context",
+      "classification": "exclusion"
+    },
+    {
+      "id": "not_classical_or_public_prediction_approval",
+      "anchor": "source classification and declared review scope",
+      "classification": "exclusion"
+    }
+  ],
+  "conditionIds": [
+    "explicit_named_modern_profile",
+    "four_birth_branch_triad_starts",
+    "male_forward_female_reverse",
+    "age_one_at_triad_start",
+    "one_palace_per_year_wrap_twelve",
+    "finite_integer_age_one_to_120",
+    "explicit_branch_sex_age_projection",
+    "no_calendar_age_derivation",
+    "not_classical_or_public_prediction_approval"
+  ],
+  "requiredAnchors": [
+    "const ageIdx = getAgeIndex(yearly[1]);",
+    "age.push(12 * j + i + 1);",
+    "kot<GenderKey>(gender!) === 'male' ? fixIndex(ageIdx + i) : fixIndex(ageIdx - i)",
+    "ages[idx] = age;"
+  ],
+  "fixturesFile": "fixtures.json",
+  "fixturesDigest": "053fbdd20d76ce2e31da097dcfb991c969f333f8e19104c88374899f31883215",
+  "fixturesJsonDigest": "d99da18d0e94937712c862418b1ff47cd431d92ca887a4565e6169e6ffe99c29",
+  "fixtureCoverage": {
+    "endpointCases": 120,
+    "allAgeComparisons": 2880,
+    "natalSolarCharts": 24,
+    "badInputProposals": 39,
+    "upstreamPackageExecuted": false,
+    "newProductFormulaExecuted": false
+  },
+  "fixtureClassification": "engineering_mathematical_comparative_not_independently_sourced_historical_goldens",
+  "invalidCases": "strict_adapter_negative_requirements_not_observed_upstream_behavior",
+  "sourceCodeExecution": false,
+  "sourceAuthenticatedHistoricalEdition": false,
+  "bookVerified": false,
+  "expertVerified": false,
+  "publicRelease": false,
+  "reviewQuestion": "Does this pinned modern software fully and unambiguously specify the four birth-branch triad starts, age-one anchor, one-year/one-palace step, both sex directions, wrap and finite ages 1–120? Is the declared branch/sex/caller-explicit-nominal-age projection onto the receiving product natal chart supportable within its exact compatibility exclusions, without claiming complete iztro calendar equivalence, classical/default profile approval or public predictions? Return unresolved/reject for any unsupported condition; do not infer missing semantics.",
+  "requestedReviewBindings": [
+    "subjectType",
+    "subjectId",
+    "profileId",
+    "sourceId",
+    "sourceProfile",
+    "editionId",
+    "schoolId",
+    "locator",
+    "sourcePin",
+    "sourceDigest",
+    "contextDigest",
+    "algorithmDigest",
+    "compatibilityDigest",
+    "fixturesDigest",
+    "conditionIds"
+  ],
+  "digestConventions": {
+    "text": "SHA256 of exact UTF8 file bytes including terminal LF; no trimming/newline normalization",
+    "json": "SHA256 of UTF8 JSON.stringify(object) preserving packet property/array order, no whitespace or trailing LF",
+    "fixturesDigest": "Exact complete fixtures.json UTF8 file bytes; fixturesJsonDigest separately binds compact JSON",
+    "context": "review-context.txt concatenates each contextManifest entry in order with literal BEGIN/END relative-path boundaries, raw UTF8 contents, and explicit LF delimiters"
+  },
+  "modelReviews": [],
+  "approval": null
+}

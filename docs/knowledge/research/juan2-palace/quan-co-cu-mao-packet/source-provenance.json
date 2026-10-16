@@ -1,0 +1,58 @@
+{
+  "status": "FROZEN_SOURCE_AND_CORRECTED_FIXTURE_PROPOSAL_NOT_APPROVED",
+  "repository": "https://github.com/SylarLong/iztro",
+  "revision": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "gitPath": "docs/zh_TW/learn/ancientBook-2.html",
+  "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/ancientBook-2.html",
+  "sourceClass": "secondary_pinned_html_transcription_not_authenticated_historical_edition",
+  "upstreamCodeExecuted": false,
+  "rawHtml": {
+    "file": "raw-juan2.html",
+    "sha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a"
+  },
+  "derivedText": {
+    "file": "derived-juan2.txt",
+    "sha256": "b824c61e1bdec55ecdc7123ff1e79bce9648f07d67d054c43a59ce731572d4a7"
+  },
+  "license": {
+    "file": "mirror-LICENSE.txt",
+    "sha256": "e6c7b6e313cbda3135b41bccc66c98be132cb8319d0d465903d17e669e748b36",
+    "scope": "MIT repository notice retained, not original historical-edition authentication or rights inference"
+  },
+  "sourceAcquisition": "Exact pinned Git-object read, inert HTMLParser complete paragraphs and full contextual blocks; separate independent source extraction/identity proof included.",
+  "sourceAcquisitionProof": "source-acquisition.json",
+  "independentSourceProof": "independent-source.json",
+  "independentFixtureProof": "independent-fixtures.json",
+  "independentFixtureProofSha256": "9d2de0ca3de48503541b4fa727ad18fd2a256966365f3e6195fc00c02ccaa92f",
+  "independentFixtureProofStatus": "CORRECTED_INDEPENDENT_API_VALID_ENGINEERING_REPLAY_NOT_SOURCE_APPROVAL",
+  "fixtureCount": 9,
+  "fixtureCorrectedBeforeActualDualModels": true,
+  "withdrawnPreliminaryAttempt": "Invalidgender0 ninth fixture was rejected and recomputed with gender-1 before freeze. Invalid artifact excluded; corrected finiteSearch validated all inputs and genders[-1,1].",
+  "independentValidSearch": {
+    "years": [
+      1991,
+      1992,
+      1993,
+      1994
+    ],
+    "days": "every valid civil date",
+    "hours": "0..22 every 2h",
+    "genders": [
+      -1,
+      1
+    ],
+    "searched": 35064,
+    "quanMao": 2922,
+    "singlePartner": 0,
+    "neitherPartner": 2612,
+    "everyInputValidatedBeforeCalculation": true,
+    "universalInvariantProven": false
+  },
+  "allFrozenInputsValid": true,
+  "sourceApproved": false,
+  "expertVerified": false,
+  "bookVerified": false,
+  "publicRelease": false,
+  "existingRegistryMutation": "none",
+  "existingDauApprovalReused": false
+}

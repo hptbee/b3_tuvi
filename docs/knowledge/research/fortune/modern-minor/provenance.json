@@ -1,0 +1,238 @@
+{
+  "status": "SOURCE_DOSSIER_ONLY_NOT_APPROVAL",
+  "sourceClass": "pinned_modern_software_and_documentation_not_classical_edition",
+  "repository": "https://github.com/SylarLong/iztro",
+  "revision": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "acquisition": "git show at exact commit, text only",
+  "license": "MIT, complete upstream LICENSE preserved; no opinion on separately reproduced classical material",
+  "upstreamCodeExecuted": false,
+  "sources": [
+    {
+      "upstreamPath": "LICENSE",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/LICENSE",
+      "localPath": "/tmp/tuvi-modern-minor/raw/LICENSE",
+      "bytes": 1073,
+      "sha256": "e6c7b6e313cbda3135b41bccc66c98be132cb8319d0d465903d17e669e748b36"
+    },
+    {
+      "upstreamPath": "docs/zh_TW/learn/setup.html",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/setup.html",
+      "localPath": "/tmp/tuvi-modern-minor/raw/docs/zh_TW/learn/setup.html",
+      "bytes": 61628,
+      "sha256": "9e69805617313e8ae36805941e583f70f6e3a0a9c92411b1675b1e3df3cd9f40",
+      "extractedText": "/tmp/tuvi-modern-minor/text/docs/zh_TW/learn/setup.txt",
+      "textSha256": "cf387e59c24e2eeb19913b97a6081291fefd693dc860cf2b6dd5d057ded48ff8",
+      "extractor": "Python standard-library HTMLParser, ignore script/style, preserve paragraph/table item boundaries; no JS execution"
+    },
+    {
+      "upstreamPath": "docs/zh_TW/learn/basis.html",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/basis.html",
+      "localPath": "/tmp/tuvi-modern-minor/raw/docs/zh_TW/learn/basis.html",
+      "bytes": 65268,
+      "sha256": "2aea62af92b36d4fcb8fe6f36eb02e5f91935477c8eae30f30d932c287cb4a2e",
+      "extractedText": "/tmp/tuvi-modern-minor/text/docs/zh_TW/learn/basis.txt",
+      "textSha256": "5701e569d34f7d57cc604dd1713534e10255643eaf1071a00df5c5578da5dab2",
+      "extractor": "Python standard-library HTMLParser, ignore script/style, preserve paragraph/table item boundaries; no JS execution"
+    },
+    {
+      "upstreamPath": "docs/zh_TW/learn/horoscope.html",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/horoscope.html",
+      "localPath": "/tmp/tuvi-modern-minor/raw/docs/zh_TW/learn/horoscope.html",
+      "bytes": 47350,
+      "sha256": "e1bd9053258d022e2dc2295e23a6847a92eb004655090252a91494bcff48a0f4",
+      "extractedText": "/tmp/tuvi-modern-minor/text/docs/zh_TW/learn/horoscope.txt",
+      "textSha256": "63d0bddb30b286b01bc5f298c1d4cb0c982efb4a454352bce137cc1e38acfbf0",
+      "extractor": "Python standard-library HTMLParser, ignore script/style, preserve paragraph/table item boundaries; no JS execution"
+    },
+    {
+      "upstreamPath": "docs/zh_TW/posts/config-n-plugin.html",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/posts/config-n-plugin.html",
+      "localPath": "/tmp/tuvi-modern-minor/raw/docs/zh_TW/posts/config-n-plugin.html",
+      "bytes": 79518,
+      "sha256": "145949e340fa8b0fe9cdd26fa892343ca7a5690491de7b27490d94c9f9ac9f19",
+      "extractedText": "/tmp/tuvi-modern-minor/text/docs/zh_TW/posts/config-n-plugin.txt",
+      "textSha256": "bb62104d6ac17521130813b4f3a3e107e0cac9517bd244fa5264e52886963a66",
+      "extractor": "Python standard-library HTMLParser, ignore script/style, preserve paragraph/table item boundaries; no JS execution"
+    },
+    {
+      "upstreamPath": "docs/zh_TW/posts/horoscope.html",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/posts/horoscope.html",
+      "localPath": "/tmp/tuvi-modern-minor/raw/docs/zh_TW/posts/horoscope.html",
+      "bytes": 98965,
+      "sha256": "20271af792c0d11109ca8551b54e6f5d48e298937e8df07fb71b05d4891f8762",
+      "extractedText": "/tmp/tuvi-modern-minor/text/docs/zh_TW/posts/horoscope.txt",
+      "textSha256": "9b2bae4d346cd02bd4fe88aba3558276eb8bb494883dbc8ffd8cbc31b3a1fcc6",
+      "extractor": "Python standard-library HTMLParser, ignore script/style, preserve paragraph/table item boundaries; no JS execution"
+    },
+    {
+      "upstreamPath": "src/astro/palace.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/astro/palace.ts",
+      "localPath": "/tmp/tuvi-modern-minor/raw/src/astro/palace.ts",
+      "bytes": 7799,
+      "sha256": "a9c6d8444d5edcd241068f5bd83fed3aa38a57b206cebb221f86b8d4057b5273"
+    },
+    {
+      "upstreamPath": "src/astro/FunctionalAstrolabe.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/astro/FunctionalAstrolabe.ts",
+      "localPath": "/tmp/tuvi-modern-minor/raw/src/astro/FunctionalAstrolabe.ts",
+      "bytes": 19616,
+      "sha256": "584fd8d2d3ac76b3b8d7990ec6d26cac42eb5f1fcac9175326f29497d60d2d9c"
+    },
+    {
+      "upstreamPath": "src/astro/config.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/astro/config.ts",
+      "localPath": "/tmp/tuvi-modern-minor/raw/src/astro/config.ts",
+      "bytes": 3825,
+      "sha256": "e74d2bf23630f8faadfae9fd2d29c592ceb7a18d7396c0aba5d74959ea5d134e"
+    },
+    {
+      "upstreamPath": "src/utils/index.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/utils/index.ts",
+      "localPath": "/tmp/tuvi-modern-minor/raw/src/utils/index.ts",
+      "bytes": 7614,
+      "sha256": "9f3699115c9c149dc261f9a293e6c7ad40ac4f744884dba21b367b96d9bbfe16"
+    },
+    {
+      "upstreamPath": "src/data/constants.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/data/constants.ts",
+      "localPath": "/tmp/tuvi-modern-minor/raw/src/data/constants.ts",
+      "bytes": 3871,
+      "sha256": "e2411f73c7ea438b5186f2a3ef29fa54587ab78e25620b5a52b409ce9244043a"
+    },
+    {
+      "upstreamPath": "src/data/earthlyBranches.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/data/earthlyBranches.ts",
+      "localPath": "/tmp/tuvi-modern-minor/raw/src/data/earthlyBranches.ts",
+      "bytes": 3599,
+      "sha256": "3dd6e4b260a18a2a8c0e4aec2a12e766f29e52d7b4c01ecbf332f6066a3f1b34"
+    },
+    {
+      "upstreamPath": "src/i18n/index.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/index.ts",
+      "localPath": "/tmp/tuvi-modern-minor/raw/src/i18n/index.ts",
+      "bytes": 2943,
+      "sha256": "06da411d37e4e5f3dc7d922f3dbce0f9fcb2fe1125619873e6a651eabc63d558"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/vi-VN/gender.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/vi-VN/gender.ts",
+      "localPath": "/tmp/tuvi-modern-minor/raw/src/i18n/locales/vi-VN/gender.ts",
+      "bytes": 62,
+      "sha256": "79ab1b39e62fda211cd5b21e916446ee58d6afa10b3a639dd7799987ef7ef3d4"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/vi-VN/earthlyBranch.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/vi-VN/earthlyBranch.ts",
+      "localPath": "/tmp/tuvi-modern-minor/raw/src/i18n/locales/vi-VN/earthlyBranch.ts",
+      "bytes": 300,
+      "sha256": "933f9475bd0b580904515dc3198f059f8924310de10dd8538d2eb02e26311f0c"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/zh-CN/gender.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/zh-CN/gender.ts",
+      "localPath": "/tmp/tuvi-modern-minor/raw/src/i18n/locales/zh-CN/gender.ts",
+      "bytes": 61,
+      "sha256": "a19607ebf4055ed0f0daa3a78b21288185a67fdf8190e750251be72de19e5d8d"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/zh-CN/earthlyBranch.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/zh-CN/earthlyBranch.ts",
+      "localPath": "/tmp/tuvi-modern-minor/raw/src/i18n/locales/zh-CN/earthlyBranch.ts",
+      "bytes": 280,
+      "sha256": "8672f42c8460b8ae0079e643e1fe62db133fcd19879dd2ad08b5ab3b606a2ab8"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/zh-TW/gender.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/zh-TW/gender.ts",
+      "localPath": "/tmp/tuvi-modern-minor/raw/src/i18n/locales/zh-TW/gender.ts",
+      "bytes": 61,
+      "sha256": "a19607ebf4055ed0f0daa3a78b21288185a67fdf8190e750251be72de19e5d8d"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/zh-TW/earthlyBranch.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/zh-TW/earthlyBranch.ts",
+      "localPath": "/tmp/tuvi-modern-minor/raw/src/i18n/locales/zh-TW/earthlyBranch.ts",
+      "bytes": 280,
+      "sha256": "8672f42c8460b8ae0079e643e1fe62db133fcd19879dd2ad08b5ab3b606a2ab8"
+    }
+  ],
+  "productReadOnlyContext": [
+    {
+      "path": "backend/src/engine/chartInput.js",
+      "localReadOnlyCopy": "/tmp/tuvi-modern-minor/product-context/backend/src/engine/chartInput.js",
+      "bytes": 2129,
+      "sha256": "df1bb9ff0c0286998229199311e1b625a326851470dd1ce9aa6062f3db633866"
+    },
+    {
+      "path": "backend/src/engine/constants.js",
+      "localReadOnlyCopy": "/tmp/tuvi-modern-minor/product-context/backend/src/engine/constants.js",
+      "bytes": 5504,
+      "sha256": "849e69d15a2709e7350f09b673fe558774db9eb3d02116a1b5c23a0d38da18ef"
+    }
+  ],
+  "boundedContexts": [
+    {
+      "path": "src/astro/palace.ts",
+      "lines": [
+        174,
+        234
+      ],
+      "localPath": "/tmp/tuvi-modern-minor/context/complete_getHoroscope_including_decadal_and_minor_conditions.txt",
+      "sha256": "fc81f2c53ecbbb329a597741129bef615e672e9eede1e2c3a3f64ec4bbe62ec0"
+    },
+    {
+      "path": "src/utils/index.ts",
+      "lines": [
+        34,
+        53
+      ],
+      "localPath": "/tmp/tuvi-modern-minor/context/complete_fixIndex.txt",
+      "sha256": "d80681721bd0038d14450fd449ee64ae417e43efb342748eede5ae58d1542d43"
+    },
+    {
+      "path": "src/utils/index.ts",
+      "lines": [
+        100,
+        110
+      ],
+      "localPath": "/tmp/tuvi-modern-minor/context/complete_fixEarthlyBranchIndex.txt",
+      "sha256": "dade66fc05e018da6904e6e29dc36dc8b0447f9e7ec336e1ad9737c17a0e2a91"
+    },
+    {
+      "path": "src/utils/index.ts",
+      "lines": [
+        181,
+        206
+      ],
+      "localPath": "/tmp/tuvi-modern-minor/context/complete_getAgeIndex.txt",
+      "sha256": "51b11b546fc82828ac4a031d852045e1cfbd15a8cbf56d3b1a5e786804d081bd"
+    },
+    {
+      "path": "src/astro/FunctionalAstrolabe.ts",
+      "lines": [
+        28,
+        178
+      ],
+      "localPath": "/tmp/tuvi-modern-minor/context/date_age_derivation_and_adjacent_lookup_context_excluded_from_candidate.txt",
+      "sha256": "fe1dfdae81bff08f210f9b48f1565c4c3ce72921db9a45b3860b35e0ef3d57f1"
+    },
+    {
+      "path": "src/data/constants.ts",
+      "lines": [
+        18,
+        33
+      ],
+      "localPath": "/tmp/tuvi-modern-minor/context/complete_branch_enum.txt",
+      "sha256": "24ef8ed25673f13160372998d9ee9c6c78afe567f173a54ee77420a4092f9dd5"
+    },
+    {
+      "path": "src/data/constants.ts",
+      "lines": [
+        66,
+        70
+      ],
+      "localPath": "/tmp/tuvi-modern-minor/context/complete_gender_enum.txt",
+      "sha256": "422a641885148e379960c08f3cd172edc015d25e995baf16a9f672fd2a0f483b"
+    }
+  ]
+}

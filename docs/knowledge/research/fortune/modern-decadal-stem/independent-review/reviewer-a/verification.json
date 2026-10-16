@@ -1,0 +1,275 @@
+{
+  "manifest": [
+    {
+      "path": "README.md",
+      "sha256": "ebf36c7215d8b6760d9372042e25fe5c8e69b083b1b5b4e8793f1a865de1adf6",
+      "verified": true
+    },
+    {
+      "path": "candidate-algorithm.json",
+      "sha256": "272bfd16020e47687e1a08d9e22e00aea05ff68c7940bfc59c37276796192c53",
+      "verified": true
+    },
+    {
+      "path": "conditional-design.md",
+      "sha256": "c74083fcde56eee01bbe961bfd4dc8c0f7d50fbf5a69aeb78c50fcb8094d6b23",
+      "verified": true
+    },
+    {
+      "path": "decadal-main-block.txt",
+      "sha256": "ff1cd395ccd3bb912d5f96391138007e2514c1f0d1fa84300b8375fa1739d6e7",
+      "verified": true
+    },
+    {
+      "path": "finalize-source.py",
+      "sha256": "98ca7e4f569d2f3daa41f5d40af72954221f575882525867e6b60997e24feb2b",
+      "verified": true
+    },
+    {
+      "path": "fixtures.json",
+      "sha256": "8313ef2f8c81dceafd81cd3302ce710e7e3d81ca6ae9c104fbab71209a101817",
+      "verified": true
+    },
+    {
+      "path": "independent-fixtures.md",
+      "sha256": "0c1a6de7e53dbd1a2cd58c7593da98c2af95929a7ed6dc3d9bd8468dc98e95cd",
+      "verified": true
+    },
+    {
+      "path": "independent-replay.mjs",
+      "sha256": "c30f476e047a65ef42f1ab5532675f28c2aab70e537201cdcf13fd9f008b0103",
+      "verified": true
+    },
+    {
+      "path": "independent-source-proof.json",
+      "sha256": "46783d95a972421161de26b3dfbd98fe6396e28302a154fed13edd403adbb296",
+      "verified": true
+    },
+    {
+      "path": "review-bundle.json",
+      "sha256": "86b0df497643d23056c14c39c1344ab5e893103141089aa209c856f40ff6ccef",
+      "verified": true
+    },
+    {
+      "path": "review-context.txt",
+      "sha256": "8abb9bcfb763e1e5c8e4ee6f6892a46a0983f13a92ba538bcff85e4712d21267",
+      "verified": true
+    },
+    {
+      "path": "source-analysis.md",
+      "sha256": "2c61f3ebd7ae4d5f62d6cf19cafd1f050e05a6b1e35f4d0684ca0ea491748f22",
+      "verified": true
+    },
+    {
+      "path": "source-build.py",
+      "sha256": "6a45d70a7d93f2cf6f6189caad62b0a5b45f2db88480e0cdd86743c8753a70cd",
+      "verified": true
+    },
+    {
+      "path": "source-proof.json",
+      "sha256": "d88e782931dd7d6c4625edc9c55ece4c21ff47b6b472f3ee76745916b375ca23",
+      "verified": true
+    },
+    {
+      "path": "source-span.txt",
+      "sha256": "d5342272cab276bc6d17d1be3e837873a67410d4f961cd22bfc1975a843cc817",
+      "verified": true
+    },
+    {
+      "path": "write-analysis.py",
+      "sha256": "4507c70a94082a8c447874d980c037a1cc687232eee84fb4215e2bba6955384d",
+      "verified": true
+    },
+    {
+      "path": "dependency/lunar-lite-0.2.8-ganzhi.js",
+      "sha256": "5b7ec19b55f1d703bce40694a7dfb172ddbf3358cef2682f7c048c65b01cba2d",
+      "verified": true
+    },
+    {
+      "path": "raw/LICENSE",
+      "sha256": "e6c7b6e313cbda3135b41bccc66c98be132cb8319d0d465903d17e669e748b36",
+      "verified": true
+    },
+    {
+      "path": "raw/package.json",
+      "sha256": "2b7d04100c48599e4fe02f5ec1521f5ca45b41914adf5a5472e86abc6dfa1ee6",
+      "verified": true
+    },
+    {
+      "path": "raw/yarn.lock",
+      "sha256": "0a20660c41f9fe4ae7138fd508dd60a3399146a41bcc741bde375a1a285a2111",
+      "verified": true
+    },
+    {
+      "path": "raw/src/astro/astro.ts",
+      "sha256": "84e1fd5121bc6c5e7fb17ef3d8aadd0f8473ff8f2704c17c1af96e77388d49f8",
+      "verified": true
+    },
+    {
+      "path": "raw/src/astro/config.ts",
+      "sha256": "e74d2bf23630f8faadfae9fd2d29c592ceb7a18d7396c0aba5d74959ea5d134e",
+      "verified": true
+    },
+    {
+      "path": "raw/src/astro/palace.ts",
+      "sha256": "a9c6d8444d5edcd241068f5bd83fed3aa38a57b206cebb221f86b8d4057b5273",
+      "verified": true
+    },
+    {
+      "path": "raw/src/data/constants.ts",
+      "sha256": "e2411f73c7ea438b5186f2a3ef29fa54587ab78e25620b5a52b409ce9244043a",
+      "verified": true
+    },
+    {
+      "path": "raw/src/i18n/index.ts",
+      "sha256": "06da411d37e4e5f3dc7d922f3dbce0f9fcb2fe1125619873e6a651eabc63d558",
+      "verified": true
+    },
+    {
+      "path": "raw/src/utils/index.ts",
+      "sha256": "9f3699115c9c149dc261f9a293e6c7ad40ac4f744884dba21b367b96d9bbfe16",
+      "verified": true
+    },
+    {
+      "path": "raw/src/data/types/astro.ts",
+      "sha256": "b24c25fa535e6b89fbe9b0e93deebe3851dd943cdd3baa290747b863506e3b85",
+      "verified": true
+    },
+    {
+      "path": "raw/src/i18n/locales/vi-VN/earthlyBranch.ts",
+      "sha256": "933f9475bd0b580904515dc3198f059f8924310de10dd8538d2eb02e26311f0c",
+      "verified": true
+    },
+    {
+      "path": "raw/src/i18n/locales/vi-VN/heavenlyStem.ts",
+      "sha256": "4b0805baf3aa2555e4db3c804e6947f179e5905b1e73c9c261cbd35e38d6b2ea",
+      "verified": true
+    },
+    {
+      "path": "raw/src/i18n/locales/vi-VN/index.ts",
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007",
+      "verified": true
+    }
+  ],
+  "payload": [
+    {
+      "path": "raw/LICENSE",
+      "upstreamPath": "LICENSE",
+      "bytes": 1073,
+      "sha256": "e6c7b6e313cbda3135b41bccc66c98be132cb8319d0d465903d17e669e748b36",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/LICENSE",
+      "gitObjectByteMatch": true
+    },
+    {
+      "path": "raw/package.json",
+      "upstreamPath": "package.json",
+      "bytes": 2732,
+      "sha256": "2b7d04100c48599e4fe02f5ec1521f5ca45b41914adf5a5472e86abc6dfa1ee6",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/package.json",
+      "gitObjectByteMatch": true
+    },
+    {
+      "path": "raw/yarn.lock",
+      "upstreamPath": "yarn.lock",
+      "bytes": 225441,
+      "sha256": "0a20660c41f9fe4ae7138fd508dd60a3399146a41bcc741bde375a1a285a2111",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/yarn.lock",
+      "gitObjectByteMatch": true
+    },
+    {
+      "path": "raw/src/astro/astro.ts",
+      "upstreamPath": "src/astro/astro.ts",
+      "bytes": 19029,
+      "sha256": "84e1fd5121bc6c5e7fb17ef3d8aadd0f8473ff8f2704c17c1af96e77388d49f8",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/astro/astro.ts",
+      "gitObjectByteMatch": true
+    },
+    {
+      "path": "raw/src/astro/config.ts",
+      "upstreamPath": "src/astro/config.ts",
+      "bytes": 3825,
+      "sha256": "e74d2bf23630f8faadfae9fd2d29c592ceb7a18d7396c0aba5d74959ea5d134e",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/astro/config.ts",
+      "gitObjectByteMatch": true
+    },
+    {
+      "path": "raw/src/astro/palace.ts",
+      "upstreamPath": "src/astro/palace.ts",
+      "bytes": 7799,
+      "sha256": "a9c6d8444d5edcd241068f5bd83fed3aa38a57b206cebb221f86b8d4057b5273",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/astro/palace.ts",
+      "gitObjectByteMatch": true
+    },
+    {
+      "path": "raw/src/data/constants.ts",
+      "upstreamPath": "src/data/constants.ts",
+      "bytes": 3871,
+      "sha256": "e2411f73c7ea438b5186f2a3ef29fa54587ab78e25620b5a52b409ce9244043a",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/data/constants.ts",
+      "gitObjectByteMatch": true
+    },
+    {
+      "path": "raw/src/i18n/index.ts",
+      "upstreamPath": "src/i18n/index.ts",
+      "bytes": 2943,
+      "sha256": "06da411d37e4e5f3dc7d922f3dbce0f9fcb2fe1125619873e6a651eabc63d558",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/index.ts",
+      "gitObjectByteMatch": true
+    },
+    {
+      "path": "raw/src/utils/index.ts",
+      "upstreamPath": "src/utils/index.ts",
+      "bytes": 7614,
+      "sha256": "9f3699115c9c149dc261f9a293e6c7ad40ac4f744884dba21b367b96d9bbfe16",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/utils/index.ts",
+      "gitObjectByteMatch": true
+    },
+    {
+      "path": "raw/src/data/types/astro.ts",
+      "upstreamPath": "src/data/types/astro.ts",
+      "bytes": 7671,
+      "sha256": "b24c25fa535e6b89fbe9b0e93deebe3851dd943cdd3baa290747b863506e3b85",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/data/types/astro.ts",
+      "gitObjectByteMatch": true
+    },
+    {
+      "path": "raw/src/i18n/locales/vi-VN/earthlyBranch.ts",
+      "upstreamPath": "src/i18n/locales/vi-VN/earthlyBranch.ts",
+      "bytes": 300,
+      "sha256": "933f9475bd0b580904515dc3198f059f8924310de10dd8538d2eb02e26311f0c",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/vi-VN/earthlyBranch.ts",
+      "gitObjectByteMatch": true
+    },
+    {
+      "path": "raw/src/i18n/locales/vi-VN/heavenlyStem.ts",
+      "upstreamPath": "src/i18n/locales/vi-VN/heavenlyStem.ts",
+      "bytes": 264,
+      "sha256": "4b0805baf3aa2555e4db3c804e6947f179e5905b1e73c9c261cbd35e38d6b2ea",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/vi-VN/heavenlyStem.ts",
+      "gitObjectByteMatch": true
+    },
+    {
+      "path": "raw/src/i18n/locales/vi-VN/index.ts",
+      "upstreamPath": "src/i18n/locales/vi-VN/index.ts",
+      "bytes": 503,
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/vi-VN/index.ts",
+      "gitObjectByteMatch": true
+    }
+  ],
+  "digests": {
+    "sourceDigest": "d5342272cab276bc6d17d1be3e837873a67410d4f961cd22bfc1975a843cc817",
+    "contextDigest": "8abb9bcfb763e1e5c8e4ee6f6892a46a0983f13a92ba538bcff85e4712d21267",
+    "fixturesDigest": "8313ef2f8c81dceafd81cd3302ce710e7e3d81ca6ae9c104fbab71209a101817",
+    "algorithmDigest": "13fed2534cefd16b1681e5e90041fba8f799c5af60dc38b8afda6212313cd705",
+    "compatibilityDigest": "3a5f5360d188430aefbbdfbd6098cc7ff32b507ce024cf50a652aeb8177fee7e"
+  },
+  "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "pinType": "commit",
+  "origin": "https://github.com/SylarLong/iztro.git",
+  "replayFixtureByteIdentical": true,
+  "periodsIndependentlyRecomputed": 288,
+  "finiteProjections": 120,
+  "earthlyBranchesSha256": "3dd6e4b260a18a2a8c0e4aec2a12e766f29e52d7b4c01ecbf332f6066a3f1b34",
+  "networkRechecked": false
+}

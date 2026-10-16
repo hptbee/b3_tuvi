@@ -1,0 +1,310 @@
+{
+  "status": "PROPOSED_NOT_APPROVED",
+  "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "rawHtmlSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+  "parsing": "Inert pinned HTML and complete derived text. Full two-paragraph Tử Vi entry joined by LF, then full two-paragraph reciprocal Phá Quân entry. Complete財帛section retained. Source/context/wording use exact UTF8 bytes, tree/fixtures compact JSON.stringify in stored order.",
+  "policy": "dual-ai-source-review-v1 plus exact interpretation/conditions/wording/fixtures agreement. No historical authentication, natal formula change, public release or empirical promotion. Unevaluated gia-sat scope must be independently accepted or rejected, never forced.",
+  "sourceIdentity": {
+    "editionId": "iztro-juan2-2f00e2ab0c80",
+    "sourceId": "ziwei-quanshu-iztro-transcription",
+    "documentType": "pinned_html_transcription",
+    "documentUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/ancientBook-2.html",
+    "gitRepository": "https://github.com/SylarLong/iztro",
+    "gitCommit": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+    "gitPath": "docs/zh_TW/learn/ancientBook-2.html",
+    "contentSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+    "authenticated": false,
+    "digitalArtifactVerified": true,
+    "originalEditionAuthenticated": false,
+    "textCollatedAgainstOriginal": false,
+    "bookVerified": false,
+    "expertVerified": false,
+    "verificationNotes": "Pinned modern reproduction only; paragraph/context digest review does not authenticate a historical edition or certify natal formulas.",
+    "sourceType": "secondary_transcription",
+    "derivedTextSha256": "b824c61e1bdec55ecdc7123ff1e79bce9648f07d67d054c43a59ce731572d4a7",
+    "publicRelease": false,
+    "compatibilityNote": "condition_read_only_projection_not_natal_formula_certification",
+    "registryMutation": "none_existing_source_and_edition_reused_unchanged"
+  },
+  "reviewQuestions": [
+    "Does the exact Tử Vi/財帛 branch 破軍同先難後易 independently support this primary-paragraph-baseline annotation with both stars directly in Tài Bạch, while preceding 加羊陀火鈴空劫不旺 and reciprocal final 加空劫極貧 remain retained but unevaluated? Reject if closure makes it misleading; do not invent absence/brightness/age conditions.",
+    "Read both complete entries and full財帛section. Reciprocal 紫微同先去後生 is distinct wording retained for scrutiny, not forced into semantic equivalence or a second translated outcome.",
+    "Does exact Vietnamese wording conservatively attribute the traditional phrase without predicting wealth, loss/gain, profession, age, dates, rank or whole-chart outcomes?",
+    "Independently verify source pin/raw/derived bytes and all five digest classes, reproduce every signed real fixture with actual engine and existing same_palace AST, and verify negatives distinguish each missing partner/wronghost/relationonly if present.",
+    "Source own branch descriptions say Tử Vi丑未入廟 and Phá Quân丑未旺地. These explain reachability, not an invented brightness/branch threshold; source natal stem/rank paragraphs are separate contexts.",
+    "No authentication, school natal-formula equivalence, generic VCD taxonomy, source-default decision, public narration or release approval follows. Never force model agreement."
+  ],
+  "existingClaimDistinction": [
+    "Existing Tử Vi/four-adverse Tài Bạch annotation remains separate; new same-palace pair can match without that adverse group and does not erase its text.",
+    "Existing Tử Vi/Tả/Hữu Tài Bạch annotation is a different named configuration.",
+    "No classical/modern fortune placement or genericVCD approval implied."
+  ],
+  "candidates": [
+    {
+      "claimId": "interp-quanshu-tai-tuvi-pha-quan-host",
+      "locator": "juan2/財帛宮/紫微+破軍",
+      "target": "tai_bach",
+      "spanFile": "tai-tuvi-pha-complete-spans.txt",
+      "contextFile": "tai-full-section.txt",
+      "conditionTree": {
+        "op": "same_palace",
+        "target": "tai_bach",
+        "stars": [
+          "Tử Vi",
+          "Phá Quân"
+        ]
+      },
+      "conditions": [
+        "palace_tai_bach",
+        "tu_vi_in_host",
+        "pha_quan_in_host",
+        "direct_host_only"
+      ],
+      "limitations": [
+        "primary_paragraph_baseline_only",
+        "direct_host_only",
+        "reciprocal_context_retained_not_harmonized",
+        "added_adverse_clauses_retained_but_not_evaluated",
+        "kong_kiep_aliases_not_implemented",
+        "no_invented_brightness_or_branch_requirement",
+        "no_age_or_date_prediction",
+        "not_a_whole_chart_judgment",
+        "not_a_verified_life_event",
+        "no_natal_formula_change",
+        "no_public_release"
+      ],
+      "proposedWording": "Riêng mục Tử Vi tại Tài Bạch của bản chép này, nhánh Phá Quân đồng cung được ghi “先難後易”, nghĩa là trước khó, sau dễ. Đây là lời mô tả truyền thống cho đúng nhánh văn bản, không xác nhận tài sản hay kết quả cuộc đời; các điều kiện gia sát ở các đoạn liên quan chưa được đánh giá.",
+      "fixtures": [
+        {
+          "id": "T028/01/negative_missing_pha",
+          "input": {
+            "day": 1,
+            "month": 1,
+            "year": 1980,
+            "hour": 0,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 14,
+            "lunarMonth": 11,
+            "lunarYear": 1979,
+            "canIndex": 5,
+            "chiIndex": 8,
+            "canName": "Kỷ",
+            "chiName": "Mùi",
+            "isLeapMonth": false
+          },
+          "host": {
+            "id": "9",
+            "functionId": "tai_bach",
+            "branchName": "Thân"
+          },
+          "expected": false
+        },
+        {
+          "id": "T028/02/negative_missing_tuvi",
+          "input": {
+            "day": 1,
+            "month": 1,
+            "year": 1980,
+            "hour": 4,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 14,
+            "lunarMonth": 11,
+            "lunarYear": 1979,
+            "canIndex": 5,
+            "chiIndex": 8,
+            "canName": "Kỷ",
+            "chiName": "Mùi",
+            "isLeapMonth": false
+          },
+          "host": {
+            "id": "7",
+            "functionId": "tai_bach",
+            "branchName": "Ngọ"
+          },
+          "expected": false
+        },
+        {
+          "id": "T028/03/positive_Sửu_no_four_adverse",
+          "input": {
+            "day": 15,
+            "month": 1,
+            "year": 1980,
+            "hour": 14,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 28,
+            "lunarMonth": 11,
+            "lunarYear": 1979,
+            "canIndex": 5,
+            "chiIndex": 8,
+            "canName": "Kỷ",
+            "chiName": "Mùi",
+            "isLeapMonth": false
+          },
+          "host": {
+            "id": "2",
+            "functionId": "tai_bach",
+            "branchName": "Sửu"
+          },
+          "expected": true
+        },
+        {
+          "id": "T028/04/positive_Mùi_adverse",
+          "input": {
+            "day": 8,
+            "month": 2,
+            "year": 1980,
+            "hour": 4,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 22,
+            "lunarMonth": 12,
+            "lunarYear": 1979,
+            "canIndex": 5,
+            "chiIndex": 8,
+            "canName": "Kỷ",
+            "chiName": "Mùi",
+            "isLeapMonth": false
+          },
+          "host": {
+            "id": "8",
+            "functionId": "tai_bach",
+            "branchName": "Mùi"
+          },
+          "expected": true
+        },
+        {
+          "id": "T028/05/negative_wrong_host_quan",
+          "input": {
+            "day": 8,
+            "month": 2,
+            "year": 1980,
+            "hour": 20,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 22,
+            "lunarMonth": 12,
+            "lunarYear": 1979,
+            "canIndex": 5,
+            "chiIndex": 8,
+            "canName": "Kỷ",
+            "chiName": "Mùi",
+            "isLeapMonth": false
+          },
+          "host": {
+            "id": "12",
+            "functionId": "tai_bach",
+            "branchName": "Hợi"
+          },
+          "expected": false
+        },
+        {
+          "id": "T028/06/negative_wrong_host_menh",
+          "input": {
+            "day": 1,
+            "month": 3,
+            "year": 1980,
+            "hour": 2,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 15,
+            "lunarMonth": 1,
+            "lunarYear": 1980,
+            "canIndex": 6,
+            "chiIndex": 9,
+            "canName": "Canh",
+            "chiName": "Thân",
+            "isLeapMonth": false
+          },
+          "host": {
+            "id": "10",
+            "functionId": "tai_bach",
+            "branchName": "Dậu"
+          },
+          "expected": false
+        },
+        {
+          "id": "T028/07/positive_Mùi_no_four_adverse",
+          "input": {
+            "day": 22,
+            "month": 2,
+            "year": 1981,
+            "hour": 6,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 18,
+            "lunarMonth": 1,
+            "lunarYear": 1981,
+            "canIndex": 7,
+            "chiIndex": 10,
+            "canName": "Tân",
+            "chiName": "Dậu",
+            "isLeapMonth": false
+          },
+          "host": {
+            "id": "8",
+            "functionId": "tai_bach",
+            "branchName": "Mùi"
+          },
+          "expected": true
+        },
+        {
+          "id": "T028/08/positive_Sửu_adverse",
+          "input": {
+            "day": 28,
+            "month": 4,
+            "year": 1982,
+            "hour": 0,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 5,
+            "lunarMonth": 4,
+            "lunarYear": 1982,
+            "canIndex": 8,
+            "chiIndex": 11,
+            "canName": "Nhâm",
+            "chiName": "Tuất",
+            "isLeapMonth": false
+          },
+          "host": {
+            "id": "2",
+            "functionId": "tai_bach",
+            "branchName": "Sửu"
+          },
+          "expected": true
+        }
+      ],
+      "requiredAnchors": [
+        "加羊陀火鈴空劫不旺",
+        "破軍同先難後易",
+        "紫微同先去後生",
+        "加空劫極貧"
+      ],
+      "schoolId": "vn-tam-hop-default",
+      "sourceId": "ziwei-quanshu-iztro-transcription",
+      "editionId": "iztro-juan2-2f00e2ab0c80",
+      "sourceProfile": "quanshu-iztro-2f00e2ab",
+      "usage": "internal_research",
+      "releasePermission": "withheld",
+      "expertVerified": false,
+      "bookVerified": false,
+      "sourceDigest": "97c498dbad297a90345a1817af3c8ec19d8793ec67fb1802f88972123efc5df5",
+      "contextDigest": "18e05f3a45cf27553642da48035fa263e267e90d49c9a1211df734a6dc54ee13",
+      "conditionTreeDigest": "c1c9dd401e41bca4fb5dcceeacc06c38b0531b5e191765f700302790d0dab7b3",
+      "wordingDigest": "21fb32648cbd151dd37c62859254200885d7557a18b06ce4f6cd63bb2ff76fb5",
+      "fixturesDigest": "c87eb5805eea4396db96b019948b2acee01d621b8516b080f4d70714a7e005ac",
+      "quotationPolicy": "source-sentence-v2",
+      "sourceSpan": "紫微豐足倉箱，加羊陀火鈴空劫不旺，破軍同先難後易，天相同財帛蓄積，\n天府同富足終身保守，加左右為財富之官，七殺同加吉財帛橫發。\n破軍在子午宮，多有金銀寶貝蓄積，辰戌旺宮亦財盛，陷宮破不祖聚，\n武曲同守巳亥宮，東來西去，紫微同先去後生，廉貞同勞碌生財，先難後遂，加空劫極貧。"
+    }
+  ]
+}

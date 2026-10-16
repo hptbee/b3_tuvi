@@ -7,7 +7,7 @@ import menhVo from '../../docs/knowledge/interpretation-decisions/menh-vo-chinh-
 import { claimEligibility } from '../src/interpretation/eligibility.js';
 
 const span = readFileSync(fileURLToPath(new URL('../../docs/knowledge/passages/tu-phu-dong-cung/span.txt', import.meta.url)), 'utf8');
-assert.strictEqual(claimsDoc.claims.length, 1);
+assert.strictEqual(claimsDoc.claims.filter((claim) => claim.claimId === 'interp-tu-phu-dong-cung-giap-menh').length, 1);
 assert.strictEqual(claimsDoc.claims[0].claimId, 'interp-tu-phu-dong-cung-giap-menh');
 assert.ok(span.includes(claimsDoc.claims[0].approvedWording.split('. Đây là')[0]));
 assert.strictEqual(claimsDoc.claims[0].expertVerified, false);

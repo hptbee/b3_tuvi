@@ -1,0 +1,469 @@
+{
+  "status": "SOURCE_DOSSIER_ONLY_NOT_APPROVAL",
+  "sourceClass": "pinned_modern_software_and_documentation_not_classical_edition",
+  "repository": "https://github.com/SylarLong/iztro",
+  "revision": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "acquisition": "git show at exact commit; palace.ts additionally independently HTTPS-refetched and byte matched; data only",
+  "upstreamCodeExecuted": false,
+  "license": {
+    "spdx": "MIT",
+    "file": "LICENSE.txt",
+    "sha256": "e6c7b6e313cbda3135b41bccc66c98be132cb8319d0d465903d17e669e748b36",
+    "upstreamNoticePreserved": true
+  },
+  "sources": [
+    {
+      "upstreamPath": "LICENSE",
+      "localPath": "raw/LICENSE",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/LICENSE",
+      "path": "raw/LICENSE",
+      "bytes": 1073,
+      "sha256": "e6c7b6e313cbda3135b41bccc66c98be132cb8319d0d465903d17e669e748b36"
+    },
+    {
+      "upstreamPath": "docs/zh_TW/learn/horoscope.html",
+      "localPath": "raw/docs/zh_TW/learn/horoscope.html",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/horoscope.html",
+      "path": "raw/docs/zh_TW/learn/horoscope.html",
+      "bytes": 47350,
+      "sha256": "e1bd9053258d022e2dc2295e23a6847a92eb004655090252a91494bcff48a0f4"
+    },
+    {
+      "upstreamPath": "docs/zh_TW/posts/config-n-plugin.html",
+      "localPath": "raw/docs/zh_TW/posts/config-n-plugin.html",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/posts/config-n-plugin.html",
+      "path": "raw/docs/zh_TW/posts/config-n-plugin.html",
+      "bytes": 79518,
+      "sha256": "145949e340fa8b0fe9cdd26fa892343ca7a5690491de7b27490d94c9f9ac9f19"
+    },
+    {
+      "upstreamPath": "src/astro/FunctionalAstrolabe.ts",
+      "localPath": "raw/src/astro/FunctionalAstrolabe.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/astro/FunctionalAstrolabe.ts",
+      "path": "raw/src/astro/FunctionalAstrolabe.ts",
+      "bytes": 19616,
+      "sha256": "584fd8d2d3ac76b3b8d7990ec6d26cac42eb5f1fcac9175326f29497d60d2d9c"
+    },
+    {
+      "upstreamPath": "src/astro/astro.ts",
+      "localPath": "raw/src/astro/astro.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/astro/astro.ts",
+      "path": "raw/src/astro/astro.ts",
+      "bytes": 19029,
+      "sha256": "84e1fd5121bc6c5e7fb17ef3d8aadd0f8473ff8f2704c17c1af96e77388d49f8"
+    },
+    {
+      "upstreamPath": "src/astro/config.ts",
+      "localPath": "raw/src/astro/config.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/astro/config.ts",
+      "path": "raw/src/astro/config.ts",
+      "bytes": 3825,
+      "sha256": "e74d2bf23630f8faadfae9fd2d29c592ceb7a18d7396c0aba5d74959ea5d134e"
+    },
+    {
+      "upstreamPath": "src/astro/palace.ts",
+      "localPath": "raw/src/astro/palace.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/astro/palace.ts",
+      "path": "raw/src/astro/palace.ts",
+      "bytes": 7799,
+      "sha256": "a9c6d8444d5edcd241068f5bd83fed3aa38a57b206cebb221f86b8d4057b5273"
+    },
+    {
+      "upstreamPath": "src/data/constants.ts",
+      "localPath": "raw/src/data/constants.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/data/constants.ts",
+      "path": "raw/src/data/constants.ts",
+      "bytes": 3871,
+      "sha256": "e2411f73c7ea438b5186f2a3ef29fa54587ab78e25620b5a52b409ce9244043a"
+    },
+    {
+      "upstreamPath": "src/data/earthlyBranches.ts",
+      "localPath": "raw/src/data/earthlyBranches.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/data/earthlyBranches.ts",
+      "path": "raw/src/data/earthlyBranches.ts",
+      "bytes": 3599,
+      "sha256": "3dd6e4b260a18a2a8c0e4aec2a12e766f29e52d7b4c01ecbf332f6066a3f1b34"
+    },
+    {
+      "upstreamPath": "src/data/heavenlyStems.ts",
+      "localPath": "raw/src/data/heavenlyStems.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/data/heavenlyStems.ts",
+      "path": "raw/src/data/heavenlyStems.ts",
+      "bytes": 2351,
+      "sha256": "f50a96b4fda42f834b2ff7aea36533a38bd5bcee94b74d5ecc1deb22ee07279c"
+    },
+    {
+      "upstreamPath": "src/data/index.ts",
+      "localPath": "raw/src/data/index.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/data/index.ts",
+      "path": "raw/src/data/index.ts",
+      "bytes": 122,
+      "sha256": "e45e0875d60c2aede27dad389f11d3cdda7e31d1694e5f53ff32cd025288f2a2"
+    },
+    {
+      "upstreamPath": "src/data/types/astro.ts",
+      "localPath": "raw/src/data/types/astro.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/data/types/astro.ts",
+      "path": "raw/src/data/types/astro.ts",
+      "bytes": 7671,
+      "sha256": "b24c25fa535e6b89fbe9b0e93deebe3851dd943cdd3baa290747b863506e3b85"
+    },
+    {
+      "upstreamPath": "src/i18n/index.ts",
+      "localPath": "raw/src/i18n/index.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/index.ts",
+      "path": "raw/src/i18n/index.ts",
+      "bytes": 2943,
+      "sha256": "06da411d37e4e5f3dc7d922f3dbce0f9fcb2fe1125619873e6a651eabc63d558"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/en-US/earthlyBranch.ts",
+      "localPath": "raw/src/i18n/locales/en-US/earthlyBranch.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/en-US/earthlyBranch.ts",
+      "path": "raw/src/i18n/locales/en-US/earthlyBranch.ts",
+      "bytes": 280,
+      "sha256": "dcf7ffb67233fede74de6290e2c341dce80bcbd81b053c48e9667f42ad0bd0f2"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/en-US/fiveElementsClass.ts",
+      "localPath": "raw/src/i18n/locales/en-US/fiveElementsClass.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/en-US/fiveElementsClass.ts",
+      "path": "raw/src/i18n/locales/en-US/fiveElementsClass.ts",
+      "bytes": 150,
+      "sha256": "05a4919dab702883c0cb85b869c11af7ee47a9afd5a500ccee0e0f34f78e09be"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/en-US/gender.ts",
+      "localPath": "raw/src/i18n/locales/en-US/gender.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/en-US/gender.ts",
+      "path": "raw/src/i18n/locales/en-US/gender.ts",
+      "bytes": 65,
+      "sha256": "8c2b91082c2d88bd27cc4678965003c67b8636799ed83bd2f94369de0e367a0d"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/en-US/index.ts",
+      "localPath": "raw/src/i18n/locales/en-US/index.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/en-US/index.ts",
+      "path": "raw/src/i18n/locales/en-US/index.ts",
+      "bytes": 503,
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/ja-JP/earthlyBranch.ts",
+      "localPath": "raw/src/i18n/locales/ja-JP/earthlyBranch.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/ja-JP/earthlyBranch.ts",
+      "path": "raw/src/i18n/locales/ja-JP/earthlyBranch.ts",
+      "bytes": 280,
+      "sha256": "8672f42c8460b8ae0079e643e1fe62db133fcd19879dd2ad08b5ab3b606a2ab8"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/ja-JP/fiveElementsClass.ts",
+      "localPath": "raw/src/i18n/locales/ja-JP/fiveElementsClass.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/ja-JP/fiveElementsClass.ts",
+      "path": "raw/src/i18n/locales/ja-JP/fiveElementsClass.ts",
+      "bytes": 167,
+      "sha256": "01a3f688b35cb994845e6051e8bf97ab687fbe30ca594e44ea85f70583b15c85"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/ja-JP/gender.ts",
+      "localPath": "raw/src/i18n/locales/ja-JP/gender.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/ja-JP/gender.ts",
+      "path": "raw/src/i18n/locales/ja-JP/gender.ts",
+      "bytes": 61,
+      "sha256": "a19607ebf4055ed0f0daa3a78b21288185a67fdf8190e750251be72de19e5d8d"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/ja-JP/index.ts",
+      "localPath": "raw/src/i18n/locales/ja-JP/index.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/ja-JP/index.ts",
+      "path": "raw/src/i18n/locales/ja-JP/index.ts",
+      "bytes": 503,
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/ko-KR/earthlyBranch.ts",
+      "localPath": "raw/src/i18n/locales/ko-KR/earthlyBranch.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/ko-KR/earthlyBranch.ts",
+      "path": "raw/src/i18n/locales/ko-KR/earthlyBranch.ts",
+      "bytes": 280,
+      "sha256": "f2a7dc855e5cdf71c74dba286e3463f2fd063fa31b39ce3b14cced0da4784fc7"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/ko-KR/fiveElementsClass.ts",
+      "localPath": "raw/src/i18n/locales/ko-KR/fiveElementsClass.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/ko-KR/fiveElementsClass.ts",
+      "path": "raw/src/i18n/locales/ko-KR/fiveElementsClass.ts",
+      "bytes": 152,
+      "sha256": "f43e780a5c5ea4a8ebf1f4900364fe7c9931bdc85d6ec10ea593bd26d215a5ad"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/ko-KR/gender.ts",
+      "localPath": "raw/src/i18n/locales/ko-KR/gender.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/ko-KR/gender.ts",
+      "path": "raw/src/i18n/locales/ko-KR/gender.ts",
+      "bytes": 67,
+      "sha256": "aa0f5ffe65da671b0c1c663e2bf4895801b02783e6e8c1e3f105d0046713b0e5"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/ko-KR/index.ts",
+      "localPath": "raw/src/i18n/locales/ko-KR/index.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/ko-KR/index.ts",
+      "path": "raw/src/i18n/locales/ko-KR/index.ts",
+      "bytes": 503,
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/vi-VN/earthlyBranch.ts",
+      "localPath": "raw/src/i18n/locales/vi-VN/earthlyBranch.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/vi-VN/earthlyBranch.ts",
+      "path": "raw/src/i18n/locales/vi-VN/earthlyBranch.ts",
+      "bytes": 300,
+      "sha256": "933f9475bd0b580904515dc3198f059f8924310de10dd8538d2eb02e26311f0c"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/vi-VN/fiveElementsClass.ts",
+      "localPath": "raw/src/i18n/locales/vi-VN/fiveElementsClass.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/vi-VN/fiveElementsClass.ts",
+      "path": "raw/src/i18n/locales/vi-VN/fiveElementsClass.ts",
+      "bytes": 187,
+      "sha256": "b5b7923adb3df59f2b24cc579347c5ffa8eb86082d0e6b05b3aa3a961ea9d858"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/vi-VN/gender.ts",
+      "localPath": "raw/src/i18n/locales/vi-VN/gender.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/vi-VN/gender.ts",
+      "path": "raw/src/i18n/locales/vi-VN/gender.ts",
+      "bytes": 62,
+      "sha256": "79ab1b39e62fda211cd5b21e916446ee58d6afa10b3a639dd7799987ef7ef3d4"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/vi-VN/index.ts",
+      "localPath": "raw/src/i18n/locales/vi-VN/index.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/vi-VN/index.ts",
+      "path": "raw/src/i18n/locales/vi-VN/index.ts",
+      "bytes": 503,
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/zh-CN/earthlyBranch.ts",
+      "localPath": "raw/src/i18n/locales/zh-CN/earthlyBranch.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/zh-CN/earthlyBranch.ts",
+      "path": "raw/src/i18n/locales/zh-CN/earthlyBranch.ts",
+      "bytes": 280,
+      "sha256": "8672f42c8460b8ae0079e643e1fe62db133fcd19879dd2ad08b5ab3b606a2ab8"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/zh-CN/fiveElementsClass.ts",
+      "localPath": "raw/src/i18n/locales/zh-CN/fiveElementsClass.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/zh-CN/fiveElementsClass.ts",
+      "path": "raw/src/i18n/locales/zh-CN/fiveElementsClass.ts",
+      "bytes": 152,
+      "sha256": "4378134b7172d28231a77980a137b6c1448f8f4b1227a6317306fba85c0f4366"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/zh-CN/gender.ts",
+      "localPath": "raw/src/i18n/locales/zh-CN/gender.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/zh-CN/gender.ts",
+      "path": "raw/src/i18n/locales/zh-CN/gender.ts",
+      "bytes": 61,
+      "sha256": "a19607ebf4055ed0f0daa3a78b21288185a67fdf8190e750251be72de19e5d8d"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/zh-CN/index.ts",
+      "localPath": "raw/src/i18n/locales/zh-CN/index.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/zh-CN/index.ts",
+      "path": "raw/src/i18n/locales/zh-CN/index.ts",
+      "bytes": 503,
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/zh-TW/earthlyBranch.ts",
+      "localPath": "raw/src/i18n/locales/zh-TW/earthlyBranch.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/zh-TW/earthlyBranch.ts",
+      "path": "raw/src/i18n/locales/zh-TW/earthlyBranch.ts",
+      "bytes": 280,
+      "sha256": "8672f42c8460b8ae0079e643e1fe62db133fcd19879dd2ad08b5ab3b606a2ab8"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/zh-TW/fiveElementsClass.ts",
+      "localPath": "raw/src/i18n/locales/zh-TW/fiveElementsClass.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/zh-TW/fiveElementsClass.ts",
+      "path": "raw/src/i18n/locales/zh-TW/fiveElementsClass.ts",
+      "bytes": 152,
+      "sha256": "4378134b7172d28231a77980a137b6c1448f8f4b1227a6317306fba85c0f4366"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/zh-TW/gender.ts",
+      "localPath": "raw/src/i18n/locales/zh-TW/gender.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/zh-TW/gender.ts",
+      "path": "raw/src/i18n/locales/zh-TW/gender.ts",
+      "bytes": 61,
+      "sha256": "a19607ebf4055ed0f0daa3a78b21288185a67fdf8190e750251be72de19e5d8d"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/zh-TW/index.ts",
+      "localPath": "raw/src/i18n/locales/zh-TW/index.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/zh-TW/index.ts",
+      "path": "raw/src/i18n/locales/zh-TW/index.ts",
+      "bytes": 503,
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007"
+    },
+    {
+      "upstreamPath": "src/i18n/starAliases.ts",
+      "localPath": "raw/src/i18n/starAliases.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/starAliases.ts",
+      "path": "raw/src/i18n/starAliases.ts",
+      "bytes": 744,
+      "sha256": "5db704982d754e9e9487c80dfc171b51584cb89014b68171f7c6b87171a49b14"
+    },
+    {
+      "upstreamPath": "src/utils/index.ts",
+      "localPath": "raw/src/utils/index.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/utils/index.ts",
+      "path": "raw/src/utils/index.ts",
+      "bytes": 7614,
+      "sha256": "9f3699115c9c149dc261f9a293e6c7ad40ac4f744884dba21b367b96d9bbfe16"
+    }
+  ],
+  "productReadOnlyContext": [
+    {
+      "path": "product-context/backend/src/engine/chartInput.js",
+      "bytes": 2129,
+      "sha256": "df1bb9ff0c0286998229199311e1b625a326851470dd1ce9aa6062f3db633866"
+    },
+    {
+      "path": "product-context/backend/src/engine/constants.js",
+      "bytes": 5504,
+      "sha256": "849e69d15a2709e7350f09b673fe558774db9eb3d02116a1b5c23a0d38da18ef"
+    },
+    {
+      "path": "product-context/backend/src/engine/normalizeChart.js",
+      "bytes": 8156,
+      "sha256": "e0bedfea555b7dfbb2538807680bef8309508de96af9e59cb7618cdc464aef80"
+    },
+    {
+      "path": "product-context/backend/src/engine/tuviRules.mjs",
+      "bytes": 14392,
+      "sha256": "99db0ae45384beb905aa6ecae6c4d1f653ad13d1c31edecbe6227a027e7d1ec1"
+    },
+    {
+      "path": "product-context/docs/knowledge/research/fortune/juan2-limit-review.json",
+      "bytes": 860,
+      "sha256": "fa3a1f3ce9718ebb34c88f180295c8e306954bed605f1dbec15042c2d496476a"
+    },
+    {
+      "path": "product-context/docs/knowledge/research/fortune/ziwei-quanshu-juan2-limits.txt",
+      "bytes": 491,
+      "sha256": "647e465f7e6776823cc0c838b8c7660332cdec0a74b734868e70e36f20409385"
+    }
+  ],
+  "contextManifest": [
+    {
+      "path": "derived/bounded-source-context.txt",
+      "bytes": 29174,
+      "sha256": "79d04f5ffd791af967d94212a939863f81c378aff8ae58e5fc4f7cf67cec9ff8"
+    },
+    {
+      "path": "derived/config-n-plugin-text.txt",
+      "bytes": 6650,
+      "sha256": "f5f0a04109fc3881f256043e2e92fd1935b72232479ab26472bd644c8bc9d01a"
+    },
+    {
+      "path": "derived/horoscope-text.txt",
+      "bytes": 6998,
+      "sha256": "6dc2638ae6b59373ca8fa197bfc851073530b093727f1edad9a8f9d6dc4a9497"
+    },
+    {
+      "path": "raw/src/i18n/locales/en-US/earthlyBranch.ts",
+      "bytes": 280,
+      "sha256": "dcf7ffb67233fede74de6290e2c341dce80bcbd81b053c48e9667f42ad0bd0f2"
+    },
+    {
+      "path": "raw/src/i18n/locales/en-US/fiveElementsClass.ts",
+      "bytes": 150,
+      "sha256": "05a4919dab702883c0cb85b869c11af7ee47a9afd5a500ccee0e0f34f78e09be"
+    },
+    {
+      "path": "raw/src/i18n/locales/en-US/gender.ts",
+      "bytes": 65,
+      "sha256": "8c2b91082c2d88bd27cc4678965003c67b8636799ed83bd2f94369de0e367a0d"
+    },
+    {
+      "path": "raw/src/i18n/locales/en-US/index.ts",
+      "bytes": 503,
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007"
+    },
+    {
+      "path": "raw/src/i18n/locales/vi-VN/earthlyBranch.ts",
+      "bytes": 300,
+      "sha256": "933f9475bd0b580904515dc3198f059f8924310de10dd8538d2eb02e26311f0c"
+    },
+    {
+      "path": "raw/src/i18n/locales/vi-VN/fiveElementsClass.ts",
+      "bytes": 187,
+      "sha256": "b5b7923adb3df59f2b24cc579347c5ffa8eb86082d0e6b05b3aa3a961ea9d858"
+    },
+    {
+      "path": "raw/src/i18n/locales/vi-VN/gender.ts",
+      "bytes": 62,
+      "sha256": "79ab1b39e62fda211cd5b21e916446ee58d6afa10b3a639dd7799987ef7ef3d4"
+    },
+    {
+      "path": "raw/src/i18n/locales/vi-VN/index.ts",
+      "bytes": 503,
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007"
+    },
+    {
+      "path": "raw/src/i18n/locales/zh-CN/earthlyBranch.ts",
+      "bytes": 280,
+      "sha256": "8672f42c8460b8ae0079e643e1fe62db133fcd19879dd2ad08b5ab3b606a2ab8"
+    },
+    {
+      "path": "raw/src/i18n/locales/zh-CN/fiveElementsClass.ts",
+      "bytes": 152,
+      "sha256": "4378134b7172d28231a77980a137b6c1448f8f4b1227a6317306fba85c0f4366"
+    },
+    {
+      "path": "raw/src/i18n/locales/zh-CN/gender.ts",
+      "bytes": 61,
+      "sha256": "a19607ebf4055ed0f0daa3a78b21288185a67fdf8190e750251be72de19e5d8d"
+    },
+    {
+      "path": "raw/src/i18n/locales/zh-CN/index.ts",
+      "bytes": 503,
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007"
+    },
+    {
+      "path": "raw/src/i18n/starAliases.ts",
+      "bytes": 744,
+      "sha256": "5db704982d754e9e9487c80dfc171b51584cb89014b68171f7c6b87171a49b14"
+    }
+  ],
+  "fixtureArtifacts": [
+    {
+      "path": "fixtures.json",
+      "sha256": "d9a2a37c2c4235c05003994d818427903ce52db07946d133c7e8df9f37c7a1ca",
+      "bytes": 669296
+    },
+    {
+      "path": "fixture-generation.mjs",
+      "sha256": "d6fe29d246a0b8c1af3e27d3bfffe0c8a07341bc37c780de0a1816fcefdb0ad5",
+      "bytes": 6341
+    },
+    {
+      "path": "fixture-replay.mjs",
+      "sha256": "91c1268ceb130786c7f81209c20ecde56c697bf09c6100e5eb5cc91f556b07cf",
+      "bytes": 3584
+    },
+    {
+      "path": "fixture-replay-result.json",
+      "sha256": "80470c81ce3a5160e140d75c8c0919bf70446b2c0c102e6d6bebde3b8d232751",
+      "bytes": 207
+    },
+    {
+      "path": "age-convention-witnesses.json",
+      "sha256": "d01ce69297a52cab2cf02ae42b6b49088fe9ea7335e58f820518d2595b45bd67",
+      "bytes": 1634
+    }
+  ]
+}

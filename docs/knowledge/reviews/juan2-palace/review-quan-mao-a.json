@@ -1,0 +1,117 @@
+[
+  {
+    "model": "gpt-6.1-sol",
+    "available": true,
+    "independent": true,
+    "otherReviewerVerdictsRead": false,
+    "requestedModel": "gpt-6.1-sol",
+    "agentId": "/root/quan_mao_sol",
+    "hostBuildId": null,
+    "modelIdentityBasis": "orchestrator task routing; host build not exposed",
+    "sourceId": "ziwei-quanshu-iztro-transcription",
+    "sourceProfile": "quanshu-iztro-2f00e2ab",
+    "claimId": "interp-quanshu-quan-co-cu-mao-host",
+    "target": "quan_loc",
+    "editionId": "iztro-juan2-2f00e2ab0c80",
+    "schoolId": "vn-tam-hop-default",
+    "locator": "juan2/官祿宮/巨門",
+    "quotationPolicy": "source-sentence-v2",
+    "sourceDigest": "ae7aec7a8cb175d88b956f6562e7ccc138b45c65268c7bd0f7a7aba5a0966443",
+    "contextDigest": "bc5cb3737a70e083f983b4498af51281a266ae35ba2df71aa75fa46e7ad42ba4",
+    "conditionTreeDigest": "712cb19572c1e5e54708fdc1055c14c6b1cda46e38bd34d7273e1f79aba05e51",
+    "wordingDigest": "4ac9b9acbb853b7c601c5d2df4e13c2b41522eb489125177ad101fc500efbb62",
+    "fixturesDigest": "62310a0b6c2ef5b3fe6e32d13aefeebccaa4fa66c3fd4ef234a8f23fd7730c7b",
+    "quotation": "巨門入廟武職權貴，文人不耐久，太陽同有進退，入廟久長，天機同在卯宮吉美，在酉宮雖美無始終，\n陷宮遭悔吝，加羊陀火鈴空劫更不美，退宮卸職。",
+    "conditions": [
+      "palace_quan_loc",
+      "thien_co_in_host",
+      "cu_mon_in_host",
+      "host_branch_mao",
+      "direct_host_only"
+    ],
+    "exceptions": [],
+    "conditionTree": {
+      "op": "and",
+      "items": [
+        {
+          "op": "same_palace",
+          "target": "quan_loc",
+          "stars": [
+            "Thiên Cơ",
+            "Cự Môn"
+          ]
+        },
+        {
+          "op": "branch",
+          "target": "quan_loc",
+          "branches": [
+            "Mão"
+          ]
+        }
+      ]
+    },
+    "limitations": [
+      "paragraph_scoped_only",
+      "textual_branch_clause_only",
+      "modifier_not_evaluated",
+      "following_adverse_clause_not_omitted",
+      "not_an_integrated_career_judgment",
+      "not_a_whole_chart_judgment",
+      "not_a_brightness_change",
+      "source_brightness_not_engine_equivalence",
+      "not_a_verified_life_event",
+      "no_public_release"
+    ],
+    "reviewedWording": "Trong mục Quan Lộc của bản chép này, trường hợp Cự Môn đồng cung Thiên Cơ tại Mão được ghi “吉美”. Đây là ghi chú về đúng nhánh văn bản, không phải xếp hạng, kết luận toàn bộ công danh hay sự kiện đời đã kiểm chứng; các điều kiện gia sát trong đoạn chưa được đánh giá.",
+    "formulaComparison": "MATCH",
+    "verdict": "MATCH",
+    "interpretationVerdict": "INTERPRETATION_SUPPORTED_WITH_LIMITS",
+    "usage": "internal_research",
+    "releasePermission": "withheld",
+    "expertVerified": false,
+    "bookVerified": false,
+    "publicRelease": false,
+    "runtimeRuleChangeApplied": false,
+    "defaultFormulaChangeAuthorized": false,
+    "empiricalTruthVerified": false,
+    "sourceAssessment": {
+      "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+      "rawHtmlSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+      "editionAuthenticated": false,
+      "independentPinnedRawFetch": {
+        "status": 200,
+        "sha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+        "url": "https://raw.githubusercontent.com/SylarLong/iztro/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/ancientBook-2.html",
+        "savedPath": "/tmp/t029/a-raw.html"
+      },
+      "sourceClass": "secondary_pinned_html_transcription",
+      "fullDerivedTextChecked": true,
+      "completeTwoParagraphsChecked": true,
+      "fullQuanSectionChecked": true,
+      "reciprocalThienCoChecked": true,
+      "branchBrightnessContextChecked": true,
+      "licenseNoticeRead": true,
+      "upstreamCodeExecuted": false,
+      "originalHistoricalEditionAuthenticated": false,
+      "all21ManifestFilesVerified": true
+    },
+    "reasoning": {
+      "formula": "Exact AND requires both named stars directly in the unique Quan Lộc host and host Mão; the full literal branch is 天機同在卯宮吉美. No dignity, stem, age, sex, adverses-absent or career-grade predicate is inferred. MATCH is only this read-only textual selection, not natal formula certification.",
+      "interpretation": "The exact Vietnamese wording reports what this transcription records and expressly limits it to the textual branch, denying an integrated career or verified-life-event judgment and leaving gia sát unevaluated. The following 陷宮遭悔吝，加羊陀火鈴空劫更不美，退宮卸職 remains part of the quoted entry and can modify a whole-chart synthesis; it does not erase the existence of the earlier literal Mão phrase. Approval therefore covers attributed phrase selection only, even on an adverse-present fixture. It does not assert that such a chart is 吉美 overall or that adverse conditions are absent.",
+      "context": "Full Quan section and reciprocal 天機 見羊陀火鈴方宜 preclude treating named adverses as a uniform synthesized rule. Source 命宮 descriptions distinguish Thiên Cơ 卯酉旺地 from Cự Môn 卯酉入廟; engine M is not source-equivalence. Stem/sex clauses in 命宮 are not imported as unstated blanket Quan qualifiers. Dậu 雖美無始終 is distinct and no old approval is reused.",
+      "fixtures": "Nine independently recomputed, validated real DOB inputs returned analyzer200; own canonical-name Set and exact-branch oracle agree with AST, complete stored lunar/cục/Mệnh/host-star metadata matches, chart unchanged. Two Mão positives, two Dậu pair negatives, other-branch missing-partner negatives, wrong-host negatives, and valid female -1 Mão neither-partner negative are correctly distinguished.",
+      "coverageLimit": "Reported finite 35064 valid-input search found no single partner at Quan-Mão; this is finite evidence, not a universal invariant. Other-branch missing-partner cases cannot individually discriminate each dropped partner in the complete Mão predicate. No synthetic fixture or withdrawn invalid gender0 result is accepted. Exact immutable AST binding and mutation checks must preserve each operand; real-chart coverage alone cannot establish that protection."
+    },
+    "evidence": {
+      "ownReplay": "/tmp/t029/a-review-proof.mjs",
+      "ownReplayProof": "/tmp/t029/a-proof.json",
+      "ownSourceExtraction": "/tmp/t029/a-source-proof.py",
+      "ownSourceProof": "/tmp/t029/a-source-proof.json",
+      "freshFixtures": 9,
+      "validatedBeforeCalculation": true,
+      "analyzer200": 9,
+      "chartUnchanged": true,
+      "manifestFiles": 21
+    }
+  }
+]

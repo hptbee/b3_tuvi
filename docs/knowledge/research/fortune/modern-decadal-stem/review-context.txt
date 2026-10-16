@@ -1,0 +1,411 @@
+### src/astro/palace.ts lines 28-93
+28:  * 获取命宫以及身宫数据
+29:  *
+30:  * 1. 定寅首
+31:  * - 甲己年生起丙寅，乙庚年生起戊寅，
+32:  * - 丙辛年生起庚寅，丁壬年生起壬寅，
+33:  * - 戊癸年生起甲寅。
+34:  *
+35:  * 2. 安命身宫诀
+36:  * - 寅起正月，顺数至生月，逆数生时为命宫。
+37:  * - 寅起正月，顺数至生月，顺数生时为身宫。
+38:  *
+39:  * @param {AstrolabeParam} param 通用排盘参数
+40:  * @returns {SoulAndBody} 命宫和身宫数据
+41:  */
+42: export const getSoulAndBody = (param: AstrolabeParam): SoulAndBody => {
+43:   const { solarDate, timeIndex, fixLeap, from } = param;
+44:   const { yearly, hourly } = getHeavenlyStemAndEarthlyBranchBySolarDate(solarDate, timeIndex, {
+45:     year: getConfig().yearDivide,
+46:     month: getConfig().horoscopeDivide,
+47:   });
+48:   const earthlyBranchOfTime = kot<EarthlyBranchKey>(hourly[1], 'Earthly');
+49:   const heavenlyStemOfYear = kot<HeavenlyStemKey>(yearly[0], 'Heavenly');
+50: 
+51:   // 紫微斗数以`寅`宫为第一个宫位
+52:   const firstIndex = EARTHLY_BRANCHES.indexOf('yinEarthly');
+53: 
+54:   const monthIndex = fixLunarMonthIndex(solarDate, timeIndex, fixLeap);
+55: 
+56:   // 命宫索引，以寅宫为0，顺时针数到生月地支索引，再逆时针数到生时地支索引
+57:   // 此处数到生月地支索引其实就是农历月份，所以不再计算生月地支索引
+58:   let soulIndex = fixIndex(monthIndex - EARTHLY_BRANCHES.indexOf(earthlyBranchOfTime));
+59: 
+60:   // 身宫索引，以寅宫为0，顺时针数到生月地支索引，再顺时针数到生时地支索引
+61:   // 与命宫索引一样，不再赘述
+62:   let bodyIndex = fixIndex(monthIndex + EARTHLY_BRANCHES.indexOf(earthlyBranchOfTime));
+63: 
+64:   if (from?.heavenlyStem && from?.earthlyBranch) {
+65:     // 以传入地支为命宫
+66:     soulIndex = fixEarthlyBranchIndex(from.earthlyBranch);
+67: 
+68:     const bodyOffset = [0, 2, 4, 6, 8, 10, 0, 2, 4, 6, 8, 10, 0];
+69: 
+70:     bodyIndex = fixIndex(bodyOffset[timeIndex] + soulIndex);
+71:   }
+72: 
+73:   // 用五虎遁取得寅宫的天干
+74:   const startHevenlyStem = TIGER_RULE[heavenlyStemOfYear];
+75: 
+76:   // 获取命宫天干索引，起始天干索引加上命宫的索引即是
+77:   // 天干循环数为10
+78:   const heavenlyStemOfSoulIndex = fixIndex(HEAVENLY_STEMS.indexOf(startHevenlyStem) + soulIndex, 10);
+79: 
+80:   // 命宫的天干
+81:   const heavenlyStemOfSoul = t<HeavenlyStemName>(HEAVENLY_STEMS[heavenlyStemOfSoulIndex]);
+82: 
+83:   // 命宫地支，命宫索引 + `寅`的索引（因为紫微斗数里寅宫是第一个宫位）
+84:   const earthlyBranchOfSoul = t<EarthlyBranchName>(EARTHLY_BRANCHES[fixIndex(soulIndex + firstIndex)]);
+85: 
+86:   return {
+87:     soulIndex,
+88:     bodyIndex,
+89:     heavenlyStemOfSoul,
+90:     earthlyBranchOfSoul,
+91:   };
+92: };
+93: 
+
+### src/astro/palace.ts lines 174-234
+174: /**
+175:  * 起大限
+176:  *
+177:  * - 大限由命宫起，阳男阴女顺行；
+178:  * - 阴男阳女逆行，每十年过一宫限。
+179:  *
+180:  * @param solarDateStr 公历日期
+181:  * @param timeIndex 出生时索引
+182:  * @param gender 性别
+183:  * @param fixLeap 是否修正闰月，若修正，则闰月前15天按上月算，后15天按下月算
+184:  * @returns 从寅宫开始的大限年龄段
+185:  */
+186: export const getHoroscope = (param: AstrolabeParam): { decadals: Decadal[]; ages: number[][] } => {
+187:   const { solarDate, timeIndex, gender, from } = param;
+188:   const decadals: Decadal[] = [];
+189:   const genderKey = kot<GenderKey>(gender!);
+190:   const { yearly } = getHeavenlyStemAndEarthlyBranchBySolarDate(solarDate, timeIndex, {
+191:     // 起大限应该与配置同步
+192:     year: getConfig().yearDivide,
+193:   });
+194:   const heavenlyStem = kot<HeavenlyStemKey>(yearly[0], 'Heavenly');
+195:   const earthlyBranch = kot<EarthlyBranchKey>(yearly[1], 'Earthly');
+196:   const { soulIndex, heavenlyStemOfSoul, earthlyBranchOfSoul } = getSoulAndBody(param);
+197:   const fiveElementsClass = kot<FiveElementsClassKey>(
+198:     getFiveElementsClass(from?.heavenlyStem ?? heavenlyStemOfSoul, from?.earthlyBranch ?? earthlyBranchOfSoul),
+199:   );
+200: 
+201:   // 用五虎遁获取大限起始天干
+202:   const startHeavenlyStem = TIGER_RULE[heavenlyStem];
+203: 
+204:   for (let i = 0; i < 12; i++) {
+205:     const idx =
+206:       GENDER[genderKey] === earthlyBranches[earthlyBranch].yinYang ? fixIndex(soulIndex + i) : fixIndex(soulIndex - i);
+207:     const start = FiveElementsClass[fiveElementsClass] + 10 * i;
+208:     const heavenlyStemIndex = fixIndex(HEAVENLY_STEMS.indexOf(startHeavenlyStem) + idx, 10);
+209:     const earthlyBranchIndex = fixIndex(EARTHLY_BRANCHES.indexOf('yinEarthly') + idx);
+210: 
+211:     decadals[idx] = {
+212:       range: [start, start + 9],
+213:       heavenlyStem: t(HEAVENLY_STEMS[heavenlyStemIndex]),
+214:       earthlyBranch: t(EARTHLY_BRANCHES[earthlyBranchIndex]),
+215:     };
+216:   }
+217: 
+218:   const ageIdx = getAgeIndex(yearly[1]);
+219:   const ages = [];
+220: 
+221:   for (let i = 0; i < 12; i++) {
+222:     const age = [];
+223: 
+224:     for (let j = 0; j < 10; j++) {
+225:       age.push(12 * j + i + 1);
+226:     }
+227: 
+228:     const idx = kot<GenderKey>(gender!) === 'male' ? fixIndex(ageIdx + i) : fixIndex(ageIdx - i);
+229: 
+230:     ages[idx] = age;
+231:   }
+232: 
+233:   return { decadals, ages };
+234: };
+
+### src/data/constants.ts lines 5-35
+5: export const HEAVENLY_STEMS = [
+6:   'jiaHeavenly',
+7:   'yiHeavenly',
+8:   'bingHeavenly',
+9:   'dingHeavenly',
+10:   'wuHeavenly',
+11:   'jiHeavenly',
+12:   'gengHeavenly',
+13:   'xinHeavenly',
+14:   'renHeavenly',
+15:   'guiHeavenly',
+16: ] as const;
+17: 
+18: /** 十二地支 */
+19: export const EARTHLY_BRANCHES = [
+20:   'ziEarthly',
+21:   'chouEarthly',
+22:   'yinEarthly',
+23:   'maoEarthly',
+24:   'chenEarthly',
+25:   'siEarthly',
+26:   'wuEarthly',
+27:   'weiEarthly',
+28:   'shenEarthly',
+29:   'youEarthly',
+30:   'xuEarthly',
+31:   'haiEarthly',
+32: ] as const;
+33: 
+34: /** 十二生肖（按地支顺序） */
+35: export const ZODIAC = [
+
+### src/data/constants.ts lines 130-153
+130:  * 五虎遁 从年干算月干。
+131:  *
+132:  * “五虎遁元”年上起月法，简称 `五虎遁`。
+133:  * 因为正月建寅，所以正月的地支为寅，寅属虎，所以叫五虎盾。
+134:  *
+135:  * - 甲己之年丙作首
+136:  * - 乙庚之岁戊为头
+137:  * - 丙辛必定寻庚起
+138:  * - 丁壬壬位顺行流
+139:  * - 若问戊癸何方发
+140:  * - 甲寅之上好追求
+141:  */
+142: export const TIGER_RULE = {
+143:   jiaHeavenly: 'bingHeavenly',
+144:   yiHeavenly: 'wuHeavenly',
+145:   bingHeavenly: 'gengHeavenly',
+146:   dingHeavenly: 'renHeavenly',
+147:   wuHeavenly: 'jiaHeavenly',
+148:   jiHeavenly: 'bingHeavenly',
+149:   gengHeavenly: 'wuHeavenly',
+150:   xinHeavenly: 'gengHeavenly',
+151:   renHeavenly: 'renHeavenly',
+152:   guiHeavenly: 'jiaHeavenly',
+153: } as const;
+
+### src/utils/index.ts lines 32-65
+32: 
+33: /**
+34:  * 用于处理索引，将索引锁定在 0~max 范围内
+35:  *
+36:  * @param index 当前索引
+37:  * @param max 最大循环数，默认为12【因为12用得最多，宫位数量以及十二地支数量都为12，所以将12作为默认值】
+38:  * @returns {number} 处理后的索引
+39:  */
+40: export const fixIndex = (index: number, max: number = 12): number => {
+41:   if (index < 0) {
+42:     return fixIndex(index + max, max);
+43:   }
+44: 
+45:   if (index > max - 1) {
+46:     return fixIndex(index - max, max);
+47:   }
+48: 
+49:   const res = 1 / index === -Infinity ? 0 : index;
+50: 
+51:   return res;
+52: };
+53: 
+54: /**
+55:  * 因为宫位是从寅宫开始的排列的，所以需要将目标地支的序号减去寅的序号才能得到宫位的序号
+56:  *
+57:  * @param {EarthlyBranchName} earthlyBranch 地支
+58:  * @returns {number} 该地支对应的宫位索引序号
+59:  */
+60: export const earthlyBranchIndexToPalaceIndex = (earthlyBranchName: EarthlyBranchName): number => {
+61:   const earthlyBranch = kot<EarthlyBranchKey>(earthlyBranchName, 'Earthly');
+62:   const yin = kot<EarthlyBranchKey>('yinEarthly', 'Earthly');
+63: 
+64:   return fixIndex(EARTHLY_BRANCHES.indexOf(earthlyBranch) - EARTHLY_BRANCHES.indexOf(yin));
+65: };
+
+### src/i18n/locales/vi-VN/heavenlyStem.ts lines 1-12
+1: export default {
+2:   jiaHeavenly: 'Giáp',
+3:   yiHeavenly: 'Ất',
+4:   bingHeavenly: 'Bính',
+5:   dingHeavenly: 'Đinh',
+6:   wuHeavenly: 'Mậu',
+7:   jiHeavenly: 'Kỷ',
+8:   gengHeavenly: 'Canh',
+9:   xinHeavenly: 'Tân',
+10:   renHeavenly: 'Nhâm',
+11:   guiHeavenly: 'Quý',
+12: } as const;
+
+### src/i18n/locales/vi-VN/earthlyBranch.ts lines 1-14
+1: export default {
+2:   ziEarthly: 'Tý',
+3:   chouEarthly: 'Sửu',
+4:   yinEarthly: 'Dần',
+5:   maoEarthly: 'Mão',
+6:   chenEarthly: 'Thìn',
+7:   siEarthly: 'Tỵ',
+8:   wuEarthly: 'Ngọ',
+9:   weiEarthly: 'Mùi',
+10:   shenEarthly: 'Thân',
+11:   youEarthly: 'Dậu',
+12:   xuEarthly: 'Tuất',
+13:   haiEarthly: 'Hợi',
+14: } as const;
+
+### src/data/types/astro.ts lines 216-231
+216: export type Config = {
+217:   /** 四化配置 */
+218:   mutagens?: ConfigMutagens;
+219:   /** 星耀亮度配置 */
+220:   brightness?: ConfigBrightness;
+221:   /** 年分割点配置，normal为正月初一分界，exact为立春分割 */
+222:   yearDivide?: 'normal' | 'exact';
+223:   /** 运限分割点配置，normal为正月初一分界，exact为立春分割 */
+224:   horoscopeDivide?: 'normal' | 'exact';
+225:   /** 小限分割点配置，normal为以自然年分界，birthday为生日分界 */
+226:   ageDivide?: 'normal' | 'birthday';
+227:   /** 晚子时配置，current时晚子时算当日，forward时晚子时算来日 */
+228:   dayDivide?: 'current' | 'forward';
+229:   /** 安星方法，default为通行版本，zhongzhou为中州派版本 */
+230:   algorithm?: 'default' | 'zhongzhou';
+231: };
+
+### src/astro/config.ts lines 9-24
+9: /**
+10:  * 创建默认配置。
+11:  * @internal
+12:  * @version 2.6.2
+13:  */
+14: const defaults = (): ResolvedConfig => ({
+15:   mutagens: {},
+16:   brightness: {},
+17:   yearDivide: 'normal',
+18:   horoscopeDivide: 'normal',
+19:   ageDivide: 'normal',
+20:   dayDivide: 'forward',
+21:   algorithm: 'default',
+22: });
+23: 
+24: /**
+
+### src/astro/astro.ts lines 123-145
+123:   return withLanguage(language ?? 'zh-CN', () => {
+124:     const palaces: IFunctionalPalace[] = [];
+125:     const { dayDivide } = getConfig();
+126:     let tIndex = timeIndex;
+127: 
+128:     if (dayDivide === 'current' && tIndex >= 12) {
+129:       // 如果当前时辰为晚子时并且晚子时算当天时，将时辰调整为当日早子时
+130:       tIndex = 0;
+131:     }
+132: 
+133:     const { yearly } = getHeavenlyStemAndEarthlyBranchBySolarDate(solarDate, tIndex, {
+134:       year: getConfig().yearDivide,
+135:       month: getConfig().horoscopeDivide,
+136:     });
+137:     const earthlyBranchOfYear = kot<EarthlyBranchKey>(yearly[1], 'Earthly');
+138:     const heavenlyStemOfYear = kot<HeavenlyStemKey>(yearly[0], 'Heavenly');
+139:     const { bodyIndex, soulIndex, heavenlyStemOfSoul, earthlyBranchOfSoul } = getSoulAndBody({
+140:       solarDate,
+141:       timeIndex: tIndex,
+142:       fixLeap,
+143:     });
+144:     const palaceNames = getPalaceNames(soulIndex);
+145:     const majorStars = getMajorStar({ solarDate, timeIndex: tIndex, fixLeap });
+
+### src/astro/astro.ts lines 286-330
+286: }
+287: 
+288: export function rearrangeAstrolable<T extends FunctionalAstrolabe>({
+289:   from,
+290:   astrolable,
+291:   option,
+292: }: {
+293:   from: { heavenlyStem: HeavenlyStemName; earthlyBranch: EarthlyBranchName };
+294:   astrolable: T;
+295:   option: Option;
+296: }) {
+297:   const { timeIndex, fixLeap } = option;
+298:   const { dayDivide } = getConfig();
+299:   let tIndex = timeIndex;
+300: 
+301:   if (dayDivide === 'current' && tIndex >= 12) {
+302:     // 如果当前时辰为晚子时并且晚子时算当天时，将时辰调整为当日早子时
+303:     tIndex = 0;
+304:   }
+305: 
+306:   // 以传入地支为命宫
+307:   const { soulIndex, bodyIndex } = getSoulAndBody({
+308:     solarDate: astrolable.solarDate,
+309:     timeIndex: tIndex,
+310:     fixLeap,
+311:     from,
+312:   });
+313:   const fiveElementsClass = getFiveElementsClass(from.heavenlyStem, from.earthlyBranch);
+314:   const palaceNames = getPalaceNames(soulIndex);
+315:   const majorStars = getMajorStar({ solarDate: astrolable.solarDate, timeIndex: tIndex, fixLeap, from });
+316:   const changsheng12 = getchangsheng12({
+317:     solarDate: astrolable.solarDate,
+318:     gender: astrolable.gender as GenderName,
+319:     timeIndex: tIndex,
+320:     fixLeap,
+321:     from,
+322:   });
+323:   const { decadals, ages } = getHoroscope({
+324:     solarDate: astrolable.solarDate,
+325:     timeIndex: tIndex,
+326:     gender: astrolable.gender as GenderName,
+327:     fixLeap,
+328:     from,
+329:   });
+330: 
+
+### src/i18n/index.ts lines 74-119
+74: /**
+75:  * 输出国际化文本。
+76:  *
+77:  * @param str 待翻译的字符串
+78:  * @returns 翻译后的字符串
+79:  */
+80: export const t = <T>(str: string, options?: Record<string, string | number>) => {
+81:   if (!str) {
+82:     return '' as T;
+83:   }
+84: 
+85:   return i18next.t(str, { ...options, lng: getLanguage() }) as T;
+86: };
+87: 
+88: /**
+89:  * kot(Key of Translation).
+90:  *
+91:  * 通过翻译文本反查Key的值，用于各种计算。
+92:  * 若没有找到则会返回Value本身。
+93:  *
+94:  * @param value 翻译后的字符串
+95:  * @returns 翻译文本的Key值
+96:  */
+97: export const kot = <T>(value: string, k?: string) => {
+98:   let res = value;
+99:   const aliasKey = STAR_ALIASES[value as keyof typeof STAR_ALIASES];
+100: 
+101:   if (aliasKey) {
+102:     return aliasKey as T;
+103:   }
+104: 
+105:   for (const [, item] of Object.entries(resources)) {
+106:     for (const [transKey, trans] of Object.entries(item.translation)) {
+107:       if (((k && transKey.includes(k)) || !k) && trans === value) {
+108:         res = transKey;
+109:         return res as T;
+110:       }
+111:     }
+112:   }
+113: 
+114:   return res as T;
+115: };
+116: 
+117: export * from './types';
+118: 
+119: export default i18next;

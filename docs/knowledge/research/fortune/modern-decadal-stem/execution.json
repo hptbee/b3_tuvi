@@ -1,0 +1,23 @@
+{
+  "note": "Actual independent model assignments and raw author judgments. Original schema-mismatched responses and author-only serialization clarifications preserved; no semantic conditions/verdict fabricated. Host build identifiers unavailable. Fixtures froze before actual reviewers and before product implementation.",
+  "reviewers": [
+    {
+      "model": "gpt-6.1-sol",
+      "requestedModel": "gpt-6.1-sol",
+      "agentId": "/root/t030_source_sol",
+      "hostBuildId": null,
+      "available": true,
+      "reviewRef": "docs/knowledge/research/fortune/modern-decadal-stem/review-a.json",
+      "verdict": "MATCH"
+    },
+    {
+      "model": "gpt-6-astra",
+      "requestedModel": "gpt-6-astra",
+      "agentId": "/root/t030_source_astra",
+      "hostBuildId": null,
+      "available": true,
+      "reviewRef": "docs/knowledge/research/fortune/modern-decadal-stem/review-b.json",
+      "verdict": "MATCH"
+    }
+  ]
+}
