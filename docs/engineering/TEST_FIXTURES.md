@@ -21,6 +21,8 @@ Không có file expert-verified golden. Chưa có lá số nào được một c
 
 ## Regression fixture
 
+- `structuredAnalysisContract.integration.test.mjs`: real HTTP responses pass the same production client validators used by React, with representative frozen source-comparative witnesses covering all 40 cells/15 targets and shared palaces. B3 physical metadata, brightness suffixes (R3501), legacy/closed/combined acceptance and privacy are engineering regressions; forged response mutations are synthetic, not expert-verified charts or new formula approval.
+
 - `modernMajorMutagenBinding.test.mjs`: separate immutable actual dual-model decision, exact table/source/manifest checks, coherent forgery rejection, branch/stem prerequisites, cached reader failures and legacy profile isolation; synthetic tampering never grants source or public approval.
 - `modernMajorMutagenApi.test.mjs`: real HTTP replay of all independent periods, ordered physical natal associations, strict two-key opt-in and override rejection, combined overlays, unchanged legacy fields, ask/no-store/privacy and no persistence.
 

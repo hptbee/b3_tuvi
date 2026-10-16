@@ -66,6 +66,7 @@ export const unitTests = [
 ];
 
 export const integrationTests = [
+    'test/structuredAnalysisContract.integration.test.mjs',
     'test/modernMajorApi.test.mjs',
     'test/modernMajorStemApi.test.mjs',
     'test/modernMajorMutagenApi.test.mjs',
