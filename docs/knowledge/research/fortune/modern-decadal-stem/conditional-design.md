@@ -1,0 +1,53 @@
+# T030 read-only design investigation
+
+Reviewed AGENTS.md, AGENT_ENGINEERING.md, CONTRIBUTING.md, canonical simplest-correct/verification/evidence rules; modernMajor.js, modernMajorBinding.js, timeEngine.js, mapper, analyze request validation references, modernMajor unit/API/binding tests; StructuredAnalysis.jsx and its existing major tests and Chromium E2E. This is conditional engineering design, not a source approval or a passing implementation review.
+
+## Smallest compatible contract
+
+Keep capability `time.capabilities.dai_han_modern` and request `majorPeriod: {profile, nominalAge}`. Permit exactly two profile strings: existing `iztro-pinned-menh-cuc-decadal` and new `iztro-pinned-menh-cuc-decadal-stem`. Retain exactly two own request keys, plain/null prototype, integer 1..125 and no client stem/year/branch overrides. No request/API version, sibling capability or extra form control is needed.
+
+Old profile, omitted option, malformed option must preserve all prior response keys/values. Add `heavenlyStem` and `stemPlacement` ONLY when a syntactically valid new profile was explicitly selected. New placed result uses e.g. heavenlyStem `Bính`, stemPlacement `supported`; before/after and all blocked new-profile results have heavenlyStem null and stemPlacement `not_applied`. Do not add a nullable heavenlyStem to old-profile responses or change their profile identity. Invalid options retain old invalid_major_period path, not a partially recognized new response.
+
+Retain id/status/reason/branch/mapping/age boundaries and publicFortune:false, interpretation:null, interpretationStatus:blocked. Use the unchanged projection compatibility string as base if its literal is documented as natal calendar scope; add a new explicit new-profile compatibility literal only if needed to disclose lunar birth stem. Recommended new literal `server_natal_menh_cuc_stem_branch_sex_age_projection_not_full_iztro_astrolabe`, discriminated by profile in validator, while old literal remains byte-identical. Do not claim full upstream astrolabe, date-derived age or yearDivide/calendar/from override equivalence.
+
+## Calculation/trust boundary
+
+Existing modernMajorPeriod remains unchanged and computes approved branch/decade. Existing trustedInputs already checks server lunar canIndex 0..9 and exact THIEN_CAN name, chiIndex/name, stem/branch parity, Cục and complete layout. Use this validated server canIndex to compute new stem, never input.year, viewing year, chart palace stem, a caller field or decade index.
+
+Exact selected source index is Dần-relative selected physical branch index: `(selectedBranchId + 9) % 12` for B3 ids1..12; check Dần3→0, Sửu2→11, Tí1→10. Stem index `(tigerStartStemIndex[birthYearStemIndex] + sourcePalaceIndex) % 10` with fixed source-reviewed table [2,4,6,8,0,2,4,6,8,0]. Existing B3 THIEN_CAN and upstream Vietnamese are BOTH `Kỷ`; no normalization/alias needed. Existing branch spelling mapping Tý/Tỵ→Tí/Tị is inherited; do not add new branch aliases.
+
+A separately compiled immutable stem algorithm and separately named local evidence binding is justified because old approval explicitly excludes this formula. New profile must require BOTH original branch binding and new stem binding; old profile must never consult the new stem binding. Missing/mutated/unapproved new evidence fails closed without degrading old capability. The binding should use existing decision registry/integrity and fixed local path patterns, hash raw/model records, validate exact accepted algorithm and reviewed source identity, cache the result once, return defensive results. Do not alter old binding HASHES, algorithm or files. No dynamic source execution, installed upstream dependency, per-request file hashing or configurable formula registry.
+
+Reuse existing trustedInputs directly for both profiles in modernMajor.js. Either add birthYearStemIndex only to the trusted private return (unused property does not affect old output) or obtain it after the existing validation in new branch. Compute stem only after period.reason is null and branch validated. Map placement with existing mapper unchanged. Its full-layout prevalidation means unexpected downstream mapping failure should be unreachable; nevertheless do not serialize supported stem on an invalid/unmapped chart. Ensure blocked/closed builder conditionally adds null stem fields for new requests before spreading placed values.
+
+## Definite narrow production file list
+
+1. backend/src/time/modernMajor.js: allowlist second profile, conditional response fields, new-binding dispatch, tiny pure source-approved stem computation. Keep modernMajorPeriod unmodified.
+2. NEW backend/src/knowledge/modernMajorStemBinding.js: immutable new algorithm/evidence trust boundary only; use existing binding primitives. Do not refactor old binding.
+3. frontend/src/components/StructuredAnalysis.jsx: new profile constant/dropdown option, apply actual allowlisted selected draft profile, discriminate validator and conditional display.
+
+No expected changes to analyze.js/routes, timeEngine.js, thienDuc.js, engine/constants.js/tuviRules, source defaults, normalization, SQLite, synthesis or interpretations. Request analyzer already calls shared validateMajorPeriod; capability builder is already routed to modernMajorCapability. An extra pure file for a few arithmetic lines is unnecessary. New raw locale evidence is required for exact stem keys/translations (raw src/i18n/locales/vi-VN/heavenlyStem.ts and source HEAVENLY_STEMS order); source analyst chooses complete supporting paths. Reuse sourceId and existing edition without upgrade if identities are identical; never mutate old accepted snapshots. A new evidence dossier can bind additional source paths to same Git pin/identity.
+
+## Frontend closure and accessibility
+
+Current request key already includes profile+age and chart/year/minor/retry, with in-flight cancellation and chart birth reset. Preserve that machinery. applyMajor currently hardcodes old profile in validation, draft and committed state: all three must accept selected allowlisted profile and commit it unchanged. Changing draft to other profile with same age must hide old output pending apply; existing majorDirty comparison already does this. Clearing remains omission+empty age. No new state, toggle or second form.
+
+Use existing labelled select/age/button, polite live region, source link and errors. Dropdown labels should distinguish old `chi cung` from new `can và chi cung`; new helper copy says server lunar-year stem, no prediction. Render old exact current text unchanged. New text `Đại hạn tuổi mụ N: can X, chi Y — cung ...; khoảng tuổi mụ ...` only on new approved mapped result; NEVER show stem for before/after, blocked, invalid, dirty or stale result.
+
+Validator should allowlist option.profile, require exact matching returned profile, expected profile-specific compatibility literal, old contract unchanged, new stem valid canonical THIEN_CAN and stemPlacement supported on placed, null/not_applied on closed. Do not accept missing new fields, name-index aliases, arbitrary stem or supported stem in blocked response. Optionally reject presence of new stem fields on old responses to catch wrong-profile payload; exact old behavior compatibility does not require accepting newly forged fields. Existing validator only checks structural branch/corresponding statement, not recomputing full formula; do not smuggle lunar birth stem into API solely for frontend recomputation. Mapping/age/current-profile checks remain required.
+
+## Verification required
+
+- New pure arithmetic tests from INDEPENDENT fixtures: all 10 birth stems, all selected branch indices including wrap; distinguish selected palace index from decade index, lunar vs civil year and male/female direction. Do not use production helper to generate expected values.
+- New evidence binding tests: correct acceptance; every required byte/missing path, algorithm/source/review/decision/execution mutation fails; cache returns defensive result; cold isolated failure closes new profile but old still works; fresh process/context for cache tests.
+- New API unit/integration assertions: strict request two-key rules bothprofiles; source evidence denial; invalid chart including lunar stem mismatch/parity; placement/notplacement and 125 limit; no persistence/logs; real ask wrapper; combined minor/year remains independent. Compare old profile full output against stored pre-change expected responses, not just absence of stems.
+- Backend runner and fixture inventory register any new tests. Retain existing old 1423query/28chart coverage unchanged.
+- Frontend meaningful tests: both selectable profiles, actual profile committed, old text stable, new canonical stem shown, missing/invalid/null/supported-in-closed stem rejected; wrong-profile same-age response rejected; changing draft hides old can+chi; new→old yields no stem; new→clear, birth A→B→A, retry, minor/year co-existence and nonplacement.
+- E2E extend existing modern-major-placement.spec.js or add focused stem spec (no duplicated old full suite): actual backend male+female placements/correct source-independent expected stem; same-age profile switch; both nonplacements; old profile has no stem; mobile controls fit. Wait response by profile AND age, since same-age switches otherwise match old response. Do not hardcode newly computed expectations from implementation.
+- Relevant backend full CI, frontend CI/lint/build, Chromium E2E using cloud configuration; independent technical review across domain/API/UI/security and warm-cache performance. Test pass is not source approval.
+
+No product edits performed. Exact source/algorithm/evidence contract still needs actual independent source + fixture work and dual-model acceptance before activation.
+
+## Root contract reconciliation
+
+Final new field names are `heavenlyStem` and `stemPlacement`, conditional solely on new profile. Compatibility literal is exactly `server_natal_menh_cuc_stem_branch_sex_age_projection_not_full_iztro_astrolabe`. Separate denied binding reason is `modern_stem_profile_not_approved`; original old-profile reason remains `modern_profile_not_approved`. New frontend validator permits either branch-approval or stem-approval blocked reason when appropriate, requires empty stem on all blocked/nonplaced states, and rejects missing/wrong-type/unknown canonical stems plus unexpected new fields on old profiles. Do not expose lunar canIndex/chart metadata to recompute client-side. Client validates canonical shape/profile and mapped palace; correctness of which canonical heavenlyStem applies depends on trusted API plus approved backend binding and independent fixtures, not a client-side source formula check.

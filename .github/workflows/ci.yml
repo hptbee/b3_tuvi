@@ -3,6 +3,13 @@ name: ci
 on:
   push:
   pull_request:
+  workflow_dispatch:
+    inputs:
+      browser_e2e:
+        description: Run the exceptional browser integration suite
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -63,6 +70,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -70,11 +79,20 @@ jobs:
           cache-dependency-path: |
             backend/package-lock.json
             frontend/package-lock.json
-      - run: npm ci
+      - name: Verify browser routing without a browser
+        run: node .github/scripts/browser-test-scope.test.mjs
+      - name: Select exceptional browser coverage
+        id: browser_scope
+        run: node .github/scripts/browser-test-scope.mjs
+      - if: steps.browser_scope.outputs.run_browser == 'true'
+        run: npm ci
         working-directory: backend
-      - run: npm ci
+      - if: steps.browser_scope.outputs.run_browser == 'true'
+        run: npm ci
         working-directory: frontend
-      - run: npx playwright install --with-deps chromium
+      - if: steps.browser_scope.outputs.run_browser == 'true'
+        run: npx playwright install --with-deps chromium
         working-directory: frontend
-      - run: npm run test:e2e
+      - if: steps.browser_scope.outputs.run_browser == 'true'
+        run: npm run test:e2e
         working-directory: frontend

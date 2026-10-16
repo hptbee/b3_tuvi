@@ -1,0 +1,12 @@
+{
+  "requests": 192,
+  "acceptedGenuineResponses": 168,
+  "acceptedSyntheticPresentationVariants": 120,
+  "rejectedSyntheticForgeries": 548,
+  "fixtures": 24,
+  "frontendValidators": "unaltered source extracted in VM",
+  "browserLaunched": false,
+  "databaseWrites": 0,
+  "noStore": true,
+  "privacyNameWithheld": true
+}

@@ -1,0 +1,211 @@
+{
+  "method": "local git show at exact commit; no HTTP attempted; no upstream execution",
+  "repository": "/tmp/tuvi-iztro-pinned",
+  "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "commit": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb 3095b2e908923aea98072d1eb965a95028ebf995",
+  "remote": "https://github.com/SylarLong/iztro.git",
+  "manifestVerified": 44,
+  "rawFiles": [
+    {
+      "path": "LICENSE",
+      "bytes": 1073,
+      "sha256": "e6c7b6e313cbda3135b41bccc66c98be132cb8319d0d465903d17e669e748b36",
+      "gitBlob": "af1e0c83c0a8095bd9faa83265ba67a441422657"
+    },
+    {
+      "path": "package.json",
+      "bytes": 2732,
+      "sha256": "2b7d04100c48599e4fe02f5ec1521f5ca45b41914adf5a5472e86abc6dfa1ee6",
+      "gitBlob": "148bb95862f9fe623f828b872b62f3ba578c114f"
+    },
+    {
+      "path": "src/astro/FunctionalAstrolabe.ts",
+      "bytes": 19616,
+      "sha256": "584fd8d2d3ac76b3b8d7990ec6d26cac42eb5f1fcac9175326f29497d60d2d9c",
+      "gitBlob": "b00ceb08fed1f8e3288fed3c6d785f8eb8816937"
+    },
+    {
+      "path": "src/astro/FunctionalHoroscope.ts",
+      "bytes": 7251,
+      "sha256": "b62ce85093f40f3ba2faead2da31b0e36b705ff37147ed3d58b104a0e5eba56a",
+      "gitBlob": "7f0094603853e853100e751da1de8ee198586f51"
+    },
+    {
+      "path": "src/astro/FunctionalPalace.ts",
+      "bytes": 9333,
+      "sha256": "8e3c7fb122f168a91a08ea7285dbf9500d6a4136fb4a8ed98b68e57d3811ff7b",
+      "gitBlob": "6c40d1bafd0c0dc5cce2946267c111cb6ef6f700"
+    },
+    {
+      "path": "src/astro/analyzer.ts",
+      "bytes": 10544,
+      "sha256": "202d19282f71e557bdbb6132c357fc56def1ca7d9bcb04d3b04e8f6c9f820acb",
+      "gitBlob": "5b040a24a667ae910011190e51c90dfdc2359867"
+    },
+    {
+      "path": "src/astro/astro.ts",
+      "bytes": 19029,
+      "sha256": "84e1fd5121bc6c5e7fb17ef3d8aadd0f8473ff8f2704c17c1af96e77388d49f8",
+      "gitBlob": "4111d5f58804e22de3664e0b008cbfb36bb2389e"
+    },
+    {
+      "path": "src/astro/config.ts",
+      "bytes": 3825,
+      "sha256": "e74d2bf23630f8faadfae9fd2d29c592ceb7a18d7396c0aba5d74959ea5d134e",
+      "gitBlob": "14ce2e513ac697d871e205f0f1f5e97c6d0b2c73"
+    },
+    {
+      "path": "src/astro/context.ts",
+      "bytes": 2200,
+      "sha256": "e76bdb18f2ffa4a77d6c7364a5edb2838b5542f6b4e65fbc8be66e30dcedefdc",
+      "gitBlob": "322324fefb6ef9d883253d2107ac8d0ca227994c"
+    },
+    {
+      "path": "src/astro/palace.ts",
+      "bytes": 7799,
+      "sha256": "a9c6d8444d5edcd241068f5bd83fed3aa38a57b206cebb221f86b8d4057b5273",
+      "gitBlob": "5a6912b9aaae65d24af32c8137c46442dd8cf4b4"
+    },
+    {
+      "path": "src/data/constants.ts",
+      "bytes": 3871,
+      "sha256": "e2411f73c7ea438b5186f2a3ef29fa54587ab78e25620b5a52b409ce9244043a",
+      "gitBlob": "5fd18072bb84a7ff8998ca739fd62269a9aa1ce1"
+    },
+    {
+      "path": "src/data/heavenlyStems.ts",
+      "bytes": 2351,
+      "sha256": "f50a96b4fda42f834b2ff7aea36533a38bd5bcee94b74d5ecc1deb22ee07279c",
+      "gitBlob": "6c5016e2f5e026a7c8abf5a6595bbe3270d1e34d"
+    },
+    {
+      "path": "src/data/index.ts",
+      "bytes": 122,
+      "sha256": "e45e0875d60c2aede27dad389f11d3cdda7e31d1694e5f53ff32cd025288f2a2",
+      "gitBlob": "b45b10d98ce601e069721e51aaf777e6082c8868"
+    },
+    {
+      "path": "src/data/stars.ts",
+      "bytes": 3460,
+      "sha256": "b616ea6bf47086ef01ac897eb4f9122ec30d44716ed5debc373db361066e8c76",
+      "gitBlob": "25514c3426e1ac3966d422649de16d901f311867"
+    },
+    {
+      "path": "src/i18n/index.ts",
+      "bytes": 2943,
+      "sha256": "06da411d37e4e5f3dc7d922f3dbce0f9fcb2fe1125619873e6a651eabc63d558",
+      "gitBlob": "2243e4011b72296aed066f7e12acde8bdb2f496d"
+    },
+    {
+      "path": "src/i18n/starAliases.ts",
+      "bytes": 744,
+      "sha256": "5db704982d754e9e9487c80dfc171b51584cb89014b68171f7c6b87171a49b14",
+      "gitBlob": "7d1e15be645bf723e7b6c4d39727fe0b57629a04"
+    },
+    {
+      "path": "src/utils/index.ts",
+      "bytes": 7614,
+      "sha256": "9f3699115c9c149dc261f9a293e6c7ad40ac4f744884dba21b367b96d9bbfe16",
+      "gitBlob": "9d4d230fff5427ebef3014f45a0ce69356e8c936"
+    },
+    {
+      "path": "src/data/types/astro.ts",
+      "bytes": 7671,
+      "sha256": "b24c25fa535e6b89fbe9b0e93deebe3851dd943cdd3baa290747b863506e3b85",
+      "gitBlob": "d120c6d4527a00b2a35547ef235fa1a5a13b5cb1"
+    },
+    {
+      "path": "src/data/types/general.ts",
+      "bytes": 730,
+      "sha256": "db3015c93d9fc16fea8de2878a4402f5303e2c46f5b87ae6fdbf43ab64289191",
+      "gitBlob": "73c197168bb7cc8e83935741d27e91be9ca148e2"
+    },
+    {
+      "path": "src/data/types/star.ts",
+      "bytes": 735,
+      "sha256": "af91fd781367447d745b326badefd5556148f79b5a904ea9be506e6950d2fecd",
+      "gitBlob": "a242bbddc2ce71423363625d5d39a1ac2fbd35f7"
+    },
+    {
+      "path": "src/i18n/types/HeavenlyStem.ts",
+      "bytes": 1086,
+      "sha256": "3ed84c7e10b8b98a6fe4fd82ec4d3922a10842270f7c41a20f2c399f49c2cb9b",
+      "gitBlob": "595f26faa0ba481b68ffcd04cec916b3536aab25"
+    },
+    {
+      "path": "src/i18n/types/Star.ts",
+      "bytes": 815,
+      "sha256": "96e900aa0c04e620296db2ec0fee805118b2d4b0586cbde206ab186bbf08a3a7",
+      "gitBlob": "473aa934de9cb8ab42ed45077fa7ab72d5a1772b"
+    },
+    {
+      "path": "src/i18n/types/mutagen.ts",
+      "bytes": 872,
+      "sha256": "a690c9e01e6083bf5542c71e2d7d6a361851caacee957e97f7d5c1cac8949491",
+      "gitBlob": "268d2440e3ea024a07673942cbe313bfe752fca3"
+    },
+    {
+      "path": "src/i18n/locales/vi-VN/heavenlyStem.ts",
+      "bytes": 264,
+      "sha256": "4b0805baf3aa2555e4db3c804e6947f179e5905b1e73c9c261cbd35e38d6b2ea",
+      "gitBlob": "b4841e7c96f3459164c814691737823bfe48b785"
+    },
+    {
+      "path": "src/i18n/locales/vi-VN/index.ts",
+      "bytes": 503,
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007",
+      "gitBlob": "61981406edb70a3e2afc5a348d34e4bd32caf170"
+    },
+    {
+      "path": "src/i18n/locales/vi-VN/mutagen.ts",
+      "bytes": 111,
+      "sha256": "405a4efae2bfd2cb3cdbc73934b37625ec8f90c16c8ed28353c16fb902775643",
+      "gitBlob": "ca5d4caefa662ab338dea57fb8494f08ccab2d53"
+    },
+    {
+      "path": "src/i18n/locales/vi-VN/star.ts",
+      "bytes": 4232,
+      "sha256": "5733ac862f38dc80af54e84321af04794381c976cd2946eeea12a92fe74cfb04",
+      "gitBlob": "9a7ad475c438aad5fa84f31b5c618d8e655fc8ae"
+    },
+    {
+      "path": "src/i18n/locales/zh-CN/star.ts",
+      "bytes": 3357,
+      "sha256": "cb82069097bf3a0d2d358ef49bb6c2c9e9e12e36e73b334c56c88fcad9454814",
+      "gitBlob": "b4003585c0470f4c72687040fb02ebaed0d1d90e"
+    },
+    {
+      "path": "src/i18n/locales/zh-TW/star.ts",
+      "bytes": 3357,
+      "sha256": "319a90e1752e45cf7da911d41e7ccf35b9defb8cec0e39294ef9f4a86b10f062",
+      "gitBlob": "3f9597cd1194084e8d0975b641550bd68942176e"
+    }
+  ],
+  "digests": {
+    "sourceDigest": "93fe46cdcf03529c47c7bda24b1081922d582da204cdaf449673482162e0acdf",
+    "contextDigest": "e0e053ddf39a07a4a9395d8d1beaed0c37c4900e730a3e7816ffcf47d99c0035",
+    "fixturesDigest": "1b09a7d56fd92aff8483885d9f912e2ca82108c5195d7fba22144a6c072eb00f",
+    "algorithmDigest": "61dd9c7b4413247663289a7e4835b66b379576dd2cda3150bc60b07d7f7bebc6",
+    "compatibilityDigest": "f18a71a7aa13600b719e44401365fb34cd7bcf2988faddb0bc7841efaf59285c"
+  },
+  "spanSectionsVerified": 12,
+  "fixtureVerification": {
+    "replayByteIdentical": true,
+    "fixturesSha256": "1b09a7d56fd92aff8483885d9f912e2ca82108c5195d7fba22144a6c072eb00f",
+    "charts": 24,
+    "periods": 288,
+    "records": 1152,
+    "shared": 101,
+    "cells": 40,
+    "stars": 15,
+    "wrongAlgorithmCounts": {
+      "birthStem": 260,
+      "viewYearStem": 258,
+      "nextStem": 288,
+      "categoryRotation": 288,
+      "b3NatalAssociationReuse": 260
+    },
+    "arithmetic": "independent Python direction, branch and 2*(birthStem%5+1)+Dần-relative branch modulo ten; literal source row transcription",
+    "limits": "positions and IDs are observed existing B3 natal metadata, not independent natal formula truth; malformed negatives are proposed engineering guards"
+  }
+}

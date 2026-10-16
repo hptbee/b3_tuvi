@@ -22,3 +22,9 @@ docs/knowledge/reviews/juan2-palace/review-tai-tuvi-pha-*.json text eol=lf
 docs/knowledge/research/juan2-palace/quan-co-cu-mao-packet/** text eol=lf
 docs/knowledge/research/juan2-palace/review-bundle-quan-mao.json text eol=lf
 docs/knowledge/reviews/juan2-palace/review-quan-mao-*.json text eol=lf
+
+# T030 separately approved modern stem profile: preserve exact reviewed bytes.
+docs/knowledge/research/fortune/modern-decadal-stem/** text eol=lf
+
+# T032 independent default decadal transformation association evidence.
+docs/knowledge/research/fortune/modern-decadal-mutagen/** text eol=lf

@@ -181,3 +181,55 @@ T028fullfeature8/performance9/crosscut10allclear, parentPASS. No R2401/R2501/R26
 
 ## T029 review completion — 2026-10-16
 Full-feature pass11 (reserved R2701+) and routed performance pass12 (reserved R2801+) found no confirmed blocking defects. No finding IDs allocated. Reports archived with the Quan-Mão packet. Parent task gate PASS; overall invocation INCOMPLETE at12/12 technical review cap, with source/public/release blockers unchanged and next queue preserved.
+
+
+## T030 fresh invocation — main774ac6c
+Technical budget0/12 before dispatch. LARGE single complete feature with two logical units: CORE (new source-bound stem calculation/trust/evidence/tests) and API/UI (request/response/client/draft/races/accessibility+HTTP tests). Performance routed because new immutable evidence/cache runs on request path; cumulative crosscut follows both units. No source-model analysis/review counted as technical passes. Reserve R2901+ CORE, R3001+ API/UI, R3101+ performance, R3201+ crosscut; IDs allocated only for actual findings. Readonly independently isolated reviewers, parent owns gate.
+
+## Owner policy/current invocation review accounting
+PriorT030CORE/APIUI/performanceagentsreturnedquotaerrors; REVIEW_NOT_EXECUTED, nofindingsorverdicts, not12/12exhaustion. Explicitownerrecoverystartsbudget0/12andpreserveshistory. Currentpass1T031fullpolicyreviewclear/R3301rangeunused, ownrouting/Git/security/docschecksPASS. Currentpasses2CORE/R2901,3APIUI/R3001,4performance/R3101 running, no verdictclaimed. CrosscutR3201afterunits.
+
+T030 actualCOREpass2,APIUIpass3 andperformancepass4completedclear; reservedR2901/R3001/R3101rangesunused. Allsource/profile/publicboundariesretained, no fixerrequired. Crosscutpass5pending; budget4/12completed, notexhausted. Reportsdurableundernewdossierengineering-review.
+
+
+## T030/T031 final current-invocation review result
+Actualpass1policy/R3301,2CORE/R2901,3APIUI/R3001,4performance/R3101,5crosscut/R3201 allclear; no confirmedfindingIDsallocated/nofixernecessary. ParentlocalengineeringgatesPASSafteractualtests/sourceproofs. Crosscut216HTTP/96completecompatibilitycomparisons/192genuinevalidatoracceptances/24askprivacychecks; frozenmanifest/bindingreplayexact. Currentbudget5/12, notexhausted. EarlierquotaattemptsremainREVIEW_NOT_EXECUTEDhistory. ExternalGitHubPRAPIForbidden→overalldeliveryINCOMPLETE,noinventedPR/CI/merge.
+
+
+## T032 review routing (continuing same invocation)
+Prior5actualpassesretained. LARGEonecompleteoptionalprofile, logicalunitsCORE(source/defaulttable/starassociation/trust/tests)andAPI/UI(HTTP/clientcontract/state/renderer/tests); cache/request-path performance routed and crosscutafterunits. ReserveR3401CORE,R3501APIUI,R3601performance,R3701crosscut. Backendauthorfrozenandfocused3+legacy2suitesPASS; fullCIrunning. DispatchCOREpass6andperformancepass7; no verdict/PASSclaimedbeforeactualreports. Atmost12totalincludingfreshfixreviews, no reset.
+
+T032CORE6/performance7actualclear,no confirmedfindingsorallocatedIDs. APIUI8firstattemptquota/noverdict; retryafterownerContinue notPASS. Budget7actualpassescompletedoverall, gatependingAPIUIandcrosscut.
+
+
+### R3501 — T032 genuine API names rejected by new client
+- severity: HIGH
+- confidence: CONFIRMED
+- status: CLOSED
+- scope: T032 API/UI
+- location: frontend/src/components/StructuredAnalysis.jsx validMutagenPlacement
+- evidence: actualindependent192HTTPprobe; all24newplacedfixturebodiesvalidAnalysisBodytruebutvalidMajorResponsefalse, because APIstatementstar.displayNamecontainsbrightnesssuffix (Vũ Khúc (V),Thiên Lương (V),Tử Vi (M)) whilecanonicalsourceStarNameisunsuffixed. Current195componentcasesuseunsuffixedsyntheticnamesandmaskfailure.
+- impact: validnewprofilecannotbedisplayed; newUIshowsinvalid-responsealert.
+- reproduction: /tmp/t032/api-ui-initial-repro.mjs andapi-ui-probe.mjs/log/report. Parentvalidatedsourcecomparison; backend/sourceapprovalnotatfault.
+- fix: frontend-onlynormalizeknownpresentationbrightnesssuffixforidentitycomparison, keepcanonicalID/name/duplicate/physicalguardsstrict, no backendoutputoroldprofilecontractchanges. Addcomponentregressionwithactualobservedsuffixednamesandmalformednegativecases; avoidarbitraryaliasbroadening.
+- verification: failingregressionfirst, targetedcomponentthenfullfrontendCI/lint/build, actualHTTP→genuineclientvalidatorprobe mustacceptvalidnewprofiles plus rejectmutations; freshfullAPIUIreviewrequired, notonlythisfinding.
+
+Actualreviewpass8completedwithR3501; total8/12used. Isolatedfixernext(no reviewslot); freshAPIUIpass9andcrosscutpass10ifunitclear. No loopPASS orcompletioncommituntilverifiedandfreshreview.
+
+R3501isolatedfixerreproducedrealHTTPfailureandnewcomponentregressionbeforeedit; minimalknownbrightnesssuffixidentitynormalizationnowgreen.209focused/314fullfrontendtests89.37/90.36,lint/buildPASS;192actualHTTP/168genuineaccepted/356forgeriesrejected/zeroDBwrites. FIXED→VERIFIED,notCLOSEDuntilfreshfullAPIUIreviewpass9clear. InitialHIGHreportandred/greenlogsarchived;backend/sourceunchanged.
+
+FreshfullAPIUIpass9actualclear:209component+395HTTPsuitePASS, independent192HTTP168genuine+120syntheticsuffixvariantsaccepted/548forgeriesdenied. No newR3502allocated. ParentCLOSED R3501 afterred→fix→green→independentreview; CORE6/APIUI9unitgatesPASS. Crosscutpass10dispatchedreadonly; total9actualcompleted, notexhausted.
+
+T032finalcrosscutpass10actualclear,noR3701allocated:674HTTP/673genuinevalidatorbodies/576endpointqueries2304rows,40warmtablemutationsnew-onlyclosed/legacyexact. ParentlocalT032qualitygatePASS:zeroOPENcritical/high/medium, R3501CLOSEDafteractualindependentfreshreview. All5T032actualreviewpassescountincludingfailedinitialunit; total10/12currentinvocation,NOTexhausted. Existingpublic/source/releasegatesunchanged; PR/hosteddeliverynotclaimed.
+
+Finaldeliveryproof: feature394a0c5pushed/ls-remoteverified, main774ac6c/parent655c219unchanged. ActualghPRcreationGraphQLForbidden(exit1), notautomaticapprovalrejection. LocalqualitygatePASS/overalldeliveryINCOMPLETE, no hostedNode22/PR/merge/deployclaim.10/12actualreviewsused; remaining2cannotfinishnewLARGE4-reviewcapability. Preserveactualsourceclaims/gates/R3501CLOSEDandnextqueue; no falsebudgetexhaustion.
+
+
+## T033 same-PR bounded regression review routing
+Currentbase dd92577, samebranch, previous10actualpassesretained. T033singlecoherentMEDIUMcontractextraction+permanentHTTPclienttest, ~650added/removed5files, fulltaskreviewnotLARGEcrumbpartition. Extra performance review skipped: no changed runtimealgorithm/cache/state/render/query or newrequestpathwork, pureexistingdeclarationmove; generalreviewlightperformance required. ReserveR3801+foractualconfirmedfindings. Authorfrozenwithbyte-identical220movedlines/314componentcharacterization/new32HTTPintegration; isolatedscratchpre-fixmutantexpectedfailureprovestestcatchesR3501. FullNode22.23.2backend72scripts89.15/89.99, frontend31489.38/90.36/lint/buildexit0. Dispatchreview11readonly; no parenttaskPASSbeforeactualreport. Slot12reservedforfix/freshreviewifneeded; no sourceapproval/budgetreset/browser.
+
+T033actualfullMEDIUMreview11clear(noR3801allocated),32HTTP+209component+25declarationsbyteexact+forcedfailurecleanupverifiedindependently. ParentboundedT033unitgatePASS,nofixneeded. Same-PRcumulativecrosscutpass12dispatchedbecausereview10checkedoldinlinedclientboundaryandT033replacesitwithgenuinesharedmodule; currentfullPRT032+T033interactionsneedfinalverification. No fakeLARGEpartitionofT033/no replayofunitnits; lastslot12actual, noreset. ReserveR3901foractualcrosscutfindings; no finalcumulativePASSbeforeactualreport.
+
+Finalsame-PRcrosscut12actualclear,noR3901allocated: Node22directproductionESM674HTTP/673validators/2304rows40warmtablemutationsclosedandlegacyexact; permanent32HTTP/16syntheticrejections+browserrouting(no browser)PASS. All44manifestinputs/callerpreconditions/backendruntime/registryunchanged. ParentT033andcumulativelocalqualitygatePASS, zeroOPENconfirmedcritical/high/medium; nofixneeded. Currentinvocation12/12actualreviewcapnowexhausted, no13threview/newimplementation. SamePR60fast-forwarddeliverynext, hostedCI/API/mergeunverified.
+
+Actualsame-PRdeliveryverified: gitpushnonforceexistingPR60branch655c219→ff153ba, thenGitrefs/pull/60/head=ff153ba/newmerge-refb418b42, main774unchanged. PreserveoldsourcebranchhistoryandconsumecheckpointonPRheadbranch. Actualmetadataedit60GraphQLForbiddenexit1; title/bodyandhostedCIunverified, notbranchpushfailure/noAPIapprovalbypass. Current12/12capexhausted, stopnewimplementation; localcumulativePASS/allconfirmedblockersclosed.

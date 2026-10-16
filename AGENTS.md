@@ -78,3 +78,7 @@ For review-loop delegation, read canonical role files at
 5. `.agents/skills` is a local installation index (one folder per skill), not a second editable skill tree.
 
 Cursor also discovers `.agents/skills`. If this checkout is opened in Cursor, skills may appear twice unless other discovery roots for the same tree are removed.
+
+## Project testing policy
+
+Follow [B3 Tử Vi testing policy](docs/engineering/quality/TEST_STRATEGY.md) when selecting tests: backend unit tests first, targeted integration next; browser E2E requires a specific browser-only risk. This project policy governs test selection alongside canonical B3 review/source gates.

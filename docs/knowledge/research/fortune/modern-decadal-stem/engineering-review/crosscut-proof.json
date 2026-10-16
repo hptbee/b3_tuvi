@@ -1,0 +1,11 @@
+{
+  "manifestFilesVerified": 30,
+  "bindingActualComparatorAccepted": true,
+  "requests": 216,
+  "wholeResponseOldNewComparisons": 96,
+  "genuineValidatorAccepted": 192,
+  "askChecks": 24,
+  "dbWrites": 0,
+  "privateNameLeak": false,
+  "browserRun": false
+}

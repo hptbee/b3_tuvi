@@ -1,0 +1,952 @@
+{
+  "model": "gpt-6-astra",
+  "hostBuildId": null,
+  "available": true,
+  "reviewExecuted": true,
+  "verdict": "MATCH",
+  "formulaComparison": "MATCH",
+  "claimId": "iztro-pinned-menh-cuc-decadal-mutagen",
+  "subjectType": "fortune_placement_profile",
+  "subjectId": "iztro-pinned-menh-cuc-decadal-mutagen",
+  "profileId": "iztro-pinned-menh-cuc-decadal-mutagen",
+  "sourceProfile": "iztro-pinned-menh-cuc-decadal-mutagen",
+  "sourceId": "iztro-modern-software",
+  "editionId": "iztro-modern-2f00e2ab0c80",
+  "schoolId": "vn-tam-hop-default",
+  "sourceClass": "pinned_modern_software_and_documentation_not_classical_edition",
+  "sourceRepository": "https://github.com/SylarLong/iztro",
+  "sourcePin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "locator": "src/utils/index.ts#getTargetMutagens + src/astro/FunctionalHoroscope.ts#hasHoroscopeMutagen",
+  "sourceDigest": "93fe46cdcf03529c47c7bda24b1081922d582da204cdaf449673482162e0acdf",
+  "contextDigest": "e0e053ddf39a07a4a9395d8d1beaed0c37c4900e730a3e7816ffcf47d99c0035",
+  "fixturesDigest": "1b09a7d56fd92aff8483885d9f912e2ca82108c5195d7fba22144a6c072eb00f",
+  "algorithmDigest": "61dd9c7b4413247663289a7e4835b66b379576dd2cda3150bc60b07d7f7bebc6",
+  "compatibilityDigest": "f18a71a7aa13600b719e44401365fb34cd7bcf2988faddb0bc7841efaf59285c",
+  "conditions": [
+    "explicit_distinct_mutagen_profile",
+    "accepted_T025_T030_branch_and_stem_prerequisites",
+    "selected_decadal_stem_not_birth_or_view_year",
+    "pinned_builtin_default_40cell_table_only",
+    "canonical_order_loc_quyen_khoa_ky",
+    "15_exact_source_star_identity_classification_mappings",
+    "existing_physical_natal_star_palace_membership",
+    "unique_source_occurrence_integrity_guard_not_upstream_uniqueness_claim",
+    "four_records_retained_when_palace_shared",
+    "closed_states_no_associations_legacy_outputs_unchanged",
+    "independent_valid_chart_source_comparative_fixtures",
+    "no_rotated_roles_inserted_stars_or_outcome_prose",
+    "preserve_classical_default_source_and_public_release_gates"
+  ],
+  "conditionIds": [
+    "explicit_distinct_mutagen_profile",
+    "accepted_T025_T030_branch_and_stem_prerequisites",
+    "selected_decadal_stem_not_birth_or_view_year",
+    "pinned_builtin_default_40cell_table_only",
+    "canonical_order_loc_quyen_khoa_ky",
+    "15_exact_source_star_identity_classification_mappings",
+    "existing_physical_natal_star_palace_membership",
+    "unique_source_occurrence_integrity_guard_not_upstream_uniqueness_claim",
+    "four_records_retained_when_palace_shared",
+    "closed_states_no_associations_legacy_outputs_unchanged",
+    "independent_valid_chart_source_comparative_fixtures",
+    "no_rotated_roles_inserted_stars_or_outcome_prose",
+    "preserve_classical_default_source_and_public_release_gates"
+  ],
+  "exceptions": [
+    "custom_mutagen_overrides",
+    "upstream_full_calendar_or_natal_equivalence",
+    "scope_origin_mutagen_query",
+    "rotated_decadal_palace_functions",
+    "childhood_or_thirteenth_decadal_period",
+    "date_to_age_derivation",
+    "annual_monthly_daily_hourly_transforms",
+    "transit_star_placement",
+    "fly_transform_chains",
+    "natal_formula_or_default_change",
+    "classical_tu_hoa_han_approval",
+    "interpretation",
+    "public_predictions",
+    "production_release"
+  ],
+  "requiredAnchors": [
+    "const getTargetMutagens = (heavenlyStem: HeavenlyStemKey) => {",
+    "if (mutagens && mutagens[heavenlyStem])",
+    "result = heavenlyStems[heavenlyStem].mutagen ?? [];"
+  ],
+  "algorithmSpec": {
+    "profileId": "iztro-pinned-menh-cuc-decadal-mutagen",
+    "baseProfileId": "iztro-pinned-menh-cuc-decadal-stem",
+    "baseAlgorithmSpec": {
+      "profileId": "iztro-pinned-menh-cuc-decadal-stem",
+      "baseProfileId": "iztro-pinned-menh-cuc-decadal",
+      "baseAlgorithmSpec": {
+        "profileId": "iztro-pinned-menh-cuc-decadal",
+        "inputFields": [
+          "menhBranchId",
+          "cucNumber",
+          "birthYearBranch",
+          "gender",
+          "nominalAge"
+        ],
+        "branchOrder": [
+          "Tí",
+          "Sửu",
+          "Dần",
+          "Mão",
+          "Thìn",
+          "Tị",
+          "Ngọ",
+          "Mùi",
+          "Thân",
+          "Dậu",
+          "Tuất",
+          "Hợi"
+        ],
+        "branchIds": "one_based_1_to_12",
+        "firstPalace": "natal_menh",
+        "startingAge": "cuc_number",
+        "cucStartAges": [
+          {
+            "element": "water",
+            "number": 2
+          },
+          {
+            "element": "wood",
+            "number": 3
+          },
+          {
+            "element": "metal",
+            "number": 4
+          },
+          {
+            "element": "earth",
+            "number": 5
+          },
+          {
+            "element": "fire",
+            "number": 6
+          }
+        ],
+        "yearYangBranches": [
+          "Tí",
+          "Dần",
+          "Thìn",
+          "Ngọ",
+          "Thân",
+          "Tuất"
+        ],
+        "yearYinBranches": [
+          "Sửu",
+          "Mão",
+          "Tị",
+          "Mùi",
+          "Dậu",
+          "Hợi"
+        ],
+        "genderMapping": [
+          {
+            "gender": 1,
+            "sourceKey": "male",
+            "yinYang": "阳"
+          },
+          {
+            "gender": -1,
+            "sourceKey": "female",
+            "yinYang": "阴"
+          }
+        ],
+        "directionRule": "gender_yin_yang_equals_birth_year_branch_yin_yang_forward_else_reverse",
+        "forwardDirection": 1,
+        "reverseDirection": -1,
+        "periodCount": 12,
+        "yearsPerPeriod": 10,
+        "rangeEndOffset": 9,
+        "periodIndex": "zero_based_0_to_11",
+        "palacesPerPeriod": 1,
+        "wrap": 12,
+        "nominalAgeRange": {
+          "min": 1,
+          "max": 125,
+          "integer": true
+        },
+        "validPerChartAgeRange": "cucNumber_through_cucNumber_plus_119_inclusive",
+        "periodFormula": "floor((nominalAge - cucNumber) / 10)",
+        "outputFormula": "branchId = ((menhBranchId - 1 + direction * periodIndex) % 12 + 12) % 12 + 1",
+        "periodRangeFormula": "start = cucNumber + 10 * periodIndex; end = start + 9",
+        "sourcePalaceToProductBranchId": "((sourcePalaceIndex + 2) % 12) + 1",
+        "beforeFirstPeriod": "not_applied_no_placement",
+        "afterLastPeriod": "not_applied_no_placement",
+        "childhoodApplied": false,
+        "thirteenthPeriodApplied": false,
+        "calendarAgeDerivation": false,
+        "yearYinYangAffectsDirection": true,
+        "extendsBeyondSourceRange": false
+      },
+      "inputFields": [
+        "menhBranchId",
+        "cucNumber",
+        "birthYearBranch",
+        "gender",
+        "nominalAge",
+        "birthYearStemIndex"
+      ],
+      "stemNames": [
+        "Giáp",
+        "Ất",
+        "Bính",
+        "Đinh",
+        "Mậu",
+        "Kỷ",
+        "Canh",
+        "Tân",
+        "Nhâm",
+        "Quý"
+      ],
+      "tigerStartStemIndexes": [
+        2,
+        4,
+        6,
+        8,
+        0,
+        2,
+        4,
+        6,
+        8,
+        0
+      ],
+      "sourcePalaceIndex": "((selectedBranchId - 3) % 12 + 12) % 12",
+      "stemIndex": "(tigerStartStemIndexes[birthYearStemIndex] + sourcePalaceIndex) % 10",
+      "stemOutput": "stemNames[stemIndex]",
+      "selectedBranchSource": "unchanged_approved_modernMajorPeriod",
+      "stemYearSource": "trusted_server_natal_lunar_canIndex_and_exact_canName_with_branch_parity",
+      "oldProfileFields": "unchanged_no_heavenlyStem_or_stemPlacement",
+      "placedNewFields": {
+        "heavenlyStem": "canonical_stem",
+        "stemPlacement": "supported"
+      },
+      "closedNewFields": {
+        "heavenlyStem": null,
+        "stemPlacement": "not_applied"
+      },
+      "calendarAgeDerivation": false,
+      "interpretationReviewed": false,
+      "publicFortune": false
+    },
+    "stemNames": [
+      "Giáp",
+      "Ất",
+      "Bính",
+      "Đinh",
+      "Mậu",
+      "Kỷ",
+      "Canh",
+      "Tân",
+      "Nhâm",
+      "Quý"
+    ],
+    "mutagenIds": [
+      "hoa_loc",
+      "hoa_quyen",
+      "hoa_khoa",
+      "hoa_ky"
+    ],
+    "mutagenLabels": [
+      "Hóa Lộc",
+      "Hóa Quyền",
+      "Hóa Khoa",
+      "Hóa Kỵ"
+    ],
+    "sourceMutagenOrder": [
+      "sihuaLu",
+      "sihuaQuan",
+      "sihuaKe",
+      "sihuaJi"
+    ],
+    "defaultTable": {
+      "0": [
+        "Liêm Trinh",
+        "Phá Quân",
+        "Vũ Khúc",
+        "Thái Dương"
+      ],
+      "1": [
+        "Thiên Cơ",
+        "Thiên Lương",
+        "Tử Vi",
+        "Thái Âm"
+      ],
+      "2": [
+        "Thiên Đồng",
+        "Thiên Cơ",
+        "Văn Xương",
+        "Liêm Trinh"
+      ],
+      "3": [
+        "Thái Âm",
+        "Thiên Đồng",
+        "Thiên Cơ",
+        "Cự Môn"
+      ],
+      "4": [
+        "Tham Lang",
+        "Thái Âm",
+        "Hữu Bật",
+        "Thiên Cơ"
+      ],
+      "5": [
+        "Vũ Khúc",
+        "Tham Lang",
+        "Thiên Lương",
+        "Văn Khúc"
+      ],
+      "6": [
+        "Thái Dương",
+        "Vũ Khúc",
+        "Thái Âm",
+        "Thiên Đồng"
+      ],
+      "7": [
+        "Cự Môn",
+        "Thái Dương",
+        "Văn Khúc",
+        "Văn Xương"
+      ],
+      "8": [
+        "Thiên Lương",
+        "Tử Vi",
+        "Tả Phù",
+        "Vũ Khúc"
+      ],
+      "9": [
+        "Phá Quân",
+        "Cự Môn",
+        "Thái Âm",
+        "Tham Lang"
+      ]
+    },
+    "starMapping": [
+      {
+        "sourceStarKey": "jumenMaj",
+        "canonicalName": "Cự Môn",
+        "starId": "cu_mon",
+        "category": "chinh_tinh",
+        "list": "major"
+      },
+      {
+        "sourceStarKey": "lianzhenMaj",
+        "canonicalName": "Liêm Trinh",
+        "starId": "liem_trinh",
+        "category": "chinh_tinh",
+        "list": "major"
+      },
+      {
+        "sourceStarKey": "pojunMaj",
+        "canonicalName": "Phá Quân",
+        "starId": "pha_quan",
+        "category": "chinh_tinh",
+        "list": "major"
+      },
+      {
+        "sourceStarKey": "taiyangMaj",
+        "canonicalName": "Thái Dương",
+        "starId": "thai_duong",
+        "category": "chinh_tinh",
+        "list": "major"
+      },
+      {
+        "sourceStarKey": "taiyinMaj",
+        "canonicalName": "Thái Âm",
+        "starId": "thai_am",
+        "category": "chinh_tinh",
+        "list": "major"
+      },
+      {
+        "sourceStarKey": "tanlangMaj",
+        "canonicalName": "Tham Lang",
+        "starId": "tham_lang",
+        "category": "chinh_tinh",
+        "list": "major"
+      },
+      {
+        "sourceStarKey": "tianjiMaj",
+        "canonicalName": "Thiên Cơ",
+        "starId": "thien_co",
+        "category": "chinh_tinh",
+        "list": "major"
+      },
+      {
+        "sourceStarKey": "tianliangMaj",
+        "canonicalName": "Thiên Lương",
+        "starId": "thien_luong",
+        "category": "chinh_tinh",
+        "list": "major"
+      },
+      {
+        "sourceStarKey": "tiantongMaj",
+        "canonicalName": "Thiên Đồng",
+        "starId": "thien_dong",
+        "category": "chinh_tinh",
+        "list": "major"
+      },
+      {
+        "sourceStarKey": "wenchangMin",
+        "canonicalName": "Văn Xương",
+        "starId": "van_xuong",
+        "category": "phu_tinh",
+        "list": "good"
+      },
+      {
+        "sourceStarKey": "wenquMin",
+        "canonicalName": "Văn Khúc",
+        "starId": "van_khuc",
+        "category": "phu_tinh",
+        "list": "good"
+      },
+      {
+        "sourceStarKey": "wuquMaj",
+        "canonicalName": "Vũ Khúc",
+        "starId": "vu_khuc",
+        "category": "chinh_tinh",
+        "list": "major"
+      },
+      {
+        "sourceStarKey": "youbiMin",
+        "canonicalName": "Hữu Bật",
+        "starId": "huu_bat",
+        "category": "phu_tinh",
+        "list": "good"
+      },
+      {
+        "sourceStarKey": "ziweiMaj",
+        "canonicalName": "Tử Vi",
+        "starId": "tu_vi",
+        "category": "chinh_tinh",
+        "list": "major"
+      },
+      {
+        "sourceStarKey": "zuofuMin",
+        "canonicalName": "Tả Phù",
+        "starId": "ta_phu",
+        "category": "phu_tinh",
+        "list": "good"
+      }
+    ],
+    "selectedStemSource": "T030_accepted_selected_decadal_heavenlyStem_not_birth_or_view_year",
+    "tableSelection": "pinned_builtin_default_only_no_custom_override",
+    "sourceMembership": "natal_major_and_minor_canonical_stars_at_physical_palace",
+    "productGuard": "each_selected_source_star_exactly_one_known_consistent_id_name_category_list_palace_link_else_close_entire_new_profile",
+    "retainAllFour": true,
+    "sharedPalaceAllowed": true,
+    "rotatedDecadalFunctions": false,
+    "insertNatalStars": false,
+    "outputContract": {
+      "newProfileOnly": true,
+      "mutagenScope": "natal_physical_palaces",
+      "mutagenPlacement": "supported only all four associations coherent and evidence accepted; not_applied otherwise",
+      "mutagens": "Exactly4 ordered records on supported, [] closed",
+      "recordKeys": [
+        "mutagenId",
+        "mutagenLabel",
+        "sourceStarId",
+        "sourceStarName",
+        "palaceId",
+        "functionId",
+        "functionLabel"
+      ],
+      "mutagenIds": [
+        "hoa_loc",
+        "hoa_quyen",
+        "hoa_khoa",
+        "hoa_ky"
+      ],
+      "mutagenLabels": [
+        "Hóa Lộc",
+        "Hóa Quyền",
+        "Hóa Khoa",
+        "Hóa Kỵ"
+      ],
+      "calendarCompatibility": "server_natal_menh_cuc_stem_branch_sex_age_and_default_mutagen_projection_not_full_iztro_astrolabe",
+      "integrityFailure": "Fail closed all associations, selected stem and branch; no partial or stale association retained",
+      "legacyProfiles": "Exact unchanged shape/behavior, no new fields",
+      "publicFortune": false,
+      "interpretation": null,
+      "interpretationStatus": "blocked"
+    },
+    "runtimeTableContentMustEqualApproved": true,
+    "legacyProfilesUnchanged": true,
+    "publicFortune": false,
+    "interpretationReviewed": false
+  },
+  "compatibilitySpec": {
+    "scope": "server_natal_menh_cuc_stem_branch_sex_age_and_default_mutagen_projection_not_full_iztro_astrolabe",
+    "requestContract": {
+      "field": "majorPeriod",
+      "exactKeys": [
+        "profile",
+        "nominalAge"
+      ],
+      "profile": "iztro-pinned-menh-cuc-decadal-mutagen",
+      "nominalAge": {
+        "integer": true,
+        "min": 1,
+        "max": 125
+      }
+    },
+    "baseCompatibilitySpec": {
+      "scope": "server_natal_menh_cuc_stem_branch_sex_age_projection_not_full_iztro_astrolabe",
+      "requestContract": {
+        "field": "majorPeriod",
+        "exactKeys": [
+          "profile",
+          "nominalAge"
+        ],
+        "profile": "iztro-pinned-menh-cuc-decadal-stem",
+        "nominalAge": {
+          "integer": true,
+          "min": 1,
+          "max": 125
+        }
+      },
+      "baseCompatibilitySpec": {
+        "scope": "server_natal_menh_cuc_branch_sex_age_projection_not_full_iztro_astrolabe",
+        "receivingSchoolId": "vn-tam-hop-default",
+        "upstreamSchoolId": null,
+        "menh": "trusted_server_unique_menh_palace_and_consistent_menhPalaceId",
+        "cuc": "trusted_server_cuc_number_2_to_6_with_name_number_agreement",
+        "birthYearBranch": "trusted_server_natal_lunar_chiName_and_chiIndex_consistent",
+        "birthYearStem": "trusted_server_natal_lunar_canName_and_canIndex_consistent_and_sexagenary_parity_matches_branch",
+        "gender": "validated_product_gender_1_male_minus1_female",
+        "nominalAge": "caller_supplied_integer_1_to_125_not_date_derived",
+        "requestContract": {
+          "field": "majorPeriod",
+          "exactKeys": [
+            "profile",
+            "nominalAge"
+          ],
+          "profile": "iztro-pinned-menh-cuc-decadal",
+          "nominalAge": {
+            "integer": true,
+            "min": 1,
+            "max": 125
+          }
+        },
+        "sourceBranchAndGenderMapping": [
+          {
+            "key": "ziEarthly",
+            "chinese": "子",
+            "upstreamVi": "Tý",
+            "productVi": "Tí",
+            "productBranchId": 1,
+            "sourceBranchEnumIndex": 0,
+            "sourcePalaceIndex": 10
+          },
+          {
+            "key": "chouEarthly",
+            "chinese": "丑",
+            "upstreamVi": "Sửu",
+            "productVi": "Sửu",
+            "productBranchId": 2,
+            "sourceBranchEnumIndex": 1,
+            "sourcePalaceIndex": 11
+          },
+          {
+            "key": "yinEarthly",
+            "chinese": "寅",
+            "upstreamVi": "Dần",
+            "productVi": "Dần",
+            "productBranchId": 3,
+            "sourceBranchEnumIndex": 2,
+            "sourcePalaceIndex": 0
+          },
+          {
+            "key": "maoEarthly",
+            "chinese": "卯",
+            "upstreamVi": "Mão",
+            "productVi": "Mão",
+            "productBranchId": 4,
+            "sourceBranchEnumIndex": 3,
+            "sourcePalaceIndex": 1
+          },
+          {
+            "key": "chenEarthly",
+            "chinese": "辰",
+            "upstreamVi": "Thìn",
+            "productVi": "Thìn",
+            "productBranchId": 5,
+            "sourceBranchEnumIndex": 4,
+            "sourcePalaceIndex": 2
+          },
+          {
+            "key": "siEarthly",
+            "chinese": "巳",
+            "upstreamVi": "Tỵ",
+            "productVi": "Tị",
+            "productBranchId": 6,
+            "sourceBranchEnumIndex": 5,
+            "sourcePalaceIndex": 3
+          },
+          {
+            "key": "wuEarthly",
+            "chinese": "午",
+            "upstreamVi": "Ngọ",
+            "productVi": "Ngọ",
+            "productBranchId": 7,
+            "sourceBranchEnumIndex": 6,
+            "sourcePalaceIndex": 4
+          },
+          {
+            "key": "weiEarthly",
+            "chinese": "未",
+            "upstreamVi": "Mùi",
+            "productVi": "Mùi",
+            "productBranchId": 8,
+            "sourceBranchEnumIndex": 7,
+            "sourcePalaceIndex": 5
+          },
+          {
+            "key": "shenEarthly",
+            "chinese": "申",
+            "upstreamVi": "Thân",
+            "productVi": "Thân",
+            "productBranchId": 9,
+            "sourceBranchEnumIndex": 8,
+            "sourcePalaceIndex": 6
+          },
+          {
+            "key": "youEarthly",
+            "chinese": "酉",
+            "upstreamVi": "Dậu",
+            "productVi": "Dậu",
+            "productBranchId": 10,
+            "sourceBranchEnumIndex": 9,
+            "sourcePalaceIndex": 7
+          },
+          {
+            "key": "xuEarthly",
+            "chinese": "戌",
+            "upstreamVi": "Tuất",
+            "productVi": "Tuất",
+            "productBranchId": 11,
+            "sourceBranchEnumIndex": 10,
+            "sourcePalaceIndex": 8
+          },
+          {
+            "key": "haiEarthly",
+            "chinese": "亥",
+            "upstreamVi": "Hợi",
+            "productVi": "Hợi",
+            "productBranchId": 12,
+            "sourceBranchEnumIndex": 11,
+            "sourcePalaceIndex": 9
+          }
+        ],
+        "target": "resolve_reviewed_branch_on_unchanged_validated_12_palace_natal_chart",
+        "defaultActivated": false,
+        "calendarAgeDerivation": false,
+        "knownNatalDifference": "product_leap_month_changes_at_day15_while_upstream_fixLunarMonthIndex_requires_day_gt15_and_excludes_timeIndex12",
+        "existingNatalLabelComparison": "regression_comparison_only_not_an_approval_or_formula_oracle",
+        "classicalComparison": "Quanshu_committed_adjacent_parent_sibling_anchor_differs_and_remains_insufficient",
+        "exclusions": [
+          "upstream_calendar_equivalence",
+          "whole_upstream_natal_equivalence",
+          "upstream_yearDivide_selection",
+          "upstream_ageDivide_selection",
+          "upstream_dayDivide_selection",
+          "upstream_horoscopeDivide_selection",
+          "upstream_from_rearrangement",
+          "date_to_nominal_age",
+          "birthday_boundary",
+          "leap_month_age_semantics",
+          "classical_quanshu_approval",
+          "default_profile_change",
+          "existing_natal_label_or_formula_change",
+          "childhood_period",
+          "thirteenth_decadal_period",
+          "decadal_heavenly_stems",
+          "decadal_stars",
+          "fortune_tu_hoa",
+          "interpretation",
+          "public_predictions"
+        ]
+      },
+      "baseApprovalRequired": true,
+      "stemApprovalSeparate": true,
+      "oldProfileUnchanged": true,
+      "birthYearStem": "server_lunar_year_not_Gregorian_year_or_viewYear",
+      "from": "not_applied_no_rearranged_astrolabe_equivalence",
+      "yearDivide": "not_selected_or_certified_B3_server_lunar_year_projection_only",
+      "locale": "pinned_Vietnamese_ten_stem_labels_equal_B3_THIEN_CAN_no_aliases",
+      "closed": "no_stem_unless_both_bindings_valid_trusted_metadata_and_branch_mapped",
+      "defaultActivated": false,
+      "publicRelease": false
+    },
+    "branchAndStemApprovalsRequired": true,
+    "mutagenApprovalSeparate": true,
+    "sourceMajorToB3": "11_named_principal_targets_list_major_category_chinh_tinh",
+    "sourceMinorToB3": "4_named_auxiliary_targets_list_good_category_phu_tinh",
+    "mapping": "existing_trusted_B3_natal_physical_palaces_not_upstream_complete_chart_or_decadal_rotated_roles",
+    "tableReuse": "unchanged_B3_tuHoaMap_content_must_equal_approved_40cells_no_natal_approval_promotion",
+    "customConfiguration": false,
+    "legacyProfilesUnchanged": true,
+    "sourceIdentityUnchanged": true,
+    "publicRelease": false
+  },
+  "quotation": "const getTargetMutagens = (heavenlyStem: HeavenlyStemKey) => {\n  const { mutagens } = getConfig();\n  let result;\n\n  if (mutagens && mutagens[heavenlyStem]) {\n    result = mutagens[heavenlyStem] ?? [];\n  } else {\n    result = heavenlyStems[heavenlyStem].mutagen ?? [];\n  }\n\n  return result;\n};",
+  "conditionAnalysis": {
+    "explicit_distinct_mutagen_profile": "The reviewed claim is the explicit iztro-pinned-menh-cuc-decadal-mutagen profile. A caller selecting either earlier profile has not requested transformations, and the old response shapes must remain unchanged.",
+    "accepted_T025_T030_branch_and_stem_prerequisites": "I rechecked the nested branch and stem formulas against getHoroscope, HEAVENLY_STEMS and TIGER_RULE. Twelve periods begin at natal Mệnh and Cục; parity with sex sets direction; Dần-relative physical index sets the palace stem. T025/T030 accepted bindings remain required but cannot approve this additional transformation operation.",
+    "selected_decadal_stem_not_birth_or_view_year": "Both the complete private horoscope selector and decadalList use the actual decadal.heavenlyStem for getMutagensByHeavenlyStem. Birth stem supplies TIGER_RULE upstream of that selection; it is not the final transformation selector. Annual/view-year substitution changes fixture results.",
+    "pinned_builtin_default_40cell_table_only": "All ten literal rows agree with the pinned source. getTargetMutagens prefers any truthy configured row, including an empty array; resolveConfig does not require four entries. getConfig uses active or global state and bindContext captures creation-time state. Only the fixed builtin table is reviewed; a later reset cannot justify default equivalence of an older configured object. Runtime reuse of the B3 table requires complete strict equality to the immutable reviewed forty-cell snapshot.",
+    "canonical_order_loc_quyen_khoa_ky": "MUTAGEN indexes Lộc, Quyền, Khoa, Kỵ in that order. Hóa prefixes and hoa_* identifiers are declared B3 presentation mappings. No sorting or category rotation is permitted.",
+    "15_exact_source_star_identity_classification_mappings": "The fifteen exact source keys and Vietnamese names agree with the canonical map: eleven principal targets and Văn Xương, Văn Khúc, Tả Phù, Hữu Bật as auxiliaries. Their B3 IDs/list mappings are adapter identities. Mậu Khoa specifically targets Hữu Bật, Nhâm Khoa Tả Phù. Do not generalize the map to arbitrary localized aliases or natal Hóa instances.",
+    "existing_physical_natal_star_palace_membership": "hasHoroscopeMutagen resolves a scope palace role to an index and then reads astrolabe natal majorStars and minorStars at that physical index. It does not read decadal.stars. Inverting this membership over existing trusted B3 physical natal star locations matches the explicitly limited projection. Stored functionId/functionLabel are natal palace metadata, not rotated decade roles.",
+    "unique_source_occurrence_integrity_guard_not_upstream_uniqueness_claim": "Exactly one coherent occurrence is a declared product integrity prerequisite. The source boolean membership function establishes no global uniqueness theorem. Missing, duplicate, forged or contradictory target metadata must close the entire new result rather than pick a first match; these are synthetic guard requirements, not observed negative birth charts.",
+    "four_records_retained_when_palace_shared": "Four category-indexed records remain four records when locations coincide. Replay and separate arithmetic confirm 101 shared-palace periods; a set of palace IDs would lose information.",
+    "closed_states_no_associations_legacy_outputs_unchanged": "Before first or after twelfth period, failed evidence, inconsistent trusted layout/stem/branch, or failed target integrity yields no associations. Under the candidate output contract integrity failure also clears selected stem and branch. No childhood fallback or thirteenth period is imported from surrounding upstream behavior.",
+    "independent_valid_chart_source_comparative_fixtures": "I executed the portable generator and obtained byte-identical fixtures, then separately checked every period with Python arithmetic and a literal source-table transcription. Coverage reaches all forty cells and all fifteen targets. Physical B3 positions remain regression observations, not independent proof of the natal placement formulas. Proposed malformed-input guards still require implementation verification.",
+    "no_rotated_roles_inserted_stars_or_outcome_prose": "The candidate emits physical associations only. Upstream getPalaceNames rotation, getHoroscopeStar transit objects, fliesTo/mutagedPlaces chains, and other temporal scopes are outside this claim. No outcome prose or auspicious/adverse scoring follows from this source comparison.",
+    "preserve_classical_default_source_and_public_release_gates": "This is pinned modern software evidence under the receiving school compatibility identifier; it does not authenticate a classical book or activate generic classical tu_hoa_han. Default, natal formula, interpretation, public and production release gates remain closed."
+  },
+  "reasoning": "MATCH is a comparison of this complete candidate specification to the narrow pinned software projection, not a statement that T032 runtime is already implemented. The selection, default table, category order and physical membership operation agree. The candidate explicitly declares its stronger integrity guards and its B3 natal metadata boundary, so it does not falsely claim full iztro chart equivalence. No additional source-semantic prerequisite beyond the thirteen stated conditions was identified.",
+  "pinVerification": {
+    "method": "local git show at exact commit; no HTTP attempted; no upstream execution",
+    "repositoryPath": "/tmp/tuvi-iztro-pinned",
+    "sourcePin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+    "commitAndTree": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb 3095b2e908923aea98072d1eb965a95028ebf995",
+    "configuredRemote": "https://github.com/SylarLong/iztro.git",
+    "httpAttempted": false,
+    "httpStatus": null,
+    "upstreamCodeExecuted": false,
+    "manifestFilesVerified": 44,
+    "rawPayloadsVerified": 29,
+    "allRawBytesAndSha256MatchPinnedGit": true,
+    "rawFiles": [
+      {
+        "path": "LICENSE",
+        "bytes": 1073,
+        "sha256": "e6c7b6e313cbda3135b41bccc66c98be132cb8319d0d465903d17e669e748b36",
+        "gitBlob": "af1e0c83c0a8095bd9faa83265ba67a441422657"
+      },
+      {
+        "path": "package.json",
+        "bytes": 2732,
+        "sha256": "2b7d04100c48599e4fe02f5ec1521f5ca45b41914adf5a5472e86abc6dfa1ee6",
+        "gitBlob": "148bb95862f9fe623f828b872b62f3ba578c114f"
+      },
+      {
+        "path": "src/astro/FunctionalAstrolabe.ts",
+        "bytes": 19616,
+        "sha256": "584fd8d2d3ac76b3b8d7990ec6d26cac42eb5f1fcac9175326f29497d60d2d9c",
+        "gitBlob": "b00ceb08fed1f8e3288fed3c6d785f8eb8816937"
+      },
+      {
+        "path": "src/astro/FunctionalHoroscope.ts",
+        "bytes": 7251,
+        "sha256": "b62ce85093f40f3ba2faead2da31b0e36b705ff37147ed3d58b104a0e5eba56a",
+        "gitBlob": "7f0094603853e853100e751da1de8ee198586f51"
+      },
+      {
+        "path": "src/astro/FunctionalPalace.ts",
+        "bytes": 9333,
+        "sha256": "8e3c7fb122f168a91a08ea7285dbf9500d6a4136fb4a8ed98b68e57d3811ff7b",
+        "gitBlob": "6c40d1bafd0c0dc5cce2946267c111cb6ef6f700"
+      },
+      {
+        "path": "src/astro/analyzer.ts",
+        "bytes": 10544,
+        "sha256": "202d19282f71e557bdbb6132c357fc56def1ca7d9bcb04d3b04e8f6c9f820acb",
+        "gitBlob": "5b040a24a667ae910011190e51c90dfdc2359867"
+      },
+      {
+        "path": "src/astro/astro.ts",
+        "bytes": 19029,
+        "sha256": "84e1fd5121bc6c5e7fb17ef3d8aadd0f8473ff8f2704c17c1af96e77388d49f8",
+        "gitBlob": "4111d5f58804e22de3664e0b008cbfb36bb2389e"
+      },
+      {
+        "path": "src/astro/config.ts",
+        "bytes": 3825,
+        "sha256": "e74d2bf23630f8faadfae9fd2d29c592ceb7a18d7396c0aba5d74959ea5d134e",
+        "gitBlob": "14ce2e513ac697d871e205f0f1f5e97c6d0b2c73"
+      },
+      {
+        "path": "src/astro/context.ts",
+        "bytes": 2200,
+        "sha256": "e76bdb18f2ffa4a77d6c7364a5edb2838b5542f6b4e65fbc8be66e30dcedefdc",
+        "gitBlob": "322324fefb6ef9d883253d2107ac8d0ca227994c"
+      },
+      {
+        "path": "src/astro/palace.ts",
+        "bytes": 7799,
+        "sha256": "a9c6d8444d5edcd241068f5bd83fed3aa38a57b206cebb221f86b8d4057b5273",
+        "gitBlob": "5a6912b9aaae65d24af32c8137c46442dd8cf4b4"
+      },
+      {
+        "path": "src/data/constants.ts",
+        "bytes": 3871,
+        "sha256": "e2411f73c7ea438b5186f2a3ef29fa54587ab78e25620b5a52b409ce9244043a",
+        "gitBlob": "5fd18072bb84a7ff8998ca739fd62269a9aa1ce1"
+      },
+      {
+        "path": "src/data/heavenlyStems.ts",
+        "bytes": 2351,
+        "sha256": "f50a96b4fda42f834b2ff7aea36533a38bd5bcee94b74d5ecc1deb22ee07279c",
+        "gitBlob": "6c5016e2f5e026a7c8abf5a6595bbe3270d1e34d"
+      },
+      {
+        "path": "src/data/index.ts",
+        "bytes": 122,
+        "sha256": "e45e0875d60c2aede27dad389f11d3cdda7e31d1694e5f53ff32cd025288f2a2",
+        "gitBlob": "b45b10d98ce601e069721e51aaf777e6082c8868"
+      },
+      {
+        "path": "src/data/stars.ts",
+        "bytes": 3460,
+        "sha256": "b616ea6bf47086ef01ac897eb4f9122ec30d44716ed5debc373db361066e8c76",
+        "gitBlob": "25514c3426e1ac3966d422649de16d901f311867"
+      },
+      {
+        "path": "src/i18n/index.ts",
+        "bytes": 2943,
+        "sha256": "06da411d37e4e5f3dc7d922f3dbce0f9fcb2fe1125619873e6a651eabc63d558",
+        "gitBlob": "2243e4011b72296aed066f7e12acde8bdb2f496d"
+      },
+      {
+        "path": "src/i18n/starAliases.ts",
+        "bytes": 744,
+        "sha256": "5db704982d754e9e9487c80dfc171b51584cb89014b68171f7c6b87171a49b14",
+        "gitBlob": "7d1e15be645bf723e7b6c4d39727fe0b57629a04"
+      },
+      {
+        "path": "src/utils/index.ts",
+        "bytes": 7614,
+        "sha256": "9f3699115c9c149dc261f9a293e6c7ad40ac4f744884dba21b367b96d9bbfe16",
+        "gitBlob": "9d4d230fff5427ebef3014f45a0ce69356e8c936"
+      },
+      {
+        "path": "src/data/types/astro.ts",
+        "bytes": 7671,
+        "sha256": "b24c25fa535e6b89fbe9b0e93deebe3851dd943cdd3baa290747b863506e3b85",
+        "gitBlob": "d120c6d4527a00b2a35547ef235fa1a5a13b5cb1"
+      },
+      {
+        "path": "src/data/types/general.ts",
+        "bytes": 730,
+        "sha256": "db3015c93d9fc16fea8de2878a4402f5303e2c46f5b87ae6fdbf43ab64289191",
+        "gitBlob": "73c197168bb7cc8e83935741d27e91be9ca148e2"
+      },
+      {
+        "path": "src/data/types/star.ts",
+        "bytes": 735,
+        "sha256": "af91fd781367447d745b326badefd5556148f79b5a904ea9be506e6950d2fecd",
+        "gitBlob": "a242bbddc2ce71423363625d5d39a1ac2fbd35f7"
+      },
+      {
+        "path": "src/i18n/types/HeavenlyStem.ts",
+        "bytes": 1086,
+        "sha256": "3ed84c7e10b8b98a6fe4fd82ec4d3922a10842270f7c41a20f2c399f49c2cb9b",
+        "gitBlob": "595f26faa0ba481b68ffcd04cec916b3536aab25"
+      },
+      {
+        "path": "src/i18n/types/Star.ts",
+        "bytes": 815,
+        "sha256": "96e900aa0c04e620296db2ec0fee805118b2d4b0586cbde206ab186bbf08a3a7",
+        "gitBlob": "473aa934de9cb8ab42ed45077fa7ab72d5a1772b"
+      },
+      {
+        "path": "src/i18n/types/mutagen.ts",
+        "bytes": 872,
+        "sha256": "a690c9e01e6083bf5542c71e2d7d6a361851caacee957e97f7d5c1cac8949491",
+        "gitBlob": "268d2440e3ea024a07673942cbe313bfe752fca3"
+      },
+      {
+        "path": "src/i18n/locales/vi-VN/heavenlyStem.ts",
+        "bytes": 264,
+        "sha256": "4b0805baf3aa2555e4db3c804e6947f179e5905b1e73c9c261cbd35e38d6b2ea",
+        "gitBlob": "b4841e7c96f3459164c814691737823bfe48b785"
+      },
+      {
+        "path": "src/i18n/locales/vi-VN/index.ts",
+        "bytes": 503,
+        "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007",
+        "gitBlob": "61981406edb70a3e2afc5a348d34e4bd32caf170"
+      },
+      {
+        "path": "src/i18n/locales/vi-VN/mutagen.ts",
+        "bytes": 111,
+        "sha256": "405a4efae2bfd2cb3cdbc73934b37625ec8f90c16c8ed28353c16fb902775643",
+        "gitBlob": "ca5d4caefa662ab338dea57fb8494f08ccab2d53"
+      },
+      {
+        "path": "src/i18n/locales/vi-VN/star.ts",
+        "bytes": 4232,
+        "sha256": "5733ac862f38dc80af54e84321af04794381c976cd2946eeea12a92fe74cfb04",
+        "gitBlob": "9a7ad475c438aad5fa84f31b5c618d8e655fc8ae"
+      },
+      {
+        "path": "src/i18n/locales/zh-CN/star.ts",
+        "bytes": 3357,
+        "sha256": "cb82069097bf3a0d2d358ef49bb6c2c9e9e12e36e73b334c56c88fcad9454814",
+        "gitBlob": "b4003585c0470f4c72687040fb02ebaed0d1d90e"
+      },
+      {
+        "path": "src/i18n/locales/zh-TW/star.ts",
+        "bytes": 3357,
+        "sha256": "319a90e1752e45cf7da911d41e7ccf35b9defb8cec0e39294ef9f4a86b10f062",
+        "gitBlob": "3f9597cd1194084e8d0975b641550bd68942176e"
+      }
+    ],
+    "allFiveDigestsVerified": {
+      "sourceDigest": "93fe46cdcf03529c47c7bda24b1081922d582da204cdaf449673482162e0acdf",
+      "contextDigest": "e0e053ddf39a07a4a9395d8d1beaed0c37c4900e730a3e7816ffcf47d99c0035",
+      "fixturesDigest": "1b09a7d56fd92aff8483885d9f912e2ca82108c5195d7fba22144a6c072eb00f",
+      "algorithmDigest": "61dd9c7b4413247663289a7e4835b66b379576dd2cda3150bc60b07d7f7bebc6",
+      "compatibilityDigest": "f18a71a7aa13600b719e44401365fb34cd7bcf2988faddb0bc7841efaf59285c"
+    },
+    "sourceSpanSectionsVerified": 12,
+    "proofFile": "/tmp/t032/reviewer-b/verification.json",
+    "identity": "Pinned Git package.json names iztro 2.6.2 and MIT license. Local Git object and configured origin verification is reproducible software identity, not remote authorship attestation or historical authentication."
+  },
+  "fixtureVerification": {
+    "replayByteIdentical": true,
+    "fixturesSha256": "1b09a7d56fd92aff8483885d9f912e2ca82108c5195d7fba22144a6c072eb00f",
+    "charts": 24,
+    "periods": 288,
+    "records": 1152,
+    "shared": 101,
+    "cells": 40,
+    "stars": 15,
+    "wrongAlgorithmCounts": {
+      "birthStem": 260,
+      "viewYearStem": 258,
+      "nextStem": 288,
+      "categoryRotation": 288,
+      "b3NatalAssociationReuse": 260
+    },
+    "arithmetic": "independent Python direction, branch and 2*(birthStem%5+1)+Dần-relative branch modulo ten; literal source row transcription",
+    "limits": "positions and IDs are observed existing B3 natal metadata, not independent natal formula truth; malformed negatives are proposed engineering guards",
+    "command": "node /tmp/t032/proposal/independent-replay.mjs /workspace/b3_tuvi /tmp/t032-astra-replay",
+    "exitCode": 0,
+    "replayOutput": "/tmp/t032-astra-replay/fixtures.json",
+    "independentArithmeticScript": "/tmp/t032/reviewer-b/verify.py",
+    "actualAnalyzeRequests": 288,
+    "actualLocalHttpRequests": 24,
+    "actualLocalHttpStatus": 200,
+    "localHttpNoStore": true,
+    "browserUsed": false,
+    "newFeatureRuntimeExecuted": false
+  },
+  "limitations": [
+    "No upstream TypeScript or third-party library code was executed. Source behavior was reviewed statically; the replay executes existing B3 natal and T030 code only.",
+    "The candidate is not yet implemented. Source MATCH does not certify implementation, malformed-input handling, regression preservation or production readiness.",
+    "No independent natal-placement golden, full calendar/age/from equivalence, alternate override table, historical book authentication or expert verification is established.",
+    "No other reviewer response or prior judgment was used. Prerequisite evidence files were hashed, and the embedded combined base specification was independently evaluated; prior acceptance is not the basis for this verdict.",
+    "Additional pinned earthlyBranches.ts was directly read to check branch yin/yang direction; its medical/outcome text is outside this review."
+  ],
+  "interpretationReviewed": false,
+  "expertVerified": false,
+  "bookVerified": false,
+  "publicRelease": false,
+  "runtimeRuleChangeApplied": false,
+  "releasePermission": "withheld"
+}

@@ -1,0 +1,32 @@
+export const getHoroscope = (param: AstrolabeParam): { decadals: Decadal[]; ages: number[][] } => {
+  const { solarDate, timeIndex, gender, from } = param;
+  const decadals: Decadal[] = [];
+  const genderKey = kot<GenderKey>(gender!);
+  const { yearly } = getHeavenlyStemAndEarthlyBranchBySolarDate(solarDate, timeIndex, {
+    // 起大限应该与配置同步
+    year: getConfig().yearDivide,
+  });
+  const heavenlyStem = kot<HeavenlyStemKey>(yearly[0], 'Heavenly');
+  const earthlyBranch = kot<EarthlyBranchKey>(yearly[1], 'Earthly');
+  const { soulIndex, heavenlyStemOfSoul, earthlyBranchOfSoul } = getSoulAndBody(param);
+  const fiveElementsClass = kot<FiveElementsClassKey>(
+    getFiveElementsClass(from?.heavenlyStem ?? heavenlyStemOfSoul, from?.earthlyBranch ?? earthlyBranchOfSoul),
+  );
+
+  // 用五虎遁获取大限起始天干
+  const startHeavenlyStem = TIGER_RULE[heavenlyStem];
+
+  for (let i = 0; i < 12; i++) {
+    const idx =
+      GENDER[genderKey] === earthlyBranches[earthlyBranch].yinYang ? fixIndex(soulIndex + i) : fixIndex(soulIndex - i);
+    const start = FiveElementsClass[fiveElementsClass] + 10 * i;
+    const heavenlyStemIndex = fixIndex(HEAVENLY_STEMS.indexOf(startHeavenlyStem) + idx, 10);
+    const earthlyBranchIndex = fixIndex(EARTHLY_BRANCHES.indexOf('yinEarthly') + idx);
+
+    decadals[idx] = {
+      range: [start, start + 9],
+      heavenlyStem: t(HEAVENLY_STEMS[heavenlyStemIndex]),
+      earthlyBranch: t(EARTHLY_BRANCHES[earthlyBranchIndex]),
+    };
+  }
+

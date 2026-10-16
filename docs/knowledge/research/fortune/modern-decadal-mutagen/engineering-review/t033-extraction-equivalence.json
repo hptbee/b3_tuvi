@@ -1,0 +1,6 @@
+{
+  "base": "dd92577",
+  "result": "byte-identical extracted declarations and validators",
+  "movedLines": 220,
+  "productionBehaviorChanges": false
+}

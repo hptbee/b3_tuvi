@@ -9,11 +9,22 @@ Bảng hoặc quan hệ có thể đối chiếu với quy ước đã ghi trong
 - `placement.tables.test.mjs`
 - `palaceRelation.test.mjs`
 
+## Source-comparative fixture
+
+- `modernMajorMutagen.test.mjs`: 24 independently validated reachable charts/288 source-comparative periods/1,152 associations, all 40 pinned default table cells/15 canonical targets and 101 shared-palace periods; source stem/table expectations are independent, B3 identity/physical metadata are engineering observations. Missing/duplicate/conflicting selected-star cases are explicitly synthetic; no natal formula or expert verification.
+
+- `modernMajorStem.test.mjs`: independent pinned-source arithmetic for 24 valid natal charts, 288 periods, 654 age queries and 120 finite stem/branch mappings. Missing/conflicting metadata mutations are synthetic structural cases; pre-change response snapshots are engineering regressions. None is an expert-verified chart or a real-world prediction.
+
 ## Expert-verified golden case
 
 Không có file expert-verified golden. Chưa có lá số nào được một chuyên gia ký và khóa kết quả từng cung.
 
 ## Regression fixture
+
+- `structuredAnalysisContract.integration.test.mjs`: real HTTP responses pass the same production client validators used by React, with representative frozen source-comparative witnesses covering all 40 cells/15 targets and shared palaces. B3 physical metadata, brightness suffixes (R3501), legacy/closed/combined acceptance and privacy are engineering regressions; forged response mutations are synthetic, not expert-verified charts or new formula approval.
+
+- `modernMajorMutagenBinding.test.mjs`: separate immutable actual dual-model decision, exact table/source/manifest checks, coherent forgery rejection, branch/stem prerequisites, cached reader failures and legacy profile isolation; synthetic tampering never grants source or public approval.
+- `modernMajorMutagenApi.test.mjs`: real HTTP replay of all independent periods, ordered physical natal associations, strict two-key opt-in and override rejection, combined overlays, unchanged legacy fields, ask/no-store/privacy and no persistence.
 
 Giữ hành vi đã có của engine, API, hoặc chuẩn hóa. Kết quả kỳ vọng là hành vi hiện tại của repo, không phải bản đã thẩm định sách.
 
@@ -23,6 +34,8 @@ Giữ hành vi đã có của engine, API, hoặc chuẩn hóa. Kết quả kỳ
 - `interpretationBinding.test.mjs`: existing interpretation evidence binding and unreviewed-clone regressions; no new source approval or expert verification.
 - `modernMajorBinding.test.mjs`: separately approved immutable modern Đại hạn evidence, actual distinct-model decision replay and tamper withholding; not inherited minor approval or historical authentication.
 - `modernMajor.test.mjs`: independent real natal witnesses and finite decade boundaries, strict server metadata and adapter negatives; engineering/source-comparative fixtures, not life-outcome goldens.
+- `modernMajorStemBinding.test.mjs`: separately approved can–chi profile, immutable actual reviews and frozen artifacts, coherent forgery rejection, old-gate prerequisite and cached fixed-loader failures; no historical authentication.
+- `modernMajorStemApi.test.mjs`: actual HTTP replay of every independent source-comparative period, two-key opt-in, combined overlays, unchanged old/omitted fields, ask/no-store/privacy and no personal persistence.
 - `modernMajorApi.test.mjs`: actual HTTP explicit-age modern Đại hạn, combined optional profiles, ask/error/privacy/no-store and no persistence; structural placement only.
 - `modernMinorBinding.test.mjs`: exact pinned modern-software profile evidence, distinct actual model replay and tamper withholding; no historical authentication or interpretation approval.
 - `modernMinor.test.mjs`: 120 source-comparative endpoints, 2880 independent finite age allocations, reachable natal layouts and strict option/chart boundaries; engineering mathematical witnesses, not historical goldens.

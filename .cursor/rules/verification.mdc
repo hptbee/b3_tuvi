@@ -6,3 +6,5 @@ alwaysApply: true
 Follow the portable verification rule:
 
 @rules/verification.md
+
+For this product, select test levels using @docs/engineering/quality/TEST_STRATEGY.md.
