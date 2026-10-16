@@ -1,0 +1,576 @@
+[
+  {
+    "id": "T035/negative_mao_neither_-1",
+    "input": {
+      "day": 1,
+      "month": 1,
+      "year": 1984,
+      "hour": 0,
+      "gender": -1
+    },
+    "lunar": {
+      "lunarDay": 29,
+      "lunarMonth": 11,
+      "lunarYear": 1983,
+      "isLeapMonth": false,
+      "canName": "Quý",
+      "chiName": "Hợi",
+      "canIndex": 9,
+      "chiIndex": 12
+    },
+    "host": {
+      "id": "4",
+      "functionId": "dien_trach",
+      "branchName": "Mão",
+      "stars": [
+        "Thái Dương",
+        "Thiên Lương",
+        "Quan Phù",
+        "Thiên Khôi",
+        "Long Trì",
+        "Văn Tinh",
+        "Tiểu Hao"
+      ]
+    },
+    "expected": false,
+    "namedAdverses": [],
+    "otherPairHosts": [],
+    "classification": "valid solar API input; natal placements are repository engineering observations, not independently authenticated historical or expert chart golden"
+  },
+  {
+    "id": "T035/negative_mao_neither_1",
+    "input": {
+      "day": 1,
+      "month": 1,
+      "year": 1984,
+      "hour": 0,
+      "gender": 1
+    },
+    "lunar": {
+      "lunarDay": 29,
+      "lunarMonth": 11,
+      "lunarYear": 1983,
+      "isLeapMonth": false,
+      "canName": "Quý",
+      "chiName": "Hợi",
+      "canIndex": 9,
+      "chiIndex": 12
+    },
+    "host": {
+      "id": "4",
+      "functionId": "dien_trach",
+      "branchName": "Mão",
+      "stars": [
+        "Thái Dương",
+        "Thiên Lương",
+        "Quan Phù",
+        "Thiên Khôi",
+        "Long Trì",
+        "Văn Tinh",
+        "Đại Hao"
+      ]
+    },
+    "expected": false,
+    "namedAdverses": [],
+    "otherPairHosts": [],
+    "classification": "valid solar API input; natal placements are repository engineering observations, not independently authenticated historical or expert chart golden"
+  },
+  {
+    "id": "T035/negative_missing_cu_-1",
+    "input": {
+      "day": 1,
+      "month": 1,
+      "year": 1984,
+      "hour": 2,
+      "gender": -1
+    },
+    "lunar": {
+      "lunarDay": 29,
+      "lunarMonth": 11,
+      "lunarYear": 1983,
+      "isLeapMonth": false,
+      "canName": "Quý",
+      "chiName": "Hợi",
+      "canIndex": 9,
+      "chiIndex": 12
+    },
+    "host": {
+      "id": "3",
+      "functionId": "dien_trach",
+      "branchName": "Dần",
+      "stars": [
+        "Thiên Cơ",
+        "Thái Âm",
+        "Thanh Long",
+        "Thiếu Âm",
+        "Tả Phù",
+        "Thiên Quý",
+        "Hóa Khoa",
+        "Cô Thần",
+        "Đẩu Quân",
+        "Lưu Hà"
+      ]
+    },
+    "expected": false,
+    "namedAdverses": [],
+    "otherPairHosts": [],
+    "classification": "valid solar API input; natal placements are repository engineering observations, not independently authenticated historical or expert chart golden"
+  },
+  {
+    "id": "T035/negative_missing_cu_1",
+    "input": {
+      "day": 1,
+      "month": 1,
+      "year": 1984,
+      "hour": 2,
+      "gender": 1
+    },
+    "lunar": {
+      "lunarDay": 29,
+      "lunarMonth": 11,
+      "lunarYear": 1983,
+      "isLeapMonth": false,
+      "canName": "Quý",
+      "chiName": "Hợi",
+      "canIndex": 9,
+      "chiIndex": 12
+    },
+    "host": {
+      "id": "3",
+      "functionId": "dien_trach",
+      "branchName": "Dần",
+      "stars": [
+        "Thiên Cơ",
+        "Thái Âm",
+        "Thiếu Âm",
+        "Tả Phù",
+        "Thiên Quý",
+        "Hóa Khoa",
+        "Phục Binh",
+        "Cô Thần",
+        "Đẩu Quân",
+        "Lưu Hà"
+      ]
+    },
+    "expected": false,
+    "namedAdverses": [],
+    "otherPairHosts": [],
+    "classification": "valid solar API input; natal placements are repository engineering observations, not independently authenticated historical or expert chart golden"
+  },
+  {
+    "id": "T035/negative_pair_mao_wrong_function_-1",
+    "input": {
+      "day": 8,
+      "month": 1,
+      "year": 1984,
+      "hour": 4,
+      "gender": -1
+    },
+    "lunar": {
+      "lunarDay": 6,
+      "lunarMonth": 12,
+      "lunarYear": 1983,
+      "isLeapMonth": false,
+      "canName": "Quý",
+      "chiName": "Hợi",
+      "canIndex": 9,
+      "chiIndex": 12
+    },
+    "host": {
+      "id": "3",
+      "functionId": "dien_trach",
+      "branchName": "Dần",
+      "stars": [
+        "Tham Lang",
+        "Thanh Long",
+        "Thiếu Âm",
+        "Thiên Quý",
+        "Thiên Thọ",
+        "Cô Thần",
+        "Đẩu Quân",
+        "Lưu Hà",
+        "Hóa Kỵ"
+      ]
+    },
+    "expected": false,
+    "namedAdverses": [],
+    "otherPairHosts": [
+      {
+        "functionId": "quan_loc",
+        "branchName": "Mão"
+      }
+    ],
+    "classification": "valid solar API input; natal placements are repository engineering observations, not independently authenticated historical or expert chart golden"
+  },
+  {
+    "id": "T035/negative_pair_mao_wrong_function_1",
+    "input": {
+      "day": 8,
+      "month": 1,
+      "year": 1984,
+      "hour": 4,
+      "gender": 1
+    },
+    "lunar": {
+      "lunarDay": 6,
+      "lunarMonth": 12,
+      "lunarYear": 1983,
+      "isLeapMonth": false,
+      "canName": "Quý",
+      "chiName": "Hợi",
+      "canIndex": 9,
+      "chiIndex": 12
+    },
+    "host": {
+      "id": "3",
+      "functionId": "dien_trach",
+      "branchName": "Dần",
+      "stars": [
+        "Tham Lang",
+        "Thiếu Âm",
+        "Thiên Quý",
+        "Thiên Thọ",
+        "Phục Binh",
+        "Cô Thần",
+        "Đẩu Quân",
+        "Lưu Hà",
+        "Hóa Kỵ"
+      ]
+    },
+    "expected": false,
+    "namedAdverses": [],
+    "otherPairHosts": [
+      {
+        "functionId": "quan_loc",
+        "branchName": "Mão"
+      }
+    ],
+    "classification": "valid solar API input; natal placements are repository engineering observations, not independently authenticated historical or expert chart golden"
+  },
+  {
+    "id": "T035/negative_missing_co_-1",
+    "input": {
+      "day": 15,
+      "month": 1,
+      "year": 1984,
+      "hour": 10,
+      "gender": -1
+    },
+    "lunar": {
+      "lunarDay": 13,
+      "lunarMonth": 12,
+      "lunarYear": 1983,
+      "isLeapMonth": false,
+      "canName": "Quý",
+      "chiName": "Hợi",
+      "canIndex": 9,
+      "chiIndex": 12
+    },
+    "host": {
+      "id": "12",
+      "functionId": "dien_trach",
+      "branchName": "Hợi",
+      "stars": [
+        "Cự Môn",
+        "Hữu Bật",
+        "Phượng Các",
+        "Giải Thần",
+        "Thai Phụ",
+        "Bát Tọa",
+        "Hóa Quyền",
+        "Đà La",
+        "Quan Phủ",
+        "Thái Tuế"
+      ]
+    },
+    "expected": false,
+    "namedAdverses": [
+      "Đà La"
+    ],
+    "otherPairHosts": [],
+    "classification": "valid solar API input; natal placements are repository engineering observations, not independently authenticated historical or expert chart golden"
+  },
+  {
+    "id": "T035/negative_missing_co_1",
+    "input": {
+      "day": 15,
+      "month": 1,
+      "year": 1984,
+      "hour": 10,
+      "gender": 1
+    },
+    "lunar": {
+      "lunarDay": 13,
+      "lunarMonth": 12,
+      "lunarYear": 1983,
+      "isLeapMonth": false,
+      "canName": "Quý",
+      "chiName": "Hợi",
+      "canIndex": 9,
+      "chiIndex": 12
+    },
+    "host": {
+      "id": "12",
+      "functionId": "dien_trach",
+      "branchName": "Hợi",
+      "stars": [
+        "Cự Môn",
+        "Lực Sĩ",
+        "Hữu Bật",
+        "Phượng Các",
+        "Giải Thần",
+        "Thai Phụ",
+        "Bát Tọa",
+        "Hóa Quyền",
+        "Đà La",
+        "Thái Tuế"
+      ]
+    },
+    "expected": false,
+    "namedAdverses": [
+      "Đà La"
+    ],
+    "otherPairHosts": [],
+    "classification": "valid solar API input; natal placements are repository engineering observations, not independently authenticated historical or expert chart golden"
+  },
+  {
+    "id": "T035/positive_mao_named_adverse_-1",
+    "input": {
+      "day": 8,
+      "month": 2,
+      "year": 1984,
+      "hour": 4,
+      "gender": -1
+    },
+    "lunar": {
+      "lunarDay": 7,
+      "lunarMonth": 1,
+      "lunarYear": 1984,
+      "isLeapMonth": false,
+      "canName": "Giáp",
+      "chiName": "Tí",
+      "canIndex": 0,
+      "chiIndex": 1
+    },
+    "host": {
+      "id": "4",
+      "functionId": "dien_trach",
+      "branchName": "Mão",
+      "stars": [
+        "Thiên Cơ",
+        "Cự Môn",
+        "Thiếu Âm",
+        "Hồng Loan",
+        "Kình Dương",
+        "Quan Phủ"
+      ]
+    },
+    "expected": true,
+    "namedAdverses": [
+      "Kình Dương"
+    ],
+    "otherPairHosts": [],
+    "classification": "valid solar API input; natal placements are repository engineering observations, not independently authenticated historical or expert chart golden"
+  },
+  {
+    "id": "T035/positive_mao_named_adverse_1",
+    "input": {
+      "day": 8,
+      "month": 2,
+      "year": 1984,
+      "hour": 4,
+      "gender": 1
+    },
+    "lunar": {
+      "lunarDay": 7,
+      "lunarMonth": 1,
+      "lunarYear": 1984,
+      "isLeapMonth": false,
+      "canName": "Giáp",
+      "chiName": "Tí",
+      "canIndex": 0,
+      "chiIndex": 1
+    },
+    "host": {
+      "id": "4",
+      "functionId": "dien_trach",
+      "branchName": "Mão",
+      "stars": [
+        "Thiên Cơ",
+        "Cự Môn",
+        "Lực Sĩ",
+        "Thiếu Âm",
+        "Hồng Loan",
+        "Kình Dương"
+      ]
+    },
+    "expected": true,
+    "namedAdverses": [
+      "Kình Dương"
+    ],
+    "otherPairHosts": [],
+    "classification": "valid solar API input; natal placements are repository engineering observations, not independently authenticated historical or expert chart golden"
+  },
+  {
+    "id": "T035/negative_dau_pair_-1",
+    "input": {
+      "day": 22,
+      "month": 2,
+      "year": 1984,
+      "hour": 16,
+      "gender": -1
+    },
+    "lunar": {
+      "lunarDay": 21,
+      "lunarMonth": 1,
+      "lunarYear": 1984,
+      "isLeapMonth": false,
+      "canName": "Giáp",
+      "chiName": "Tí",
+      "canIndex": 0,
+      "chiIndex": 1
+    },
+    "host": {
+      "id": "10",
+      "functionId": "dien_trach",
+      "branchName": "Dậu",
+      "stars": [
+        "Thiên Cơ",
+        "Cự Môn",
+        "Tấu Thư",
+        "Phúc Đức",
+        "Đào Hoa",
+        "Thiên Hỷ",
+        "Ân Quang",
+        "Thiên Phúc",
+        "Thiên Đức",
+        "Thiên Hình",
+        "Lưu Hà"
+      ]
+    },
+    "expected": false,
+    "namedAdverses": [],
+    "otherPairHosts": [],
+    "classification": "valid solar API input; natal placements are repository engineering observations, not independently authenticated historical or expert chart golden"
+  },
+  {
+    "id": "T035/negative_dau_pair_1",
+    "input": {
+      "day": 22,
+      "month": 2,
+      "year": 1984,
+      "hour": 16,
+      "gender": 1
+    },
+    "lunar": {
+      "lunarDay": 21,
+      "lunarMonth": 1,
+      "lunarYear": 1984,
+      "isLeapMonth": false,
+      "canName": "Giáp",
+      "chiName": "Tí",
+      "canIndex": 0,
+      "chiIndex": 1
+    },
+    "host": {
+      "id": "10",
+      "functionId": "dien_trach",
+      "branchName": "Dậu",
+      "stars": [
+        "Thiên Cơ",
+        "Cự Môn",
+        "Hỉ Thần",
+        "Phúc Đức",
+        "Đào Hoa",
+        "Thiên Hỷ",
+        "Ân Quang",
+        "Thiên Phúc",
+        "Thiên Đức",
+        "Thiên Hình",
+        "Lưu Hà"
+      ]
+    },
+    "expected": false,
+    "namedAdverses": [],
+    "otherPairHosts": [],
+    "classification": "valid solar API input; natal placements are repository engineering observations, not independently authenticated historical or expert chart golden"
+  },
+  {
+    "id": "T035/positive_mao_no_named_four_adverse_-1",
+    "input": {
+      "day": 15,
+      "month": 11,
+      "year": 1985,
+      "hour": 22,
+      "gender": -1
+    },
+    "lunar": {
+      "lunarDay": 4,
+      "lunarMonth": 10,
+      "lunarYear": 1985,
+      "isLeapMonth": false,
+      "canName": "Ất",
+      "chiName": "Sửu",
+      "canIndex": 1,
+      "chiIndex": 2
+    },
+    "host": {
+      "id": "4",
+      "functionId": "dien_trach",
+      "branchName": "Mão",
+      "stars": [
+        "Thiên Cơ",
+        "Cự Môn",
+        "Lộc Tồn",
+        "Bác Sĩ",
+        "Văn Khúc",
+        "Hóa Lộc",
+        "Tang Môn",
+        "Đẩu Quân"
+      ]
+    },
+    "expected": true,
+    "namedAdverses": [],
+    "otherPairHosts": [],
+    "classification": "valid solar API input; natal placements are repository engineering observations, not independently authenticated historical or expert chart golden"
+  },
+  {
+    "id": "T035/positive_mao_no_named_four_adverse_1",
+    "input": {
+      "day": 15,
+      "month": 11,
+      "year": 1985,
+      "hour": 22,
+      "gender": 1
+    },
+    "lunar": {
+      "lunarDay": 4,
+      "lunarMonth": 10,
+      "lunarYear": 1985,
+      "isLeapMonth": false,
+      "canName": "Ất",
+      "chiName": "Sửu",
+      "canIndex": 1,
+      "chiIndex": 2
+    },
+    "host": {
+      "id": "4",
+      "functionId": "dien_trach",
+      "branchName": "Mão",
+      "stars": [
+        "Thiên Cơ",
+        "Cự Môn",
+        "Lộc Tồn",
+        "Bác Sĩ",
+        "Văn Khúc",
+        "Hóa Lộc",
+        "Tang Môn",
+        "Đẩu Quân"
+      ]
+    },
+    "expected": true,
+    "namedAdverses": [],
+    "otherPairHosts": [],
+    "classification": "valid solar API input; natal placements are repository engineering observations, not independently authenticated historical or expert chart golden"
+  }
+]

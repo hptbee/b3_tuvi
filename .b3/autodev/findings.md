@@ -233,3 +233,9 @@ T033actualfullMEDIUMreview11clear(noR3801allocated),32HTTP+209component+25declar
 Finalsame-PRcrosscut12actualclear,noR3901allocated: Node22directproductionESM674HTTP/673validators/2304rows40warmtablemutationsclosedandlegacyexact; permanent32HTTP/16syntheticrejections+browserrouting(no browser)PASS. All44manifestinputs/callerpreconditions/backendruntime/registryunchanged. ParentT033andcumulativelocalqualitygatePASS, zeroOPENconfirmedcritical/high/medium; nofixneeded. Currentinvocation12/12actualreviewcapnowexhausted, no13threview/newimplementation. SamePR60fast-forwarddeliverynext, hostedCI/API/mergeunverified.
 
 Actualsame-PRdeliveryverified: gitpushnonforceexistingPR60branch655c219→ff153ba, thenGitrefs/pull/60/head=ff153ba/newmerge-refb418b42, main774unchanged. PreserveoldsourcebranchhistoryandconsumecheckpointonPRheadbranch. Actualmetadataedit60GraphQLForbiddenexit1; title/bodyandhostedCIunverified, notbranchpushfailure/noAPIapprovalbypass. Current12/12capexhausted, stopnewimplementation; localcumulativePASS/allconfirmedblockersclosed.
+
+## Fresh invocation 2026-10-16 — T034 source gate (not a technical reviewer pass)
+- R4001: CONFIRMED; severity medium; scope frozen candidate compatibility.json birthYearBranch; evidence actual server1..12 plus independently reported same mismatch from both source-review agents, who subsequently errored with usage limits before any final verdict.
+- Finding: source proposal incorrectly specifies server chiIndex_0_to11; exact approved scope cannot be assumed from otherwise matching arithmetic.
+- Status: OPEN, intentionally preserved original frozen evidence; runtime never implemented. Fresh revised packet and fresh distinct-model actual source review required. No fabricated completed source review or approval.
+- Run outcome INCOMPLETE required-model resources exhausted; technical reviews0/12 this invocation, preceding12/12 record unchanged. No reviewer-loop PASS or product completion declared.

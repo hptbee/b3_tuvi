@@ -1,6 +1,6 @@
 # Autonomous Product Completion
 
-- version: 27
+- version: 28
 - source: User mission 2026-10-14; fresh run from upstream main 45615a48d0c75b90138cfc618320ffae6e9c34e0
 
 ## Original requirements
@@ -546,3 +546,32 @@ Actualgh pr edit60(title/body)operationreturnedPOSTGraphQLForbidden(exit1); bran
 1. ReconcilelatestmainandPR60/head/branchcodex/tuvi-modern-decadal-stems; T030/T031/T032/T033completed, noreimplementation. RecoverGitHubAPItoapplydurablePR60title/bodyandreadactualhostedNode22Linux/Windows/backend/frontend/docs/browser-routingchecks. Authorizedauto-mergeonlyafteractualchecksandretainedsource/domain/releasegates; neverdirectmainpush/deploy. Do notcreateanotherPRforT032/T033.
 2. Freshinvocationreviewbudgetrequiredfornewimplementation. ModernTiểuhạnstempositiveintakehascompletefiniteoperandsbutdistinctnatalpalace-vs-decadalstemsourcepath: freezefullcombinedsource/dependency/locale/120mapping/independentvalidfixturepacket andobtainactualdualsourceapprovalBEFOREnewoptionalprofile. SOURCE_INSPECTED_NOT_APPROVED; T024/T030/T032donotapprovethisextension. Exactintakeandremaininggatesareinprogresscheckpoint; no same-NO-GOrepetition.
 3. T026/T019/T022/T020retainexactpriorclassical/text/parameterblockers; investigateonlynewmeaningfulevidence. Publicinterpretation7internalclaims/sourceidentity/default/natal/classical/releasegatesunchanged.
+
+### T034 — separately approved modern Tiểu hạn natal-palace heavenly stems
+- status: incomplete
+- depends_on: [T024, T030, T033]
+- task_base: 3613b68dd885dc382d6e1bcd080e1fcc60cd2710
+- scope: complete source dossier docs/knowledge/research/fortune/modern-minor-stem/; existing minor-period binding/runtime/API/client contracts and their meaningful unit/integration/component tests only if source accepted; documentation and checkpoint
+- acceptance_criteria:
+  - Recover and verify complete pinned source/dependency/index/config/locale chain; reproduce all ages1..120 and independently validate solar/lunar chart fixtures and natal-palace versus modern decadal stem selection before reviews
+  - Freeze source/conditions/exclusions/algorithm/fixtures; obtain actual independent distinct-model source decisions and replay unchanged approval comparator before formula implementation
+  - Only after exact acceptance add a distinct optional profile preserving existing minor/default/natal/major/public contracts, with fail-closed trusted metadata and evidence handling
+  - Verify positive/negative/boundary/malformed/profile-isolation/source-integrity/API/client behavior using lowest adequate tests and actual independent engineering reviews
+- verification:
+  - Source Git identities and fixture replay; actual dual source comparator; focused Node suites, full relevant backend/frontend CI; CORE/APIUI/performance/crosscut as required by final diff; browser NOT RUN absent browser-only risk
+
+Version28: explicit user authorizes fresh invocation from latest main and replaces historical same-PR60 instructions with one NEW branch and one NEW draft PR. Previous completed tasks and historical budget preserved; priority A investigation precedes any implementation. If A lacks accepted source, proceed to independently actionable priority B/C under explicit user continuation instructions. No blanket approval or arbitrary completion percentage.
+
+### T035 — Điền Trạch Cơ–Cự at Mão exact-source applicability candidate
+- status: pending
+- depends_on: []
+- scope: existing finite sourcePalaceBinding and exact claim registry/decision/test conventions; complete source/wording/condition/valid-fixture packet only after fresh source gate; no public interpretation
+- acceptance_criteria:
+  - Confirm exact claim genuinely missing and document baseline approved7 claims4palaces with actual positive/negative matches on fixed reproducible valid-chart grid
+  - Independently review complete Điền Trạch Thiên Cơ paragraph, reciprocal Cự Môn brightness/adverse clauses and natal contexts; do not silently assume those modifiers irrelevant
+  - Activate precise literal internal attribution only after actual distinct-model acceptance of exact source/AST/wording/fixtures and unchanged comparator; otherwise retain explicit source blocker without repeated identical reviews
+  - Preserve existing claims and public/default/natal gates; verify real positive/negative/wrongbranch/wronghost cases and report conditional/missing-opportunity limits accurately
+- verification:
+  - Independent finite fixture discovery, full-source/AST/wording/digest replay, actual dual source review, source tamper/real chart/unit/API tests, relevantCI and independent technical reviews within12pass cap
+
+Version28 task addition: independent audit proves reachable new uncovered-palace candidate, not approval. Candidate intake remains preliminary/not frozen. Original Priority B/C coverage and source requirements preserved; no completed historical task repeated.

@@ -1,0 +1,77 @@
+{
+  "status": "INDEPENDENT_SOURCE_COMPARATIVE_FIXTURES_NOT_APPROVAL",
+  "sourcePin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "coverage": {
+    "validCharts": 60,
+    "ageCases": 7200,
+    "pureBranchSexAgeComparisons": 2880,
+    "fullStemBranchMapping": 120,
+    "reachabilityRequests": 180,
+    "yearStemIndexes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "yearBranchIds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "sexes": [
+      -1,
+      1
+    ],
+    "leapCharts": 4,
+    "differentMajorWitnesses": 24,
+    "solarYearWitnesses": 12,
+    "allYearStemsBothSexes": true,
+    "allYearBranchesBothSexes": true,
+    "validLunarInverseRoundtrips": 60
+  },
+  "sourceProofs": [
+    {
+      "archive": "modern-decadal-stem",
+      "path": "src/astro/palace.ts",
+      "bytes": 7799,
+      "sha256": "a9c6d8444d5edcd241068f5bd83fed3aa38a57b206cebb221f86b8d4057b5273",
+      "retainedPinManifestMatch": true
+    },
+    {
+      "archive": "modern-decadal-stem",
+      "path": "src/astro/astro.ts",
+      "bytes": 19029,
+      "sha256": "84e1fd5121bc6c5e7fb17ef3d8aadd0f8473ff8f2704c17c1af96e77388d49f8",
+      "retainedPinManifestMatch": true
+    },
+    {
+      "archive": "modern-decadal-stem",
+      "path": "src/data/constants.ts",
+      "bytes": 3871,
+      "sha256": "e2411f73c7ea438b5186f2a3ef29fa54587ab78e25620b5a52b409ce9244043a",
+      "retainedPinManifestMatch": true
+    },
+    {
+      "archive": "modern-decadal-stem",
+      "path": "src/utils/index.ts",
+      "bytes": 7614,
+      "sha256": "9f3699115c9c149dc261f9a293e6c7ad40ac4f744884dba21b367b96d9bbfe16",
+      "retainedPinManifestMatch": true
+    }
+  ]
+}

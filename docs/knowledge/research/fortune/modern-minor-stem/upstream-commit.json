@@ -1,0 +1,40 @@
+{
+  "sha": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "node_id": "C_kwDOKATVz9oAKDJmMDBlMmFiMGM4MGIxNjMyZTU1YmMzNjJmMmFlMjZlMTIxMjQ1Y2I",
+  "url": "https://api.github.com/repos/SylarLong/iztro/git/commits/2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "html_url": "https://github.com/SylarLong/iztro/commit/2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "author": {
+    "name": "Sylar",
+    "email": "alsogood@qq.com",
+    "date": "2026-10-13T05:48:08Z"
+  },
+  "committer": {
+    "name": "GitHub",
+    "email": "noreply@github.com",
+    "date": "2026-10-13T05:48:08Z"
+  },
+  "tree": {
+    "sha": "3095b2e908923aea98072d1eb965a95028ebf995",
+    "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/3095b2e908923aea98072d1eb965a95028ebf995"
+  },
+  "message": "Merge pull request #310 from SylarLong/dependabot/npm_and_yarn/examples/fullstack-demo/frontend/source-map-js-1.2.2\n\nbuild(deps): bump source-map-js from 1.2.1 to 1.2.2 in /examples/fullstack-demo/frontend",
+  "parents": [
+    {
+      "sha": "6217b22290cc1aeba8e738880a8d7029868f0463",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/commits/6217b22290cc1aeba8e738880a8d7029868f0463",
+      "html_url": "https://github.com/SylarLong/iztro/commit/6217b22290cc1aeba8e738880a8d7029868f0463"
+    },
+    {
+      "sha": "c521e9547ef757c6b5cfaa9c111d9f3c70221ff4",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/commits/c521e9547ef757c6b5cfaa9c111d9f3c70221ff4",
+      "html_url": "https://github.com/SylarLong/iztro/commit/c521e9547ef757c6b5cfaa9c111d9f3c70221ff4"
+    }
+  ],
+  "verification": {
+    "verified": true,
+    "reason": "valid",
+    "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqzcYYCRC1aQ7uu5UhlAAAfQgQAH0ik8BKW7YRKAfJiM0SWHDV\nUcb6Hfu0fbSQAYTnV6SJhKh9+n3BVPn4TYOBrobf08X3jL1KMVZif5uKB58vZD55\nQwxQHJnYcHw4Gl4Z7Grmm8OkGsCubElMyp/sjOFRqMl9fKpZlmE7SuO+pSYqh1fz\nY+9cRUbOipju8k/9/2preFz7vnwVU23hhS35UoB5Z5lvyrmRQy8xQ/XWTIQIb2T3\nxAQPVtknfbIfXgUilwyAz/YX05EQP7uiaO/5/t9R/tEepZ/bOheYaf57nTyHbzkH\nUpJY4bcmbJSQ5/TAnWBxqT2WkCRKf8rWJhX+nPYjnjIIr8tSdnWYtiwr2r4R0SWL\n2Ux2BwDysSwXaqX/i8IJ0TeHxcW3T2hQ7kIQpzWgL2Zuj8HeSP+/m6vzX2768a7M\nfJ+rmNb8A5nozsPoBe+heWSRYnH+FyLdlf7j5yX/E/Zwz7g7uZ2x7j7SIrDsRzoV\nY/hzOR2VYPUEQgVrb1oGwi7ADQfHnyITI0EgExB4w1zjpV5UIg0dSvN6VQQLvQ2x\nD4X/bABiwysGAgHaUlPk5uwdwOXMXQaQ2l5LRHJV0pDc71O5RbcFLFjWUCw+fNqa\n7+9T4EhlQBdDA+RPrRbEpOAqr2ecuMbCl68Tw+fOTgfCy77u8FGuBUjWkaE3SJPu\nIlNCxgLMfNxQbRfU7+E7\n=PWxa\n-----END PGP SIGNATURE-----\n",
+    "payload": "tree 3095b2e908923aea98072d1eb965a95028ebf995\nparent 6217b22290cc1aeba8e738880a8d7029868f0463\nparent c521e9547ef757c6b5cfaa9c111d9f3c70221ff4\nauthor Sylar <alsogood@qq.com> 1791870488 +0800\ncommitter GitHub <noreply@github.com> 1791870488 +0800\n\nMerge pull request #310 from SylarLong/dependabot/npm_and_yarn/examples/fullstack-demo/frontend/source-map-js-1.2.2\n\nbuild(deps): bump source-map-js from 1.2.1 to 1.2.2 in /examples/fullstack-demo/frontend",
+    "verified_at": "2026-10-13T05:48:09Z"
+  }
+}

@@ -1,0 +1,606 @@
+{
+  "classification": "engineering applicability observations, not source approval, expert goldens or population prevalence",
+  "bindings": [
+    {
+      "claimId": "interp-tu-phu-dong-cung-giap-menh",
+      "binding": {
+        "ok": true,
+        "reason": null,
+        "approvedWording": "Tuổi Giáp có cách này chắc chắn là được hưởng phúc trọn đời và dĩ nhiên là được hưởng phú qúy song toàn. Đây là lời sách truyền thống, không phải sự kiện đời đã kiểm chứng."
+      }
+    },
+    {
+      "claimId": "interp-quanshu-tai-bach-tu-vi-four-adverse-host",
+      "binding": {
+        "ok": true,
+        "reason": null,
+        "kind": "source_palace_interpretation",
+        "target": "tai_bach",
+        "sourceProfile": "quanshu-iztro-2f00e2ab",
+        "approvedWording": "Riêng mục Tử Vi tại Tài Bạch của bản chép này dùng mệnh đề “不旺” khi thêm nhóm sát tinh được nêu. Phạm vi đang xét là Kình Dương, Đà La, Hỏa Tinh hoặc Linh Tinh đồng cung; không dùng riêng câu mở đầu về sự sung túc làm lời kết cho cung này. Đây là lời sách truyền thống, không phải sự kiện đời đã kiểm chứng."
+      }
+    },
+    {
+      "claimId": "interp-quanshu-phuc-duc-dong-luong-host",
+      "binding": {
+        "ok": true,
+        "reason": null,
+        "kind": "source_palace_interpretation",
+        "target": "phuc_duc",
+        "sourceProfile": "quanshu-iztro-2f00e2ab",
+        "approvedWording": "Riêng mục Thiên Đồng tại Phúc Đức của bản chép này, Thiên Lương đồng cung được mô tả bằng nhánh “清閑快樂”, nghĩa là thanh nhàn, vui vẻ. Câu này chỉ phản ánh nhánh đồng cung đang xét, không tổng kết toàn bộ lá số và không suy ra tuổi thọ. Đây là lời sách truyền thống, không phải sự kiện đời đã kiểm chứng."
+      }
+    },
+    {
+      "claimId": "interp-quanshu-quan-loc-co-cu-dau-host",
+      "binding": {
+        "ok": true,
+        "reason": null,
+        "kind": "source_palace_interpretation",
+        "target": "quan_loc",
+        "sourceProfile": "quanshu-iztro-2f00e2ab",
+        "approvedWording": "Trong mục Quan Lộc của bản chép này, trường hợp Cự Môn đồng cung Thiên Cơ tại Dậu được ghi ‘雖美無始終’. Đây là ghi chú về đúng nhánh văn bản, không phải kết luận toàn bộ công danh hay sự kiện đời đã kiểm chứng; các điều kiện gia sát trong đoạn chưa được đánh giá."
+      }
+    },
+    {
+      "claimId": "interp-quanshu-phuc-co-cu-host",
+      "binding": {
+        "ok": true,
+        "reason": null,
+        "kind": "source_palace_interpretation",
+        "target": "phuc_duc",
+        "sourceProfile": "quanshu-iztro-2f00e2ab",
+        "approvedWording": "Riêng hai mục Thiên Cơ và Cự Môn tại Phúc Đức của bản chép này, nhánh hai sao đồng cung được ghi “勞力欠安” và “心忙不安”, gợi hình ảnh lao lực, lòng bận bịu, chưa yên. Đây là lời mô tả truyền thống cho đúng nhánh văn bản, không xác nhận tính cách hay tình trạng sức khỏe; các điều kiện gia sát ở cuối đoạn chưa được đánh giá."
+      }
+    },
+    {
+      "claimId": "interp-quanshu-tai-tuvi-pha-quan-host",
+      "binding": {
+        "ok": true,
+        "reason": null,
+        "kind": "source_palace_interpretation",
+        "target": "tai_bach",
+        "sourceProfile": "quanshu-iztro-2f00e2ab",
+        "approvedWording": "Riêng mục Tử Vi tại Tài Bạch của bản chép này, nhánh Phá Quân đồng cung được ghi “先難後易”, nghĩa là trước khó, sau dễ. Đây là lời mô tả truyền thống cho đúng nhánh văn bản, không xác nhận tài sản hay kết quả cuộc đời; các điều kiện gia sát ở các đoạn liên quan chưa được đánh giá."
+      }
+    },
+    {
+      "claimId": "interp-quanshu-quan-co-cu-mao-host",
+      "binding": {
+        "ok": true,
+        "reason": null,
+        "kind": "source_palace_interpretation",
+        "target": "quan_loc",
+        "sourceProfile": "quanshu-iztro-2f00e2ab",
+        "approvedWording": "Trong mục Quan Lộc của bản chép này, trường hợp Cự Môn đồng cung Thiên Cơ tại Mão được ghi “吉美”. Đây là ghi chú về đúng nhánh văn bản, không phải xếp hạng, kết luận toàn bộ công danh hay sự kiện đời đã kiểm chứng; các điều kiện gia sát trong đoạn chưa được đánh giá."
+      }
+    }
+  ],
+  "sourceFiles": [
+    "docs/knowledge/research/juan2-palace/review-bundle.json",
+    "docs/knowledge/research/juan2-palace/review-bundle-quan.json",
+    "docs/knowledge/research/juan2-palace/review-bundle-phuc-co-cu.json",
+    "docs/knowledge/research/juan2-palace/review-bundle-tai-tuvi-pha.json",
+    "docs/knowledge/research/juan2-palace/review-bundle-quan-mao.json",
+    "docs/knowledge/research/fortune/modern-minor/fixtures.json"
+  ],
+  "cohorts": [
+    {
+      "name": "deduplicated frozen reviewed fixture union including24modernMinorCharts",
+      "size": 73,
+      "inputSha256": "a2cdd3ae3b2b702ca963e9c32c5805880cf8f2b11920d0a075fce28b38d24b3d",
+      "chartsWithAnyApprovedInternalClaim": 23,
+      "chartsWithoutAnyApprovedInternalClaim": 50,
+      "publicReleaseCount": 0,
+      "perClaim": {
+        "interp-tu-phu-dong-cung-giap-menh": {
+          "palace": "menh",
+          "positive": 0,
+          "negative": 73,
+          "unresolved": 0,
+          "reasons": {
+            "year_stem_not_met": 69,
+            "formula_runtime_not_matched": 73
+          },
+          "firstPositive": null
+        },
+        "interp-quanshu-tai-bach-tu-vi-four-adverse-host": {
+          "palace": "tai_bach",
+          "positive": 5,
+          "negative": 68,
+          "unresolved": 0,
+          "reasons": {
+            "conditions_not_met": 68
+          },
+          "firstPositive": {
+            "day": 1,
+            "month": 1,
+            "year": 1980,
+            "hour": 10,
+            "gender": 1
+          }
+        },
+        "interp-quanshu-phuc-duc-dong-luong-host": {
+          "palace": "phuc_duc",
+          "positive": 3,
+          "negative": 70,
+          "unresolved": 0,
+          "reasons": {
+            "conditions_not_met": 70
+          },
+          "firstPositive": {
+            "day": 8,
+            "month": 3,
+            "year": 1983,
+            "hour": 4,
+            "gender": 1
+          }
+        },
+        "interp-quanshu-quan-loc-co-cu-dau-host": {
+          "palace": "quan_loc",
+          "positive": 4,
+          "negative": 69,
+          "unresolved": 0,
+          "reasons": {
+            "conditions_not_met": 69
+          },
+          "firstPositive": {
+            "day": 15,
+            "month": 2,
+            "year": 1985,
+            "hour": 18,
+            "gender": 1
+          }
+        },
+        "interp-quanshu-phuc-co-cu-host": {
+          "palace": "phuc_duc",
+          "positive": 7,
+          "negative": 66,
+          "unresolved": 0,
+          "reasons": {
+            "conditions_not_met": 66
+          },
+          "firstPositive": {
+            "day": 8,
+            "month": 1,
+            "year": 1980,
+            "hour": 10,
+            "gender": 1
+          }
+        },
+        "interp-quanshu-tai-tuvi-pha-quan-host": {
+          "palace": "tai_bach",
+          "positive": 5,
+          "negative": 68,
+          "unresolved": 0,
+          "reasons": {
+            "conditions_not_met": 68
+          },
+          "firstPositive": {
+            "day": 8,
+            "month": 2,
+            "year": 1980,
+            "hour": 4,
+            "gender": 1
+          }
+        },
+        "interp-quanshu-quan-co-cu-mao-host": {
+          "palace": "quan_loc",
+          "positive": 2,
+          "negative": 71,
+          "unresolved": 0,
+          "reasons": {
+            "conditions_not_met": 71
+          },
+          "firstPositive": {
+            "day": 1,
+            "month": 3,
+            "year": 1980,
+            "hour": 6,
+            "gender": 1
+          }
+        }
+      },
+      "perPalace": {
+        "menh": {
+          "approvedClaims": 1,
+          "chartsWithInternalClaim": 0,
+          "chartsWithoutInternalClaim": 73
+        },
+        "phu_mau": {
+          "approvedClaims": 0,
+          "chartsWithInternalClaim": 0,
+          "chartsWithoutInternalClaim": 73
+        },
+        "phuc_duc": {
+          "approvedClaims": 2,
+          "chartsWithInternalClaim": 10,
+          "chartsWithoutInternalClaim": 63
+        },
+        "dien_trach": {
+          "approvedClaims": 0,
+          "chartsWithInternalClaim": 0,
+          "chartsWithoutInternalClaim": 73
+        },
+        "quan_loc": {
+          "approvedClaims": 2,
+          "chartsWithInternalClaim": 6,
+          "chartsWithoutInternalClaim": 67
+        },
+        "no_boc": {
+          "approvedClaims": 0,
+          "chartsWithInternalClaim": 0,
+          "chartsWithoutInternalClaim": 73
+        },
+        "thien_di": {
+          "approvedClaims": 0,
+          "chartsWithInternalClaim": 0,
+          "chartsWithoutInternalClaim": 73
+        },
+        "tat_ach": {
+          "approvedClaims": 0,
+          "chartsWithInternalClaim": 0,
+          "chartsWithoutInternalClaim": 73
+        },
+        "tai_bach": {
+          "approvedClaims": 2,
+          "chartsWithInternalClaim": 7,
+          "chartsWithoutInternalClaim": 66
+        },
+        "tu_tuc": {
+          "approvedClaims": 0,
+          "chartsWithInternalClaim": 0,
+          "chartsWithoutInternalClaim": 73
+        },
+        "phu_the": {
+          "approvedClaims": 0,
+          "chartsWithInternalClaim": 0,
+          "chartsWithoutInternalClaim": 73
+        },
+        "huynh_de": {
+          "approvedClaims": 0,
+          "chartsWithInternalClaim": 0,
+          "chartsWithoutInternalClaim": 73
+        }
+      },
+      "unapprovedCandidateReachability": {
+        "dien_co_cu_mao": {
+          "count": 0,
+          "additionalChartsWithAnyInternalClaimIfSeparatelyApproved": 0,
+          "first": null
+        },
+        "dien_co_cu_dau": {
+          "count": 1,
+          "additionalChartsWithAnyInternalClaimIfSeparatelyApproved": 1,
+          "first": {
+            "input": {
+              "day": 8,
+              "month": 1,
+              "year": 1980,
+              "hour": 12,
+              "gender": 1
+            },
+            "branch": "Dậu",
+            "palaceId": "10",
+            "alreadyHasApprovedInternalClaim": false
+          }
+        },
+        "thien_di_co_cu": {
+          "count": 1,
+          "additionalChartsWithAnyInternalClaimIfSeparatelyApproved": 1,
+          "first": {
+            "input": {
+              "day": 8,
+              "month": 1,
+              "year": 1980,
+              "hour": 6,
+              "gender": 1
+            },
+            "branch": "Mão",
+            "palaceId": "4",
+            "alreadyHasApprovedInternalClaim": false
+          }
+        },
+        "thien_di_dong_luong": {
+          "count": 1,
+          "additionalChartsWithAnyInternalClaimIfSeparatelyApproved": 1,
+          "first": {
+            "input": {
+              "day": 1,
+              "month": 1,
+              "year": 1980,
+              "hour": 8,
+              "gender": 1
+            },
+            "branch": "Dần",
+            "palaceId": "3",
+            "alreadyHasApprovedInternalClaim": false
+          }
+        },
+        "phu_the_dong_luong": {
+          "count": 1,
+          "additionalChartsWithAnyInternalClaimIfSeparatelyApproved": 1,
+          "first": {
+            "input": {
+              "day": 22,
+              "month": 1,
+              "year": 1980,
+              "hour": 6,
+              "gender": 1
+            },
+            "branch": "Thân",
+            "palaceId": "9",
+            "alreadyHasApprovedInternalClaim": false
+          }
+        }
+      }
+    },
+    {
+      "name": "fixed solar grid 1984to1995 month1to12 day15 hours0_6_12_18 both genders",
+      "size": 1152,
+      "inputSha256": "832ede7ac4ad680293365b09c2f4f2861a042802d6014d0eb2ad429bdbfdb630",
+      "chartsWithAnyApprovedInternalClaim": 92,
+      "chartsWithoutAnyApprovedInternalClaim": 1060,
+      "publicReleaseCount": 0,
+      "perClaim": {
+        "interp-tu-phu-dong-cung-giap-menh": {
+          "palace": "menh",
+          "positive": 2,
+          "negative": 1150,
+          "unresolved": 0,
+          "reasons": {
+            "year_stem_not_met": 960,
+            "formula_runtime_not_matched": 1138
+          },
+          "firstPositive": {
+            "day": 15,
+            "month": 2,
+            "year": 1994,
+            "hour": 0,
+            "gender": -1
+          }
+        },
+        "interp-quanshu-tai-bach-tu-vi-four-adverse-host": {
+          "palace": "tai_bach",
+          "positive": 22,
+          "negative": 1130,
+          "unresolved": 0,
+          "reasons": {
+            "conditions_not_met": 1130
+          },
+          "firstPositive": {
+            "day": 15,
+            "month": 6,
+            "year": 1984,
+            "hour": 0,
+            "gender": -1
+          }
+        },
+        "interp-quanshu-phuc-duc-dong-luong-host": {
+          "palace": "phuc_duc",
+          "positive": 20,
+          "negative": 1132,
+          "unresolved": 0,
+          "reasons": {
+            "conditions_not_met": 1132
+          },
+          "firstPositive": {
+            "day": 15,
+            "month": 3,
+            "year": 1984,
+            "hour": 6,
+            "gender": -1
+          }
+        },
+        "interp-quanshu-quan-loc-co-cu-dau-host": {
+          "palace": "quan_loc",
+          "positive": 4,
+          "negative": 1148,
+          "unresolved": 0,
+          "reasons": {
+            "conditions_not_met": 1148
+          },
+          "firstPositive": {
+            "day": 15,
+            "month": 8,
+            "year": 1984,
+            "hour": 6,
+            "gender": -1
+          }
+        },
+        "interp-quanshu-phuc-co-cu-host": {
+          "palace": "phuc_duc",
+          "positive": 18,
+          "negative": 1134,
+          "unresolved": 0,
+          "reasons": {
+            "conditions_not_met": 1134
+          },
+          "firstPositive": {
+            "day": 15,
+            "month": 10,
+            "year": 1984,
+            "hour": 6,
+            "gender": -1
+          }
+        },
+        "interp-quanshu-tai-tuvi-pha-quan-host": {
+          "palace": "tai_bach",
+          "positive": 10,
+          "negative": 1142,
+          "unresolved": 0,
+          "reasons": {
+            "conditions_not_met": 1142
+          },
+          "firstPositive": {
+            "day": 15,
+            "month": 8,
+            "year": 1986,
+            "hour": 18,
+            "gender": -1
+          }
+        },
+        "interp-quanshu-quan-co-cu-mao-host": {
+          "palace": "quan_loc",
+          "positive": 18,
+          "negative": 1134,
+          "unresolved": 0,
+          "reasons": {
+            "conditions_not_met": 1134
+          },
+          "firstPositive": {
+            "day": 15,
+            "month": 11,
+            "year": 1984,
+            "hour": 0,
+            "gender": -1
+          }
+        }
+      },
+      "perPalace": {
+        "menh": {
+          "approvedClaims": 1,
+          "chartsWithInternalClaim": 2,
+          "chartsWithoutInternalClaim": 1150
+        },
+        "phu_mau": {
+          "approvedClaims": 0,
+          "chartsWithInternalClaim": 0,
+          "chartsWithoutInternalClaim": 1152
+        },
+        "phuc_duc": {
+          "approvedClaims": 2,
+          "chartsWithInternalClaim": 38,
+          "chartsWithoutInternalClaim": 1114
+        },
+        "dien_trach": {
+          "approvedClaims": 0,
+          "chartsWithInternalClaim": 0,
+          "chartsWithoutInternalClaim": 1152
+        },
+        "quan_loc": {
+          "approvedClaims": 2,
+          "chartsWithInternalClaim": 22,
+          "chartsWithoutInternalClaim": 1130
+        },
+        "no_boc": {
+          "approvedClaims": 0,
+          "chartsWithInternalClaim": 0,
+          "chartsWithoutInternalClaim": 1152
+        },
+        "thien_di": {
+          "approvedClaims": 0,
+          "chartsWithInternalClaim": 0,
+          "chartsWithoutInternalClaim": 1152
+        },
+        "tat_ach": {
+          "approvedClaims": 0,
+          "chartsWithInternalClaim": 0,
+          "chartsWithoutInternalClaim": 1152
+        },
+        "tai_bach": {
+          "approvedClaims": 2,
+          "chartsWithInternalClaim": 30,
+          "chartsWithoutInternalClaim": 1122
+        },
+        "tu_tuc": {
+          "approvedClaims": 0,
+          "chartsWithInternalClaim": 0,
+          "chartsWithoutInternalClaim": 1152
+        },
+        "phu_the": {
+          "approvedClaims": 0,
+          "chartsWithInternalClaim": 0,
+          "chartsWithoutInternalClaim": 1152
+        },
+        "huynh_de": {
+          "approvedClaims": 0,
+          "chartsWithInternalClaim": 0,
+          "chartsWithoutInternalClaim": 1152
+        }
+      },
+      "unapprovedCandidateReachability": {
+        "dien_co_cu_mao": {
+          "count": 12,
+          "additionalChartsWithAnyInternalClaimIfSeparatelyApproved": 12,
+          "first": {
+            "input": {
+              "day": 15,
+              "month": 12,
+              "year": 1985,
+              "hour": 0,
+              "gender": -1
+            },
+            "branch": "Mão",
+            "palaceId": "4",
+            "alreadyHasApprovedInternalClaim": false
+          }
+        },
+        "dien_co_cu_dau": {
+          "count": 10,
+          "additionalChartsWithAnyInternalClaimIfSeparatelyApproved": 10,
+          "first": {
+            "input": {
+              "day": 15,
+              "month": 12,
+              "year": 1988,
+              "hour": 12,
+              "gender": -1
+            },
+            "branch": "Dậu",
+            "palaceId": "10",
+            "alreadyHasApprovedInternalClaim": false
+          }
+        },
+        "thien_di_co_cu": {
+          "count": 16,
+          "additionalChartsWithAnyInternalClaimIfSeparatelyApproved": 16,
+          "first": {
+            "input": {
+              "day": 15,
+              "month": 1,
+              "year": 1988,
+              "hour": 18,
+              "gender": -1
+            },
+            "branch": "Dậu",
+            "palaceId": "10",
+            "alreadyHasApprovedInternalClaim": false
+          }
+        },
+        "thien_di_dong_luong": {
+          "count": 20,
+          "additionalChartsWithAnyInternalClaimIfSeparatelyApproved": 20,
+          "first": {
+            "input": {
+              "day": 15,
+              "month": 2,
+              "year": 1984,
+              "hour": 12,
+              "gender": -1
+            },
+            "branch": "Dần",
+            "palaceId": "3",
+            "alreadyHasApprovedInternalClaim": false
+          }
+        },
+        "phu_the_dong_luong": {
+          "count": 18,
+          "additionalChartsWithAnyInternalClaimIfSeparatelyApproved": 18,
+          "first": {
+            "input": {
+              "day": 15,
+              "month": 4,
+              "year": 1984,
+              "hour": 12,
+              "gender": -1
+            },
+            "branch": "Thân",
+            "palaceId": "9",
+            "alreadyHasApprovedInternalClaim": false
+          }
+        }
+      }
+    }
+  ]
+}

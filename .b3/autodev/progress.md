@@ -1,17 +1,17 @@
 # Progress
 
-- b3_home: /workspace/b3_tuvi/.b3/runtime/b3_ai-engineering
-- product_root: /workspace/b3_tuvi
-- plan_id: Autonomous Product Completion version 27
-- plan_version: 27
-- branch: codex/tuvi-modern-decadal-stems
-- run_base_sha: 774ac6cff4b74e273a9bdf3a9c1ffa180d3d6b7b
+- b3_home: D:/Project/b3_ai-engineering
+- product_root: D:/Project/b3_tuvi
+- plan_id: Autonomous Product Completion version 28
+- plan_version: 28
+- branch: codex/tuvi-minor-stem-continuation
+- run_base_sha: 3613b68dd885dc382d6e1bcd080e1fcc60cd2710
 - preceding_invocation_base_sha: f0dec74973ef9d07129e19330356f8e6d2040227
 - previous_run_base_sha: 45615a48d0c75b90138cfc618320ffae6e9c34e0
-- current_task: none (T033 completed; review cap reached)
+- current_task: T034 (incomplete; required source-model usage limits)
 - last_completed_task: T033
 - next_source_task: modern_minor_stem_candidate_research_not_approved
-- current_task_base_sha: dd92577c99b071afb12fec3dc8c400bd3da997d0
+- current_task_base_sha: 3613b68dd885dc382d6e1bcd080e1fcc60cd2710
 - run_status: INCOMPLETE
 - previous_delivery_blocker: external_github_pr_api_forbidden_after_local_T030_T031_PASS
 - previous_invocation_stop_reason: invocation_review_pass_budget_exhausted_12_of_12
@@ -667,7 +667,7 @@ Gitls-remoteadvertised60pullheads: refs/pull/60/head exactly655c219(T030parent),
 
 
 ## Current final checkpoint — SAME PR60 updated, T033 completed
-- branch: codex/tuvi-modern-decadal-stems
+- branch: codex/tuvi-minor-stem-continuation
 - recovered_existing_pr: https://github.com/hptbee/b3_tuvi/pull/60
 - last_feature_commit: ff153baee9914b1bc8fb5d6a9916469cf55992bc
 - task_base: dd92577c99b071afb12fec3dc8c400bd3da997d0
@@ -716,3 +716,35 @@ T030/T031/T032/T033 commits are consolidated into this existing PR by fast-forwa
 Research intake for a possible future Tiểu hạn stem profile is explicitly unapproved and has no runtime activation.
 
 Nextaction: applythistitle/bodyONLYtoexistingPR60whenAPIaccessreturns, verifyhostedchecks/source/domain/releasegatesbeforeauthorizedauto-merge. No newPRandno directmainpush.
+
+## Invocation 2026-10-16 — explicit fresh continuation
+- Request: attached Pasted text.txt; one new branch / one draft PR / focused commits; no merge or deploy.
+- Current host paths and branch above supersede historical Linux/branch metadata by explicit user instruction. Historical receipts preserved below, prior 12/12 review count unchanged.
+- Prior invocation base: 774ac6cff4b74e273a9bdf3a9c1ffa180d3d6b7b; prior branch codex/tuvi-modern-decadal-stems.
+- Native git fetch origin main succeeded under authorized escalation; HEAD and origin/main are 3613b68dd885dc382d6e1bcd080e1fcc60cd2710.
+- GitHub connector actual get_pr_info: #60 merged at 74fc89f50a2dfe20e80d69e598eca77f4baed1e3, #61 merged at 3613b68dd885dc382d6e1bcd080e1fcc60cd2710. Previous API/unmerged blockers historical, not current blockers. No editing closed PR60.
+- Current technical reviews: 0/12; current source reviews: not executed. New invocation, no historical counter reset.
+- Node22.23.2, backend/frontend node_modules present. No browser risk; browser NOT RUN.
+- Parallel isolated research: complete pinned source chain; independent valid fixtures; 12-palace applicability audit. No formula implementation or approval inferred.
+- Task T034 readiness draft until complete packet, independent fixtures, actual distinct-model decisions and comparator replay.
+- Single draft PR pending first reviewable change; API resource available. Preserve one branch throughout.
+- Baseline backend CI npm run test:ci: sandbox HTTP failed EACCES 127.0.0.1; authorized escalated rerun PASS exit0, coverage89.15/89.99. No source defect inferred. Log new-backend-baseline-escalated.log.
+- Actual hosted CI for #61 head2fa3aad: run38923627596 completed success. New continuation hosted CI not yet available.
+- Applicability baseline: fixed valid grid1152 charts, approved7 claims over4 palaces, any92/none1060. Positive/negative perclaim Mệnh2/1150,Tài adverse22/1130,Phúc Đồng-Lương20/1132,Quan Dậu4/1148,Phúc Cơ-Cự18/1134,Tài Tử-Phá10/1142,Quan Mão18/1134. Eight palaces0. No population/expert/source approval inference. Reproducible script+inputs+hashes under new-invocation/coverage/.
+- Approach T034 detailed/draft persisted; no runtime readiness before actual frozen-packet dual model acceptance.
+- Frontend baseline npm run test:ci PASS exit0:314tests9files. Current UI unchanged. Parent deterministic independent fixture replay PASS60solar/lunarinverses,7200agecases,2880branches,120finite,180analyze; exact frozen fixture hash a332d28e4d5be29cda348f5e7e1192e12be11f40a63a0ef7ac5593768b318bbb.
+- Source candidate freeze1: source85596cfc1bb9d9bbbfe1e6da82e5a83222822fa5f63431a792f4ca2f1dc164de/context883b52b28675c8bc84a182b7a8e98e9eb893e1a95495d0d6c5bfd0ab57876c3a/algorithm1d420cc05ad462bb464423d21fb64549a133dece91a600d96fb5a066e4ea6f7c/compatibility612ca5002aa21a927eb000a182752f4309e1d1bb13541c62811859fc321d691c. Actual independent sol/astra reviews dispatched. No acceptance yet. ReviewerA preliminary frozen branch-index inconsistency reported; do not correct until actual reviews complete and historical packet preserved.
+- Independent source proof actual parent Python PASS46liveGitblobs/1440algebra. Source software correspondence only; no historical/expert approval.
+- T035 added pending as independently discovered source candidate. Fixed grid conditional12newpreviouslyuncoveredcharts, current baseline unchanged7claims4palaces92/1152matches. Reciprocal adverse/brightness question explicitly unresolved.
+
+## Invocation stop — required source models exhausted
+- run_status: INCOMPLETE
+- stop_reason: required_model_resources_exhausted
+- T034: incomplete; no completion commit, no runtime implementation, no source approval or completed review verdict. Both actual sol/astra agents errored usage limits. See source dossier review-execution-incomplete.json; no false available=true model record.
+- Preliminary concrete defect R4001: frozen compatibility birthYearBranch chiIndex_0_to11 contradicts actual server1..12. Original freeze retained unchanged. Fresh corrected packet and fresh actual dual review required; source comparison not accepted.
+- Technical reviews:0/12 completed current invocation, historical12/12 unchanged. Budget NOT exhausted. Cannot substitute hat-change or fabricated review for distinct model approvals.
+- T035 remains pending/preliminary; no source reviews or implementation. B/C source-gated candidates cannot proceed without exhausted required models. Existing blockers not repeated.
+- Delivery intent: one checkpoint-only commit and one draft PR on codex/tuvi-minor-stem-continuation, explicitly incomplete, no merge/deploy/publicrelease. No completed product task or numerical completion gain.
+- Evidence files source dossier retained; applicability audit and T035 ignored handoff under new-invocation/. Preserve on this checkout; do not lose when switching hosts.
+- Checkpoint-specific verification: frozen manifest64filesexact; docs selftestsPASS and links255PASS; no backend/frontend runtime or test diff. Checkpoint+STATUS+execution+attributes whitespacePASS; preserved exact review-context.txt has63source-whitespace diagnostics, no trimming/re-hash. These are evidence-preservation checks, not T034 source/technical acceptance.
+- Explicit user checkpoint preservation authorizes committing selected .b3/autodev/ records despite default ignore policy. This is an incomplete handoff commit; no task marked completed and no formula/code quality gate PASS. Preliminary ignored audit/candidate scripts and fixtures included explicitly for reproducible cross-host handoff; no broad git add.
