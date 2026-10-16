@@ -194,3 +194,32 @@ T030 actualCOREpass2,APIUIpass3 andperformancepass4completedclear; reservedR2901
 
 ## T030/T031 final current-invocation review result
 Actualpass1policy/R3301,2CORE/R2901,3APIUI/R3001,4performance/R3101,5crosscut/R3201 allclear; no confirmedfindingIDsallocated/nofixernecessary. ParentlocalengineeringgatesPASSafteractualtests/sourceproofs. Crosscut216HTTP/96completecompatibilitycomparisons/192genuinevalidatoracceptances/24askprivacychecks; frozenmanifest/bindingreplayexact. Currentbudget5/12, notexhausted. EarlierquotaattemptsremainREVIEW_NOT_EXECUTEDhistory. ExternalGitHubPRAPIForbidden→overalldeliveryINCOMPLETE,noinventedPR/CI/merge.
+
+
+## T032 review routing (continuing same invocation)
+Prior5actualpassesretained. LARGEonecompleteoptionalprofile, logicalunitsCORE(source/defaulttable/starassociation/trust/tests)andAPI/UI(HTTP/clientcontract/state/renderer/tests); cache/request-path performance routed and crosscutafterunits. ReserveR3401CORE,R3501APIUI,R3601performance,R3701crosscut. Backendauthorfrozenandfocused3+legacy2suitesPASS; fullCIrunning. DispatchCOREpass6andperformancepass7; no verdict/PASSclaimedbeforeactualreports. Atmost12totalincludingfreshfixreviews, no reset.
+
+T032CORE6/performance7actualclear,no confirmedfindingsorallocatedIDs. APIUI8firstattemptquota/noverdict; retryafterownerContinue notPASS. Budget7actualpassescompletedoverall, gatependingAPIUIandcrosscut.
+
+
+### R3501 — T032 genuine API names rejected by new client
+- severity: HIGH
+- confidence: CONFIRMED
+- status: CLOSED
+- scope: T032 API/UI
+- location: frontend/src/components/StructuredAnalysis.jsx validMutagenPlacement
+- evidence: actualindependent192HTTPprobe; all24newplacedfixturebodiesvalidAnalysisBodytruebutvalidMajorResponsefalse, because APIstatementstar.displayNamecontainsbrightnesssuffix (Vũ Khúc (V),Thiên Lương (V),Tử Vi (M)) whilecanonicalsourceStarNameisunsuffixed. Current195componentcasesuseunsuffixedsyntheticnamesandmaskfailure.
+- impact: validnewprofilecannotbedisplayed; newUIshowsinvalid-responsealert.
+- reproduction: /tmp/t032/api-ui-initial-repro.mjs andapi-ui-probe.mjs/log/report. Parentvalidatedsourcecomparison; backend/sourceapprovalnotatfault.
+- fix: frontend-onlynormalizeknownpresentationbrightnesssuffixforidentitycomparison, keepcanonicalID/name/duplicate/physicalguardsstrict, no backendoutputoroldprofilecontractchanges. Addcomponentregressionwithactualobservedsuffixednamesandmalformednegativecases; avoidarbitraryaliasbroadening.
+- verification: failingregressionfirst, targetedcomponentthenfullfrontendCI/lint/build, actualHTTP→genuineclientvalidatorprobe mustacceptvalidnewprofiles plus rejectmutations; freshfullAPIUIreviewrequired, notonlythisfinding.
+
+Actualreviewpass8completedwithR3501; total8/12used. Isolatedfixernext(no reviewslot); freshAPIUIpass9andcrosscutpass10ifunitclear. No loopPASS orcompletioncommituntilverifiedandfreshreview.
+
+R3501isolatedfixerreproducedrealHTTPfailureandnewcomponentregressionbeforeedit; minimalknownbrightnesssuffixidentitynormalizationnowgreen.209focused/314fullfrontendtests89.37/90.36,lint/buildPASS;192actualHTTP/168genuineaccepted/356forgeriesrejected/zeroDBwrites. FIXED→VERIFIED,notCLOSEDuntilfreshfullAPIUIreviewpass9clear. InitialHIGHreportandred/greenlogsarchived;backend/sourceunchanged.
+
+FreshfullAPIUIpass9actualclear:209component+395HTTPsuitePASS, independent192HTTP168genuine+120syntheticsuffixvariantsaccepted/548forgeriesdenied. No newR3502allocated. ParentCLOSED R3501 afterred→fix→green→independentreview; CORE6/APIUI9unitgatesPASS. Crosscutpass10dispatchedreadonly; total9actualcompleted, notexhausted.
+
+T032finalcrosscutpass10actualclear,noR3701allocated:674HTTP/673genuinevalidatorbodies/576endpointqueries2304rows,40warmtablemutationsnew-onlyclosed/legacyexact. ParentlocalT032qualitygatePASS:zeroOPENcritical/high/medium, R3501CLOSEDafteractualindependentfreshreview. All5T032actualreviewpassescountincludingfailedinitialunit; total10/12currentinvocation,NOTexhausted. Existingpublic/source/releasegatesunchanged; PR/hosteddeliverynotclaimed.
+
+Finaldeliveryproof: feature394a0c5pushed/ls-remoteverified, main774ac6c/parent655c219unchanged. ActualghPRcreationGraphQLForbidden(exit1), notautomaticapprovalrejection. LocalqualitygatePASS/overalldeliveryINCOMPLETE, no hostedNode22/PR/merge/deployclaim.10/12actualreviewsused; remaining2cannotfinishnewLARGE4-reviewcapability. Preserveactualsourceclaims/gates/R3501CLOSEDandnextqueue; no falsebudgetexhaustion.

@@ -1,6 +1,6 @@
 # Autonomous Product Completion
 
-- version: 25
+- version: 26
 - source: User mission 2026-10-14; fresh run from upstream main 45615a48d0c75b90138cfc618320ffae6e9c34e0
 
 ## Original requirements
@@ -478,7 +478,39 @@ Current invocation technical reviews5/12 completed: policy, CORE, API/UI, perfor
 
 Bothfeature/policycommitspushedandgitls-remoteverifiedcc206bd. ActualghPRcreate --basemain failed POSThttps://api.github.com/graphql Forbidden(exit1); no PRnumber/hostedCI/merge/deployclaimed, mainstill774ac6c. OveralldeliveryrunINCOMPLETEbecauseexternalPRAPIaccess, NOTbecause reviewbudgetexhausted orT030sourceunapproved. LocalrequestedengineeringtasksPASS.
 
-## Ordered resumable next actions
+## Historical ordered actions before T032 (superseded below)
 1. Reconcile this checkpoint and source branch against latestmain; T030/T031alreadycomplete, do not reimplement or rerun sourceapprovals without new evidence. Restore GitHubPRAPIaccess, create focusedPR fromcodex/tuvi-modern-decadal-stems tomain, verify actualhostedCI and retainedbranch/domain/releasegates before any authorizedauto-merge. Neverdirectpushmain ordeploy.
 2. Source-scope research candidate: modern selected-decadal-stem TứHóa physical natal-star associations. Fulltable/defaultconfiguration/starcanonical/duplicate-missing semantics need their OWNindependentfixtures+actualdualapproval andfreshJIT; T030explicitlyexcludes it. No task/activation/approval is inferred from exploratoryopportunitynotes.
 3. T026/T019/T022/T020 preciseexistingunresolvedpassage/taxonomy/brightness/classicalageblocksremain; pursue genuinelynew evidence, notidenticalNO-GOreviews.
+
+
+### T032 — separately source-scoped modern decadal Tứ Hóa associations
+- status: completed
+- commit: 394a0c573e5c2d64979b989ba53b9554d060055f
+- depends_on: [T030]
+- task_base: 655c2190e017c710ea0dcad08e2c3d722138a339
+- scope: backend/src/time/modernMajor.js, backend/src/knowledge/modernMajorMutagenBinding.js, backend/test/modernMajorMutagen.test.mjs, backend/test/modernMajorMutagenBinding.test.mjs, backend/test/modernMajorMutagenApi.test.mjs, backend/scripts/runTests.mjs, frontend/src/components/StructuredAnalysis.jsx, frontend/src/components/StructuredAnalysis.test.jsx, docs/knowledge/research/fortune/modern-decadal-mutagen/, docs/engineering/TEST_FIXTURES.md, docs/tuvi/MODERN_MAJOR_PROFILE.md, README.md, docs/planning/AUTODEV_MASTER_PLAN_V2.md, .gitattributes
+- acceptance_criteria:
+  - Independently inspect full pinned selected-decadal-stem to default Tứ Hóa table to natal major/minor star membership chain, configuration snapshot/override boundaries, all40cells and15canonicalnames before actual distinct-model source approval
+  - Independent valid real-chart fixtures cover all10selectedstems, four associations per selected decade, shared-palace cases and non-equivalence to birth/view-year transforms; synthetic missing/duplicate/conflicting metadata are not real-chart witnesses
+  - Only after actual dual approval, implement explicit iztro-pinned-menh-cuc-decadal-mutagen requiring accepted branch/stem and separate mutagen binding, exact two-key age1..125 request, pinned built-in table only and unique trusted source-star mapping to existing natal physical palaces
+  - Keep four ordered records even when source stars share a palace; every closed new-profile state returns no associations; old/omitted profiles and their exact outputs remain unchanged
+  - Display associations only for current validated explicit new-profile response with clear placement-only scope; no inserted natal stars, rotated decadal palace roles, custom config, generic classical tu_hoa_han activation, interpretation/public/default/source/release changes
+- verification:
+  - Actual source/comparator and immutable input/digest replay; independent table/chart fixtures and trust/source tamper tests; targeted Node unit/integration then fullbackendCI; component tests/lint/build only for changed UI; no new Playwright or browser launch; independent CORE and API/UI, routed performance and final crosscut within remaining invocation budget
+
+Version26: after T030/T031actualcommits/clean-tree verified and latestmain774ac6c unchanged, GitHubAPIstillForbidden. Continue independently actionable nextcapability from committedqueue. Newbranchcodex/tuvi-modern-decadal-mutagens from655c219 stacks on unmergedT030; no duplication/auto-mainmerge. Existing pinned source opportunity has concrete40-cell table/natalmembership chain; T032 is source/fixture investigation only untilactualdualapproval andfreshJITready. Currentinvocationtechnicalbudget5/12alreadyused, notresetbyContinue; reserve atmostremaining7includinganyfix/reviewloops. Existing unit-first/no-browser policy remains.
+
+
+## T032 final receipt — 2026-10-16
+T032 local engineering PASS, feature394a0c573e5c2d64979b989ba53b9554d060055f pushed and remote SHA verified oncodex/tuvi-modern-decadal-mutagens. Actual separate dualsourceMATCH/AI_ACCEPTED preserved; 40cells15targets/24realcharts288periods/1152independentassociations and101sharedperiods. Backend71scripts89.15/90.00, repairedfrontend314tests89.37/90.36/lint/build, docs248PASS. CORE6/performance7clear, initialAPIUI8confirmedHIGH R3501; isolatedfrontendfix/red-green andfreshfullAPIUI9clear→R3501CLOSED; crosscut10clear after674actualHTTP/576endpointqueries/2304rows. No confirmedblockingOPENfindings. Fullwhitespacecheckonly1immutableEOFblanksource-span.txt; allotherfeaturefilesPASS, reviewedbytesunchanged.
+
+Currentinvocation10/12actualtechnicalreviewsused, NOTexhausted; no budgetreset, no newpublicapproval. HostedNode22CIunverified(localNode24), no newbrowserexecution/specchanges. Approvedinternalinterpretationcoverage7unchanged; deliveredcapabilityisnewoptionalplacementprojectionnotprose.
+
+ActualPRcreate--basecodex/tuvi-modern-decadal-stems--headcodex/tuvi-modern-decadal-mutagens failedPOSThttps://api.github.com/graphql Forbidden(exit1). mainstill774ac6c, parentbranch655c219. No PRnumber/hostedCI/merge/deployinvented; overallrunINCOMPLETEfordeliveryandremainingproductscope.
+
+## Current ordered resumable queue
+1. Reconcilelatestmainandbothremoteheads, preserve completedT029/T030/T031/T032 andR3501closure. WhenGitHubAPIaccessisavailable, createT030/T031PRcodex/tuvi-modern-decadal-stems→main FIRST, thenT032codex/tuvi-modern-decadal-mutagens→parentbranch(orretargetmainafterparentmerge). Actualhostedchecks/branch/source/domain/releasegatesbeforeauthorizedauto-merge; no direct-mainpush/deployment. DurablePRbodyandcommandsbelowinprogress.md.
+2. Nextsourceinvestigation: inspectwhetherpinnedmodernTiểuhạnmetadatahasacompletesource-scopedheavenly-stemprojectionanalogousbutNOTapprovedbyT030/T032. Firstcheckcompletecall/index/config/year/agechainandindependentvalidfixtures; do notreuseapprovaljustbecausefieldslooksimilar. Thisisresearchcandidate/notapprovedruntime/notanimplementation-readytask. Currentremaining2reviewslotscannotcoveranewLARGEsource+API/UIcapabilitywithmandatoryCORE/APIUI/performance/crosscut; preservecheckpointinsteadofstartingunreviewablecode. Currentbudgetis10/12,notexhausted.
+3. T026/T019/T022/T020remainpreciselyevidence-blocked: clauseattachment,19vs18正曜taxonomy/吉星拱照,ThiênPhủsemantics,classicaldecadeage/startandTiểuhạnparameters. Pursueonlymeaningfulnewevidence; no repeatedidenticalNO-GOpackets, no inventedtraditionalconditions.
+4. Productionreadinessstillrequiresunresolveddomain/public/source/releaseapprovalsandactualhostedoperationalchecks. Localtestcoverageorsoftware-sourcecomparisoncannotreplacehistorical/expertverification.
