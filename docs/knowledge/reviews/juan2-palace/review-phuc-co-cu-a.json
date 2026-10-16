@@ -1,0 +1,113 @@
+[
+  {
+    "model": "gpt-6.1-sol",
+    "requestedModel": "gpt-6.1-sol",
+    "hostBuildId": null,
+    "modelIdentityBasis": "Parent orchestration requested gpt-6.1-sol for isolated reviewer phuc_cocu_sol; host build identifier is not exposed to this agent.",
+    "agentId": "/root/phuc_cocu_sol",
+    "available": true,
+    "independent": true,
+    "otherReviewerVerdictsRead": false,
+    "reviewExecuted": true,
+    "schoolId": "vn-tam-hop-default",
+    "editionId": "iztro-juan2-2f00e2ab0c80",
+    "locator": "juan2/福德宮/天機+巨門",
+    "claimId": "interp-quanshu-phuc-co-cu-host",
+    "sourceId": "ziwei-quanshu-iztro-transcription",
+    "sourceProfile": "quanshu-iztro-2f00e2ab",
+    "target": "phuc_duc",
+    "quotationPolicy": "source-sentence-v2",
+    "sourceDigest": "ecab3739a743b233911914a43ef297847c2328b60254bddbed4e69c559f7b186",
+    "contextDigest": "1ad123491278d5fcc8c568956085100468f59e45bc57035339586d3387bc5757",
+    "conditionTreeDigest": "2b53a285d252dc8a7183322d9bd76fe1891fb8ec980ecc50b13118428c5e61b8",
+    "wordingDigest": "5804e6d68fb5de7bdd03d50decc0280aaf2faaae002296f31409c16ace3fe9ac",
+    "fixturesDigest": "fc389b054837ae2eb3369b62cbb8f7cd8464403f06389bf84740edccadc46487",
+    "formulaComparison": "MATCH",
+    "verdict": "MATCH",
+    "interpretationVerdict": "INTERPRETATION_SUPPORTED_WITH_LIMITS",
+    "quotation": "天機先勞後逸，巨門同勞力欠安，天梁同享福，太陰同主快樂，加羊陀火鈴空劫奔走不得寧靜。\n巨門勞力不安，太陽同有憂有喜，天機同心忙不安，天同同享福，加羊陀火鈴空劫生平多憂。",
+    "conditions": [
+      "palace_phuc_duc",
+      "thien_co_in_host",
+      "cu_mon_in_host",
+      "direct_host_only"
+    ],
+    "exceptions": [],
+    "conditionTree": {
+      "op": "same_palace",
+      "target": "phuc_duc",
+      "stars": [
+        "Thiên Cơ",
+        "Cự Môn"
+      ]
+    },
+    "proposedWording": "Riêng hai mục Thiên Cơ và Cự Môn tại Phúc Đức của bản chép này, nhánh hai sao đồng cung được ghi “勞力欠安” và “心忙不安”, gợi hình ảnh lao lực, lòng bận bịu, chưa yên. Đây là lời mô tả truyền thống cho đúng nhánh văn bản, không xác nhận tính cách hay tình trạng sức khỏe; các điều kiện gia sát ở cuối đoạn chưa được đánh giá.",
+    "reviewedWording": "Riêng hai mục Thiên Cơ và Cự Môn tại Phúc Đức của bản chép này, nhánh hai sao đồng cung được ghi “勞力欠安” và “心忙不安”, gợi hình ảnh lao lực, lòng bận bịu, chưa yên. Đây là lời mô tả truyền thống cho đúng nhánh văn bản, không xác nhận tính cách hay tình trạng sức khỏe; các điều kiện gia sát ở cuối đoạn chưa được đánh giá.",
+    "limitations": [
+      "reciprocal_paragraph_baseline_only",
+      "direct_host_only",
+      "added_adverse_clauses_retained_but_not_evaluated",
+      "kong_kiep_aliases_not_implemented",
+      "no_invented_brightness_or_branch_requirement",
+      "not_personality_or_health_diagnosis",
+      "not_a_whole_chart_judgment",
+      "not_a_verified_life_event",
+      "no_natal_formula_change",
+      "no_public_release"
+    ],
+    "usage": "internal_research",
+    "expertVerified": false,
+    "bookVerified": false,
+    "historicalEditionAuthenticated": false,
+    "publicRelease": false,
+    "releasePermission": "withheld",
+    "runtimeRuleChangeApplied": false,
+    "defaultFormulaChangeAuthorized": false,
+    "empiricalTruthVerified": false,
+    "sourceAssessment": {
+      "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+      "rawHtmlSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+      "editionAuthenticated": false,
+      "originalEditionAuthenticated": false,
+      "textCollatedAgainstOriginal": false,
+      "independentPinnedRawFetch": {
+        "status": 200,
+        "url": "https://raw.githubusercontent.com/SylarLong/iztro/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/ancientBook-2.html",
+        "sha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a"
+      },
+      "sourceType": "secondary_transcription",
+      "license": "Pinned mirror MIT license inspected; no historical original authentication inferred.",
+      "fullDerivedJuan2Read": true,
+      "fullPhucDucSectionRead": true,
+      "completeReciprocalParagraphsRead": true,
+      "manifestFilesVerified": 16,
+      "derivedTextSha256": "b824c61e1bdec55ecdc7123ff1e79bce9648f07d67d054c43a59ce731572d4a7",
+      "rawHtmlExecuted": false
+    },
+    "semanticAnalysis": {
+      "baseline": "In the Thiên Cơ paragraph, 巨門同 introduces a cohost subbranch and 勞力欠安 is its predicate. In the reciprocal Cự Môn paragraph, 天機同 introduces the same pair and 心忙不安 is its predicate. 同 here binds the named companion directly within the host palace. The section heading supplies 福德宮. Both reciprocal clauses independently name the pair; neither requires a branch or brightness threshold.",
+      "modifiers": "The terminal 加羊陀火鈴空劫奔走不得寧靜 and 加羊陀火鈴空劫生平多憂 are conditional added-adverse clauses within their full paragraphs. They are retained in quotation and reviewed, not discarded. They may qualify synthesis when adverse stars occur, but do not syntactically turn the earlier pair clauses into adverse-absence conditions. No 無/不見/無殺 predicate governs the two pair clauses. The full section explicitly states 入廟/陷地 or other qualifiers when intended in other entries, but states none for this pair.",
+      "scope": "The exact Vietnamese text reports what the two textual subbranches say and explicitly states that added-adverse conditions have not been evaluated. This is a complete representation of the deliberately restricted attributed-baseline claim, not a complete evaluation of the paragraph or chart. It remains accurate as attribution with named adverse stars present: it does not assert that baseline overrides modifiers or exhausts the source. Acceptance would not extend to unqualified personalized narration.",
+      "wording": "The exact 勞力欠安 / 心忙不安 imagery is conservatively expressed as lao lực, lòng bận bịu, chưa yên. The wording attributes this to the transcription, disclaims personality and health confirmation, and discloses unevaluated modifiers. It adds no grade, wealth, longevity, concrete life event, or empirical prediction.",
+      "nonTransfer": "The Quan Lộc entry expressly distinguishes 卯 and 酉 and contains brightness language. Those are not governing qualifiers of this Phúc Đức entry. The source Mệnh co-location statements agree with Mão/Dậu reachability but do not restrict the proposed AST to Dậu. Đồng–Lương is a different pair. No generic VCD or relation-only approval follows."
+    },
+    "verification": {
+      "independentSourceProof": "/tmp/t027/review-a-source-proof.json",
+      "independentSourceScript": "/tmp/t027/review-a-source.py",
+      "independentFixtureProof": "/tmp/t027/review-a-fixture-proof.json",
+      "independentFixtureScript": "/tmp/t027/review-a-replay.mjs",
+      "fiveDigestsExact": true,
+      "fixtureCount": 19,
+      "positiveCount": 7,
+      "negativeCount": 12,
+      "coverage": {
+        "Dậu/without": 1,
+        "Mão/without": 2,
+        "Dậu/with": 3,
+        "Mão/with": 1
+      },
+      "chartImmutability": true,
+      "method": "Fresh solar-to-lunar conversion, calculateTuVi, normalizeChart, direct host star-set conjunction independently compared against evaluateCondition and every frozen expected result, lunar and host metadata. Missing each required star, wrong host and relation-only witnesses remain false."
+    }
+  }
+]

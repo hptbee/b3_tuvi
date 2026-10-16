@@ -1,0 +1,365 @@
+{
+  "status": "PROPOSED_NOT_APPROVED",
+  "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "rawHtmlSha256": "3b85b99796ee0dbf0f6285bd5c60f7b590e8d124fa52fe229413309dd495245c",
+  "parsing": "Inert HTML-derived text, no script execution. Complete source span and full 紫微 subsection retained unchanged. Source/context/wording UTF8 exact-byte hashes; conditionTree/fixtures JSON.stringify compact ordered objects.",
+  "policy": "dual-ai-source-review-v1 plus explicit interpretation/condition-tree/wording/fixture agreement. Never force direct-versus三方 grammar agreement; no original-edition authentication/default natal/public/empirical promotion.",
+  "sourceIdentity": {
+    "sourceId": "ziwei-quanshu-iztro-transcription",
+    "editionId": "iztro-juan3-2f00e2ab0c80",
+    "sourceType": "secondary_transcription",
+    "schoolId": null,
+    "documentType": "pinned_html_transcription",
+    "documentUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/ancientBook-3.html",
+    "gitRepository": "https://github.com/SylarLong/iztro",
+    "gitCommit": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+    "gitPath": "docs/zh_TW/learn/ancientBook-3.html",
+    "contentSha256": "3b85b99796ee0dbf0f6285bd5c60f7b590e8d124fa52fe229413309dd495245c",
+    "derivedTextSha256": "bc1a8d8f3d124c06c3845b6a687149bd9900f06b97d86db202b6016dfeffe35b",
+    "authenticated": false,
+    "digitalArtifactVerified": true,
+    "originalEditionAuthenticated": false,
+    "textCollatedAgainstOriginal": false,
+    "bookVerified": false,
+    "expertVerified": false,
+    "publicRelease": false,
+    "compatibilityNote": "condition_read_only_projection_not_natal_formula_certification",
+    "rightsNote": "Bounded classical transcription retained with repository MIT notice. Modern mirror does not authenticate original edition or establish equality to unavailable Wikisource revisions."
+  },
+  "reviewQuestions": [
+    "Does 財帛宮則為財賦之官 after 或作三方為次吉 unambiguously include the earlier direct 同宮 configuration as a sufficient subset? If it belongs only to the 三方 alternative or remains ambiguous, reject this AST/wording; never force agreement.",
+    "Does 輔弼 here require both 左輔 and 右弼? Validate source-normalized Tả Phù/Hữu Bật pair independently.",
+    "Do full subsection/context impose any actual brightness/adverse prerequisites on this verse? Positives include 紫微破軍 and one has 擎羊; do not assume favorable whole-chart synthesis or silently delete modifiers.",
+    "Is proposed Vietnamese wording a faithful narrowly attributed fiscal/treasury-office image, with no asserted actual career/rank/wealth/empirical outcome?",
+    "Do all five digest classes bind exactly, and all ten real source-independent positive/negative witnesses discriminate all three required stars and target?",
+    "Do not approve generic VCD 正曜/主星 taxonomy, original historical edition, natal calculation equivalence or public prose from this packet."
+  ],
+  "candidates": [
+    {
+      "claimId": "interp-quanshu-juan3-tai-ziwei-fubi-host",
+      "locator": "juan3/論諸星同垣各司所宜分別富貴貧賤夭壽/紫微",
+      "target": "tai_bach",
+      "spanFile": "tai-ziwei-fubi-span.txt",
+      "contextFile": "juan3-ziwei-complete-context.txt",
+      "conditionTree": {
+        "op": "same_palace",
+        "target": "tai_bach",
+        "stars": [
+          "Tử Vi",
+          "Tả Phù",
+          "Hữu Bật"
+        ]
+      },
+      "conditions": [
+        "palace_tai_bach",
+        "tu_vi_in_host",
+        "ta_phu_and_huu_bat_in_host",
+        "direct_host_only"
+      ],
+      "limitations": [
+        "single_verse_scoped_only",
+        "direct_host_proposed_sufficient_subset_subject_to_review",
+        "san_fang_alternative_not_implemented",
+        "fiscal_office_imagery_not_verified_career",
+        "no_rank_or_wealth_or_whole_chart_judgment",
+        "no_invented_brightness_or_adverse_absence",
+        "not_generic_vcd_taxonomy",
+        "no_natal_formula_change",
+        "no_public_release"
+      ],
+      "proposedWording": "Riêng câu này của bản chép Toàn Thư, khi Tử Vi cùng Tả Phù và Hữu Bật đồng cung Tài Bạch, sách dùng hình ảnh “財賦之官” — chức việc liên quan tài chính, kho tàng. Đây là cách mô tả truyền thống của cấu hình đang xét; không xác nhận nghề nghiệp, tài sản hoặc kết quả cuộc đời.",
+      "fixtures": [
+        {
+          "id": "independent-1",
+          "case": "juan3_tai_tuvi_ta_huu_positive",
+          "input": {
+            "day": 28,
+            "month": 10,
+            "year": 1981,
+            "hour": 12,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 1,
+            "lunarMonth": 10,
+            "lunarYear": 1981,
+            "canIndex": 7,
+            "chiIndex": 10,
+            "canName": "Tân",
+            "chiName": "Dậu",
+            "isLeapMonth": false
+          },
+          "host": {
+            "id": "2",
+            "functionId": "tai_bach",
+            "branchName": "Sửu"
+          },
+          "expected": true
+        },
+        {
+          "id": "independent-2",
+          "case": "juan3_tai_tuvi_ta_huu_positive",
+          "input": {
+            "day": 8,
+            "month": 11,
+            "year": 1983,
+            "hour": 12,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 4,
+            "lunarMonth": 10,
+            "lunarYear": 1983,
+            "canIndex": 9,
+            "chiIndex": 12,
+            "canName": "Quý",
+            "chiName": "Hợi",
+            "isLeapMonth": false
+          },
+          "host": {
+            "id": "2",
+            "functionId": "tai_bach",
+            "branchName": "Sửu"
+          },
+          "expected": true
+        },
+        {
+          "id": "independent-3",
+          "case": "juan3_tai_tuvi_ta_huu_positive",
+          "input": {
+            "day": 8,
+            "month": 5,
+            "year": 1984,
+            "hour": 12,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 8,
+            "lunarMonth": 4,
+            "lunarYear": 1984,
+            "canIndex": 0,
+            "chiIndex": 1,
+            "canName": "Giáp",
+            "chiName": "Tí",
+            "isLeapMonth": false
+          },
+          "host": {
+            "id": "8",
+            "functionId": "tai_bach",
+            "branchName": "Mùi"
+          },
+          "expected": true
+        },
+        {
+          "id": "independent-4",
+          "case": "juan3_tai_tuvi_missing_one_negative",
+          "input": {
+            "day": 8,
+            "month": 2,
+            "year": 1980,
+            "hour": 12,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 22,
+            "lunarMonth": 12,
+            "lunarYear": 1979,
+            "canIndex": 5,
+            "chiIndex": 8,
+            "canName": "Kỷ",
+            "chiName": "Mùi",
+            "isLeapMonth": false
+          },
+          "host": {
+            "id": "4",
+            "functionId": "tai_bach",
+            "branchName": "Mão"
+          },
+          "expected": false
+        },
+        {
+          "id": "independent-5",
+          "case": "juan3_tai_tuvi_missing_one_negative",
+          "input": {
+            "day": 22,
+            "month": 2,
+            "year": 1980,
+            "hour": 12,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 7,
+            "lunarMonth": 1,
+            "lunarYear": 1980,
+            "canIndex": 6,
+            "chiIndex": 9,
+            "canName": "Canh",
+            "chiName": "Thân",
+            "isLeapMonth": false
+          },
+          "host": {
+            "id": "5",
+            "functionId": "tai_bach",
+            "branchName": "Thìn"
+          },
+          "expected": false
+        },
+        {
+          "id": "independent-6",
+          "case": "juan3_tai_no_tuvi_negative",
+          "input": {
+            "day": 15,
+            "month": 5,
+            "year": 1980,
+            "hour": 12,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 2,
+            "lunarMonth": 4,
+            "lunarYear": 1980,
+            "canIndex": 6,
+            "chiIndex": 9,
+            "canName": "Canh",
+            "chiName": "Thân",
+            "isLeapMonth": false
+          },
+          "host": {
+            "id": "8",
+            "functionId": "tai_bach",
+            "branchName": "Mùi"
+          },
+          "expected": false
+        },
+        {
+          "id": "independent-7",
+          "case": "juan3_tai_no_tuvi_negative",
+          "input": {
+            "day": 22,
+            "month": 5,
+            "year": 1980,
+            "hour": 12,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 9,
+            "lunarMonth": 4,
+            "lunarYear": 1980,
+            "canIndex": 6,
+            "chiIndex": 9,
+            "canName": "Canh",
+            "chiName": "Thân",
+            "isLeapMonth": false
+          },
+          "host": {
+            "id": "8",
+            "functionId": "tai_bach",
+            "branchName": "Mùi"
+          },
+          "expected": false
+        },
+        {
+          "id": "independent-8",
+          "case": "juan3_tai_wrong_host_negative",
+          "input": {
+            "day": 22,
+            "month": 11,
+            "year": 1980,
+            "hour": 20,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 15,
+            "lunarMonth": 10,
+            "lunarYear": 1980,
+            "canIndex": 6,
+            "chiIndex": 9,
+            "canName": "Canh",
+            "chiName": "Thân",
+            "isLeapMonth": false
+          },
+          "host": {
+            "id": "10",
+            "functionId": "tai_bach",
+            "branchName": "Dậu"
+          },
+          "expected": false
+        },
+        {
+          "id": "independent-9",
+          "case": "juan3_tai_wrong_host_negative",
+          "input": {
+            "day": 8,
+            "month": 11,
+            "year": 1981,
+            "hour": 20,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 12,
+            "lunarMonth": 10,
+            "lunarYear": 1981,
+            "canIndex": 7,
+            "chiIndex": 10,
+            "canName": "Tân",
+            "chiName": "Dậu",
+            "isLeapMonth": false
+          },
+          "host": {
+            "id": "10",
+            "functionId": "tai_bach",
+            "branchName": "Dậu"
+          },
+          "expected": false
+        },
+        {
+          "id": "independent-10",
+          "case": "juan3_tai_tuvi_missing_ta_negative",
+          "input": {
+            "day": 28,
+            "month": 4,
+            "year": 1980,
+            "hour": 8,
+            "gender": 1
+          },
+          "lunar": {
+            "lunarDay": 14,
+            "lunarMonth": 3,
+            "lunarYear": 1980,
+            "canIndex": 6,
+            "chiIndex": 9,
+            "canName": "Canh",
+            "chiName": "Thân",
+            "isLeapMonth": false
+          },
+          "host": {
+            "id": "9",
+            "functionId": "tai_bach",
+            "branchName": "Thân"
+          },
+          "expected": false
+        }
+      ],
+      "requiredAnchors": [
+        "紫微輔弼同宮",
+        "或作三方為次吉",
+        "在財帛宮則為財賦之官"
+      ],
+      "schoolId": "vn-tam-hop-default",
+      "sourceId": "ziwei-quanshu-iztro-transcription",
+      "editionId": "iztro-juan3-2f00e2ab0c80",
+      "sourceProfile": "quanshu-iztro-2f00e2ab",
+      "usage": "internal_research",
+      "releasePermission": "withheld",
+      "expertVerified": false,
+      "bookVerified": false,
+      "sourceDigest": "bac2c2992bfbd705187c18fffffd7e7f819de053ecb9e227e01cb3b6122e0c87",
+      "contextDigest": "750f2cb32f124562bb12608eeebe485ad6f3fe3d9ecd5122aa70ce1984f2f537",
+      "conditionTreeDigest": "9c0c0a65cd03620a987d76f24e78839aaab0a8a11e30dddc27dfd4e8b5d527b8",
+      "wordingDigest": "7666397c3879560f984011fefc0da993b75c18a19f4e6b4114bdc2e921596825",
+      "fixturesDigest": "4921aeb6930ddca8b73e91689687ed93e6287000c3efa41b640a3e827ef97f2b",
+      "quotationPolicy": "source-sentence-v2",
+      "sourceSpan": "紫微輔弼同宮一呼百諾居上品 或作三方為次吉，在財帛宮則為財賦之官。"
+    }
+  ]
+}

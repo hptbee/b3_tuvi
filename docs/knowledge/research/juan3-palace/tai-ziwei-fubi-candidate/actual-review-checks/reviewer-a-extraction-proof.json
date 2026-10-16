@@ -1,0 +1,7 @@
+{
+  "inertParser": "stdlib HTMLParser, script/style text excluded; no execution",
+  "allDerivedTextEqualIgnoringWhitespace": true,
+  "completeContextPresent": true,
+  "rawSha256": "3b85b99796ee0dbf0f6285bd5c60f7b590e8d124fa52fe229413309dd495245c",
+  "derivedSha256": "bc1a8d8f3d124c06c3845b6a687149bd9900f06b97d86db202b6016dfeffe35b"
+}

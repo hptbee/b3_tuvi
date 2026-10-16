@@ -1,0 +1,1 @@
+PASS: 13 manifest files, five digests, 10 real reconstructed charts, both missing auxiliaries / missing TuVi / wrong-host negatives; no mutation. This is not source-semantic approval.

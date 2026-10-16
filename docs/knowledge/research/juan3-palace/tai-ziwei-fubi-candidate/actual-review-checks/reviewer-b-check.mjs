@@ -1,0 +1,36 @@
+import fs from 'node:fs';
+import {createHash} from 'node:crypto';
+import assert from 'node:assert/strict';
+import {solarToLunar} from '/workspace/b3_tuvi/backend/src/engine/lunar.js';
+import {hourBranchIndex} from '/workspace/b3_tuvi/backend/src/engine/hourBranch.js';
+import {calculateTuVi} from '/workspace/b3_tuvi/backend/src/engine/tuviRules.mjs';
+import {normalizeChart} from '/workspace/b3_tuvi/backend/src/engine/normalizeChart.js';
+import {evaluateCondition} from '/workspace/b3_tuvi/backend/src/engine/conditionEval.js';
+const dir='/tmp/t026/proposal/', read=x=>fs.readFileSync(dir+x,'utf8'), hash=x=>createHash('sha256').update(x).digest('hex');
+const b=JSON.parse(read('review-bundle.json')), c=b.candidates[0], manifest=JSON.parse(read('manifest.json'));
+for (const [file,digest] of Object.entries(manifest.files)) assert.equal(hash(fs.readFileSync(dir+file)),digest,file);
+const digests={sourceDigest:hash(read(c.spanFile)),contextDigest:hash(read(c.contextFile)),conditionTreeDigest:hash(JSON.stringify(c.conditionTree)),wordingDigest:hash(c.proposedWording),fixturesDigest:hash(JSON.stringify(c.fixtures))};
+for(const [k,v] of Object.entries(digests)) assert.equal(c[k],v,k);
+assert.equal(hash(fs.readFileSync('/tmp/t026/reviewer-b-raw.html')), b.rawHtmlSha256);
+assert.equal(hash(read('derived-juan3.txt')),b.sourceIdentity.derivedTextSha256);
+assert.ok(read('raw-juan3.html').includes(read(c.spanFile).trim()));
+assert.ok(read('derived-juan3.txt').includes(read(c.contextFile)));
+const independent=JSON.parse(read('independent-fixtures.json'));
+const reference=[...independent.results,independent.additionalMissingTaFixture];
+const results=[];
+for (const fixture of c.fixtures) {
+ const input=fixture.input, lunar=solarToLunar(input.day,input.month,input.year);
+ const chart=normalizeChart({input,lunarInfo:lunar,tuviInfo:calculateTuVi(lunar.canIndex,lunar.chiIndex,lunar.lunarDay,lunar.lunarMonth,hourBranchIndex(input.hour),input.gender,lunar.isLeapMonth)});
+ const before=JSON.stringify(chart), host=chart.palaces.find(p=>p.functionId==='tai_bach');
+ const names=host.stars.map(s=>s.canonicalName), set=new Set(names);
+ const direct=set.has('Tử Vi')&&set.has('Tả Phù')&&set.has('Hữu Bật');
+ const evaluation=evaluateCondition(c.conditionTree,chart,{schoolId:c.schoolId,profile:c.sourceProfile});
+ assert.equal(direct,fixture.expected); assert.equal(evaluation.status,direct?'satisfied':'not_satisfied');
+ assert.deepEqual(chart.lunar,fixture.lunar); assert.deepEqual({id:host.id,functionId:host.functionId,branchName:host.branchName},fixture.host);
+ const prior=reference.find(r=>JSON.stringify(r.input)===JSON.stringify(input)); assert.ok(prior); assert.deepEqual(names,prior.host.stars);
+ assert.equal(JSON.stringify(chart),before);
+ results.push({id:fixture.id,input,lunar:chart.lunar,host:{id:host.id,functionId:host.functionId,branchName:host.branchName,stars:names},direct,astStatus:evaluation.status,expected:fixture.expected,missing:c.conditionTree.stars.filter(n=>!set.has(n)),allThreeOtherHosts:chart.palaces.filter(p=>p.functionId!=='tai_bach'&&c.conditionTree.stars.every(n=>p.stars.some(s=>s.canonicalName===n))).map(p=>p.functionId),chartUnchanged:true});
+}
+assert.equal(results.length,10); assert.equal(results.filter(r=>r.direct).length,3);
+const output={status:'PASS_MECHANICAL_CHECKS_ONLY',verifiedDigests:digests,manifestFilesVerified:Object.keys(manifest.files).length,independentPinnedRawFetch:{sha256:hash(fs.readFileSync('/tmp/t026/reviewer-b-raw.html')),matches:true},results};
+fs.writeFileSync('/tmp/t026/reviewer-b-proof.json',JSON.stringify(output,null,2)+'\n'); console.log(JSON.stringify(output,null,2));

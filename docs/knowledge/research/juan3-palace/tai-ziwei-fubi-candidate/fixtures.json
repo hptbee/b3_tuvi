@@ -1,0 +1,275 @@
+{
+  "status": "PRE_REVIEW_INDEPENDENT_WITNESSES_NOT_GOLDENS",
+  "cases": [
+    {
+      "id": "independent-1",
+      "case": "juan3_tai_tuvi_ta_huu_positive",
+      "input": {
+        "day": 28,
+        "month": 10,
+        "year": 1981,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 1,
+        "lunarMonth": 10,
+        "lunarYear": 1981,
+        "canIndex": 7,
+        "chiIndex": 10,
+        "canName": "Tân",
+        "chiName": "Dậu",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "2",
+        "functionId": "tai_bach",
+        "branchName": "Sửu"
+      },
+      "expected": true
+    },
+    {
+      "id": "independent-2",
+      "case": "juan3_tai_tuvi_ta_huu_positive",
+      "input": {
+        "day": 8,
+        "month": 11,
+        "year": 1983,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 4,
+        "lunarMonth": 10,
+        "lunarYear": 1983,
+        "canIndex": 9,
+        "chiIndex": 12,
+        "canName": "Quý",
+        "chiName": "Hợi",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "2",
+        "functionId": "tai_bach",
+        "branchName": "Sửu"
+      },
+      "expected": true
+    },
+    {
+      "id": "independent-3",
+      "case": "juan3_tai_tuvi_ta_huu_positive",
+      "input": {
+        "day": 8,
+        "month": 5,
+        "year": 1984,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 8,
+        "lunarMonth": 4,
+        "lunarYear": 1984,
+        "canIndex": 0,
+        "chiIndex": 1,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "8",
+        "functionId": "tai_bach",
+        "branchName": "Mùi"
+      },
+      "expected": true
+    },
+    {
+      "id": "independent-4",
+      "case": "juan3_tai_tuvi_missing_one_negative",
+      "input": {
+        "day": 8,
+        "month": 2,
+        "year": 1980,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 22,
+        "lunarMonth": 12,
+        "lunarYear": 1979,
+        "canIndex": 5,
+        "chiIndex": 8,
+        "canName": "Kỷ",
+        "chiName": "Mùi",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "4",
+        "functionId": "tai_bach",
+        "branchName": "Mão"
+      },
+      "expected": false
+    },
+    {
+      "id": "independent-5",
+      "case": "juan3_tai_tuvi_missing_one_negative",
+      "input": {
+        "day": 22,
+        "month": 2,
+        "year": 1980,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 7,
+        "lunarMonth": 1,
+        "lunarYear": 1980,
+        "canIndex": 6,
+        "chiIndex": 9,
+        "canName": "Canh",
+        "chiName": "Thân",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "5",
+        "functionId": "tai_bach",
+        "branchName": "Thìn"
+      },
+      "expected": false
+    },
+    {
+      "id": "independent-6",
+      "case": "juan3_tai_no_tuvi_negative",
+      "input": {
+        "day": 15,
+        "month": 5,
+        "year": 1980,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 2,
+        "lunarMonth": 4,
+        "lunarYear": 1980,
+        "canIndex": 6,
+        "chiIndex": 9,
+        "canName": "Canh",
+        "chiName": "Thân",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "8",
+        "functionId": "tai_bach",
+        "branchName": "Mùi"
+      },
+      "expected": false
+    },
+    {
+      "id": "independent-7",
+      "case": "juan3_tai_no_tuvi_negative",
+      "input": {
+        "day": 22,
+        "month": 5,
+        "year": 1980,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 9,
+        "lunarMonth": 4,
+        "lunarYear": 1980,
+        "canIndex": 6,
+        "chiIndex": 9,
+        "canName": "Canh",
+        "chiName": "Thân",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "8",
+        "functionId": "tai_bach",
+        "branchName": "Mùi"
+      },
+      "expected": false
+    },
+    {
+      "id": "independent-8",
+      "case": "juan3_tai_wrong_host_negative",
+      "input": {
+        "day": 22,
+        "month": 11,
+        "year": 1980,
+        "hour": 20,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 15,
+        "lunarMonth": 10,
+        "lunarYear": 1980,
+        "canIndex": 6,
+        "chiIndex": 9,
+        "canName": "Canh",
+        "chiName": "Thân",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "10",
+        "functionId": "tai_bach",
+        "branchName": "Dậu"
+      },
+      "expected": false
+    },
+    {
+      "id": "independent-9",
+      "case": "juan3_tai_wrong_host_negative",
+      "input": {
+        "day": 8,
+        "month": 11,
+        "year": 1981,
+        "hour": 20,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 12,
+        "lunarMonth": 10,
+        "lunarYear": 1981,
+        "canIndex": 7,
+        "chiIndex": 10,
+        "canName": "Tân",
+        "chiName": "Dậu",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "10",
+        "functionId": "tai_bach",
+        "branchName": "Dậu"
+      },
+      "expected": false
+    },
+    {
+      "id": "independent-10",
+      "case": "juan3_tai_tuvi_missing_ta_negative",
+      "input": {
+        "day": 28,
+        "month": 4,
+        "year": 1980,
+        "hour": 8,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 14,
+        "lunarMonth": 3,
+        "lunarYear": 1980,
+        "canIndex": 6,
+        "chiIndex": 9,
+        "canName": "Canh",
+        "chiName": "Thân",
+        "isLeapMonth": false
+      },
+      "host": {
+        "id": "9",
+        "functionId": "tai_bach",
+        "branchName": "Thân"
+      },
+      "expected": false
+    }
+  ]
+}

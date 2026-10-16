@@ -37,6 +37,24 @@ const SUBJECTS = {
         decisionRef: 'docs/knowledge/interpretation-decisions/juan2-phuc-dong-luong.json',
         target: 'phuc_duc', spanFile: 'phuc-dong-span.txt', contextFile: 'I04-full-section.txt'
     },
+    'interp-quanshu-phuc-co-cu-host': {
+        reviewA: 'docs/knowledge/reviews/juan2-palace/review-phuc-co-cu-a.json',
+        reviewB: 'docs/knowledge/reviews/juan2-palace/review-phuc-co-cu-b.json',
+        bundleFile: `${RESEARCH}review-bundle-phuc-co-cu.json`, executionFile: `${RESEARCH}execution-phuc-co-cu.json`,
+        decisionRef: 'docs/knowledge/interpretation-decisions/juan2-phuc-co-cu.json',
+        target: 'phuc_duc', spanFile: 'phuc-co-cu-complete-spans.txt', contextFile: 'phuc-full-section.txt',
+        acceptedDigests: {
+            sourceDigest: 'ecab3739a743b233911914a43ef297847c2328b60254bddbed4e69c559f7b186',
+            contextDigest: '1ad123491278d5fcc8c568956085100468f59e45bc57035339586d3387bc5757',
+            conditionTreeDigest: '2b53a285d252dc8a7183322d9bd76fe1891fb8ec980ecc50b13118428c5e61b8',
+            wordingDigest: '5804e6d68fb5de7bdd03d50decc0280aaf2faaae002296f31409c16ace3fe9ac',
+            fixturesDigest: 'fc389b054837ae2eb3369b62cbb8f7cd8464403f06389bf84740edccadc46487'
+        },
+        reviewDocumentDigests: [
+            'ba606fb765e0281b4ec034cd034dda177005d1caa0993a405ffcbc12e459a87f',
+            '791a98d5fba2e309528cb233fbefb83d69c839e03ad760b94b616dc495749ce1'
+        ]
+    },
     'interp-quanshu-quan-loc-co-cu-dau-host': {
         ...QUAN_RESOURCES,
         decisionRef: 'docs/knowledge/interpretation-decisions/juan2-quan-co-cu-dau.json',
@@ -140,6 +158,12 @@ export function verifyStoredSourcePalaceEvidence(claimId, evidence = {}) {
     };
     if (Object.entries(digests).some(([key, value]) => value !== candidate[key] || value !== decision[key])) {
         return denied('source_palace_digest_mismatch');
+    }
+
+    if (subject.acceptedDigests && (!Array.isArray(reviewA) || !object(reviewB)
+        || Object.entries(subject.acceptedDigests).some(([key, value]) => digests[key] !== value)
+        || [reviewA, reviewB].some((review, index) => sha256Text(JSON.stringify(review)) !== subject.reviewDocumentDigests[index]))) {
+        return denied('source_palace_accepted_evidence_mismatch');
     }
 
     const reviewers = decision.reviewers;

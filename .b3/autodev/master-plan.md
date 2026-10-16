@@ -1,6 +1,6 @@
 # Autonomous Product Completion
 
-- version: 16
+- version: 18
 - source: User mission 2026-10-14; fresh run from upstream main 45615a48d0c75b90138cfc618320ffae6e9c34e0
 
 ## Original requirements
@@ -374,9 +374,9 @@ T019 follow-up inspection found a concrete textual conflict: the Juan2 list name
 Version15 adds only evidence-backed successor T026 after independent fullsection/fixture investigation, preserving all unfinished T019/T020/T022 requirements and existing task IDs. T025 implementation scope/acceptance unchanged.
 
 ### T027 — Juan2 Phúc Đức Cơ–Cự baseline source annotation
-- status: incomplete
+- status: completed
 - depends_on: [T025]
-- scope: Existing pinned Juan2 complete reciprocal paragraphs and full Phúc Đức section, independent nineteen-chart fixture packet, actual source/interpretation dual review; runtime binding/registry/tests only after acceptance and fresh JIT readiness
+- scope: backend/src/knowledge/sourcePalaceBinding.js, backend/test/sourcePalacePhucCoCu.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md, docs/knowledge/interpretation-claims.json, docs/knowledge/interpretation-decisions/juan2-phuc-co-cu.json, docs/knowledge/research/juan2-palace/, docs/knowledge/reviews/juan2-palace/review-phuc-co-cu-a.json, docs/knowledge/reviews/juan2-palace/review-phuc-co-cu-b.json, docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/, .gitattributes, README.md, docs/planning/AUTODEV_MASTER_PLAN_V2.md
 - acceptance_criteria:
   - Independently adjudicate whether exact same-host Thiên Cơ/Cự Môn baseline wording is supported while terminal 加羊陀火鈴空劫 branches remain explicitly unevaluated
   - Preserve full reciprocal clauses, all source/context/AST/wording/fixture hashes and nineteen pre-review real charts including Mão/Dậu with/without named adverse-star witnesses
@@ -386,3 +386,21 @@ Version15 adds only evidence-backed successor T026 after independent fullsection
   - Actual two-model source plus exact interpretation review, strict stored evidence/AST/wording replay, nineteen real positive/negative charts, API public-prose checks and independent engineering review/fix loop
 
 Version16 completion: T025 complete source-gated API/UI passes all four independent technical reviews, full current backend/frontend CI and all55 Chromium tests. T026 remains unresolved by both actual source models (財帛-clause attachment); do not repeat review without new evidence. T027 is structurally ready for source review: independent analyst/replayer added the nineteenth Mão-with-adverse witness before packet freeze. Actual gpt-6.1-sol andgpt-6-astra attempts both failed with usage-limit errors: REVIEW_NOT_EXECUTED, no verdict/approval invented. New engineering review budget4/12 used, not exhausted; source-model resources are unavailable. Next executable action when models recover is T027 actual source/interpretation review, then fresh JIT and implementation only if accepted.
+
+Version17 T027 actual retry after user continuation recovered model access: both genuine gpt-6.1-sol/gpt-6-astra judgments MATCH plus INTERPRETATION_SUPPORTED_WITH_LIMITS; parent verifies exact5digests/AST/wording/limitations and existing comparator AI_ACCEPTED/MATCH. Nineteen independent fixtures predate reviews. Precise baseline attribution only; source/natal/public flags unchanged. Minimal inspected scope one existing production binder, no new framework/API/UI. Preserve T026 rejected exact-scope evidence in same capability-delivery checkpoint, not another research-only PR.
+
+### T028 — Tài Bạch Tử Vi/Phá Quân exact-source branch annotation
+- status: pending
+- depends_on: [T027]
+- scope: Complete pinned Juan2 Tài Bạch Tử Vi/Phá Quân paragraphs and full section, independent positive/negative fixture packet and actual source/wording review; existing finite sourcePalaceBinding/registry/tests only if accepted with fresh JIT readiness
+- acceptance_criteria:
+  - Independently validate exact 破軍同先難後易 branch and complete reciprocal 紫微同先去後生 context, preceding/following adverse and brightness/branch modifiers without invented semantic equivalence
+  - Verify reachable Sửu/Mùi with/without named-four-adverse positives, each missing partner and wrong-host negatives before actual distinct-model review
+  - If accepted, enable only exact attributed internal primary-branch wording; no real financial outcome, age/calendar prediction, grade, absence-of-adverse or source/default/natal change
+  - Preserve all existing claim approvals, complete source provenance and public interpretation/release gates
+- verification:
+  - Complete source+interpretation actual dual review, immutable five-digest and actual-document binding, independent real fixtures/tamper/public-output regressions, full relevant CI and independent review/fix cycle
+
+Version18 adds evidence-backed successor T028 after actual complete-passage/real-chart research. T027 behavior/scope/fingerprint unchanged, code/review already underway; newtask is not source approval or a request to activate unsupported modifiers.
+
+T027 parentqualitygatePASS: exactsourceapprovedinternalclaimintegratedwithonly24productionlines,new19fixture/mutation/publictests,63backendfiles88.39/90.09PASS. Independentfullfeaturepass5/performance6/crosscut7clear, actualHTTP→frontendvalidators19fixturesnopublicleak. Internalcoverage4→5, no other formula/source/default/public changes. Initial source-modelerror records arehistoricalattemptsnotremainingblockers; exactretryreviewsapproved and archived. T026remainsnotapproved. NextT028independentfixturepackaging/review, engineeringbudget7/12used.
