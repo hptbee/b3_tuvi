@@ -17,3 +17,8 @@ docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/** text eol=lf
 docs/knowledge/research/juan2-palace/tai-tuvi-pha-packet/** text eol=lf
 docs/knowledge/research/juan2-palace/review-bundle-tai-tuvi-pha.json text eol=lf
 docs/knowledge/reviews/juan2-palace/review-tai-tuvi-pha-*.json text eol=lf
+
+# T029 exact frozen source, wording and actual review inputs.
+docs/knowledge/research/juan2-palace/quan-co-cu-mao-packet/** text eol=lf
+docs/knowledge/research/juan2-palace/review-bundle-quan-mao.json text eol=lf
+docs/knowledge/reviews/juan2-palace/review-quan-mao-*.json text eol=lf

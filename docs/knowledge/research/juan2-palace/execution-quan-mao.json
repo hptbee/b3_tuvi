@@ -1,0 +1,33 @@
+{
+  "reviewers": [
+    {
+      "model": "gpt-6.1-sol",
+      "agentId": "/root/quan_mao_sol",
+      "reviewRef": "docs/knowledge/reviews/juan2-palace/review-quan-mao-a.json",
+      "requestedModel": "gpt-6.1-sol",
+      "hostBuildId": null
+    },
+    {
+      "model": "gpt-6-astra",
+      "agentId": "/root/quan_mao_astra",
+      "reviewRef": "docs/knowledge/reviews/juan2-palace/review-quan-mao-b.json",
+      "requestedModel": "gpt-6-astra",
+      "hostBuildId": null
+    }
+  ],
+  "attemptHistory": [
+    {
+      "status": "EXECUTED",
+      "reason": "Both actual source/wording judgments followed nine independent validated API-reachable witnesses. A independently fetched rawHTTPS200; B independently verified actual pinned Gitobjects, no invented HTTP status. B clarified descriptive scope disclosures as limitations, not runtime exceptions, retaining original texts."
+    }
+  ],
+  "rawReviewSha256": {
+    "a": "d1444795acb97b511b70c52183c64f25cc9e18482eef2594e15bda11f76a55bb",
+    "b": "4edb7b5945ded8e64d5683caad6929c170ddda15465d8b6b20dda398d0fef938"
+  },
+  "canonicalReviewDocumentSha256": {
+    "a": "ac4e78696d2b65991bb8bb1c7dd83aac1904be97ef06066eb7f2e089c7024e83",
+    "b": "f3b5605b9b4a0a5e4d1ad58a61b6f6f2115fd476d0a9082a85b16ae1a2bba19a"
+  },
+  "note": "Actual requested tool models/tasks; hostBuildId unavailable/null. Raw outputs preserved verbatim. Independent9APIvalidfixtures preceded review."
+}

@@ -1,0 +1,22 @@
+{
+  "editionId": "iztro-juan2-2f00e2ab0c80",
+  "sourceId": "ziwei-quanshu-iztro-transcription",
+  "documentType": "pinned_html_transcription",
+  "documentUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/ancientBook-2.html",
+  "gitRepository": "https://github.com/SylarLong/iztro",
+  "gitCommit": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "gitPath": "docs/zh_TW/learn/ancientBook-2.html",
+  "contentSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+  "authenticated": false,
+  "digitalArtifactVerified": true,
+  "originalEditionAuthenticated": false,
+  "textCollatedAgainstOriginal": false,
+  "bookVerified": false,
+  "expertVerified": false,
+  "verificationNotes": "Pinned modern reproduction only; paragraph/context digest review does not authenticate a historical edition or certify natal formulas.",
+  "sourceType": "secondary_transcription",
+  "derivedTextSha256": "b824c61e1bdec55ecdc7123ff1e79bce9648f07d67d054c43a59ce731572d4a7",
+  "publicRelease": false,
+  "compatibilityNote": "condition_read_only_projection_not_natal_formula_certification",
+  "registryMutation": "none_existing_source_and_edition_reused_unchanged"
+}

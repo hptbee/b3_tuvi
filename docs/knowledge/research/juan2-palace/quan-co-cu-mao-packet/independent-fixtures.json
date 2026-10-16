@@ -1,0 +1,976 @@
+{
+  "status": "CORRECTED_INDEPENDENT_API_VALID_ENGINEERING_REPLAY_NOT_SOURCE_APPROVAL",
+  "supersedes": "Prior pre-review gender0 search/witness was invalid for the API and is withdrawn, not source evidence",
+  "candidateRawSha256": "012cde44df6f61c886c8b36c943d32f5833065ff7ab71449773f6ce7c2d1476e",
+  "conditionTree": {
+    "op": "and",
+    "items": [
+      {
+        "op": "same_palace",
+        "target": "quan_loc",
+        "stars": [
+          "Thiên Cơ",
+          "Cự Môn"
+        ]
+      },
+      {
+        "op": "branch",
+        "target": "quan_loc",
+        "branches": [
+          "Mão"
+        ]
+      }
+    ]
+  },
+  "independentOracle": "Unique quan_loc host, own canonical-name Set AND exact Mão host branch, independent of evaluator",
+  "originalCases": 8,
+  "addedCases": 1,
+  "cases": [
+    {
+      "id": "negative_missing_co",
+      "input": {
+        "day": 1,
+        "month": 1,
+        "year": 1980,
+        "hour": 8,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 14,
+        "lunarMonth": 11,
+        "lunarYear": 1979,
+        "canIndex": 5,
+        "chiIndex": 8,
+        "canName": "Kỷ",
+        "chiName": "Mùi",
+        "isLeapMonth": false
+      },
+      "cuc": {
+        "name": "Kim tứ cục",
+        "number": 4
+      },
+      "menhPalaceId": "9",
+      "host": {
+        "id": "1",
+        "functionId": "quan_loc",
+        "branchName": "Tí",
+        "stars": [
+          {
+            "canonicalName": "Cự Môn",
+            "brightness": "V"
+          },
+          {
+            "canonicalName": "Hữu Bật",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Thiên Khôi",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Đào Hoa",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Nguyệt Đức",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Phi Liêm",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Tử Phù",
+            "brightness": null
+          }
+        ]
+      },
+      "expected": false,
+      "expectedPair": false,
+      "expectedBranch": false,
+      "fourNamedAdversePresent": [],
+      "pairPalaces": [],
+      "trace": {
+        "status": "not_satisfied",
+        "op": "and",
+        "children": [
+          {
+            "status": "not_satisfied",
+            "op": "same_palace",
+            "children": []
+          },
+          {
+            "status": "not_satisfied",
+            "op": "branch",
+            "branch": "Tí",
+            "children": []
+          }
+        ]
+      },
+      "pairTrace": {
+        "status": "not_satisfied",
+        "op": "same_palace",
+        "children": []
+      },
+      "branchTrace": {
+        "status": "not_satisfied",
+        "op": "branch",
+        "branch": "Tí",
+        "children": []
+      },
+      "chartDeepFrozenDuringAST": true,
+      "chartUnchanged": true,
+      "metadataMatchesCandidate": true
+    },
+    {
+      "id": "negative_missing_cu",
+      "input": {
+        "day": 1,
+        "month": 1,
+        "year": 1980,
+        "hour": 18,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 14,
+        "lunarMonth": 11,
+        "lunarYear": 1979,
+        "canIndex": 5,
+        "chiIndex": 8,
+        "canName": "Kỷ",
+        "chiName": "Mùi",
+        "isLeapMonth": false
+      },
+      "cuc": {
+        "name": "Hỏa lục cục",
+        "number": 6
+      },
+      "menhPalaceId": "4",
+      "host": {
+        "id": "8",
+        "functionId": "quan_loc",
+        "branchName": "Mùi",
+        "stars": [
+          {
+            "canonicalName": "Thiên Cơ",
+            "brightness": "Đ"
+          },
+          {
+            "canonicalName": "Hoa Cái",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Kình Dương",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Quan Phủ",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Thái Tuế",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Linh Tinh",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Thiên Hình",
+            "brightness": null
+          }
+        ]
+      },
+      "expected": false,
+      "expectedPair": false,
+      "expectedBranch": false,
+      "fourNamedAdversePresent": [
+        "Kình Dương",
+        "Linh Tinh"
+      ],
+      "pairPalaces": [],
+      "trace": {
+        "status": "not_satisfied",
+        "op": "and",
+        "children": [
+          {
+            "status": "not_satisfied",
+            "op": "same_palace",
+            "children": []
+          },
+          {
+            "status": "not_satisfied",
+            "op": "branch",
+            "branch": "Mùi",
+            "children": []
+          }
+        ]
+      },
+      "pairTrace": {
+        "status": "not_satisfied",
+        "op": "same_palace",
+        "children": []
+      },
+      "branchTrace": {
+        "status": "not_satisfied",
+        "op": "branch",
+        "branch": "Mùi",
+        "children": []
+      },
+      "chartDeepFrozenDuringAST": true,
+      "chartUnchanged": true,
+      "metadataMatchesCandidate": true
+    },
+    {
+      "id": "negative_wrong_host_tai",
+      "input": {
+        "day": 1,
+        "month": 2,
+        "year": 1980,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 15,
+        "lunarMonth": 12,
+        "lunarYear": 1979,
+        "canIndex": 5,
+        "chiIndex": 8,
+        "canName": "Kỷ",
+        "chiName": "Mùi",
+        "isLeapMonth": false
+      },
+      "cuc": {
+        "name": "Thổ ngũ cục",
+        "number": 5
+      },
+      "menhPalaceId": "8",
+      "host": {
+        "id": "12",
+        "functionId": "quan_loc",
+        "branchName": "Hợi",
+        "stars": [
+          {
+            "canonicalName": "Thiên Đồng",
+            "brightness": "Đ"
+          },
+          {
+            "canonicalName": "Hỉ Thần",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Quan Phù",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Hữu Bật",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Long Trì",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Đường Phù",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Thiên Khốc",
+            "brightness": null
+          }
+        ]
+      },
+      "expected": false,
+      "expectedPair": false,
+      "expectedBranch": false,
+      "fourNamedAdversePresent": [],
+      "pairPalaces": [
+        {
+          "id": "4",
+          "functionId": "tai_bach",
+          "branchName": "Mão"
+        }
+      ],
+      "trace": {
+        "status": "not_satisfied",
+        "op": "and",
+        "children": [
+          {
+            "status": "not_satisfied",
+            "op": "same_palace",
+            "children": []
+          },
+          {
+            "status": "not_satisfied",
+            "op": "branch",
+            "branch": "Hợi",
+            "children": []
+          }
+        ]
+      },
+      "pairTrace": {
+        "status": "not_satisfied",
+        "op": "same_palace",
+        "children": []
+      },
+      "branchTrace": {
+        "status": "not_satisfied",
+        "op": "branch",
+        "branch": "Hợi",
+        "children": []
+      },
+      "chartDeepFrozenDuringAST": true,
+      "chartUnchanged": true,
+      "metadataMatchesCandidate": true
+    },
+    {
+      "id": "negative_dau_four_adverse_absent",
+      "input": {
+        "day": 15,
+        "month": 2,
+        "year": 1980,
+        "hour": 16,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 29,
+        "lunarMonth": 12,
+        "lunarYear": 1979,
+        "canIndex": 5,
+        "chiIndex": 8,
+        "canName": "Kỷ",
+        "chiName": "Mùi",
+        "isLeapMonth": false
+      },
+      "cuc": {
+        "name": "Mộc tam cục",
+        "number": 3
+      },
+      "menhPalaceId": "6",
+      "host": {
+        "id": "10",
+        "functionId": "quan_loc",
+        "branchName": "Dậu",
+        "stars": [
+          {
+            "canonicalName": "Thiên Cơ",
+            "brightness": "M"
+          },
+          {
+            "canonicalName": "Cự Môn",
+            "brightness": "M"
+          },
+          {
+            "canonicalName": "Thiên Quý",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Văn Tinh",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Thiên Quan",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Đại Hao",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Tang Môn",
+            "brightness": null
+          }
+        ]
+      },
+      "expected": false,
+      "expectedPair": true,
+      "expectedBranch": false,
+      "fourNamedAdversePresent": [],
+      "pairPalaces": [
+        {
+          "id": "10",
+          "functionId": "quan_loc",
+          "branchName": "Dậu"
+        }
+      ],
+      "trace": {
+        "status": "not_satisfied",
+        "op": "and",
+        "children": [
+          {
+            "status": "satisfied",
+            "op": "same_palace",
+            "children": []
+          },
+          {
+            "status": "not_satisfied",
+            "op": "branch",
+            "branch": "Dậu",
+            "children": []
+          }
+        ]
+      },
+      "pairTrace": {
+        "status": "satisfied",
+        "op": "same_palace",
+        "children": []
+      },
+      "branchTrace": {
+        "status": "not_satisfied",
+        "op": "branch",
+        "branch": "Dậu",
+        "children": []
+      },
+      "chartDeepFrozenDuringAST": true,
+      "chartUnchanged": true,
+      "metadataMatchesCandidate": true
+    },
+    {
+      "id": "positive_mao_four_adverse_absent",
+      "input": {
+        "day": 1,
+        "month": 3,
+        "year": 1980,
+        "hour": 6,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 15,
+        "lunarMonth": 1,
+        "lunarYear": 1980,
+        "canIndex": 6,
+        "chiIndex": 9,
+        "canName": "Canh",
+        "chiName": "Thân",
+        "isLeapMonth": false
+      },
+      "cuc": {
+        "name": "Thổ ngũ cục",
+        "number": 5
+      },
+      "menhPalaceId": "12",
+      "host": {
+        "id": "4",
+        "functionId": "quan_loc",
+        "branchName": "Mão",
+        "stars": [
+          {
+            "canonicalName": "Thiên Cơ",
+            "brightness": "M"
+          },
+          {
+            "canonicalName": "Cự Môn",
+            "brightness": "M"
+          },
+          {
+            "canonicalName": "Hỉ Thần",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Long Đức",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Lưu Hà",
+            "brightness": null
+          }
+        ]
+      },
+      "expected": true,
+      "expectedPair": true,
+      "expectedBranch": true,
+      "fourNamedAdversePresent": [],
+      "pairPalaces": [
+        {
+          "id": "4",
+          "functionId": "quan_loc",
+          "branchName": "Mão"
+        }
+      ],
+      "trace": {
+        "status": "satisfied",
+        "op": "and",
+        "children": [
+          {
+            "status": "satisfied",
+            "op": "same_palace",
+            "children": []
+          },
+          {
+            "status": "satisfied",
+            "op": "branch",
+            "branch": "Mão",
+            "children": []
+          }
+        ]
+      },
+      "pairTrace": {
+        "status": "satisfied",
+        "op": "same_palace",
+        "children": []
+      },
+      "branchTrace": {
+        "status": "satisfied",
+        "op": "branch",
+        "branch": "Mão",
+        "children": []
+      },
+      "chartDeepFrozenDuringAST": true,
+      "chartUnchanged": true,
+      "metadataMatchesCandidate": true
+    },
+    {
+      "id": "negative_wrong_host_menh",
+      "input": {
+        "day": 1,
+        "month": 3,
+        "year": 1980,
+        "hour": 22,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 15,
+        "lunarMonth": 1,
+        "lunarYear": 1980,
+        "canIndex": 6,
+        "chiIndex": 9,
+        "canName": "Canh",
+        "chiName": "Thân",
+        "isLeapMonth": false
+      },
+      "cuc": {
+        "name": "Thổ ngũ cục",
+        "number": 5
+      },
+      "menhPalaceId": "4",
+      "host": {
+        "id": "8",
+        "functionId": "quan_loc",
+        "branchName": "Mùi",
+        "stars": [
+          {
+            "canonicalName": "Thiên Việt",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Hồng Loan",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Địa Giải",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Đà La",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Quan Phủ",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Trực Phù",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Quả Tú",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Đẩu Quân",
+            "brightness": null
+          }
+        ]
+      },
+      "expected": false,
+      "expectedPair": false,
+      "expectedBranch": false,
+      "fourNamedAdversePresent": [
+        "Đà La"
+      ],
+      "pairPalaces": [
+        {
+          "id": "4",
+          "functionId": "menh",
+          "branchName": "Mão"
+        }
+      ],
+      "trace": {
+        "status": "not_satisfied",
+        "op": "and",
+        "children": [
+          {
+            "status": "not_satisfied",
+            "op": "same_palace",
+            "children": []
+          },
+          {
+            "status": "not_satisfied",
+            "op": "branch",
+            "branch": "Mùi",
+            "children": []
+          }
+        ]
+      },
+      "pairTrace": {
+        "status": "not_satisfied",
+        "op": "same_palace",
+        "children": []
+      },
+      "branchTrace": {
+        "status": "not_satisfied",
+        "op": "branch",
+        "branch": "Mùi",
+        "children": []
+      },
+      "chartDeepFrozenDuringAST": true,
+      "chartUnchanged": true,
+      "metadataMatchesCandidate": true
+    },
+    {
+      "id": "negative_dau_four_adverse_present",
+      "input": {
+        "day": 8,
+        "month": 6,
+        "year": 1980,
+        "hour": 0,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 26,
+        "lunarMonth": 4,
+        "lunarYear": 1980,
+        "canIndex": 6,
+        "chiIndex": 9,
+        "canName": "Canh",
+        "chiName": "Thân",
+        "isLeapMonth": false
+      },
+      "cuc": {
+        "name": "Kim tứ cục",
+        "number": 4
+      },
+      "menhPalaceId": "6",
+      "host": {
+        "id": "10",
+        "functionId": "quan_loc",
+        "branchName": "Dậu",
+        "stars": [
+          {
+            "canonicalName": "Thiên Cơ",
+            "brightness": "M"
+          },
+          {
+            "canonicalName": "Cự Môn",
+            "brightness": "M"
+          },
+          {
+            "canonicalName": "Lực Sĩ",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Thiếu Dương",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Đào Hoa",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Kình Dương",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Thiên Không",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Phá Toái",
+            "brightness": null
+          }
+        ]
+      },
+      "expected": false,
+      "expectedPair": true,
+      "expectedBranch": false,
+      "fourNamedAdversePresent": [
+        "Kình Dương"
+      ],
+      "pairPalaces": [
+        {
+          "id": "10",
+          "functionId": "quan_loc",
+          "branchName": "Dậu"
+        }
+      ],
+      "trace": {
+        "status": "not_satisfied",
+        "op": "and",
+        "children": [
+          {
+            "status": "satisfied",
+            "op": "same_palace",
+            "children": []
+          },
+          {
+            "status": "not_satisfied",
+            "op": "branch",
+            "branch": "Dậu",
+            "children": []
+          }
+        ]
+      },
+      "pairTrace": {
+        "status": "satisfied",
+        "op": "same_palace",
+        "children": []
+      },
+      "branchTrace": {
+        "status": "not_satisfied",
+        "op": "branch",
+        "branch": "Dậu",
+        "children": []
+      },
+      "chartDeepFrozenDuringAST": true,
+      "chartUnchanged": true,
+      "metadataMatchesCandidate": true
+    },
+    {
+      "id": "positive_mao_four_adverse_present",
+      "input": {
+        "day": 15,
+        "month": 6,
+        "year": 1980,
+        "hour": 14,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 3,
+        "lunarMonth": 5,
+        "lunarYear": 1980,
+        "canIndex": 6,
+        "chiIndex": 9,
+        "canName": "Canh",
+        "chiName": "Thân",
+        "isLeapMonth": false
+      },
+      "cuc": {
+        "name": "Thổ ngũ cục",
+        "number": 5
+      },
+      "menhPalaceId": "12",
+      "host": {
+        "id": "4",
+        "functionId": "quan_loc",
+        "branchName": "Mão",
+        "stars": [
+          {
+            "canonicalName": "Thiên Cơ",
+            "brightness": "M"
+          },
+          {
+            "canonicalName": "Cự Môn",
+            "brightness": "M"
+          },
+          {
+            "canonicalName": "Hỉ Thần",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Long Đức",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Văn Xương",
+            "brightness": "Đ"
+          },
+          {
+            "canonicalName": "Linh Tinh",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Lưu Hà",
+            "brightness": null
+          }
+        ]
+      },
+      "expected": true,
+      "expectedPair": true,
+      "expectedBranch": true,
+      "fourNamedAdversePresent": [
+        "Linh Tinh"
+      ],
+      "pairPalaces": [
+        {
+          "id": "4",
+          "functionId": "quan_loc",
+          "branchName": "Mão"
+        }
+      ],
+      "trace": {
+        "status": "satisfied",
+        "op": "and",
+        "children": [
+          {
+            "status": "satisfied",
+            "op": "same_palace",
+            "children": []
+          },
+          {
+            "status": "satisfied",
+            "op": "branch",
+            "branch": "Mão",
+            "children": []
+          }
+        ]
+      },
+      "pairTrace": {
+        "status": "satisfied",
+        "op": "same_palace",
+        "children": []
+      },
+      "branchTrace": {
+        "status": "satisfied",
+        "op": "branch",
+        "branch": "Mão",
+        "children": []
+      },
+      "chartDeepFrozenDuringAST": true,
+      "chartUnchanged": true,
+      "metadataMatchesCandidate": true
+    },
+    {
+      "id": "negative_mao_both_partners_absent",
+      "input": {
+        "day": 1,
+        "month": 1,
+        "year": 1991,
+        "hour": 2,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 16,
+        "lunarMonth": 11,
+        "lunarYear": 1990,
+        "canIndex": 6,
+        "chiIndex": 7,
+        "canName": "Canh",
+        "chiName": "Ngọ",
+        "isLeapMonth": false
+      },
+      "cuc": {
+        "name": "Thổ ngũ cục",
+        "number": 5
+      },
+      "menhPalaceId": "12",
+      "host": {
+        "id": "4",
+        "functionId": "quan_loc",
+        "branchName": "Mão",
+        "stars": [
+          {
+            "canonicalName": "Tấu Thư",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Phúc Đức",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Đào Hoa",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Thiên Hỷ",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Phong Cáo",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Thiên Quý",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Thiên Đức",
+            "brightness": null
+          },
+          {
+            "canonicalName": "Lưu Hà",
+            "brightness": null
+          }
+        ]
+      },
+      "expected": false,
+      "expectedPair": false,
+      "expectedBranch": true,
+      "fourNamedAdversePresent": [],
+      "pairPalaces": [],
+      "trace": {
+        "status": "not_satisfied",
+        "op": "and",
+        "children": [
+          {
+            "status": "not_satisfied",
+            "op": "same_palace",
+            "children": []
+          },
+          {
+            "status": "satisfied",
+            "op": "branch",
+            "branch": "Mão",
+            "children": []
+          }
+        ]
+      },
+      "pairTrace": {
+        "status": "not_satisfied",
+        "op": "same_palace",
+        "children": []
+      },
+      "branchTrace": {
+        "status": "satisfied",
+        "op": "branch",
+        "branch": "Mão",
+        "children": []
+      },
+      "chartDeepFrozenDuringAST": true,
+      "chartUnchanged": true,
+      "addedByIndependentVerifier": true,
+      "birthInputValidated": true,
+      "analyzeStatus": 200
+    }
+  ],
+  "finiteSearch": {
+    "years": [
+      1991,
+      1992,
+      1993,
+      1994
+    ],
+    "days": "every valid civil date",
+    "hours": "0..22 every 2h",
+    "genders": [
+      -1,
+      1
+    ],
+    "searched": 35064,
+    "quanMao": 2922,
+    "singlePartner": 0,
+    "neitherPartner": 2612,
+    "everyInputValidatedBeforeCalculation": true,
+    "universalInvariantProven": false
+  },
+  "limitations": [
+    "No reachable Quan-Mão single-partner witness found in finite independent search; cannot prove universal absence.",
+    "Original missing-partner negatives discriminate pair subtrace only, not dropping a single star in full AND because host branch also fails.",
+    "Added Mão/neither-star real negative discriminates whole pair requirement versus branch-only mutant; still does not distinguish a single dropped partner.",
+    "Exact approved AST/source/decision binding mutation tests remain necessary.",
+    "Engineering reachability only, not historical source goldens or independent natal formula certification."
+  ],
+  "expertVerified": false,
+  "bookVerified": false,
+  "sourceApproved": false,
+  "publicRelease": false
+}

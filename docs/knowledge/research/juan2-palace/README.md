@@ -58,3 +58,8 @@ Hai đoạn đầy đủ ghi `巨門同勞力欠安` và `天機同心忙不安`
 Claim `interp-quanshu-tai-tuvi-pha-quan-host` chỉ trích `破軍同先難後易` khi đúng hai sao đồng cung Tài Bạch. [Packet và giới hạn](tai-tuvi-pha-packet/STATUS.md) giữ nguyên hai đoạn đầy đủ, toàn mục Tài Bạch và ngữ cảnh cung/brightness; nhánh đối ứng `紫微同先去後生` được giữ làm ngữ cảnh, không ép thành cùng một nghĩa hoặc điều kiện tuổi. Các bổ nghĩa gia sát chưa được đánh giá.
 
 Tám lá số được kiểm tra độc lập trước hai actual model reviews, đủ Sửu/Mùi × có/không bốn sát tinh nêu tên và các trường hợp âm. [Bundle](review-bundle-tai-tuvi-pha.json), [execution](execution-tai-tuvi-pha.json) và [quyết định](../../interpretation-decisions/juan2-tai-tuvi-pha.json) khóa đúng AST/lời văn/fixture; nguyên bản model output được giữ riêng. Claim này cùng tồn tại với ghi chú Tài Bạch Tử Vi/gia sát đã duyệt, không thay thế hoặc gộp lời văn thành dự báo. [Hiệu đính intake](tai-tuvi-pha-packet/ERRATA.md) giữ rõ T026 chưa được duyệt, không có claim Tử Vi/Tả/Hữu hoạt động.
+
+
+## Quan Lộc Cơ–Cự tại Mão: claim riêng với Dậu
+
+Claim `interp-quanshu-quan-co-cu-mao-host` chỉ áp dụng đúng hai sao tại Quan Lộc AND chi Mão. [Packet và giới hạn](quan-co-cu-mao-packet/STATUS.md), [bundle](review-bundle-quan-mao.json), [execution](execution-quan-mao.json) và [quyết định](../../interpretation-decisions/juan2-quan-co-cu-mao.json) giữ đủ đoạn đối ứng, bổ nghĩa chưa đánh giá và chín fixture hợp lệ đã kiểm chứng độc lập trước hai actual model reviews. Không đồng nhất brightness của engine với lời nguồn; không suy kết quả nghề nghiệp hoặc công khai lời luận. Claim Dậu cũ không đổi và không bị tái tạo. Đây là claim nội bộ được duyệt thứ bảy.

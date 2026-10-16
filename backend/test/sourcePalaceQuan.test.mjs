@@ -171,7 +171,8 @@ for (const fixture of candidate.fixtures) {
         assert.ok(statement.internalProse.includes(claim.sourceProfile));
         assert.ok(statement.internalProse.includes('không xác nhận công thức an sao của nguồn'));
     } else {
-        assert.equal(statement.internalProse, null);
+        assert.equal(statement.internalProse?.includes(claim.approvedWording) || false, false,
+            'another independently eligible source branch cannot render this ineligible Dậu claim');
         assert.ok(gate.reasons.includes('conditions_not_met'));
     }
     const api = analyzeChartRequest(fixture.input);

@@ -2,19 +2,20 @@
 
 - b3_home: /workspace/b3_tuvi/.b3/runtime/b3_ai-engineering
 - product_root: /workspace/b3_tuvi
-- plan_id: Autonomous Product Completion version 21
-- plan_version: 21
-- branch: codex/tuvi-tai-tuvi-pha-interpretation
+- plan_id: Autonomous Product Completion version 22
+- plan_version: 22
+- branch: codex/tuvi-quan-co-cu-mao-interpretation
 - run_base_sha: 4c1761ea6448eeba0234c04405f9c9245eece320
 - preceding_invocation_base_sha: f0dec74973ef9d07129e19330356f8e6d2040227
 - previous_run_base_sha: 45615a48d0c75b90138cfc618320ffae6e9c34e0
-- current_task: T029
-- last_completed_task: T028
-- next_source_task: T029
-- current_task_base_sha: b33a2d55c4fb6a66124f31d58a69ddbec79fe5d4
-- run_status: running
+- current_task: none
+- last_completed_task: T029
+- next_source_task: T030
+- current_task_base_sha: 36799164a26396ccde485cfa266dab81bd4e7e6d
+- run_status: INCOMPLETE
+- stop_reason: invocation_review_pass_budget_exhausted_12_of_12
 - preceding_invocation_stop_reason: review_pass_budget_exhausted_after_12_completed_passes
-- updated: 2026-10-15
+- updated: 2026-10-16
 
 ## Historical reconciliation — preceding invocation
 Main fetched and ff-only advanced to f0dec74973ef9d07129e19330356f8e6d2040227; #49 is a separate research-only PR at 7d151bfa78f3151c3e1bcc5a0f1bead7fbb66582, read using its actual Git ref because GitHub GraphQL/REST return Forbidden. Previous checkpoint branch/path/table are historical; append-only completion receipts below remain evidence. T001–T006,T008,T009,T012 completion commits exist in merged main. T010/T011/T013–T015 not claimed complete by this resume. Backend full CI at current main PASS, coverage86.77/87.50. No domain formula/decision/release edits. User explicitly prioritizes Tử Vi source capabilities over previous queue; existing task IDs are preserved.
@@ -510,3 +511,40 @@ T028 readinessrefreshedplan20: oneexistingregressiontest addedafterconcreteoldne
 - Addedfinite18line descriptor, reusedT027immutablechecks; no newruntimehelper/synthesis/API/UI/natal/source/default change. Originalreviewerssuppliedserializationtruthfully; originalfrozeninputerratumseparate, T026notactivated. Approvedinternalcoverage5→6.
 - Performance3,012baseline/currentrequestsPASS, added9coldreads80KB/8initialhashesonce,0warmreads/hashes; noSLAinvention. Sixupstreamwhitespacediagnostics onlythreeexactsourceHTMLsnapshots, applicationdiffoutsideexact3PASS. EngineeringreportsandSTATUSrecordevidence.
 - Totaltechnicalbudget10/12used. T029narrowQuanMãobranchcouldfitremainingfull-feature+performance2passes; source/independentvalid-inputreviewprerequisitesstillpending. Initialnewnegativegender0rejectedasnotAPIreachable; checkerorderedrerunvalid±1+validateChartInput andfreshmetadata/API200. Do notlabelinvalidresearchasgoldenorapprovedfixture.
+
+T028feature3679916 pushedcodex/tuvi-tai-tuvi-pha-interpretation; focusedPRcreateactualGraphQLPOSTForbidden, noPRnumber/merge/hostedCIclaim. DependencyorderT025300bcd6→T027b33a2d5→T0283679916.
+
+### T029 readiness (2026-10-16)
+- depth: notes
+- readiness: ready
+- plan_version: 22
+- approach_at_sha: 36799164a26396ccde485cfa266dab81bd4e7e6d
+- approach: approach/T029.md
+- task_spec_fingerprint: depends_on=T028|scope=backend/src/knowledge/sourcePalaceBinding.js, backend/test/sourcePalaceQuanMao.test.mjs, backend/test/sourcePalaceQuan.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md, docs/knowledge/interpretation-claims.json, docs/knowledge/interpretation-decisions/juan2-quan-co-cu-mao.json, docs/knowledge/research/juan2-palace/, docs/knowledge/reviews/juan2-palace/review-quan-mao-a.json, docs/knowledge/reviews/juan2-palace/review-quan-mao-b.json, .gitattributes, README.md, docs/planning/AUTODEV_MASTER_PLAN_V2.md|acceptance_criteria=Validate only the new 天機同在卯宮吉美 source branch; preserve existing Dậu claim/approval without duplication or unreviewed reuse; Preserve full reciprocal, 入廟/陷宮 and terminal adverse context; no grade, engine-brightness equivalence, integrated career or real-life outcome inference; Require independently verified API-valid positive/negative charts at Mão, Dậu wrong-branch and missing-pair/wrong-host conditions; never fabricate unreachable single-partner Mão witnesses; If accepted, exact pair-and-Mão AST, immutable actual evidence and attributed internal wording only; existing formulas/source identities/public/default gates unchanged
+- Actualbothsource/wordingapproval+parentcomparatorAI_ACCEPTED/MATCH, all9validatedrealfixtures+completecontext. OriginalBauthorclarifieddisclosuresexceptionfield, textsnotdeleted; semanticconditionsunchanged. Proceedfiniteexistingbinderonly, oldDậuprovenance/predicates/source/publicgatesretained. Last2technicalreviews fullfeature11+perf12; noscopeexpansionaftercap.
+
+
+## T029 final quality gate and invocation stop
+- Parent task PASS. Full-feature11 and performance12 independently clear; no R2701/R2801 confirmed blocking finding or fix. Single invocation budget12/12 consumed; Continue messages did not reset it. Overall product run INCOMPLETE because scope/release/evidence requirements remain, not because a single task or PR ended.
+- Stable backend CI65files88.43lines/90.09branches; final cumulative frontend206tests/lint/build PASS; all55 Chromium E2E PASS with ignored cloud config and system browser. Actual full-feature review23HTTP plus real frontend validators; performance7,530successful baseline/current requests, zero warm file reads over3,750current requests.
+- Exact new pair AND Mão annotation with actual dual approval and nine independently validated real fixtures; branch Dậu claim retained separately. Finite35,064valid-chart search has no single-partner Mão witness, not proof of unreachability. Invalid gender0 research witness rejected before freezing/review. B author independently classified four prose disclosures as limitations, retained their full text; no source/runtime requirement deleted or forced model agreement.
+- Registry approvedinternal4→7 this invocation: PhúcCơ–Cự, TàiTửVi–PháQuân and QuanCơ–CựMão; plus complete optional modern Đại hạn API/UI placement. Publicprose/fortune/AI/release gates remain closed, natal/default/classical formulas unchanged. No deploy or main bypass.
+- Ordered next queue: T030 source/dependency/independent-fixture investigation for modern Đại hạn heavenly stems (NOT approved by T025), GitHub API delivery once access returns, then genuinely new evidence for T026/T019/T022/T020. Fresh invocation review budget required before new implementation.
+
+- Final docs-link self-tests and checker PASS (226 markdown files). Staged whitespace: four expected diagnostics on exactly `quan-co-cu-mao-packet/raw-juan2.html` and `quan-co-cu-mao-packet/actual-review-checks/a-raw.html`, lines9/32 each; exact original bytes preserved. All staged changes outside those two named files pass. Source proposal replay and actual review document digests verified unchanged after archive finalization.
+
+
+## T029 delivery receipt and final resumable checkpoint
+- Feature commit: 36ebcb59c5224d836997faaac8ad702297279296, pushed successfully; independent git ls-remote confirms the exact remote feature SHA. Working tree was clean after feature delivery. Main independently remains 4c1761ea6448eeba0234c04405f9c9245eece320.
+- Actual `gh pr create --base codex/tuvi-tai-tuvi-pha-interpretation --head codex/tuvi-quan-co-cu-mao-interpretation --body-file /tmp/t029/pr-body.md` failed with `Post "https://api.github.com/graphql": Forbidden` (exit1). No new PR number, hosted-CI result, merge or deployment is asserted. Earlier three PR attempts failed the same way. Git push works; API access remains a separate external blocker. Do not request a token merely from unset environment variables or bypass main protection.
+- Verified remote dependency order: main4c1761e → codex/tuvi-modern-decadal-placement300bcd6 → codex/tuvi-phuc-co-cu-interpretationb33a2d5 → codex/tuvi-tai-tuvi-pha-interpretation3679916 → codex/tuvi-quan-co-cu-mao-interpretation36ebcb5 (plus this final checkpoint commit). No duplicate PR50–55 work.
+- PR title: feat(tuvi): source-scoped Quan Co Cu at Mao. Reviewable creation link: https://github.com/hptbee/b3_tuvi/compare/codex/tuvi-tai-tuvi-pha-interpretation...codex/tuvi-quan-co-cu-mao-interpretation?expand=1 . This is a comparison/creation link, not an existing PR.
+- Resume with fresh invocation review resources: reconcile this checkpoint against current main and all four remote branches; do not duplicate delivered work or fabricate merged status. T030 is source-research candidate only, not an approved stem formula. Preserve exact approved T025 age/branch projection, all actual source/model proofs and public-release restrictions.
+
+### Reviewable T029 PR body
+
+Adds an internal Quan Lộc annotation only when Thiên Cơ and Cự Môn share the palace at Mão. The existing Dậu claim remains independently bound and mutually exclusive; public interpretations and fortune narration remain withheld.
+
+Complete pinned source context and nine independently verified API-valid charts were reviewed by genuine independent gpt-6.1-sol and gpt-6-astra executions before implementation. Immutable source/AST/wording/fixture and actual review-document checks bind the finite existing evaluator entry. No brightness equivalence, career outcome, adverse modifier, natal formula or source identity is newly approved.
+
+Validation: backend65testfiles88.43/90.09, frontend206tests/lint/build,55ChromiumE2E, docs226files; full-feature/performance reviewers clear. Four original trailing-whitespace diagnostics across exactly two immutable HTML artifacts are documented and retained; all other staged whitespace checks pass. Dependency is codex/tuvi-tai-tuvi-pha-interpretation. No deployment or public release.
