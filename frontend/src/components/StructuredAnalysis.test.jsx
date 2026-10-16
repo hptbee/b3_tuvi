@@ -493,6 +493,7 @@ describe('explicit modern minor placement', () => {
 });
 
 const majorProfile = 'iztro-pinned-menh-cuc-decadal';
+const stemProfile = 'iztro-pinned-menh-cuc-decadal-stem';
 function majorBody(request, patch = {}) {
   const body = minorBody(request);
   const option = request.majorPeriod;
@@ -513,6 +514,10 @@ function majorBody(request, patch = {}) {
       decadeStartAge: age === 125 ? 116 : age >= 16 ? 16 : 6,
       decadeEndAge: age === 125 ? 125 : age >= 16 ? 25 : 15 } : {}), ...patch
   };
+  if (option?.profile === stemProfile) Object.assign(body.time.capabilities.dai_han_modern, {
+    calendarCompatibility: 'server_natal_menh_cuc_stem_branch_sex_age_projection_not_full_iztro_astrolabe',
+    heavenlyStem: age >= 6 ? 'Bính' : null, stemPlacement: age >= 6 ? 'supported' : 'not_applied'
+  }, patch);
   return body;
 }
 function stubMajorFetch(transform = body => body) {
@@ -523,8 +528,8 @@ function stubMajorFetch(transform = body => body) {
   vi.stubGlobal('fetch', fetch);
   return fetch;
 }
-async function applyMajorAge(user, age = '6') {
-  await user.selectOptions(screen.getByLabelText('Hồ sơ Đại hạn'), majorProfile);
+async function applyMajorAge(user, age = '6', profile = majorProfile) {
+  await user.selectOptions(screen.getByLabelText('Hồ sơ Đại hạn'), profile);
   const input = screen.getByLabelText('Tuổi mụ cho Đại hạn');
   await user.clear(input);
   if (age) await user.type(input, age);
@@ -638,5 +643,91 @@ describe('explicit modern major placement', () => {
     await applyMajorAge(user); await screen.findByRole('alert'); await user.click(screen.getByRole('button', { name: 'Thử lại chứng cứ' }));
     await screen.findByText(/Đại hạn tuổi mụ 6:/); expect(JSON.parse(fetch.mock.calls.at(-1)[1].body).majorPeriod).toEqual({ profile: majorProfile, nominalAge: 6 });
     await waitFor(() => expect(screen.getByRole('heading', { name: 'Trạng thái chứng cứ' })).toHaveFocus());
+  });
+});
+
+describe('explicit modern major stem projection', () => {
+  afterEach(() => vi.unstubAllGlobals());
+  it('commits same-age profile changes, hides drafts and preserves old display', async () => {
+    const fetch = stubMajorFetch(); const user = userEvent.setup();
+    render(<StructuredAnalysis userInfo={birth} />); await screen.findByRole('button', { name: /Mệnh:/ });
+    await applyMajorAge(user); await screen.findByText(/Đại hạn tuổi mụ 6: chi Thìn/);
+    const count = fetch.mock.calls.length;
+    await user.selectOptions(screen.getByLabelText('Hồ sơ Đại hạn'), stemProfile);
+    expect(screen.getByText(/Chưa áp dụng thay đổi Đại hạn/)).toBeVisible();
+    expect(screen.queryByText(/Đại hạn tuổi mụ 6:/)).not.toBeInTheDocument(); expect(fetch).toHaveBeenCalledTimes(count);
+    await user.selectOptions(screen.getByLabelText('Hồ sơ Đại hạn'), majorProfile);
+    expect(screen.getByText(/Đại hạn tuổi mụ 6: chi Thìn/)).toBeVisible();
+    await applyMajorAge(user, '6', stemProfile);
+    expect(await screen.findByText(/Đại hạn tuổi mụ 6: can Bính, chi Thìn/)).toBeVisible();
+    expect(JSON.parse(fetch.mock.calls.at(-1)[1].body).majorPeriod).toEqual({ profile: stemProfile, nominalAge: 6 });
+    await applyMajorAge(user); expect(await screen.findByText(/Đại hạn tuổi mụ 6: chi Thìn/)).toBeVisible();
+    expect(screen.queryByText(/can Bính, chi/)).not.toBeInTheDocument();
+    await applyMajorAge(user, '6', stemProfile); await screen.findByText(/can Bính, chi/);
+    await user.selectOptions(screen.getByLabelText('Hồ sơ Đại hạn'), '');
+    await screen.findByText('Chọn hồ sơ và nhập tuổi mụ để đối chiếu vị trí Đại hạn.');
+    await waitFor(() => expect(JSON.parse(fetch.mock.calls.at(-1)[1].body)).not.toHaveProperty('majorPeriod'));
+    expect(screen.getByLabelText('Tuổi mụ cho Đại hạn')).toHaveValue(null);
+  });
+  it.each([
+    { heavenlyStem: undefined }, { heavenlyStem: null }, { heavenlyStem: 'Kỉ' }, { heavenlyStem: 2 },
+    { heavenlyStem: 'Unknown' }, { stemPlacement: undefined }, { stemPlacement: 'not_applied' },
+    { profile: majorProfile }, { calendarCompatibility: 'server_natal_menh_cuc_branch_sex_age_projection_not_full_iztro_astrolabe' },
+    { sourcePin: 'forged' }, { palaceId: '9' }, { decadeStartAge: 7 }
+  ])('rejects malformed or wrong-profile stem evidence %j', async patch => {
+    stubMajorFetch((body, request) => { if (request.majorPeriod) Object.assign(body.time.capabilities.dai_han_modern, patch); return body; });
+    const user = userEvent.setup(); render(<StructuredAnalysis userInfo={birth} />); await screen.findByRole('button', { name: /Mệnh:/ });
+    await applyMajorAge(user, '6', stemProfile);
+    expect(await screen.findByRole('alert')).toHaveTextContent('Phản hồi trạng thái chứng cứ không hợp lệ');
+    expect(screen.queryByText(/Đại hạn tuổi mụ 6:/)).not.toBeInTheDocument();
+  });
+  it.each(['modern_profile_not_approved', 'modern_stem_profile_not_approved', 'invalid_chart', 'before_first_period', 'after_last_period'])('accepts closed new state %s only without a stem', async reason => {
+    stubMajorFetch((body, request) => {
+      if (request.majorPeriod) body.time.capabilities.dai_han_modern = {
+        ...majorBody({ majorPeriod: { profile: stemProfile, nominalAge: 1 } }).time.capabilities.dai_han_modern,
+        nominalAge: request.majorPeriod.nominalAge, reason,
+        status: reason.includes('period') ? 'not_applied' : 'blocked',
+        palaceMapping: reason === 'invalid_chart' ? 'invalid_chart' : 'not_applied' };
+      return body;
+    });
+    const user = userEvent.setup(); render(<StructuredAnalysis userInfo={birth} />); await screen.findByRole('button', { name: /Mệnh:/ });
+    await applyMajorAge(user, reason === 'after_last_period' ? '125' : '1', stemProfile);
+    await screen.findByRole('button', { name: /Mệnh:/ }); expect(screen.queryByRole('alert')).not.toBeInTheDocument();
+    expect(screen.queryByText(/can Bính, chi/)).not.toBeInTheDocument();
+  });
+  it.each([{ heavenlyStem: 'Bính', stemPlacement: 'supported' }, { heavenlyStem: 'Bính', stemPlacement: 'not_applied' }, { heavenlyStem: null, stemPlacement: 'supported' }, { heavenlyStem: undefined, stemPlacement: 'not_applied' }])('rejects leaking/missing closed stem fields %j', async patch => {
+    stubMajorFetch((body, request) => { if (request.majorPeriod) Object.assign(body.time.capabilities.dai_han_modern, patch); return body; });
+    const user = userEvent.setup(); render(<StructuredAnalysis userInfo={birth} />); await screen.findByRole('button', { name: /Mệnh:/ });
+    await applyMajorAge(user, '1', stemProfile); await screen.findByRole('alert');
+    expect(screen.queryByText(/Đại hạn tuổi mụ 1:/)).not.toBeInTheDocument();
+  });
+  it('rejects unexpected stem fields on the old profile', async () => {
+    stubMajorFetch((body, request) => { if (request.majorPeriod) body.time.capabilities.dai_han_modern.heavenlyStem = 'Bính'; return body; });
+    const user = userEvent.setup(); render(<StructuredAnalysis userInfo={birth} />); await screen.findByRole('button', { name: /Mệnh:/ });
+    await applyMajorAge(user); await screen.findByRole('alert');
+  });
+  it('discards a late same-age old-profile response and keeps minor/year options', async () => {
+    let finishOld;
+    const fetch = vi.fn(async (_url, init) => { const request = JSON.parse(init.body);
+      if (request.majorPeriod?.profile === majorProfile) return new Promise(resolve => { finishOld = resolve; });
+      return { ok: true, json: async () => majorBody(request) }; });
+    vi.stubGlobal('fetch', fetch); const user = userEvent.setup(); render(<StructuredAnalysis userInfo={birth} />);
+    await screen.findByRole('button', { name: /Mệnh:/ }); await applyMinorAge(user, '2'); await screen.findByText('Tuổi mụ 2: chi Thìn — cung Mệnh.');
+    await applyMajorAge(user); await applyMajorAge(user, '6', stemProfile); await screen.findByText(/can Bính, chi Thìn/);
+    await user.selectOptions(screen.getByLabelText('Chi năm xem'), 'Ngọ'); await screen.findByText(/can Bính, chi Thìn/);
+    expect(JSON.parse(fetch.mock.calls.at(-1)[1].body)).toMatchObject({ viewYearBranch: 'Ngọ', minorPeriod: { nominalAge: 2 }, majorPeriod: { profile: stemProfile, nominalAge: 6 } });
+    await act(async () => finishOld({ ok: true, json: async () => majorBody({ majorPeriod: { profile: majorProfile, nominalAge: 6 } }) }));
+    expect(screen.getByText(/can Bính, chi Thìn/)).toBeVisible(); expect(screen.queryByText(/Đại hạn tuổi mụ 6: chi/)).not.toBeInTheDocument();
+  });
+  it('clears the stem profile on birth A to B to A and retries the exact committed profile', async () => {
+    let failed = false;
+    const fetch = stubMajorFetch((body, request) => { if (request.majorPeriod && !failed) { failed = true; body.time.capabilities.dai_han_modern.stemPlacement = 'forged'; } return body; });
+    const user = userEvent.setup(); const { rerender } = render(<StructuredAnalysis userInfo={birth} />); await screen.findByRole('button', { name: /Mệnh:/ });
+    await applyMajorAge(user, '6', stemProfile); await screen.findByRole('alert'); await user.click(screen.getByRole('button', { name: 'Thử lại chứng cứ' }));
+    await screen.findByText(/can Bính, chi Thìn/); expect(JSON.parse(fetch.mock.calls.at(-1)[1].body).majorPeriod).toEqual({ profile: stemProfile, nominalAge: 6 });
+    rerender(<StructuredAnalysis userInfo={{ ...birth, gender: -1 }} />); await screen.findByRole('button', { name: /Mệnh:/ });
+    rerender(<StructuredAnalysis userInfo={birth} />); await screen.findByRole('button', { name: /Mệnh:/ });
+    expect(screen.getByLabelText('Hồ sơ Đại hạn')).toHaveValue(''); expect(screen.getByLabelText('Tuổi mụ cho Đại hạn')).toHaveValue(null);
+    expect(JSON.parse(fetch.mock.calls.at(-1)[1].body)).not.toHaveProperty('majorPeriod'); expect(screen.queryByText(/can Bính, chi/)).not.toBeInTheDocument();
   });
 });

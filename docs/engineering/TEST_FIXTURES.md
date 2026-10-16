@@ -9,6 +9,10 @@ Bảng hoặc quan hệ có thể đối chiếu với quy ước đã ghi trong
 - `placement.tables.test.mjs`
 - `palaceRelation.test.mjs`
 
+## Source-comparative fixture
+
+- `modernMajorStem.test.mjs`: independent pinned-source arithmetic for 24 valid natal charts, 288 periods, 654 age queries and 120 finite stem/branch mappings. Missing/conflicting metadata mutations are synthetic structural cases; pre-change response snapshots are engineering regressions. None is an expert-verified chart or a real-world prediction.
+
 ## Expert-verified golden case
 
 Không có file expert-verified golden. Chưa có lá số nào được một chuyên gia ký và khóa kết quả từng cung.
@@ -23,6 +27,8 @@ Giữ hành vi đã có của engine, API, hoặc chuẩn hóa. Kết quả kỳ
 - `interpretationBinding.test.mjs`: existing interpretation evidence binding and unreviewed-clone regressions; no new source approval or expert verification.
 - `modernMajorBinding.test.mjs`: separately approved immutable modern Đại hạn evidence, actual distinct-model decision replay and tamper withholding; not inherited minor approval or historical authentication.
 - `modernMajor.test.mjs`: independent real natal witnesses and finite decade boundaries, strict server metadata and adapter negatives; engineering/source-comparative fixtures, not life-outcome goldens.
+- `modernMajorStemBinding.test.mjs`: separately approved can–chi profile, immutable actual reviews and frozen artifacts, coherent forgery rejection, old-gate prerequisite and cached fixed-loader failures; no historical authentication.
+- `modernMajorStemApi.test.mjs`: actual HTTP replay of every independent source-comparative period, two-key opt-in, combined overlays, unchanged old/omitted fields, ask/no-store/privacy and no personal persistence.
 - `modernMajorApi.test.mjs`: actual HTTP explicit-age modern Đại hạn, combined optional profiles, ask/error/privacy/no-store and no persistence; structural placement only.
 - `modernMinorBinding.test.mjs`: exact pinned modern-software profile evidence, distinct actual model replay and tamper withholding; no historical authentication or interpretation approval.
 - `modernMinor.test.mjs`: 120 source-comparative endpoints, 2880 independent finite age allocations, reachable natal layouts and strict option/chart boundaries; engineering mathematical witnesses, not historical goldens.

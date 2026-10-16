@@ -47,3 +47,16 @@ Không chọn hồ sơ: `not_applied`. Tuổi trước/sau bảng: `not_applied`
 Upstream có cấu hình ranh giới năm/ngày/tuổi và tùy chọn `from`; cách xử lý tháng nhuận cũng khác B3 tại ngày 15 và giờ Tí muộn. Chúng không thuộc phép chiếu này. Đặc biệt, quy tắc tuổi theo sinh nhật của upstream tăng tuổi khi **qua** ngày sinh âm lịch, không phải đúng ngày bằng nhau. Ứng dụng không chọn hộ một quy ước chuyển ngày thành tuổi.
 
 [Hồ sơ nguồn và quyết định](../knowledge/research/fortune/modern-decadal/REPRODUCING.md) giữ nguyên các đoạn đầy đủ, phụ thuộc, 39 artifact đã ghim, fixture thật, hai đánh giá độc lập và quyết định so sánh của B3. Đây là đối chiếu cấu trúc phần mềm với nguồn hiện đại, không phải golden được chuyên gia ký, xác thực bản cổ hoặc bằng chứng khoa học về kết quả đời người. Không duyệt can/sao/Tứ Hóa Đại hạn, Đồng hạn, lời luận hay phát hành production.
+
+
+## Hồ sơ riêng có thiên can Đại hạn
+
+Lựa chọn `iztro-pinned-menh-cuc-decadal-stem` dùng cùng giới hạn tuổi/chặng/cung của hồ sơ chỉ chi và bổ sung thiên can đã được xét riêng trên nguồn iztro đã ghim. Trong danh sách **Hồ sơ Đại hạn**, chọn mục can và chi rồi nhập tuổi mụ và áp dụng. Hồ sơ cũ giữ nguyên kết quả; ứng dụng không tự đổi lựa chọn cũ sang hồ sơ có can.
+
+API vẫn chỉ nhận đúng hai khóa `profile` và `nominalAge`; không nhận can, năm hoặc cung do client cung cấp. Chỉ hồ sơ mới thêm `heavenlyStem` và `stemPlacement`. Khi đúng cung đã ánh xạ: can là một trong Giáp, Ất, Bính, Đinh, Mậu, Kỷ, Canh, Tân, Nhâm, Quý và `stemPlacement: supported`. Mọi kết quả mới bị chặn hoặc trước/sau bảng tuổi đều có `heavenlyStem: null`, `stemPlacement: not_applied`. Hồ sơ cũ và yêu cầu không chọn hồ sơ không có hai trường này.
+
+Phép chiếu dùng can năm âm lịch đã được server tính và kiểm tra tính nhất quán, không lấy năm dương lịch nhập vào hoặc năm xem. Ngũ Hổ cho can đầu tại Dần, rồi cộng **chỉ số cung đích tính từ Dần** theo vòng 12 cung trước khi lấy modulo 10 can. Số chặng Đại hạn không thay được chỉ số cung này; khi đi qua Sửu → Dần phải tính lại vị trí, không cộng tiếp can của chặng trước. Chiều thuận/nghịch quyết định cung đích; không đảo chiều can thêm lần nữa.
+
+Kết quả có `calendarCompatibility: server_natal_menh_cuc_stem_branch_sex_age_projection_not_full_iztro_astrolabe`. Hồ sơ mới cần cả chứng cứ duyệt chi/tuổi cũ và [quyết định thiên can riêng](../knowledge/research/fortune/modern-decadal-stem/decision.json). Thiếu chứng cứ mới trả `blocked` với `modern_stem_profile_not_approved`; hồ sơ chỉ chi cũ vẫn độc lập. Hai mô hình đã kiểm tra nguồn, 24 lá số/288 chặng và 120 phép chiếu can hữu hạn; fixture là đối chiếu thuật toán theo nguồn, không phải golden được chuyên gia hoặc kết quả đời thực xác minh.
+
+Phạm vi này không duyệt lịch upstream, tùy chọn `from`, tự suy tuổi, sao Đại hạn, Tứ Hóa, lời luận hoặc public release. `publicFortune: false`, `interpretation: null` và các quyết định Toàn Thư cổ điển giữ nguyên. [Bằng chứng và cách chạy lại](../knowledge/research/fortune/modern-decadal-stem/STATUS.md) giữ nguyên đầu vào đóng băng, model output thực tế và giới hạn.

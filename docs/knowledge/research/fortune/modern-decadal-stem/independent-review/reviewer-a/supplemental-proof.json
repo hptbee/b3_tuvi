@@ -1,0 +1,164 @@
+[
+  {
+    "path": "src/data/earthlyBranches.ts",
+    "bytes": 3599,
+    "sha256": "3dd6e4b260a18a2a8c0e4aec2a12e766f29e52d7b4c01ecbf332f6066a3f1b34",
+    "gitPinByteMatch": true
+  },
+  {
+    "path": "src/data/index.ts",
+    "bytes": 122,
+    "sha256": "e45e0875d60c2aede27dad389f11d3cdda7e31d1694e5f53ff32cd025288f2a2",
+    "gitPinByteMatch": true
+  },
+  {
+    "path": "src/i18n/starAliases.ts",
+    "bytes": 744,
+    "sha256": "5db704982d754e9e9487c80dfc171b51584cb89014b68171f7c6b87171a49b14",
+    "gitPinByteMatch": true
+  },
+  {
+    "path": "src/i18n/locales/en-US/index.ts",
+    "bytes": 503,
+    "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007",
+    "gitPinByteMatch": true
+  },
+  {
+    "path": "src/i18n/locales/en-US/earthlyBranch.ts",
+    "bytes": 280,
+    "sha256": "dcf7ffb67233fede74de6290e2c341dce80bcbd81b053c48e9667f42ad0bd0f2",
+    "gitPinByteMatch": true
+  },
+  {
+    "path": "src/i18n/locales/en-US/fiveElementsClass.ts",
+    "bytes": 150,
+    "sha256": "05a4919dab702883c0cb85b869c11af7ee47a9afd5a500ccee0e0f34f78e09be",
+    "gitPinByteMatch": true
+  },
+  {
+    "path": "src/i18n/locales/en-US/gender.ts",
+    "bytes": 65,
+    "sha256": "8c2b91082c2d88bd27cc4678965003c67b8636799ed83bd2f94369de0e367a0d",
+    "gitPinByteMatch": true
+  },
+  {
+    "path": "src/i18n/locales/ja-JP/index.ts",
+    "bytes": 503,
+    "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007",
+    "gitPinByteMatch": true
+  },
+  {
+    "path": "src/i18n/locales/ja-JP/earthlyBranch.ts",
+    "bytes": 280,
+    "sha256": "8672f42c8460b8ae0079e643e1fe62db133fcd19879dd2ad08b5ab3b606a2ab8",
+    "gitPinByteMatch": true
+  },
+  {
+    "path": "src/i18n/locales/ja-JP/fiveElementsClass.ts",
+    "bytes": 167,
+    "sha256": "01a3f688b35cb994845e6051e8bf97ab687fbe30ca594e44ea85f70583b15c85",
+    "gitPinByteMatch": true
+  },
+  {
+    "path": "src/i18n/locales/ja-JP/gender.ts",
+    "bytes": 61,
+    "sha256": "a19607ebf4055ed0f0daa3a78b21288185a67fdf8190e750251be72de19e5d8d",
+    "gitPinByteMatch": true
+  },
+  {
+    "path": "src/i18n/locales/ko-KR/index.ts",
+    "bytes": 503,
+    "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007",
+    "gitPinByteMatch": true
+  },
+  {
+    "path": "src/i18n/locales/ko-KR/earthlyBranch.ts",
+    "bytes": 280,
+    "sha256": "f2a7dc855e5cdf71c74dba286e3463f2fd063fa31b39ce3b14cced0da4784fc7",
+    "gitPinByteMatch": true
+  },
+  {
+    "path": "src/i18n/locales/ko-KR/fiveElementsClass.ts",
+    "bytes": 152,
+    "sha256": "f43e780a5c5ea4a8ebf1f4900364fe7c9931bdc85d6ec10ea593bd26d215a5ad",
+    "gitPinByteMatch": true
+  },
+  {
+    "path": "src/i18n/locales/ko-KR/gender.ts",
+    "bytes": 67,
+    "sha256": "aa0f5ffe65da671b0c1c663e2bf4895801b02783e6e8c1e3f105d0046713b0e5",
+    "gitPinByteMatch": true
+  },
+  {
+    "path": "src/i18n/locales/zh-CN/index.ts",
+    "bytes": 503,
+    "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007",
+    "gitPinByteMatch": true
+  },
+  {
+    "path": "src/i18n/locales/zh-CN/earthlyBranch.ts",
+    "bytes": 280,
+    "sha256": "8672f42c8460b8ae0079e643e1fe62db133fcd19879dd2ad08b5ab3b606a2ab8",
+    "gitPinByteMatch": true
+  },
+  {
+    "path": "src/i18n/locales/zh-CN/fiveElementsClass.ts",
+    "bytes": 152,
+    "sha256": "4378134b7172d28231a77980a137b6c1448f8f4b1227a6317306fba85c0f4366",
+    "gitPinByteMatch": true
+  },
+  {
+    "path": "src/i18n/locales/zh-CN/gender.ts",
+    "bytes": 61,
+    "sha256": "a19607ebf4055ed0f0daa3a78b21288185a67fdf8190e750251be72de19e5d8d",
+    "gitPinByteMatch": true
+  },
+  {
+    "path": "src/i18n/locales/zh-TW/index.ts",
+    "bytes": 503,
+    "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007",
+    "gitPinByteMatch": true
+  },
+  {
+    "path": "src/i18n/locales/zh-TW/earthlyBranch.ts",
+    "bytes": 280,
+    "sha256": "8672f42c8460b8ae0079e643e1fe62db133fcd19879dd2ad08b5ab3b606a2ab8",
+    "gitPinByteMatch": true
+  },
+  {
+    "path": "src/i18n/locales/zh-TW/fiveElementsClass.ts",
+    "bytes": 152,
+    "sha256": "4378134b7172d28231a77980a137b6c1448f8f4b1227a6317306fba85c0f4366",
+    "gitPinByteMatch": true
+  },
+  {
+    "path": "src/i18n/locales/zh-TW/gender.ts",
+    "bytes": 61,
+    "sha256": "a19607ebf4055ed0f0daa3a78b21288185a67fdf8190e750251be72de19e5d8d",
+    "gitPinByteMatch": true
+  },
+  {
+    "path": "src/i18n/locales/vi-VN/index.ts",
+    "bytes": 503,
+    "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007",
+    "gitPinByteMatch": true
+  },
+  {
+    "path": "src/i18n/locales/vi-VN/earthlyBranch.ts",
+    "bytes": 300,
+    "sha256": "933f9475bd0b580904515dc3198f059f8924310de10dd8538d2eb02e26311f0c",
+    "gitPinByteMatch": true
+  },
+  {
+    "path": "src/i18n/locales/vi-VN/fiveElementsClass.ts",
+    "bytes": 187,
+    "sha256": "b5b7923adb3df59f2b24cc579347c5ffa8eb86082d0e6b05b3aa3a961ea9d858",
+    "gitPinByteMatch": true
+  },
+  {
+    "path": "src/i18n/locales/vi-VN/gender.ts",
+    "bytes": 62,
+    "sha256": "79ab1b39e62fda211cd5b21e916446ee58d6afa10b3a639dd7799987ef7ef3d4",
+    "gitPinByteMatch": true
+  }
+]

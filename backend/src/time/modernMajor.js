@@ -1,15 +1,16 @@
 import { CUC_SO_MAP, DIA_CHI, THIEN_CAN } from '../engine/constants.js';
 import { MODERN_MAJOR_ALGORITHM as A, MODERN_MAJOR_PIN, MODERN_MAJOR_PROFILE, MODERN_MAJOR_SOURCE,
     verifyModernMajorBinding } from '../knowledge/modernMajorBinding.js';
+import { MODERN_MAJOR_STEM_ALGORITHM as S, MODERN_MAJOR_STEM_PROFILE, verifyModernMajorStemBinding } from '../knowledge/modernMajorStemBinding.js';
 import { mapAnnualStarToPalace } from './thienDuc.js';
 
-export { MODERN_MAJOR_PROFILE };
+export { MODERN_MAJOR_PROFILE, MODERN_MAJOR_STEM_PROFILE };
 export function validateMajorPeriod(value) {
     if (!value || typeof value !== 'object' || Array.isArray(value)
         || ![Object.prototype, null].includes(Object.getPrototypeOf(value))) return false;
     const keys = Reflect.ownKeys(value);
     return keys.length === 2 && keys.includes('profile') && keys.includes('nominalAge')
-        && value.profile === MODERN_MAJOR_PROFILE && Number.isInteger(value.nominalAge)
+        && [MODERN_MAJOR_PROFILE, MODERN_MAJOR_STEM_PROFILE].includes(value.profile) && Number.isInteger(value.nominalAge)
         && value.nominalAge >= A.nominalAgeRange.min && value.nominalAge <= A.nominalAgeRange.max;
 }
 /** Pure projection of the twelve allocated source periods; no calendar or childhood inference. */
@@ -27,6 +28,13 @@ export function modernMajorPeriod({ menhBranchId, cucNumber, birthYearBranch, ge
     const branch = DIA_CHI[((offset % A.wrap) + A.wrap) % A.wrap + 1];
     const decadeStartAge = cucNumber + A.yearsPerPeriod * decadeIndex;
     return { reason: null, branch, decadeIndex, decadeStartAge, decadeEndAge: decadeStartAge + A.rangeEndOffset };
+}
+/** Source-selected physical branch, indexed from Dần; never chronological decade index. */
+export function modernMajorStem({ birthYearStemIndex, selectedBranchId } = {}) {
+    if (!Number.isInteger(birthYearStemIndex) || birthYearStemIndex < 0 || birthYearStemIndex > 9
+        || !Number.isInteger(selectedBranchId) || selectedBranchId < 1 || selectedBranchId > 12) return null;
+    const sourcePalaceIndex = (selectedBranchId + 9) % 12;
+    return S.stemNames[(S.tigerStartStemIndexes[birthYearStemIndex] + sourcePalaceIndex) % 10];
 }
 function closed(extra) {
     return { id: 'dai_han_modern', profile: null, nominalAge: null,
@@ -59,11 +67,21 @@ function trustedInputs(chart, gender) {
 export function modernMajorCapability(chart, options = {}) {
     if (!Object.hasOwn(options, 'majorPeriod')) return closed({ status: 'not_applied', reason: 'missing_explicit_profile_and_nominal_age' });
     if (!validateMajorPeriod(options.majorPeriod)) return closed({ status: 'not_applied', reason: 'invalid_major_period' });
-    const { profile, nominalAge } = options.majorPeriod, requested = { profile, nominalAge };
+    const { profile, nominalAge } = options.majorPeriod;
+    const stemProfile = profile === MODERN_MAJOR_STEM_PROFILE;
+    const requested = { profile, nominalAge, ...(stemProfile ? { heavenlyStem: null, stemPlacement: 'not_applied',
+        calendarCompatibility: 'server_natal_menh_cuc_stem_branch_sex_age_projection_not_full_iztro_astrolabe' } : {}) };
     if (!verifyModernMajorBinding().ok) return closed({ ...requested, status: 'blocked', reason: 'modern_profile_not_approved' });
+    if (stemProfile && !verifyModernMajorStemBinding().ok) return closed({ ...requested, status: 'blocked', reason: 'modern_stem_profile_not_approved' });
     const input = trustedInputs(chart, options.gender);
     if (!input) return closed({ ...requested, status: 'blocked', reason: 'invalid_chart', palaceMapping: 'invalid_chart' });
     const period = modernMajorPeriod({ ...input, nominalAge });
     if (period.reason) return closed({ ...requested, status: 'not_applied', reason: period.reason });
-    return mapAnnualStarToPalace(closed({ ...requested, ...period, status: 'branch_placed', branchPlacement: 'supported' }), chart);
+    const result = mapAnnualStarToPalace(closed({ ...requested, ...period, status: 'branch_placed', branchPlacement: 'supported' }), chart);
+    if (stemProfile && result.palaceMapping === 'mapped') {
+        result.heavenlyStem = modernMajorStem({ birthYearStemIndex: chart.lunar.canIndex,
+            selectedBranchId: DIA_CHI.indexOf(period.branch) });
+        result.stemPlacement = 'supported';
+    }
+    return result;
 }

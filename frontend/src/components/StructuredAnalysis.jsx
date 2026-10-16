@@ -30,6 +30,9 @@ const MINOR_SOURCE = 'iztro-modern-software';
 const MINOR_PIN = '2f00e2ab0c80b1632e55bc362f2ae26e121245cb';
 const MINOR_COMPATIBILITY = 'branch_sex_age_projection_not_full_iztro_astrolabe';
 const MAJOR_PROFILE = 'iztro-pinned-menh-cuc-decadal';
+const MAJOR_STEM_PROFILE = 'iztro-pinned-menh-cuc-decadal-stem';
+const HEAVENLY_STEMS = ['Giáp', 'Ất', 'Bính', 'Đinh', 'Mậu', 'Kỷ', 'Canh', 'Tân', 'Nhâm', 'Quý'];
+const MAJOR_STEM_COMPATIBILITY = 'server_natal_menh_cuc_stem_branch_sex_age_projection_not_full_iztro_astrolabe';
 const MAJOR_COMPATIBILITY = 'server_natal_menh_cuc_branch_sex_age_projection_not_full_iztro_astrolabe';
 const EMPTY_MINOR_DRAFT = { profile: '', age: '' };
 
@@ -64,27 +67,32 @@ function validMinorResponse(body, option) {
 
 function validMajorResponse(body, option) {
   const cap = body.time?.capabilities?.dai_han_modern;
+  const withStem = option?.profile === MAJOR_STEM_PROFILE;
+  if (option && ![MAJOR_PROFILE, MAJOR_STEM_PROFILE].includes(option.profile)) return false;
+  if (cap && !withStem && (Object.hasOwn(cap, 'heavenlyStem') || Object.hasOwn(cap, 'stemPlacement'))) return false;
   if (cap === undefined) return option === null;
   if (!cap || typeof cap !== 'object' || cap.id !== 'dai_han_modern'
     || cap.publicFortune !== false || cap.interpretation !== null || cap.interpretationStatus !== 'blocked'
     || cap.sourceId !== MINOR_SOURCE || cap.sourcePin !== MINOR_PIN
     || cap.ageInput !== 'caller_supplied' || cap.ageDerivation !== 'not_applied'
-    || cap.calendarCompatibility !== MAJOR_COMPATIBILITY) return false;
+    || cap.calendarCompatibility !== (withStem ? MAJOR_STEM_COMPATIBILITY : MAJOR_COMPATIBILITY)) return false;
   const emptyPlacement = cap.branch === null && cap.palaceId === null
     && cap.functionId === null && cap.functionLabel === null
     && cap.decadeIndex === null && cap.decadeStartAge === null && cap.decadeEndAge === null;
-  const closed = emptyPlacement && cap.branchPlacement === 'not_applied';
+  const closed = emptyPlacement && cap.branchPlacement === 'not_applied'
+    && (!withStem || (cap.heavenlyStem === null && cap.stemPlacement === 'not_applied'));
   if (!option) return cap.status === 'not_applied'
     && cap.reason === 'missing_explicit_profile_and_nominal_age'
     && cap.profile === null && cap.nominalAge === null && cap.palaceMapping === 'not_applied' && closed;
   if (cap.profile !== option.profile || cap.nominalAge !== option.nominalAge) return false;
   if (cap.status === 'blocked') return closed && (
-    (cap.reason === 'modern_profile_not_approved' && cap.palaceMapping === 'not_applied')
+    ((cap.reason === 'modern_profile_not_approved' || (withStem && cap.reason === 'modern_stem_profile_not_approved')) && cap.palaceMapping === 'not_applied')
     || (cap.reason === 'invalid_chart' && cap.palaceMapping === 'invalid_chart'));
   if (cap.status === 'not_applied') return closed && cap.palaceMapping === 'not_applied'
     && ((cap.reason === 'before_first_period' && option.nominalAge < 6)
       || (cap.reason === 'after_last_period' && option.nominalAge > 121));
-  if (cap.status !== 'branch_placed' || cap.reason !== null
+  if ((withStem && (!HEAVENLY_STEMS.includes(cap.heavenlyStem) || cap.stemPlacement !== 'supported'))
+    || cap.status !== 'branch_placed' || cap.reason !== null
     || cap.branchPlacement !== 'supported' || cap.palaceMapping !== 'mapped'
     || !YEAR_BRANCHES.includes(cap.branch) || cap.palaceId !== String(YEAR_BRANCHES.indexOf(cap.branch) + 1)
     || !Object.hasOwn(PALACE_LABELS, cap.functionId)
@@ -432,14 +440,14 @@ export default function StructuredAnalysis({ userInfo }) {
   const applyMajor = (event) => {
     event.preventDefault();
     const age = Number(majorDraft.age);
-    if (majorDraft.profile !== MAJOR_PROFILE || majorDraft.age.trim() === ''
+    if (![MAJOR_PROFILE, MAJOR_STEM_PROFILE].includes(majorDraft.profile) || majorDraft.age.trim() === ''
       || !Number.isInteger(age) || age < 1 || age > 125) {
       setMajorError('Chọn hồ sơ và nhập tuổi mụ là số nguyên từ 1 đến 125.');
       return;
     }
     setMajorError('');
-    setMajorDraftState({ key, profile: MAJOR_PROFILE, age: String(age) });
-    setMajorCommittedState({ key, option: { profile: MAJOR_PROFILE, nominalAge: age } });
+    setMajorDraftState({ key, profile: majorDraft.profile, age: String(age) });
+    setMajorCommittedState({ key, option: { profile: majorDraft.profile, nominalAge: age } });
   };
   const majorPlacement = current.body?.time?.capabilities?.dai_han_modern;
   const minorPlacement = current.body?.time?.capabilities?.tieu_han_modern;
@@ -520,12 +528,13 @@ export default function StructuredAnalysis({ userInfo }) {
         </section>
         <section className="modern-minor-panel" aria-labelledby="modern-major-heading">
           <h3 id="modern-major-heading">Vị trí Đại hạn — hồ sơ phần mềm iztro</h3>
-          <p id="modern-major-help">Bạn nhập tuổi mụ; ứng dụng không tự tính tuổi từ ngày hoặc năm xem. Chỉ đối chiếu vị trí trên lá số, chưa có luận vận hạn.</p>
+          <p id="modern-major-help">Bạn nhập tuổi mụ; ứng dụng không tự tính tuổi từ ngày hoặc năm xem. Chỉ đối chiếu vị trí trên lá số, chưa có luận vận hạn. Hồ sơ can và chi dùng can năm sinh âm lịch do máy chủ tính trên lá số B3, không đồng nhất toàn bộ lịch iztro.</p>
           <p>Đối chiếu trên Mệnh, Cục và chi năm sinh của lá số này; không xác nhận toàn bộ lịch hoặc lá số iztro. Hồ sơ này độc lập với nhãn Đại hạn có sẵn và nguồn Toàn Thư cổ điển.</p>
           <form className="modern-minor-controls" onSubmit={applyMajor} noValidate>
             <label>Hồ sơ Đại hạn
               <select aria-label="Hồ sơ Đại hạn" value={majorDraft.profile} onChange={event => changeMajorDraft({ profile: event.target.value })}>
                 <option value="">Chưa chọn</option>
+                <option value={MAJOR_STEM_PROFILE}>iztro ghim nguồn — can và chi cung</option>
                 <option value={MAJOR_PROFILE}>iztro — Mệnh, Cục, tuổi mụ nhập trực tiếp</option>
               </select>
             </label>
@@ -541,7 +550,7 @@ export default function StructuredAnalysis({ userInfo }) {
             {majorDirty ? <p>Chưa áp dụng thay đổi Đại hạn. Chọn hồ sơ, nhập tuổi mụ rồi áp dụng.</p>
               : !majorOption ? <p>Chọn hồ sơ và nhập tuổi mụ để đối chiếu vị trí Đại hạn.</p>
                 : current.status === 'ready' && majorPlacement?.status === 'branch_placed'
-                  ? <p>Đại hạn tuổi mụ {majorOption.nominalAge}: chi {majorPlacement.branch} — cung {PALACE_LABELS[majorPlacement.functionId]}; khoảng tuổi mụ {majorPlacement.decadeStartAge}–{majorPlacement.decadeEndAge}.</p>
+                  ? <p>Đại hạn tuổi mụ {majorOption.nominalAge}: {majorOption.profile === MAJOR_STEM_PROFILE ? `can ${majorPlacement.heavenlyStem}, ` : ''}chi {majorPlacement.branch} — cung {PALACE_LABELS[majorPlacement.functionId]}; khoảng tuổi mụ {majorPlacement.decadeStartAge}–{majorPlacement.decadeEndAge}.</p>
                   : current.status === 'ready' && majorPlacement?.reason === 'before_first_period'
                     ? <p>Tuổi mụ {majorOption.nominalAge} chưa đến khoảng Đại hạn đầu tiên theo hồ sơ này; không gán cung tuổi nhỏ.</p>
                     : current.status === 'ready' && majorPlacement?.reason === 'after_last_period'

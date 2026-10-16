@@ -1,0 +1,11 @@
+{
+  "policyVersion": "dual-ai-source-review-v1",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "decision": "CONFLICT",
+  "reason": "reviews disagree",
+  "disagreements": [
+    "verdict"
+  ]
+}
