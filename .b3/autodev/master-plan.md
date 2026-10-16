@@ -1,6 +1,6 @@
 # Autonomous Product Completion
 
-- version: 26
+- version: 27
 - source: User mission 2026-10-14; fresh run from upstream main 45615a48d0c75b90138cfc618320ffae6e9c34e0
 
 ## Original requirements
@@ -509,8 +509,40 @@ Currentinvocation10/12actualtechnicalreviewsused, NOTexhausted; no budgetreset, 
 
 ActualPRcreate--basecodex/tuvi-modern-decadal-stems--headcodex/tuvi-modern-decadal-mutagens failedPOSThttps://api.github.com/graphql Forbidden(exit1). mainstill774ac6c, parentbranch655c219. No PRnumber/hostedCI/merge/deployinvented; overallrunINCOMPLETEfordeliveryandremainingproductscope.
 
-## Current ordered resumable queue
+## Historical T032 queue before same-PR recovery (superseded below)
 1. Reconcilelatestmainandbothremoteheads, preserve completedT029/T030/T031/T032 andR3501closure. WhenGitHubAPIaccessisavailable, createT030/T031PRcodex/tuvi-modern-decadal-stems→main FIRST, thenT032codex/tuvi-modern-decadal-mutagens→parentbranch(orretargetmainafterparentmerge). Actualhostedchecks/branch/source/domain/releasegatesbeforeauthorizedauto-merge; no direct-mainpush/deployment. DurablePRbodyandcommandsbelowinprogress.md.
 2. Nextsourceinvestigation: inspectwhetherpinnedmodernTiểuhạnmetadatahasacompletesource-scopedheavenly-stemprojectionanalogousbutNOTapprovedbyT030/T032. Firstcheckcompletecall/index/config/year/agechainandindependentvalidfixtures; do notreuseapprovaljustbecausefieldslooksimilar. Thisisresearchcandidate/notapprovedruntime/notanimplementation-readytask. Currentremaining2reviewslotscannotcoveranewLARGEsource+API/UIcapabilitywithmandatoryCORE/APIUI/performance/crosscut; preservecheckpointinsteadofstartingunreviewablecode. Currentbudgetis10/12,notexhausted.
 3. T026/T019/T022/T020remainpreciselyevidence-blocked: clauseattachment,19vs18正曜taxonomy/吉星拱照,ThiênPhủsemantics,classicaldecadeage/startandTiểuhạnparameters. Pursueonlymeaningfulnewevidence; no repeatedidenticalNO-GOpackets, no inventedtraditionalconditions.
 4. Productionreadinessstillrequiresunresolveddomain/public/source/releaseapprovalsandactualhostedoperationalchecks. Localtestcoverageorsoftware-sourcecomparisoncannotreplacehistorical/expertverification.
+
+
+### T033 — permanent real HTTP to production client contract regression
+- status: completed
+- commit: ff153baee9914b1bc8fb5d6a9916469cf55992bc
+- depends_on: [T032]
+- task_base: dd92577c99b071afb12fec3dc8c400bd3da997d0
+- scope: frontend/src/components/StructuredAnalysis.jsx, frontend/src/components/structuredAnalysisContract.js, backend/test/structuredAnalysisContract.integration.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md, docs/knowledge/research/fortune/modern-decadal-mutagen/STATUS.md, docs/knowledge/research/fortune/modern-decadal-mutagen/engineering-review/
+- acceptance_criteria:
+  - Use the same unchanged pure response validators in production React and permanent Node HTTP integration tests without source-text slicing, VM execution, copied predicates, new framework or browser
+  - Reachable accepted charts cover all source stems/targets and shared palaces plus closed/legacy/combined contracts and brightness-name regression, synthetic forgeries remain clearly classified
+  - New integration is registered in existing backend CI, retains privacy/no-store/no-persistence and deterministic temporary-resource cleanup
+  - Preserve all formulas, source approvals, public gates, response/render/state behavior, existing component/browser tests and current branch
+- verification:
+  - Existing314frontendcharacterization, newfocusedNodeintegration+fixtureclassification thenfullbackendCI; frontendfullCI/lint/buildbecauseproductionimportschange; demonstrateR3501regressionwouldfailthepermanenttest; fullMEDIUMindependentreview+fix/freshreviewifneededwithinremaining2passes. No browser.
+
+Version27: ownerasksnextstepONSAMEPR; currentbranchdd92577cleanandremotesreconciled, GitHubPRliststillForbidden. T032sourcefeaturecomplete; prioritize actualdiscoveredR3501testgap before newunapprovedformula. PriorrealHTTP/frontendprobeswereonlyscratch/archivedscripts,noteffectiveCIgates. BoundedpurecontractextractionenablesdurableNodeintegrationusinggenuineproductionexports, preservingallbehavior/source. MEDIUMsinglecoherentcontracttestabilitychangefitsremaining2reviews; no budgetreset(total10/12alreadyused). No newT033formula/sourceapprovalrequiredorclaimed. Keep branchcodex/tuvi-modern-decadal-mutagens;no newbranch/PR.
+
+
+## T033 completion and recovered existing PR60 delivery
+T033completedff153baee9914b1bc8fb5d6a9916469cf55992bc, actualnonforcefast-forwardpush655c219→ff153ba oncodex/tuvi-modern-decadal-stems. NativeGitPR60/headalsoff153baandnewmerge-refb418b42090f114156df8a4268f001667fc2a7b2c,main774ac6cunchanged. UserSAMEPRrequirementsatisfiedwithoutnewPR/cherry-pick/historyrewrite; T032/T033historypreserved andbothbranchrefsretained. CheckpointwillbeconsumedonexistingPR60headbranch.
+
+Pureproductionclientcontractextractionbyte-identical25declarations/220lines; permanentNodeHTTPgate32requests26periods/24chartsall40cells15targets13sharedactualB/H/M/V/Đsuffixes,16syntheticrejections. Scratchpre-fixmutantexpectedfailureprovesR3501sensitivity. FullNode22.23.2backend72scripts(58unit14integration)89.15/89.99andfrontend314tests89.38/90.36/lint/buildPASS. Fullreview11andcumulativesame-PRcrosscut12clear, independent674HTTP/576endpoints2304rows40warmmutationsoldprofileexact. Noconfirmedblockingfindings; nofixrequired. All44sourceinputsfrozen/runtime/sourcebytesunchanged; no approvalfromcoverage.
+
+Currentinvocation12/12actualreviewcapEXHAUSTEDafterfinalcrosscut12; no13threview/newimplementation. CurrenttasklocalPASS; overallproductrunINCOMPLETEforremainingdomain/releaseworkandhostedgateaccess. T033fullstagedwhitespacePASS; cumulativePR46previouslyacceptedsourceformatdiagnosticsexactthreefiles(modern-decadal-stem/review-context.txt44,decadal-main-block.txt1;modern-decadal-mutagen/source-span.txt1), allotherfilesPASS. Nevertrim/re-hashsources. Docs251+selftestsPASS. No browserlaunch/specchange, no mainmerge/deploy.
+
+Actualgh pr edit60(title/body)operationreturnedPOSTGraphQLForbidden(exit1); branch/PRheadupdateDIDworkthroughnativeGit. Title/body/APIopen-state/hostedCIunverified, no PRcreationblockedclaimnowsincePR60exists. UpdatedcompletePRdraftpersistedinprogress.md.
+
+## Current ordered resumable queue after PR60 update
+1. ReconcilelatestmainandPR60/head/branchcodex/tuvi-modern-decadal-stems; T030/T031/T032/T033completed, noreimplementation. RecoverGitHubAPItoapplydurablePR60title/bodyandreadactualhostedNode22Linux/Windows/backend/frontend/docs/browser-routingchecks. Authorizedauto-mergeonlyafteractualchecksandretainedsource/domain/releasegates; neverdirectmainpush/deploy. Do notcreateanotherPRforT032/T033.
+2. Freshinvocationreviewbudgetrequiredfornewimplementation. ModernTiểuhạnstempositiveintakehascompletefiniteoperandsbutdistinctnatalpalace-vs-decadalstemsourcepath: freezefullcombinedsource/dependency/locale/120mapping/independentvalidfixturepacket andobtainactualdualsourceapprovalBEFOREnewoptionalprofile. SOURCE_INSPECTED_NOT_APPROVED; T024/T030/T032donotapprovethisextension. Exactintakeandremaininggatesareinprogresscheckpoint; no same-NO-GOrepetition.
+3. T026/T019/T022/T020retainexactpriorclassical/text/parameterblockers; investigateonlynewmeaningfulevidence. Publicinterpretation7internalclaims/sourceidentity/default/natal/classical/releasegatesunchanged.

@@ -2,16 +2,16 @@
 
 - b3_home: /workspace/b3_tuvi/.b3/runtime/b3_ai-engineering
 - product_root: /workspace/b3_tuvi
-- plan_id: Autonomous Product Completion version 26
-- plan_version: 26
-- branch: codex/tuvi-modern-decadal-mutagens
+- plan_id: Autonomous Product Completion version 27
+- plan_version: 27
+- branch: codex/tuvi-modern-decadal-stems
 - run_base_sha: 774ac6cff4b74e273a9bdf3a9c1ffa180d3d6b7b
 - preceding_invocation_base_sha: f0dec74973ef9d07129e19330356f8e6d2040227
 - previous_run_base_sha: 45615a48d0c75b90138cfc618320ffae6e9c34e0
-- current_task: none (T032 completed; delivery blocked)
-- last_completed_task: T032
+- current_task: none (T033 completed; review cap reached)
+- last_completed_task: T033
 - next_source_task: modern_minor_stem_candidate_research_not_approved
-- current_task_base_sha: 655c2190e017c710ea0dcad08e2c3d722138a339
+- current_task_base_sha: dd92577c99b071afb12fec3dc8c400bd3da997d0
 - run_status: INCOMPLETE
 - previous_delivery_blocker: external_github_pr_api_forbidden_after_local_T030_T031_PASS
 - previous_invocation_stop_reason: invocation_review_pass_budget_exhausted_12_of_12
@@ -647,3 +647,72 @@ Pinned software-source review accepted independently by actual two models and ex
 Dependency: codex/tuvi-modern-decadal-stems→main first, then codex/tuvi-modern-decadal-mutagens→parent (retargetmainafterparentmerge).
 Command: gh pr create --repo hptbee/b3_tuvi --base codex/tuvi-modern-decadal-stems --head codex/tuvi-modern-decadal-mutagens --title 'feat(tuvi): add source-scoped modern decadal Tu Hoa associations' --body-file /tmp/t032/pr-body.md
 The exact draft text above is durable if /tmp is replaced. Actual API returnedForbidden; GitpushsuccessfuldoesnotestablishPRaccess.
+
+
+## Owner same-PR continuation — T033
+HEADdd92577clean,currentbranchcodex/tuvi-modern-decadal-mutagens; gitfetchmainworks/main774ac6cunchanged, ghprlistGraphQLForbidden. No existingPRnumberinvented/newbranchcreated. PreserveT032/R3501actualclosure/sourcegates. NewboundedreadyT033turnsactualHTTP→genuinefrontendvalidatorregressionintopermanentCI; previousprobeonlyarchivedscratchVMnotregistered. Planversion27andfreshapproachT033readybeforeedits. Sameinvocation10/12reviewsretained; MEDIUMfulltaskreview11+reservedfresh12ifneeded; no reset/sourceapprovalorbrowser.
+
+T033authorfrozen/actualNode22.23.2validation:58unit+14integration=72scripts89.15/89.99, frontend314tests89.38/90.36/lint/buildallPASS. New32HTTPproductionclientgatecovers26selectedperiods24charts40cells15targets13sharedandall5actualbrightnesssuffixes;16syntheticforgeriesdenied. Existing220linesmovedbyte-identical; scratchmutantremovingnormalizationfailsunchangedpermanentassertionexpectedexit1,productionuntouched. FullMEDIUMreview11dispatched, slot12reservediffixneeded, no parentPASSyet.
+
+### Parallel bounded next-domain intake (not implementation or approval)
+ActualreadonlylocalGitpin2f00e2ab0c80b1632e55bc362f2ae26e121245cb: Tiểuhạn selects natalpalace.heavenlyStem (FunctionalAstrolabe.ts123–131/164), NOTdecadal.heavenlyStemselectedbyT030. astro.ts139–188 plusgetSoulAndBody42–92algebraicallyreducepalacestemtoTIGER_RULE[yearstem]+Dần-relativephysicalcoordinate; samefinitearithmeticbutdistinctsemanticselection/dependencychain. Sourceagesarraysexact1..120sex-onlydirectionretainsT024variant.
+Independentintake2880existingT024placements/24reachablecharts,1440soul-indexcancellationchecks,2700counterexampleswrongagecoordinate,2600wrongbirthstem. B3positionsareengineeringobservations,T030helpercomparisononlycompatibility,notexpected-valueevidence. No missingnumericoperandforthenarrowprojection; calendar/from/plugins/derivedages/narrationexcluded,sourcecompletepacket/independentfinalfixtures/actualdualapprovalstillREQUIRED.
+Scratchintake/proof/scriptand19actualGitpayloadsin/tmp/minor-stem-intake/, SOURCE_INSPECTED_NOT_APPROVED; notfrozennewreviewpacket, no approvedformula/newruntime/newreviewpass. Whenresumingnextcandidate,verify/recoveractualGitidentitiesandfreezecombinedpacket,neverinferapprovalfromthisintakeorT030/T032. ThismeaningfulpositiveintakeaccompaniesactualT033CIimprovement,notresearch-onlyNO-GOPR.
+
+T033fullscopereview11actualclear:32HTTP/209component,independent25declarationsbyteexactandforcedfailurecleanup. NoR3801findings/fixerrequired; boundedunitgatePASS. Finalcumulativesame-PRcrosscut12inprogressforT032backend→newT033sharedclientconsumerboundary(oldcrosscut10testedoldinlinedmodule). Current11/12completed,12dispatchedlast; parentwholePRfinalgatepending. No furtherfeatureimplementationthisinvocationbeyondactualreviewcap.
+
+
+### Same-PR identity recovered through native Git (supersedes unavailable-API assumptions)
+Gitls-remoteadvertised60pullheads: refs/pull/60/head exactly655c219(T030parent), noheadmatchingT032dd92577. ExistingPR60thereforecontainsparentbranchhistory; Gitfetchrefs/pull/60/merge actual108d3bc849480aebed11336505a8b2f2d0de8e4e parents774ac6c+655c219confirmbasemainandhead. GitHubAPIopen/CIstateunverified. UserexplicitSAMEPRauthorizesfast-forwardexistingheadcodex/tuvi-modern-decadal-stems to reviewedT032+T033descendant, notnewPR/cherry-pick/reset/historyrewrite. No mainmerge/deploy. KeepT032branchhistoryasbackup; afterfeaturegatecommitandactualparentpush,checkpointactivebranchwillbereconciledtoparentPR60branch. Actualdeliveryverificationpending, notclaimedbeforepush.
+
+
+## Current final checkpoint — SAME PR60 updated, T033 completed
+- branch: codex/tuvi-modern-decadal-stems
+- recovered_existing_pr: https://github.com/hptbee/b3_tuvi/pull/60
+- last_feature_commit: ff153baee9914b1bc8fb5d6a9916469cf55992bc
+- task_base: dd92577c99b071afb12fec3dc8c400bd3da997d0
+- actual_branch_push: nonforcefastforward655c219→ff153baonexistingPRheadbranch
+- pr_head_verified: nativeGitrefs/pull/60/head=ff153ba,newmerge-refb418b42090f114156df8a4268f001667fc2a7b2c
+- main_verified: 774ac6cff4b74e273a9bdf3a9c1ffa180d3d6b7bunchanged
+- checkpoint_delivery: committhisreceiptthenlocalff-onlycheckoutreconciletoparentPRbranchandpushbothpreservedrefs; do notreset/cherry-pick/createnewPR
+- local_gate: T033andfinalcumulativePASS; noconfirmedcritical/high/mediumOPEN;R3501staysCLOSED
+- review_budget: 12/12actualCOMPLETED/EXHAUSTEDnow; earlier10/12wastrueatitscheckpoint, no historyerased/reset
+- next_implementation: stopbefore13threview/unreviewableformula; sourcecandidateintakepreservedbelow
+- verification: actualNode22.23.2backend58unit+14integration=72scripts89.15/89.99; frontend314/9files89.38/90.36+lint/build; docs251+selftestsPASS
+- focused_regression: 32realHTTP26periods/24charts40cells15targets13sharedall5actualbrightnesssuffixes;16syntheticforgeriesdenied; isolatedpre-fixmutantexpectedexit1
+- independent_review: fullMEDIUM11clear(25declarationsexact,209component,32HTTP,forcedfailurecleanup);cumulative12clear(Node22directproductionmodule674HTTP/673bodies576endpoints2304rows40tabletamperclosure/source44hashesexact)
+- whitespace: allT033filesPASS; fullPR46diagnosticsONLYmodern-decadal-stem/review-context.txt44,decadal-main-block.txt1,modern-decadal-mutagen/source-span.txt1; allothersPASS, no sourcebytestrimmed
+- browser: existingtestsretained,noPlaywrightadd/run; NOTRUN,notPASS
+- hosted_gates: unverified; ghpr edit60POSThttps://api.github.com/graphqlForbidden(exit1), title/bodyupdatefailed, no hostedCI/openstateclaim
+- source_public_release: unchanged7internalinterpretationclaims, nonewformulaapproval/sourceauthentication/default/natal/publicprediction/mainmerge/deploy
+- overall: INCOMPLETEremainingproductscope/reviewcap/hostedaccess, notfailureofcompletedT033orPRbranchpush
+
+### Durable next-domain intake identity (not a review packet)
+- /tmp/minor-stem-intake/report.md: SHA256 299c1a5e6a984596a357cfe9e3be0b3066c6bba53df44921637c0471ccc5c52a
+- /tmp/minor-stem-intake/proof.json: SHA256 f999143efd23ecadc57fd2d2f1034d1dcc79f70c9f772935228d7b63a4734f33
+- /tmp/minor-stem-intake/probe.mjs: SHA256 f700123d999f2c82ea8bdb70a00c648562e45dac85f714373a2ff81b79dfa987
+- /tmp/minor-stem-intake/raw-identities.json: SHA256 8b757e9359942782e8446f9093d1f1480d6a3f7d27899c9601e15af067e1865e
+
+Readthereadonlyintakefactsabove; recoverrawfilesfromactualpinnedGitif/tmpmissing, thenfreshindependentcombinedpacket+fixtures+actualdualjudgments. Donotactivatefromhand-transcribedscratchproof/T030compatibilitycounts. Existingbranch+age1..120semanticsremainunchanged.
+
+### Final PR60 metadata draft — edit blocked by actual API Forbidden
+Title: feat(tuvi): source-scoped Dai Han stems and transformations
+
+Explicit modern Đại hạn profiles now support separately approved heavenly stems and default Tứ Hóa associations to existing physical natal palaces. The analysis panel displays these source-scoped placements; omitted requests and earlier profiles retain their existing behavior and public interpretation/release gates remain closed.
+
+The heavenly-stem and transformation extensions each have separate actual dual-model source decisions. Frozen independent fixtures cover 24 valid charts, 288 periods, all 40 default-table cells and 15 target stars. This compares a pinned modern software source; it does not authenticate historical formulas, expert goldens or real-world predictions. Existing natal formulas and classical profiles remain unchanged.
+
+The follow-up adds a permanent Node HTTP integration gate importing the same pure response validators used by React. It catches the genuine API brightness-label defect R3501 that initial mocked component fixtures missed. The repair was independently reviewed, and an isolated pre-fix mutant fails the permanent test. The project testing policy prioritizes unit tests, targeted integration and meaningful non-browser smoke; existing browser tests/check identities remain intact and browser execution is exceptional.
+
+Validation on Node 22.23.2:
+- Backend CI: 58 unit + 14 integration scripts, 89.15% lines / 89.99% branches.
+- Frontend: 314 tests across 9 files, lint and build passed.
+- Permanent HTTP/client integration: 32 requests, 24 charts, all 40 cells / 15 targets, five actual brightness suffixes and 16 synthetic forgeries rejected.
+- Independent final cross-cutting review: 674 HTTP requests, 576 period endpoint queries / 2,304 association checks; warm table tampering closes only the new profile, legacy output/privacy/public gates preserved.
+- Documentation links/self-tests and non-browser CI routing passed. No browser launched or Playwright tests added.
+
+T030/T031/T032/T033 commits are consolidated into this existing PR by fast-forwarding its original head branch. No additional PR, main merge or deployment. Twelve actual technical review passes are recorded; current code has no confirmed blocking findings. Hosted CI and release readiness require actual GitHub evidence, separate from these local results.
+
+Research intake for a possible future Tiểu hạn stem profile is explicitly unapproved and has no runtime activation.
+
+Nextaction: applythistitle/bodyONLYtoexistingPR60whenAPIaccessreturns, verifyhostedchecks/source/domain/releasegatesbeforeauthorizedauto-merge. No newPRandno directmainpush.

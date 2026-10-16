@@ -12,5 +12,17 @@
   ],
   "openStateFromAPI": "unverified",
   "hostedCI": "unverified",
-  "plannedUpdate": "fast-forward existing head branch to reviewed descendant; no new PR or main merge"
+  "plannedUpdate": "fast-forward existing head branch to reviewed descendant; no new PR or main merge",
+  "delivery": {
+    "pushedFeature": "ff153baee9914b1bc8fb5d6a9916469cf55992bc",
+    "existingHeadBranch": "codex/tuvi-modern-decadal-stems",
+    "nonForceFastForward": true,
+    "verifiedPullHead": "ff153baee9914b1bc8fb5d6a9916469cf55992bc",
+    "verifiedNewMergeRef": "b418b42090f114156df8a4268f001667fc2a7b2c",
+    "mainUnchanged": "774ac6cff4b74e273a9bdf3a9c1ffa180d3d6b7b",
+    "metadataEdit": "actual gh pr edit60 failed POST GraphQL Forbidden",
+    "hostedCI": "unverified",
+    "newPRCreated": false,
+    "mainMergeOrDeployment": false
+  }
 }
