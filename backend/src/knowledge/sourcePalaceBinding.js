@@ -55,6 +55,24 @@ const SUBJECTS = {
             '791a98d5fba2e309528cb233fbefb83d69c839e03ad760b94b616dc495749ce1'
         ]
     },
+    'interp-quanshu-tai-tuvi-pha-quan-host': {
+        reviewA: 'docs/knowledge/reviews/juan2-palace/review-tai-tuvi-pha-a.json',
+        reviewB: 'docs/knowledge/reviews/juan2-palace/review-tai-tuvi-pha-b.json',
+        bundleFile: `${RESEARCH}review-bundle-tai-tuvi-pha.json`, executionFile: `${RESEARCH}execution-tai-tuvi-pha.json`,
+        decisionRef: 'docs/knowledge/interpretation-decisions/juan2-tai-tuvi-pha.json',
+        target: 'tai_bach', spanFile: 'tai-tuvi-pha-complete-spans.txt', contextFile: 'tai-full-section.txt',
+        acceptedDigests: {
+            sourceDigest: '97c498dbad297a90345a1817af3c8ec19d8793ec67fb1802f88972123efc5df5',
+            contextDigest: '18e05f3a45cf27553642da48035fa263e267e90d49c9a1211df734a6dc54ee13',
+            conditionTreeDigest: 'c1c9dd401e41bca4fb5dcceeacc06c38b0531b5e191765f700302790d0dab7b3',
+            wordingDigest: '21fb32648cbd151dd37c62859254200885d7557a18b06ce4f6cd63bb2ff76fb5',
+            fixturesDigest: 'c87eb5805eea4396db96b019948b2acee01d621b8516b080f4d70714a7e005ac'
+        },
+        reviewDocumentDigests: [
+            'bdf3f1cdd4215f4ce52e6b2d71dbd86a222831acb338d36bc50955acd771462b',
+            '90fbeabf5fbcb3dbc61c1692d3519e59ddd37bcc7a75497dadd0aa865510d550'
+        ]
+    },
     'interp-quanshu-quan-loc-co-cu-dau-host': {
         ...QUAN_RESOURCES,
         decisionRef: 'docs/knowledge/interpretation-decisions/juan2-quan-co-cu-dau.json',

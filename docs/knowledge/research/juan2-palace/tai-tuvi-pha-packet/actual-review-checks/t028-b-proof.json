@@ -1,0 +1,240 @@
+{
+  "fiveDigests": {
+    "sourceDigest": "97c498dbad297a90345a1817af3c8ec19d8793ec67fb1802f88972123efc5df5",
+    "contextDigest": "18e05f3a45cf27553642da48035fa263e267e90d49c9a1211df734a6dc54ee13",
+    "conditionTreeDigest": "c1c9dd401e41bca4fb5dcceeacc06c38b0531b5e191765f700302790d0dab7b3",
+    "wordingDigest": "21fb32648cbd151dd37c62859254200885d7557a18b06ce4f6cd63bb2ff76fb5",
+    "fixturesDigest": "c87eb5805eea4396db96b019948b2acee01d621b8516b080f4d70714a7e005ac"
+  },
+  "manifestFilesVerified": 21,
+  "independentPinnedRawFetch": {
+    "url": "https://raw.githubusercontent.com/SylarLong/iztro/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/ancientBook-2.html",
+    "status": 200,
+    "sha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a"
+  },
+  "derivedDigestVerified": true,
+  "results": [
+    {
+      "id": "T028/01/negative_missing_pha",
+      "input": {
+        "day": 1,
+        "month": 1,
+        "year": 1980,
+        "hour": 0,
+        "gender": 1
+      },
+      "oracle": false,
+      "result": {
+        "status": "not_satisfied",
+        "op": "same_palace",
+        "children": []
+      },
+      "adverse": [],
+      "hoaKy": false,
+      "pairs": [],
+      "metadataMatch": true,
+      "immutable": true
+    },
+    {
+      "id": "T028/02/negative_missing_tuvi",
+      "input": {
+        "day": 1,
+        "month": 1,
+        "year": 1980,
+        "hour": 4,
+        "gender": 1
+      },
+      "oracle": false,
+      "result": {
+        "status": "not_satisfied",
+        "op": "same_palace",
+        "children": []
+      },
+      "adverse": [],
+      "hoaKy": true,
+      "pairs": [],
+      "metadataMatch": true,
+      "immutable": true
+    },
+    {
+      "id": "T028/03/positive_Sửu_no_four_adverse",
+      "input": {
+        "day": 15,
+        "month": 1,
+        "year": 1980,
+        "hour": 14,
+        "gender": 1
+      },
+      "oracle": true,
+      "result": {
+        "status": "satisfied",
+        "op": "same_palace",
+        "children": []
+      },
+      "adverse": [],
+      "hoaKy": false,
+      "pairs": [
+        {
+          "id": "2",
+          "functionId": "tai_bach",
+          "branchName": "Sửu"
+        }
+      ],
+      "metadataMatch": true,
+      "immutable": true
+    },
+    {
+      "id": "T028/04/positive_Mùi_adverse",
+      "input": {
+        "day": 8,
+        "month": 2,
+        "year": 1980,
+        "hour": 4,
+        "gender": 1
+      },
+      "oracle": true,
+      "result": {
+        "status": "satisfied",
+        "op": "same_palace",
+        "children": []
+      },
+      "adverse": [
+        "Kình Dương",
+        "Hỏa Tinh"
+      ],
+      "hoaKy": false,
+      "pairs": [
+        {
+          "id": "8",
+          "functionId": "tai_bach",
+          "branchName": "Mùi"
+        }
+      ],
+      "metadataMatch": true,
+      "immutable": true
+    },
+    {
+      "id": "T028/05/negative_wrong_host_quan",
+      "input": {
+        "day": 8,
+        "month": 2,
+        "year": 1980,
+        "hour": 20,
+        "gender": 1
+      },
+      "oracle": false,
+      "result": {
+        "status": "not_satisfied",
+        "op": "same_palace",
+        "children": []
+      },
+      "adverse": [
+        "Hỏa Tinh"
+      ],
+      "hoaKy": false,
+      "pairs": [
+        {
+          "id": "8",
+          "functionId": "quan_loc",
+          "branchName": "Mùi"
+        }
+      ],
+      "metadataMatch": true,
+      "immutable": true
+    },
+    {
+      "id": "T028/06/negative_wrong_host_menh",
+      "input": {
+        "day": 1,
+        "month": 3,
+        "year": 1980,
+        "hour": 2,
+        "gender": 1
+      },
+      "oracle": false,
+      "result": {
+        "status": "not_satisfied",
+        "op": "same_palace",
+        "children": []
+      },
+      "adverse": [
+        "Kình Dương",
+        "Linh Tinh"
+      ],
+      "hoaKy": false,
+      "pairs": [
+        {
+          "id": "2",
+          "functionId": "menh",
+          "branchName": "Sửu"
+        }
+      ],
+      "metadataMatch": true,
+      "immutable": true
+    },
+    {
+      "id": "T028/07/positive_Mùi_no_four_adverse",
+      "input": {
+        "day": 22,
+        "month": 2,
+        "year": 1981,
+        "hour": 6,
+        "gender": 1
+      },
+      "oracle": true,
+      "result": {
+        "status": "satisfied",
+        "op": "same_palace",
+        "children": []
+      },
+      "adverse": [],
+      "hoaKy": true,
+      "pairs": [
+        {
+          "id": "8",
+          "functionId": "tai_bach",
+          "branchName": "Mùi"
+        }
+      ],
+      "metadataMatch": true,
+      "immutable": true
+    },
+    {
+      "id": "T028/08/positive_Sửu_adverse",
+      "input": {
+        "day": 28,
+        "month": 4,
+        "year": 1982,
+        "hour": 0,
+        "gender": 1
+      },
+      "oracle": true,
+      "result": {
+        "status": "satisfied",
+        "op": "same_palace",
+        "children": []
+      },
+      "adverse": [
+        "Hỏa Tinh"
+      ],
+      "hoaKy": false,
+      "pairs": [
+        {
+          "id": "2",
+          "functionId": "tai_bach",
+          "branchName": "Sửu"
+        }
+      ],
+      "metadataMatch": true,
+      "immutable": true
+    }
+  ],
+  "positiveCells": [
+    "Sửu:false",
+    "Mùi:true",
+    "Mùi:false",
+    "Sửu:true"
+  ],
+  "allMale": true,
+  "sexCalendarValidation": false
+}

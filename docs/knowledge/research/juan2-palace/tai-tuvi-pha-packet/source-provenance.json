@@ -1,0 +1,35 @@
+{
+  "status": "SOURCE_AND_FIXTURE_PROPOSAL_NOT_APPROVED",
+  "repository": "https://github.com/SylarLong/iztro",
+  "revision": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "sourcePath": "docs/zh_TW/learn/ancientBook-2.html",
+  "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/ancientBook-2.html",
+  "sourceClass": "secondary_pinned_html_transcription_not_authenticated_historical_edition",
+  "upstreamCodeExecuted": false,
+  "acquisition": "Exact git show of pinned object; separate investigator independently parsed inert raw HTML and replayed existing natal engine fixtures; no historical authentication or claim that investigator independently refetched remote bytes.",
+  "rawHtml": {
+    "file": "raw-juan2.html",
+    "sha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a"
+  },
+  "derivedText": {
+    "file": "derived-juan2.txt",
+    "sha256": "b824c61e1bdec55ecdc7123ff1e79bce9648f07d67d054c43a59ce731572d4a7",
+    "method": "Previously established inert HTML-derived full Juan2 text, retained byte exact; complete selected paragraph extraction separately rechecked against raw HTML."
+  },
+  "license": {
+    "file": "mirror-LICENSE.txt",
+    "sha256": "e6c7b6e313cbda3135b41bccc66c98be132cb8319d0d465903d17e669e748b36",
+    "scope": "MIT software repository notice retained; does not authenticate or infer original historical edition rights."
+  },
+  "sourceAcquisitionProof": "source-acquisition.json",
+  "independentSourceProof": "independent-source.json",
+  "independentFixtureProof": "independent-fixtures.json",
+  "independentFixtureProofSha256": "3e84abc5f78c82bf69c1e51decc1a1b85e8975399efb7417d513549f75233dd9",
+  "fixtureCount": 8,
+  "fixtureReviewBeforeActualDualModels": true,
+  "sourceApproved": false,
+  "expertVerified": false,
+  "bookVerified": false,
+  "publicRelease": false,
+  "existingRegistryMutation": "none"
+}
