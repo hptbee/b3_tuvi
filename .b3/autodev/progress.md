@@ -532,3 +532,19 @@ T028feature3679916 pushedcodex/tuvi-tai-tuvi-pha-interpretation; focusedPRcreate
 - Ordered next queue: T030 source/dependency/independent-fixture investigation for modern Đại hạn heavenly stems (NOT approved by T025), GitHub API delivery once access returns, then genuinely new evidence for T026/T019/T022/T020. Fresh invocation review budget required before new implementation.
 
 - Final docs-link self-tests and checker PASS (226 markdown files). Staged whitespace: four expected diagnostics on exactly `quan-co-cu-mao-packet/raw-juan2.html` and `quan-co-cu-mao-packet/actual-review-checks/a-raw.html`, lines9/32 each; exact original bytes preserved. All staged changes outside those two named files pass. Source proposal replay and actual review document digests verified unchanged after archive finalization.
+
+
+## T029 delivery receipt and final resumable checkpoint
+- Feature commit: 36ebcb59c5224d836997faaac8ad702297279296, pushed successfully; independent git ls-remote confirms the exact remote feature SHA. Working tree was clean after feature delivery. Main independently remains 4c1761ea6448eeba0234c04405f9c9245eece320.
+- Actual `gh pr create --base codex/tuvi-tai-tuvi-pha-interpretation --head codex/tuvi-quan-co-cu-mao-interpretation --body-file /tmp/t029/pr-body.md` failed with `Post "https://api.github.com/graphql": Forbidden` (exit1). No new PR number, hosted-CI result, merge or deployment is asserted. Earlier three PR attempts failed the same way. Git push works; API access remains a separate external blocker. Do not request a token merely from unset environment variables or bypass main protection.
+- Verified remote dependency order: main4c1761e → codex/tuvi-modern-decadal-placement300bcd6 → codex/tuvi-phuc-co-cu-interpretationb33a2d5 → codex/tuvi-tai-tuvi-pha-interpretation3679916 → codex/tuvi-quan-co-cu-mao-interpretation36ebcb5 (plus this final checkpoint commit). No duplicate PR50–55 work.
+- PR title: feat(tuvi): source-scoped Quan Co Cu at Mao. Reviewable creation link: https://github.com/hptbee/b3_tuvi/compare/codex/tuvi-tai-tuvi-pha-interpretation...codex/tuvi-quan-co-cu-mao-interpretation?expand=1 . This is a comparison/creation link, not an existing PR.
+- Resume with fresh invocation review resources: reconcile this checkpoint against current main and all four remote branches; do not duplicate delivered work or fabricate merged status. T030 is source-research candidate only, not an approved stem formula. Preserve exact approved T025 age/branch projection, all actual source/model proofs and public-release restrictions.
+
+### Reviewable T029 PR body
+
+Adds an internal Quan Lộc annotation only when Thiên Cơ and Cự Môn share the palace at Mão. The existing Dậu claim remains independently bound and mutually exclusive; public interpretations and fortune narration remain withheld.
+
+Complete pinned source context and nine independently verified API-valid charts were reviewed by genuine independent gpt-6.1-sol and gpt-6-astra executions before implementation. Immutable source/AST/wording/fixture and actual review-document checks bind the finite existing evaluator entry. No brightness equivalence, career outcome, adverse modifier, natal formula or source identity is newly approved.
+
+Validation: backend65testfiles88.43/90.09, frontend206tests/lint/build,55ChromiumE2E, docs226files; full-feature/performance reviewers clear. Four original trailing-whitespace diagnostics across exactly two immutable HTML artifacts are documented and retained; all other staged whitespace checks pass. Dependency is codex/tuvi-tai-tuvi-pha-interpretation. No deployment or public release.
