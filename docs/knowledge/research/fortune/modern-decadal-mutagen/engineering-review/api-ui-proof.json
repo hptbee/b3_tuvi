@@ -1,0 +1,734 @@
+{
+  "requests": 192,
+  "confirmedFinding": "R3501",
+  "genuineOpenResponsesRejected": 24,
+  "oldAccepted": 72,
+  "closedAccepted": 44,
+  "frontendValidators": "unaltered source extracted in VM",
+  "browserLaunched": false,
+  "databaseWrites": 0,
+  "noStore": true,
+  "privacyNameWithheld": true,
+  "failures": [
+    {
+      "fixture": "T032-F01",
+      "input": {
+        "day": 1,
+        "month": 1,
+        "year": 1984,
+        "hour": 0,
+        "gender": 1
+      },
+      "analysisValid": true,
+      "majorValid": false,
+      "rows": [
+        {
+          "source": "Thiên Lương",
+          "display": "Thiên Lương (V)"
+        },
+        {
+          "source": "Tử Vi",
+          "display": "Tử Vi (M)"
+        },
+        {
+          "source": "Tả Phù",
+          "display": "Tả Phù"
+        },
+        {
+          "source": "Vũ Khúc",
+          "display": "Vũ Khúc (V)"
+        }
+      ]
+    },
+    {
+      "fixture": "T032-F02",
+      "input": {
+        "day": 1,
+        "month": 6,
+        "year": 1984,
+        "hour": 0,
+        "gender": 1
+      },
+      "analysisValid": true,
+      "majorValid": false,
+      "rows": [
+        {
+          "source": "Thiên Lương",
+          "display": "Thiên Lương (H)"
+        },
+        {
+          "source": "Tử Vi",
+          "display": "Tử Vi (V)"
+        },
+        {
+          "source": "Tả Phù",
+          "display": "Tả Phù"
+        },
+        {
+          "source": "Vũ Khúc",
+          "display": "Vũ Khúc (V)"
+        }
+      ]
+    },
+    {
+      "fixture": "T032-F03",
+      "input": {
+        "day": 1,
+        "month": 1,
+        "year": 1984,
+        "hour": 2,
+        "gender": -1
+      },
+      "analysisValid": true,
+      "majorValid": false,
+      "rows": [
+        {
+          "source": "Thiên Cơ",
+          "display": "Thiên Cơ (H)"
+        },
+        {
+          "source": "Thiên Lương",
+          "display": "Thiên Lương (M)"
+        },
+        {
+          "source": "Tử Vi",
+          "display": "Tử Vi (B)"
+        },
+        {
+          "source": "Thái Âm",
+          "display": "Thái Âm (H)"
+        }
+      ]
+    },
+    {
+      "fixture": "T032-F04",
+      "input": {
+        "day": 1,
+        "month": 6,
+        "year": 1984,
+        "hour": 2,
+        "gender": -1
+      },
+      "analysisValid": true,
+      "majorValid": false,
+      "rows": [
+        {
+          "source": "Thái Âm",
+          "display": "Thái Âm (H)"
+        },
+        {
+          "source": "Thiên Đồng",
+          "display": "Thiên Đồng (H)"
+        },
+        {
+          "source": "Thiên Cơ",
+          "display": "Thiên Cơ (Đ)"
+        },
+        {
+          "source": "Cự Môn",
+          "display": "Cự Môn (H)"
+        }
+      ]
+    },
+    {
+      "fixture": "T032-F05",
+      "input": {
+        "day": 1,
+        "month": 6,
+        "year": 1985,
+        "hour": 4,
+        "gender": 1
+      },
+      "analysisValid": true,
+      "majorValid": false,
+      "rows": [
+        {
+          "source": "Vũ Khúc",
+          "display": "Vũ Khúc (V)"
+        },
+        {
+          "source": "Tham Lang",
+          "display": "Tham Lang (H)"
+        },
+        {
+          "source": "Thiên Lương",
+          "display": "Thiên Lương (V)"
+        },
+        {
+          "source": "Văn Khúc",
+          "display": "Văn Khúc (H)"
+        }
+      ]
+    },
+    {
+      "fixture": "T032-F06",
+      "input": {
+        "day": 1,
+        "month": 6,
+        "year": 1985,
+        "hour": 2,
+        "gender": -1
+      },
+      "analysisValid": true,
+      "majorValid": false,
+      "rows": [
+        {
+          "source": "Thiên Lương",
+          "display": "Thiên Lương (Đ)"
+        },
+        {
+          "source": "Tử Vi",
+          "display": "Tử Vi (M)"
+        },
+        {
+          "source": "Tả Phù",
+          "display": "Tả Phù"
+        },
+        {
+          "source": "Vũ Khúc",
+          "display": "Vũ Khúc (M)"
+        }
+      ]
+    },
+    {
+      "fixture": "T032-F07",
+      "input": {
+        "day": 1,
+        "month": 6,
+        "year": 1986,
+        "hour": 6,
+        "gender": 1
+      },
+      "analysisValid": true,
+      "majorValid": false,
+      "rows": [
+        {
+          "source": "Thiên Lương",
+          "display": "Thiên Lương (V)"
+        },
+        {
+          "source": "Tử Vi",
+          "display": "Tử Vi (B)"
+        },
+        {
+          "source": "Tả Phù",
+          "display": "Tả Phù"
+        },
+        {
+          "source": "Vũ Khúc",
+          "display": "Vũ Khúc (H)"
+        }
+      ]
+    },
+    {
+      "fixture": "T032-F08",
+      "input": {
+        "day": 1,
+        "month": 6,
+        "year": 1986,
+        "hour": 8,
+        "gender": -1
+      },
+      "analysisValid": true,
+      "majorValid": false,
+      "rows": [
+        {
+          "source": "Vũ Khúc",
+          "display": "Vũ Khúc (M)"
+        },
+        {
+          "source": "Tham Lang",
+          "display": "Tham Lang (M)"
+        },
+        {
+          "source": "Thiên Lương",
+          "display": "Thiên Lương (M)"
+        },
+        {
+          "source": "Văn Khúc",
+          "display": "Văn Khúc (Đ)"
+        }
+      ]
+    },
+    {
+      "fixture": "T032-F09",
+      "input": {
+        "day": 1,
+        "month": 6,
+        "year": 1987,
+        "hour": 22,
+        "gender": 1
+      },
+      "analysisValid": true,
+      "majorValid": false,
+      "rows": [
+        {
+          "source": "Thiên Cơ",
+          "display": "Thiên Cơ (M)"
+        },
+        {
+          "source": "Thiên Lương",
+          "display": "Thiên Lương (H)"
+        },
+        {
+          "source": "Tử Vi",
+          "display": "Tử Vi (V)"
+        },
+        {
+          "source": "Thái Âm",
+          "display": "Thái Âm (Đ)"
+        }
+      ]
+    },
+    {
+      "fixture": "T032-F10",
+      "input": {
+        "day": 1,
+        "month": 6,
+        "year": 1987,
+        "hour": 18,
+        "gender": -1
+      },
+      "analysisValid": true,
+      "majorValid": false,
+      "rows": [
+        {
+          "source": "Cự Môn",
+          "display": "Cự Môn (V)"
+        },
+        {
+          "source": "Thái Dương",
+          "display": "Thái Dương (V)"
+        },
+        {
+          "source": "Văn Khúc",
+          "display": "Văn Khúc (H)"
+        },
+        {
+          "source": "Văn Xương",
+          "display": "Văn Xương (H)"
+        }
+      ]
+    },
+    {
+      "fixture": "T032-F11",
+      "input": {
+        "day": 1,
+        "month": 6,
+        "year": 1988,
+        "hour": 14,
+        "gender": 1
+      },
+      "analysisValid": true,
+      "majorValid": false,
+      "rows": [
+        {
+          "source": "Liêm Trinh",
+          "display": "Liêm Trinh (Đ)"
+        },
+        {
+          "source": "Phá Quân",
+          "display": "Phá Quân (H)"
+        },
+        {
+          "source": "Vũ Khúc",
+          "display": "Vũ Khúc (H)"
+        },
+        {
+          "source": "Thái Dương",
+          "display": "Thái Dương (M)"
+        }
+      ]
+    },
+    {
+      "fixture": "T032-F12",
+      "input": {
+        "day": 1,
+        "month": 6,
+        "year": 1990,
+        "hour": 20,
+        "gender": -1
+      },
+      "analysisValid": true,
+      "majorValid": false,
+      "rows": [
+        {
+          "source": "Thiên Lương",
+          "display": "Thiên Lương (M)"
+        },
+        {
+          "source": "Tử Vi",
+          "display": "Tử Vi (M)"
+        },
+        {
+          "source": "Tả Phù",
+          "display": "Tả Phù"
+        },
+        {
+          "source": "Vũ Khúc",
+          "display": "Vũ Khúc (M)"
+        }
+      ]
+    },
+    {
+      "fixture": "T032-F13",
+      "input": {
+        "day": 1,
+        "month": 6,
+        "year": 1988,
+        "hour": 8,
+        "gender": -1
+      },
+      "analysisValid": true,
+      "majorValid": false,
+      "rows": [
+        {
+          "source": "Phá Quân",
+          "display": "Phá Quân (H)"
+        },
+        {
+          "source": "Cự Môn",
+          "display": "Cự Môn (H)"
+        },
+        {
+          "source": "Thái Âm",
+          "display": "Thái Âm (H)"
+        },
+        {
+          "source": "Tham Lang",
+          "display": "Tham Lang (H)"
+        }
+      ]
+    },
+    {
+      "fixture": "T032-F14",
+      "input": {
+        "day": 1,
+        "month": 6,
+        "year": 1989,
+        "hour": 0,
+        "gender": 1
+      },
+      "analysisValid": true,
+      "majorValid": false,
+      "rows": [
+        {
+          "source": "Thái Âm",
+          "display": "Thái Âm (H)"
+        },
+        {
+          "source": "Thiên Đồng",
+          "display": "Thiên Đồng (M)"
+        },
+        {
+          "source": "Thiên Cơ",
+          "display": "Thiên Cơ (Đ)"
+        },
+        {
+          "source": "Cự Môn",
+          "display": "Cự Môn (V)"
+        }
+      ]
+    },
+    {
+      "fixture": "T032-F15",
+      "input": {
+        "day": 1,
+        "month": 6,
+        "year": 1989,
+        "hour": 0,
+        "gender": -1
+      },
+      "analysisValid": true,
+      "majorValid": false,
+      "rows": [
+        {
+          "source": "Cự Môn",
+          "display": "Cự Môn (V)"
+        },
+        {
+          "source": "Thái Dương",
+          "display": "Thái Dương (H)"
+        },
+        {
+          "source": "Văn Khúc",
+          "display": "Văn Khúc (H)"
+        },
+        {
+          "source": "Văn Xương",
+          "display": "Văn Xương (Đ)"
+        }
+      ]
+    },
+    {
+      "fixture": "T032-F16",
+      "input": {
+        "day": 1,
+        "month": 6,
+        "year": 1990,
+        "hour": 2,
+        "gender": 1
+      },
+      "analysisValid": true,
+      "majorValid": false,
+      "rows": [
+        {
+          "source": "Phá Quân",
+          "display": "Phá Quân (V)"
+        },
+        {
+          "source": "Cự Môn",
+          "display": "Cự Môn (V)"
+        },
+        {
+          "source": "Thái Âm",
+          "display": "Thái Âm (H)"
+        },
+        {
+          "source": "Tham Lang",
+          "display": "Tham Lang (H)"
+        }
+      ]
+    },
+    {
+      "fixture": "T032-F17",
+      "input": {
+        "day": 1,
+        "month": 6,
+        "year": 1991,
+        "hour": 16,
+        "gender": 1
+      },
+      "analysisValid": true,
+      "majorValid": false,
+      "rows": [
+        {
+          "source": "Thiên Cơ",
+          "display": "Thiên Cơ (H)"
+        },
+        {
+          "source": "Thiên Lương",
+          "display": "Thiên Lương (H)"
+        },
+        {
+          "source": "Tử Vi",
+          "display": "Tử Vi (B)"
+        },
+        {
+          "source": "Thái Âm",
+          "display": "Thái Âm (H)"
+        }
+      ]
+    },
+    {
+      "fixture": "T032-F18",
+      "input": {
+        "day": 1,
+        "month": 6,
+        "year": 1991,
+        "hour": 16,
+        "gender": -1
+      },
+      "analysisValid": true,
+      "majorValid": false,
+      "rows": [
+        {
+          "source": "Vũ Khúc",
+          "display": "Vũ Khúc (V)"
+        },
+        {
+          "source": "Tham Lang",
+          "display": "Tham Lang (H)"
+        },
+        {
+          "source": "Thiên Lương",
+          "display": "Thiên Lương (H)"
+        },
+        {
+          "source": "Văn Khúc",
+          "display": "Văn Khúc (Đ)"
+        }
+      ]
+    },
+    {
+      "fixture": "T032-F19",
+      "input": {
+        "day": 1,
+        "month": 6,
+        "year": 1992,
+        "hour": 2,
+        "gender": 1
+      },
+      "analysisValid": true,
+      "majorValid": false,
+      "rows": [
+        {
+          "source": "Thái Âm",
+          "display": "Thái Âm (V)"
+        },
+        {
+          "source": "Thiên Đồng",
+          "display": "Thiên Đồng (H)"
+        },
+        {
+          "source": "Thiên Cơ",
+          "display": "Thiên Cơ (V)"
+        },
+        {
+          "source": "Cự Môn",
+          "display": "Cự Môn (H)"
+        }
+      ]
+    },
+    {
+      "fixture": "T032-F20",
+      "input": {
+        "day": 1,
+        "month": 6,
+        "year": 1992,
+        "hour": 2,
+        "gender": -1
+      },
+      "analysisValid": true,
+      "majorValid": false,
+      "rows": [
+        {
+          "source": "Phá Quân",
+          "display": "Phá Quân (H)"
+        },
+        {
+          "source": "Cự Môn",
+          "display": "Cự Môn (H)"
+        },
+        {
+          "source": "Thái Âm",
+          "display": "Thái Âm (V)"
+        },
+        {
+          "source": "Tham Lang",
+          "display": "Tham Lang (H)"
+        }
+      ]
+    },
+    {
+      "fixture": "T032-F21",
+      "input": {
+        "day": 1,
+        "month": 6,
+        "year": 1993,
+        "hour": 0,
+        "gender": 1
+      },
+      "analysisValid": true,
+      "majorValid": false,
+      "rows": [
+        {
+          "source": "Thiên Cơ",
+          "display": "Thiên Cơ (Đ)"
+        },
+        {
+          "source": "Thiên Lương",
+          "display": "Thiên Lương (V)"
+        },
+        {
+          "source": "Tử Vi",
+          "display": "Tử Vi (Đ)"
+        },
+        {
+          "source": "Thái Âm",
+          "display": "Thái Âm (H)"
+        }
+      ]
+    },
+    {
+      "fixture": "T032-F22",
+      "input": {
+        "day": 1,
+        "month": 6,
+        "year": 1993,
+        "hour": 0,
+        "gender": -1
+      },
+      "analysisValid": true,
+      "majorValid": false,
+      "rows": [
+        {
+          "source": "Vũ Khúc",
+          "display": "Vũ Khúc (Đ)"
+        },
+        {
+          "source": "Tham Lang",
+          "display": "Tham Lang (H)"
+        },
+        {
+          "source": "Thiên Lương",
+          "display": "Thiên Lương (V)"
+        },
+        {
+          "source": "Văn Khúc",
+          "display": "Văn Khúc (H)"
+        }
+      ]
+    },
+    {
+      "fixture": "T032-F23",
+      "input": {
+        "day": 1,
+        "month": 6,
+        "year": 1994,
+        "hour": 0,
+        "gender": 1
+      },
+      "analysisValid": true,
+      "majorValid": false,
+      "rows": [
+        {
+          "source": "Cự Môn",
+          "display": "Cự Môn (Đ)"
+        },
+        {
+          "source": "Thái Dương",
+          "display": "Thái Dương (H)"
+        },
+        {
+          "source": "Văn Khúc",
+          "display": "Văn Khúc (H)"
+        },
+        {
+          "source": "Văn Xương",
+          "display": "Văn Xương (Đ)"
+        }
+      ]
+    },
+    {
+      "fixture": "T032-F24",
+      "input": {
+        "day": 1,
+        "month": 6,
+        "year": 1994,
+        "hour": 0,
+        "gender": -1
+      },
+      "analysisValid": true,
+      "majorValid": false,
+      "rows": [
+        {
+          "source": "Thái Âm",
+          "display": "Thái Âm (H)"
+        },
+        {
+          "source": "Thiên Đồng",
+          "display": "Thiên Đồng (H)"
+        },
+        {
+          "source": "Thiên Cơ",
+          "display": "Thiên Cơ (M)"
+        },
+        {
+          "source": "Cự Môn",
+          "display": "Cự Môn (Đ)"
+        }
+      ]
+    }
+  ]
+}

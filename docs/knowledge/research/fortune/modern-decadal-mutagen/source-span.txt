@@ -1,0 +1,1635 @@
+Pinned software source, not a classical book. Full contextual files below.
+Commit: 2f00e2ab0c80b1632e55bc362f2ae26e121245cb
+
+===== src/data/heavenlyStems.ts (complete file) =====
+/**
+ * 十天干信息
+ * 其中包含：
+ * 1. 阴阳（yinYang）
+ * 2. 五行（fiveElements）
+ * 3. 天干相冲（crash）
+ *    - 甲庚相冲
+ *    - 乙辛相冲
+ *    - 壬丙相冲
+ *    - 癸丁相冲
+ *    - 戊己土居中央，故无冲。
+ * 4. 紫微斗数十天干四化(mutagen)
+ *
+ *    顺序为【禄，权，科，忌】
+ *    - 甲:【廉，破，武，阳】
+ *    - 乙:【机，梁，紫，月】
+ *    - 丙:【同，机，昌，廉】
+ *    - 丁:【阴，同，机，巨】
+ *    - 戊:【贪，月，弼，机】
+ *    - 己:【武，贪，梁，曲】
+ *    - 庚:【阳，武，阴，同】
+ *    - 辛:【巨，日，曲，昌】
+ *    - 壬:【梁，紫，左，武】
+ *    - 癸:【破，巨，阴，贪】
+ */
+export const heavenlyStems = {
+  jiaHeavenly: {
+    yinYang: '阳',
+    fiveElements: '木',
+    crash: 'gengHeavenly',
+    mutagen: ['lianzhenMaj', 'pojunMaj', 'wuquMaj', 'taiyangMaj'],
+  },
+  yiHeavenly: {
+    yinYang: '阴',
+    fiveElements: '木',
+    crash: 'xinHeavenly',
+    mutagen: ['tianjiMaj', 'tianliangMaj', 'ziweiMaj', 'taiyinMaj'],
+  },
+  bingHeavenly: {
+    yinYang: '阳',
+    fiveElements: '火',
+    crash: 'renHeavenly',
+    mutagen: ['tiantongMaj', 'tianjiMaj', 'wenchangMin', 'lianzhenMaj'],
+  },
+  dingHeavenly: {
+    yinYang: '阴',
+    fiveElements: '火',
+    crash: 'guiHeavenly',
+    mutagen: ['taiyinMaj', 'tiantongMaj', 'tianjiMaj', 'jumenMaj'],
+  },
+  wuHeavenly: {
+    yinYang: '阳',
+    fiveElements: '土',
+    mutagen: ['tanlangMaj', 'taiyinMaj', 'youbiMin', 'tianjiMaj'],
+  },
+  jiHeavenly: {
+    yinYang: '阴',
+    fiveElements: '土',
+    mutagen: ['wuquMaj', 'tanlangMaj', 'tianliangMaj', 'wenquMin'],
+  },
+  gengHeavenly: {
+    yinYang: '阳',
+    fiveElements: '金',
+    crash: 'jiaHeavenly',
+    mutagen: ['taiyangMaj', 'wuquMaj', 'taiyinMaj', 'tiantongMaj'],
+  },
+  xinHeavenly: {
+    yinYang: '阴',
+    fiveElements: '金',
+    crash: 'yiHeavenly',
+    mutagen: ['jumenMaj', 'taiyangMaj', 'wenquMin', 'wenchangMin'],
+  },
+  renHeavenly: {
+    yinYang: '阳',
+    fiveElements: '水',
+    crash: 'bingHeavenly',
+    mutagen: ['tianliangMaj', 'ziweiMaj', 'zuofuMin', 'wuquMaj'],
+  },
+  guiHeavenly: {
+    yinYang: '阴',
+    fiveElements: '水',
+    crash: 'dingHeavenly',
+    mutagen: ['pojunMaj', 'jumenMaj', 'taiyinMaj', 'tanlangMaj'],
+  },
+} as const;
+
+===== src/data/stars.ts (complete file) =====
+/** 紫微斗数四化 */
+export const MUTAGEN = ['sihuaLu', 'sihuaQuan', 'sihuaKe', 'sihuaJi'] as const;
+
+/**
+ * 星耀信息
+ * 其中包含：
+ * 1. 亮度（bright）, 按照宫位地支排序（从寅开始）
+ * 2. 五行（fiveElements）
+ * 3. 阴阳（yinYang）
+ */
+export const STARS_INFO = {
+  ziweiMaj: {
+    brightness: ['wang', 'wang', 'de', 'wang', 'miao', 'miao', 'wang', 'wang', 'de', 'wang', 'ping', 'miao'],
+    fiveElements: '土',
+    yinYang: '阴',
+  },
+  tianjiMaj: {
+    brightness: ['de', 'wang', 'li', 'ping', 'miao', 'xian', 'de', 'wang', 'li', 'ping', 'miao', 'xian'],
+    fiveElements: '木',
+    yinYang: '阴',
+  },
+  taiyangMaj: {
+    brightness: ['wang', 'miao', 'wang', 'wang', 'wang', 'de', 'de', 'ping', 'bu', 'xian', 'xian', 'bu'],
+    fiveElements: '',
+    yinYang: '',
+  },
+  wuquMaj: {
+    brightness: ['de', 'li', 'miao', 'ping', 'wang', 'miao', 'de', 'li', 'miao', 'ping', 'wang', 'miao'],
+    fiveElements: '金',
+    yinYang: '阴',
+  },
+  tiantongMaj: {
+    brightness: ['li', 'ping', 'ping', 'miao', 'xian', 'bu', 'wang', 'ping', 'ping', 'miao', 'wang', 'bu'],
+    fiveElements: '水',
+    yinYang: '阳',
+  },
+  lianzhenMaj: {
+    brightness: ['miao', 'ping', 'li', 'xian', 'ping', 'li', 'miao', 'ping', 'li', 'xian', 'ping', 'li'],
+    fiveElements: '火',
+    yinYang: '阴',
+  },
+  tianfuMaj: {
+    brightness: ['miao', 'de', 'miao', 'de', 'wang', 'miao', 'de', 'wang', 'miao', 'de', 'miao', 'miao'],
+    fiveElements: '土',
+    yinYang: '阳',
+  },
+  taiyinMaj: {
+    brightness: ['wang', 'xian', 'xian', 'xian', 'bu', 'bu', 'li', 'wang', 'wang', 'miao', 'miao', 'miao'],
+    fiveElements: '水',
+    yinYang: '阴',
+  },
+  tanlangMaj: {
+    brightness: ['ping', 'li', 'miao', 'xian', 'wang', 'miao', 'ping', 'li', 'miao', 'xian', 'wang', 'miao'],
+    fiveElements: '水',
+    yinYang: '',
+  },
+  jumenMaj: {
+    brightness: ['miao', 'miao', 'xian', 'wang', 'wang', 'bu', 'miao', 'miao', 'xian', 'wang', 'wang', 'bu'],
+    fiveElements: '土',
+    yinYang: '阴',
+  },
+  tianxiangMaj: {
+    brightness: ['miao', 'xian', 'de', 'de', 'miao', 'de', 'miao', 'xian', 'de', 'de', 'miao', 'miao'],
+    fiveElements: '水',
+    yinYang: '',
+  },
+  tianliangMaj: {
+    brightness: ['miao', 'miao', 'miao', 'xian', 'miao', 'wang', 'xian', 'de', 'miao', 'xian', 'miao', 'wang'],
+    fiveElements: '土',
+    yinYang: '',
+  },
+  qishaMaj: {
+    brightness: ['miao', 'wang', 'miao', 'ping', 'wang', 'miao', 'miao', 'wang', 'miao', 'ping', 'wang', 'miao'],
+    fiveElements: '',
+    yinYang: '',
+  },
+  pojunMaj: {
+    brightness: ['de', 'xian', 'wang', 'ping', 'miao', 'wang', 'de', 'xian', 'wang', 'ping', 'miao', 'wang'],
+    fiveElements: '水',
+    yinYang: '',
+  },
+  wenchangMin: {
+    brightness: ['xian', 'li', 'de', 'miao', 'xian', 'li', 'de', 'miao', 'xian', 'li', 'de', 'miao'],
+  },
+  wenquMin: {
+    brightness: ['ping', 'wang', 'de', 'miao', 'xian', 'wang', 'de', 'miao', 'xian', 'wang', 'de', 'miao'],
+  },
+  huoxingMin: {
+    brightness: ['miao', 'li', 'xian', 'de', 'miao', 'li', 'xian', 'de', 'miao', 'li', 'xian', 'de'],
+  },
+  lingxingMin: {
+    brightness: ['miao', 'li', 'xian', 'de', 'miao', 'li', 'xian', 'de', 'miao', 'li', 'xian', 'de'],
+  },
+  qingyangMin: {
+    brightness: ['', 'xian', 'miao', '', 'xian', 'miao', '', 'xian', 'miao', '', 'xian', 'miao'],
+  },
+  tuoluoMin: {
+    brightness: ['xian', '', 'miao', 'xian', '', 'miao', 'xian', '', 'miao', 'xian', '', 'miao'],
+  },
+} as const;
+
+===== src/astro/config.ts (complete file) =====
+import { Config } from '../data/types';
+import { BrightnessKey, HeavenlyStemKey, StarKey, kot } from '../i18n';
+
+type ResolvedConfig = {
+  mutagens: Partial<Record<HeavenlyStemKey, StarKey[]>>;
+  brightness: Partial<Record<StarKey, BrightnessKey[]>>;
+} & Required<Omit<Config, 'mutagens' | 'brightness'>>;
+
+/**
+ * 创建默认配置。
+ * @internal
+ * @version 2.6.2
+ */
+const defaults = (): ResolvedConfig => ({
+  mutagens: {},
+  brightness: {},
+  yearDivide: 'normal',
+  horoscopeDivide: 'normal',
+  ageDivide: 'normal',
+  dayDivide: 'forward',
+  algorithm: 'default',
+});
+
+/**
+ * 复制配置表及其数组。
+ * @internal
+ * @version 2.6.2
+ */
+const cloneTable = <T extends string>(table: Partial<Record<T, string[]>>) => {
+  const result: Partial<Record<T, string[]>> = {};
+  Object.entries<string[] | undefined>(table).forEach(([key, values]) => {
+    if (values) result[key as T] = [...values];
+  });
+  return result;
+};
+
+/**
+ * 创建完整配置的独立副本。
+ * @internal
+ * @version 2.6.2
+ */
+const clone = (value: ResolvedConfig): ResolvedConfig => ({
+  ...value,
+  mutagens: cloneTable(value.mutagens) as ResolvedConfig['mutagens'],
+  brightness: cloneTable(value.brightness) as ResolvedConfig['brightness'],
+});
+
+let globalConfig = defaults();
+let activeConfig: ResolvedConfig | undefined;
+
+/**
+ * 获取配置的独立副本，修改返回值不会影响库。
+ *
+ * @version 2.3.0
+ * @since 2.6.2 返回深拷贝
+ * @returns 当前生效配置的独立副本
+ */
+export const getConfig = (): ResolvedConfig => clone(activeConfig ?? globalConfig);
+
+/**
+ * 将配置恢复为出厂默认值，并清除自定义四化和亮度表。
+ * 已经生成的星盘不受影响。
+ *
+ * @version 2.6.2
+ */
+export const resetConfig = (): void => {
+  globalConfig = defaults();
+};
+
+/**
+ * 将单次排盘配置合并到当前配置，返回独立副本。
+ *
+ * @internal
+ * @version 2.6.2
+ * @param options 配置覆盖项
+ * @param base 基础配置，默认使用当前生效配置
+ */
+export const resolveConfig = (options: Config = {}, base = activeConfig ?? globalConfig): ResolvedConfig => {
+  const result = clone(base);
+  const choices = {
+    yearDivide: ['normal', 'exact'],
+    horoscopeDivide: ['normal', 'exact'],
+    ageDivide: ['normal', 'birthday'],
+    dayDivide: ['current', 'forward'],
+    algorithm: ['default', 'zhongzhou'],
+  };
+  (Object.keys(choices) as (keyof typeof choices)[]).forEach((key) => {
+    const value = options[key];
+    if (value !== undefined) {
+      if (!choices[key].includes(value)) throw new Error(`invalid ${key}.`);
+      Object.assign(result, { [key]: value });
+    }
+  });
+  if (options.mutagens) {
+    Object.entries(options.mutagens).forEach(([key, stars]) => {
+      result.mutagens[kot<HeavenlyStemKey>(key)] = stars.map((star) => kot<StarKey>(star));
+    });
+  }
+  if (options.brightness) {
+    Object.entries(options.brightness).forEach(([key, levels]) => {
+      result.brightness[kot<StarKey>(key)] = levels.map((level) => kot<BrightnessKey>(level));
+    });
+  }
+  return result;
+};
+
+/**
+ * 设置后续排盘的全局默认配置；不会修改已经生成的星盘。
+ *
+ * @version 2.3.0
+ * @since 2.6.2 已有星盘保留生成时的配置
+ * @param options 全局默认配置覆盖项
+ */
+export const config = (options: Config): void => {
+  globalConfig = resolveConfig(options, globalConfig);
+};
+
+/**
+ * 在同步计算中使用指定配置，嵌套调用和异常退出时恢复上一层上下文。
+ *
+ * @internal
+ * @version 2.6.2
+ * @param snapshot 当前计算使用的配置
+ * @param calculate 同步计算方法
+ */
+export const withConfig = <T>(snapshot: ResolvedConfig, calculate: () => T): T => {
+  const previous = activeConfig;
+  activeConfig = snapshot;
+  try {
+    return calculate();
+  } finally {
+    activeConfig = previous;
+  }
+};
+
+===== src/astro/context.ts (complete file) =====
+import { getLanguage, withLanguage } from '../i18n';
+import { getConfig, withConfig } from './config';
+
+const functionalPrototypes = new WeakSet<object>();
+/**
+ * 注册需要绑定排盘上下文的功能类原型，不依赖压缩后的类名。
+ *
+ * @internal
+ * @version 2.6.2
+ * @param prototype 功能类的原型对象
+ */
+export const registerContextClass = (prototype: object): void => {
+  functionalPrototypes.add(prototype);
+};
+
+/**
+ * 将功能对象及其返回的功能对象绑定到生成时的配置和语言。
+ *
+ * @internal
+ * @version 2.6.2
+ * @param root 需要绑定上下文的功能对象
+ * @returns 原功能对象
+ */
+export const bindContext = <T extends object>(root: T): T => {
+  const config = getConfig();
+  const language = getLanguage();
+  const bound = new WeakSet<object>();
+  const wrapped = new WeakSet<object>();
+  const bind = (value: unknown): void => {
+    if (!value || typeof value !== 'object' || bound.has(value)) return;
+    if (Array.isArray(value)) {
+      bound.add(value);
+      value.forEach(bind);
+      return;
+    }
+    let prototype = Object.getPrototypeOf(value);
+    while (prototype && !functionalPrototypes.has(prototype)) prototype = Object.getPrototypeOf(prototype);
+    if (!prototype) return;
+    bound.add(value);
+    const object = value as Record<string, unknown>;
+    const keys = new Set([...Object.keys(object), ...Object.getOwnPropertyNames(prototype)]);
+    keys.forEach((key) => {
+      if (key === 'constructor' || key.startsWith('_') || key === 'plugins') return;
+      const member = object[key];
+      if (typeof member === 'function') {
+        if (wrapped.has(member)) return;
+        const method = (...args: unknown[]) =>
+          withConfig(config, () =>
+            withLanguage(language, () => {
+              const result = member.apply(value, args);
+              bind(result);
+              // 插件和重排可能新增方法或星曜。
+              bound.delete(value);
+              bind(value);
+              return result;
+            }),
+          );
+        wrapped.add(method);
+        object[key] = method;
+      } else {
+        bind(member);
+      }
+    });
+  };
+  bind(root);
+  return root;
+};
+
+===== src/utils/index.ts (complete file) =====
+import { EARTHLY_BRANCHES, heavenlyStems, MUTAGEN, STARS_INFO } from '../data';
+import { initStars } from '../star';
+import {
+  Brightness,
+  EarthlyBranchKey,
+  EarthlyBranchName,
+  HeavenlyStemKey,
+  HeavenlyStemName,
+  Mutagen,
+  StarName,
+  kot,
+  t,
+  StarKey,
+} from '../i18n';
+import FunctionalStar from '../star/FunctionalStar';
+import { HeavenlyStemAndEarthlyBranchDate } from 'lunar-lite/lib/types';
+import { solar2lunar } from 'lunar-lite';
+import { getConfig } from '../astro';
+
+const getTargetMutagens = (heavenlyStem: HeavenlyStemKey) => {
+  const { mutagens } = getConfig();
+  let result;
+
+  if (mutagens && mutagens[heavenlyStem]) {
+    result = mutagens[heavenlyStem] ?? [];
+  } else {
+    result = heavenlyStems[heavenlyStem].mutagen ?? [];
+  }
+
+  return result;
+};
+
+/**
+ * 用于处理索引，将索引锁定在 0~max 范围内
+ *
+ * @param index 当前索引
+ * @param max 最大循环数，默认为12【因为12用得最多，宫位数量以及十二地支数量都为12，所以将12作为默认值】
+ * @returns {number} 处理后的索引
+ */
+export const fixIndex = (index: number, max: number = 12): number => {
+  if (index < 0) {
+    return fixIndex(index + max, max);
+  }
+
+  if (index > max - 1) {
+    return fixIndex(index - max, max);
+  }
+
+  const res = 1 / index === -Infinity ? 0 : index;
+
+  return res;
+};
+
+/**
+ * 因为宫位是从寅宫开始的排列的，所以需要将目标地支的序号减去寅的序号才能得到宫位的序号
+ *
+ * @param {EarthlyBranchName} earthlyBranch 地支
+ * @returns {number} 该地支对应的宫位索引序号
+ */
+export const earthlyBranchIndexToPalaceIndex = (earthlyBranchName: EarthlyBranchName): number => {
+  const earthlyBranch = kot<EarthlyBranchKey>(earthlyBranchName, 'Earthly');
+  const yin = kot<EarthlyBranchKey>('yinEarthly', 'Earthly');
+
+  return fixIndex(EARTHLY_BRANCHES.indexOf(earthlyBranch) - EARTHLY_BRANCHES.indexOf(yin));
+};
+
+/**
+ * 配置星耀亮度
+ *
+ * @param {StarName} starName 星耀名字
+ * @param {number} index 所在宫位索引
+ */
+export const getBrightness = (starName: StarName, index: number): Brightness => {
+  const star = kot<keyof typeof STARS_INFO>(starName);
+  const { brightness } = getConfig();
+  const targetBrightness = brightness[star] ? brightness[star] : STARS_INFO[star]?.brightness;
+
+  if (!targetBrightness) {
+    return '';
+  }
+
+  return t<Brightness>(targetBrightness[fixIndex(index)]);
+};
+
+export const getMutagen = (starName: StarName, heavenlyStemName: HeavenlyStemName): Mutagen => {
+  const heavenlyStem = kot<HeavenlyStemKey>(heavenlyStemName, 'Heavenly');
+  const starKey = kot<StarKey>(starName);
+  const target = getTargetMutagens(heavenlyStem);
+
+  return t<Mutagen>(MUTAGEN[target.indexOf(starKey as never)]);
+};
+
+export const getMutagensByHeavenlyStem = (heavenlyStemName: HeavenlyStemName): StarName[] => {
+  const heavenlyStem = kot<HeavenlyStemKey>(heavenlyStemName, 'Heavenly');
+  const target = getTargetMutagens(heavenlyStem);
+
+  return target.map((star) => t<StarName>(star));
+};
+
+/**
+ * 处理地支相对于十二宫的索引，因为十二宫是以寅宫开始，所以下标需要减去地支寅的索引
+ *
+ * @param {EarthlyBranchName} earthlyBranch 地支
+ * @returns {number} Number(0~11)
+ */
+export const fixEarthlyBranchIndex = (earthlyBranchName: EarthlyBranchName): number => {
+  const earthlyBranch = kot<EarthlyBranchKey>(earthlyBranchName, 'Earthly');
+
+  return fixIndex(EARTHLY_BRANCHES.indexOf(earthlyBranch) - EARTHLY_BRANCHES.indexOf('yinEarthly'));
+};
+
+/**
+ * 调整农历月份的索引
+ *
+ * 正月建寅（正月地支为寅），fixLeap为是否调整闰月情况
+ * 若调整闰月，则闰月的前15天按上月算，后面天数按下月算
+ * 比如 闰二月 时，fixLeap 为 true 时 闰二月十五(含)前
+ * 的月份按二月算，之后的按三月算
+ *
+ * @param {string} solarDateStr 阳历日期
+ * @param {number} timeIndex 时辰序号
+ * @param {vboolean} fixLeap 是否调整闰月
+ * @returns {number} 月份索引
+ */
+export const fixLunarMonthIndex = (solarDateStr: string, timeIndex: number, fixLeap?: boolean) => {
+  const { lunarMonth, lunarDay, isLeap } = solar2lunar(solarDateStr);
+  // 紫微斗数以`寅`宫为第一个宫位
+  const firstIndex = EARTHLY_BRANCHES.indexOf('yinEarthly');
+  const needToAdd = isLeap && fixLeap && lunarDay > 15 && timeIndex !== 12;
+
+  return fixIndex(lunarMonth + 1 - firstIndex + (needToAdd ? 1 : 0));
+};
+
+/**
+ * 获取农历日期【天】的索引，晚子时将加一天，所以如果是晚子时下标不需要减一
+ *
+ * @param lunarDay 农历日期【天】
+ * @param timeIndex 时辰索引
+ * @returns {number} 农历日期【天】
+ */
+export const fixLunarDayIndex = (lunarDay: number, timeIndex: number) => (timeIndex >= 12 ? lunarDay : lunarDay - 1);
+
+/**
+ * 将多个星耀数组合并到一起
+ *
+ * @param {FunctionalStar[][][]} stars 星耀数组
+ * @returns {FunctionalStar[][]} 合并后的星耀
+ */
+export const mergeStars = (...stars: FunctionalStar[][][]) => {
+  const finalStars = initStars();
+
+  stars.forEach((item) => {
+    item.forEach((subItem, index) => {
+      Array.prototype.push.apply(finalStars[index], subItem);
+    });
+  });
+
+  return finalStars;
+};
+
+/**
+ * 将时间的小时转化为时辰的索引
+ *
+ * @param {number} hour 当前时间的小时数
+ * @returns {number} 时辰的索引
+ */
+export const timeToIndex = (hour: number) => {
+  if (hour === 0) {
+    // 00:00～01:00 为早子时
+    return 0;
+  }
+
+  if (hour === 23) {
+    // 23:00～00:00 为晚子时
+    return 12;
+  }
+
+  return Math.floor((hour + 1) / 2);
+};
+
+/**
+ * 起小限
+ *
+ * - 小限一年一度逢，男顺女逆不相同，
+ * - 寅午戍人辰上起，申子辰人自戍宫，
+ * - 巳酉丑人未宫始，亥卯未人起丑宫。
+ *
+ * @param {EarthlyBranchName} earthlyBranchName 地支
+ * @returns {number} 小限开始的宫位索引
+ */
+export const getAgeIndex = (earthlyBranchName: EarthlyBranchName) => {
+  const earthlyBranch = kot<EarthlyBranchKey>(earthlyBranchName, 'Earthly');
+  let ageIdx = -1;
+
+  if (['yinEarthly', 'wuEarthly', 'xuEarthly'].includes(earthlyBranch)) {
+    ageIdx = fixEarthlyBranchIndex('chen');
+  } else if (['shenEarthly', 'ziEarthly', 'chenEarthly'].includes(earthlyBranch)) {
+    ageIdx = fixEarthlyBranchIndex('xu');
+  } else if (['siEarthly', 'youEarthly', 'chouEarthly'].includes(earthlyBranch)) {
+    ageIdx = fixEarthlyBranchIndex('wei');
+  } else if (['haiEarthly', 'maoEarthly', 'weiEarthly'].includes(earthlyBranch)) {
+    ageIdx = fixIndex(fixEarthlyBranchIndex('chou'));
+  }
+
+  return ageIdx;
+};
+
+/**
+ * 返回翻译后的干支纪年字符串
+ *
+ * @param chineseDate 干支纪年日期对象
+ * @returns 干支纪年字符串
+ */
+export const translateChineseDate = (chineseDate: HeavenlyStemAndEarthlyBranchDate): string => {
+  const { yearly, monthly, daily, hourly } = chineseDate;
+
+  if (
+    yearly.some((item) => (t(kot(item)) as string).length > 1) ||
+    monthly.some((item) => (t(kot(item)) as string).length > 1) ||
+    daily.some((item) => (t(kot(item)) as string).length > 1) ||
+    hourly.some((item) => (t(kot(item)) as string).length > 1)
+  ) {
+    return `${yearly.map((item) => t(kot(item))).join(' ')} - ${monthly.map((item) => t(kot(item))).join(' ')} - ${daily
+      .map((item) => t(kot(item)))
+      .join(' ')} - ${hourly.map((item) => t(kot(item))).join(' ')}`;
+  }
+
+  return `${yearly.map((item) => t(kot(item))).join('')} ${monthly.map((item) => t(kot(item))).join('')} ${daily
+    .map((item) => t(kot(item)))
+    .join('')} ${hourly.map((item) => t(kot(item))).join('')}`;
+};
+
+===== src/astro/palace.ts (complete file) =====
+import { getHeavenlyStemAndEarthlyBranchBySolarDate } from 'lunar-lite';
+import {
+  EARTHLY_BRANCHES,
+  GENDER,
+  HEAVENLY_STEMS,
+  PALACES,
+  TIGER_RULE,
+  earthlyBranches,
+  FiveElementsClass,
+} from '../data';
+import { SoulAndBody, Decadal, AstrolabeParam } from '../data/types';
+import {
+  EarthlyBranchKey,
+  EarthlyBranchName,
+  FiveElementsClassKey,
+  FiveElementsClassName,
+  HeavenlyStemKey,
+  HeavenlyStemName,
+  PalaceName,
+  kot,
+  t,
+  GenderKey,
+} from '../i18n';
+import { fixEarthlyBranchIndex, fixIndex, fixLunarMonthIndex, getAgeIndex } from '../utils';
+import { getConfig } from './astro';
+
+/**
+ * 获取命宫以及身宫数据
+ *
+ * 1. 定寅首
+ * - 甲己年生起丙寅，乙庚年生起戊寅，
+ * - 丙辛年生起庚寅，丁壬年生起壬寅，
+ * - 戊癸年生起甲寅。
+ *
+ * 2. 安命身宫诀
+ * - 寅起正月，顺数至生月，逆数生时为命宫。
+ * - 寅起正月，顺数至生月，顺数生时为身宫。
+ *
+ * @param {AstrolabeParam} param 通用排盘参数
+ * @returns {SoulAndBody} 命宫和身宫数据
+ */
+export const getSoulAndBody = (param: AstrolabeParam): SoulAndBody => {
+  const { solarDate, timeIndex, fixLeap, from } = param;
+  const { yearly, hourly } = getHeavenlyStemAndEarthlyBranchBySolarDate(solarDate, timeIndex, {
+    year: getConfig().yearDivide,
+    month: getConfig().horoscopeDivide,
+  });
+  const earthlyBranchOfTime = kot<EarthlyBranchKey>(hourly[1], 'Earthly');
+  const heavenlyStemOfYear = kot<HeavenlyStemKey>(yearly[0], 'Heavenly');
+
+  // 紫微斗数以`寅`宫为第一个宫位
+  const firstIndex = EARTHLY_BRANCHES.indexOf('yinEarthly');
+
+  const monthIndex = fixLunarMonthIndex(solarDate, timeIndex, fixLeap);
+
+  // 命宫索引，以寅宫为0，顺时针数到生月地支索引，再逆时针数到生时地支索引
+  // 此处数到生月地支索引其实就是农历月份，所以不再计算生月地支索引
+  let soulIndex = fixIndex(monthIndex - EARTHLY_BRANCHES.indexOf(earthlyBranchOfTime));
+
+  // 身宫索引，以寅宫为0，顺时针数到生月地支索引，再顺时针数到生时地支索引
+  // 与命宫索引一样，不再赘述
+  let bodyIndex = fixIndex(monthIndex + EARTHLY_BRANCHES.indexOf(earthlyBranchOfTime));
+
+  if (from?.heavenlyStem && from?.earthlyBranch) {
+    // 以传入地支为命宫
+    soulIndex = fixEarthlyBranchIndex(from.earthlyBranch);
+
+    const bodyOffset = [0, 2, 4, 6, 8, 10, 0, 2, 4, 6, 8, 10, 0];
+
+    bodyIndex = fixIndex(bodyOffset[timeIndex] + soulIndex);
+  }
+
+  // 用五虎遁取得寅宫的天干
+  const startHevenlyStem = TIGER_RULE[heavenlyStemOfYear];
+
+  // 获取命宫天干索引，起始天干索引加上命宫的索引即是
+  // 天干循环数为10
+  const heavenlyStemOfSoulIndex = fixIndex(HEAVENLY_STEMS.indexOf(startHevenlyStem) + soulIndex, 10);
+
+  // 命宫的天干
+  const heavenlyStemOfSoul = t<HeavenlyStemName>(HEAVENLY_STEMS[heavenlyStemOfSoulIndex]);
+
+  // 命宫地支，命宫索引 + `寅`的索引（因为紫微斗数里寅宫是第一个宫位）
+  const earthlyBranchOfSoul = t<EarthlyBranchName>(EARTHLY_BRANCHES[fixIndex(soulIndex + firstIndex)]);
+
+  return {
+    soulIndex,
+    bodyIndex,
+    heavenlyStemOfSoul,
+    earthlyBranchOfSoul,
+  };
+};
+
+/**
+ * 定五行局法（以命宫天干地支而定）
+ *
+ * 纳音五行计算取数巧记口诀：
+ *
+ * - 甲乙丙丁一到五，子丑午未一来数，
+ * - 寅卯申酉二上走，辰巳戌亥三为足。
+ * - 干支相加多减五，五行木金水火土。
+ *
+ * 注解：
+ *
+ * 1、五行取数：木1 金2 水3 火4 土5
+ *
+ *  天干取数：
+ *  - 甲乙 ——> 1
+ *  - 丙丁 ——> 2
+ *  - 戊己 ——> 3
+ *  - 庚辛 ——> 4
+ *  - 壬癸 ——> 5
+ *
+ *  地支取数：
+ *  - 子午丑未 ——> 1
+ *  - 寅申卯酉 ——> 2
+ *  - 辰戌巳亥 ——> 3
+ *
+ * 2、计算方法：
+ *
+ *  干支数相加，超过5者减去5，以差论之。
+ *  - 若差为1则五行属木
+ *  - 若差为2则五行属金
+ *  - 若差为3则五行属水
+ *  - 若差为4则五行属火
+ *  - 若差为5则五行属土
+ *
+ * 3、举例：
+ *  - 丙子：丙2 子1=3 ——> 水 ——> 水二局
+ *  - 辛未：辛4 未1=5 ——> 土 ——> 土五局
+ *  - 庚申：庚4 申2=6 ——> 6-5=1 ——> 木 ——> 木三局
+ *
+ * @param heavenlyStemName 天干
+ * @param earthlyBranchName 地支
+ * @returns 水二局 ｜ 木三局 ｜ 金四局 ｜ 土五局 ｜ 火六局
+ */
+export const getFiveElementsClass = (
+  heavenlyStemName: HeavenlyStemName,
+  earthlyBranchName: EarthlyBranchName,
+): FiveElementsClassName => {
+  const fiveElementsTable: FiveElementsClassKey[] = ['wood3rd', 'metal4th', 'water2nd', 'fire6th', 'earth5th'];
+  const heavenlyStem = kot<HeavenlyStemKey>(heavenlyStemName, 'Heavenly');
+  const earthlyBranch = kot<EarthlyBranchKey>(earthlyBranchName, 'Earthly');
+
+  const heavenlyStemNumber = Math.floor(HEAVENLY_STEMS.indexOf(heavenlyStem) / 2) + 1;
+  const earthlyBranchNumber = Math.floor(fixIndex(EARTHLY_BRANCHES.indexOf(earthlyBranch), 6) / 2) + 1;
+  let index = heavenlyStemNumber + earthlyBranchNumber;
+
+  while (index > 5) {
+    index -= 5;
+  }
+
+  return t<FiveElementsClassName>(fiveElementsTable[index - 1]);
+};
+
+/**
+ * 获取从寅宫开始的各个宫名
+ *
+ * @param fromIndex 命宫索引
+ * @returns 从寅宫开始的各个宫名
+ */
+export const getPalaceNames = (fromIndex: number): PalaceName[] => {
+  const names: PalaceName[] = [];
+
+  for (let i = 0; i < PALACES.length; i++) {
+    const idx = fixIndex(i - fromIndex);
+
+    names[i] = t(PALACES[idx]) as PalaceName;
+  }
+
+  return names;
+};
+
+/**
+ * 起大限
+ *
+ * - 大限由命宫起，阳男阴女顺行；
+ * - 阴男阳女逆行，每十年过一宫限。
+ *
+ * @param solarDateStr 公历日期
+ * @param timeIndex 出生时索引
+ * @param gender 性别
+ * @param fixLeap 是否修正闰月，若修正，则闰月前15天按上月算，后15天按下月算
+ * @returns 从寅宫开始的大限年龄段
+ */
+export const getHoroscope = (param: AstrolabeParam): { decadals: Decadal[]; ages: number[][] } => {
+  const { solarDate, timeIndex, gender, from } = param;
+  const decadals: Decadal[] = [];
+  const genderKey = kot<GenderKey>(gender!);
+  const { yearly } = getHeavenlyStemAndEarthlyBranchBySolarDate(solarDate, timeIndex, {
+    // 起大限应该与配置同步
+    year: getConfig().yearDivide,
+  });
+  const heavenlyStem = kot<HeavenlyStemKey>(yearly[0], 'Heavenly');
+  const earthlyBranch = kot<EarthlyBranchKey>(yearly[1], 'Earthly');
+  const { soulIndex, heavenlyStemOfSoul, earthlyBranchOfSoul } = getSoulAndBody(param);
+  const fiveElementsClass = kot<FiveElementsClassKey>(
+    getFiveElementsClass(from?.heavenlyStem ?? heavenlyStemOfSoul, from?.earthlyBranch ?? earthlyBranchOfSoul),
+  );
+
+  // 用五虎遁获取大限起始天干
+  const startHeavenlyStem = TIGER_RULE[heavenlyStem];
+
+  for (let i = 0; i < 12; i++) {
+    const idx =
+      GENDER[genderKey] === earthlyBranches[earthlyBranch].yinYang ? fixIndex(soulIndex + i) : fixIndex(soulIndex - i);
+    const start = FiveElementsClass[fiveElementsClass] + 10 * i;
+    const heavenlyStemIndex = fixIndex(HEAVENLY_STEMS.indexOf(startHeavenlyStem) + idx, 10);
+    const earthlyBranchIndex = fixIndex(EARTHLY_BRANCHES.indexOf('yinEarthly') + idx);
+
+    decadals[idx] = {
+      range: [start, start + 9],
+      heavenlyStem: t(HEAVENLY_STEMS[heavenlyStemIndex]),
+      earthlyBranch: t(EARTHLY_BRANCHES[earthlyBranchIndex]),
+    };
+  }
+
+  const ageIdx = getAgeIndex(yearly[1]);
+  const ages = [];
+
+  for (let i = 0; i < 12; i++) {
+    const age = [];
+
+    for (let j = 0; j < 10; j++) {
+      age.push(12 * j + i + 1);
+    }
+
+    const idx = kot<GenderKey>(gender!) === 'male' ? fixIndex(ageIdx + i) : fixIndex(ageIdx - i);
+
+    ages[idx] = age;
+  }
+
+  return { decadals, ages };
+};
+
+===== src/astro/FunctionalHoroscope.ts (complete file) =====
+import { registerContextClass } from './context';
+import { Horoscope, Scope } from '../data/types';
+import { Mutagen, MutagenKey, PalaceKey, PalaceName, StarKey, StarName, kot } from '../i18n';
+import { IFunctionalAstrolabe } from './FunctionalAstrolabe';
+import { IFunctionalSurpalaces } from './FunctionalSurpalaces';
+import { IFunctionalPalace } from './FunctionalPalace';
+import { mergeStars } from '../utils';
+import { MUTAGEN } from '../data';
+import { serialize } from '../utils/toJSON';
+
+const _getHoroscopePalaceIndex = ($: IFunctionalHoroscope, scope: Scope, palaceName: PalaceName) => {
+  if (scope === 'origin') {
+    return $.astrolabe.palace(palaceName)?.index ?? -1;
+  }
+
+  const palaceKey = kot<PalaceKey>(palaceName, 'Palace');
+
+  return $[scope].palaceNames.findIndex((name) => kot<PalaceKey>(name, 'Palace') === palaceKey);
+};
+
+export interface IFunctionalHoroscope extends Horoscope {
+  astrolabe: IFunctionalAstrolabe;
+  /**
+   * 将功能运限转换为普通 JSON 对象
+   *
+   * @version 2.6.0
+   */
+  toJSON: () => Horoscope;
+
+  /**
+   * 获取小限宫位
+   *
+   * @version v1.3.0
+   *
+   * @returns {IFunctionalPalace | undefined} 小限宫位
+   */
+  agePalace: () => IFunctionalPalace | undefined;
+
+  /**
+   * 获取运限宫位
+   *
+   * @version v1.3.0
+   *
+   * @param palaceName 宫位名称
+   * @param scope 指定获取哪个运限的宫位
+   * @returns {IFunctionalPalace | undefined} 指定宫位
+   */
+  palace: (palaceName: PalaceName, scope: Scope) => IFunctionalPalace | undefined;
+
+  /**
+   * 获取运限指定宫位的三方四正宫位
+   *
+   * @version v1.3.0
+   *
+   * @param palaceName 宫位名称
+   * @param scope 指定获取哪个运限的宫位
+   * @returns {IFunctionalSurpalaces | undefined} 指定宫位的三方四正
+   */
+  surroundPalaces: (palaceName: PalaceName, scope: Scope) => IFunctionalSurpalaces | undefined;
+
+  /**
+   * 判断在指定运限的宫位内是否包含流耀，需要全部包含才返回true
+   *
+   * @version v1.3.0
+   *
+   * @param palaceName 宫位名称
+   * @param scope 指定获取哪个运限的宫位
+   * @param horoscopeStar 流耀
+   * @returns {boolean} 是否包含指定流耀
+   */
+  hasHoroscopeStars: (palaceName: PalaceName, scope: Scope, horoscopeStar: StarName[]) => boolean;
+
+  /**
+   * 判断指定运限宫位内是否不含流耀，需要全部不包含才返回true
+   *
+   * @version v1.3.2
+   *
+   * @param palaceName 宫位名称
+   * @param scope 指定获取哪个运限的宫位
+   * @param horoscope 流耀
+   * @returns {boolean} 是否不含指定流耀
+   */
+  notHaveHoroscopeStars: (palaceName: PalaceName, scope: Scope, horoscope: StarName[]) => boolean;
+
+  /**
+   * 判断指定运限宫位内是否含有指定流耀，只要包含其中一颗就返回true
+   *
+   * @version v1.3.3
+   *
+   * @param palaceName 宫位名称
+   * @param scope 指定获取哪个运限的宫位
+   * @param horoscope 流耀
+   * @returns {boolean} 是否含有（部分）指定流耀中
+   */
+  hasOneOfHoroscopeStars: (palaceName: PalaceName, scope: Scope, horoscopeStar: StarName[]) => boolean;
+
+  /**
+   * 判断指定运限宫位内是否存在运限四化
+   *
+   * @version v1.3.4
+   *
+   * @param palaceName 宫位名称
+   * @param scope 指定获取哪个运限的宫位
+   * @param horoscopeMutagen 运限四化
+   * @returns {boolean} 是否含有运限四化
+   */
+  hasHoroscopeMutagen: (palaceName: PalaceName, scope: Scope, horoscopeMutagen: Mutagen) => boolean;
+}
+
+export default class FunctionalHoroscope implements IFunctionalHoroscope {
+  lunarDate;
+  solarDate;
+  decadal;
+  age;
+  yearly;
+  monthly;
+  daily;
+  hourly;
+  astrolabe;
+
+  constructor(data: Horoscope, astrolabe: IFunctionalAstrolabe) {
+    this.lunarDate = data.lunarDate;
+    this.solarDate = data.solarDate;
+    this.decadal = data.decadal;
+    this.age = data.age;
+    this.yearly = data.yearly;
+    this.monthly = data.monthly;
+    this.daily = data.daily;
+    this.hourly = data.hourly;
+    this.astrolabe = astrolabe;
+
+    return this;
+  }
+
+  toJSON = (): Horoscope => serialize<Horoscope>(this);
+
+  agePalace = () => {
+    return this.astrolabe.palace(this.age.index);
+  };
+
+  palace = (palaceName: PalaceName, scope: Scope) => {
+    const targetPalaceIndex = _getHoroscopePalaceIndex(this, scope, palaceName);
+
+    return targetPalaceIndex < 0 ? undefined : this.astrolabe.palace(targetPalaceIndex);
+  };
+
+  surroundPalaces = (palaceName: PalaceName, scope: Scope) => {
+    const targetPalaceIndex = _getHoroscopePalaceIndex(this, scope, palaceName);
+
+    return targetPalaceIndex < 0 ? undefined : this.astrolabe.surroundedPalaces(targetPalaceIndex);
+  };
+
+  hasHoroscopeStars = (palaceName: PalaceName, scope: Scope, horoscopeStar: StarName[]) => {
+    if (!this.decadal.stars || !this.yearly.stars) {
+      return false;
+    }
+
+    const palaceIndex = _getHoroscopePalaceIndex(this, scope, palaceName);
+
+    if (palaceIndex < 0) {
+      return false;
+    }
+
+    const stars = mergeStars(this.decadal.stars, this.yearly.stars)[palaceIndex];
+    const starKeys = stars.map((item) => kot<StarKey>(item.name));
+    const horoscopeStarKeys = horoscopeStar.map((item) => kot<StarKey>(item));
+
+    return horoscopeStarKeys.every((star) => starKeys.includes(star));
+  };
+
+  notHaveHoroscopeStars = (palaceName: PalaceName, scope: Scope, horoscopeStar: StarName[]) => {
+    if (!this.decadal.stars || !this.yearly.stars) {
+      return false;
+    }
+
+    const palaceIndex = _getHoroscopePalaceIndex(this, scope, palaceName);
+
+    if (palaceIndex < 0) {
+      return false;
+    }
+
+    const stars = mergeStars(this.decadal.stars, this.yearly.stars)[palaceIndex];
+    const starKeys = stars.map((item) => kot<StarKey>(item.name));
+    const horoscopeStarKeys = horoscopeStar.map((item) => kot<StarKey>(item));
+
+    return horoscopeStarKeys.every((star) => !starKeys.includes(star));
+  };
+
+  hasOneOfHoroscopeStars = (palaceName: PalaceName, scope: Scope, horoscopeStar: StarName[]) => {
+    if (!this.decadal.stars || !this.yearly.stars) {
+      return false;
+    }
+
+    const palaceIndex = _getHoroscopePalaceIndex(this, scope, palaceName);
+
+    if (palaceIndex < 0) {
+      return false;
+    }
+
+    const stars = mergeStars(this.decadal.stars, this.yearly.stars)[palaceIndex];
+    const starKeys = stars.map((item) => kot<StarKey>(item.name));
+    const horoscopeStarKeys = horoscopeStar.map((item) => kot<StarKey>(item));
+
+    return horoscopeStarKeys.some((star) => starKeys.includes(star));
+  };
+
+  hasHoroscopeMutagen = (palaceName: PalaceName, scope: Scope, horoscopeMutagen: Mutagen) => {
+    if (scope === 'origin') {
+      return false;
+    }
+
+    const palaceIndex = _getHoroscopePalaceIndex(this, scope, palaceName);
+
+    if (palaceIndex < 0) {
+      return false;
+    }
+
+    const majorStars = this.astrolabe.palace(palaceIndex)?.majorStars ?? [];
+    const minorStars = this.astrolabe.palace(palaceIndex)?.minorStars ?? [];
+    const stars = mergeStars([majorStars], [minorStars])[0].map((star) => kot<StarKey>(star.name));
+    const mutagenIndex = MUTAGEN.indexOf(kot<MutagenKey>(horoscopeMutagen));
+
+    return stars.includes(kot<StarKey>(this[scope].mutagen[mutagenIndex]));
+  };
+}
+
+registerContextClass(FunctionalHoroscope.prototype);
+
+===== src/i18n/index.ts (complete file) =====
+import i18next from 'i18next';
+import transZhCN from './locales/zh-CN';
+import transZhTW from './locales/zh-TW';
+import transKoKR from './locales/ko-KR';
+import transJaJP from './locales/ja-JP';
+import transEnUS from './locales/en-US';
+import transViVN from './locales/vi-VN';
+import { Language } from '../data/types';
+import { STAR_ALIASES } from './starAliases';
+import { LANGUAGES } from '../data/constants';
+
+const resources: { [key: Language]: { translation: { [key: string]: string } } } = {
+  'en-US': {
+    translation: transEnUS,
+  },
+  'ja-JP': {
+    translation: transJaJP,
+  },
+  'ko-KR': {
+    translation: transKoKR,
+  },
+  'zh-CN': {
+    translation: transZhCN,
+  },
+  'zh-TW': {
+    translation: transZhTW,
+  },
+  'vi-VN': {
+    translation: transViVN,
+  },
+};
+
+// 设置默认语言和加载翻译文件
+i18next.init({ lng: 'zh-CN', resources });
+
+/**
+ * 设置国际化语言。
+ * 支持的语言见 type.ts -> Language
+ *
+ * @param language 需要设置的语言【默认为zh-CN】
+ */
+export const setLanguage = (language: Language) => {
+  if (!LANGUAGES.includes(language)) throw new Error('invalid language.');
+  i18next.changeLanguage(language);
+};
+
+let activeLanguage: Language | undefined;
+/**
+ * 获取当前同步计算或全局设置使用的语言。
+ *
+ * @version 2.6.2
+ */
+export const getLanguage = (): Language => activeLanguage ?? i18next.language;
+
+/**
+ * 同步计算期间使用指定语言，不改变其他调用的语言。
+ *
+ * @internal
+ * @version 2.6.2
+ * @param language 当前计算使用的语言
+ * @param calculate 同步计算方法
+ */
+export const withLanguage = <T>(language: Language, calculate: () => T): T => {
+  if (!LANGUAGES.includes(language)) throw new Error('invalid language.');
+  const previous = activeLanguage;
+  activeLanguage = language;
+  try {
+    return calculate();
+  } finally {
+    activeLanguage = previous;
+  }
+};
+
+/**
+ * 输出国际化文本。
+ *
+ * @param str 待翻译的字符串
+ * @returns 翻译后的字符串
+ */
+export const t = <T>(str: string, options?: Record<string, string | number>) => {
+  if (!str) {
+    return '' as T;
+  }
+
+  return i18next.t(str, { ...options, lng: getLanguage() }) as T;
+};
+
+/**
+ * kot(Key of Translation).
+ *
+ * 通过翻译文本反查Key的值，用于各种计算。
+ * 若没有找到则会返回Value本身。
+ *
+ * @param value 翻译后的字符串
+ * @returns 翻译文本的Key值
+ */
+export const kot = <T>(value: string, k?: string) => {
+  let res = value;
+  const aliasKey = STAR_ALIASES[value as keyof typeof STAR_ALIASES];
+
+  if (aliasKey) {
+    return aliasKey as T;
+  }
+
+  for (const [, item] of Object.entries(resources)) {
+    for (const [transKey, trans] of Object.entries(item.translation)) {
+      if (((k && transKey.includes(k)) || !k) && trans === value) {
+        res = transKey;
+        return res as T;
+      }
+    }
+  }
+
+  return res as T;
+};
+
+export * from './types';
+
+export default i18next;
+
+===== src/i18n/locales/vi-VN/star.ts (complete file) =====
+export default {
+  ziweiMaj: 'Tử Vi',
+  tianjiMaj: 'Thiên Cơ',
+  taiyangMaj: 'Thái Dương',
+  wuquMaj: 'Vũ Khúc',
+  tiantongMaj: 'Thiên Đồng',
+  lianzhenMaj: 'Liêm Trinh',
+  tianfuMaj: 'Thiên Phủ',
+  taiyinMaj: 'Thái Âm',
+  tanlangMaj: 'Tham Lang',
+  jumenMaj: 'Cự Môn',
+  tianxiangMaj: 'Thiên Tướng',
+  tianliangMaj: 'Thiên Lương',
+  qishaMaj: 'Thất Sát',
+  pojunMaj: 'Phá Quân',
+  zuofuMin: 'Tả Phù',
+  youbiMin: 'Hữu Bật',
+  wenchangMin: 'Văn Xương',
+  wenquMin: 'Văn Khúc',
+  lucunMin: 'Lộc Tồn',
+  tianmaMin: 'Thiên Mã',
+  qingyangMin: 'Kình Dương',
+  tuoluoMin: 'Đà La',
+  huoxingMin: 'Hỏa Tinh',
+  lingxingMin: 'Linh Tinh',
+  tiankuiMin: 'Thiên Khôi',
+  tianyueMin: 'Thiên Việt',
+  dikongMin: 'Địa Không',
+  dijieMin: 'Địa Kiếp',
+  jieshaAdj: 'Kiếp Sát',
+  tiankong: 'Thiên Không',
+  tianxing: 'Thiên Hình',
+  tianyao: 'Thiên Diêu',
+  jieshen: 'Giải Thần',
+  yinsha: 'Âm Sát',
+  tianxi: 'Thiên Hỷ',
+  tianguan: 'Thiên Quan',
+  tianfu: 'Thiên Phúc',
+  tianku: 'Thiên Khốc',
+  tianxu: 'Thiên Hư',
+  longchi: 'Long Trì',
+  fengge: 'Phụng Các',
+  hongluan: 'Hồng Loan',
+  guchen: 'Cô Thần',
+  guasu: 'Quả Tú',
+  feilian: 'Phi Liêm',
+  posui: 'Phá Toái',
+  taifu: 'Đài Phụ',
+  fenggao: 'Phong Cáo',
+  tianwu: 'Thiên Vu',
+  tianyue: 'Thiên Nguyệt',
+  santai: 'Tam Thai',
+  bazuo: 'Bát Tọa',
+  engguang: 'Ân Quang',
+  tiangui: 'Thiên Quý',
+  tiancai: 'Thiên Tài',
+  tianshou: 'Thiên Thọ',
+  jiekong: 'Triệt Không',
+  xunzhong: 'Tuần Trung',
+  xunkong: 'Tuần Không',
+  kongwang: 'Không Vong',
+  jielu: 'Triệt Lộ',
+  yuede: 'Nguyệt Đức',
+  tianshang: 'Thiên Thương',
+  tianshi: 'Thiên Sứ',
+  tianchu: 'Thiên Trù',
+  changsheng: 'Trường Sinh',
+  muyu: 'Mục Dục',
+  guandai: 'Quan Đới',
+  linguan: 'Lâm Quan',
+  diwang: 'Đế Vượng',
+  shuai: 'Suy',
+  bing: 'Bệnh',
+  si: 'Tử',
+  mu: 'Mộ',
+  jue: 'Tuyệt',
+  tai: 'Thai',
+  yang: 'Dưỡng',
+  boshi: 'Bác Sỹ',
+  lishi: 'Lực Sỹ',
+  qinglong: 'Thanh Long',
+  xiaohao: 'Tiểu Hao',
+  jiangjun: 'Tướng Quân',
+  zhoushu: 'Tấu Thư',
+  faylian: 'Phi Liêm',
+  xishen: 'Hỷ Thần',
+  bingfu: 'Bệnh Phù',
+  dahao: 'Đại Hao',
+  suipo: 'Tuế Phá',
+  fubing: 'Phục Binh',
+  guanfu: 'Quan Phủ',
+  suijian: 'Tuế Kiện',
+  huiqi: 'Hối Khí',
+  sangmen: 'Tang Môn',
+  guansuo: 'Quán Tác',
+  gwanfu: 'Quan Phù',
+  longde: 'Long Đức',
+  baihu: 'Bạch Hổ',
+  tiande: 'Thiên Đức',
+  diaoke: 'Điếu Khách',
+  jiangxing: 'Tướng Tinh',
+  panan: 'Phan Án',
+  suiyi: 'Tuế Dịch',
+  xiishen: 'Tức Thần',
+  huagai: 'Hoa Cái',
+  jiesha: 'Kiếp Sát',
+  zhaisha: 'Tai Sát',
+  tiansha: 'Thiên Sát',
+  zhibei: 'Chỉ Bối',
+  xianchi: 'Hàm Trì',
+  yuesha: 'Nguyệt Sát',
+  wangshen: 'Vong Thần',
+  yunkui: 'Vận Khôi',
+  yunyue: 'Vận Việt',
+  yunchang: 'Vận Xương',
+  yunqu: 'Vận Khúc',
+  yunluan: 'Vận Loan',
+  yunxi: 'Vận Hỷ',
+  yunlu: 'Vận Lộc',
+  yunyang: 'Vận Dương',
+  yuntuo: 'Vận Đà',
+  yunma: 'Vận Mã',
+  liukui: 'Lưu Khôi',
+  liuyue: 'Lưu Việt',
+  liuchang: 'Lưu Xương',
+  liuqu: 'Lưu Khúc',
+  liuluan: 'Lưu Loan',
+  liuxi: 'Lưu Hỷ',
+  liulu: 'Lưu Lộc',
+  liuyang: 'Lưu Dương',
+  liutuo: 'Lưu Đà',
+  liuma: 'Lưu Mã',
+  nianjie: 'Niên Giải',
+  yuekui: 'Thiên Khôi(M)',
+  yueyue: 'Thiên Nguyệt(M)',
+  yuechang: 'Văn Xương(M)',
+  yuequ: 'Văn Khúc(M)',
+  yueluan: 'Hồng Loan(M)',
+  yuexi: 'Thiên Hỷ(M)',
+  yuelu: 'Lộc Tồn(M)',
+  yueyang: 'Kình Dương(M)',
+  yuetuo: 'Đà La(M)',
+  yuema: 'Thiên Mã(M)',
+  rikui: 'Thiên Khôi(d)',
+  riyue: 'Thiên Nguyệt(d)',
+  richang: 'Văn Xương(d)',
+  riqu: 'Văn Khúc(d)',
+  riluan: 'Hồng Loan(d)',
+  rixi: 'Thiên Hỷ(d)',
+  rilu: 'Lộc Tồn(d)',
+  riyang: 'Kình Dương(d)',
+  rituo: 'Đà La(d)',
+  rima: 'Thiên Mã(d)',
+  shikui: 'Thiên Khôi(H)',
+  shiyue: 'Thiên Nguyệt(H)',
+  shichang: 'Văn Xương(H)',
+  shiqu: 'Văn Khúc(H)',
+  shiluan: 'Hồng Loan(H)',
+  shixi: 'Thiên Hỷ(H)',
+  shilu: 'Lộc Tồn(H)',
+  shiyang: 'Kình Dương(H)',
+  shituo: 'Đà La(H)',
+  shima: 'Thiên Mã(H)',
+} as const;
+
+===== src/i18n/locales/vi-VN/mutagen.ts (complete file) =====
+export default {
+  sihuaLu: 'Lộc',
+  sihuaQuan: 'Quyền',
+  sihuaKe: 'Khoa',
+  sihuaJi: 'Kỵ',
+} as const;
+
+===== src/astro/FunctionalAstrolabe.ts lines 1–218 (complete private selector/calculation function) =====
+import { registerContextClass } from './context';
+import dayjs from 'dayjs';
+import { getHeavenlyStemAndEarthlyBranchBySolarDate, lunar2solar, normalizeDateStr, solar2lunar } from 'lunar-lite';
+import { LunarYear } from 'lunar-typescript';
+import { EARTHLY_BRANCHES } from '../data';
+import { Astrolabe, DecadalHoroscope, Horoscope, MonthlyHoroscope, Plugin, YearlyHoroscope } from '../data/types';
+import { EarthlyBranchKey, EarthlyBranchName, HeavenlyStemName, kot, PalaceName, StarKey, StarName, t } from '../i18n';
+import { getHoroscopeStar, getYearly12 } from '../star';
+import { IFunctionalStar } from '../star/FunctionalStar';
+import { fixEarthlyBranchIndex, fixIndex, getMutagensByHeavenlyStem, timeToIndex } from '../utils';
+import { getFlankingPalaces, getPalace, getSurroundedPalaces } from './analyzer';
+import { IFunctionalPalace } from './FunctionalPalace';
+import { IFunctionalSurpalaces } from './FunctionalSurpalaces';
+import { IFunctinalFlankingPalaces } from './FunctionalFlankingPalaces';
+import { getPalaceNames } from './palace';
+import FunctionalHoroscope, { IFunctionalHoroscope } from './FunctionalHoroscope';
+import { getConfig } from './config';
+import { validateDate, validateTimeIndex } from '../utils/validation';
+import { serialize } from '../utils/toJSON';
+
+/**
+ * 获取运限数据
+ *
+ * @version v0.2.1
+ *
+ * @private 私有方法
+ *
+ * @param $ 星盘对象
+ * @param targetDate 阳历日期【可选】，默认为调用时日期
+ * @param timeIndex 时辰序号【可选】，若不传会返回 `targetDate` 中时间所在的时辰
+ * @returns 运限数据
+ */
+const _getHoroscopeBySolarDate = (
+  $: FunctionalAstrolabe,
+  targetDate: string | Date = new Date(),
+  timeIndex?: number,
+): IFunctionalHoroscope => {
+  validateDate(targetDate);
+  if (timeIndex !== undefined) validateTimeIndex(timeIndex);
+  const _birthday = solar2lunar($.solarDate);
+  const _date = solar2lunar(targetDate);
+  const convertTimeIndex = timeToIndex(dayjs(targetDate).hour());
+  const targetTimeIndex = timeIndex ?? convertTimeIndex;
+  const adjustedTargetTimeIndex = getConfig().dayDivide === 'current' && targetTimeIndex >= 12 ? 0 : targetTimeIndex;
+  const { yearly, monthly, daily, hourly } = getHeavenlyStemAndEarthlyBranchBySolarDate(
+    targetDate,
+    adjustedTargetTimeIndex,
+    {
+      // 允许配置运限分割点
+      year: getConfig().horoscopeDivide,
+      month: getConfig().horoscopeDivide,
+    },
+  );
+  // 虚岁
+  let nominalAge = _date.lunarYear - _birthday.lunarYear;
+  // 是否童限
+  let isChildhood = false;
+
+  if (getConfig().ageDivide === 'birthday') {
+    // 假如目标日期已经过了生日，则需要加1岁
+    // 比如 2022年九月初一 出生的人，在出生后虚岁为 1 岁
+    // 但在 2023年九月初二 以后，虚岁则为 2 岁
+    if (
+      _date.lunarMonth > _birthday.lunarMonth ||
+      (_date.lunarMonth === _birthday.lunarMonth && _date.lunarDay > _birthday.lunarDay)
+    ) {
+      nominalAge += 1;
+    }
+  } else {
+    // 以自然年为界，直接加1岁
+    nominalAge += 1;
+  }
+
+  // 大限索引
+  let decadalIndex = -1;
+  // 大限天干
+  let heavenlyStemOfDecade: HeavenlyStemName = 'jia';
+  // 大限地支
+  let earthlyBranchOfDecade: EarthlyBranchName = 'zi';
+  // 小限索引
+  let ageIndex = -1;
+  // 流年索引
+  const yearlyIndex = fixEarthlyBranchIndex(yearly[1]);
+  // 流月索引
+  let monthlyIndex = -1;
+  // 流日索引
+  let dailyIndex = -1;
+  // 流时索引
+  let hourlyIndex = -1;
+  // 小限天干
+  let heavenlyStemOfAge: HeavenlyStemName = 'jia';
+  // 小限地支
+  let earthlyBranchOfAge: EarthlyBranchName = 'zi';
+
+  // 查询大限索引
+  $.palaces.some(({ decadal }, index) => {
+    if (nominalAge >= decadal.range[0] && nominalAge <= decadal.range[1]) {
+      decadalIndex = index;
+      heavenlyStemOfDecade = decadal.heavenlyStem;
+      earthlyBranchOfDecade = decadal.earthlyBranch;
+
+      return true;
+    }
+  });
+
+  if (decadalIndex < 0) {
+    // 如果大限索引小于0则证明还没有开始起运
+    // 此时应该取小限运
+    // 一命二财三疾厄	四岁夫妻五福德
+    // 六岁事业为童限	专就宫垣视吉凶
+    const palaces: PalaceName[] = ['命宫', '财帛', '疾厄', '夫妻', '福德', '官禄'];
+    const targetIndex = palaces[nominalAge - 1];
+    const targetPalace = $.palace(targetIndex);
+
+    if (targetPalace) {
+      isChildhood = true;
+      decadalIndex = targetPalace.index;
+      heavenlyStemOfDecade = targetPalace.heavenlyStem;
+      earthlyBranchOfDecade = targetPalace.earthlyBranch;
+    }
+  }
+
+  // 查询小限索引
+  $.palaces.some(({ ages, heavenlyStem, earthlyBranch }, index) => {
+    if (ages.includes(nominalAge)) {
+      ageIndex = index;
+      heavenlyStemOfAge = heavenlyStem;
+      earthlyBranchOfAge = earthlyBranch;
+
+      return true;
+    }
+  });
+
+  // 获取流月索引, 流年地支逆数到生月所在宫位，再从该宫位顺数到生时，为正月所在宫位，之后每月一宫
+  // 计算流月时需要考虑生月闰月情况，如果是后15天则计算时需要加1月
+  const leapAddition = _birthday.isLeap && _birthday.lunarDay > 15 ? 1 : 0;
+  // 流月当月的闰月情况也需要考虑
+  const dateLeapAddition = _date.isLeap && _date.lunarDay > 15 ? 1 : 0;
+  monthlyIndex = fixIndex(
+    yearlyIndex -
+      (_birthday.lunarMonth + leapAddition) +
+      EARTHLY_BRANCHES.indexOf(kot<EarthlyBranchKey>($.rawDates.chineseDate.hourly[1])) +
+      (_date.lunarMonth + dateLeapAddition),
+  );
+
+  // 获取流日索引
+  dailyIndex = fixIndex(monthlyIndex + _date.lunarDay - 1);
+
+  // 获取流时索引
+  hourlyIndex = fixIndex(dailyIndex + EARTHLY_BRANCHES.indexOf(kot<EarthlyBranchKey>(hourly[1], 'Earthly')));
+
+  const scope: Horoscope = {
+    solarDate: normalizeDateStr(targetDate).slice(0, 3).join('-'),
+    lunarDate: _date.toString(true),
+    decadal: {
+      index: decadalIndex,
+      name: isChildhood ? t('childhood') : t('decadal'),
+      heavenlyStem: t(kot(heavenlyStemOfDecade, 'Heavnly')),
+      earthlyBranch: t(kot(earthlyBranchOfDecade, 'Earthly')),
+      palaceNames: getPalaceNames(decadalIndex),
+      mutagen: getMutagensByHeavenlyStem(heavenlyStemOfDecade),
+      stars: getHoroscopeStar(heavenlyStemOfDecade, earthlyBranchOfDecade, 'decadal'),
+    },
+    age: {
+      index: ageIndex,
+      nominalAge,
+      name: t('turn'),
+      heavenlyStem: heavenlyStemOfAge,
+      earthlyBranch: earthlyBranchOfAge,
+      palaceNames: getPalaceNames(ageIndex),
+      mutagen: getMutagensByHeavenlyStem(heavenlyStemOfAge),
+    },
+    yearly: {
+      index: yearlyIndex,
+      name: t('yearly'),
+      heavenlyStem: t(kot(yearly[0], 'Heavenly')),
+      earthlyBranch: t(kot(yearly[1], 'Earthly')),
+      palaceNames: getPalaceNames(yearlyIndex),
+      mutagen: getMutagensByHeavenlyStem(yearly[0]),
+      stars: getHoroscopeStar(yearly[0], yearly[1], 'yearly'),
+      yearlyDecStar: getYearly12(targetDate),
+    },
+    monthly: {
+      index: monthlyIndex,
+      name: t('monthly'),
+      heavenlyStem: t(kot(monthly[0], 'Heavenly')),
+      earthlyBranch: t(kot(monthly[1], 'Earthly')),
+      palaceNames: getPalaceNames(monthlyIndex),
+      mutagen: getMutagensByHeavenlyStem(monthly[0]),
+      stars: getHoroscopeStar(monthly[0], monthly[1], 'monthly'),
+    },
+    daily: {
+      index: dailyIndex,
+      name: t('daily'),
+      heavenlyStem: t(kot(daily[0], 'Heavenly')),
+      earthlyBranch: t(kot(daily[1], 'Earthly')),
+      palaceNames: getPalaceNames(dailyIndex),
+      mutagen: getMutagensByHeavenlyStem(daily[0]),
+      stars: getHoroscopeStar(daily[0], daily[1], 'daily'),
+    },
+    hourly: {
+      index: hourlyIndex,
+      name: t('hourly'),
+      heavenlyStem: t(kot(hourly[0], 'Heavenly')),
+      earthlyBranch: t(kot(hourly[1], 'Earthly')),
+      palaceNames: getPalaceNames(hourlyIndex),
+      mutagen: getMutagensByHeavenlyStem(hourly[0]),
+      stars: getHoroscopeStar(hourly[0], hourly[1], 'hourly'),
+    },
+  };
+
+  return new FunctionalHoroscope(scope, $);
+};
+
+/**
+ * 星盘类接口定义。
+ *
+ * 文档地址：https://docs.iztro.com/posts/astrolabe.html#functionalastrolabe
+
+===== src/astro/FunctionalAstrolabe.ts lines 430–453 (horoscope and complete decadalList) =====
+  };
+
+  horoscope = (targetDate: string | Date = new Date(), timeIndexOfTarget?: number) =>
+    _getHoroscopeBySolarDate(this, targetDate, timeIndexOfTarget);
+
+  decadalList = (): DecadalHoroscope[] => {
+    const birthYear = this.rawDates.lunarDate.lunarYear;
+
+    return [...this.palaces]
+      .sort((previous, next) => previous.decadal.range[0] - next.decadal.range[0])
+      .map(({ index, name: palaceName, decadal }) => ({
+        index,
+        name: t('decadal'),
+        palaceName,
+        ageRange: [...decadal.range],
+        yearRange: [birthYear + decadal.range[0] - 1, birthYear + decadal.range[1] - 1],
+        heavenlyStem: decadal.heavenlyStem,
+        earthlyBranch: decadal.earthlyBranch,
+        palaceNames: getPalaceNames(index),
+        mutagen: getMutagensByHeavenlyStem(decadal.heavenlyStem),
+        stars: getHoroscopeStar(decadal.heavenlyStem, decadal.earthlyBranch, 'decadal'),
+      }));
+  };
+

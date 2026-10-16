@@ -60,3 +60,32 @@ Phép chiếu dùng can năm âm lịch đã được server tính và kiểm tr
 Kết quả có `calendarCompatibility: server_natal_menh_cuc_stem_branch_sex_age_projection_not_full_iztro_astrolabe`. Hồ sơ mới cần cả chứng cứ duyệt chi/tuổi cũ và [quyết định thiên can riêng](../knowledge/research/fortune/modern-decadal-stem/decision.json). Thiếu chứng cứ mới trả `blocked` với `modern_stem_profile_not_approved`; hồ sơ chỉ chi cũ vẫn độc lập. Hai mô hình đã kiểm tra nguồn, 24 lá số/288 chặng và 120 phép chiếu can hữu hạn; fixture là đối chiếu thuật toán theo nguồn, không phải golden được chuyên gia hoặc kết quả đời thực xác minh.
 
 Phạm vi này không duyệt lịch upstream, tùy chọn `from`, tự suy tuổi, sao Đại hạn, Tứ Hóa, lời luận hoặc public release. `publicFortune: false`, `interpretation: null` và các quyết định Toàn Thư cổ điển giữ nguyên. [Bằng chứng và cách chạy lại](../knowledge/research/fortune/modern-decadal-stem/STATUS.md) giữ nguyên đầu vào đóng băng, model output thực tế và giới hạn.
+
+
+## Hồ sơ riêng: liên kết Tứ Hóa Đại hạn với sao nguyên cục
+
+Lựa chọn `iztro-pinned-menh-cuc-decadal-mutagen` giữ cùng phép chiếu tuổi, chi và can đã duyệt, rồi đối chiếu bảng Tứ Hóa **mặc định của iztro tại commit đã ghim**. Đây là hồ sơ có quyết định riêng; hai hồ sơ chỉ chi/can–chi cũ không tự được thêm Tứ Hóa. Chọn mục Tứ Hóa trong cùng danh sách Hồ sơ Đại hạn rồi nhập tuổi mụ và áp dụng. Không nhận bảng tự định nghĩa, can hoặc cung do client gửi.
+
+Bốn dòng kết quả theo thứ tự **Hóa Lộc, Hóa Quyền, Hóa Khoa, Hóa Kỵ** cho biết sao nguồn và cung nguyên cục đang chứa sao đó. Can dùng để chọn bảng là **can của chặng Đại hạn đã chọn**, không phải can năm sinh hay năm xem. Bảng ghim cho Mậu/Khoa là Hữu Bật, Nhâm/Khoa là Tả Phù; không tự thay biến thể khác. Các dòng chỉ là liên kết theo nguồn truyền thống, không phải nhận định cát/hung hoặc kết quả đời người.
+
+Phần mềm không thêm hoặc di chuyển sao natal và không đổi tên/chức năng cung theo vòng Đại hạn. Nếu hai sao nguồn cùng cung, cả hai dòng vẫn được giữ; luôn đủ bốn liên kết khi hợp lệ. Thiếu/trùng hoặc mâu thuẫn danh tính/vị trí của sao nguồn khiến toàn bộ hồ sơ mới bị chặn, không chọn lần xuất hiện đầu tiên hoặc giữ kết quả một phần. Đây là guard nhất quán của B3, không phải khẳng định nguồn upstream bảo đảm tính duy nhất.
+
+API vẫn dùng đúng hai khóa `majorPeriod.profile` và `majorPeriod.nominalAge`, tuổi nguyên 1–125. Chỉ hồ sơ mới có `mutagenScope: natal_physical_palaces`, `mutagenPlacement: supported` và mảng `mutagens` gồm đúng bốn dòng. Một phần tử có bảy trường:
+
+```json
+{
+  "mutagenId": "hoa_loc",
+  "mutagenLabel": "Hóa Lộc",
+  "sourceStarId": "liem_trinh",
+  "sourceStarName": "Liêm Trinh",
+  "palaceId": "3",
+  "functionId": "menh",
+  "functionLabel": "MỆNH"
+}
+```
+
+Đối tượng trên chỉ minh họa cấu trúc một dòng, không phải fixture lá số hay kết quả mẫu cho ngày sinh cụ thể. `calendarCompatibility` của hồ sơ là `server_natal_menh_cuc_stem_branch_sex_age_and_default_mutagen_projection_not_full_iztro_astrolabe`. Mọi trạng thái đóng mới có `mutagens: []`, `mutagenPlacement: not_applied` và không giữ can/chi/cung một phần. Thiếu chứng cứ mới trả `modern_mutagen_profile_not_approved`; hai hồ sơ cũ vẫn độc lập.
+
+[Quyết định riêng](../knowledge/research/fortune/modern-decadal-mutagen/decision.json) dựa trên đầy đủ luồng can chặng → bảng mặc định → membership sao nguyên cục, bao gồm giới hạn cấu hình và snapshot của upstream. Hai mô hình độc lập kiểm tra 29 payload ghim, 40 ô bảng, 15 danh tính sao và fixture 24 lá số/288 chặng/1.152 liên kết; vị trí sao B3 trong fixture là quan sát regression, không phải công thức natal mới được xác thực. Xem [bằng chứng và cách chạy lại](../knowledge/research/fortune/modern-decadal-mutagen/STATUS.md).
+
+Không duyệt bảng custom, năm/tháng/ngày/giờ, phi hóa dây chuyền, sao lưu động, lời luận hoặc public release. Capability Toàn Thư `tu_hoa_han`, các công thức natal, hồ sơ mặc định, danh tính nguồn và mọi cổng phát hành giữ nguyên.

@@ -39,6 +39,8 @@ export const unitTests = [
     'test/modernMajor.test.mjs',
     'test/modernMajorStemBinding.test.mjs',
     'test/modernMajorStem.test.mjs',
+    'test/modernMajorMutagenBinding.test.mjs',
+    'test/modernMajorMutagen.test.mjs',
     'test/modernMinorBinding.test.mjs',
     'test/modernMinor.test.mjs',
     'test/thienDuc.test.mjs',
@@ -66,6 +68,7 @@ export const unitTests = [
 export const integrationTests = [
     'test/modernMajorApi.test.mjs',
     'test/modernMajorStemApi.test.mjs',
+    'test/modernMajorMutagenApi.test.mjs',
     'test/modernMinorApi.test.mjs',
     'test/numerologyApi.test.mjs',
     'test/numerologyRateLimit.test.mjs',

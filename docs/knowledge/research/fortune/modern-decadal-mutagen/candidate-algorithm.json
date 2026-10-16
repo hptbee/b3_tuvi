@@ -1,0 +1,466 @@
+{
+  "id": "iztro-pinned-major-decadal-mutagen-physical-natal-association",
+  "sourceId": "iztro-modern-software",
+  "sourcePin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "profile": "iztro-pinned-menh-cuc-decadal-mutagen",
+  "status": "candidate_requires_distinct_actual_dual_model_review",
+  "inputContract": {
+    "request": "Exactly profile plus caller-supplied nominalAge as accepted by existing12-period options; no client stem/table/config/date override",
+    "trustedMetadata": "Existing validated B3 natal chart, lunar year stem/name/branch parity, menh/cuc/sex and complete physical palace mapping",
+    "selectedStem": "Exact mapped source-scoped T030 heavenlyStem of selected modern decade, obtained using existing T025+T030 binding and calculations; never annual/natal-stem substitution",
+    "configuration": "Only pinned built-in mutagen table (upstream default mutagens={} or no row override); arbitrary custom table and alternative natal configuration are not supported"
+  },
+  "stemNames": [
+    "Giáp",
+    "Ất",
+    "Bính",
+    "Đinh",
+    "Mậu",
+    "Kỷ",
+    "Canh",
+    "Tân",
+    "Nhâm",
+    "Quý"
+  ],
+  "mutagenOrder": [
+    "sihuaLu",
+    "sihuaQuan",
+    "sihuaKe",
+    "sihuaJi"
+  ],
+  "labels": [
+    "Hóa Lộc",
+    "Hóa Quyền",
+    "Hóa Khoa",
+    "Hóa Kỵ"
+  ],
+  "rows": [
+    {
+      "stemIndex": 0,
+      "sourceStemKey": "jiaHeavenly",
+      "stemName": "Giáp",
+      "sourceStarKeys": [
+        "lianzhenMaj",
+        "pojunMaj",
+        "wuquMaj",
+        "taiyangMaj"
+      ],
+      "canonicalStarNames": [
+        "Liêm Trinh",
+        "Phá Quân",
+        "Vũ Khúc",
+        "Thái Dương"
+      ]
+    },
+    {
+      "stemIndex": 1,
+      "sourceStemKey": "yiHeavenly",
+      "stemName": "Ất",
+      "sourceStarKeys": [
+        "tianjiMaj",
+        "tianliangMaj",
+        "ziweiMaj",
+        "taiyinMaj"
+      ],
+      "canonicalStarNames": [
+        "Thiên Cơ",
+        "Thiên Lương",
+        "Tử Vi",
+        "Thái Âm"
+      ]
+    },
+    {
+      "stemIndex": 2,
+      "sourceStemKey": "bingHeavenly",
+      "stemName": "Bính",
+      "sourceStarKeys": [
+        "tiantongMaj",
+        "tianjiMaj",
+        "wenchangMin",
+        "lianzhenMaj"
+      ],
+      "canonicalStarNames": [
+        "Thiên Đồng",
+        "Thiên Cơ",
+        "Văn Xương",
+        "Liêm Trinh"
+      ]
+    },
+    {
+      "stemIndex": 3,
+      "sourceStemKey": "dingHeavenly",
+      "stemName": "Đinh",
+      "sourceStarKeys": [
+        "taiyinMaj",
+        "tiantongMaj",
+        "tianjiMaj",
+        "jumenMaj"
+      ],
+      "canonicalStarNames": [
+        "Thái Âm",
+        "Thiên Đồng",
+        "Thiên Cơ",
+        "Cự Môn"
+      ]
+    },
+    {
+      "stemIndex": 4,
+      "sourceStemKey": "wuHeavenly",
+      "stemName": "Mậu",
+      "sourceStarKeys": [
+        "tanlangMaj",
+        "taiyinMaj",
+        "youbiMin",
+        "tianjiMaj"
+      ],
+      "canonicalStarNames": [
+        "Tham Lang",
+        "Thái Âm",
+        "Hữu Bật",
+        "Thiên Cơ"
+      ]
+    },
+    {
+      "stemIndex": 5,
+      "sourceStemKey": "jiHeavenly",
+      "stemName": "Kỷ",
+      "sourceStarKeys": [
+        "wuquMaj",
+        "tanlangMaj",
+        "tianliangMaj",
+        "wenquMin"
+      ],
+      "canonicalStarNames": [
+        "Vũ Khúc",
+        "Tham Lang",
+        "Thiên Lương",
+        "Văn Khúc"
+      ]
+    },
+    {
+      "stemIndex": 6,
+      "sourceStemKey": "gengHeavenly",
+      "stemName": "Canh",
+      "sourceStarKeys": [
+        "taiyangMaj",
+        "wuquMaj",
+        "taiyinMaj",
+        "tiantongMaj"
+      ],
+      "canonicalStarNames": [
+        "Thái Dương",
+        "Vũ Khúc",
+        "Thái Âm",
+        "Thiên Đồng"
+      ]
+    },
+    {
+      "stemIndex": 7,
+      "sourceStemKey": "xinHeavenly",
+      "stemName": "Tân",
+      "sourceStarKeys": [
+        "jumenMaj",
+        "taiyangMaj",
+        "wenquMin",
+        "wenchangMin"
+      ],
+      "canonicalStarNames": [
+        "Cự Môn",
+        "Thái Dương",
+        "Văn Khúc",
+        "Văn Xương"
+      ]
+    },
+    {
+      "stemIndex": 8,
+      "sourceStemKey": "renHeavenly",
+      "stemName": "Nhâm",
+      "sourceStarKeys": [
+        "tianliangMaj",
+        "ziweiMaj",
+        "zuofuMin",
+        "wuquMaj"
+      ],
+      "canonicalStarNames": [
+        "Thiên Lương",
+        "Tử Vi",
+        "Tả Phù",
+        "Vũ Khúc"
+      ]
+    },
+    {
+      "stemIndex": 9,
+      "sourceStemKey": "guiHeavenly",
+      "stemName": "Quý",
+      "sourceStarKeys": [
+        "pojunMaj",
+        "jumenMaj",
+        "taiyinMaj",
+        "tanlangMaj"
+      ],
+      "canonicalStarNames": [
+        "Phá Quân",
+        "Cự Môn",
+        "Thái Âm",
+        "Tham Lang"
+      ]
+    }
+  ],
+  "starMapping": [
+    {
+      "sourceStarKey": "jumenMaj",
+      "sourceClass": "major",
+      "canonicalName": "Cự Môn",
+      "b3StarId": "cu_mon",
+      "b3Category": "chinh_tinh",
+      "b3ExpectedList": "major",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "lianzhenMaj",
+      "sourceClass": "major",
+      "canonicalName": "Liêm Trinh",
+      "b3StarId": "liem_trinh",
+      "b3Category": "chinh_tinh",
+      "b3ExpectedList": "major",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "pojunMaj",
+      "sourceClass": "major",
+      "canonicalName": "Phá Quân",
+      "b3StarId": "pha_quan",
+      "b3Category": "chinh_tinh",
+      "b3ExpectedList": "major",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "taiyangMaj",
+      "sourceClass": "major",
+      "canonicalName": "Thái Dương",
+      "b3StarId": "thai_duong",
+      "b3Category": "chinh_tinh",
+      "b3ExpectedList": "major",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "taiyinMaj",
+      "sourceClass": "major",
+      "canonicalName": "Thái Âm",
+      "b3StarId": "thai_am",
+      "b3Category": "chinh_tinh",
+      "b3ExpectedList": "major",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "tanlangMaj",
+      "sourceClass": "major",
+      "canonicalName": "Tham Lang",
+      "b3StarId": "tham_lang",
+      "b3Category": "chinh_tinh",
+      "b3ExpectedList": "major",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "tianjiMaj",
+      "sourceClass": "major",
+      "canonicalName": "Thiên Cơ",
+      "b3StarId": "thien_co",
+      "b3Category": "chinh_tinh",
+      "b3ExpectedList": "major",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "tianliangMaj",
+      "sourceClass": "major",
+      "canonicalName": "Thiên Lương",
+      "b3StarId": "thien_luong",
+      "b3Category": "chinh_tinh",
+      "b3ExpectedList": "major",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "tiantongMaj",
+      "sourceClass": "major",
+      "canonicalName": "Thiên Đồng",
+      "b3StarId": "thien_dong",
+      "b3Category": "chinh_tinh",
+      "b3ExpectedList": "major",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "wenchangMin",
+      "sourceClass": "minor",
+      "canonicalName": "Văn Xương",
+      "b3StarId": "van_xuong",
+      "b3Category": "phu_tinh",
+      "b3ExpectedList": "good",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "wenquMin",
+      "sourceClass": "minor",
+      "canonicalName": "Văn Khúc",
+      "b3StarId": "van_khuc",
+      "b3Category": "phu_tinh",
+      "b3ExpectedList": "good",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "wuquMaj",
+      "sourceClass": "major",
+      "canonicalName": "Vũ Khúc",
+      "b3StarId": "vu_khuc",
+      "b3Category": "chinh_tinh",
+      "b3ExpectedList": "major",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "youbiMin",
+      "sourceClass": "minor",
+      "canonicalName": "Hữu Bật",
+      "b3StarId": "huu_bat",
+      "b3Category": "phu_tinh",
+      "b3ExpectedList": "good",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "ziweiMaj",
+      "sourceClass": "major",
+      "canonicalName": "Tử Vi",
+      "b3StarId": "tu_vi",
+      "b3Category": "chinh_tinh",
+      "b3ExpectedList": "major",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    },
+    {
+      "sourceStarKey": "zuofuMin",
+      "sourceClass": "minor",
+      "canonicalName": "Tả Phù",
+      "b3StarId": "ta_phu",
+      "b3Category": "phu_tinh",
+      "b3ExpectedList": "good",
+      "classificationNote": "Independently observed across all24 reachable valid natal charts: source major maps to B3 list major/category chinh_tinh; four source minor targets map to B3 list good/category phu_tinh. This adapter classification is not upstream minor-list equivalence or independent natal placement proof."
+    }
+  ],
+  "algorithm": [
+    "Require valid explicit new profile and accepted T025 branch + T030 stem prerequisites and separate combined T032 source approval",
+    "Calculate selected decade branch/range identically to T025; mapped T030 stem identically using trusted lunar year stem + Dần-relative physical selected branch",
+    "Choose built-in table row by exact selected decade heavenly stem; preserve four ordered positions Lộc,Quyền,Khoa,Kỵ",
+    "For each position resolve its fixed source canonical star identity against trusted B3 normalized natal stars; only matching canonical known major targets and four known auxiliary targets, never natal Hóa instances or other horoscope stars",
+    "Associate each source target with its actual existing physical natal palace ID/branch/function; no relocation of natal stars or decadal functional role rotation",
+    "Keep all four ordered transformation association records even when multiple source stars share one palace"
+  ],
+  "productIntegrityGuard": {
+    "sourceClaim": false,
+    "policy": "Exactly one coherent natal instance per selected source identity; a missing/duplicated/conflicting selected target or invalid layout withholds all four associations as one incomplete result, with no guessed first palace",
+    "scope": "This stricter product integrity guard is not an upstream uniqueness theorem. Upstream membership can be true in more than one malformed palace."
+  },
+  "closedStates": [
+    "Missing opt-in/old profile has no new transformation output",
+    "Invalid request rejected by existing strict option contract; valid nominalAge range1..125 unchanged",
+    "Before first/after twelfth mapped period has no transformations and no childhood fallback",
+    "Any failed source decision/binding, invalid trusted metadata, unmapped selected period, missing/duplicate/contradictory selected target withholds all transformation associations"
+  ],
+  "explicitExclusions": [
+    "No source approval inherited from T025/T030 alone",
+    "No natal formula/table/Hóa insertion or natal association edits",
+    "No custom mutagen table, global/context override acceptance, upstream calendar equivalence, date/age derivation or from rerooting",
+    "No yearly/monthly/daily/hourly/age transforms; no moving horoscope stars, flies/directions/chains or decadal role projection",
+    "No classical generic tu_hoa_han activation, defaults/school change or SQLite migration",
+    "No outcome prose, auspicious/adverse scoring, predictions, public interpretation or production release"
+  ],
+  "sourceFacts": [
+    "FunctionalAstrolabe selects an inclusive actual decadal range and reads its heavenlyStem, then calls getMutagensByHeavenlyStem; its separate childhood fallback is explicitly excluded by existing period scope",
+    "decadalList independently passes each decadal.heavenlyStem, not target-year or birthyear stem",
+    "getTargetMutagens prefers configured row when truthy, otherwise fixed heavenlyStems row. Config arrays may differ and are not validated as four entries by upstream resolveConfig, so arbitraryconfig equivalence is explicitly excluded",
+    "Context bindContext captures creation-time config/language and wraps functional calls; later global reset does not retroactively redefine existing source objects",
+    "MUTAGEN order is sihuaLu,sihuaQuan,sihuaKe,sihuaJi; vi labels lack Hóa prefix, so Hóa labels are explicit B3 presentation mapping",
+    "hasHoroscopeMutagen maps scope-relative requested palace name to physical index and reads astrolabe natal majorStars and minorStars; no insertion of four new stars occurs in this membership operation",
+    "Source function returns boolean membership, including false for origin/negative palace index. Product emits inverse physical associations on trusted B3 chart, not a claim of full source boolean API or natal placement equivalence",
+    "kot reverses localized names with explicit ambiguity aliases; none of15selected keys uses listed colliding alias. Fixed Vietnamese target mapping avoids uncontrolled locale execution"
+  ],
+  "prerequisiteEvidence": [
+    {
+      "path": "docs/knowledge/research/fortune/modern-decadal/review-bundle.json",
+      "sha256": "a2811da20a2d0396c483dcc827b19f8b971e94d85ad57960f1e9ebbf1889def8"
+    },
+    {
+      "path": "docs/knowledge/research/fortune/modern-decadal/decision.json",
+      "sha256": "b7e73d897aea97374cf6c630ec23ac65e67674455bf50fbd6b18e9b0053363fb"
+    },
+    {
+      "path": "docs/knowledge/research/fortune/modern-decadal/source-span.txt",
+      "sha256": "d5342272cab276bc6d17d1be3e837873a67410d4f961cd22bfc1975a843cc817"
+    },
+    {
+      "path": "docs/knowledge/research/fortune/modern-decadal/review-context.txt",
+      "sha256": "ec445067020c392a2187fe2261e9c8ec53eb1cb679795d50acaed7febcca2321"
+    },
+    {
+      "path": "docs/knowledge/research/fortune/modern-decadal-stem/candidate-algorithm.json",
+      "sha256": "272bfd16020e47687e1a08d9e22e00aea05ff68c7940bfc59c37276796192c53"
+    },
+    {
+      "path": "docs/knowledge/research/fortune/modern-decadal-stem/review-bundle.json",
+      "sha256": "86b0df497643d23056c14c39c1344ab5e893103141089aa209c856f40ff6ccef"
+    },
+    {
+      "path": "docs/knowledge/research/fortune/modern-decadal-stem/decision.json",
+      "sha256": "12090304924096be326c0c40881b911af0c4330f46680e4f6ca597cccf12a672"
+    },
+    {
+      "path": "docs/knowledge/research/fortune/modern-decadal-stem/source-span.txt",
+      "sha256": "d5342272cab276bc6d17d1be3e837873a67410d4f961cd22bfc1975a843cc817"
+    },
+    {
+      "path": "docs/knowledge/research/fortune/modern-decadal-stem/review-context.txt",
+      "sha256": "8abb9bcfb763e1e5c8e4ee6f6892a46a0983f13a92ba538bcff85e4712d21267"
+    }
+  ],
+  "expertVerified": false,
+  "publicRelease": false,
+  "outputContract": {
+    "newProfileOnly": true,
+    "mutagenScope": "natal_physical_palaces",
+    "mutagenPlacement": "supported only all four associations coherent and evidence accepted; not_applied otherwise",
+    "mutagens": "Exactly4 ordered records on supported, [] closed",
+    "recordKeys": [
+      "mutagenId",
+      "mutagenLabel",
+      "sourceStarId",
+      "sourceStarName",
+      "palaceId",
+      "functionId",
+      "functionLabel"
+    ],
+    "mutagenIds": [
+      "hoa_loc",
+      "hoa_quyen",
+      "hoa_khoa",
+      "hoa_ky"
+    ],
+    "mutagenLabels": [
+      "Hóa Lộc",
+      "Hóa Quyền",
+      "Hóa Khoa",
+      "Hóa Kỵ"
+    ],
+    "calendarCompatibility": "server_natal_menh_cuc_stem_branch_sex_age_and_default_mutagen_projection_not_full_iztro_astrolabe",
+    "integrityFailure": "Fail closed all associations, selected stem and branch; no partial or stale association retained",
+    "legacyProfiles": "Exact unchanged shape/behavior, no new fields",
+    "publicFortune": false,
+    "interpretation": null,
+    "interpretationStatus": "blocked"
+  },
+  "tableReuseGuard": "Runtime may read existing B3 tuHoaMap.json without editing it; new T032 binding must deeply and strictly compare entire10-row40-cell content against approved immutable compiled source snapshot. That comparison does not approve or alter existing natal runtime.",
+  "fixtureClassificationEvidence": {
+    "reportSha256": "64212c1da6a753ed1dae535ce37777a2413537baa8af8322fb4edac1b244e993",
+    "fixturesSha256": "1b09a7d56fd92aff8483885d9f912e2ca82108c5195d7fba22144a6c072eb00f",
+    "class": "source-comparative table/stem + engineering observed B3 identity/physical metadata, not natal placement proof",
+    "charts": 24,
+    "periods": 288,
+    "associations": 1152,
+    "sharedPalacePeriods": 101
+  }
+}

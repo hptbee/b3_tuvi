@@ -31,6 +31,18 @@ const MINOR_PIN = '2f00e2ab0c80b1632e55bc362f2ae26e121245cb';
 const MINOR_COMPATIBILITY = 'branch_sex_age_projection_not_full_iztro_astrolabe';
 const MAJOR_PROFILE = 'iztro-pinned-menh-cuc-decadal';
 const MAJOR_STEM_PROFILE = 'iztro-pinned-menh-cuc-decadal-stem';
+const MAJOR_MUTAGEN_PROFILE = 'iztro-pinned-menh-cuc-decadal-mutagen';
+const MAJOR_PROFILES = [MAJOR_PROFILE, MAJOR_STEM_PROFILE, MAJOR_MUTAGEN_PROFILE];
+const MAJOR_MUTAGEN_COMPATIBILITY = 'server_natal_menh_cuc_stem_branch_sex_age_and_default_mutagen_projection_not_full_iztro_astrolabe';
+const MUTAGEN_LABELS = { hoa_loc: 'Hóa Lộc', hoa_quyen: 'Hóa Quyền', hoa_khoa: 'Hóa Khoa', hoa_ky: 'Hóa Kỵ' };
+// Canonical identity validation only; the approved 40-cell formula stays on the server.
+const MUTAGEN_SOURCE_STARS = {
+  cu_mon: 'Cự Môn', liem_trinh: 'Liêm Trinh', pha_quan: 'Phá Quân', thai_duong: 'Thái Dương',
+  thai_am: 'Thái Âm', tham_lang: 'Tham Lang', thien_co: 'Thiên Cơ', thien_luong: 'Thiên Lương',
+  thien_dong: 'Thiên Đồng', van_xuong: 'Văn Xương', van_khuc: 'Văn Khúc', vu_khuc: 'Vũ Khúc',
+  huu_bat: 'Hữu Bật', tu_vi: 'Tử Vi', ta_phu: 'Tả Phù'
+};
+const MUTAGEN_ROW_KEYS = ['mutagenId', 'mutagenLabel', 'sourceStarId', 'sourceStarName', 'palaceId', 'functionId', 'functionLabel'];
 const HEAVENLY_STEMS = ['Giáp', 'Ất', 'Bính', 'Đinh', 'Mậu', 'Kỷ', 'Canh', 'Tân', 'Nhâm', 'Quý'];
 const MAJOR_STEM_COMPATIBILITY = 'server_natal_menh_cuc_stem_branch_sex_age_projection_not_full_iztro_astrolabe';
 const MAJOR_COMPATIBILITY = 'server_natal_menh_cuc_branch_sex_age_projection_not_full_iztro_astrolabe';
@@ -65,28 +77,60 @@ function validMinorResponse(body, option) {
     && statement.palaceId === cap.palaceId && statement.functionId === cap.functionId).length === 1;
 }
 
+// API statement labels may carry a known brightness suffix; identity stays canonical.
+function sourceStarDisplayName(name) {
+  return typeof name === 'string' ? name.replace(/ \([MVĐBH]\)$/, '') : name;
+}
+
+function validMutagenPlacement(body, cap) {
+  if (cap.mutagenScope !== 'natal_physical_palaces' || cap.mutagenPlacement !== 'supported'
+    || !Array.isArray(cap.mutagens) || cap.mutagens.length !== 4
+    || new Set(cap.mutagens.map(row => row?.sourceStarId)).size !== 4) return false;
+  const physical = body.statements.filter(statement => !statement.thanOverlay);
+  return cap.mutagens.every((row, index) => {
+    if (!row || typeof row !== 'object' || Object.keys(row).length !== MUTAGEN_ROW_KEYS.length
+      || !MUTAGEN_ROW_KEYS.every(key => Object.hasOwn(row, key))
+      || row.mutagenId !== Object.keys(MUTAGEN_LABELS)[index] || row.mutagenLabel !== MUTAGEN_LABELS[row.mutagenId]
+      || !Object.hasOwn(MUTAGEN_SOURCE_STARS, row.sourceStarId) || row.sourceStarName !== MUTAGEN_SOURCE_STARS[row.sourceStarId]
+      || typeof row.palaceId !== 'string' || !/^(?:[1-9]|1[0-2])$/.test(row.palaceId)
+      || !Object.hasOwn(PALACE_LABELS, row.functionId)
+      || row.functionLabel !== PALACE_LABELS[row.functionId].toLocaleUpperCase('vi')) return false;
+    const origins = physical.filter(statement => statement.palaceId === row.palaceId && statement.functionId === row.functionId);
+    if (origins.length !== 1 || physical.filter(statement => statement.palaceId === row.palaceId).length !== 1) return false;
+    const occurrences = physical.flatMap(statement => (statement.stars || [])
+      .filter(star => star.starId === row.sourceStarId || sourceStarDisplayName(star.displayName) === row.sourceStarName)
+      .map(star => ({ statement, star })));
+    return occurrences.length === 1 && occurrences[0].statement === origins[0]
+      && occurrences[0].star.starId === row.sourceStarId && sourceStarDisplayName(occurrences[0].star.displayName) === row.sourceStarName;
+  });
+}
+
 function validMajorResponse(body, option) {
   const cap = body.time?.capabilities?.dai_han_modern;
-  const withStem = option?.profile === MAJOR_STEM_PROFILE;
-  if (option && ![MAJOR_PROFILE, MAJOR_STEM_PROFILE].includes(option.profile)) return false;
+  const withMutagens = option?.profile === MAJOR_MUTAGEN_PROFILE;
+  const withStem = option?.profile === MAJOR_STEM_PROFILE || withMutagens;
+  if (option && !MAJOR_PROFILES.includes(option.profile)) return false;
+  if (cap && !withMutagens && ['mutagenScope', 'mutagenPlacement', 'mutagens'].some(key => Object.hasOwn(cap, key))) return false;
   if (cap && !withStem && (Object.hasOwn(cap, 'heavenlyStem') || Object.hasOwn(cap, 'stemPlacement'))) return false;
   if (cap === undefined) return option === null;
   if (!cap || typeof cap !== 'object' || cap.id !== 'dai_han_modern'
     || cap.publicFortune !== false || cap.interpretation !== null || cap.interpretationStatus !== 'blocked'
     || cap.sourceId !== MINOR_SOURCE || cap.sourcePin !== MINOR_PIN
     || cap.ageInput !== 'caller_supplied' || cap.ageDerivation !== 'not_applied'
-    || cap.calendarCompatibility !== (withStem ? MAJOR_STEM_COMPATIBILITY : MAJOR_COMPATIBILITY)) return false;
+    || cap.calendarCompatibility !== (withMutagens ? MAJOR_MUTAGEN_COMPATIBILITY : withStem ? MAJOR_STEM_COMPATIBILITY : MAJOR_COMPATIBILITY)) return false;
   const emptyPlacement = cap.branch === null && cap.palaceId === null
     && cap.functionId === null && cap.functionLabel === null
     && cap.decadeIndex === null && cap.decadeStartAge === null && cap.decadeEndAge === null;
   const closed = emptyPlacement && cap.branchPlacement === 'not_applied'
-    && (!withStem || (cap.heavenlyStem === null && cap.stemPlacement === 'not_applied'));
+    && (!withStem || (cap.heavenlyStem === null && cap.stemPlacement === 'not_applied'))
+    && (!withMutagens || (cap.mutagenScope === 'natal_physical_palaces' && cap.mutagenPlacement === 'not_applied'
+      && Array.isArray(cap.mutagens) && cap.mutagens.length === 0));
   if (!option) return cap.status === 'not_applied'
     && cap.reason === 'missing_explicit_profile_and_nominal_age'
     && cap.profile === null && cap.nominalAge === null && cap.palaceMapping === 'not_applied' && closed;
   if (cap.profile !== option.profile || cap.nominalAge !== option.nominalAge) return false;
   if (cap.status === 'blocked') return closed && (
-    ((cap.reason === 'modern_profile_not_approved' || (withStem && cap.reason === 'modern_stem_profile_not_approved')) && cap.palaceMapping === 'not_applied')
+    ((cap.reason === 'modern_profile_not_approved' || (withStem && cap.reason === 'modern_stem_profile_not_approved') || (withMutagens && cap.reason === 'modern_mutagen_profile_not_approved')) && cap.palaceMapping === 'not_applied')
     || (cap.reason === 'invalid_chart' && cap.palaceMapping === 'invalid_chart'));
   if (cap.status === 'not_applied') return closed && cap.palaceMapping === 'not_applied'
     && ((cap.reason === 'before_first_period' && option.nominalAge < 6)
@@ -102,7 +146,7 @@ function validMajorResponse(body, option) {
     || cap.decadeEndAge !== cap.decadeStartAge + 9
     || cap.decadeStartAge - 10 * cap.decadeIndex < 2 || cap.decadeStartAge - 10 * cap.decadeIndex > 6
     || option.nominalAge < cap.decadeStartAge || option.nominalAge > cap.decadeEndAge) return false;
-  return body.statements.filter(statement => !statement.thanOverlay
+  return (!withMutagens || validMutagenPlacement(body, cap)) && body.statements.filter(statement => !statement.thanOverlay
     && statement.palaceId === cap.palaceId && statement.functionId === cap.functionId).length === 1;
 }
 
@@ -440,7 +484,7 @@ export default function StructuredAnalysis({ userInfo }) {
   const applyMajor = (event) => {
     event.preventDefault();
     const age = Number(majorDraft.age);
-    if (![MAJOR_PROFILE, MAJOR_STEM_PROFILE].includes(majorDraft.profile) || majorDraft.age.trim() === ''
+    if (!MAJOR_PROFILES.includes(majorDraft.profile) || majorDraft.age.trim() === ''
       || !Number.isInteger(age) || age < 1 || age > 125) {
       setMajorError('Chọn hồ sơ và nhập tuổi mụ là số nguyên từ 1 đến 125.');
       return;
@@ -534,6 +578,7 @@ export default function StructuredAnalysis({ userInfo }) {
             <label>Hồ sơ Đại hạn
               <select aria-label="Hồ sơ Đại hạn" value={majorDraft.profile} onChange={event => changeMajorDraft({ profile: event.target.value })}>
                 <option value="">Chưa chọn</option>
+                <option value={MAJOR_MUTAGEN_PROFILE}>iztro ghim nguồn — can, chi và bảng Tứ Hóa mặc định</option>
                 <option value={MAJOR_STEM_PROFILE}>iztro ghim nguồn — can và chi cung</option>
                 <option value={MAJOR_PROFILE}>iztro — Mệnh, Cục, tuổi mụ nhập trực tiếp</option>
               </select>
@@ -550,13 +595,21 @@ export default function StructuredAnalysis({ userInfo }) {
             {majorDirty ? <p>Chưa áp dụng thay đổi Đại hạn. Chọn hồ sơ, nhập tuổi mụ rồi áp dụng.</p>
               : !majorOption ? <p>Chọn hồ sơ và nhập tuổi mụ để đối chiếu vị trí Đại hạn.</p>
                 : current.status === 'ready' && majorPlacement?.status === 'branch_placed'
-                  ? <p>Đại hạn tuổi mụ {majorOption.nominalAge}: {majorOption.profile === MAJOR_STEM_PROFILE ? `can ${majorPlacement.heavenlyStem}, ` : ''}chi {majorPlacement.branch} — cung {PALACE_LABELS[majorPlacement.functionId]}; khoảng tuổi mụ {majorPlacement.decadeStartAge}–{majorPlacement.decadeEndAge}.</p>
+                  ? <p>Đại hạn tuổi mụ {majorOption.nominalAge}: {majorOption.profile !== MAJOR_PROFILE ? `can ${majorPlacement.heavenlyStem}, ` : ''}chi {majorPlacement.branch} — cung {PALACE_LABELS[majorPlacement.functionId]}; khoảng tuổi mụ {majorPlacement.decadeStartAge}–{majorPlacement.decadeEndAge}.</p>
                   : current.status === 'ready' && majorPlacement?.reason === 'before_first_period'
                     ? <p>Tuổi mụ {majorOption.nominalAge} chưa đến khoảng Đại hạn đầu tiên theo hồ sơ này; không gán cung tuổi nhỏ.</p>
                     : current.status === 'ready' && majorPlacement?.reason === 'after_last_period'
                       ? <p>Tuổi mụ {majorOption.nominalAge} vượt khoảng Đại hạn cuối cùng theo hồ sơ này; không lặp lại chu kỳ.</p>
                       : <p>Chưa có vị trí Đại hạn được xác nhận cho tuổi mụ đã áp dụng.</p>}
           </div>
+          {!majorDirty && majorOption?.profile === MAJOR_MUTAGEN_PROFILE && current.status === 'ready' && majorPlacement?.status === 'branch_placed' && (
+            <div>
+              <p>Tứ Hóa theo can Đại hạn, bảng mặc định iztro tại phiên bản ghim nguồn: đối chiếu sao gốc trên các cung vật lý của lá số gốc. Không thêm sao hoặc đổi vai trò cung; chưa có lời luận vận hạn.</p>
+              <ul aria-label="Liên kết Tứ Hóa Đại hạn với sao gốc">
+                {majorPlacement.mutagens.map(row => <li key={row.mutagenId}>{row.mutagenLabel}: sao gốc {row.sourceStarName} — cung {PALACE_LABELS[row.functionId]} (vị trí {row.palaceId}).</li>)}
+              </ul>
+            </div>
+          )}
           <p>Nguồn phần mềm: <a href={`https://github.com/SylarLong/iztro/blob/${MINOR_PIN}/src/astro/palace.ts#L174-L214`}>iztro — mã nguồn Đại hạn tại phiên bản đã đối chiếu</a>.</p>
         </section>
         {current.status === 'ready' && statements.length === 0 && <p>Phản hồi không có cung.</p>}

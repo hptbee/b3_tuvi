@@ -1,0 +1,1058 @@
+SQLite ready at /tmp/t032-api-ui-16pOSB/test.sqlite
+POST /api/interpretations/analyze
+{
+  "v": [
+    true,
+    false,
+    true
+  ],
+  "cap": {
+    "id": "dai_han_modern",
+    "profile": "iztro-pinned-menh-cuc-decadal-mutagen",
+    "nominalAge": 24,
+    "sourceId": "iztro-modern-software",
+    "sourcePin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+    "ageInput": "caller_supplied",
+    "ageDerivation": "not_applied",
+    "calendarCompatibility": "server_natal_menh_cuc_stem_branch_sex_age_and_default_mutagen_projection_not_full_iztro_astrolabe",
+    "branch": "Tuất",
+    "branchPlacement": "supported",
+    "palaceMapping": "mapped",
+    "palaceId": "11",
+    "functionId": "phu_the",
+    "functionLabel": "PHU THÊ",
+    "decadeIndex": 2,
+    "decadeStartAge": 24,
+    "decadeEndAge": 33,
+    "publicFortune": false,
+    "interpretation": null,
+    "interpretationStatus": "blocked",
+    "boundaries": {
+      "ageConvention": "caller_supplied_nominal_age",
+      "dateBoundary": "not_evaluated",
+      "leapMonthFortune": "not_evaluated",
+      "genderConvention": "sex_matches_birth_year_branch_yin_yang_forward_else_reverse"
+    },
+    "heavenlyStem": "Nhâm",
+    "stemPlacement": "supported",
+    "mutagenScope": "natal_physical_palaces",
+    "mutagenPlacement": "supported",
+    "mutagens": [
+      {
+        "mutagenId": "hoa_loc",
+        "mutagenLabel": "Hóa Lộc",
+        "sourceStarId": "thien_luong",
+        "sourceStarName": "Thiên Lương",
+        "palaceId": "4",
+        "functionId": "dien_trach",
+        "functionLabel": "ĐIỀN TRẠCH"
+      },
+      {
+        "mutagenId": "hoa_quyen",
+        "mutagenLabel": "Hóa Quyền",
+        "sourceStarId": "tu_vi",
+        "sourceStarName": "Tử Vi",
+        "palaceId": "7",
+        "functionId": "thien_di",
+        "functionLabel": "THIÊN DI"
+      },
+      {
+        "mutagenId": "hoa_khoa",
+        "mutagenLabel": "Hóa Khoa",
+        "sourceStarId": "ta_phu",
+        "sourceStarName": "Tả Phù",
+        "palaceId": "3",
+        "functionId": "phuc_duc",
+        "functionLabel": "PHÚC ĐỨC"
+      },
+      {
+        "mutagenId": "hoa_ky",
+        "mutagenLabel": "Hóa Kỵ",
+        "sourceStarId": "vu_khuc",
+        "sourceStarName": "Vũ Khúc",
+        "palaceId": "3",
+        "functionId": "phuc_duc",
+        "functionLabel": "PHÚC ĐỨC"
+      }
+    ],
+    "reason": null,
+    "status": "branch_placed"
+  },
+  "statements": [
+    {
+      "palaceId": "1",
+      "functionId": "menh",
+      "thanOverlay": false,
+      "stars": [
+        {
+          "starId": "bac_si",
+          "displayName": "Bác Sĩ",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "dao_hoa",
+          "displayName": "Đào Hoa",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "hoa_ky",
+          "displayName": "Hóa Kỵ (H)",
+          "list": "bad",
+          "brightness": "H",
+          "brightnessStatus": "known",
+          "tuHoa": {
+            "type": "tu_hoa",
+            "sourceStarId": "tham_lang",
+            "sourceName": "Tham Lang",
+            "status": "same_palace"
+          }
+        },
+        {
+          "starId": "huu_bat",
+          "displayName": "Hữu Bật",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "loc_ton",
+          "displayName": "Lộc Tồn (M)",
+          "list": "good",
+          "brightness": "M",
+          "brightnessStatus": "known",
+          "tuHoa": null
+        },
+        {
+          "starId": "tham_lang",
+          "displayName": "Tham Lang (H)",
+          "list": "major",
+          "brightness": "H",
+          "brightnessStatus": "known",
+          "tuHoa": null
+        },
+        {
+          "starId": "thien_khong",
+          "displayName": "Thiên Không",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "thieu_duong",
+          "displayName": "Thiếu Dương",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        }
+      ]
+    },
+    {
+      "palaceId": "2",
+      "functionId": "phu_mau",
+      "thanOverlay": false,
+      "stars": [
+        {
+          "starId": "an_quang",
+          "displayName": "Ân Quang",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "cu_mon",
+          "displayName": "Cự Môn (H)",
+          "list": "major",
+          "brightness": "H",
+          "brightnessStatus": "known",
+          "tuHoa": null
+        },
+        {
+          "starId": "dau_quan",
+          "displayName": "Đẩu Quân",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "hoa_quyen",
+          "displayName": "Hóa Quyền (H)",
+          "list": "good",
+          "brightness": "H",
+          "brightnessStatus": "known",
+          "tuHoa": {
+            "type": "tu_hoa",
+            "sourceStarId": "cu_mon",
+            "sourceName": "Cự Môn",
+            "status": "same_palace"
+          }
+        },
+        {
+          "starId": "kinh_duong",
+          "displayName": "Kình Dương",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "quan_phu_1ee7",
+          "displayName": "Quan Phủ",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "tang_mon",
+          "displayName": "Tang Môn",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "thien_dong",
+          "displayName": "Thiên Đồng (H)",
+          "list": "major",
+          "brightness": "H",
+          "brightnessStatus": "known",
+          "tuHoa": null
+        },
+        {
+          "starId": "thien_quy",
+          "displayName": "Thiên Quý",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        }
+      ]
+    },
+    {
+      "palaceId": "3",
+      "functionId": "phuc_duc",
+      "thanOverlay": false,
+      "stars": [
+        {
+          "starId": "co_than",
+          "displayName": "Cô Thần",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "luu_ha",
+          "displayName": "Lưu Hà",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "phong_cao",
+          "displayName": "Phong Cáo",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "phuc_binh",
+          "displayName": "Phục Binh",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "ta_phu",
+          "displayName": "Tả Phù",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "thien_tuong",
+          "displayName": "Thiên Tướng (M)",
+          "list": "major",
+          "brightness": "M",
+          "brightnessStatus": "known",
+          "tuHoa": null
+        },
+        {
+          "starId": "thieu_am",
+          "displayName": "Thiếu Âm",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "vu_khuc",
+          "displayName": "Vũ Khúc (V)",
+          "list": "major",
+          "brightness": "V",
+          "brightnessStatus": "known",
+          "tuHoa": null
+        }
+      ]
+    },
+    {
+      "palaceId": "4",
+      "functionId": "dien_trach",
+      "thanOverlay": false,
+      "stars": [
+        {
+          "starId": "dai_hao",
+          "displayName": "Đại Hao",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "long_tri",
+          "displayName": "Long Trì",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "quan_phu_f9",
+          "displayName": "Quan Phù",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "thai_duong",
+          "displayName": "Thái Dương (V)",
+          "list": "major",
+          "brightness": "V",
+          "brightnessStatus": "known",
+          "tuHoa": null
+        },
+        {
+          "starId": "thien_khoi",
+          "displayName": "Thiên Khôi",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "thien_luong",
+          "displayName": "Thiên Lương (V)",
+          "list": "major",
+          "brightness": "V",
+          "brightnessStatus": "known",
+          "tuHoa": null
+        },
+        {
+          "starId": "van_tinh",
+          "displayName": "Văn Tinh",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        }
+      ]
+    },
+    {
+      "palaceId": "5",
+      "functionId": "quan_loc",
+      "thanOverlay": false,
+      "stars": [
+        {
+          "starId": "benh_phu",
+          "displayName": "Bệnh Phù",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "hong_loan",
+          "displayName": "Hồng Loan",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "nguyet_duc",
+          "displayName": "Nguyệt Đức",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "that_sat",
+          "displayName": "Thất Sát (H)",
+          "list": "major",
+          "brightness": "H",
+          "brightnessStatus": "known",
+          "tuHoa": null
+        },
+        {
+          "starId": "thien_la",
+          "displayName": "Thiên La",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "tu_phu",
+          "displayName": "Tử Phù",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "van_khuc",
+          "displayName": "Văn Khúc (H)",
+          "list": "good",
+          "brightness": "H",
+          "brightnessStatus": "known",
+          "tuHoa": null
+        }
+      ]
+    },
+    {
+      "palaceId": "6",
+      "functionId": "no_boc",
+      "thanOverlay": false,
+      "stars": [
+        {
+          "starId": "dia_giai",
+          "displayName": "Địa Giải",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "duong_phu",
+          "displayName": "Đường Phù",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "hi_than",
+          "displayName": "Hỉ Thần",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "thien_co",
+          "displayName": "Thiên Cơ (V)",
+          "list": "major",
+          "brightness": "V",
+          "brightnessStatus": "known",
+          "tuHoa": null
+        },
+        {
+          "starId": "thien_hu",
+          "displayName": "Thiên Hư",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "thien_ma",
+          "displayName": "Thiên Mã (Đ)",
+          "list": "good",
+          "brightness": "Đ",
+          "brightnessStatus": "known",
+          "tuHoa": null
+        },
+        {
+          "starId": "thien_phuc",
+          "displayName": "Thiên Phúc",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "thien_thuong",
+          "displayName": "Thiên Thương",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "thien_viet",
+          "displayName": "Thiên Việt",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "tue_pha",
+          "displayName": "Tuế Phá",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        }
+      ]
+    },
+    {
+      "palaceId": "7",
+      "functionId": "thien_di",
+      "thanOverlay": false,
+      "stars": [
+        {
+          "starId": "long_duc",
+          "displayName": "Long Đức",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "phi_liem",
+          "displayName": "Phi Liêm",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "tam_thai",
+          "displayName": "Tam Thai",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "thai_phu",
+          "displayName": "Thai Phụ",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "thien_giai",
+          "displayName": "Thiên Giải",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "thien_quan",
+          "displayName": "Thiên Quan",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "tu_vi",
+          "displayName": "Tử Vi (M)",
+          "list": "major",
+          "brightness": "M",
+          "brightnessStatus": "known",
+          "tuHoa": null
+        }
+      ]
+    },
+    {
+      "palaceId": "8",
+      "functionId": "tat_ach",
+      "thanOverlay": false,
+      "stars": [
+        {
+          "starId": "bach_ho",
+          "displayName": "Bạch Hổ",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "hoa_cai",
+          "displayName": "Hoa Cái",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "tau_thu",
+          "displayName": "Tấu Thư",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "thien_hinh",
+          "displayName": "Thiên Hình",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "thien_khoc",
+          "displayName": "Thiên Khốc",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "thien_su",
+          "displayName": "Thiên Sứ",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        }
+      ]
+    },
+    {
+      "palaceId": "9",
+      "functionId": "tai_bach",
+      "thanOverlay": false,
+      "stars": [
+        {
+          "starId": "bat_toa",
+          "displayName": "Bát Tọa",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "hoa_loc",
+          "displayName": "Hóa Lộc (M)",
+          "list": "good",
+          "brightness": "M",
+          "brightnessStatus": "known",
+          "tuHoa": {
+            "type": "tu_hoa",
+            "sourceStarId": "pha_quan",
+            "sourceName": "Phá Quân",
+            "status": "same_palace"
+          }
+        },
+        {
+          "starId": "kiep_sat",
+          "displayName": "Kiếp Sát",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "pha_quan",
+          "displayName": "Phá Quân (H)",
+          "list": "major",
+          "brightness": "H",
+          "brightnessStatus": "known",
+          "tuHoa": null
+        },
+        {
+          "starId": "phuc_duc",
+          "displayName": "Phúc Đức",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "quoc_an",
+          "displayName": "Quốc Ấn",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "thien_duc",
+          "displayName": "Thiên Đức",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "tuong_quan",
+          "displayName": "Tướng Quân",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        }
+      ]
+    },
+    {
+      "palaceId": "10",
+      "functionId": "tu_tuc",
+      "thanOverlay": false,
+      "stars": [
+        {
+          "starId": "dieu_khach",
+          "displayName": "Điếu Khách",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "hoa_tinh",
+          "displayName": "Hỏa Tinh",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "pha_toai",
+          "displayName": "Phá Toái",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "tieu_hao",
+          "displayName": "Tiểu Hao",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        }
+      ]
+    },
+    {
+      "palaceId": "11",
+      "functionId": "phu_the",
+      "thanOverlay": false,
+      "stars": [
+        {
+          "starId": "dia_vong",
+          "displayName": "Địa Võng",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "liem_trinh",
+          "displayName": "Liêm Trinh (M)",
+          "list": "major",
+          "brightness": "M",
+          "brightnessStatus": "known",
+          "tuHoa": null
+        },
+        {
+          "starId": "linh_tinh",
+          "displayName": "Linh Tinh",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "qua_tu",
+          "displayName": "Quả Tú",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "thanh_long",
+          "displayName": "Thanh Long",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "thien_hy",
+          "displayName": "Thiên Hỷ",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "thien_phu",
+          "displayName": "Thiên Phủ (V)",
+          "list": "major",
+          "brightness": "V",
+          "brightnessStatus": "known",
+          "tuHoa": null
+        },
+        {
+          "starId": "thien_tru",
+          "displayName": "Thiên Trù",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "truc_phu",
+          "displayName": "Trực Phù",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "van_xuong",
+          "displayName": "Văn Xương (Đ)",
+          "list": "good",
+          "brightness": "Đ",
+          "brightnessStatus": "known",
+          "tuHoa": null
+        }
+      ]
+    },
+    {
+      "palaceId": "12",
+      "functionId": "huynh_de",
+      "thanOverlay": false,
+      "stars": [
+        {
+          "starId": "da_la",
+          "displayName": "Đà La",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "dia_khong",
+          "displayName": "Địa Không",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "dia_kiep",
+          "displayName": "Địa Kiếp",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "giai_than",
+          "displayName": "Giải Thần",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "hoa_khoa",
+          "displayName": "Hóa Khoa (B)",
+          "list": "good",
+          "brightness": "B",
+          "brightnessStatus": "known",
+          "tuHoa": {
+            "type": "tu_hoa",
+            "sourceStarId": "thai_am",
+            "sourceName": "Thái Âm",
+            "status": "same_palace"
+          }
+        },
+        {
+          "starId": "luc_si",
+          "displayName": "Lực Sĩ",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "phuong_cac",
+          "displayName": "Phượng Các",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "thai_am",
+          "displayName": "Thái Âm (M)",
+          "list": "major",
+          "brightness": "M",
+          "brightnessStatus": "known",
+          "tuHoa": null
+        },
+        {
+          "starId": "thai_tue",
+          "displayName": "Thái Tuế",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "thien_dieu",
+          "displayName": "Thiên Diêu",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "thien_tai",
+          "displayName": "Thiên Tài",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "thien_tho",
+          "displayName": "Thiên Thọ",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "thien_y",
+          "displayName": "Thiên Y",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        }
+      ]
+    },
+    {
+      "palaceId": "1",
+      "functionId": "menh",
+      "thanOverlay": true,
+      "stars": [
+        {
+          "starId": "bac_si",
+          "displayName": "Bác Sĩ",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "dao_hoa",
+          "displayName": "Đào Hoa",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "hoa_ky",
+          "displayName": "Hóa Kỵ (H)",
+          "list": "bad",
+          "brightness": "H",
+          "brightnessStatus": "known",
+          "tuHoa": {
+            "type": "tu_hoa",
+            "sourceStarId": "tham_lang",
+            "sourceName": "Tham Lang",
+            "status": "same_palace"
+          }
+        },
+        {
+          "starId": "huu_bat",
+          "displayName": "Hữu Bật",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "loc_ton",
+          "displayName": "Lộc Tồn (M)",
+          "list": "good",
+          "brightness": "M",
+          "brightnessStatus": "known",
+          "tuHoa": null
+        },
+        {
+          "starId": "tham_lang",
+          "displayName": "Tham Lang (H)",
+          "list": "major",
+          "brightness": "H",
+          "brightnessStatus": "known",
+          "tuHoa": null
+        },
+        {
+          "starId": "thien_khong",
+          "displayName": "Thiên Không",
+          "list": "bad",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        },
+        {
+          "starId": "thieu_duong",
+          "displayName": "Thiếu Dương",
+          "list": "good",
+          "brightness": null,
+          "brightnessStatus": "none",
+          "tuHoa": null
+        }
+      ]
+    }
+  ]
+}
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+false !== true
+
+    at file:///tmp/t032/api-ui-initial-repro.mjs:19:565
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

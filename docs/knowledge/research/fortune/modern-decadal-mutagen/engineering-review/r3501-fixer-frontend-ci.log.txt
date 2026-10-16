@@ -1,0 +1,85 @@
+Captured test output; trailing spaces removed for repository formatting. Original /tmp/t032/r3501-fixer-frontend-ci.log SHA256: af888229d8b5049bb63ca7b847daad7f1da79d5d0b3054531ada914345b8c267
+
+
+> tuvi-b@0.0.0 test:ci
+> vitest run --coverage
+
+
+ RUN  v2.1.9 /workspace/b3_tuvi/frontend
+      Coverage enabled with v8
+
+ ✓ src/components/CachCucPanel.test.jsx (17 tests) 745ms
+ ✓ src/numerology/numerologyExport.test.js (8 tests) 11ms
+ ✓ src/components/TuViChart.test.jsx (12 tests) 1516ms
+   ✓ opens loading immediately, cancels on close and cannot reopen from its delayed result 301ms
+ ✓ src/pages/Pages.test.jsx (4 tests) 162ms
+ ✓ src/components/PalaceBox.test.jsx (2 tests) 127ms
+ ✓ src/components/ChartActions.test.jsx (1 test) 127ms
+ ✓ src/chartExport.test.js (2 tests) 3ms
+ ✓ src/numerology/NumerologyPage.test.jsx (59 tests) 15785ms
+   ✓ submits date-only without a name and explains unavailable metrics 643ms
+   ✓ explains unavailable LY name metrics in the overview and relationships: soulUrge 415ms
+   ✓ explains unavailable AE name metrics in the overview and relationships: personality 331ms
+   ✓ explains unavailable LY name metrics in the overview and relationships: soulUrge 321ms
+   ✓ draws pinnacle edges, the challenge timeline, and the selected birth-grid line 750ms
+   ✓ retains the submitted snapshot while the form is edited 365ms
+   ✓ retries the failed submitted snapshot rather than unsent edits 329ms
+   ✓ ignores a stale calculation and aborts it when a changed input is submitted 331ms
+   ✓ submits an explicit target date and retains its result while editing 430ms
+   ✓ exports the report without the raw name until the user opts in 590ms
+   ✓ follows the server view date and keeps focus on the selected year 561ms
+   ✓ exports the committed cycle snapshot while loading, after failure and during retry 1159ms
+   ✓ ignores a stale cycle response and keeps cycle navigation on the committed birth input 714ms
+   ✓ ignores a delayed import after edit when the read later resolve 328ms
+   ✓ ignores a delayed import after edit when the read later reject 321ms
+   ✓ ignores a delayed import after submit when the read later resolve 417ms
+   ✓ ignores a delayed import after submit when the read later reject 438ms
+   ✓ ignores a delayed import after cycle when the read later resolve 452ms
+   ✓ ignores a delayed import after cycle when the read later reject 443ms
+   ✓ ignores a delayed import after newer file when the read later resolve 335ms
+   ✓ ignores a delayed import after newer file when the read later reject 321ms
+ ✓ src/components/StructuredAnalysis.test.jsx (209 tests) 19572ms
+   ✓ StructuredAnalysis > shows a palace detail without calling an unapproved claim a reading 319ms
+   ✓ explicit modern major stem projection > commits same-age profile changes, hides drafts and preserves old display 347ms
+   ✓ explicit modern major source-star associations > keeps all four ordered associations when two source stars share a palace; applies same-age profiles and clears 308ms
+
+ Test Files  9 passed (9)
+      Tests  314 passed (314)
+   Start at  13:22:29
+   Duration  21.14s (transform 642ms, setup 594ms, collect 1.69s, tests 38.05s, environment 4.23s, prepare 747ms)
+
+ % Coverage report from v8
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
+-------------------|---------|----------|---------|---------|-------------------
+All files          |   89.37 |    90.36 |   89.28 |   89.37 |
+ src               |   11.44 |    83.33 |      50 |   11.44 |
+  App.jsx          |       0 |        0 |       0 |       0 | 1-167
+  apiBase.js       |     100 |      100 |     100 |     100 |
+  chartExport.js   |     100 |      100 |     100 |     100 |
+  main.jsx         |       0 |        0 |       0 |       0 | 1-13
+ src/components    |   97.28 |    88.45 |   94.11 |   97.28 |
+  CachCucPanel.jsx |     100 |    87.95 |     100 |     100 | ...,70,76,103,112
+  CenterInfo.jsx   |   86.95 |     12.5 |     100 |   86.95 | 6-16
+  ChartActions.jsx |     100 |      100 |     100 |     100 |
+  PalaceBox.jsx    |     100 |    71.42 |      60 |     100 | 10-13
+  ...dAnalysis.jsx |   98.48 |    90.12 |     100 |   98.48 | 317,321-328
+  TuViChart.jsx    |   90.47 |    89.47 |   88.88 |   90.47 | 66-74,77
+ src/engine        |   96.59 |       50 |     100 |   96.59 |
+  constants.js     |   96.59 |       50 |     100 |   96.59 | 85-87
+ src/numerology    |   98.43 |    92.81 |   86.27 |   98.43 |
+  ...tionTrace.jsx |     100 |    83.33 |     100 |     100 | 4
+  ...icMeaning.jsx |     100 |       75 |     100 |     100 | 2,4,12
+  ...yAdvanced.jsx |     100 |    94.21 |      70 |     100 | ...26,160,169,173
+  ...ologyPage.jsx |   95.39 |     92.7 |   78.94 |   95.39 | 65-75
+  api.js           |     100 |    91.41 |     100 |     100 | ...22,127-128,132
+  ...ailability.js |     100 |      100 |     100 |     100 |
+  ...logyExport.js |     100 |    98.48 |     100 |     100 | 37
+ src/pages         |     100 |      100 |     100 |     100 |
+  Pages.jsx        |     100 |      100 |     100 |     100 |
+-------------------|---------|----------|---------|---------|-------------------
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

@@ -1,0 +1,2 @@
+import assert from 'node:assert/strict';import {performance} from 'node:perf_hooks';import {verifyModernMajorMutagenBinding as guard} from '/workspace/b3_tuvi/backend/src/knowledge/modernMajorMutagenBinding.js';
+assert.equal(guard().ok,true);const start=performance.now();for(let i=0;i<20000;i++)assert.equal(guard().ok,true);const totalMs=performance.now()-start;console.log(JSON.stringify({warmGuardCalls:20000,totalMs,microsecondsPerCall:totalMs/20,includesApprovedTableContentComparison:true}));

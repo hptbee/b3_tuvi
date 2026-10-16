@@ -11,6 +11,8 @@ Bảng hoặc quan hệ có thể đối chiếu với quy ước đã ghi trong
 
 ## Source-comparative fixture
 
+- `modernMajorMutagen.test.mjs`: 24 independently validated reachable charts/288 source-comparative periods/1,152 associations, all 40 pinned default table cells/15 canonical targets and 101 shared-palace periods; source stem/table expectations are independent, B3 identity/physical metadata are engineering observations. Missing/duplicate/conflicting selected-star cases are explicitly synthetic; no natal formula or expert verification.
+
 - `modernMajorStem.test.mjs`: independent pinned-source arithmetic for 24 valid natal charts, 288 periods, 654 age queries and 120 finite stem/branch mappings. Missing/conflicting metadata mutations are synthetic structural cases; pre-change response snapshots are engineering regressions. None is an expert-verified chart or a real-world prediction.
 
 ## Expert-verified golden case
@@ -18,6 +20,9 @@ Bảng hoặc quan hệ có thể đối chiếu với quy ước đã ghi trong
 Không có file expert-verified golden. Chưa có lá số nào được một chuyên gia ký và khóa kết quả từng cung.
 
 ## Regression fixture
+
+- `modernMajorMutagenBinding.test.mjs`: separate immutable actual dual-model decision, exact table/source/manifest checks, coherent forgery rejection, branch/stem prerequisites, cached reader failures and legacy profile isolation; synthetic tampering never grants source or public approval.
+- `modernMajorMutagenApi.test.mjs`: real HTTP replay of all independent periods, ordered physical natal associations, strict two-key opt-in and override rejection, combined overlays, unchanged legacy fields, ask/no-store/privacy and no persistence.
 
 Giữ hành vi đã có của engine, API, hoặc chuẩn hóa. Kết quả kỳ vọng là hành vi hiện tại của repo, không phải bản đã thẩm định sách.
 

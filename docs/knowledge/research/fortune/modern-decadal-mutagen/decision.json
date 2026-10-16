@@ -1,0 +1,728 @@
+{
+  "policyVersion": "dual-ai-source-review-v1",
+  "reviewMethod": "dual_ai_independent_then_cross_review",
+  "expertVerified": false,
+  "runtimeRuleChangeApplied": false,
+  "decision": "AI_ACCEPTED",
+  "crossReviewOutcome": "AI_CROSS_REVIEWED",
+  "schoolId": "vn-tam-hop-default",
+  "editionId": "iztro-modern-2f00e2ab0c80",
+  "locator": "src/utils/index.ts#getTargetMutagens + src/astro/FunctionalHoroscope.ts#hasHoroscopeMutagen",
+  "sourceDigest": "93fe46cdcf03529c47c7bda24b1081922d582da204cdaf449673482162e0acdf",
+  "claimId": "iztro-pinned-menh-cuc-decadal-mutagen",
+  "formulaComparison": "MATCH",
+  "conditions": [
+    "15_exact_source_star_identity_classification_mappings",
+    "accepted_T025_T030_branch_and_stem_prerequisites",
+    "canonical_order_loc_quyen_khoa_ky",
+    "closed_states_no_associations_legacy_outputs_unchanged",
+    "existing_physical_natal_star_palace_membership",
+    "explicit_distinct_mutagen_profile",
+    "four_records_retained_when_palace_shared",
+    "independent_valid_chart_source_comparative_fixtures",
+    "no_rotated_roles_inserted_stars_or_outcome_prose",
+    "pinned_builtin_default_40cell_table_only",
+    "preserve_classical_default_source_and_public_release_gates",
+    "selected_decadal_stem_not_birth_or_view_year",
+    "unique_source_occurrence_integrity_guard_not_upstream_uniqueness_claim"
+  ],
+  "exceptions": [
+    "annual_monthly_daily_hourly_transforms",
+    "childhood_or_thirteenth_decadal_period",
+    "classical_tu_hoa_han_approval",
+    "custom_mutagen_overrides",
+    "date_to_age_derivation",
+    "fly_transform_chains",
+    "interpretation",
+    "natal_formula_or_default_change",
+    "production_release",
+    "public_predictions",
+    "rotated_decadal_palace_functions",
+    "scope_origin_mutagen_query",
+    "transit_star_placement",
+    "upstream_full_calendar_or_natal_equivalence"
+  ],
+  "status": "ACCEPTED_SOURCE_SCOPED_PROJECTION",
+  "decisionId": "iztro-modern-decadal-mutagen-2026-10-16",
+  "subjectType": "fortune_placement_profile",
+  "subjectId": "iztro-pinned-menh-cuc-decadal-mutagen",
+  "profileId": "iztro-pinned-menh-cuc-decadal-mutagen",
+  "sourceId": "iztro-modern-software",
+  "sourceProfile": "iztro-pinned-menh-cuc-decadal-mutagen",
+  "sourcePin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "sourceClass": "pinned_modern_software_and_documentation_not_classical_edition",
+  "schoolCompatibilityOnly": true,
+  "algorithmApproval": "AI_CROSS_REVIEWED",
+  "algorithmSpec": {
+    "profileId": "iztro-pinned-menh-cuc-decadal-mutagen",
+    "baseProfileId": "iztro-pinned-menh-cuc-decadal-stem",
+    "baseAlgorithmSpec": {
+      "profileId": "iztro-pinned-menh-cuc-decadal-stem",
+      "baseProfileId": "iztro-pinned-menh-cuc-decadal",
+      "baseAlgorithmSpec": {
+        "profileId": "iztro-pinned-menh-cuc-decadal",
+        "inputFields": [
+          "menhBranchId",
+          "cucNumber",
+          "birthYearBranch",
+          "gender",
+          "nominalAge"
+        ],
+        "branchOrder": [
+          "Tí",
+          "Sửu",
+          "Dần",
+          "Mão",
+          "Thìn",
+          "Tị",
+          "Ngọ",
+          "Mùi",
+          "Thân",
+          "Dậu",
+          "Tuất",
+          "Hợi"
+        ],
+        "branchIds": "one_based_1_to_12",
+        "firstPalace": "natal_menh",
+        "startingAge": "cuc_number",
+        "cucStartAges": [
+          {
+            "element": "water",
+            "number": 2
+          },
+          {
+            "element": "wood",
+            "number": 3
+          },
+          {
+            "element": "metal",
+            "number": 4
+          },
+          {
+            "element": "earth",
+            "number": 5
+          },
+          {
+            "element": "fire",
+            "number": 6
+          }
+        ],
+        "yearYangBranches": [
+          "Tí",
+          "Dần",
+          "Thìn",
+          "Ngọ",
+          "Thân",
+          "Tuất"
+        ],
+        "yearYinBranches": [
+          "Sửu",
+          "Mão",
+          "Tị",
+          "Mùi",
+          "Dậu",
+          "Hợi"
+        ],
+        "genderMapping": [
+          {
+            "gender": 1,
+            "sourceKey": "male",
+            "yinYang": "阳"
+          },
+          {
+            "gender": -1,
+            "sourceKey": "female",
+            "yinYang": "阴"
+          }
+        ],
+        "directionRule": "gender_yin_yang_equals_birth_year_branch_yin_yang_forward_else_reverse",
+        "forwardDirection": 1,
+        "reverseDirection": -1,
+        "periodCount": 12,
+        "yearsPerPeriod": 10,
+        "rangeEndOffset": 9,
+        "periodIndex": "zero_based_0_to_11",
+        "palacesPerPeriod": 1,
+        "wrap": 12,
+        "nominalAgeRange": {
+          "min": 1,
+          "max": 125,
+          "integer": true
+        },
+        "validPerChartAgeRange": "cucNumber_through_cucNumber_plus_119_inclusive",
+        "periodFormula": "floor((nominalAge - cucNumber) / 10)",
+        "outputFormula": "branchId = ((menhBranchId - 1 + direction * periodIndex) % 12 + 12) % 12 + 1",
+        "periodRangeFormula": "start = cucNumber + 10 * periodIndex; end = start + 9",
+        "sourcePalaceToProductBranchId": "((sourcePalaceIndex + 2) % 12) + 1",
+        "beforeFirstPeriod": "not_applied_no_placement",
+        "afterLastPeriod": "not_applied_no_placement",
+        "childhoodApplied": false,
+        "thirteenthPeriodApplied": false,
+        "calendarAgeDerivation": false,
+        "yearYinYangAffectsDirection": true,
+        "extendsBeyondSourceRange": false
+      },
+      "inputFields": [
+        "menhBranchId",
+        "cucNumber",
+        "birthYearBranch",
+        "gender",
+        "nominalAge",
+        "birthYearStemIndex"
+      ],
+      "stemNames": [
+        "Giáp",
+        "Ất",
+        "Bính",
+        "Đinh",
+        "Mậu",
+        "Kỷ",
+        "Canh",
+        "Tân",
+        "Nhâm",
+        "Quý"
+      ],
+      "tigerStartStemIndexes": [
+        2,
+        4,
+        6,
+        8,
+        0,
+        2,
+        4,
+        6,
+        8,
+        0
+      ],
+      "sourcePalaceIndex": "((selectedBranchId - 3) % 12 + 12) % 12",
+      "stemIndex": "(tigerStartStemIndexes[birthYearStemIndex] + sourcePalaceIndex) % 10",
+      "stemOutput": "stemNames[stemIndex]",
+      "selectedBranchSource": "unchanged_approved_modernMajorPeriod",
+      "stemYearSource": "trusted_server_natal_lunar_canIndex_and_exact_canName_with_branch_parity",
+      "oldProfileFields": "unchanged_no_heavenlyStem_or_stemPlacement",
+      "placedNewFields": {
+        "heavenlyStem": "canonical_stem",
+        "stemPlacement": "supported"
+      },
+      "closedNewFields": {
+        "heavenlyStem": null,
+        "stemPlacement": "not_applied"
+      },
+      "calendarAgeDerivation": false,
+      "interpretationReviewed": false,
+      "publicFortune": false
+    },
+    "stemNames": [
+      "Giáp",
+      "Ất",
+      "Bính",
+      "Đinh",
+      "Mậu",
+      "Kỷ",
+      "Canh",
+      "Tân",
+      "Nhâm",
+      "Quý"
+    ],
+    "mutagenIds": [
+      "hoa_loc",
+      "hoa_quyen",
+      "hoa_khoa",
+      "hoa_ky"
+    ],
+    "mutagenLabels": [
+      "Hóa Lộc",
+      "Hóa Quyền",
+      "Hóa Khoa",
+      "Hóa Kỵ"
+    ],
+    "sourceMutagenOrder": [
+      "sihuaLu",
+      "sihuaQuan",
+      "sihuaKe",
+      "sihuaJi"
+    ],
+    "defaultTable": {
+      "0": [
+        "Liêm Trinh",
+        "Phá Quân",
+        "Vũ Khúc",
+        "Thái Dương"
+      ],
+      "1": [
+        "Thiên Cơ",
+        "Thiên Lương",
+        "Tử Vi",
+        "Thái Âm"
+      ],
+      "2": [
+        "Thiên Đồng",
+        "Thiên Cơ",
+        "Văn Xương",
+        "Liêm Trinh"
+      ],
+      "3": [
+        "Thái Âm",
+        "Thiên Đồng",
+        "Thiên Cơ",
+        "Cự Môn"
+      ],
+      "4": [
+        "Tham Lang",
+        "Thái Âm",
+        "Hữu Bật",
+        "Thiên Cơ"
+      ],
+      "5": [
+        "Vũ Khúc",
+        "Tham Lang",
+        "Thiên Lương",
+        "Văn Khúc"
+      ],
+      "6": [
+        "Thái Dương",
+        "Vũ Khúc",
+        "Thái Âm",
+        "Thiên Đồng"
+      ],
+      "7": [
+        "Cự Môn",
+        "Thái Dương",
+        "Văn Khúc",
+        "Văn Xương"
+      ],
+      "8": [
+        "Thiên Lương",
+        "Tử Vi",
+        "Tả Phù",
+        "Vũ Khúc"
+      ],
+      "9": [
+        "Phá Quân",
+        "Cự Môn",
+        "Thái Âm",
+        "Tham Lang"
+      ]
+    },
+    "starMapping": [
+      {
+        "sourceStarKey": "jumenMaj",
+        "canonicalName": "Cự Môn",
+        "starId": "cu_mon",
+        "category": "chinh_tinh",
+        "list": "major"
+      },
+      {
+        "sourceStarKey": "lianzhenMaj",
+        "canonicalName": "Liêm Trinh",
+        "starId": "liem_trinh",
+        "category": "chinh_tinh",
+        "list": "major"
+      },
+      {
+        "sourceStarKey": "pojunMaj",
+        "canonicalName": "Phá Quân",
+        "starId": "pha_quan",
+        "category": "chinh_tinh",
+        "list": "major"
+      },
+      {
+        "sourceStarKey": "taiyangMaj",
+        "canonicalName": "Thái Dương",
+        "starId": "thai_duong",
+        "category": "chinh_tinh",
+        "list": "major"
+      },
+      {
+        "sourceStarKey": "taiyinMaj",
+        "canonicalName": "Thái Âm",
+        "starId": "thai_am",
+        "category": "chinh_tinh",
+        "list": "major"
+      },
+      {
+        "sourceStarKey": "tanlangMaj",
+        "canonicalName": "Tham Lang",
+        "starId": "tham_lang",
+        "category": "chinh_tinh",
+        "list": "major"
+      },
+      {
+        "sourceStarKey": "tianjiMaj",
+        "canonicalName": "Thiên Cơ",
+        "starId": "thien_co",
+        "category": "chinh_tinh",
+        "list": "major"
+      },
+      {
+        "sourceStarKey": "tianliangMaj",
+        "canonicalName": "Thiên Lương",
+        "starId": "thien_luong",
+        "category": "chinh_tinh",
+        "list": "major"
+      },
+      {
+        "sourceStarKey": "tiantongMaj",
+        "canonicalName": "Thiên Đồng",
+        "starId": "thien_dong",
+        "category": "chinh_tinh",
+        "list": "major"
+      },
+      {
+        "sourceStarKey": "wenchangMin",
+        "canonicalName": "Văn Xương",
+        "starId": "van_xuong",
+        "category": "phu_tinh",
+        "list": "good"
+      },
+      {
+        "sourceStarKey": "wenquMin",
+        "canonicalName": "Văn Khúc",
+        "starId": "van_khuc",
+        "category": "phu_tinh",
+        "list": "good"
+      },
+      {
+        "sourceStarKey": "wuquMaj",
+        "canonicalName": "Vũ Khúc",
+        "starId": "vu_khuc",
+        "category": "chinh_tinh",
+        "list": "major"
+      },
+      {
+        "sourceStarKey": "youbiMin",
+        "canonicalName": "Hữu Bật",
+        "starId": "huu_bat",
+        "category": "phu_tinh",
+        "list": "good"
+      },
+      {
+        "sourceStarKey": "ziweiMaj",
+        "canonicalName": "Tử Vi",
+        "starId": "tu_vi",
+        "category": "chinh_tinh",
+        "list": "major"
+      },
+      {
+        "sourceStarKey": "zuofuMin",
+        "canonicalName": "Tả Phù",
+        "starId": "ta_phu",
+        "category": "phu_tinh",
+        "list": "good"
+      }
+    ],
+    "selectedStemSource": "T030_accepted_selected_decadal_heavenlyStem_not_birth_or_view_year",
+    "tableSelection": "pinned_builtin_default_only_no_custom_override",
+    "sourceMembership": "natal_major_and_minor_canonical_stars_at_physical_palace",
+    "productGuard": "each_selected_source_star_exactly_one_known_consistent_id_name_category_list_palace_link_else_close_entire_new_profile",
+    "retainAllFour": true,
+    "sharedPalaceAllowed": true,
+    "rotatedDecadalFunctions": false,
+    "insertNatalStars": false,
+    "outputContract": {
+      "newProfileOnly": true,
+      "mutagenScope": "natal_physical_palaces",
+      "mutagenPlacement": "supported only all four associations coherent and evidence accepted; not_applied otherwise",
+      "mutagens": "Exactly4 ordered records on supported, [] closed",
+      "recordKeys": [
+        "mutagenId",
+        "mutagenLabel",
+        "sourceStarId",
+        "sourceStarName",
+        "palaceId",
+        "functionId",
+        "functionLabel"
+      ],
+      "mutagenIds": [
+        "hoa_loc",
+        "hoa_quyen",
+        "hoa_khoa",
+        "hoa_ky"
+      ],
+      "mutagenLabels": [
+        "Hóa Lộc",
+        "Hóa Quyền",
+        "Hóa Khoa",
+        "Hóa Kỵ"
+      ],
+      "calendarCompatibility": "server_natal_menh_cuc_stem_branch_sex_age_and_default_mutagen_projection_not_full_iztro_astrolabe",
+      "integrityFailure": "Fail closed all associations, selected stem and branch; no partial or stale association retained",
+      "legacyProfiles": "Exact unchanged shape/behavior, no new fields",
+      "publicFortune": false,
+      "interpretation": null,
+      "interpretationStatus": "blocked"
+    },
+    "runtimeTableContentMustEqualApproved": true,
+    "legacyProfilesUnchanged": true,
+    "publicFortune": false,
+    "interpretationReviewed": false
+  },
+  "compatibilitySpec": {
+    "scope": "server_natal_menh_cuc_stem_branch_sex_age_and_default_mutagen_projection_not_full_iztro_astrolabe",
+    "requestContract": {
+      "field": "majorPeriod",
+      "exactKeys": [
+        "profile",
+        "nominalAge"
+      ],
+      "profile": "iztro-pinned-menh-cuc-decadal-mutagen",
+      "nominalAge": {
+        "integer": true,
+        "min": 1,
+        "max": 125
+      }
+    },
+    "baseCompatibilitySpec": {
+      "scope": "server_natal_menh_cuc_stem_branch_sex_age_projection_not_full_iztro_astrolabe",
+      "requestContract": {
+        "field": "majorPeriod",
+        "exactKeys": [
+          "profile",
+          "nominalAge"
+        ],
+        "profile": "iztro-pinned-menh-cuc-decadal-stem",
+        "nominalAge": {
+          "integer": true,
+          "min": 1,
+          "max": 125
+        }
+      },
+      "baseCompatibilitySpec": {
+        "scope": "server_natal_menh_cuc_branch_sex_age_projection_not_full_iztro_astrolabe",
+        "receivingSchoolId": "vn-tam-hop-default",
+        "upstreamSchoolId": null,
+        "menh": "trusted_server_unique_menh_palace_and_consistent_menhPalaceId",
+        "cuc": "trusted_server_cuc_number_2_to_6_with_name_number_agreement",
+        "birthYearBranch": "trusted_server_natal_lunar_chiName_and_chiIndex_consistent",
+        "birthYearStem": "trusted_server_natal_lunar_canName_and_canIndex_consistent_and_sexagenary_parity_matches_branch",
+        "gender": "validated_product_gender_1_male_minus1_female",
+        "nominalAge": "caller_supplied_integer_1_to_125_not_date_derived",
+        "requestContract": {
+          "field": "majorPeriod",
+          "exactKeys": [
+            "profile",
+            "nominalAge"
+          ],
+          "profile": "iztro-pinned-menh-cuc-decadal",
+          "nominalAge": {
+            "integer": true,
+            "min": 1,
+            "max": 125
+          }
+        },
+        "sourceBranchAndGenderMapping": [
+          {
+            "key": "ziEarthly",
+            "chinese": "子",
+            "upstreamVi": "Tý",
+            "productVi": "Tí",
+            "productBranchId": 1,
+            "sourceBranchEnumIndex": 0,
+            "sourcePalaceIndex": 10
+          },
+          {
+            "key": "chouEarthly",
+            "chinese": "丑",
+            "upstreamVi": "Sửu",
+            "productVi": "Sửu",
+            "productBranchId": 2,
+            "sourceBranchEnumIndex": 1,
+            "sourcePalaceIndex": 11
+          },
+          {
+            "key": "yinEarthly",
+            "chinese": "寅",
+            "upstreamVi": "Dần",
+            "productVi": "Dần",
+            "productBranchId": 3,
+            "sourceBranchEnumIndex": 2,
+            "sourcePalaceIndex": 0
+          },
+          {
+            "key": "maoEarthly",
+            "chinese": "卯",
+            "upstreamVi": "Mão",
+            "productVi": "Mão",
+            "productBranchId": 4,
+            "sourceBranchEnumIndex": 3,
+            "sourcePalaceIndex": 1
+          },
+          {
+            "key": "chenEarthly",
+            "chinese": "辰",
+            "upstreamVi": "Thìn",
+            "productVi": "Thìn",
+            "productBranchId": 5,
+            "sourceBranchEnumIndex": 4,
+            "sourcePalaceIndex": 2
+          },
+          {
+            "key": "siEarthly",
+            "chinese": "巳",
+            "upstreamVi": "Tỵ",
+            "productVi": "Tị",
+            "productBranchId": 6,
+            "sourceBranchEnumIndex": 5,
+            "sourcePalaceIndex": 3
+          },
+          {
+            "key": "wuEarthly",
+            "chinese": "午",
+            "upstreamVi": "Ngọ",
+            "productVi": "Ngọ",
+            "productBranchId": 7,
+            "sourceBranchEnumIndex": 6,
+            "sourcePalaceIndex": 4
+          },
+          {
+            "key": "weiEarthly",
+            "chinese": "未",
+            "upstreamVi": "Mùi",
+            "productVi": "Mùi",
+            "productBranchId": 8,
+            "sourceBranchEnumIndex": 7,
+            "sourcePalaceIndex": 5
+          },
+          {
+            "key": "shenEarthly",
+            "chinese": "申",
+            "upstreamVi": "Thân",
+            "productVi": "Thân",
+            "productBranchId": 9,
+            "sourceBranchEnumIndex": 8,
+            "sourcePalaceIndex": 6
+          },
+          {
+            "key": "youEarthly",
+            "chinese": "酉",
+            "upstreamVi": "Dậu",
+            "productVi": "Dậu",
+            "productBranchId": 10,
+            "sourceBranchEnumIndex": 9,
+            "sourcePalaceIndex": 7
+          },
+          {
+            "key": "xuEarthly",
+            "chinese": "戌",
+            "upstreamVi": "Tuất",
+            "productVi": "Tuất",
+            "productBranchId": 11,
+            "sourceBranchEnumIndex": 10,
+            "sourcePalaceIndex": 8
+          },
+          {
+            "key": "haiEarthly",
+            "chinese": "亥",
+            "upstreamVi": "Hợi",
+            "productVi": "Hợi",
+            "productBranchId": 12,
+            "sourceBranchEnumIndex": 11,
+            "sourcePalaceIndex": 9
+          }
+        ],
+        "target": "resolve_reviewed_branch_on_unchanged_validated_12_palace_natal_chart",
+        "defaultActivated": false,
+        "calendarAgeDerivation": false,
+        "knownNatalDifference": "product_leap_month_changes_at_day15_while_upstream_fixLunarMonthIndex_requires_day_gt15_and_excludes_timeIndex12",
+        "existingNatalLabelComparison": "regression_comparison_only_not_an_approval_or_formula_oracle",
+        "classicalComparison": "Quanshu_committed_adjacent_parent_sibling_anchor_differs_and_remains_insufficient",
+        "exclusions": [
+          "upstream_calendar_equivalence",
+          "whole_upstream_natal_equivalence",
+          "upstream_yearDivide_selection",
+          "upstream_ageDivide_selection",
+          "upstream_dayDivide_selection",
+          "upstream_horoscopeDivide_selection",
+          "upstream_from_rearrangement",
+          "date_to_nominal_age",
+          "birthday_boundary",
+          "leap_month_age_semantics",
+          "classical_quanshu_approval",
+          "default_profile_change",
+          "existing_natal_label_or_formula_change",
+          "childhood_period",
+          "thirteenth_decadal_period",
+          "decadal_heavenly_stems",
+          "decadal_stars",
+          "fortune_tu_hoa",
+          "interpretation",
+          "public_predictions"
+        ]
+      },
+      "baseApprovalRequired": true,
+      "stemApprovalSeparate": true,
+      "oldProfileUnchanged": true,
+      "birthYearStem": "server_lunar_year_not_Gregorian_year_or_viewYear",
+      "from": "not_applied_no_rearranged_astrolabe_equivalence",
+      "yearDivide": "not_selected_or_certified_B3_server_lunar_year_projection_only",
+      "locale": "pinned_Vietnamese_ten_stem_labels_equal_B3_THIEN_CAN_no_aliases",
+      "closed": "no_stem_unless_both_bindings_valid_trusted_metadata_and_branch_mapped",
+      "defaultActivated": false,
+      "publicRelease": false
+    },
+    "branchAndStemApprovalsRequired": true,
+    "mutagenApprovalSeparate": true,
+    "sourceMajorToB3": "11_named_principal_targets_list_major_category_chinh_tinh",
+    "sourceMinorToB3": "4_named_auxiliary_targets_list_good_category_phu_tinh",
+    "mapping": "existing_trusted_B3_natal_physical_palaces_not_upstream_complete_chart_or_decadal_rotated_roles",
+    "tableReuse": "unchanged_B3_tuHoaMap_content_must_equal_approved_40cells_no_natal_approval_promotion",
+    "customConfiguration": false,
+    "legacyProfilesUnchanged": true,
+    "sourceIdentityUnchanged": true,
+    "publicRelease": false
+  },
+  "contextDigest": "e0e053ddf39a07a4a9395d8d1beaed0c37c4900e730a3e7816ffcf47d99c0035",
+  "fixturesDigest": "1b09a7d56fd92aff8483885d9f912e2ca82108c5195d7fba22144a6c072eb00f",
+  "algorithmDigest": "61dd9c7b4413247663289a7e4835b66b379576dd2cda3150bc60b07d7f7bebc6",
+  "compatibilityDigest": "f18a71a7aa13600b719e44401365fb34cd7bcf2988faddb0bc7841efaf59285c",
+  "requiredAnchors": [
+    "const getTargetMutagens = (heavenlyStem: HeavenlyStemKey) => {",
+    "if (mutagens && mutagens[heavenlyStem])",
+    "result = heavenlyStems[heavenlyStem].mutagen ?? [];"
+  ],
+  "conditionIds": [
+    "explicit_distinct_mutagen_profile",
+    "accepted_T025_T030_branch_and_stem_prerequisites",
+    "selected_decadal_stem_not_birth_or_view_year",
+    "pinned_builtin_default_40cell_table_only",
+    "canonical_order_loc_quyen_khoa_ky",
+    "15_exact_source_star_identity_classification_mappings",
+    "existing_physical_natal_star_palace_membership",
+    "unique_source_occurrence_integrity_guard_not_upstream_uniqueness_claim",
+    "four_records_retained_when_palace_shared",
+    "closed_states_no_associations_legacy_outputs_unchanged",
+    "independent_valid_chart_source_comparative_fixtures",
+    "no_rotated_roles_inserted_stars_or_outcome_prose",
+    "preserve_classical_default_source_and_public_release_gates"
+  ],
+  "reviewers": [
+    {
+      "model": "gpt-6.1-sol",
+      "requestedModel": "gpt-6.1-sol",
+      "agentId": "/root/t032_sol",
+      "hostBuildId": null,
+      "available": true,
+      "reviewRef": "docs/knowledge/research/fortune/modern-decadal-mutagen/review-a.json",
+      "verdict": "MATCH"
+    },
+    {
+      "model": "gpt-6-astra",
+      "requestedModel": "gpt-6-astra",
+      "agentId": "/root/t032_astra",
+      "hostBuildId": null,
+      "available": true,
+      "reviewRef": "docs/knowledge/research/fortune/modern-decadal-mutagen/review-b.json",
+      "verdict": "MATCH"
+    }
+  ],
+  "reviewBundleFile": "docs/knowledge/research/fortune/modern-decadal-mutagen/review-bundle.json",
+  "sourceSpanFile": "docs/knowledge/research/fortune/modern-decadal-mutagen/source-span.txt",
+  "contextFile": "docs/knowledge/research/fortune/modern-decadal-mutagen/review-context.txt",
+  "fixturesFile": "docs/knowledge/research/fortune/modern-decadal-mutagen/fixtures.json",
+  "executionFile": "docs/knowledge/research/fortune/modern-decadal-mutagen/execution.json",
+  "historicalAuthenticated": false,
+  "bookVerified": false,
+  "interpretationReviewed": false,
+  "publicRelease": false,
+  "releasePermission": "withheld"
+}

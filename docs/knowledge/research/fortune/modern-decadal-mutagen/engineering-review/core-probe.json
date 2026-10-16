@@ -1,0 +1,9 @@
+{
+  "comparator": "AI_ACCEPTED",
+  "formula": "MATCH",
+  "rawJudgmentsUnchanged": true,
+  "selectedTargets": 15,
+  "syntheticProbes": 120,
+  "closedWholeNewProfile": true,
+  "oldProfilesByteEquivalent": true
+}
