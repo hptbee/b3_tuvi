@@ -32,6 +32,7 @@ Giữ hành vi đã có của engine, API, hoặc chuẩn hóa. Kết quả kỳ
 - `normalizeChart.test.mjs`
 - `ruleEngine.test.mjs`
 - `interpretationBinding.test.mjs`: existing interpretation evidence binding and unreviewed-clone regressions; no new source approval or expert verification.
+- `interpretationApplicability.test.mjs`: fixed 1,152-chart engineering applicability regression, independent seven-claim subset counts, overlap and local baseline validation. Synthetic snapshots test comparison only; no source or expert approval.
 - `modernMajorBinding.test.mjs`: separately approved immutable modern Đại hạn evidence, actual distinct-model decision replay and tamper withholding; not inherited minor approval or historical authentication.
 - `modernMajor.test.mjs`: independent real natal witnesses and finite decade boundaries, strict server metadata and adapter negatives; engineering/source-comparative fixtures, not life-outcome goldens.
 - `modernMajorStemBinding.test.mjs`: separately approved can–chi profile, immutable actual reviews and frozen artifacts, coherent forgery rejection, old-gate prerequisite and cached fixed-loader failures; no historical authentication.

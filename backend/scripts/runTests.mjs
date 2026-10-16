@@ -24,6 +24,7 @@ export const unitTests = [
     'test/evidenceV3.test.mjs',
     'test/interpretationPipeline.test.mjs',
     'test/interpretationBinding.test.mjs',
+    'test/interpretationApplicability.test.mjs',
     'test/sourcePalaceBinding.test.mjs',
     'test/sourcePalaceInterpretation.test.mjs',
     'test/sourcePalaceQuan.test.mjs',
