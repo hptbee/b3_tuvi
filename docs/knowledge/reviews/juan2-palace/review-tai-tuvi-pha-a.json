@@ -1,0 +1,125 @@
+[
+  {
+    "sourceId": "ziwei-quanshu-iztro-transcription",
+    "sourceProfile": "quanshu-iztro-2f00e2ab",
+    "claimId": "interp-quanshu-tai-tuvi-pha-quan-host",
+    "target": "tai_bach",
+    "editionId": "iztro-juan2-2f00e2ab0c80",
+    "schoolId": "vn-tam-hop-default",
+    "locator": "juan2/財帛宮/紫微+破軍",
+    "sourceDigest": "97c498dbad297a90345a1817af3c8ec19d8793ec67fb1802f88972123efc5df5",
+    "contextDigest": "18e05f3a45cf27553642da48035fa263e267e90d49c9a1211df734a6dc54ee13",
+    "conditionTreeDigest": "c1c9dd401e41bca4fb5dcceeacc06c38b0531b5e191765f700302790d0dab7b3",
+    "wordingDigest": "21fb32648cbd151dd37c62859254200885d7557a18b06ce4f6cd63bb2ff76fb5",
+    "fixturesDigest": "c87eb5805eea4396db96b019948b2acee01d621b8516b080f4d70714a7e005ac",
+    "conditionTree": {
+      "op": "same_palace",
+      "target": "tai_bach",
+      "stars": [
+        "Tử Vi",
+        "Phá Quân"
+      ]
+    },
+    "conditions": [
+      "palace_tai_bach",
+      "tu_vi_in_host",
+      "pha_quan_in_host",
+      "direct_host_only"
+    ],
+    "limitations": [
+      "primary_paragraph_baseline_only",
+      "direct_host_only",
+      "reciprocal_context_retained_not_harmonized",
+      "added_adverse_clauses_retained_but_not_evaluated",
+      "kong_kiep_aliases_not_implemented",
+      "no_invented_brightness_or_branch_requirement",
+      "no_age_or_date_prediction",
+      "not_a_whole_chart_judgment",
+      "not_a_verified_life_event",
+      "no_natal_formula_change",
+      "no_public_release"
+    ],
+    "quotationPolicy": "source-sentence-v2",
+    "model": "gpt-6.1-sol",
+    "available": true,
+    "modelIdentityBasis": "Orchestrator-selected model identity supplied by parent task; host build metadata is not exposed",
+    "hostBuild": null,
+    "quotation": "紫微豐足倉箱，加羊陀火鈴空劫不旺，破軍同先難後易，天相同財帛蓄積，\n天府同富足終身保守，加左右為財富之官，七殺同加吉財帛橫發。\n破軍在子午宮，多有金銀寶貝蓄積，辰戌旺宮亦財盛，陷宮破不祖聚，\n武曲同守巳亥宮，東來西去，紫微同先去後生，廉貞同勞碌生財，先難後遂，加空劫極貧。",
+    "exceptions": [],
+    "formulaComparison": "MATCH",
+    "verdict": "MATCH",
+    "interpretationVerdict": "INTERPRETATION_SUPPORTED_WITH_LIMITS",
+    "proposedWording": "Riêng mục Tử Vi tại Tài Bạch của bản chép này, nhánh Phá Quân đồng cung được ghi “先難後易”, nghĩa là trước khó, sau dễ. Đây là lời mô tả truyền thống cho đúng nhánh văn bản, không xác nhận tài sản hay kết quả cuộc đời; các điều kiện gia sát ở các đoạn liên quan chưa được đánh giá.",
+    "reviewedWording": "Riêng mục Tử Vi tại Tài Bạch của bản chép này, nhánh Phá Quân đồng cung được ghi “先難後易”, nghĩa là trước khó, sau dễ. Đây là lời mô tả truyền thống cho đúng nhánh văn bản, không xác nhận tài sản hay kết quả cuộc đời; các điều kiện gia sát ở các đoạn liên quan chưa được đánh giá.",
+    "approvedWording": "Riêng mục Tử Vi tại Tài Bạch của bản chép này, nhánh Phá Quân đồng cung được ghi “先難後易”, nghĩa là trước khó, sau dễ. Đây là lời mô tả truyền thống cho đúng nhánh văn bản, không xác nhận tài sản hay kết quả cuộc đời; các điều kiện gia sát ở các đoạn liên quan chưa được đánh giá.",
+    "expertVerified": false,
+    "bookVerified": false,
+    "publicRelease": false,
+    "releasePermission": "withheld",
+    "runtimeRuleChangeApplied": false,
+    "sourceAssessment": {
+      "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+      "rawHtmlSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+      "derivedTextSha256": "b824c61e1bdec55ecdc7123ff1e79bce9648f07d67d054c43a59ce731572d4a7",
+      "editionAuthenticated": false,
+      "independentPinnedRawFetch": {
+        "status": 200,
+        "url": "https://raw.githubusercontent.com/SylarLong/iztro/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/ancientBook-2.html",
+        "sha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+        "rawMatchesFrozen": true,
+        "completeEntriesMatch": true,
+        "allDerivedLinesInRaw": true,
+        "fullTaiAndBranchContextMatch": true,
+        "upstreamCodeExecuted": false,
+        "editionAuthenticated": false
+      },
+      "sourceType": "secondary_transcription",
+      "license": "MIT repository notice retained; no historical-edition rights or authenticity inferred",
+      "sourceRegistryChanged": false
+    },
+    "fixtureAssessment": {
+      "proof": "/tmp/t028/reviewer-a-fixture-proof.json",
+      "independentScript": "/tmp/t028/reviewer-a-check.mjs",
+      "count": 8,
+      "positive": 4,
+      "negative": 4,
+      "manifestFileCount": 21,
+      "fiveDigestsExact": true,
+      "directMembershipOracleIndependentOfAST": true,
+      "exactMetadataVerified": true,
+      "deepFrozenChartUnchanged": true,
+      "allFourBranchAdverseCells": true,
+      "allInputsMale": true,
+      "sexCalendarFormulaValidationClaimed": false
+    },
+    "scopeAnalysis": {
+      "primaryParagraph": "The 紫微 entry uses comma-separated local branches. 破軍同 introduces the pair branch after 加羊陀火鈴空劫不旺 and before the distinct 天相同 branch. 同 here identifies co-presence in the current 財帛宮 entry, supporting direct host membership, not a relation in another palace.",
+      "precedingAdverse": "加羊陀火鈴空劫不旺 modifies the preceding generic 紫微 prosperity baseline and must remain visible. Its position does not require treating it as an absence condition on the next independently introduced 破軍同 branch. I approve only an annotation saying this paragraph records the phrase, not that it overrides adverse combinations or exhausts applicable clauses.",
+      "reciprocalAndFinalAdverse": "The reciprocal 破軍 entry retains branch-specific 子午, 辰戌, 陷宮 and 武曲同守巳亥 clauses, then 紫微同先去後生 and 廉貞同勞碌生財，先難後遂，加空劫極貧. The reciprocal phrase is not translated as equivalent to 先難後易. The final 加空劫 clause may have broader additive scope; I do not close that scope or assert an effective chart outcome. Exact reviewed wording expressly leaves those conditions unevaluated, so an attributed primary-paragraph baseline remains accurate.",
+      "brightnessAndBranch": "No brightness or branch threshold is expressed in the selected 破軍同 clause. Source 命宮 丑未宮入廟與破軍同度 and 丑未宮旺地與紫微同度 establish contextual cohost reachability, not a new 財帛 predicate. Engine Tử Vi brightness Đ versus source 入廟 is not certified school equivalence. Separate stem/rank statements are not transferred.",
+      "wording": "Exact Vietnamese wording translates only 先難後易 as trước khó, sau dễ and explicitly attributes it to the Tử Vi section of this transcription. Its final sentence preserves unevaluated adverse conditions. This is support for internal text attribution, not a wealth, loss/gain, age, profession, rank, health or life outcome.",
+      "acceptanceBoundary": "MATCH applies to the narrow attributed annotation and its direct-host predicate. It does not approve an unconditional before/after life trajectory, complete modifier evaluation, whole-chart conclusion, natal-formula/source-default change, original-edition authentication, or public narration."
+    },
+    "reviewExecution": {
+      "sourceProof": "/tmp/t028/reviewer-a-source-proof.json",
+      "sourceScript": "/tmp/t028/reviewer-a-source.py",
+      "independentReview": true,
+      "otherReviewerOutputsRead": false,
+      "priorVerdictsRead": false,
+      "upstreamHtmlScriptsExecuted": false,
+      "productFilesWritten": false
+    },
+    "intakeErratum": {
+      "field": "review-bundle.json existingClaimDistinction",
+      "correction": "The T026 Tử Vi/Tả/Hữu candidate was never activated or approved and remains blocked. The active existing Tài annotation is Tử Vi plus direct named adverse.",
+      "frozenPacketChanged": false,
+      "sourceASTWordingFixturesChanged": false,
+      "noExistingApprovalDependency": true,
+      "assessment": "My source judgment depends on independently fetched complete source text, the exact attributed wording, and verified direct-host predicate fixtures. It does not depend on approval or runtime activation of T026 or any analogous annotation. Correcting this prior-capability description does not affect the source or wording judgment. No T026 promotion is approved.",
+      "actualVerdictStands": true,
+      "formulaComparison": "MATCH",
+      "interpretationVerdict": "INTERPRETATION_SUPPORTED_WITH_LIMITS"
+    },
+    "usage": "internal_research"
+  }
+]

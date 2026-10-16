@@ -51,3 +51,10 @@ Hai đoạn đầy đủ ghi `巨門同勞力欠安` và `天機同心忙不安`
 [Packet gốc và trạng thái](phuc-co-cu-packet/STATUS.md), [bundle](review-bundle-phuc-co-cu.json), [execution](execution-phuc-co-cu.json) và [quyết định](../../interpretation-decisions/juan2-phuc-co-cu.json) giữ nguyên hai đánh giá thực tế cùng 19 lá số kiểm tra độc lập trước duyệt. Các phép biến đổi AST/lời văn/fixture dù tự tính lại hash cũng không thay được phạm vi đã khóa trong runtime. Đây là claim nội bộ thứ năm; nguồn/ấn bản cũ, công thức natal và public prose không thay đổi.
 
 Ứng viên Juan3 Tài Bạch Tử Vi/Tả/Hữu bị cả hai review giữ PARTIAL / UNRESOLVED do phạm vi ngữ pháp chưa rõ; [bằng chứng ứng viên](../juan3-palace/tai-ziwei-fubi-candidate/STATUS.md) được lưu để tiếp tục khi có nguồn mới, không kích hoạt claim.
+
+
+## Tài Bạch Tử Vi–Phá Quân: phạm vi nhánh được trích
+
+Claim `interp-quanshu-tai-tuvi-pha-quan-host` chỉ trích `破軍同先難後易` khi đúng hai sao đồng cung Tài Bạch. [Packet và giới hạn](tai-tuvi-pha-packet/STATUS.md) giữ nguyên hai đoạn đầy đủ, toàn mục Tài Bạch và ngữ cảnh cung/brightness; nhánh đối ứng `紫微同先去後生` được giữ làm ngữ cảnh, không ép thành cùng một nghĩa hoặc điều kiện tuổi. Các bổ nghĩa gia sát chưa được đánh giá.
+
+Tám lá số được kiểm tra độc lập trước hai actual model reviews, đủ Sửu/Mùi × có/không bốn sát tinh nêu tên và các trường hợp âm. [Bundle](review-bundle-tai-tuvi-pha.json), [execution](execution-tai-tuvi-pha.json) và [quyết định](../../interpretation-decisions/juan2-tai-tuvi-pha.json) khóa đúng AST/lời văn/fixture; nguyên bản model output được giữ riêng. Claim này cùng tồn tại với ghi chú Tài Bạch Tử Vi/gia sát đã duyệt, không thay thế hoặc gộp lời văn thành dự báo. [Hiệu đính intake](tai-tuvi-pha-packet/ERRATA.md) giữ rõ T026 chưa được duyệt, không có claim Tử Vi/Tả/Hữu hoạt động.

@@ -1,6 +1,6 @@
 # Autonomous Product Completion
 
-- version: 18
+- version: 21
 - source: User mission 2026-10-14; fresh run from upstream main 45615a48d0c75b90138cfc618320ffae6e9c34e0
 
 ## Original requirements
@@ -390,9 +390,9 @@ Version16 completion: T025 complete source-gated API/UI passes all four independ
 Version17 T027 actual retry after user continuation recovered model access: both genuine gpt-6.1-sol/gpt-6-astra judgments MATCH plus INTERPRETATION_SUPPORTED_WITH_LIMITS; parent verifies exact5digests/AST/wording/limitations and existing comparator AI_ACCEPTED/MATCH. Nineteen independent fixtures predate reviews. Precise baseline attribution only; source/natal/public flags unchanged. Minimal inspected scope one existing production binder, no new framework/API/UI. Preserve T026 rejected exact-scope evidence in same capability-delivery checkpoint, not another research-only PR.
 
 ### T028 — Tài Bạch Tử Vi/Phá Quân exact-source branch annotation
-- status: pending
+- status: completed
 - depends_on: [T027]
-- scope: Complete pinned Juan2 Tài Bạch Tử Vi/Phá Quân paragraphs and full section, independent positive/negative fixture packet and actual source/wording review; existing finite sourcePalaceBinding/registry/tests only if accepted with fresh JIT readiness
+- scope: backend/src/knowledge/sourcePalaceBinding.js, backend/test/sourcePalaceTaiTuViPha.test.mjs, backend/test/sourcePalaceInterpretation.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md, docs/knowledge/interpretation-claims.json, docs/knowledge/interpretation-decisions/juan2-tai-tuvi-pha.json, docs/knowledge/research/juan2-palace/, docs/knowledge/reviews/juan2-palace/review-tai-tuvi-pha-a.json, docs/knowledge/reviews/juan2-palace/review-tai-tuvi-pha-b.json, .gitattributes, README.md, docs/planning/AUTODEV_MASTER_PLAN_V2.md
 - acceptance_criteria:
   - Independently validate exact 破軍同先難後易 branch and complete reciprocal 紫微同先去後生 context, preceding/following adverse and brightness/branch modifiers without invented semantic equivalence
   - Verify reachable Sửu/Mùi with/without named-four-adverse positives, each missing partner and wrong-host negatives before actual distinct-model review
@@ -404,3 +404,21 @@ Version17 T027 actual retry after user continuation recovered model access: both
 Version18 adds evidence-backed successor T028 after actual complete-passage/real-chart research. T027 behavior/scope/fingerprint unchanged, code/review already underway; newtask is not source approval or a request to activate unsupported modifiers.
 
 T027 parentqualitygatePASS: exactsourceapprovedinternalclaimintegratedwithonly24productionlines,new19fixture/mutation/publictests,63backendfiles88.39/90.09PASS. Independentfullfeaturepass5/performance6/crosscut7clear, actualHTTP→frontendvalidators19fixturesnopublicleak. Internalcoverage4→5, no other formula/source/default/public changes. Initial source-modelerror records arehistoricalattemptsnotremainingblockers; exactretryreviewsapproved and archived. T026remainsnotapproved. NextT028independentfixturepackaging/review, engineeringbudget7/12used.
+
+Version19 T028 actualmodels independently8fixtures+fullsource/modifiers21manifest/5digests return MATCH+INTERPRETATION_SUPPORTED_WITH_LIMITS; parentcomparatorAI_ACCEPTED/MATCH. Factualintakeerratum: T026wasnotactive despite frozen existingClaimDistinction wording, bothactualreviewers independentlyaffirmed noapprovaldependency. Preservefrozeninputandseparateerratum. ExistingTaiadverseclaim maycoexistwithnewexactpairannotation; testsmustpreservebothwithoutblendedjudgment/publicrelease. MinimalnewfinitebinderentryreusesT027checks, no newlogic/framework.
+
+Version20 concreteT028testcontract refinement: oldTai-negative1980-01-15h14 is a verifiednewpairpositive, so blanket internalProse===null inoldtestisobsolete. Preserveoldcondition/releaseassertions and assertabsenceofTHAToldclaimwording, notabsenceofallotherapprovednotes; newtest independentlyassertsexactnew/coexistingwording. No skipping/weakeningoldpredicatefailurecoverage. StrictsourceBheaderavailableguardcaughtserializationgap; originalreviewersuppliedtruthfulavailableflag, actualreviewpinsrefreshedwithoutsource/wordingchange.
+
+### T029 — Quan Lộc Cơ–Cự tại Mão exact-source annotation
+- status: pending
+- depends_on: [T028]
+- scope: Complete pinned Juan2 Quan Lộc reciprocal/brightness/adverse context, independent valid-input chart witnesses and exact dual source/wording review; finite existing sourcePalaceBinding/registry/new and relevant older branch-regression tests only after accepted fresh JIT readiness
+- acceptance_criteria:
+  - Validate only the new 天機同在卯宮吉美 source branch; preserve existing Dậu claim/approval without duplication or unreviewed reuse
+  - Preserve full reciprocal, 入廟/陷宮 and terminal adverse context; no grade, engine-brightness equivalence, integrated career or real-life outcome inference
+  - Require independently verified API-valid positive/negative charts at Mão, Dậu wrong-branch and missing-pair/wrong-host conditions; never fabricate unreachable single-partner Mão witnesses
+  - If accepted, exact pair-and-Mão AST, immutable actual evidence and attributed internal wording only; existing formulas/source identities/public/default gates unchanged
+- verification:
+  - Actual distinct-model exact source/interpretation review, independent valid-input source/chart/AST replay, coherent-reshash/cache/public-output regressions, full relevant CI and independent full-feature review plus routed performance within remaining invocation budget
+
+Version21 T028 complete:64backendfiles88.41/90.09PASS, independentfullfeature8/performance9/crosscut10clear; internalcoverage5→6, exactnew/oldTaiannotationscoexistwithoutpublicprose. Remainingtechnicalbudget2/12. T029 is evidence-backed nextsmallfiniteclaim, MEDIUMfullfeatureloop coversallinterfaces plusroutedperformance (two passesfit); no LARGEpartition/separatecrosscut required. Initialindependentninthcandidate usedinvalidgender0; rejectthatwitness and correctvalid±1search+metadata/APIreachability BEFOREanypacketfreeze/dualapproval. Originaleightmaleinputsremainvalid. NoT029implementationfrominvalidresearch.

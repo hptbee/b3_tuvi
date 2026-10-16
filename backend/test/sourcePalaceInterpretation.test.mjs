@@ -59,7 +59,8 @@ for (const candidate of bundle.candidates) {
             assert.ok(statement.internalProse.includes('không xác nhận công thức an sao của nguồn'));
             assert.ok(!gate.reasons.includes('formula_runtime_unbound'));
         } else {
-            assert.equal(statement.internalProse, null);
+            assert.equal(statement.internalProse?.includes(claim.approvedWording) || false, false,
+                'an unrelated eligible source note must not render this ineligible claim');
             assert.ok(gate.reasons.includes('conditions_not_met'));
         }
         assert.equal(JSON.stringify(chart), before, 'condition projection must not mutate natal data');

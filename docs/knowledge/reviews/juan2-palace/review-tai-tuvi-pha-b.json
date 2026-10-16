@@ -1,0 +1,105 @@
+{
+  "model": "gpt-6-astra",
+  "modelIdentityBasis": "orchestrator_model_override",
+  "hostBuildId": null,
+  "independent": true,
+  "otherReviewerVerdictsRead": false,
+  "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "rawHtmlSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+  "expertVerified": false,
+  "bookVerified": false,
+  "publicRelease": false,
+  "reviews": [
+    {
+      "sourceId": "ziwei-quanshu-iztro-transcription",
+      "sourceProfile": "quanshu-iztro-2f00e2ab",
+      "claimId": "interp-quanshu-tai-tuvi-pha-quan-host",
+      "target": "tai_bach",
+      "editionId": "iztro-juan2-2f00e2ab0c80",
+      "schoolId": "vn-tam-hop-default",
+      "locator": "juan2/財帛宮/紫微+破軍",
+      "quotationPolicy": "source-sentence-v2",
+      "sourceDigest": "97c498dbad297a90345a1817af3c8ec19d8793ec67fb1802f88972123efc5df5",
+      "contextDigest": "18e05f3a45cf27553642da48035fa263e267e90d49c9a1211df734a6dc54ee13",
+      "conditionTreeDigest": "c1c9dd401e41bca4fb5dcceeacc06c38b0531b5e191765f700302790d0dab7b3",
+      "wordingDigest": "21fb32648cbd151dd37c62859254200885d7557a18b06ce4f6cd63bb2ff76fb5",
+      "fixturesDigest": "c87eb5805eea4396db96b019948b2acee01d621b8516b080f4d70714a7e005ac",
+      "conditionTree": {
+        "op": "same_palace",
+        "target": "tai_bach",
+        "stars": [
+          "Tử Vi",
+          "Phá Quân"
+        ]
+      },
+      "limitations": [
+        "primary_paragraph_baseline_only",
+        "direct_host_only",
+        "reciprocal_context_retained_not_harmonized",
+        "added_adverse_clauses_retained_but_not_evaluated",
+        "kong_kiep_aliases_not_implemented",
+        "no_invented_brightness_or_branch_requirement",
+        "no_age_or_date_prediction",
+        "not_a_whole_chart_judgment",
+        "not_a_verified_life_event",
+        "no_natal_formula_change",
+        "no_public_release"
+      ],
+      "conditions": [
+        "palace_tai_bach",
+        "tu_vi_in_host",
+        "pha_quan_in_host",
+        "direct_host_only"
+      ],
+      "model": "gpt-6-astra",
+      "available": true,
+      "verifiedDigests": {
+        "sourceDigest": "97c498dbad297a90345a1817af3c8ec19d8793ec67fb1802f88972123efc5df5",
+        "contextDigest": "18e05f3a45cf27553642da48035fa263e267e90d49c9a1211df734a6dc54ee13",
+        "conditionTreeDigest": "c1c9dd401e41bca4fb5dcceeacc06c38b0531b5e191765f700302790d0dab7b3",
+        "wordingDigest": "21fb32648cbd151dd37c62859254200885d7557a18b06ce4f6cd63bb2ff76fb5",
+        "fixturesDigest": "c87eb5805eea4396db96b019948b2acee01d621b8516b080f4d70714a7e005ac"
+      },
+      "quotation": "紫微豐足倉箱，加羊陀火鈴空劫不旺，破軍同先難後易，天相同財帛蓄積，\n天府同富足終身保守，加左右為財富之官，七殺同加吉財帛橫發。\n破軍在子午宮，多有金銀寶貝蓄積，辰戌旺宮亦財盛，陷宮破不祖聚，\n武曲同守巳亥宮，東來西去，紫微同先去後生，廉貞同勞碌生財，先難後遂，加空劫極貧。",
+      "exceptions": [],
+      "formulaComparison": "MATCH",
+      "verdict": "MATCH",
+      "interpretationVerdict": "INTERPRETATION_SUPPORTED_WITH_LIMITS",
+      "approvedWording": "Riêng mục Tử Vi tại Tài Bạch của bản chép này, nhánh Phá Quân đồng cung được ghi “先難後易”, nghĩa là trước khó, sau dễ. Đây là lời mô tả truyền thống cho đúng nhánh văn bản, không xác nhận tài sản hay kết quả cuộc đời; các điều kiện gia sát ở các đoạn liên quan chưa được đánh giá.",
+      "expertVerified": false,
+      "bookVerified": false,
+      "publicRelease": false,
+      "usage": "internal_research",
+      "releasePermission": "withheld",
+      "defaultFormulaChangeAuthorized": false,
+      "empiricalTruthVerified": false,
+      "rationale": {
+        "predicate": "The 財帛宮 heading supplies the host. Within the complete 紫微 entry, 破軍同 states co-presence with 紫微; same_palace of both named canonical stars at tai_bach is the exact branch-selection predicate. Missing-partner and pair-in-other-palace charts correctly fail. MATCH concerns this textual branch selection, not a complete fortune formula.",
+        "primaryTranslation": "先難後易 supports exactly trước khó, sau dễ. The approved Vietnamese sentence explicitly reports what this specific transcription writes in its Tử Vi branch. It does not convert this into a confirmed personal financial trajectory.",
+        "modifierClosure": "加羊陀火鈴空劫不旺 is an adjacent qualified clause and remains operative context, not an absence requirement silently attached to 破軍同. The succeeding cohost clauses enumerate other configurations; the text does not explicitly say 無羊陀火鈴空劫 before this branch. In the reciprocal entry, 加空劫極貧 may modify the preceding configuration or more broadly the entry. Neither scope has been resolved by this AST. Nevertheless the exact proposed statement remains true as a restricted report of the primary phrase and expressly says the related gia sát conditions have not been evaluated. Therefore this baseline annotation is supported only at that metatextual scope. An unconditional chart judgment or claim that adverse stars cannot change an outcome would fail this review.",
+        "reciprocal": "紫微同先去後生 is retained verbatim in the full quotation. It is not synonymous evidence for 先難後易, and I do not translate it into a financial loss/gain event or harmonize the two phrases.",
+        "brightness": "The broader 命宮 discussion puts 紫微 with 破軍 in 丑未入廟 and 破軍 with 紫微 in 丑未旺地. These support cohost reachability. They do not license importing natal-stem 財官格 judgments or a new brightness threshold into this 財帛 branch. The complete reciprocal 財帛 entry distinguishes 子午, 辰戌, 陷宮 and 武曲巳亥; those clauses cannot be indiscriminately applied to the 紫微 pair.",
+        "fixtureScope": "Eight fresh DOB reconstructions passed against the existing engine, direct canonical set oracle, full recorded metadata, pair-host locations and frozen-chart immutability. Four positives cover Sửu/Mùi with and without the four named adverse stars; four negatives cover each missing partner and the pair only in Mệnh or Quan Lộc. The Mùi/no-four example contains Hóa Kỵ, so absence of that four-star subset is not an auspiciousness condition. All inputs are male; this does not validate sex-sensitive rules, calendar accuracy or external natal formulas.",
+        "provenance": "Pinned modern HTML transcription only. Complete source entries, full 財帛 section and broader branch context were read; independent curl HTTP 200 retrieved identical raw bytes and inert HTML extraction recovered both complete entries and the full section. Node fetch failed DNS first; no network success is inferred from that failed attempt. MIT mirror notice does not authenticate a historical edition or establish original textual rights. No upstream code was executed.",
+        "intakeErratum": "Parent reports that existingClaimDistinction incorrectly calls the Tử Vi/Tả/Hữu annotation existing: it remains blocked and was not activated. This contextual capability description is unnecessary to the source interpretation, AST and exact proposed wording. My approval does not rely on that assertion or on any prior claim verdict. The frozen primary evidence and five digests remain unchanged."
+      },
+      "sourceAssessment": {
+        "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+        "rawHtmlSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+        "editionAuthenticated": false,
+        "independentPinnedRawFetch": {
+          "url": "https://raw.githubusercontent.com/SylarLong/iztro/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/ancientBook-2.html",
+          "status": 200,
+          "sha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a"
+        },
+        "manifestFilesVerified": 21,
+        "sourceExtractionProof": "/tmp/t028-b-source-proof.json",
+        "fixtureProof": "/tmp/t028-b-proof.json",
+        "script": "/tmp/t028-b-proof.mjs",
+        "log": "/tmp/t028-b-proof.log"
+      },
+      "runtimeRuleChangeApplied": false
+    }
+  ],
+  "available": true
+}

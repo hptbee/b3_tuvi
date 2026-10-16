@@ -2,16 +2,16 @@
 
 - b3_home: /workspace/b3_tuvi/.b3/runtime/b3_ai-engineering
 - product_root: /workspace/b3_tuvi
-- plan_id: Autonomous Product Completion version 18
-- plan_version: 18
-- branch: codex/tuvi-phuc-co-cu-interpretation
+- plan_id: Autonomous Product Completion version 21
+- plan_version: 21
+- branch: codex/tuvi-tai-tuvi-pha-interpretation
 - run_base_sha: 4c1761ea6448eeba0234c04405f9c9245eece320
 - preceding_invocation_base_sha: f0dec74973ef9d07129e19330356f8e6d2040227
 - previous_run_base_sha: 45615a48d0c75b90138cfc618320ffae6e9c34e0
-- current_task: T028
-- last_completed_task: T027
-- next_source_task: T028
-- current_task_base_sha: 300bcd6e89f7412cbf85682dd69c7f470e7b128d
+- current_task: T029
+- last_completed_task: T028
+- next_source_task: T029
+- current_task_base_sha: b33a2d55c4fb6a66124f31d58a69ddbec79fe5d4
 - run_status: running
 - preceding_invocation_stop_reason: review_pass_budget_exhausted_after_12_completed_passes
 - updated: 2026-10-15
@@ -491,3 +491,22 @@ T027 implementation now63backendfilesPASS88.39/90.09. Engineeringpass5fullfeatur
 - Source/edition unchanged; actualtwo-model fullsource/wording/replayapproval preservedraw. Registryapprovedinternal4→5 (PhúcĐứcCơ+Cự attributedbaselineonly), terminaladverseclauses explicitlyunevaluated. Allpublic/default/natal/classicalgatesretained.
 - Newfeature stagedwhitespacecheck tenexpecteddiagnostics exactlyfivefrozenoriginalHTMLsnapshots only; applicationdiffoutsideexact5PASS. EarlierT025exceptionseparate; no trimming/re-hashing sources or broadbypass. RootSTATUSnamesexceptions.
 - T026PARTIAL/UNRESOLVEDcompletepacket+actualreviews/proofs savedasblockedcandidate, noactivationorneweditionregistryrow. T028newcompleteTaiTửVi/PháQuânresearchand8initialfixturesunderindependentvalidation, noapprovalyet.
+
+T027feature b33a2d55c4fb6a66124f31d58a69ddbec79fe5d4 pushed/remotelyverified oncodex/tuvi-phuc-co-cu-interpretation; actualfocusedPRcreationbasecodex/tuvi-modern-decadal-placement againPOSTGraphQLForbidden. NoPRnumber/hostedCI/mergeinvented. MergeorderT025300bcd6→T027b33a2d5; existingPR50–55alreadymerged.
+
+### T028 readiness
+- depth: notes
+- readiness: ready
+- plan_version: 19
+- approach_at_sha: b33a2d55c4fb6a66124f31d58a69ddbec79fe5d4
+- approach: approach/T028.md
+- task_spec_fingerprint: depends_on=T027|scope=backend/src/knowledge/sourcePalaceBinding.js, backend/test/sourcePalaceTaiTuViPha.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md, docs/knowledge/interpretation-claims.json, docs/knowledge/interpretation-decisions/juan2-tai-tuvi-pha.json, docs/knowledge/research/juan2-palace/, docs/knowledge/reviews/juan2-palace/review-tai-tuvi-pha-a.json, docs/knowledge/reviews/juan2-palace/review-tai-tuvi-pha-b.json, .gitattributes, README.md, docs/planning/AUTODEV_MASTER_PLAN_V2.md|acceptance_criteria=Independently validate exact 破軍同先難後易 branch and complete reciprocal 紫微同先去後生 context, preceding/following adverse and brightness/branch modifiers without invented semantic equivalence; Verify reachable Sửu/Mùi with/without named-four-adverse positives, each missing partner and wrong-host negatives before actual distinct-model review; If accepted, enable only exact attributed internal primary-branch wording; no real financial outcome, age/calendar prediction, grade, absence-of-adverse or source/default/natal change; Preserve all existing claim approvals, complete source provenance and public interpretation/release gates
+- Bothactualsourceandexactwordingjudgments MATCH/INTERPRETATION_SUPPORTED_WITH_LIMITS, all8independentfixtures and5digests/AST/limits verified, parentcomparatorAI_ACCEPTED/MATCH. PreserveT026erratumwithoutchangingfrozenpacket. Proceedfiniteexistingbinderintegrationandtests, oldTaicomposition/publicgatesunchanged. Technicalbudget7/12used.
+
+T028 readinessrefreshedplan20: oneexistingregressiontest addedafterconcreteoldnegative/newpositivecollision, oldpredicate-specificnegativeassertionpreserved; no blanketallprose-nullassumption. OriginalBreviewertruthfullyaddedtop-levelavailable:true afterstrictgate deniedmissingheader; raw/canonicalreview/executionpins updated, semanticverdicts/5digests unchanged. CurrentT028fingerprint: depends_on=T027|scope=backend/src/knowledge/sourcePalaceBinding.js, backend/test/sourcePalaceTaiTuViPha.test.mjs, backend/test/sourcePalaceInterpretation.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md, docs/knowledge/interpretation-claims.json, docs/knowledge/interpretation-decisions/juan2-tai-tuvi-pha.json, docs/knowledge/research/juan2-palace/, docs/knowledge/reviews/juan2-palace/review-tai-tuvi-pha-a.json, docs/knowledge/reviews/juan2-palace/review-tai-tuvi-pha-b.json, .gitattributes, README.md, docs/planning/AUTODEV_MASTER_PLAN_V2.md|acceptance_criteria=Independently validate exact 破軍同先難後易 branch and complete reciprocal 紫微同先去後生 context, preceding/following adverse and brightness/branch modifiers without invented semantic equivalence; Verify reachable Sửu/Mùi with/without named-four-adverse positives, each missing partner and wrong-host negatives before actual distinct-model review; If accepted, enable only exact attributed internal primary-branch wording; no real financial outcome, age/calendar prediction, grade, absence-of-adverse or source/default/natal change; Preserve all existing claim approvals, complete source provenance and public interpretation/release gates
+
+## T028 final quality gate
+- Parent PASS: full-featurepass8, performance9 andcrosscut10clear; no confirmed blocker/fix. Fullstablebackend53unit+11integration=64filesPASS88.41/90.09. New8fixtures+exacttwoTaiannotationsonce/old-only/new-only/mutations/cache/readerfail andalloldsource-specificregressionsPASS. Actualcrosscut128HTTPrequests/16old-newwitnesses+realfrontendvalidators, noapprovedwording/private-name/proseleak orDBwrites.
+- Addedfinite18line descriptor, reusedT027immutablechecks; no newruntimehelper/synthesis/API/UI/natal/source/default change. Originalreviewerssuppliedserializationtruthfully; originalfrozeninputerratumseparate, T026notactivated. Approvedinternalcoverage5→6.
+- Performance3,012baseline/currentrequestsPASS, added9coldreads80KB/8initialhashesonce,0warmreads/hashes; noSLAinvention. Sixupstreamwhitespacediagnostics onlythreeexactsourceHTMLsnapshots, applicationdiffoutsideexact3PASS. EngineeringreportsandSTATUSrecordevidence.
+- Totaltechnicalbudget10/12used. T029narrowQuanMãobranchcouldfitremainingfull-feature+performance2passes; source/independentvalid-inputreviewprerequisitesstillpending. Initialnewnegativegender0rejectedasnotAPIreachable; checkerorderedrerunvalid±1+validateChartInput andfreshmetadata/API200. Do notlabelinvalidresearchasgoldenorapprovedfixture.
