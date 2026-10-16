@@ -29,6 +29,8 @@ const MINOR_PROFILE = 'iztro-pinned-age1-sex-triad';
 const MINOR_SOURCE = 'iztro-modern-software';
 const MINOR_PIN = '2f00e2ab0c80b1632e55bc362f2ae26e121245cb';
 const MINOR_COMPATIBILITY = 'branch_sex_age_projection_not_full_iztro_astrolabe';
+const MAJOR_PROFILE = 'iztro-pinned-menh-cuc-decadal';
+const MAJOR_COMPATIBILITY = 'server_natal_menh_cuc_branch_sex_age_projection_not_full_iztro_astrolabe';
 const EMPTY_MINOR_DRAFT = { profile: '', age: '' };
 
 function minorSignature(option) {
@@ -56,6 +58,42 @@ function validMinorResponse(body, option) {
     || !YEAR_BRANCHES.includes(cap.branch) || cap.palaceId !== String(YEAR_BRANCHES.indexOf(cap.branch) + 1)
     || !Object.hasOwn(PALACE_LABELS, cap.functionId)
     || cap.functionLabel !== PALACE_LABELS[cap.functionId].toLocaleUpperCase('vi')) return false;
+  return body.statements.filter(statement => !statement.thanOverlay
+    && statement.palaceId === cap.palaceId && statement.functionId === cap.functionId).length === 1;
+}
+
+function validMajorResponse(body, option) {
+  const cap = body.time?.capabilities?.dai_han_modern;
+  if (cap === undefined) return option === null;
+  if (!cap || typeof cap !== 'object' || cap.id !== 'dai_han_modern'
+    || cap.publicFortune !== false || cap.interpretation !== null || cap.interpretationStatus !== 'blocked'
+    || cap.sourceId !== MINOR_SOURCE || cap.sourcePin !== MINOR_PIN
+    || cap.ageInput !== 'caller_supplied' || cap.ageDerivation !== 'not_applied'
+    || cap.calendarCompatibility !== MAJOR_COMPATIBILITY) return false;
+  const emptyPlacement = cap.branch === null && cap.palaceId === null
+    && cap.functionId === null && cap.functionLabel === null
+    && cap.decadeIndex === null && cap.decadeStartAge === null && cap.decadeEndAge === null;
+  const closed = emptyPlacement && cap.branchPlacement === 'not_applied';
+  if (!option) return cap.status === 'not_applied'
+    && cap.reason === 'missing_explicit_profile_and_nominal_age'
+    && cap.profile === null && cap.nominalAge === null && cap.palaceMapping === 'not_applied' && closed;
+  if (cap.profile !== option.profile || cap.nominalAge !== option.nominalAge) return false;
+  if (cap.status === 'blocked') return closed && (
+    (cap.reason === 'modern_profile_not_approved' && cap.palaceMapping === 'not_applied')
+    || (cap.reason === 'invalid_chart' && cap.palaceMapping === 'invalid_chart'));
+  if (cap.status === 'not_applied') return closed && cap.palaceMapping === 'not_applied'
+    && ((cap.reason === 'before_first_period' && option.nominalAge < 6)
+      || (cap.reason === 'after_last_period' && option.nominalAge > 121));
+  if (cap.status !== 'branch_placed' || cap.reason !== null
+    || cap.branchPlacement !== 'supported' || cap.palaceMapping !== 'mapped'
+    || !YEAR_BRANCHES.includes(cap.branch) || cap.palaceId !== String(YEAR_BRANCHES.indexOf(cap.branch) + 1)
+    || !Object.hasOwn(PALACE_LABELS, cap.functionId)
+    || cap.functionLabel !== PALACE_LABELS[cap.functionId].toLocaleUpperCase('vi')
+    || !Number.isInteger(cap.decadeIndex) || cap.decadeIndex < 0 || cap.decadeIndex > 11
+    || !Number.isInteger(cap.decadeStartAge) || !Number.isInteger(cap.decadeEndAge)
+    || cap.decadeEndAge !== cap.decadeStartAge + 9
+    || cap.decadeStartAge - 10 * cap.decadeIndex < 2 || cap.decadeStartAge - 10 * cap.decadeIndex > 6
+    || option.nominalAge < cap.decadeStartAge || option.nominalAge > cap.decadeEndAge) return false;
   return body.statements.filter(statement => !statement.thanOverlay
     && statement.palaceId === cap.palaceId && statement.functionId === cap.functionId).length === 1;
 }
@@ -248,6 +286,9 @@ export default function StructuredAnalysis({ userInfo }) {
   const [minorDraftState, setMinorDraftState] = useState(null);
   const [minorCommittedState, setMinorCommittedState] = useState(null);
   const [minorError, setMinorError] = useState('');
+  const [majorDraftState, setMajorDraftState] = useState(null);
+  const [majorCommittedState, setMajorCommittedState] = useState(null);
+  const [majorError, setMajorError] = useState('');
   const [minorBirthKey, setMinorBirthKey] = useState(key);
   // Supplied age belongs to one birth input, including when navigating back.
   if (minorBirthKey !== key) {
@@ -255,13 +296,21 @@ export default function StructuredAnalysis({ userInfo }) {
     setMinorDraftState(null);
     setMinorCommittedState(null);
     setMinorError('');
+    setMajorDraftState(null);
+    setMajorCommittedState(null);
+    setMajorError('');
   }
   const minorDraft = minorDraftState?.key === key ? minorDraftState : EMPTY_MINOR_DRAFT;
   const minorOption = minorCommittedState?.key === key ? minorCommittedState.option : null;
   const minorKey = minorSignature(minorOption);
   const minorDirty = minorDraft.profile !== (minorOption?.profile || '')
     || minorDraft.age !== (minorOption ? String(minorOption.nominalAge) : '');
-  const requestKey = `${key}:${viewYearBranch}:${minorKey}:${attempt}`;
+  const majorDraft = majorDraftState?.key === key ? majorDraftState : EMPTY_MINOR_DRAFT;
+  const majorOption = majorCommittedState?.key === key ? majorCommittedState.option : null;
+  const majorKey = minorSignature(majorOption);
+  const majorDirty = majorDraft.profile !== (majorOption?.profile || '')
+    || majorDraft.age !== (majorOption ? String(majorOption.nominalAge) : '');
+  const requestKey = `${key}:${viewYearBranch}:${minorKey}:${majorKey}:${attempt}`;
   const [state, setState] = useState({ key: '', status: 'idle', body: null, error: '' });
   const [selectedId, setSelectedId] = useState(null);
   const sequence = useRef(0);
@@ -277,7 +326,7 @@ export default function StructuredAnalysis({ userInfo }) {
   }, []);
 
   useEffect(() => {
-    const nextRequestKey = `${key}:${viewYearBranch}:${minorKey}:${attempt}`;
+    const nextRequestKey = `${key}:${viewYearBranch}:${minorKey}:${majorKey}:${attempt}`;
     activeKey.current = nextRequestKey;
     const day = userInfo?.day;
     const month = userInfo?.month;
@@ -292,7 +341,8 @@ export default function StructuredAnalysis({ userInfo }) {
     fetch(`${API_BASE}/api/interpretations/analyze`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ day, month, year, hour, gender, viewYearBranch, ...(minorOption ? { minorPeriod: minorOption } : {}) }),
+      body: JSON.stringify({ day, month, year, hour, gender, viewYearBranch, ...(minorOption ? { minorPeriod: minorOption } : {}),
+        ...(majorOption ? { majorPeriod: majorOption } : {}) }),
       signal: controller.signal
     })
       .then(async (response) => {
@@ -307,7 +357,7 @@ export default function StructuredAnalysis({ userInfo }) {
           setState({ key: nextRequestKey, status: 'error', body: null, error: serverErrorMessage(body?.error) });
           return;
         }
-        if (!validAnalysisBody(body) || !validMinorResponse(body, minorOption)) {
+        if (!validAnalysisBody(body) || !validMinorResponse(body, minorOption) || !validMajorResponse(body, majorOption)) {
           setState({ key: nextRequestKey, status: 'error', body: null, error: INVALID_ANALYSIS_MESSAGE });
           return;
         }
@@ -324,7 +374,7 @@ export default function StructuredAnalysis({ userInfo }) {
         setState({ key: nextRequestKey, status: 'error', body: null, error: 'Không kết nối được máy chủ phân tích' });
       });
     return () => controller.abort();
-  }, [key, userInfo, viewYearBranch, minorKey, minorOption, attempt]);
+  }, [key, userInfo, viewYearBranch, minorKey, minorOption, majorKey, majorOption, attempt]);
 
   useEffect(() => {
     if (focusAfterRetry.current !== requestKey) {
@@ -342,11 +392,11 @@ export default function StructuredAnalysis({ userInfo }) {
   const selected = statements.find((item) => item.statementId === selectedId) || null;
   const blocked = Object.entries(current.body?.time?.capabilities || {}).filter(([, value]) => (
     value && (value.status === 'blocked' || value.status === 'not_applied')
-  )).filter(([id]) => !ANNUAL_STARS.includes(id) && id !== 'tieu_han_modern');
+  )).filter(([id]) => !ANNUAL_STARS.includes(id) && id !== 'tieu_han_modern' && id !== 'dai_han_modern');
 
   const retry = () => {
     const nextAttempt = attempt + 1;
-    focusAfterRetry.current = `${key}:${viewYearBranch}:${minorKey}:${nextAttempt}`;
+    focusAfterRetry.current = `${key}:${viewYearBranch}:${minorKey}:${majorKey}:${nextAttempt}`;
     setAttempt(nextAttempt);
   };
 
@@ -371,6 +421,27 @@ export default function StructuredAnalysis({ userInfo }) {
     setMinorDraftState({ key, profile: MINOR_PROFILE, age: String(age) });
     setMinorCommittedState({ key, option: { profile: MINOR_PROFILE, nominalAge: age } });
   };
+  const changeMajorDraft = (patch) => {
+    setMajorError('');
+    setMajorDraftState({ ...majorDraft, ...patch, key });
+    if (patch.profile === '') {
+      setMajorDraftState({ key, profile: '', age: '' });
+      setMajorCommittedState(null);
+    }
+  };
+  const applyMajor = (event) => {
+    event.preventDefault();
+    const age = Number(majorDraft.age);
+    if (majorDraft.profile !== MAJOR_PROFILE || majorDraft.age.trim() === ''
+      || !Number.isInteger(age) || age < 1 || age > 125) {
+      setMajorError('Chọn hồ sơ và nhập tuổi mụ là số nguyên từ 1 đến 125.');
+      return;
+    }
+    setMajorError('');
+    setMajorDraftState({ key, profile: MAJOR_PROFILE, age: String(age) });
+    setMajorCommittedState({ key, option: { profile: MAJOR_PROFILE, nominalAge: age } });
+  };
+  const majorPlacement = current.body?.time?.capabilities?.dai_han_modern;
   const minorPlacement = current.body?.time?.capabilities?.tieu_han_modern;
 
   return (
@@ -446,6 +517,38 @@ export default function StructuredAnalysis({ userInfo }) {
                     : <p>Chưa có vị trí được xác nhận cho tuổi mụ đã áp dụng.</p>}
           </div>
           <p>Nguồn phần mềm: <a href={`https://github.com/SylarLong/iztro/blob/${MINOR_PIN}/src/astro/palace.ts#L185-L233`}>iztro — mã nguồn Tiểu hạn tại phiên bản đã đối chiếu</a>.</p>
+        </section>
+        <section className="modern-minor-panel" aria-labelledby="modern-major-heading">
+          <h3 id="modern-major-heading">Vị trí Đại hạn — hồ sơ phần mềm iztro</h3>
+          <p id="modern-major-help">Bạn nhập tuổi mụ; ứng dụng không tự tính tuổi từ ngày hoặc năm xem. Chỉ đối chiếu vị trí trên lá số, chưa có luận vận hạn.</p>
+          <p>Đối chiếu trên Mệnh, Cục và chi năm sinh của lá số này; không xác nhận toàn bộ lịch hoặc lá số iztro. Hồ sơ này độc lập với nhãn Đại hạn có sẵn và nguồn Toàn Thư cổ điển.</p>
+          <form className="modern-minor-controls" onSubmit={applyMajor} noValidate>
+            <label>Hồ sơ Đại hạn
+              <select aria-label="Hồ sơ Đại hạn" value={majorDraft.profile} onChange={event => changeMajorDraft({ profile: event.target.value })}>
+                <option value="">Chưa chọn</option>
+                <option value={MAJOR_PROFILE}>iztro — Mệnh, Cục, tuổi mụ nhập trực tiếp</option>
+              </select>
+            </label>
+            <label>Tuổi mụ cho Đại hạn
+              <input aria-label="Tuổi mụ cho Đại hạn" type="number" inputMode="numeric" min="1" max="125" step="1" value={majorDraft.age}
+                aria-describedby={`modern-major-help${majorError ? ' modern-major-error' : ''}`}
+                aria-invalid={Boolean(majorError)} onChange={event => changeMajorDraft({ age: event.target.value })} />
+            </label>
+            <button type="submit">Áp dụng tuổi mụ Đại hạn</button>
+          </form>
+          {majorError && <p id="modern-major-error" role="alert">{majorError}</p>}
+          <div aria-live="polite">
+            {majorDirty ? <p>Chưa áp dụng thay đổi Đại hạn. Chọn hồ sơ, nhập tuổi mụ rồi áp dụng.</p>
+              : !majorOption ? <p>Chọn hồ sơ và nhập tuổi mụ để đối chiếu vị trí Đại hạn.</p>
+                : current.status === 'ready' && majorPlacement?.status === 'branch_placed'
+                  ? <p>Đại hạn tuổi mụ {majorOption.nominalAge}: chi {majorPlacement.branch} — cung {PALACE_LABELS[majorPlacement.functionId]}; khoảng tuổi mụ {majorPlacement.decadeStartAge}–{majorPlacement.decadeEndAge}.</p>
+                  : current.status === 'ready' && majorPlacement?.reason === 'before_first_period'
+                    ? <p>Tuổi mụ {majorOption.nominalAge} chưa đến khoảng Đại hạn đầu tiên theo hồ sơ này; không gán cung tuổi nhỏ.</p>
+                    : current.status === 'ready' && majorPlacement?.reason === 'after_last_period'
+                      ? <p>Tuổi mụ {majorOption.nominalAge} vượt khoảng Đại hạn cuối cùng theo hồ sơ này; không lặp lại chu kỳ.</p>
+                      : <p>Chưa có vị trí Đại hạn được xác nhận cho tuổi mụ đã áp dụng.</p>}
+          </div>
+          <p>Nguồn phần mềm: <a href={`https://github.com/SylarLong/iztro/blob/${MINOR_PIN}/src/astro/palace.ts#L174-L214`}>iztro — mã nguồn Đại hạn tại phiên bản đã đối chiếu</a>.</p>
         </section>
         {current.status === 'ready' && statements.length === 0 && <p>Phản hồi không có cung.</p>}
         {current.status === 'ready' && statements.length > 0 && (

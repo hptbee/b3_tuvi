@@ -159,3 +159,15 @@ T021 iteration counts1→0; fresh FULL10file review2 no new confirmed findings; 
 - Post-stage root verification R1601LOWACCEPTED immutable-source formatting: fullgitdiff--check exposes45originaltrailing-space lines in modernreview-context.txt that earlierunstagedchecks didnotinclude. Keep exactreviewedbytes/hash; do nottrim/re-hashorclaimfullwhitespacecheckPASS. Explicitapplicationdiffcheckexcludingonlythatartifact exits0, contextdigest084984ef…matchesacceptedrecords. No CI/styleassertiondisabled; source/codebehaviorunchanged, no extra engineeringreviewpass or functionalfix required. Root corrects verificationreceipts in finalcheckpoint.
 
 - Actualfinalremoteverification: all3newfeatureSHAs67ff179/0f0c1f8/e02baf4 matchpushedbranches, old#50–52headsandmainf0unchanged. Finalcheckpoint-onlyhandoff retainsqualifiedwhitespaceexception, durablePRdrafts andT025queue; no newcode or13threview.
+
+## New T025 invocation at main4c1761e
+- Resumeace285c validatedasancestormain;PR50–55alreadymerged. Preservealloldfindingsreceipts/IDs, newengineeringIDsR1701+. Budgetnew0/12, domain/sourceanalysisnotcodeapproval. Source+fixturesindependentbeforeduals, no productimplementationyet.
+
+### T025 engineering review dispatch
+- Pass1/12: independent CORE source/binding/projection review, IDsR1701+, current base4c1761e plus all newfiles.
+- Pass2/12: routed performance review of new synchronous fixed-artifact gate/cache/request path, IDsR1801+. No new SLA invented; historical accepted cold cost remains scoped baseline.
+- Both in progress, no parent PASS declared.
+
+T025 unit outcomes: COREpass1 clear (newtests+1759replay+180,000independentpureinputs); performancepass2 clear (coldmajor35.386ms,warmmedian0.874ms,100warmrequests0fsreads; diagnosticnotSLA); API/UIpass3 clear (101UItests+HTTP+163combinedrealresponses). No R1701/R1801/R1901 blocking IDs allocated. Crosscutpass4 inprogress. Full currentbackendCI62files88.36/90.06PASS;frontend20689.07/89.71 lint/buildPASS;fullChromium55PASS withsystembrowsercloudconfig;docs194PASS. Fullstagedwhitespacecheck147expecteddiagnostics exactly5immutableupstream/contextfiles, applicationdiffexcludingthoseexact5PASS; STATUS.md recordsexception, bytesunchanged.
+
+T025 final crosscutpass4 clear after196actualcombinedrequests. ParentT025qualitygatePASS: no blocking findings, required currentCI/E2E/docs/scopedbytecheckevidencecomplete;4/12technicalreviewsused. NextT027actualsource-reviewtoolsbothfailedusage-limit; notanalgorithmrejection, notbudgetexhaustion, nofakeverdict. T026bothactualsourcejudgmentsPARTIAL/UNRESOLVED cannotactivateexactAST/wording. Preservepreciseblockersonce and resumeT027whenmodelresourcesrecover.

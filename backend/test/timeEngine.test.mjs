@@ -10,6 +10,10 @@ const chart = normalizeChart({ tuviInfo, lunarInfo: { canIndex: 0, chiIndex: 1 }
 const overlay = timeOverlay(chart);
 assert.strictEqual(overlay.ok, true);
 assert.strictEqual(overlay.interpretation, null);
+assert.strictEqual(overlay.capabilities.dai_han_modern.status, 'not_applied');
+assert.strictEqual(overlay.capabilities.dai_han_modern.reason, 'missing_explicit_profile_and_nominal_age');
+assert.strictEqual(overlay.capabilities.dai_han_modern.branch, null);
+assert.strictEqual(overlay.capabilities.dai_han_modern.publicFortune, false);
 assert.strictEqual(overlay.capabilities.tieu_han.status, 'blocked');
 assert.strictEqual(overlay.capabilities.tieu_han_modern.status, 'not_applied');
 assert.strictEqual(overlay.capabilities.tieu_han_modern.reason, 'missing_explicit_profile_and_nominal_age');

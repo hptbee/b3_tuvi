@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "fixtures": 28,
+  "independentSourceLoopAndBoundaryComparisons": 1759,
+  "dataSha256": "d9a2a37c2c4235c05003994d818427903ce52db07946d133c7e8df9f37c7a1ca",
+  "ageConventionCases": 3
+}

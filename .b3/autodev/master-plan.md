@@ -1,6 +1,6 @@
 # Autonomous Product Completion
 
-- version: 13
+- version: 16
 - source: User mission 2026-10-14; fresh run from upstream main 45615a48d0c75b90138cfc618320ffae6e9c34e0
 
 ## Original requirements
@@ -339,9 +339,9 @@ Version12 detailedT024 readiness: actual source models gpt-6.1-sol/gpt-6-astra i
 T024 completion: source/backend andUIunits clear; routedperformanceLOW coldvalidationcostaccepted; finalcumulativecrosscut285actualHTTP/validator/outagechecks clear. All59backendfiles169frontendtests29ChromiumE2E183doclinksPASS; parentqualitygatePASS. OptionalnamedmodernTiểuhạn explicitage1–120 placementcomplete; no calendarage/classicaldefault/natal/prediction/publicproseapproval. Total12/12reviewpasses exhausted; stopthisinvocation withresumablequeue, notanunreviewednextimplementation.
 
 ### T025 — Review a separate explicit-age modern Đại hạn projection
-- status: pending
+- status: completed
 - depends_on: [T024]
-- scope: Research complete already pinned modern getHoroscope decadal path, existing strict natal metadata and profile/API/UI reuse; exact implementation files only after JIT readiness and actual source approval
+- scope: docs/knowledge/research/fortune/modern-decadal/, docs/tuvi/MODERN_MAJOR_PROFILE.md, .gitattributes, README.md, docs/planning/AUTODEV_MASTER_PLAN_V2.md, backend/src/knowledge/modernMajorBinding.js, backend/src/time/modernMajor.js, backend/src/time/timeEngine.js, backend/src/interpretation/analyze.js, backend/test/modernMajorBinding.test.mjs, backend/test/modernMajor.test.mjs, backend/test/modernMajorApi.test.mjs, backend/test/timeEngine.test.mjs, backend/test/sourceHygiene.test.mjs, backend/scripts/runTests.mjs, docs/engineering/TEST_FIXTURES.md, frontend/src/components/StructuredAnalysis.jsx, frontend/src/components/StructuredAnalysis.test.jsx, frontend/src/App.css if layout requires, frontend/e2e/modern-major-placement.spec.js
 - acceptance_criteria:
   - Independently validate complete Mệnh anchor, source Cục start-age/ten-year spans, yin-yang definition/sex direction, age range and wrap before any new placement
   - Explicitly model from/config/calendar dependencies and proposed product natal-Mệnh/Cục/year-branch projection; never certify whole upstream natal/calendar equivalence by assumption
@@ -352,3 +352,37 @@ T024 completion: source/backend andUIunits clear; routedperformanceLOW coldvalid
   - Fresh source/fixture/model approval; current-time pipeline/mapper reuse, boundary/API/UI/outage tests, full CI and independent review budget in next invocation
 
 Version13 resumable next queue after12-review cap: (1)T025 newly actionable modern Đại hạn source projection; (2)T019 source-specific 正曜/主星 taxonomy and complete 吉星/拱照; (3)T022 precise Thiên Phủ 空/耗/brightness/geometry; (4)T020 original classical profile/age conflict. T025 is pending research/readiness, not an approved formula or a request to bypass original source decisions. Existing #50–52 and all completed task IDs preserved.
+
+T025 newinvocation reconciliation: ace285cfeaturesalreadymergedvia#50–55; latestmain4c1761e. Newreviewbudget0/12. Latestuserauthorizeseligibleauto-mergeaftergates; oldno-auto-mergeexclusionissupersededonlyforthisauthorization, no deployment/publicrelease/defaultformulaapprovalimplied. T025researchphase, readinessnotyetready, fullseparatevalidationbeforeimplementation.
+
+Version14 T025 inspected scope: complete independent source analysis and 28 actual natal witnesses cover all five Cục, sexes, birth-year polarities, all twelve Mệnh branches and 1,759 independently replayed comparisons. Candidate explicitly accepts caller integer nominal age1–125, projects only twelve source decades Cục..Cục+119, and returns no placement before/after; no calendar age or childhood fallback. Existing modern-minor source identity is shared without changing its record, but algorithm/decision/reviews are entirely distinct. Actual dual-model approval remains pending; product implementation is not yet authorized by source readiness. One focused complete API/UI capability, not a new master plan.
+
+### T026 — Juan3 Tài Bạch Tử Vi/Tả Phù/Hữu Bật source-scoped annotation
+- status: incomplete
+- depends_on: [T025]
+- scope: Complete pinned Juan3 Tử Vi subsection and distinct source/interpretation packet, existing interpretation registry/binding/eligibility, narrow real-fixture regression tests only after exact independent dual approval
+- acceptance_criteria:
+  - Validate full verse including 或作三方為次吉 and 財帛 branch; no assumption that direct host subset is complete without independent source approval
+  - Independently verify ten real positive/negative fixtures, discriminating each missing star and wrong host, before actual distinct-model source and exact-wording review
+  - If accepted, activate only attributed internal 財賦之官 imagery for exact reviewed predicate, without grade, profession, wealth, whole-chart or public outcome claims
+  - Preserve generic VCD taxonomy blocker, all existing claims/decisions, natal formulas and public gates
+- verification:
+  - Actual source/interpretation review and fail-closed digest/AST/wording/fixture binding, ten real fixtures, API public-prose regression, full relevant CI and independent engineering review
+
+T019 follow-up inspection found a concrete textual conflict: the Juan2 list names19 star entities including祿存 but calls them18正曜. Keep generic VCD incomplete; do not drop a star to force the count. This is recorded once, not a research-only PR. T026 is a distinct newly actionable named-star/host candidate from Juan3 with independent fixture replay; it does not close T019 and remains unapproved until actual dual review.
+
+Version15 adds only evidence-backed successor T026 after independent fullsection/fixture investigation, preserving all unfinished T019/T020/T022 requirements and existing task IDs. T025 implementation scope/acceptance unchanged.
+
+### T027 — Juan2 Phúc Đức Cơ–Cự baseline source annotation
+- status: incomplete
+- depends_on: [T025]
+- scope: Existing pinned Juan2 complete reciprocal paragraphs and full Phúc Đức section, independent nineteen-chart fixture packet, actual source/interpretation dual review; runtime binding/registry/tests only after acceptance and fresh JIT readiness
+- acceptance_criteria:
+  - Independently adjudicate whether exact same-host Thiên Cơ/Cự Môn baseline wording is supported while terminal 加羊陀火鈴空劫 branches remain explicitly unevaluated
+  - Preserve full reciprocal clauses, all source/context/AST/wording/fixture hashes and nineteen pre-review real charts including Mão/Dậu with/without named adverse-star witnesses
+  - Activate only actual distinct-model accepted exact internal attribution; no invented absent-adverse, brightness, branch, personality, health or real-life outcome condition
+  - Keep all original formulas/decisions/public-release gates and other approved claims unchanged
+- verification:
+  - Actual two-model source plus exact interpretation review, strict stored evidence/AST/wording replay, nineteen real positive/negative charts, API public-prose checks and independent engineering review/fix loop
+
+Version16 completion: T025 complete source-gated API/UI passes all four independent technical reviews, full current backend/frontend CI and all55 Chromium tests. T026 remains unresolved by both actual source models (財帛-clause attachment); do not repeat review without new evidence. T027 is structurally ready for source review: independent analyst/replayer added the nineteenth Mão-with-adverse witness before packet freeze. Actual gpt-6.1-sol andgpt-6-astra attempts both failed with usage-limit errors: REVIEW_NOT_EXECUTED, no verdict/approval invented. New engineering review budget4/12 used, not exhausted; source-model resources are unavailable. Next executable action when models recover is T027 actual source/interpretation review, then fresh JIT and implementation only if accepted.

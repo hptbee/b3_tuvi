@@ -1,3 +1,4 @@
+import { modernMajorCapability } from './modernMajor.js';
 import { modernMinorCapability } from './modernMinor.js';
 import { mapAnnualStarToPalace, nguyetDucCapability, thienDucCapability } from './thienDuc.js';
 
@@ -26,6 +27,7 @@ export function timeOverlay(chart, options = {}) {
                 fortuneFormula: 'not_applied',
                 reason: 'natal_label_is_not_a_reviewed_fortune_formula'
             },
+            dai_han_modern: modernMajorCapability(chart, options),
             tieu_han: blocked('tieu_han'),
             tieu_han_modern: modernMinorCapability(chart, options),
             luu_nien: blocked('luu_nien'),

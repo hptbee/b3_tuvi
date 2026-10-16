@@ -1,0 +1,976 @@
+{
+  "status": "PROPOSED_NOT_APPROVED",
+  "subjectType": "fortune_placement_profile",
+  "subjectId": "iztro-pinned-menh-cuc-decadal",
+  "profileId": "iztro-pinned-menh-cuc-decadal",
+  "sourceId": "iztro-modern-software",
+  "editionId": "iztro-modern-2f00e2ab0c80",
+  "sourceProfile": "iztro-pinned-menh-cuc-decadal",
+  "schoolId": "vn-tam-hop-default",
+  "schoolCompatibilityOnly": true,
+  "sourceClass": "pinned_modern_software_and_documentation_not_classical_edition",
+  "sourceRepository": "https://github.com/SylarLong/iztro",
+  "sourcePin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "locator": "src/astro/palace.ts#getHoroscope",
+  "sourceLines": [
+    174,
+    234
+  ],
+  "sourceSpanFile": "source-span.txt",
+  "sourceSpan": "/**\n * 起大限\n *\n * - 大限由命宫起，阳男阴女顺行；\n * - 阴男阳女逆行，每十年过一宫限。\n *\n * @param solarDateStr 公历日期\n * @param timeIndex 出生时索引\n * @param gender 性别\n * @param fixLeap 是否修正闰月，若修正，则闰月前15天按上月算，后15天按下月算\n * @returns 从寅宫开始的大限年龄段\n */\nexport const getHoroscope = (param: AstrolabeParam): { decadals: Decadal[]; ages: number[][] } => {\n  const { solarDate, timeIndex, gender, from } = param;\n  const decadals: Decadal[] = [];\n  const genderKey = kot<GenderKey>(gender!);\n  const { yearly } = getHeavenlyStemAndEarthlyBranchBySolarDate(solarDate, timeIndex, {\n    // 起大限应该与配置同步\n    year: getConfig().yearDivide,\n  });\n  const heavenlyStem = kot<HeavenlyStemKey>(yearly[0], 'Heavenly');\n  const earthlyBranch = kot<EarthlyBranchKey>(yearly[1], 'Earthly');\n  const { soulIndex, heavenlyStemOfSoul, earthlyBranchOfSoul } = getSoulAndBody(param);\n  const fiveElementsClass = kot<FiveElementsClassKey>(\n    getFiveElementsClass(from?.heavenlyStem ?? heavenlyStemOfSoul, from?.earthlyBranch ?? earthlyBranchOfSoul),\n  );\n\n  // 用五虎遁获取大限起始天干\n  const startHeavenlyStem = TIGER_RULE[heavenlyStem];\n\n  for (let i = 0; i < 12; i++) {\n    const idx =\n      GENDER[genderKey] === earthlyBranches[earthlyBranch].yinYang ? fixIndex(soulIndex + i) : fixIndex(soulIndex - i);\n    const start = FiveElementsClass[fiveElementsClass] + 10 * i;\n    const heavenlyStemIndex = fixIndex(HEAVENLY_STEMS.indexOf(startHeavenlyStem) + idx, 10);\n    const earthlyBranchIndex = fixIndex(EARTHLY_BRANCHES.indexOf('yinEarthly') + idx);\n\n    decadals[idx] = {\n      range: [start, start + 9],\n      heavenlyStem: t(HEAVENLY_STEMS[heavenlyStemIndex]),\n      earthlyBranch: t(EARTHLY_BRANCHES[earthlyBranchIndex]),\n    };\n  }\n\n  const ageIdx = getAgeIndex(yearly[1]);\n  const ages = [];\n\n  for (let i = 0; i < 12; i++) {\n    const age = [];\n\n    for (let j = 0; j < 10; j++) {\n      age.push(12 * j + i + 1);\n    }\n\n    const idx = kot<GenderKey>(gender!) === 'male' ? fixIndex(ageIdx + i) : fixIndex(ageIdx - i);\n\n    ages[idx] = age;\n  }\n\n  return { decadals, ages };\n};\n",
+  "sourceDigest": "d5342272cab276bc6d17d1be3e837873a67410d4f961cd22bfc1975a843cc817",
+  "contextFile": "review-context.txt",
+  "contextDigest": "ec445067020c392a2187fe2261e9c8ec53eb1cb679795d50acaed7febcca2321",
+  "contextManifest": [
+    {
+      "path": "derived/bounded-source-context.txt",
+      "bytes": 29174,
+      "sha256": "79d04f5ffd791af967d94212a939863f81c378aff8ae58e5fc4f7cf67cec9ff8"
+    },
+    {
+      "path": "derived/config-n-plugin-text.txt",
+      "bytes": 6650,
+      "sha256": "f5f0a04109fc3881f256043e2e92fd1935b72232479ab26472bd644c8bc9d01a"
+    },
+    {
+      "path": "derived/horoscope-text.txt",
+      "bytes": 6998,
+      "sha256": "6dc2638ae6b59373ca8fa197bfc851073530b093727f1edad9a8f9d6dc4a9497"
+    },
+    {
+      "path": "raw/src/i18n/locales/en-US/earthlyBranch.ts",
+      "bytes": 280,
+      "sha256": "dcf7ffb67233fede74de6290e2c341dce80bcbd81b053c48e9667f42ad0bd0f2"
+    },
+    {
+      "path": "raw/src/i18n/locales/en-US/fiveElementsClass.ts",
+      "bytes": 150,
+      "sha256": "05a4919dab702883c0cb85b869c11af7ee47a9afd5a500ccee0e0f34f78e09be"
+    },
+    {
+      "path": "raw/src/i18n/locales/en-US/gender.ts",
+      "bytes": 65,
+      "sha256": "8c2b91082c2d88bd27cc4678965003c67b8636799ed83bd2f94369de0e367a0d"
+    },
+    {
+      "path": "raw/src/i18n/locales/en-US/index.ts",
+      "bytes": 503,
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007"
+    },
+    {
+      "path": "raw/src/i18n/locales/vi-VN/earthlyBranch.ts",
+      "bytes": 300,
+      "sha256": "933f9475bd0b580904515dc3198f059f8924310de10dd8538d2eb02e26311f0c"
+    },
+    {
+      "path": "raw/src/i18n/locales/vi-VN/fiveElementsClass.ts",
+      "bytes": 187,
+      "sha256": "b5b7923adb3df59f2b24cc579347c5ffa8eb86082d0e6b05b3aa3a961ea9d858"
+    },
+    {
+      "path": "raw/src/i18n/locales/vi-VN/gender.ts",
+      "bytes": 62,
+      "sha256": "79ab1b39e62fda211cd5b21e916446ee58d6afa10b3a639dd7799987ef7ef3d4"
+    },
+    {
+      "path": "raw/src/i18n/locales/vi-VN/index.ts",
+      "bytes": 503,
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007"
+    },
+    {
+      "path": "raw/src/i18n/locales/zh-CN/earthlyBranch.ts",
+      "bytes": 280,
+      "sha256": "8672f42c8460b8ae0079e643e1fe62db133fcd19879dd2ad08b5ab3b606a2ab8"
+    },
+    {
+      "path": "raw/src/i18n/locales/zh-CN/fiveElementsClass.ts",
+      "bytes": 152,
+      "sha256": "4378134b7172d28231a77980a137b6c1448f8f4b1227a6317306fba85c0f4366"
+    },
+    {
+      "path": "raw/src/i18n/locales/zh-CN/gender.ts",
+      "bytes": 61,
+      "sha256": "a19607ebf4055ed0f0daa3a78b21288185a67fdf8190e750251be72de19e5d8d"
+    },
+    {
+      "path": "raw/src/i18n/locales/zh-CN/index.ts",
+      "bytes": 503,
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007"
+    },
+    {
+      "path": "raw/src/i18n/starAliases.ts",
+      "bytes": 744,
+      "sha256": "5db704982d754e9e9487c80dfc171b51584cb89014b68171f7c6b87171a49b14"
+    }
+  ],
+  "payloadHashManifest": [
+    {
+      "upstreamPath": "LICENSE",
+      "localPath": "raw/LICENSE",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/LICENSE",
+      "path": "raw/LICENSE",
+      "bytes": 1073,
+      "sha256": "e6c7b6e313cbda3135b41bccc66c98be132cb8319d0d465903d17e669e748b36"
+    },
+    {
+      "upstreamPath": "docs/zh_TW/learn/horoscope.html",
+      "localPath": "raw/docs/zh_TW/learn/horoscope.html",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/horoscope.html",
+      "path": "raw/docs/zh_TW/learn/horoscope.html",
+      "bytes": 47350,
+      "sha256": "e1bd9053258d022e2dc2295e23a6847a92eb004655090252a91494bcff48a0f4"
+    },
+    {
+      "upstreamPath": "docs/zh_TW/posts/config-n-plugin.html",
+      "localPath": "raw/docs/zh_TW/posts/config-n-plugin.html",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/posts/config-n-plugin.html",
+      "path": "raw/docs/zh_TW/posts/config-n-plugin.html",
+      "bytes": 79518,
+      "sha256": "145949e340fa8b0fe9cdd26fa892343ca7a5690491de7b27490d94c9f9ac9f19"
+    },
+    {
+      "upstreamPath": "src/astro/FunctionalAstrolabe.ts",
+      "localPath": "raw/src/astro/FunctionalAstrolabe.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/astro/FunctionalAstrolabe.ts",
+      "path": "raw/src/astro/FunctionalAstrolabe.ts",
+      "bytes": 19616,
+      "sha256": "584fd8d2d3ac76b3b8d7990ec6d26cac42eb5f1fcac9175326f29497d60d2d9c"
+    },
+    {
+      "upstreamPath": "src/astro/astro.ts",
+      "localPath": "raw/src/astro/astro.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/astro/astro.ts",
+      "path": "raw/src/astro/astro.ts",
+      "bytes": 19029,
+      "sha256": "84e1fd5121bc6c5e7fb17ef3d8aadd0f8473ff8f2704c17c1af96e77388d49f8"
+    },
+    {
+      "upstreamPath": "src/astro/config.ts",
+      "localPath": "raw/src/astro/config.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/astro/config.ts",
+      "path": "raw/src/astro/config.ts",
+      "bytes": 3825,
+      "sha256": "e74d2bf23630f8faadfae9fd2d29c592ceb7a18d7396c0aba5d74959ea5d134e"
+    },
+    {
+      "upstreamPath": "src/astro/palace.ts",
+      "localPath": "raw/src/astro/palace.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/astro/palace.ts",
+      "path": "raw/src/astro/palace.ts",
+      "bytes": 7799,
+      "sha256": "a9c6d8444d5edcd241068f5bd83fed3aa38a57b206cebb221f86b8d4057b5273"
+    },
+    {
+      "upstreamPath": "src/data/constants.ts",
+      "localPath": "raw/src/data/constants.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/data/constants.ts",
+      "path": "raw/src/data/constants.ts",
+      "bytes": 3871,
+      "sha256": "e2411f73c7ea438b5186f2a3ef29fa54587ab78e25620b5a52b409ce9244043a"
+    },
+    {
+      "upstreamPath": "src/data/earthlyBranches.ts",
+      "localPath": "raw/src/data/earthlyBranches.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/data/earthlyBranches.ts",
+      "path": "raw/src/data/earthlyBranches.ts",
+      "bytes": 3599,
+      "sha256": "3dd6e4b260a18a2a8c0e4aec2a12e766f29e52d7b4c01ecbf332f6066a3f1b34"
+    },
+    {
+      "upstreamPath": "src/data/heavenlyStems.ts",
+      "localPath": "raw/src/data/heavenlyStems.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/data/heavenlyStems.ts",
+      "path": "raw/src/data/heavenlyStems.ts",
+      "bytes": 2351,
+      "sha256": "f50a96b4fda42f834b2ff7aea36533a38bd5bcee94b74d5ecc1deb22ee07279c"
+    },
+    {
+      "upstreamPath": "src/data/index.ts",
+      "localPath": "raw/src/data/index.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/data/index.ts",
+      "path": "raw/src/data/index.ts",
+      "bytes": 122,
+      "sha256": "e45e0875d60c2aede27dad389f11d3cdda7e31d1694e5f53ff32cd025288f2a2"
+    },
+    {
+      "upstreamPath": "src/data/types/astro.ts",
+      "localPath": "raw/src/data/types/astro.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/data/types/astro.ts",
+      "path": "raw/src/data/types/astro.ts",
+      "bytes": 7671,
+      "sha256": "b24c25fa535e6b89fbe9b0e93deebe3851dd943cdd3baa290747b863506e3b85"
+    },
+    {
+      "upstreamPath": "src/i18n/index.ts",
+      "localPath": "raw/src/i18n/index.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/index.ts",
+      "path": "raw/src/i18n/index.ts",
+      "bytes": 2943,
+      "sha256": "06da411d37e4e5f3dc7d922f3dbce0f9fcb2fe1125619873e6a651eabc63d558"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/en-US/earthlyBranch.ts",
+      "localPath": "raw/src/i18n/locales/en-US/earthlyBranch.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/en-US/earthlyBranch.ts",
+      "path": "raw/src/i18n/locales/en-US/earthlyBranch.ts",
+      "bytes": 280,
+      "sha256": "dcf7ffb67233fede74de6290e2c341dce80bcbd81b053c48e9667f42ad0bd0f2"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/en-US/fiveElementsClass.ts",
+      "localPath": "raw/src/i18n/locales/en-US/fiveElementsClass.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/en-US/fiveElementsClass.ts",
+      "path": "raw/src/i18n/locales/en-US/fiveElementsClass.ts",
+      "bytes": 150,
+      "sha256": "05a4919dab702883c0cb85b869c11af7ee47a9afd5a500ccee0e0f34f78e09be"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/en-US/gender.ts",
+      "localPath": "raw/src/i18n/locales/en-US/gender.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/en-US/gender.ts",
+      "path": "raw/src/i18n/locales/en-US/gender.ts",
+      "bytes": 65,
+      "sha256": "8c2b91082c2d88bd27cc4678965003c67b8636799ed83bd2f94369de0e367a0d"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/en-US/index.ts",
+      "localPath": "raw/src/i18n/locales/en-US/index.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/en-US/index.ts",
+      "path": "raw/src/i18n/locales/en-US/index.ts",
+      "bytes": 503,
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/ja-JP/earthlyBranch.ts",
+      "localPath": "raw/src/i18n/locales/ja-JP/earthlyBranch.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/ja-JP/earthlyBranch.ts",
+      "path": "raw/src/i18n/locales/ja-JP/earthlyBranch.ts",
+      "bytes": 280,
+      "sha256": "8672f42c8460b8ae0079e643e1fe62db133fcd19879dd2ad08b5ab3b606a2ab8"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/ja-JP/fiveElementsClass.ts",
+      "localPath": "raw/src/i18n/locales/ja-JP/fiveElementsClass.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/ja-JP/fiveElementsClass.ts",
+      "path": "raw/src/i18n/locales/ja-JP/fiveElementsClass.ts",
+      "bytes": 167,
+      "sha256": "01a3f688b35cb994845e6051e8bf97ab687fbe30ca594e44ea85f70583b15c85"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/ja-JP/gender.ts",
+      "localPath": "raw/src/i18n/locales/ja-JP/gender.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/ja-JP/gender.ts",
+      "path": "raw/src/i18n/locales/ja-JP/gender.ts",
+      "bytes": 61,
+      "sha256": "a19607ebf4055ed0f0daa3a78b21288185a67fdf8190e750251be72de19e5d8d"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/ja-JP/index.ts",
+      "localPath": "raw/src/i18n/locales/ja-JP/index.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/ja-JP/index.ts",
+      "path": "raw/src/i18n/locales/ja-JP/index.ts",
+      "bytes": 503,
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/ko-KR/earthlyBranch.ts",
+      "localPath": "raw/src/i18n/locales/ko-KR/earthlyBranch.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/ko-KR/earthlyBranch.ts",
+      "path": "raw/src/i18n/locales/ko-KR/earthlyBranch.ts",
+      "bytes": 280,
+      "sha256": "f2a7dc855e5cdf71c74dba286e3463f2fd063fa31b39ce3b14cced0da4784fc7"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/ko-KR/fiveElementsClass.ts",
+      "localPath": "raw/src/i18n/locales/ko-KR/fiveElementsClass.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/ko-KR/fiveElementsClass.ts",
+      "path": "raw/src/i18n/locales/ko-KR/fiveElementsClass.ts",
+      "bytes": 152,
+      "sha256": "f43e780a5c5ea4a8ebf1f4900364fe7c9931bdc85d6ec10ea593bd26d215a5ad"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/ko-KR/gender.ts",
+      "localPath": "raw/src/i18n/locales/ko-KR/gender.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/ko-KR/gender.ts",
+      "path": "raw/src/i18n/locales/ko-KR/gender.ts",
+      "bytes": 67,
+      "sha256": "aa0f5ffe65da671b0c1c663e2bf4895801b02783e6e8c1e3f105d0046713b0e5"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/ko-KR/index.ts",
+      "localPath": "raw/src/i18n/locales/ko-KR/index.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/ko-KR/index.ts",
+      "path": "raw/src/i18n/locales/ko-KR/index.ts",
+      "bytes": 503,
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/vi-VN/earthlyBranch.ts",
+      "localPath": "raw/src/i18n/locales/vi-VN/earthlyBranch.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/vi-VN/earthlyBranch.ts",
+      "path": "raw/src/i18n/locales/vi-VN/earthlyBranch.ts",
+      "bytes": 300,
+      "sha256": "933f9475bd0b580904515dc3198f059f8924310de10dd8538d2eb02e26311f0c"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/vi-VN/fiveElementsClass.ts",
+      "localPath": "raw/src/i18n/locales/vi-VN/fiveElementsClass.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/vi-VN/fiveElementsClass.ts",
+      "path": "raw/src/i18n/locales/vi-VN/fiveElementsClass.ts",
+      "bytes": 187,
+      "sha256": "b5b7923adb3df59f2b24cc579347c5ffa8eb86082d0e6b05b3aa3a961ea9d858"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/vi-VN/gender.ts",
+      "localPath": "raw/src/i18n/locales/vi-VN/gender.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/vi-VN/gender.ts",
+      "path": "raw/src/i18n/locales/vi-VN/gender.ts",
+      "bytes": 62,
+      "sha256": "79ab1b39e62fda211cd5b21e916446ee58d6afa10b3a639dd7799987ef7ef3d4"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/vi-VN/index.ts",
+      "localPath": "raw/src/i18n/locales/vi-VN/index.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/vi-VN/index.ts",
+      "path": "raw/src/i18n/locales/vi-VN/index.ts",
+      "bytes": 503,
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/zh-CN/earthlyBranch.ts",
+      "localPath": "raw/src/i18n/locales/zh-CN/earthlyBranch.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/zh-CN/earthlyBranch.ts",
+      "path": "raw/src/i18n/locales/zh-CN/earthlyBranch.ts",
+      "bytes": 280,
+      "sha256": "8672f42c8460b8ae0079e643e1fe62db133fcd19879dd2ad08b5ab3b606a2ab8"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/zh-CN/fiveElementsClass.ts",
+      "localPath": "raw/src/i18n/locales/zh-CN/fiveElementsClass.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/zh-CN/fiveElementsClass.ts",
+      "path": "raw/src/i18n/locales/zh-CN/fiveElementsClass.ts",
+      "bytes": 152,
+      "sha256": "4378134b7172d28231a77980a137b6c1448f8f4b1227a6317306fba85c0f4366"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/zh-CN/gender.ts",
+      "localPath": "raw/src/i18n/locales/zh-CN/gender.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/zh-CN/gender.ts",
+      "path": "raw/src/i18n/locales/zh-CN/gender.ts",
+      "bytes": 61,
+      "sha256": "a19607ebf4055ed0f0daa3a78b21288185a67fdf8190e750251be72de19e5d8d"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/zh-CN/index.ts",
+      "localPath": "raw/src/i18n/locales/zh-CN/index.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/zh-CN/index.ts",
+      "path": "raw/src/i18n/locales/zh-CN/index.ts",
+      "bytes": 503,
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/zh-TW/earthlyBranch.ts",
+      "localPath": "raw/src/i18n/locales/zh-TW/earthlyBranch.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/zh-TW/earthlyBranch.ts",
+      "path": "raw/src/i18n/locales/zh-TW/earthlyBranch.ts",
+      "bytes": 280,
+      "sha256": "8672f42c8460b8ae0079e643e1fe62db133fcd19879dd2ad08b5ab3b606a2ab8"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/zh-TW/fiveElementsClass.ts",
+      "localPath": "raw/src/i18n/locales/zh-TW/fiveElementsClass.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/zh-TW/fiveElementsClass.ts",
+      "path": "raw/src/i18n/locales/zh-TW/fiveElementsClass.ts",
+      "bytes": 152,
+      "sha256": "4378134b7172d28231a77980a137b6c1448f8f4b1227a6317306fba85c0f4366"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/zh-TW/gender.ts",
+      "localPath": "raw/src/i18n/locales/zh-TW/gender.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/zh-TW/gender.ts",
+      "path": "raw/src/i18n/locales/zh-TW/gender.ts",
+      "bytes": 61,
+      "sha256": "a19607ebf4055ed0f0daa3a78b21288185a67fdf8190e750251be72de19e5d8d"
+    },
+    {
+      "upstreamPath": "src/i18n/locales/zh-TW/index.ts",
+      "localPath": "raw/src/i18n/locales/zh-TW/index.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/locales/zh-TW/index.ts",
+      "path": "raw/src/i18n/locales/zh-TW/index.ts",
+      "bytes": 503,
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007"
+    },
+    {
+      "upstreamPath": "src/i18n/starAliases.ts",
+      "localPath": "raw/src/i18n/starAliases.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/i18n/starAliases.ts",
+      "path": "raw/src/i18n/starAliases.ts",
+      "bytes": 744,
+      "sha256": "5db704982d754e9e9487c80dfc171b51584cb89014b68171f7c6b87171a49b14"
+    },
+    {
+      "upstreamPath": "src/utils/index.ts",
+      "localPath": "raw/src/utils/index.ts",
+      "pinnedUrl": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/src/utils/index.ts",
+      "path": "raw/src/utils/index.ts",
+      "bytes": 7614,
+      "sha256": "9f3699115c9c149dc261f9a293e6c7ad40ac4f744884dba21b367b96d9bbfe16"
+    }
+  ],
+  "license": {
+    "spdx": "MIT",
+    "file": "LICENSE.txt",
+    "sha256": "e6c7b6e313cbda3135b41bccc66c98be132cb8319d0d465903d17e669e748b36",
+    "upstreamNoticePreserved": true
+  },
+  "algorithmSpec": {
+    "profileId": "iztro-pinned-menh-cuc-decadal",
+    "inputFields": [
+      "menhBranchId",
+      "cucNumber",
+      "birthYearBranch",
+      "gender",
+      "nominalAge"
+    ],
+    "branchOrder": [
+      "Tí",
+      "Sửu",
+      "Dần",
+      "Mão",
+      "Thìn",
+      "Tị",
+      "Ngọ",
+      "Mùi",
+      "Thân",
+      "Dậu",
+      "Tuất",
+      "Hợi"
+    ],
+    "branchIds": "one_based_1_to_12",
+    "firstPalace": "natal_menh",
+    "startingAge": "cuc_number",
+    "cucStartAges": [
+      {
+        "element": "water",
+        "number": 2
+      },
+      {
+        "element": "wood",
+        "number": 3
+      },
+      {
+        "element": "metal",
+        "number": 4
+      },
+      {
+        "element": "earth",
+        "number": 5
+      },
+      {
+        "element": "fire",
+        "number": 6
+      }
+    ],
+    "yearYangBranches": [
+      "Tí",
+      "Dần",
+      "Thìn",
+      "Ngọ",
+      "Thân",
+      "Tuất"
+    ],
+    "yearYinBranches": [
+      "Sửu",
+      "Mão",
+      "Tị",
+      "Mùi",
+      "Dậu",
+      "Hợi"
+    ],
+    "genderMapping": [
+      {
+        "gender": 1,
+        "sourceKey": "male",
+        "yinYang": "阳"
+      },
+      {
+        "gender": -1,
+        "sourceKey": "female",
+        "yinYang": "阴"
+      }
+    ],
+    "directionRule": "gender_yin_yang_equals_birth_year_branch_yin_yang_forward_else_reverse",
+    "forwardDirection": 1,
+    "reverseDirection": -1,
+    "periodCount": 12,
+    "yearsPerPeriod": 10,
+    "rangeEndOffset": 9,
+    "periodIndex": "zero_based_0_to_11",
+    "palacesPerPeriod": 1,
+    "wrap": 12,
+    "nominalAgeRange": {
+      "min": 1,
+      "max": 125,
+      "integer": true
+    },
+    "validPerChartAgeRange": "cucNumber_through_cucNumber_plus_119_inclusive",
+    "periodFormula": "floor((nominalAge - cucNumber) / 10)",
+    "outputFormula": "branchId = ((menhBranchId - 1 + direction * periodIndex) % 12 + 12) % 12 + 1",
+    "periodRangeFormula": "start = cucNumber + 10 * periodIndex; end = start + 9",
+    "sourcePalaceToProductBranchId": "((sourcePalaceIndex + 2) % 12) + 1",
+    "beforeFirstPeriod": "not_applied_no_placement",
+    "afterLastPeriod": "not_applied_no_placement",
+    "childhoodApplied": false,
+    "thirteenthPeriodApplied": false,
+    "calendarAgeDerivation": false,
+    "yearYinYangAffectsDirection": true,
+    "extendsBeyondSourceRange": false
+  },
+  "algorithmDigest": "329e8f639aae56a8515d4cdcafce42eee2a2b826f14d3cd7e18a89ba29f50b66",
+  "compatibilitySpec": {
+    "scope": "server_natal_menh_cuc_branch_sex_age_projection_not_full_iztro_astrolabe",
+    "receivingSchoolId": "vn-tam-hop-default",
+    "upstreamSchoolId": null,
+    "menh": "trusted_server_unique_menh_palace_and_consistent_menhPalaceId",
+    "cuc": "trusted_server_cuc_number_2_to_6_with_name_number_agreement",
+    "birthYearBranch": "trusted_server_natal_lunar_chiName_and_chiIndex_consistent",
+    "birthYearStem": "trusted_server_natal_lunar_canName_and_canIndex_consistent_and_sexagenary_parity_matches_branch",
+    "gender": "validated_product_gender_1_male_minus1_female",
+    "nominalAge": "caller_supplied_integer_1_to_125_not_date_derived",
+    "requestContract": {
+      "field": "majorPeriod",
+      "exactKeys": [
+        "profile",
+        "nominalAge"
+      ],
+      "profile": "iztro-pinned-menh-cuc-decadal",
+      "nominalAge": {
+        "integer": true,
+        "min": 1,
+        "max": 125
+      }
+    },
+    "sourceBranchAndGenderMapping": [
+      {
+        "key": "ziEarthly",
+        "chinese": "子",
+        "upstreamVi": "Tý",
+        "productVi": "Tí",
+        "productBranchId": 1,
+        "sourceBranchEnumIndex": 0,
+        "sourcePalaceIndex": 10
+      },
+      {
+        "key": "chouEarthly",
+        "chinese": "丑",
+        "upstreamVi": "Sửu",
+        "productVi": "Sửu",
+        "productBranchId": 2,
+        "sourceBranchEnumIndex": 1,
+        "sourcePalaceIndex": 11
+      },
+      {
+        "key": "yinEarthly",
+        "chinese": "寅",
+        "upstreamVi": "Dần",
+        "productVi": "Dần",
+        "productBranchId": 3,
+        "sourceBranchEnumIndex": 2,
+        "sourcePalaceIndex": 0
+      },
+      {
+        "key": "maoEarthly",
+        "chinese": "卯",
+        "upstreamVi": "Mão",
+        "productVi": "Mão",
+        "productBranchId": 4,
+        "sourceBranchEnumIndex": 3,
+        "sourcePalaceIndex": 1
+      },
+      {
+        "key": "chenEarthly",
+        "chinese": "辰",
+        "upstreamVi": "Thìn",
+        "productVi": "Thìn",
+        "productBranchId": 5,
+        "sourceBranchEnumIndex": 4,
+        "sourcePalaceIndex": 2
+      },
+      {
+        "key": "siEarthly",
+        "chinese": "巳",
+        "upstreamVi": "Tỵ",
+        "productVi": "Tị",
+        "productBranchId": 6,
+        "sourceBranchEnumIndex": 5,
+        "sourcePalaceIndex": 3
+      },
+      {
+        "key": "wuEarthly",
+        "chinese": "午",
+        "upstreamVi": "Ngọ",
+        "productVi": "Ngọ",
+        "productBranchId": 7,
+        "sourceBranchEnumIndex": 6,
+        "sourcePalaceIndex": 4
+      },
+      {
+        "key": "weiEarthly",
+        "chinese": "未",
+        "upstreamVi": "Mùi",
+        "productVi": "Mùi",
+        "productBranchId": 8,
+        "sourceBranchEnumIndex": 7,
+        "sourcePalaceIndex": 5
+      },
+      {
+        "key": "shenEarthly",
+        "chinese": "申",
+        "upstreamVi": "Thân",
+        "productVi": "Thân",
+        "productBranchId": 9,
+        "sourceBranchEnumIndex": 8,
+        "sourcePalaceIndex": 6
+      },
+      {
+        "key": "youEarthly",
+        "chinese": "酉",
+        "upstreamVi": "Dậu",
+        "productVi": "Dậu",
+        "productBranchId": 10,
+        "sourceBranchEnumIndex": 9,
+        "sourcePalaceIndex": 7
+      },
+      {
+        "key": "xuEarthly",
+        "chinese": "戌",
+        "upstreamVi": "Tuất",
+        "productVi": "Tuất",
+        "productBranchId": 11,
+        "sourceBranchEnumIndex": 10,
+        "sourcePalaceIndex": 8
+      },
+      {
+        "key": "haiEarthly",
+        "chinese": "亥",
+        "upstreamVi": "Hợi",
+        "productVi": "Hợi",
+        "productBranchId": 12,
+        "sourceBranchEnumIndex": 11,
+        "sourcePalaceIndex": 9
+      }
+    ],
+    "target": "resolve_reviewed_branch_on_unchanged_validated_12_palace_natal_chart",
+    "defaultActivated": false,
+    "calendarAgeDerivation": false,
+    "knownNatalDifference": "product_leap_month_changes_at_day15_while_upstream_fixLunarMonthIndex_requires_day_gt15_and_excludes_timeIndex12",
+    "existingNatalLabelComparison": "regression_comparison_only_not_an_approval_or_formula_oracle",
+    "classicalComparison": "Quanshu_committed_adjacent_parent_sibling_anchor_differs_and_remains_insufficient",
+    "exclusions": [
+      "upstream_calendar_equivalence",
+      "whole_upstream_natal_equivalence",
+      "upstream_yearDivide_selection",
+      "upstream_ageDivide_selection",
+      "upstream_dayDivide_selection",
+      "upstream_horoscopeDivide_selection",
+      "upstream_from_rearrangement",
+      "date_to_nominal_age",
+      "birthday_boundary",
+      "leap_month_age_semantics",
+      "classical_quanshu_approval",
+      "default_profile_change",
+      "existing_natal_label_or_formula_change",
+      "childhood_period",
+      "thirteenth_decadal_period",
+      "decadal_heavenly_stems",
+      "decadal_stars",
+      "fortune_tu_hoa",
+      "interpretation",
+      "public_predictions"
+    ]
+  },
+  "compatibilityDigest": "98a1a85d93566442c1c09520f336ec7066cdc70262c62e3c0b6ab68697ecbc0a",
+  "conditions": [
+    {
+      "id": "explicit_named_modern_profile",
+      "anchor": "profileId/API majorPeriod exact opt-in",
+      "classification": "adapter_scope"
+    },
+    {
+      "id": "menh_first_palace",
+      "anchor": "src/astro/palace.ts:176-177,202-204",
+      "classification": "source_algorithm"
+    },
+    {
+      "id": "cuc_nominal_start_age_2_to_6",
+      "anchor": "src/data/constants.ts:72-90; src/astro/palace.ts:205",
+      "classification": "source_algorithm"
+    },
+    {
+      "id": "sex_birth_year_branch_yin_yang_direction",
+      "anchor": "src/astro/palace.ts:203-204; src/data/constants.ts:GENDER; src/data/earthlyBranches.ts",
+      "classification": "source_algorithm"
+    },
+    {
+      "id": "inclusive_ten_year_periods",
+      "anchor": "src/astro/palace.ts:205,212; FunctionalAstrolabe.ts:96-104",
+      "classification": "source_algorithm"
+    },
+    {
+      "id": "twelve_periods_only_modulo_twelve_palaces",
+      "anchor": "src/astro/palace.ts:201; src/utils/index.ts:34-53",
+      "classification": "source_algorithm"
+    },
+    {
+      "id": "explicit_nominal_age_one_to_125",
+      "anchor": "source range union Cục2..6 plus119; strict adapter1..125",
+      "classification": "strict_adapter_boundary"
+    },
+    {
+      "id": "before_first_after_last_no_placement",
+      "anchor": "decadal ranges only; separate source childhood fallback explicitly excluded",
+      "classification": "source_subset_and_exclusion"
+    },
+    {
+      "id": "server_natal_menh_cuc_branch_sex_projection",
+      "anchor": "compatibilitySpec; product-context",
+      "classification": "compatibility_projection"
+    },
+    {
+      "id": "preserve_classical_conflict_and_natal_labels",
+      "anchor": "source-analysis.md and committed classical decision",
+      "classification": "exclusion"
+    },
+    {
+      "id": "no_calendar_age_derivation",
+      "anchor": "FunctionalAstrolabe.ts:33-73; config.ts",
+      "classification": "exclusion"
+    },
+    {
+      "id": "not_classical_or_public_prediction_approval",
+      "anchor": "source class and explicit exclusions",
+      "classification": "exclusion"
+    }
+  ],
+  "conditionIds": [
+    "explicit_named_modern_profile",
+    "menh_first_palace",
+    "cuc_nominal_start_age_2_to_6",
+    "sex_birth_year_branch_yin_yang_direction",
+    "inclusive_ten_year_periods",
+    "twelve_periods_only_modulo_twelve_palaces",
+    "explicit_nominal_age_one_to_125",
+    "before_first_after_last_no_placement",
+    "server_natal_menh_cuc_branch_sex_projection",
+    "preserve_classical_conflict_and_natal_labels",
+    "no_calendar_age_derivation",
+    "not_classical_or_public_prediction_approval"
+  ],
+  "requiredAnchors": [
+    "大限由命宫起，阳男阴女顺行",
+    "for (let i = 0; i < 12; i++)",
+    "GENDER[genderKey] === earthlyBranches[earthlyBranch].yinYang",
+    "const start = FiveElementsClass[fiveElementsClass] + 10 * i;",
+    "range: [start, start + 9]"
+  ],
+  "fixturesFile": "fixtures.json",
+  "fixturesDigest": "d9a2a37c2c4235c05003994d818427903ce52db07946d133c7e8df9f37c7a1ca",
+  "fixturesJsonDigest": "365662dbcfa9b68ca51bf7ad8db084436d783fac4add9cd20f8d213cfc8d0f49",
+  "fixtureCoverage": {
+    "required": [
+      "c:2:1:yang",
+      "c:2:1:yin",
+      "c:2:-1:yang",
+      "c:2:-1:yin",
+      "c:3:1:yang",
+      "c:3:1:yin",
+      "c:3:-1:yang",
+      "c:3:-1:yin",
+      "c:4:1:yang",
+      "c:4:1:yin",
+      "c:4:-1:yang",
+      "c:4:-1:yin",
+      "c:5:1:yang",
+      "c:5:1:yin",
+      "c:5:-1:yang",
+      "c:5:-1:yin",
+      "c:6:1:yang",
+      "c:6:1:yin",
+      "c:6:-1:yang",
+      "c:6:-1:yin",
+      "b:Tí:1",
+      "b:Tí:-1",
+      "b:Sửu:1",
+      "b:Sửu:-1",
+      "b:Dần:1",
+      "b:Dần:-1",
+      "b:Mão:1",
+      "b:Mão:-1",
+      "b:Thìn:1",
+      "b:Thìn:-1",
+      "b:Tị:1",
+      "b:Tị:-1",
+      "b:Ngọ:1",
+      "b:Ngọ:-1",
+      "b:Mùi:1",
+      "b:Mùi:-1",
+      "b:Thân:1",
+      "b:Thân:-1",
+      "b:Dậu:1",
+      "b:Dậu:-1",
+      "b:Tuất:1",
+      "b:Tuất:-1",
+      "b:Hợi:1",
+      "b:Hợi:-1",
+      "m:1",
+      "m:2",
+      "m:3",
+      "m:4",
+      "m:5",
+      "m:6",
+      "m:7",
+      "m:8",
+      "m:9",
+      "m:10",
+      "m:11",
+      "m:12"
+    ],
+    "covered": [
+      "c:2:1:yang",
+      "c:2:1:yin",
+      "c:2:-1:yang",
+      "c:2:-1:yin",
+      "c:3:1:yang",
+      "c:3:1:yin",
+      "c:3:-1:yang",
+      "c:3:-1:yin",
+      "c:4:1:yang",
+      "c:4:1:yin",
+      "c:4:-1:yang",
+      "c:4:-1:yin",
+      "c:5:1:yang",
+      "c:5:1:yin",
+      "c:5:-1:yang",
+      "c:5:-1:yin",
+      "c:6:1:yang",
+      "c:6:1:yin",
+      "c:6:-1:yang",
+      "c:6:-1:yin",
+      "b:Tí:1",
+      "b:Tí:-1",
+      "b:Sửu:1",
+      "b:Sửu:-1",
+      "b:Dần:1",
+      "b:Dần:-1",
+      "b:Mão:1",
+      "b:Mão:-1",
+      "b:Thìn:1",
+      "b:Thìn:-1",
+      "b:Tị:1",
+      "b:Tị:-1",
+      "b:Ngọ:1",
+      "b:Ngọ:-1",
+      "b:Mùi:1",
+      "b:Mùi:-1",
+      "b:Thân:1",
+      "b:Thân:-1",
+      "b:Dậu:1",
+      "b:Dậu:-1",
+      "b:Tuất:1",
+      "b:Tuất:-1",
+      "b:Hợi:1",
+      "b:Hợi:-1",
+      "m:1",
+      "m:2",
+      "m:3",
+      "m:4",
+      "m:5",
+      "m:6",
+      "m:7",
+      "m:8",
+      "m:9",
+      "m:10",
+      "m:11",
+      "m:12"
+    ],
+    "fixtures": 28,
+    "allCuc": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "allBirthBranches": [
+      "Tí",
+      "Sửu",
+      "Dần",
+      "Mão",
+      "Thìn",
+      "Tị",
+      "Ngọ",
+      "Mùi",
+      "Thân",
+      "Dậu",
+      "Tuất",
+      "Hợi"
+    ],
+    "sexYearParityCombinations": 4,
+    "allMenhBranches": 12,
+    "result": {
+      "matchedNatalDecadeLabels": 336,
+      "ageQueries": 1423,
+      "decadeCountPerChart": 12,
+      "lastInclusiveAgeByCuc": {
+        "2": 121,
+        "3": 122,
+        "4": 123,
+        "5": 124,
+        "6": 125
+      },
+      "noWrapToThirteenthPeriod": true
+    },
+    "independentReplay": {
+      "status": "PASS",
+      "fixtures": 28,
+      "independentSourceLoopAndBoundaryComparisons": 1759,
+      "dataSha256": "d9a2a37c2c4235c05003994d818427903ce52db07946d133c7e8df9f37c7a1ca",
+      "ageConventionCases": 3
+    }
+  },
+  "fixtureClassification": "engineering_mathematical_comparative_not_independently_sourced_historical_goldens",
+  "invalidCases": "strict_adapter_negative_requirements_not_observed_upstream_behavior",
+  "ageConventionWitnessesFile": "age-convention-witnesses.json",
+  "ageConventionWitnessesDigest": "d01ce69297a52cab2cf02ae42b6b49088fe9ea7335e58f820518d2595b45bd67",
+  "sourceCodeExecution": false,
+  "sourceAuthenticatedHistoricalEdition": false,
+  "bookVerified": false,
+  "expertVerified": false,
+  "publicRelease": false,
+  "reviewQuestion": "Does this pinned modern software fully specify the Mệnh anchor, Cục nominal-age start, exact sex/birth-year-branch yin-yang direction, inclusive ten-year periods, twelve-period finite extent, modulo-twelve branch progression and no extension? Is the explicit caller-age 1–125 adapter with per-chart before/after non-placement and server natal Mệnh/Cục/year-branch/sex projection supportable within declared exclusions? Independently reproduce real positive/negative/boundary fixtures and age-convention witnesses; compare classical source and natal labels without promoting either. Return unresolved/reject for unsupported semantics, no forced agreement.",
+  "requestedReviewBindings": [
+    "subjectType",
+    "subjectId",
+    "profileId",
+    "sourceId",
+    "sourceProfile",
+    "editionId",
+    "schoolId",
+    "locator",
+    "sourcePin",
+    "sourceDigest",
+    "contextDigest",
+    "algorithmDigest",
+    "compatibilityDigest",
+    "fixturesDigest",
+    "conditionIds"
+  ],
+  "digestConventions": {
+    "text": "SHA256 of exact UTF8 file bytes including terminal LF; no trimming/newline normalization",
+    "json": "SHA256 of UTF8 JSON.stringify(object) preserving packet property/array order, no whitespace or trailing LF",
+    "fixturesDigest": "Exact complete fixtures.json UTF8 file bytes; fixturesJsonDigest separately binds compact JSON",
+    "context": "review-context.txt concatenates each contextManifest entry in order with literal BEGIN/END relative-path boundaries, raw UTF8 contents, and explicit LF delimiters"
+  },
+  "modelReviews": [],
+  "approval": null
+}

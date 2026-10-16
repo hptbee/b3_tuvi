@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 import assert from 'assert';
 import sourcesDoc from '../../docs/knowledge/sources.json' with { type: 'json' };
 import matrix from '../../docs/knowledge/combination-source-matrix.json' with { type: 'json' };
@@ -72,3 +73,13 @@ for (const key of ['authenticated','originalEditionAuthenticated','textCollatedA
 }
 
 console.log('source hygiene keeps wrong titles off the registry and does not promote formulas');
+
+const majorDecision = JSON.parse(readFileSync(new URL('../../docs/knowledge/research/fortune/modern-decadal/decision.json', import.meta.url), 'utf8'));
+assert.strictEqual(majorDecision.profileId, 'iztro-pinned-menh-cuc-decadal');
+assert.strictEqual(majorDecision.sourceId, modernSource.sourceId);
+assert.strictEqual(majorDecision.editionId, modernEdition.editionId);
+assert.strictEqual(majorDecision.expertVerified, false);
+assert.strictEqual(majorDecision.bookVerified, false);
+assert.strictEqual(majorDecision.historicalAuthenticated, false);
+assert.strictEqual(majorDecision.releasePermission, 'withheld');
+assert.strictEqual(majorDecision.interpretationReviewed, false);
