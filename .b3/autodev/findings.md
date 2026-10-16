@@ -181,3 +181,16 @@ T028fullfeature8/performance9/crosscut10allclear, parentPASS. No R2401/R2501/R26
 
 ## T029 review completion — 2026-10-16
 Full-feature pass11 (reserved R2701+) and routed performance pass12 (reserved R2801+) found no confirmed blocking defects. No finding IDs allocated. Reports archived with the Quan-Mão packet. Parent task gate PASS; overall invocation INCOMPLETE at12/12 technical review cap, with source/public/release blockers unchanged and next queue preserved.
+
+
+## T030 fresh invocation — main774ac6c
+Technical budget0/12 before dispatch. LARGE single complete feature with two logical units: CORE (new source-bound stem calculation/trust/evidence/tests) and API/UI (request/response/client/draft/races/accessibility+HTTP tests). Performance routed because new immutable evidence/cache runs on request path; cumulative crosscut follows both units. No source-model analysis/review counted as technical passes. Reserve R2901+ CORE, R3001+ API/UI, R3101+ performance, R3201+ crosscut; IDs allocated only for actual findings. Readonly independently isolated reviewers, parent owns gate.
+
+## Owner policy/current invocation review accounting
+PriorT030CORE/APIUI/performanceagentsreturnedquotaerrors; REVIEW_NOT_EXECUTED, nofindingsorverdicts, not12/12exhaustion. Explicitownerrecoverystartsbudget0/12andpreserveshistory. Currentpass1T031fullpolicyreviewclear/R3301rangeunused, ownrouting/Git/security/docschecksPASS. Currentpasses2CORE/R2901,3APIUI/R3001,4performance/R3101 running, no verdictclaimed. CrosscutR3201afterunits.
+
+T030 actualCOREpass2,APIUIpass3 andperformancepass4completedclear; reservedR2901/R3001/R3101rangesunused. Allsource/profile/publicboundariesretained, no fixerrequired. Crosscutpass5pending; budget4/12completed, notexhausted. Reportsdurableundernewdossierengineering-review.
+
+
+## T030/T031 final current-invocation review result
+Actualpass1policy/R3301,2CORE/R2901,3APIUI/R3001,4performance/R3101,5crosscut/R3201 allclear; no confirmedfindingIDsallocated/nofixernecessary. ParentlocalengineeringgatesPASSafteractualtests/sourceproofs. Crosscut216HTTP/96completecompatibilitycomparisons/192genuinevalidatoracceptances/24askprivacychecks; frozenmanifest/bindingreplayexact. Currentbudget5/12, notexhausted. EarlierquotaattemptsremainREVIEW_NOT_EXECUTEDhistory. ExternalGitHubPRAPIForbidden→overalldeliveryINCOMPLETE,noinventedPR/CI/merge.

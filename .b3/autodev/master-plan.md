@@ -1,6 +1,6 @@
 # Autonomous Product Completion
 
-- version: 22
+- version: 25
 - source: User mission 2026-10-14; fresh run from upstream main 45615a48d0c75b90138cfc618320ffae6e9c34e0
 
 ## Original requirements
@@ -428,14 +428,57 @@ Version22 T029 independentlyverified9API-validfixtures+completepinnedsource21man
 
 T029 final quality gate PASS (2026-10-16): exact pair AND Mão approved by both actual source models; nine valid real fixtures, immutable actual reviews and full-source context retained. Full backend65files88.43/90.09, frontend206/lint/build, all55 Chromium E2E PASS. Independent full-feature pass11 and performance pass12 clear; no confirmed blocking finding/fix. Approved internal coverage6→7. All original formulas/source/public/release gates unchanged. Invocation review budget12/12 exhausted; overall run INCOMPLETE, not product-complete. No further implementation this invocation.
 
-## Ordered next invocation queue (supersedes historical queues)
+## Historical queue before T030 recovery (superseded by final receipt)
 1. T030 — candidate modern Đại hạn heavenly-stem extension: inspect complete pinned iztro dependency chain (TIGER_RULE, lunar year stem, index/config semantics) against B3 natal metadata; independently replay positive/negative real charts, then actual distinct-model source review BEFORE any implementation. T025 explicitly did not approve stems; existing profile/source/public contracts cannot silently expand. Status pending; source approval absent.
 2. Restore GitHub PR API access for the delivered T025→T027→T028→T029 branch stack; create focused PRs in dependency order, verify hosted CI and branch/domain gates before authorized auto-merge. No direct-main bypass or deployment.
 3. T026/T019/T022/T020 remain evidence-blocked as previously recorded; investigate only meaningful new passages/parameters, do not repeat identical NO-GO reviews or reinterpret modern approval as classical approval.
 
-### T030 — validate modern Đại hạn heavenly-stem candidate
-- status: pending
+### T030 — source-scoped modern Đại hạn heavenly stems
+- status: completed
 - depends_on: [T025]
-- scope: pinned modern source/dependency research and independent fixture packet first; product implementation scope requires fresh JIT and actual source approval
-- acceptance_criteria: establish source identity, complete year-stem/TIGER_RULE/index/config semantics and projection boundary; independent valid-input positive/negative fixtures; actual dual approval before activation; preserve T025 approved branch/age semantics and all public gates
-- verification: independent source and runtime replay, actual dual judgments, fresh engineering review budget and complete relevant CI before any completion claim
+- task_base: 774ac6cff4b74e273a9bdf3a9c1ffa180d3d6b7b
+- scope: backend/src/time/modernMajor.js, backend/src/knowledge/modernMajorStemBinding.js, backend/test/modernMajorStem.test.mjs, backend/test/modernMajorStemBinding.test.mjs, backend/test/modernMajorStemApi.test.mjs, backend/scripts/runTests.mjs, frontend/src/components/StructuredAnalysis.jsx, frontend/src/components/StructuredAnalysis.test.jsx, docs/knowledge/research/fortune/modern-decadal-stem/, docs/engineering/TEST_FIXTURES.md, docs/tuvi/MODERN_MAJOR_PROFILE.md, README.md, docs/planning/AUTODEV_MASTER_PLAN_V2.md, .gitattributes
+- acceptance_criteria:
+  - Independently validate complete pinned getHoroscope, TIGER_RULE, Dần-relative palace index, year/config/from and canonical Vietnamese stem dependencies; independently replay valid real charts before actual distinct-model comparison
+  - Only after actual dual approval, implement explicit separate iztro-pinned-menh-cuc-decadal-stem with old strict two-key request and age1..125, unchanged approved branch/age projection plus server lunar birth-stem projection
+  - Preserve old profile and omitted/malformed response fields exactly; new profile requires both old and new immutable bindings, trusted metadata and mapped branch; every closed new state has heavenlyStem null and stemPlacement not_applied
+  - UI offers distinct profile and shows canonical can with chi only for validated current mapped response, rejects malformed/closed/stale/wrong-profile evidence, preserves existing input reset and optional minor/year behavior
+  - No client stem/year overrides, natal/default/source/classical changes, upstream calendar/from equivalence, stars/Tứ Hóa/interpretation/public release or deployment
+- verification:
+  - Full-source/digest and actual dual-model decision replay, independent24chart/288period fixtures and wrong-algorithm witnesses, source/evidence/metadata tamper and closed-path tests, HTTP/ask/privacy compatibility, frontend component tests/lint/build (because existing local UI changed); no new browser tests or browser requirement, independent CORE and API/UI loops plus performance and cross-cut review
+
+Version23: explicit fresh T030 invocation reconciles merged PR56–59 at main774ac6c; T030 source/independent-fixture investigation begins, retaining prior exact approvals and all release gates. No old task recreated; product scope remains gated pending actual source review and fresh implementation readiness.
+
+Version24: actual independent source and 24-chart/288period investigation proves one complete optional API/UI profile fits the existing architecture. Enumerate exact minimal files/conditions before product edits; original T030 stem intent retained, no new source approval inferred. Distinct actual source models now reviewing frozen packet; readiness remains draft until judgments/replay.
+
+
+### T031 — project unit-first testing policy and exceptional browser CI routing
+- status: completed
+- depends_on: []
+- task_base: 774ac6cff4b74e273a9bdf3a9c1ffa180d3d6b7b
+- scope: AGENTS.md, docs/engineering/quality/TEST_STRATEGY.md, docs/engineering/quality/E2E_TEST_MATRIX.md, .cursor/rules/verification.mdc, .github/workflows/ci.yml, .github/scripts/browser-test-scope.mjs, .github/scripts/browser-test-scope.test.mjs
+- acceptance_criteria:
+  - Canonical B3 Tử Vi policy prioritizes domain Node unit tests, targeted HTTP/cross-module integration, meaningful non-browser smoke and exceptional browser-only risks; no global B3 skill edits
+  - Distinguish independent domain references, source-comparative fixtures, regressions, synthetic cases and genuinely expert-verified goldens; coverage never grants formula/source/public approval
+  - Preserve existing browser specs and all lower-level/security/privacy checks; keep e2e job identity, explicitly report browser NOT RUN when unselected and fail unknown Git comparisons
+  - Select browser CI for explicit browser spec/config/toolchain changes or manual request, with meaningful non-browser routing verification and concise project instruction references
+  - Keep policy commit separate from pending T030 source/domain/UI work, with actual independent review and docs/routing checks
+- verification:
+  - Node browser-routing checks including real temporary Git history, policy/link validation, independent full policy review and no browser launch
+
+Version25: owner explicitly changes test selection policy. Reconcile actual T030 partial implementation and actual dual source approval rather than oldpending hints; source scope/approval stays unchanged. Remove four newlyauthored uncommitted browser scenarios and restore original tracked major spec exactly; retain current UI component work and verify with Vitest (it already exists, not silently discarded). Existing59passed browser log is historical pre-policy, not revised T030 acceptance evidence; no new browser launch. User-prioritized T031 testing policy is a separate logical commit; no new Master Plan/global testing skill. T031 mutagen opportunity report was exploratory only, never a task/approval; its candidate work deferred while current requested policy/T030 verification takes priority.
+
+T031 completed5383854: canonical projectunit-firstpolicy/references/exceptionalbrowserCIrouting committedseparately afteractualindependentfullpolicyreviewclear androuting/docschecksPASS. Existingbrowsermajor specidentical774ac6c; no newT030Playwright ornewbrowserlaunch. Existingdocs/backend/frontendCIjobsunchanged; browserunselectedreportedNOTRUN, notbrowserPASS.
+
+
+## T030/T031 final parent gate and delivery — 2026-10-16
+T031completed538385457c30e0259088994f1a94ef6a12267c2d (policyonly); T030completedcc206bdd163cf5cc44cae1a946b36d9b89a0d7ca (separateapprovedstemprofile/runtime/API/UI/tests/sourceevidence). Bothactualcommitsunique/ancestorsofcurrentsourcebranch, descendants774ac6c. No duplicateT029 orPR50–59work. Actualdual sourceapprovalseparatefromT025, immutable source/conditions/algorithm/fixture binding accepted; allpublic/default/classical/natal/releasegatesunchanged.
+
+Current invocation technical reviews5/12 completed: policy, CORE, API/UI, performance, crosscut; allclear/no confirmed findings/nofixrequired. Root targeted3Nodefiles and fullunit56/integration12/CI68 passed88.67/90.03; frontend231/lint/buildpassedbecauseexistingUIchanged. Browsertestsoriginalunchanged; new4withdrawn; no browserlaunchafterpolicy. Routing/docschecksPASS. Forty-fivewhitespacediagnosticsonexacttwofrozenartifactsonly, allotherchangesPASS.
+
+Bothfeature/policycommitspushedandgitls-remoteverifiedcc206bd. ActualghPRcreate --basemain failed POSThttps://api.github.com/graphql Forbidden(exit1); no PRnumber/hostedCI/merge/deployclaimed, mainstill774ac6c. OveralldeliveryrunINCOMPLETEbecauseexternalPRAPIaccess, NOTbecause reviewbudgetexhausted orT030sourceunapproved. LocalrequestedengineeringtasksPASS.
+
+## Ordered resumable next actions
+1. Reconcile this checkpoint and source branch against latestmain; T030/T031alreadycomplete, do not reimplement or rerun sourceapprovals without new evidence. Restore GitHubPRAPIaccess, create focusedPR fromcodex/tuvi-modern-decadal-stems tomain, verify actualhostedCI and retainedbranch/domain/releasegates before any authorizedauto-merge. Neverdirectpushmain ordeploy.
+2. Source-scope research candidate: modern selected-decadal-stem TứHóa physical natal-star associations. Fulltable/defaultconfiguration/starcanonical/duplicate-missing semantics need their OWNindependentfixtures+actualdualapproval andfreshJIT; T030explicitlyexcludes it. No task/activation/approval is inferred from exploratoryopportunitynotes.
+3. T026/T019/T022/T020 preciseexistingunresolvedpassage/taxonomy/brightness/classicalageblocksremain; pursue genuinelynew evidence, notidenticalNO-GOreviews.
