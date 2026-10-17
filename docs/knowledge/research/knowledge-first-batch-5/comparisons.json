@@ -1,0 +1,426 @@
+{
+  "batchId": "KR-B5-20261017",
+  "meaning": "Authored comparisons, partial/disputed overlap, and dependent textual collations explicitly distinguished. None is source review.",
+  "comparisons": [
+    {
+      "comparisonId": "B5C01",
+      "recordIds": [
+        "KRB5-PM-CO"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution; print identity unverified)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "section": "THIÊN CƠ / 7 / j) Ở PHỤ",
+        "page": null,
+        "language": "vi",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "readerLines": [
+          2353,
+          2361
+        ],
+        "originalQuotation": null,
+        "locatorLimit": "Access-time reader lines and exact subsection heading; not printed pagination; source text not retained"
+      },
+      "observationVi": "V phân chi/cohost; không chứng thực toàn bộ nhánh vô sát Q.",
+      "family": "ham-so-attributed-web",
+      "kind": "authored_comparison",
+      "independence": "Separate authored attribution with untraced borrowing/print identity; embedded Thái Thứ Lang citations are not another inspected book.",
+      "rights": "Precise references and brief original analysis only; no new source body or translation copied.",
+      "status": "COMPARED_WITH_IDENTITY_LIMITS"
+    },
+    {
+      "comparisonId": "B5C02",
+      "recordIds": [
+        "KRB5-TT-CO"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution; print identity unverified)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "section": "THIÊN CƠ / 7 / c) Ở TỬ",
+        "page": null,
+        "language": "vi",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "readerLines": [
+          2287,
+          2295
+        ],
+        "originalQuotation": null,
+        "locatorLimit": "Access-time reader lines and exact subsection heading; not printed pagination; source text not retained"
+      },
+      "observationVi": "V có số đếm khác; không hòa thành một dự báo.",
+      "family": "ham-so-attributed-web",
+      "kind": "authored_comparison",
+      "independence": "Separate authored attribution with untraced borrowing/print identity; embedded Thái Thứ Lang citations are not another inspected book.",
+      "rights": "Precise references and brief original analysis only; no new source body or translation copied.",
+      "status": "COMPARED_WITH_IDENTITY_LIMITS"
+    },
+    {
+      "comparisonId": "B5C03",
+      "recordIds": [
+        "KRB5-TA-CO"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution; print identity unverified)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "section": "THIÊN CƠ / 3. Ý NGHĨA BỆNH LÝ",
+        "page": null,
+        "language": "vi",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "readerLines": [
+          2172,
+          2191
+        ],
+        "originalQuotation": null,
+        "locatorLimit": "Access-time reader lines and exact subsection heading; not printed pagination; source text not retained"
+      },
+      "observationVi": "V có Cự Lương nghi chép; attribution Thái Thứ Lang chưa kiểm bản.",
+      "family": "ham-so-attributed-web",
+      "kind": "authored_comparison",
+      "independence": "Separate authored attribution with untraced borrowing/print identity; embedded Thái Thứ Lang citations are not another inspected book.",
+      "rights": "Precise references and brief original analysis only; no new source body or translation copied.",
+      "status": "COMPARED_WITH_IDENTITY_LIMITS"
+    },
+    {
+      "comparisonId": "B5C04",
+      "recordIds": [
+        "KRB5-TB-ZIWEI"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution; print identity unverified)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "section": "TỬ VI / 7 / g) Ở TÀI",
+        "page": null,
+        "language": "vi",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "readerLines": [
+          3164,
+          3174
+        ],
+        "originalQuotation": null,
+        "locatorLimit": "Access-time reader lines and exact subsection heading; not printed pagination; source text not retained"
+      },
+      "observationVi": "V thêm sáng/Tuần-Triệt; không bỏ điều kiện Sát + cát Q.",
+      "family": "ham-so-attributed-web",
+      "kind": "authored_comparison",
+      "independence": "Separate authored attribution with untraced borrowing/print identity; embedded Thái Thứ Lang citations are not another inspected book.",
+      "rights": "Precise references and brief original analysis only; no new source body or translation copied.",
+      "status": "COMPARED_WITH_IDENTITY_LIMITS"
+    },
+    {
+      "comparisonId": "B5C05",
+      "recordIds": [
+        "KRB5-TD-ZIWEI"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution; print identity unverified)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "section": "TỬ VI / 7 / e) Ở DI",
+        "page": null,
+        "language": "vi",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "readerLines": [
+          3154,
+          3157
+        ],
+        "originalQuotation": null,
+        "locatorLimit": "Access-time reader lines and exact subsection heading; not printed pagination; source text not retained"
+      },
+      "observationVi": "Q/V căng thẳng ở Phá đồng; điều kiện chưa đủ để hòa giải.",
+      "family": "ham-so-attributed-web",
+      "kind": "authored_comparison",
+      "independence": "Separate authored attribution with untraced borrowing/print identity; embedded Thái Thứ Lang citations are not another inspected book.",
+      "rights": "Precise references and brief original analysis only; no new source body or translation copied.",
+      "status": "COMPARED_WITH_IDENTITY_LIMITS"
+    },
+    {
+      "comparisonId": "B5C06",
+      "recordIds": [
+        "KRB5-PT-LUONG"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution; print identity unverified)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "section": "THIÊN LƯƠNG / 7 / a) Ở PHU THÊ",
+        "page": null,
+        "language": "vi",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "readerLines": [
+          2637,
+          2648
+        ],
+        "originalQuotation": null,
+        "locatorLimit": "Access-time reader lines and exact subsection heading; not printed pagination; source text not retained"
+      },
+      "observationVi": "V phân vị trí; không biến tuổi nguồn Q thành tuổi cưới chuẩn.",
+      "family": "ham-so-attributed-web",
+      "kind": "authored_comparison",
+      "independence": "Separate authored attribution with untraced borrowing/print identity; embedded Thái Thứ Lang citations are not another inspected book.",
+      "rights": "Precise references and brief original analysis only; no new source body or translation copied.",
+      "status": "COMPARED_WITH_IDENTITY_LIMITS"
+    },
+    {
+      "comparisonId": "B5C07",
+      "recordIds": [
+        "KRB5-TD-LUONG"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution; print identity unverified)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "section": "THIÊN LƯƠNG / 7 / d) Ở DI",
+        "page": null,
+        "language": "vi",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "readerLines": [
+          2670,
+          2682
+        ],
+        "originalQuotation": null,
+        "locatorLimit": "Access-time reader lines and exact subsection heading; not printed pagination; source text not retained"
+      },
+      "observationVi": "V thêm chi thuận/nghịch; không nhập thành bảng sáng Q.",
+      "family": "ham-so-attributed-web",
+      "kind": "authored_comparison",
+      "independence": "Separate authored attribution with untraced borrowing/print identity; embedded Thái Thứ Lang citations are not another inspected book.",
+      "rights": "Precise references and brief original analysis only; no new source body or translation copied.",
+      "status": "COMPARED_WITH_IDENTITY_LIMITS"
+    },
+    {
+      "comparisonId": "B5C08",
+      "recordIds": [
+        "KRB5-PM-CO"
+      ],
+      "sourceReference": {
+        "sourceId": null,
+        "editionId": null,
+        "provisionalWitnessId": "ling-donglai-thien-co-169-web-20261017",
+        "author": "令东来",
+        "work": "紫微斗数命理学：天机星",
+        "section": "第十四节、天机星",
+        "page": null,
+        "language": "zh-Hans",
+        "originalQuotation": null,
+        "location": {
+          "url": "https://www.xuanmen.com.cn/archives/169.html",
+          "paragraphLocator": "Paragraph beginning 天机在夫妻宫、父母宫、子女宫、兄弟宫、奴仆宫; parent 化权 clause and closing 六亲化忌 paragraph",
+          "sourceTextRetained": false,
+          "observedDecodedHtmlSha256": "6e8a9ef8ef3aa68ab6edbacca28f5e15f3331998a1b0f4143c337e8425fe251e",
+          "hashMethod": "Observed decoded HTML re-encoded UTF8; dynamic observation, no retained replayable body"
+        },
+        "bibliographicLimit": "Credited author-site print-book extract; print edition/year/page and school unverified"
+      },
+      "observationVi": "Tác giả phân Quyền/Kỵ; không xác nhận nhánh vô hình Q.",
+      "family": "ling-donglai-authored-commentary",
+      "kind": "authored_comparison",
+      "independence": "Separate named modern author family, not a third original classical edition.",
+      "rights": "Precise references and brief original analysis only; no new source body or translation copied.",
+      "status": "COMPARED_WITH_IDENTITY_LIMITS"
+    },
+    {
+      "comparisonId": "B5C09",
+      "recordIds": [
+        "KRB5-TT-CO"
+      ],
+      "sourceReference": {
+        "sourceId": null,
+        "editionId": null,
+        "provisionalWitnessId": "ling-donglai-thien-co-169-web-20261017",
+        "author": "令东来",
+        "work": "紫微斗数命理学：天机星",
+        "section": "第十四节、天机星",
+        "page": null,
+        "language": "zh-Hans",
+        "originalQuotation": null,
+        "location": {
+          "url": "https://www.xuanmen.com.cn/archives/169.html",
+          "paragraphLocator": "Same family-palace paragraph; 子女宫有天机化忌 and following 六亲宫位化禄 paragraph",
+          "sourceTextRetained": false,
+          "observedDecodedHtmlSha256": "6e8a9ef8ef3aa68ab6edbacca28f5e15f3331998a1b0f4143c337e8425fe251e",
+          "hashMethod": "Observed decoded HTML re-encoded UTF8; dynamic observation, no retained replayable body"
+        },
+        "bibliographicLimit": "Credited author-site print-book extract; print edition/year/page and school unverified"
+      },
+      "observationVi": "Tác giả phân Kỵ xa cách và Lộc + trợ; không kiểm số con.",
+      "family": "ling-donglai-authored-commentary",
+      "kind": "authored_comparison",
+      "independence": "Separate named modern author family, not a third original classical edition.",
+      "rights": "Precise references and brief original analysis only; no new source body or translation copied.",
+      "status": "COMPARED_WITH_IDENTITY_LIMITS"
+    },
+    {
+      "comparisonId": "B5C10",
+      "recordIds": [
+        "KRB5-TA-CO"
+      ],
+      "sourceReference": {
+        "sourceId": null,
+        "editionId": null,
+        "provisionalWitnessId": "ling-donglai-thien-co-169-web-20261017",
+        "author": "令东来",
+        "work": "紫微斗数命理学：天机星",
+        "section": "第十四节、天机星",
+        "page": null,
+        "language": "zh-Hans",
+        "originalQuotation": null,
+        "location": {
+          "url": "https://www.xuanmen.com.cn/archives/169.html",
+          "paragraphLocator": "Two consecutive paragraphs beginning 天机落在疾厄宫时 and 天机为乙木",
+          "sourceTextRetained": false,
+          "observedDecodedHtmlSha256": "6e8a9ef8ef3aa68ab6edbacca28f5e15f3331998a1b0f4143c337e8425fe251e",
+          "hashMethod": "Observed decoded HTML re-encoded UTF8; dynamic observation, no retained replayable body"
+        },
+        "bibliographicLimit": "Credited author-site print-book extract; print edition/year/page and school unverified"
+      },
+      "observationVi": "Tác giả dùng tượng ngũ hành/cơ thể; không là chứng cứ y học.",
+      "family": "ling-donglai-authored-commentary",
+      "kind": "authored_comparison",
+      "independence": "Separate named modern author family, not a third original classical edition.",
+      "rights": "Precise references and brief original analysis only; no new source body or translation copied.",
+      "status": "COMPARED_WITH_IDENTITY_LIMITS"
+    },
+    {
+      "comparisonId": "B5C11",
+      "recordIds": [
+        "KRB5-M-CO-COLLATION"
+      ],
+      "sourceReference": {
+        "provisionalWitnessId": "quanshu-wikisource-juan2-1963110",
+        "sourceId": "ziwei-quanshu-tradition",
+        "editionId": null,
+        "author": null,
+        "work": "紫微斗數全書/卷二 — Wikisource digital transcription",
+        "url": "https://zh.wikisource.org/wiki/紫微斗數全書/卷二",
+        "revisionUrl": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷二&oldid=1963110",
+        "revision": 1963110,
+        "observedFooterRevision": true,
+        "sourceTextRetained": false,
+        "family": "quanshu-transmission",
+        "independence": "Dependent digital transmission; neither new authored family nor authenticated original edition",
+        "rights": "Footer: CC BY-SA4.0 plus possible additional terms. Store precise references and original analysis only, no transcription body.",
+        "section": "一 命宫 / 天机 position clauses",
+        "readerLines": [
+          705,
+          726
+        ],
+        "page": null,
+        "language": "zh-Hans reader rendering",
+        "originalQuotation": null,
+        "locatorLimit": "Ordinary page read; footer explicitly identifies revision1963110. No separate frozen HTML or print scan retained."
+      },
+      "observationVi": "Chữ/bảng được đối chiếu cùng family; chưa giải quyết nguồn gốc hoặc nghĩa.",
+      "family": "quanshu-transmission",
+      "kind": "dependent_witness_collation",
+      "independence": "Same Quanshu transmission, not independent authored evidence.",
+      "rights": "Precise references and brief original analysis only; no new source body or translation copied.",
+      "status": "COLLATED_DEPENDENT_WITNESS_ONLY"
+    },
+    {
+      "comparisonId": "B5C12",
+      "recordIds": [
+        "KRB5-QL-CO-COLLATION"
+      ],
+      "sourceReference": {
+        "provisionalWitnessId": "quanshu-wikisource-juan2-1963110",
+        "sourceId": "ziwei-quanshu-tradition",
+        "editionId": null,
+        "author": null,
+        "work": "紫微斗數全書/卷二 — Wikisource digital transcription",
+        "url": "https://zh.wikisource.org/wiki/紫微斗數全書/卷二",
+        "revisionUrl": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷二&oldid=1963110",
+        "revision": 1963110,
+        "observedFooterRevision": true,
+        "sourceTextRetained": false,
+        "family": "quanshu-transmission",
+        "independence": "Dependent digital transmission; neither new authored family nor authenticated original edition",
+        "rights": "Footer: CC BY-SA4.0 plus possible additional terms. Store precise references and original analysis only, no transcription body.",
+        "section": "九官禄 / complete 天机 entry; surrounding full section read",
+        "readerLines": [
+          1483,
+          1531
+        ],
+        "page": null,
+        "language": "zh-Hans reader rendering",
+        "originalQuotation": null,
+        "locatorLimit": "Ordinary page read; footer explicitly identifies revision1963110. No separate frozen HTML or print scan retained."
+      },
+      "observationVi": "Chữ/bảng được đối chiếu cùng family; chưa giải quyết nguồn gốc hoặc nghĩa.",
+      "family": "quanshu-transmission",
+      "kind": "dependent_witness_collation",
+      "independence": "Same Quanshu transmission, not independent authored evidence.",
+      "rights": "Precise references and brief original analysis only; no new source body or translation copied.",
+      "status": "COLLATED_DEPENDENT_WITNESS_ONLY"
+    },
+    {
+      "comparisonId": "B5C13",
+      "recordIds": [
+        "KRB5-METHOD-Q3-CONDITIONS"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution; print identity unverified)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "section": "B) Cách / Thượng, Trung, Hạ and Phi thường cách",
+        "page": null,
+        "language": "vi",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "readerLines": [
+          460,
+          532
+        ],
+        "originalQuotation": null,
+        "locatorLimit": "Access-time reader lines and exact subsection heading; not printed pagination; source text not retained"
+      },
+      "observationVi": "V có phân hạng theo bộ/sáng/trợ; không cung cấp cùng thứ tự Q3.",
+      "family": "ham-so-attributed-web",
+      "kind": "authored_comparison",
+      "independence": "Separate authored attribution with untraced borrowing/print identity; embedded Thái Thứ Lang citations are not another inspected book.",
+      "rights": "Precise references and brief original analysis only; no new source body or translation copied.",
+      "status": "COMPARED_WITH_IDENTITY_LIMITS"
+    },
+    {
+      "comparisonId": "B5C14",
+      "recordIds": [
+        "KRB5-METHOD-V-CONTEXT"
+      ],
+      "sourceReference": {
+        "sourceId": null,
+        "editionId": null,
+        "provisionalWitnessId": "ling-donglai-thien-co-169-web-20261017",
+        "author": "令东来",
+        "work": "紫微斗数命理学：天机星",
+        "section": "第十四节、天机星",
+        "page": null,
+        "language": "zh-Hans",
+        "originalQuotation": null,
+        "location": {
+          "url": "https://www.xuanmen.com.cn/archives/169.html",
+          "paragraphLocator": "Consecutive natal paragraphs concerning 天机天梁 with 左辅右弼 and 父母宫的紫微; compare only stated relation scopes",
+          "sourceTextRetained": false,
+          "observedDecodedHtmlSha256": "6e8a9ef8ef3aa68ab6edbacca28f5e15f3331998a1b0f4143c337e8425fe251e",
+          "hashMethod": "Observed decoded HTML re-encoded UTF8; dynamic observation, no retained replayable body"
+        },
+        "bibliographicLimit": "Credited author-site print-book extract; print edition/year/page and school unverified"
+      },
+      "observationVi": "Ngoại lệ Cơ–Lương nhận trợ qua Lương ở Mệnh; khác các ví dụ V.",
+      "family": "ling-donglai-authored-commentary",
+      "kind": "authored_comparison",
+      "independence": "Separate named modern author family, not a third original classical edition.",
+      "rights": "Precise references and brief original analysis only; no new source body or translation copied.",
+      "status": "COMPARED_WITH_IDENTITY_LIMITS"
+    }
+  ]
+}
