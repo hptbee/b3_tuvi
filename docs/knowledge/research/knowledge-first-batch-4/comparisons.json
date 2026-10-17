@@ -1,0 +1,369 @@
+{
+  "batchId": "KR-B4-20261017",
+  "comparisonMeaning": "Performed comparison, including incomplete overlap and disputes; not agreement, print authentication or source review",
+  "comparisons": [
+    {
+      "comparisonId": "B4C01",
+      "recordIds": [
+        "KRB4-M-CO"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution; print identity unresolved)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "section": "THIÊN CƠ / 1, 3–6",
+        "readerLines": [
+          2154,
+          2265
+        ],
+        "page": null,
+        "language": "vi",
+        "originalQuotation": null,
+        "locatorLimit": "Reader line numbers are access-time navigation, not retained text or printed pagination"
+      },
+      "observationVi": "Bảng sáng V khác Q; chưa chọn bảng chuẩn.",
+      "family": "ham-so-attributed-web",
+      "independence": "Separate authored attribution, edition/ancestry unresolved. Embedded quotations are not independently inspected books.",
+      "rights": "Precise metadata and bounded original comparison only; no text copy or book reuse permission",
+      "status": "COMPARED_WITH_EDITION_LIMITS"
+    },
+    {
+      "comparisonId": "B4C02",
+      "recordIds": [
+        "KRB4-QL-CO"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution; print identity unresolved)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "section": "THIÊN CƠ / Ở QUAN",
+        "readerLines": [
+          2321,
+          2334
+        ],
+        "page": null,
+        "language": "vi",
+        "originalQuotation": null,
+        "locatorLimit": "Reader line numbers are access-time navigation, not retained text or printed pagination"
+      },
+      "observationVi": "V cho phép chuyển các bộ Mệnh sang Quan; phạm vi riêng.",
+      "family": "ham-so-attributed-web",
+      "independence": "Separate authored attribution, edition/ancestry unresolved. Embedded quotations are not independently inspected books.",
+      "rights": "Precise metadata and bounded original comparison only; no text copy or book reuse permission",
+      "status": "COMPARED_WITH_EDITION_LIMITS"
+    },
+    {
+      "comparisonId": "B4C03",
+      "recordIds": [
+        "KRB4-TB-CO"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution; print identity unresolved)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "section": "THIÊN CƠ / Ở TÀI",
+        "readerLines": [
+          2297,
+          2306
+        ],
+        "page": null,
+        "language": "vi",
+        "originalQuotation": null,
+        "locatorLimit": "Reader line numbers are access-time navigation, not retained text or printed pagination"
+      },
+      "observationVi": "V thêm vị trí/Lộc Mã; không xác nhận hết nhánh Q.",
+      "family": "ham-so-attributed-web",
+      "independence": "Separate authored attribution, edition/ancestry unresolved. Embedded quotations are not independently inspected books.",
+      "rights": "Precise metadata and bounded original comparison only; no text copy or book reuse permission",
+      "status": "COMPARED_WITH_EDITION_LIMITS"
+    },
+    {
+      "comparisonId": "B4C04",
+      "recordIds": [
+        "KRB4-PD-CO"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution; print identity unresolved)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "section": "THIÊN CƠ / Ở PHÚC",
+        "readerLines": [
+          2344,
+          2351
+        ],
+        "page": null,
+        "language": "vi",
+        "originalQuotation": null,
+        "locatorLimit": "Reader line numbers are access-time navigation, not retained text or printed pagination"
+      },
+      "observationVi": "V có cụm Cự Lương nghi chép; không coi là Cơ–Lương.",
+      "family": "ham-so-attributed-web",
+      "independence": "Separate authored attribution, edition/ancestry unresolved. Embedded quotations are not independently inspected books.",
+      "rights": "Precise metadata and bounded original comparison only; no text copy or book reuse permission",
+      "status": "COMPARED_WITH_EDITION_LIMITS"
+    },
+    {
+      "comparisonId": "B4C05",
+      "recordIds": [
+        "KRB4-TD-CO"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution; print identity unresolved)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "section": "THIÊN CƠ / Ở DI",
+        "readerLines": [
+          2308,
+          2315
+        ],
+        "page": null,
+        "language": "vi",
+        "originalQuotation": null,
+        "locatorLimit": "Reader line numbers are access-time navigation, not retained text or printed pagination"
+      },
+      "observationVi": "V phân vị trí và Tả/Hữu; không phải mọi Di đều thuận.",
+      "family": "ham-so-attributed-web",
+      "independence": "Separate authored attribution, edition/ancestry unresolved. Embedded quotations are not independently inspected books.",
+      "rights": "Precise metadata and bounded original comparison only; no text copy or book reuse permission",
+      "status": "COMPARED_WITH_EDITION_LIMITS"
+    },
+    {
+      "comparisonId": "B4C06",
+      "recordIds": [
+        "KRB4-DT-CO"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution; print identity unresolved)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "section": "THIÊN CƠ / Ở ĐIỀN",
+        "readerLines": [
+          2336,
+          2342
+        ],
+        "page": null,
+        "language": "vi",
+        "originalQuotation": null,
+        "locatorLimit": "Reader line numbers are access-time navigation, not retained text or printed pagination"
+      },
+      "observationVi": "V viết Cự Nguyệt ở Thân; chưa sửa tên sao.",
+      "family": "ham-so-attributed-web",
+      "independence": "Separate authored attribution, edition/ancestry unresolved. Embedded quotations are not independently inspected books.",
+      "rights": "Precise metadata and bounded original comparison only; no text copy or book reuse permission",
+      "status": "COMPARED_WITH_EDITION_LIMITS"
+    },
+    {
+      "comparisonId": "B4C07",
+      "recordIds": [
+        "KRB4-NB-CO"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution; print identity unresolved)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "section": "THIÊN CƠ / Ở NÔ",
+        "readerLines": [
+          2317,
+          2319
+        ],
+        "page": null,
+        "language": "vi",
+        "originalQuotation": null,
+        "locatorLimit": "Reader line numbers are access-time navigation, not retained text or printed pagination"
+      },
+      "observationVi": "V nêu Cơ–Lương–Tả/Hữu; không xác nhận nhánh đơn sao.",
+      "family": "ham-so-attributed-web",
+      "independence": "Separate authored attribution, edition/ancestry unresolved. Embedded quotations are not independently inspected books.",
+      "rights": "Precise metadata and bounded original comparison only; no text copy or book reuse permission",
+      "status": "COMPARED_WITH_EDITION_LIMITS"
+    },
+    {
+      "comparisonId": "B4C08",
+      "recordIds": [
+        "KRB4-PT-CO"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution; print identity unresolved)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "section": "THIÊN CƠ / Ở THÊ",
+        "readerLines": [
+          2273,
+          2285
+        ],
+        "page": null,
+        "language": "vi",
+        "originalQuotation": null,
+        "locatorLimit": "Reader line numbers are access-time navigation, not retained text or printed pagination"
+      },
+      "observationVi": "V thêm cấu hình bất hòa; khác đầu vào, chưa giải tuổi Q.",
+      "family": "ham-so-attributed-web",
+      "independence": "Separate authored attribution, edition/ancestry unresolved. Embedded quotations are not independently inspected books.",
+      "rights": "Precise metadata and bounded original comparison only; no text copy or book reuse permission",
+      "status": "COMPARED_WITH_EDITION_LIMITS"
+    },
+    {
+      "comparisonId": "B4C09",
+      "recordIds": [
+        "KRB4-HD-CO"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution; print identity unresolved)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "section": "THIÊN CƠ / Ở BÀO",
+        "readerLines": [
+          2267,
+          2271
+        ],
+        "page": null,
+        "language": "vi",
+        "originalQuotation": null,
+        "locatorLimit": "Reader line numbers are access-time navigation, not retained text or printed pagination"
+      },
+      "observationVi": "V không xác nhận các số đếm của Q.",
+      "family": "ham-so-attributed-web",
+      "independence": "Separate authored attribution, edition/ancestry unresolved. Embedded quotations are not independently inspected books.",
+      "rights": "Precise metadata and bounded original comparison only; no text copy or book reuse permission",
+      "status": "COMPARED_WITH_EDITION_LIMITS"
+    },
+    {
+      "comparisonId": "B4C10",
+      "recordIds": [
+        "KRB4-QL-ZIWEI"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution; print identity unresolved)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "section": "TỬ VI / 7 / Ở QUAN",
+        "readerLines": [
+          3147,
+          3152
+        ],
+        "page": null,
+        "language": "vi",
+        "originalQuotation": null,
+        "locatorLimit": "Reader line numbers are access-time navigation, not retained text or printed pagination"
+      },
+      "observationVi": "V có câu hỏng; Phá/Tham thêm thăng trầm, chưa xác nhận Q.",
+      "family": "ham-so-attributed-web",
+      "independence": "Separate authored attribution, edition/ancestry unresolved. Embedded quotations are not independently inspected books.",
+      "rights": "Precise metadata and bounded original comparison only; no text copy or book reuse permission",
+      "status": "COMPARED_WITH_EDITION_LIMITS"
+    },
+    {
+      "comparisonId": "B4C11",
+      "recordIds": [
+        "KRB4-TB-LUONG"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution; print identity unresolved)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "section": "THIÊN LƯƠNG / 7 / Ở TÀI",
+        "readerLines": [
+          2661,
+          2669
+        ],
+        "page": null,
+        "language": "vi",
+        "originalQuotation": null,
+        "locatorLimit": "Reader line numbers are access-time navigation, not retained text or printed pagination"
+      },
+      "observationVi": "V phân vị trí; không corroborate chi tiết Cơ đồng của Q.",
+      "family": "ham-so-attributed-web",
+      "independence": "Separate authored attribution, edition/ancestry unresolved. Embedded quotations are not independently inspected books.",
+      "rights": "Precise metadata and bounded original comparison only; no text copy or book reuse permission",
+      "status": "COMPARED_WITH_EDITION_LIMITS"
+    },
+    {
+      "comparisonId": "B4C12",
+      "recordIds": [
+        "KRB4-NB-PHU-LDL"
+      ],
+      "sourceReference": {
+        "sourceId": null,
+        "editionId": null,
+        "provisionalWitnessId": "ling-donglai-thien-phu-131-web-20261017",
+        "author": "令东来",
+        "work": "紫微斗数命理学：天府星",
+        "section": "第二节、天府星",
+        "page": null,
+        "language": "zh-Hans",
+        "originalQuotation": null,
+        "location": {
+          "url": "https://www.xuanmen.com.cn/archives/131.html",
+          "paragraphLocator": "第二节、天府星; paragraph beginning 天府在兄弟宫、奴仆宫, complete two-sentence paragraph; adjacent 财运 multi-palace and 福德 paragraphs consulted",
+          "sourceTextRetained": false,
+          "observedDecodedHtmlSha256": "f7505bd4628e239a0f5b535cf13987097376c365840a7d7034feec1318981181",
+          "hashMethod": "SHA256 of observed decoded HTML re-encoded UTF8; dynamic observation, not a retained replayable artifact"
+        },
+        "bibliographicLimit": "Author site calls this a print-book extract; edition/year/page and reuse license unverified"
+      },
+      "observationVi": "Đối chiếu đúng sao thủ cung với record lịch sử được liên kết; không xác nhận số đếm hoặc mọi modifier của cổ văn.",
+      "family": "ling-donglai-authored-commentary",
+      "independence": "Same named modern author as Batch 3; separate from Quanshu, not a new family per article.",
+      "rights": {
+        "retention": "Original Vietnamese analysis, precise references and hashes only; no new source text/HTML/PDF stored",
+        "scope": "Research-storage suitability does not grant book redistribution, runtime approval or personalized public interpretation"
+      },
+      "status": "COMPARED_WITH_EDITION_LIMITS"
+    },
+    {
+      "comparisonId": "B4C13",
+      "recordIds": [
+        "KRB4-HD-AM-LDL"
+      ],
+      "sourceReference": {
+        "sourceId": null,
+        "editionId": null,
+        "provisionalWitnessId": "ling-donglai-thai-am-167-web-20261017",
+        "author": "令东来",
+        "work": "紫微斗数命理学：太阴星",
+        "section": "太阴星 / family palaces and 兄弟宫、奴仆宫 discussion",
+        "page": null,
+        "language": "zh-Hans",
+        "originalQuotation": null,
+        "location": {
+          "url": "https://www.xuanmen.com.cn/archives/167.html",
+          "paragraphLocator": "太阴星; paragraph beginning 太阴在兄弟宫, read with adjacent 六亲宫位 and 奴仆宫 paragraphs",
+          "sourceTextRetained": false,
+          "observedDecodedHtmlSha256": "d09fe8671b89032b079efd1c8925aa039d30fac3e1a0ccd680bfbbd92a97bbf6",
+          "hashMethod": "SHA256 of observed decoded HTML re-encoded UTF8; dynamic observation, not a retained replayable artifact"
+        },
+        "bibliographicLimit": "Author site calls this a print-book extract; edition/year/page and reuse license unverified"
+      },
+      "observationVi": "Đối chiếu đúng sao thủ cung với record lịch sử được liên kết; không xác nhận số đếm hoặc mọi modifier của cổ văn.",
+      "family": "ling-donglai-authored-commentary",
+      "independence": "Same named modern author as Batch 3; separate from Quanshu, not a new family per article.",
+      "rights": {
+        "retention": "Original Vietnamese analysis, precise references and hashes only; no new source text/HTML/PDF stored",
+        "scope": "Research-storage suitability does not grant book redistribution, runtime approval or personalized public interpretation"
+      },
+      "status": "COMPARED_WITH_EDITION_LIMITS"
+    }
+  ]
+}

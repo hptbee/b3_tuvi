@@ -1,0 +1,179 @@
+{
+  "batchId": "KR-B4-20261017",
+  "researchDate": "2026-10-17",
+  "baseMain": "a99b66fd23680ae6297b09b3e8da0ae78d19159f",
+  "branch": "codex/knowledge-research-batch-4",
+  "primary": {
+    "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+    "sha256": "b824c61e1bdec55ecdc7123ff1e79bce9648f07d67d054c43a59ce731572d4a7",
+    "sourceId": "ziwei-quanshu-iztro-transcription",
+    "editionId": "iztro-juan2-2f00e2ab0c80",
+    "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+    "readSections": [
+      [
+        146,
+        162
+      ],
+      [
+        553,
+        575
+      ],
+      [
+        576,
+        599
+      ],
+      [
+        633,
+        662
+      ],
+      [
+        687,
+        711
+      ],
+      [
+        712,
+        736
+      ],
+      [
+        737,
+        764
+      ],
+      [
+        765,
+        788
+      ],
+      [
+        789,
+        816
+      ]
+    ],
+    "limit": "Complete listed sections read; not all fourteen natal blocks or an original print book"
+  },
+  "methodWitness": {
+    "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+    "sha256": "bc1a8d8f3d124c06c3845b6a687149bd9900f06b97d86db202b6016dfeffe35b",
+    "readSpan": {
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 48,
+      "endLine": 66,
+      "sha256": "523b5fab97f6e7303aa8d539cad986617c6b37120e8e1b9c05c5eebd97f4ee33",
+      "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+    },
+    "family": "quanshu-transmission; dependent, not independently authored"
+  },
+  "vietnameseWitness": {
+    "sourceId": "nguyen-phat-loc-ham-so",
+    "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+    "readScope": "Complete Thiên Cơ section 2154–2365 (including separate timing), Lương/Tài2661–2669 and Vi/Quan3147–3152 with surrounding context",
+    "exactLocatorsRef": "docs/knowledge/research/knowledge-first-batch-4/comparisons.json",
+    "access": "Web reader; line numbers access-time only, no text retained",
+    "identity": "Attributed author, no print edition/page/scan authentication; embedded citations are dependent",
+    "rights": "No full body, ebook or translated excerpt stored; short original comparison notes only"
+  },
+  "authoredWitnesses": [
+    {
+      "provisionalWitnessId": "ling-donglai-thien-phu-131-web-20261017",
+      "title": "紫微斗数命理学：天府星",
+      "section": "第二节、天府星",
+      "sha256": "f7505bd4628e239a0f5b535cf13987097376c365840a7d7034feec1318981181",
+      "characters": 56026,
+      "readScope": "Credited opening; complete matching paragraphs about brothers/servants, their surrounding multi-palace and adverse-condition discussion; not the entire print book",
+      "author": "令东来",
+      "url": "https://www.xuanmen.com.cn/archives/131.html",
+      "access": "Normal direct HTTP, status200; HTML stripped only in memory for reading",
+      "sourceTextRetained": false,
+      "observationHashMethod": "SHA256 decoded HTML re-encoded UTF8, not network byte hash or retained artifact",
+      "reproducibility": "URL + section + paragraph locator replayable as navigation; dynamic observation hash cannot be reproduced offline without source body",
+      "edition": "Author declares print-book extract; print edition/year/page unverified",
+      "rights": "Author requests attribution; no explicit open reuse grant verified. Store metadata/brief original analysis only, no article text.",
+      "family": "ling-donglai-authored-commentary"
+    },
+    {
+      "provisionalWitnessId": "ling-donglai-thai-am-167-web-20261017",
+      "title": "紫微斗数命理学：太阴星",
+      "section": "太阴星 / family palaces and 兄弟宫、奴仆宫 discussion",
+      "sha256": "d09fe8671b89032b079efd1c8925aa039d30fac3e1a0ccd680bfbbd92a97bbf6",
+      "characters": 56226,
+      "readScope": "Credited opening; complete matching brothers/servants paragraphs and surrounding family/whole-combination qualifications; not the entire print book",
+      "author": "令东来",
+      "url": "https://www.xuanmen.com.cn/archives/167.html",
+      "access": "Normal direct HTTP, status200; HTML stripped only in memory for reading",
+      "sourceTextRetained": false,
+      "observationHashMethod": "SHA256 decoded HTML re-encoded UTF8, not network byte hash or retained artifact",
+      "reproducibility": "URL + section + paragraph locator replayable as navigation; dynamic observation hash cannot be reproduced offline without source body",
+      "edition": "Author declares print-book extract; print edition/year/page unverified",
+      "rights": "Author requests attribution; no explicit open reuse grant verified. Store metadata/brief original analysis only, no article text.",
+      "family": "ling-donglai-authored-commentary"
+    },
+    {
+      "provisionalWitnessId": "ling-donglai-thien-co-169-web-20261017",
+      "title": "紫微斗数命理学：天机星",
+      "section": "第十四节、天机星",
+      "sha256": "cfa9fd9ca415589a459664386ca6112d8d5e11d5bf9b46784c663196ac8f1c51",
+      "characters": 54576,
+      "readScope": "Credited opening and substantive article body, including natal assistants/cohosts, palace and timing distinctions",
+      "author": "令东来",
+      "url": "https://www.xuanmen.com.cn/archives/169.html",
+      "access": "Normal direct HTTP, status200; HTML stripped only in memory for reading",
+      "sourceTextRetained": false,
+      "observationHashMethod": "SHA256 decoded HTML re-encoded UTF8, not network byte hash or retained artifact",
+      "reproducibility": "URL + section + paragraph locator replayable as navigation; dynamic observation hash cannot be reproduced offline without source body",
+      "edition": "Author declares print-book extract; print edition/year/page unverified",
+      "rights": "Author requests attribution; no explicit open reuse grant verified. Store metadata/brief original analysis only, no article text.",
+      "family": "ling-donglai-authored-commentary"
+    }
+  ],
+  "acquisitionLimits": [
+    "No repeated scan retries or original-edition authentication",
+    "Three new article URLs are one already-known author family, not three independent books",
+    "No school assignment established; mirrors/quoted books not counted as independently read",
+    "The newly performed comparisons are conditional and may be partial or disputed, never source approval"
+  ],
+  "priorDossiersRead": [
+    "docs/knowledge/research/knowledge-first-batch-2/DOSSIER.md",
+    "docs/knowledge/research/knowledge-first-batch-3/DOSSIER.md"
+  ],
+  "dispositionRef": "docs/knowledge/research/knowledge-first-batch-4/dispositions.json",
+  "approval": {
+    "sourceReviewExecuted": false,
+    "runtimeApprovalRequested": false,
+    "publicReleasePermission": "unchanged_closed",
+    "t034": "unresolved_unapproved"
+  },
+  "historicalSnapshots": {
+    "docs/knowledge/research/knowledge-first-batch-1/ACQUISITION.md": "e2f834cf97a40abd299bba43dd90bf1157dd591ee510085ebd1f2c2aca69291f",
+    "docs/knowledge/research/knowledge-first-batch-1/DOSSIER.md": "48f37773c7f6c45f9086bd81f4fc8c2a7335178e12b0f025e48cfe770d050d5c",
+    "docs/knowledge/research/knowledge-first-batch-1/evidence.json": "e69ebd6111e9ab10266ee2351871ca1714fd8df7de40100c9661c1af801ffb56",
+    "docs/knowledge/research/knowledge-first-batch-1/inventory.json": "4cef38d91238d980415b7e4b75ee5d9180a9a9238120716e0ad82f7d7e88f900",
+    "docs/knowledge/research/knowledge-first-batch-1/PALACE_GAPS.md": "a874b1760a612f72281f993324c1f5ad7705314268612e16ba34f4bf1eecd2ed",
+    "docs/knowledge/research/knowledge-first-batch-1/README.md": "36408e611fb358ac0814310cc39b53a892b13beb019c5afc83b69afde91571ab",
+    "docs/knowledge/research/knowledge-first-batch-1/validate.mjs": "e21e5e5bc81cc8e54a11d10796638653f979ac600a00df6450155fd797fdfa55",
+    "docs/knowledge/research/knowledge-first-batch-2/build-index.mjs": "471eddb837b79f5fad2680a3a20475f7411d0af7952e95c5bf0f619336732539",
+    "docs/knowledge/research/knowledge-first-batch-2/comparisons.json": "b4059ae79134a37985c00b8859bcc75b8af52c12fcffe9810b99538b9f5c877b",
+    "docs/knowledge/research/knowledge-first-batch-2/DOSSIER.md": "b12b46f9779ded25c64fc48c8f834bf0ddc83eb7af6cdd5ec139ca50cbfb24de",
+    "docs/knowledge/research/knowledge-first-batch-2/evidence.json": "3abf3445096720de8c579c996aea09b5b72ded31c2c718c9069eeceed80b8296",
+    "docs/knowledge/research/knowledge-first-batch-2/knowledge-records.json": "7b276fb7065263ad2894e67a96857de1fb7057fbc2a378c731794c7af0cf3125",
+    "docs/knowledge/research/knowledge-first-batch-2/major-star-palace-index.json": "c8ed6c450aa6a4e2d69fe60f218271a9b92556c335b524f4b41fae5eae7a5448",
+    "docs/knowledge/research/knowledge-first-batch-2/README.md": "352a38c10187622672fa43c8b0e39821cb93dbeb631ff6870a3aaa4ff1be2c00",
+    "docs/knowledge/research/knowledge-first-batch-2/validate.mjs": "77325892b897b249ed07882042a62a7e4d58e251d8712ce23b7c2855024a08fd",
+    "docs/knowledge/research/knowledge-first-batch-3/comparisons.json": "7e91eb0f5a2149fb918710f562867d4b4edea167269063c15ed53178c0ba4505",
+    "docs/knowledge/research/knowledge-first-batch-3/DOSSIER.md": "c6023029516b1a444d09e2626d567a8924266e43493ef2235fa2518145e548bb",
+    "docs/knowledge/research/knowledge-first-batch-3/evidence.json": "f865742d938ef51c88e5fa444a5664ac93441da693eccf80d94b63a277962189",
+    "docs/knowledge/research/knowledge-first-batch-3/knowledge-records.json": "7c719e7c86f4f67983367be52853a73a3f5c2baa3fab758898ba2bc8ee0f7575",
+    "docs/knowledge/research/knowledge-first-batch-3/README.md": "873b57e6e9272bb236c6da4392747c237ae48db7ca53a8ad3d8ab252bfbaa1fa",
+    "docs/knowledge/research/knowledge-first-batch-3/validate.mjs": "e34f22d8dbaad776bdc0fda190782f60610cf65a949ab496e4227d153027f340",
+    "docs/knowledge/sources.json": "15749672a8a7781db4ae6c8ccbdf06f58fe0b78f268e71f5eaa396c62b503671",
+    "docs/knowledge/interpretation-claims.json": "3b3f4587a8850c44b57953a783f404663bdd429aaa5fc75e518241e614ec4b7d",
+    "docs/knowledge/pilotClaims.json": "a5d24345c851d404f932c25fa7e8fa7f7bfa840b8b53da3a443e9bf82395c95a"
+  },
+  "historicalSnapshotHashMethod": "UTF8 content with CRLF normalized to LF, no other normalization",
+  "maintenanceException": "Only Batch3 refresh-index.mjs changed as explicitly authorized to include Batch4; historical packet bodies and snapshots untouched",
+  "retention": "No new source body, PDF, corpus or dataset retained. Existing retained source spans referenced without modification.",
+  "validation": {
+    "researchData": "PASS: Batch4 and historical Batch3 validators, retained span hashes, historical snapshots, unique IDs and cross-record/index checks",
+    "documentationCheckerTests": "PASS",
+    "documentationLinks": "PASS: 293 Markdown files",
+    "whitespace": "PASS: git diff --check",
+    "limit": "Data consistency only; no source-authentication, interpretation approval or application tests"
+  }
+}
