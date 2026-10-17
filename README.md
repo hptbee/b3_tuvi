@@ -285,8 +285,9 @@ Tử Vi và Thần Số Học là các hệ thống diễn giải mang tính tha
 |---|---|
 | [Trạng thái Thần Số Học](docs/numerology/IMPLEMENTATION_STATUS.md) | Năng lực MVP hiện có, test evidence và backlog kế tiếp |
 | [Roadmap Thần Số Học A–Z](docs/planning/ROADMAP_NUMEROLOGY_A_TO_Z.md) | Kế hoạch mới: công thức, chuẩn hóa tên, engine, API, nội dung, UX, tests và phát hành |
-| [Roadmap Tử Vi Sprint 9–14](docs/planning/ROADMAP_SPRINT_9_14.md) | Tri thức Tử Vi, đối chiếu nguồn, vận hạn và AI có chứng cứ |
-| [Autodev Master Plan V2](docs/planning/AUTODEV_MASTER_PLAN_V2.md) | Kế hoạch/điều phối hiện có; không thay bằng roadmap Thần Số Học |
+| [Roadmap nghiên cứu Tử Vi — Knowledge-First](docs/planning/ROADMAP_KNOWLEDGE_RESEARCH.md) | **Đang áp dụng:** nghiên cứu đa nguồn, kiểm kê sách/ebook, tri thức và khác biệt trường phái; không tự khởi chạy AutoDev |
+| [Roadmap Tử Vi Sprint 9–14](docs/planning/ROADMAP_SPRINT_9_14.md) | Lịch sử kế hoạch engineering, hiện tạm hoãn sau khi chuyển hướng sang nghiên cứu |
+| [AutoDev Master Plan V2](docs/planning/AUTODEV_MASTER_PLAN_V2.md) | Lưu lịch sử và backlog engineering; chỉ dùng khi có yêu cầu triển khai riêng |
 | [AI Context](docs/engineering/AI_CONTEXT.md) | Map file và hướng dẫn developers/agents |
 | [Architectural Overview](docs/architecture/ARCHITECTURAL_OVERVIEW.md) | Luồng dữ liệu và kiến trúc Tử Vi |
 | [Contributing](docs/engineering/CONTRIBUTING.md) | Quy tắc thay đổi mã nguồn, domain và dữ liệu |
