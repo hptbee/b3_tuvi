@@ -1,0 +1,81 @@
+{
+  "batchId": "KR-B10-20261017",
+  "pinnedCommit": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "newExternalRequests": 0,
+  "reading": "Fresh inspection of four selected complete Q&A sections from successful Batch9 pinned Git acquisition; existing full Q2 sections read directly",
+  "excerpts": [
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-10/qa-duong-excerpt.txt",
+      "sha256": "f296cf3d4f1d0258b93fd173d4c303b33809157b5d4cf3a8a1bc31b07f65ddf2",
+      "extractionLines": [
+        89,
+        105
+      ],
+      "lineCount": 17,
+      "upstream": {
+        "sourcePath": "docs/zh_TW/learn/ancientBook-qa.html",
+        "gitBlob": "a0f07762f10dd291aa6f049f841a1c0c937e1adb",
+        "sha256": "4dd127acf974b07c4c74c7fe6720575ed046a9fd24e5c163f0fc74ecf2d2846a",
+        "scratchText": "/tmp/research-9-10/ancientBook-qa.txt",
+        "meaning": "Fresh read of same pinned digital family, not print authentication or independent authorship"
+      },
+      "extractionMethodRef": "docs/knowledge/research/knowledge-first-batch-9/source-observations.json"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-10/qa-dong-excerpt.txt",
+      "sha256": "79c0d0694cd73316e8b9b17fc97c2c2832a23816386b05b1d87d0bc42cf4dbca",
+      "extractionLines": [
+        111,
+        115
+      ],
+      "lineCount": 5,
+      "upstream": {
+        "sourcePath": "docs/zh_TW/learn/ancientBook-qa.html",
+        "gitBlob": "a0f07762f10dd291aa6f049f841a1c0c937e1adb",
+        "sha256": "4dd127acf974b07c4c74c7fe6720575ed046a9fd24e5c163f0fc74ecf2d2846a",
+        "scratchText": "/tmp/research-9-10/ancientBook-qa.txt",
+        "meaning": "Fresh read of same pinned digital family, not print authentication or independent authorship"
+      },
+      "extractionMethodRef": "docs/knowledge/research/knowledge-first-batch-9/source-observations.json"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-10/qa-phu-excerpt.txt",
+      "sha256": "ab1809a869bc0f5b4e477a67a4e282add27a9f78cf2507e10df8d1acd2a47cbe",
+      "extractionLines": [
+        121,
+        128
+      ],
+      "lineCount": 8,
+      "upstream": {
+        "sourcePath": "docs/zh_TW/learn/ancientBook-qa.html",
+        "gitBlob": "a0f07762f10dd291aa6f049f841a1c0c937e1adb",
+        "sha256": "4dd127acf974b07c4c74c7fe6720575ed046a9fd24e5c163f0fc74ecf2d2846a",
+        "scratchText": "/tmp/research-9-10/ancientBook-qa.txt",
+        "meaning": "Fresh read of same pinned digital family, not print authentication or independent authorship"
+      },
+      "extractionMethodRef": "docs/knowledge/research/knowledge-first-batch-9/source-observations.json"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-10/qa-am-excerpt.txt",
+      "sha256": "d1ff5b49e6eb8730c2f4a5d52485ca05e0b6c1674b47ef3e59cfc738abf94efb",
+      "extractionLines": [
+        129,
+        133
+      ],
+      "lineCount": 5,
+      "upstream": {
+        "sourcePath": "docs/zh_TW/learn/ancientBook-qa.html",
+        "gitBlob": "a0f07762f10dd291aa6f049f841a1c0c937e1adb",
+        "sha256": "4dd127acf974b07c4c74c7fe6720575ed046a9fd24e5c163f0fc74ecf2d2846a",
+        "scratchText": "/tmp/research-9-10/ancientBook-qa.txt",
+        "meaning": "Fresh read of same pinned digital family, not print authentication or independent authorship"
+      },
+      "extractionMethodRef": "docs/knowledge/research/knowledge-first-batch-9/source-observations.json"
+    }
+  ],
+  "newIndependentAuthoredWitnesses": 0,
+  "newlyAuthenticatedEditions": 0,
+  "sourceApproval": "not_executed",
+  "rights": "No full HTML/book/software vendored; bounded classical text separate from modern project notice; print authentication unchanged",
+  "accessBlockerRef": "docs/knowledge/research/knowledge-first-batch-9/source-observations.json"
+}

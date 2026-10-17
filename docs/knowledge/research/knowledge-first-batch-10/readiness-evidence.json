@@ -1,0 +1,74 @@
+{
+  "meaning": "Read-only committed/working evidence inspection, no application execution, renewed claim approval or cohort measurement",
+  "researchMetrics": {
+    "indexedCells": 168,
+    "persistedRecords": 71,
+    "starPalaceRecords": 64,
+    "nonCellRecords": 7,
+    "contextualCells": 51,
+    "locatedOnlyCells": 117,
+    "comparedCellsIncludingDisputed": 41,
+    "cellsWithConflictingResearchStatus": 7,
+    "cellsWithContradictionFlags": 17,
+    "palacesWithContextualRecords": 12,
+    "newBatch3Records": 14,
+    "newBatch3Cells": 11,
+    "newBatch4Records": 14,
+    "newBatch4Cells": 11,
+    "newBatch5Records": 11,
+    "newBatch5Cells": 7,
+    "newBatch6Records": 9,
+    "newBatch6Cells": 3,
+    "newBatch7Records": 3,
+    "newBatch7Cells": 2,
+    "newBatch8Records": 4,
+    "newBatch8Cells": 4,
+    "newBatch9Records": 1,
+    "newBatch9Cells": 0,
+    "newBatch10Records": 6,
+    "newBatch10Cells": 4
+  },
+  "starCells": {
+    "tu_vi": 12,
+    "thien_luong": 12,
+    "thai_duong": 4,
+    "thai_am": 5,
+    "thien_phu": 5,
+    "thien_co": 12,
+    "thien_dong": 1
+  },
+  "palaceCells": {
+    "phu_mau": 5,
+    "tu_tuc": 3,
+    "tat_ach": 4,
+    "menh": 4,
+    "quan_loc": 5,
+    "tai_bach": 5,
+    "phuc_duc": 5,
+    "thien_di": 4,
+    "dien_trach": 4,
+    "no_boc": 4,
+    "phu_the": 4,
+    "huynh_de": 4
+  },
+  "researchSourceReviewStates": {
+    "not_executed": 71
+  },
+  "researchRuntimeApprovalStates": {
+    "not_requested": 71
+  },
+  "existingClaimRegistry": {
+    "path": "docs/knowledge/interpretation-claims.json",
+    "sha256": "3b3f4587a8850c44b57953a783f404663bdd429aaa5fc75e518241e614ec4b7d",
+    "claimCount": 14,
+    "approvedForInterpretation": 14,
+    "reviewStates": {
+      "AI_CROSS_REVIEWED": 14
+    },
+    "releasePermissions": {
+      "withheld": 14
+    },
+    "expertVerifiedCount": 0,
+    "scope": "Existing fourteen narrowly approved internal claims; registry count does not establish current chart eligibility or public release"
+  }
+}

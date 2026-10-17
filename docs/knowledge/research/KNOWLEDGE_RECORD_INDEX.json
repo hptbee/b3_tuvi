@@ -10,18 +10,19 @@
     "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
     "docs/knowledge/research/knowledge-first-batch-7/knowledge-records.json",
     "docs/knowledge/research/knowledge-first-batch-8/knowledge-records.json",
-    "docs/knowledge/research/knowledge-first-batch-9/knowledge-records.json"
+    "docs/knowledge/research/knowledge-first-batch-9/knowledge-records.json",
+    "docs/knowledge/research/knowledge-first-batch-10/knowledge-records.json"
   ],
   "metrics": {
     "indexedCells": 168,
-    "persistedRecords": 65,
-    "starPalaceRecords": 58,
+    "persistedRecords": 71,
+    "starPalaceRecords": 64,
     "nonCellRecords": 7,
-    "contextualCells": 47,
-    "locatedOnlyCells": 121,
+    "contextualCells": 51,
+    "locatedOnlyCells": 117,
     "comparedCellsIncludingDisputed": 41,
     "cellsWithConflictingResearchStatus": 7,
-    "cellsWithContradictionFlags": 15,
+    "cellsWithContradictionFlags": 17,
     "palacesWithContextualRecords": 12,
     "newBatch3Records": 14,
     "newBatch3Cells": 11,
@@ -36,7 +37,9 @@
     "newBatch8Records": 4,
     "newBatch8Cells": 4,
     "newBatch9Records": 1,
-    "newBatch9Cells": 0
+    "newBatch9Cells": 0,
+    "newBatch10Records": 6,
+    "newBatch10Cells": 4
   },
   "metricMeaning": "Compared includes actually performed conditional comparisons with identity limits and disputed readings; not source acceptance. Contradiction flags include a linked dispute on a record whose main research status may be COMPARED.",
   "familySummary": [
@@ -697,6 +700,60 @@
         ]
       },
       "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB10-QL-PHU",
+      "file": "docs/knowledge/research/knowledge-first-batch-10/knowledge-records.json",
+      "subject": {
+        "starId": "thien_phu",
+        "palaceId": "quan_loc"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB10-TB-AM",
+      "file": "docs/knowledge/research/knowledge-first-batch-10/knowledge-records.json",
+      "subject": {
+        "starId": "thai_am",
+        "palaceId": "tai_bach"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB10-QL-DUONG",
+      "file": "docs/knowledge/research/knowledge-first-batch-10/knowledge-records.json",
+      "subject": {
+        "starId": "thai_duong",
+        "palaceId": "quan_loc"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB10-PD-DONG",
+      "file": "docs/knowledge/research/knowledge-first-batch-10/knowledge-records.json",
+      "subject": {
+        "starId": "thien_dong",
+        "palaceId": "phuc_duc"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB10-NB-PHU-DEPTH",
+      "file": "docs/knowledge/research/knowledge-first-batch-10/knowledge-records.json",
+      "subject": {
+        "starId": "thien_phu",
+        "palaceId": "no_boc"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB10-HD-AM-DEPTH",
+      "file": "docs/knowledge/research/knowledge-first-batch-10/knowledge-records.json",
+      "subject": {
+        "starId": "thai_am",
+        "palaceId": "huynh_de"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
     }
   ],
   "cells": [
@@ -862,7 +919,8 @@
       "recordIds": [
         "KRB3-NB-PHU",
         "KRB4-NB-PHU-LDL",
-        "KRB6-NB-PHU-SCAN"
+        "KRB6-NB-PHU-SCAN",
+        "KRB10-NB-PHU-DEPTH"
       ],
       "researchStatesObserved": [
         "CONTEXT_MAPPED",
@@ -882,7 +940,8 @@
       "cellId": "huynh_de:thai_am",
       "recordIds": [
         "KRB3-HD-AM",
-        "KRB4-HD-AM-LDL"
+        "KRB4-HD-AM-LDL",
+        "KRB10-HD-AM-DEPTH"
       ],
       "researchStatesObserved": [
         "CONTEXT_MAPPED",
@@ -1141,7 +1200,43 @@
       "researchStatesObserved": [
         "CONTEXT_MAPPED"
       ]
+    },
+    {
+      "cellId": "quan_loc:thien_phu",
+      "recordIds": [
+        "KRB10-QL-PHU"
+      ],
+      "researchStatesObserved": [
+        "CONTEXT_MAPPED"
+      ]
+    },
+    {
+      "cellId": "tai_bach:thai_am",
+      "recordIds": [
+        "KRB10-TB-AM"
+      ],
+      "researchStatesObserved": [
+        "CONTEXT_MAPPED"
+      ]
+    },
+    {
+      "cellId": "quan_loc:thai_duong",
+      "recordIds": [
+        "KRB10-QL-DUONG"
+      ],
+      "researchStatesObserved": [
+        "CONTEXT_MAPPED"
+      ]
+    },
+    {
+      "cellId": "phuc_duc:thien_dong",
+      "recordIds": [
+        "KRB10-PD-DONG"
+      ],
+      "researchStatesObserved": [
+        "CONTEXT_MAPPED"
+      ]
     }
   ],
-  "refreshToolRef": "docs/knowledge/research/knowledge-first-batch-9/refresh-index.mjs"
+  "refreshToolRef": "docs/knowledge/research/knowledge-first-batch-10/refresh-index.mjs"
 }

@@ -1,0 +1,1219 @@
+{
+  "batchId": "KR-B10-20261017",
+  "records": [
+    {
+      "recordId": "KRB10-QL-PHU",
+      "claimType": "interpretation",
+      "subject": {
+        "starId": "thien_phu",
+        "palaceId": "quan_loc"
+      },
+      "schoolId": null,
+      "schoolScope": "Exact retained Quanshu layers only; no verified school assignment or automatic B3 brightness/profile equivalence",
+      "researchStorage": "accepted_for_bounded_research_with_uncertainty",
+      "status": {
+        "collection": "COLLECTED",
+        "contextMapping": "CONTEXT_MAPPED",
+        "comparison": "performed_with_identity_limits",
+        "research": "CONTEXT_MAPPED",
+        "sourceReview": "not_executed",
+        "runtimeApproval": "not_requested",
+        "publicRelease": "withheld_closed"
+      },
+      "verificationStatus": {
+        "implementationStatus": "not_executable",
+        "formulaStatus": "undocumented",
+        "bibliographicStatus": "secondary",
+        "interpretationStatus": "unreviewed"
+      },
+      "rights": {
+        "retention": "Bounded classical excerpts, exact existing source spans and original analysis only; no modern body/corpus redistribution",
+        "scope": "Digital pin is not historical edition authentication, expert review or public permission"
+      },
+      "exclusions": [
+        "Research only; traditional outcomes are not empirically verified personal advice.",
+        "No unapproved runtime/brightness/placement/score/relationship semantics; no public wording activation.",
+        "Unmentioned qualifiers are absent evidence, not satisfied predicates."
+      ],
+      "sourceFamilyDependencies": [
+        "quanshu-transmission: fresh Q&A and retained Juan2 are the same pinned software-hosted classical family, not independently authored confirmation"
+      ],
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-10/DOSSIER.md#krb10-ql-phu",
+      "evidenceRef": "docs/knowledge/research/knowledge-first-batch-10/evidence.json",
+      "recordFile": "docs/knowledge/research/knowledge-first-batch-10/knowledge-records.json",
+      "sourceReferences": [
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "page": null,
+          "originalQuotation": null,
+          "section": "Selected palace entry",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 745,
+            "endLine": 745,
+            "sha256": "1d2c54e92ab7dfa18cc191f41e8c33886f30598fa7dbaba97fa9df8896735965",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "page": null,
+          "originalQuotation": null,
+          "section": "Complete governing palace section",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 737,
+            "endLine": 764,
+            "sha256": "e036adb619841d719ea2aff35cb75880ae8b050e4aae7702924382383c0e9743",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "page": null,
+          "originalQuotation": null,
+          "section": "Complete star block incl natal and temporal headings",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 236,
+            "endLine": 252,
+            "sha256": "6ee9e79a751a8615a287d96d6f4b9eae579718f54e9578c8b91e23a7c7510120",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": null,
+          "page": null,
+          "originalQuotation": null,
+          "section": "Complete selected Q&A question/answer/attributed layer",
+          "location": {
+            "path": "docs/knowledge/research/knowledge-first-batch-10/qa-phu-excerpt.txt",
+            "startLine": 1,
+            "endLine": 8,
+            "sha256": "d9a75d5a8a55834c9077b3807ef99b6838029ab32a322b3005ade503cf1a40d5",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "page": null,
+          "originalQuotation": null,
+          "section": "星五行 table and editorial正曜layer; classification not normalized",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 65,
+            "endLine": 85,
+            "sha256": "96282962abc95fe68b1dd29ec893df713c84c857ebf50f4504900e2decb16d6c",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          }
+        }
+      ],
+      "predicate": "thien_phu/quan_loc — new full-context cell",
+      "meaningVi": "Phủ/Quan nhập miếu được văn võ đều cát; không Dương/Đà/Hỏa/Linh/Không/Hao mới có lời toàn mỹ. Đồng Vi nêu danh tiếng văn võ, đồng Liêm/Vũ nêu quyền quý, thấy Không/Kiếp thì bình thường. Giữ Không/Hao ở mệnh đề vắng khác Không/Kiếp ở mệnh đề thấy; không chuẩn hóa chúng thành một bộ sáu sao. Vấn đáp nói nhiều cung cát nhưng cũng không thích bốn sát, gặp không vong cô lập và coi Nô/tướng mạo yếu; không thể lấy tóm tắt cát để xóa điều kiện tại Quan.",
+      "governingContext": {
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 737,
+          "endLine": 764,
+          "sha256": "e036adb619841d719ea2aff35cb75880ae8b050e4aae7702924382383c0e9743",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "preambleStatus": "No separate general preamble before first star in this retained section",
+        "meaningVi": "Read complete section including reciprocal entries and terminal temporal paragraph; entry characteristics/natal/time layers stay separate.",
+        "dependencies": [
+          "palace_scope",
+          "explicit_relation",
+          "brightness_qualifier",
+          "generic_vs_named_adverse",
+          "quantifier_scope",
+          "natal_vs_time"
+        ]
+      },
+      "conditions": [
+        "Phủ tọa Quan; entry nêu nhập miếu, không nêu độc thủ.",
+        "無羊陀火鈴空耗 là mệnh đề vắng được giữ nguyên; 空/耗 chưa có định nghĩa ID hay toán tử trong câu.",
+        "Vi/Liêm/Vũ có字同; không đổi sang hội chiếu hoặc bắt cả Liêm và Vũ cùng có."
+      ],
+      "modifiers": [
+        "見空劫平常 khác mệnh đề vắng空耗; không đồng nhất Không với Địa Không khi chưa có glossary.",
+        "Toàn mỹ không là sự nghiệp được kiểm chứng; âm/dương lịch tuổi hoặc tuổi thành tựu không có trong entry.",
+        "Vi738Phủ同 quyền quý và Phủ745Vi同 văn võ danh tiếng là hai cách nhấn khác nhau, không cùng câu đầy đủ điều kiện."
+      ],
+      "exceptions": [
+        "Không chuyển 能化火鈴為福 của vấn đáp thành miễn sát trong Quan.",
+        "Q251–252 là nhập hạn, không làm timing cho Quan nguyên cục."
+      ],
+      "relationships": [
+        {
+          "type": "reciprocal_or_related_entry",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 738,
+            "endLine": 738,
+            "sha256": "aa2a1aea9715e635a14860697fb14f68bcec1ff4db330680bce564f309a231f2",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "scope": "Vi entry: Phủ同 quyền quý/danh lợi; Phủ745Vi同 văn võ danh tiếng. Giữ các qualifier riêng."
+        },
+        {
+          "type": "reciprocal_or_related_entry",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 744,
+            "endLine": 744,
+            "sha256": "55fa70a25dd0d6c7878e411434fb125f1f9526dd6d4bcdd79b431ab39b546a6c",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "scope": "Liêm entry: 天相天府同 groups names; không suy tất cả đồng thời hoặc chỉ một sao là đủ."
+        }
+      ],
+      "positiveBranches": [
+        "Only exact favorable branches described in meaningVi and conditions; not a verified outcome."
+      ],
+      "adverseBranches": [
+        "Named adverse/opposing/uncertain clauses retained in modifiers and uncertainties; no synthesized dominance score."
+      ],
+      "comparisonIds": [
+        "B10C01"
+      ],
+      "uncertainties": [
+        "Danh tính 空/耗 và quan hệ AND/OR của danh sách chưa chốt.",
+        "Phạm vi đầu入廟, clause vắng và cuối見空劫 tới cohost chưa có print/gloss.",
+        "QA không cấp một thứ tự ưu tiên khi cát/hung đồng hiện."
+      ],
+      "contradicts": [],
+      "nextAction": "Identified Phủ/Quan full print and glossary of空/耗/空劫; independent authored matching cohost/brightness comparator.",
+      "originalTerms": [
+        "天府",
+        "入廟",
+        "無羊陀火鈴空耗",
+        "見空劫",
+        "文武"
+      ]
+    },
+    {
+      "recordId": "KRB10-TB-AM",
+      "claimType": "interpretation",
+      "subject": {
+        "starId": "thai_am",
+        "palaceId": "tai_bach"
+      },
+      "schoolId": null,
+      "schoolScope": "Exact retained Quanshu layers only; no verified school assignment or automatic B3 brightness/profile equivalence",
+      "researchStorage": "accepted_for_bounded_research_with_uncertainty",
+      "status": {
+        "collection": "COLLECTED",
+        "contextMapping": "CONTEXT_MAPPED",
+        "comparison": "performed_with_identity_limits",
+        "research": "CONTEXT_MAPPED",
+        "sourceReview": "not_executed",
+        "runtimeApproval": "not_requested",
+        "publicRelease": "withheld_closed"
+      },
+      "verificationStatus": {
+        "implementationStatus": "not_executable",
+        "formulaStatus": "undocumented",
+        "bibliographicStatus": "secondary",
+        "interpretationStatus": "unreviewed"
+      },
+      "rights": {
+        "retention": "Bounded classical excerpts, exact existing source spans and original analysis only; no modern body/corpus redistribution",
+        "scope": "Digital pin is not historical edition authentication, expert review or public permission"
+      },
+      "exclusions": [
+        "Research only; traditional outcomes are not empirically verified personal advice.",
+        "No unapproved runtime/brightness/placement/score/relationship semantics; no public wording activation.",
+        "Unmentioned qualifiers are absent evidence, not satisfied predicates."
+      ],
+      "sourceFamilyDependencies": [
+        "quanshu-transmission: fresh Q&A and retained Juan2 are the same pinned software-hosted classical family, not independently authored confirmation"
+      ],
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-10/DOSSIER.md#krb10-tb-am",
+      "evidenceRef": "docs/knowledge/research/knowledge-first-batch-10/evidence.json",
+      "recordFile": "docs/knowledge/research/knowledge-first-batch-10/knowledge-records.json",
+      "sourceReferences": [
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "page": null,
+          "originalQuotation": null,
+          "section": "Selected palace entry",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 644,
+            "endLine": 644,
+            "sha256": "d1d3f300a6049d3c64b22f3359dc778e48c5d4ee40fe40338769ac944a741dc1",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "page": null,
+          "originalQuotation": null,
+          "section": "Complete governing palace section",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 633,
+            "endLine": 662,
+            "sha256": "18e05f3a45cf27553642da48035fa263e267e90d49c9a1211df734a6dc54ee13",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "page": null,
+          "originalQuotation": null,
+          "section": "Complete star block incl natal and temporal headings",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 253,
+            "endLine": 270,
+            "sha256": "c31a3d917282545ca6ebe0f05b399a62aceebced88fa48876df20b590d3d4c90",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": null,
+          "page": null,
+          "originalQuotation": null,
+          "section": "Complete selected Q&A question/answer/attributed layer",
+          "location": {
+            "path": "docs/knowledge/research/knowledge-first-batch-10/qa-am-excerpt.txt",
+            "startLine": 1,
+            "endLine": 5,
+            "sha256": "d29214f3498fee0583476fd495932ab2c3dbf6faeefe304c9c9bbea11ac23c50",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "page": null,
+          "originalQuotation": null,
+          "section": "星五行 table and editorial正曜layer; classification not normalized",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 65,
+            "endLine": 85,
+            "sha256": "96282962abc95fe68b1dd29ec893df713c84c857ebf50f4504900e2decb16d6c",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          }
+        }
+      ],
+      "predicate": "thai_am/tai_bach — new full-context cell",
+      "meaningVi": "Âm/Tài nhập miếu kho đầy, hãm thành bại không tụ theo nguồn. Nhật đồng trước ít sau nhiều; Cơ đồng trắng tay tạo tài; Đồng đồng tài vượng sinh thân; Lộc Tồn kiêm Tả/Hữu đồng nêu đại phú. Nhóm kiêm/đồng không cho phép suy chỉ cần một sao, mọi sao đồng thời hay hội chiếu. Nhật637có thêm Tả/Hữu/cát trong nhánh Âm và Cơ636Âm đồng hãm nói thành bại; điều kiện không hoàn toàn trùng. Q&A nói thượng/hạ huyền và bảng sáng khác một phần, nên không nhập pha trăng, giới hoặc bảng miếu vào Tài khi chưa đủ semantics.",
+      "governingContext": {
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 633,
+          "endLine": 662,
+          "sha256": "18e05f3a45cf27553642da48035fa263e267e90d49c9a1211df734a6dc54ee13",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "preambleStatus": "No separate general preamble before first star in this retained section",
+        "meaningVi": "Read complete section including reciprocal entries and terminal temporal paragraph; entry characteristics/natal/time layers stay separate.",
+        "dependencies": [
+          "palace_scope",
+          "explicit_relation",
+          "brightness_qualifier",
+          "generic_vs_named_adverse",
+          "quantifier_scope",
+          "natal_vs_time"
+        ]
+      },
+      "conditions": [
+        "Âm tại Tài; nhập miếu và hãm là hai nhánh rõ, không tự xác định chi theo bảng khác.",
+        "Nhật/Cơ/Đồng có chữ同, không mở sang đối cung/tam hợp.",
+        "祿存兼左右同 giữ nhóm được kể, ranh giới同/兼 và lượng từ chưa được định nghĩa."
+      ],
+      "modifiers": [
+        "Trước ít sau nhiều thuộc nhánh Nhật, không truyền timing cho mọi Âm.",
+        "Q636Âm đồng陷宮 thành bại là condition khác generic trắng tay tạo tài của644.",
+        "Lời kho đầy/đại phú là lời truyền thống không thước đo tài chính hiện đại."
+      ],
+      "exceptions": [
+        "Không tự thêm sáu sát vào644 chỉ vì entry lân cận có.",
+        "Q267–270 là nhập hạn, không thành vận/thời điểm cho nguyên cục644.",
+        "QA未陷 soQ257未利益 không được tự chọn bảng làm điều kiện Tài."
+      ],
+      "relationships": [
+        {
+          "type": "reciprocal_or_related_entry",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 637,
+            "endLine": 637,
+            "sha256": "9c8e9124c60432fb6045dfc3cec6a6f596ecbba836297a817ba745572d1bace7",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "scope": "Nhật entry: Âm同 còn thêm左右吉星; không đồng predicate với644 chỉ Nhật同."
+        },
+        {
+          "type": "reciprocal_or_related_entry",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 636,
+            "endLine": 636,
+            "sha256": "a41e2c92935aff69625f57ffde88fa0224f0c7414e8f85502bcb5b673a138dd1",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "scope": "Cơ entry: Âm同陷宮 thành bại, khác clause tạo tài ở644; không xóa qualifier hãm."
+        }
+      ],
+      "positiveBranches": [
+        "Only exact favorable branches described in meaningVi and conditions; not a verified outcome."
+      ],
+      "adverseBranches": [
+        "Named adverse/opposing/uncertain clauses retained in modifiers and uncertainties; no synthesized dominance score."
+      ],
+      "comparisonIds": [
+        "B10C02"
+      ],
+      "uncertainties": [
+        "Lộc/Tả/Hữu nhóm và clause scope chưa đủ AND/OR.",
+        "Không có điều kiện Tuần/Triệt, can năm, phase trăng hoặc giới trong entry644.",
+        "Chưa xác thực edition; brightness tại未 khác tầng nguồn, B10D18 mở."
+      ],
+      "contradicts": [
+        "B10D18"
+      ],
+      "nextAction": "Identify exact printed brightness tables/QA and644; compare same Âm/Tài conditions with independently attributed author.",
+      "originalTerms": [
+        "太陰",
+        "入廟",
+        "陷宮",
+        "太陽同",
+        "祿存兼左右同"
+      ]
+    },
+    {
+      "recordId": "KRB10-QL-DUONG",
+      "claimType": "interpretation",
+      "subject": {
+        "starId": "thai_duong",
+        "palaceId": "quan_loc"
+      },
+      "schoolId": null,
+      "schoolScope": "Exact retained Quanshu layers only; no verified school assignment or automatic B3 brightness/profile equivalence",
+      "researchStorage": "accepted_for_bounded_research_with_uncertainty",
+      "status": {
+        "collection": "COLLECTED",
+        "contextMapping": "CONTEXT_MAPPED",
+        "comparison": "performed_with_identity_limits",
+        "research": "CONTEXT_MAPPED",
+        "sourceReview": "not_executed",
+        "runtimeApproval": "not_requested",
+        "publicRelease": "withheld_closed"
+      },
+      "verificationStatus": {
+        "implementationStatus": "not_executable",
+        "formulaStatus": "undocumented",
+        "bibliographicStatus": "secondary",
+        "interpretationStatus": "unreviewed"
+      },
+      "rights": {
+        "retention": "Bounded classical excerpts, exact existing source spans and original analysis only; no modern body/corpus redistribution",
+        "scope": "Digital pin is not historical edition authentication, expert review or public permission"
+      },
+      "exclusions": [
+        "Research only; traditional outcomes are not empirically verified personal advice.",
+        "No unapproved runtime/brightness/placement/score/relationship semantics; no public wording activation.",
+        "Unmentioned qualifiers are absent evidence, not satisfied predicates."
+      ],
+      "sourceFamilyDependencies": [
+        "quanshu-transmission: fresh Q&A and retained Juan2 are the same pinned software-hosted classical family, not independently authored confirmation"
+      ],
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-10/DOSSIER.md#krb10-ql-duong",
+      "evidenceRef": "docs/knowledge/research/knowledge-first-batch-10/evidence.json",
+      "recordFile": "docs/knowledge/research/knowledge-first-batch-10/knowledge-records.json",
+      "sourceReferences": [
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "page": null,
+          "originalQuotation": null,
+          "section": "Selected palace entry",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 740,
+            "endLine": 740,
+            "sha256": "5b577e2538034758ffbbbfaf212fa26e92bfb70a42cdabb054ecb955d1fbf957",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "page": null,
+          "originalQuotation": null,
+          "section": "Complete governing palace section",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 737,
+            "endLine": 764,
+            "sha256": "e036adb619841d719ea2aff35cb75880ae8b050e4aae7702924382383c0e9743",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "page": null,
+          "originalQuotation": null,
+          "section": "Complete star block incl natal and temporal headings",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 163,
+            "endLine": 181,
+            "sha256": "e7f8f70714c0db114cb4c51085095bba37d1c5b0dcfef5e683b4b0901013a6ec",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": null,
+          "page": null,
+          "originalQuotation": null,
+          "section": "Complete selected Q&A question/answer/attributed layer",
+          "location": {
+            "path": "docs/knowledge/research/knowledge-first-batch-10/qa-duong-excerpt.txt",
+            "startLine": 1,
+            "endLine": 17,
+            "sha256": "6a5a0cdba631f5d4747ae7459dd0f7163ccbc49f782682941d0adda5dd0f247d",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "page": null,
+          "originalQuotation": null,
+          "section": "星五行 table and editorial正曜layer; classification not normalized",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 65,
+            "endLine": 85,
+            "sha256": "96282962abc95fe68b1dd29ec893df713c84c857ebf50f4504900e2decb16d6c",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          }
+        }
+      ],
+      "predicate": "thai_duong/quan_loc — new full-context cell",
+      "meaningVi": "Dương/Quan nhập miếu văn võ tốt, không Dương/Đà/Hỏa/Linh thì cát; Âm đồng quý hiển, Tả/Hữu/Xương/Khúc/Khôi/Việt đồng và câu更君科祿權 nói phẩm bậc lịch sử. Chữ君 tại đây khó hiểu, không sửa thành hóa hoặc phép kết hợp đã chốt. Âm746hội Nhật/Xương/Khúc/Tả/Hữu ghi tam phẩm và V.Xương755Nhật đồng kèm cát/Khoa/Quyền/Lộc là entry khác; không giải chúng bằng cách tự cộng phẩm bậc. Q&A nêu tam hợp拱照Tài/Quan khác同 của740, có điều kiện hạn nâng đỡ trong ngữ cảnh rộng, không cấp phép nhập mọi qualifier vào entryQuan.",
+      "governingContext": {
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 737,
+          "endLine": 764,
+          "sha256": "e036adb619841d719ea2aff35cb75880ae8b050e4aae7702924382383c0e9743",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "preambleStatus": "No separate general preamble before first star in this retained section",
+        "meaningVi": "Read complete section including reciprocal entries and terminal temporal paragraph; entry characteristics/natal/time layers stay separate.",
+        "dependencies": [
+          "palace_scope",
+          "explicit_relation",
+          "brightness_qualifier",
+          "generic_vs_named_adverse",
+          "quantifier_scope",
+          "natal_vs_time"
+        ]
+      },
+      "conditions": [
+        "Dương tại Quan,入廟;不見 bốn tên Dương/Đà/Hỏa/Linh là mệnh đề vắng trong chính entry.",
+        "Âm同 khác hội Nhật trong entry Âm; không đổi thành quan hệ duy nhất cho tất cả nguồn.",
+        "Nhóm sáu trợ và科祿權 giữ nguyên chữ, không suy bộ điều kiện tối thiểu đã đủ cho nhất phẩm."
+      ],
+      "modifiers": [
+        "Q164 xét ngày/đêm trong block Mệnh và164–169 có brightness/chi; entry740 không nhắc ngày/đêm.",
+        "QA dùng三合拱照Tài/Quan và phụ hạn; không coi bằng同 tại740.",
+        "Bậc quan chức cổ trong từngentry khác nhau, không là số điểm/hứa hẹn thăng tiến."
+      ],
+      "exceptions": [
+        "Không sửa更君 tại740 dựa trên từ quen hoặc source khác.",
+        "Không dùng nghĩa broad cát hóa để bỏ不見bốn sát.",
+        "Q180–181 nhập hạn tách nguyên cục."
+      ],
+      "relationships": [
+        {
+          "type": "reciprocal_or_related_entry",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 746,
+            "endLine": 746,
+            "sha256": "dfe1a6df1fa7fc6a403ddedda8e9cc2825e9470a3b6623baaf42eb847ef0c5eb",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "scope": "Âm entry uses會太陽昌曲左右 and三品; not same relation/assistant conditions as Dương740同 and一品."
+        },
+        {
+          "type": "reciprocal_or_related_entry",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 755,
+            "endLine": 755,
+            "sha256": "57bbff57a97ac8f0cd898dad3dc11bbc4edb599c8562e24905bfce7cd99d4569",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "scope": "Văn Xương entry: 太陽同加吉科權祿, no free transfer of all qualifiers to740."
+        }
+      ],
+      "positiveBranches": [
+        "Only exact favorable branches described in meaningVi and conditions; not a verified outcome."
+      ],
+      "adverseBranches": [
+        "Named adverse/opposing/uncertain clauses retained in modifiers and uncertainties; no synthesized dominance score."
+      ],
+      "comparisonIds": [
+        "B10C03"
+      ],
+      "uncertainties": [
+        "Cú pháp更君科祿權 và AND/OR sáu trợ cần identified print.",
+        "Phạm vi nhập miếu/vắng sát tới các nhánh đồng cung chưa được gloss chốt.",
+        "Không có tương đương lịch sử giữa一品/三品 và kết quả hiện đại."
+      ],
+      "contradicts": [],
+      "nextAction": "Identified print for更君740 and relation/assistant scope; independent commentary at matching Quan placement.",
+      "originalTerms": [
+        "太陽",
+        "不見羊陀火鈴",
+        "太陰同",
+        "科祿權",
+        "三合拱照"
+      ]
+    },
+    {
+      "recordId": "KRB10-PD-DONG",
+      "claimType": "interpretation",
+      "subject": {
+        "starId": "thien_dong",
+        "palaceId": "phuc_duc"
+      },
+      "schoolId": null,
+      "schoolScope": "Exact retained Quanshu layers only; no verified school assignment or automatic B3 brightness/profile equivalence",
+      "researchStorage": "accepted_for_bounded_research_with_uncertainty",
+      "status": {
+        "collection": "COLLECTED",
+        "contextMapping": "CONTEXT_MAPPED",
+        "comparison": "performed_with_identity_limits",
+        "research": "CONTEXT_MAPPED",
+        "sourceReview": "not_executed",
+        "runtimeApproval": "not_requested",
+        "publicRelease": "withheld_closed"
+      },
+      "verificationStatus": {
+        "implementationStatus": "not_executable",
+        "formulaStatus": "undocumented",
+        "bibliographicStatus": "secondary",
+        "interpretationStatus": "unreviewed"
+      },
+      "rights": {
+        "retention": "Bounded classical excerpts, exact existing source spans and original analysis only; no modern body/corpus redistribution",
+        "scope": "Digital pin is not historical edition authentication, expert review or public permission"
+      },
+      "exclusions": [
+        "Research only; traditional outcomes are not empirically verified personal advice.",
+        "No unapproved runtime/brightness/placement/score/relationship semantics; no public wording activation.",
+        "Unmentioned qualifiers are absent evidence, not satisfied predicates."
+      ],
+      "sourceFamilyDependencies": [
+        "quanshu-transmission: fresh Q&A and retained Juan2 are the same pinned software-hosted classical family, not independently authored confirmation"
+      ],
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-10/DOSSIER.md#krb10-pd-dong",
+      "evidenceRef": "docs/knowledge/research/knowledge-first-batch-10/evidence.json",
+      "recordFile": "docs/knowledge/research/knowledge-first-batch-10/knowledge-records.json",
+      "sourceReferences": [
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "page": null,
+          "originalQuotation": null,
+          "section": "Selected palace entry",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 796,
+            "endLine": 796,
+            "sha256": "d0ef3ada30bc2f7c5a9ec33e3d94ad295a05ba621db929c8812b11cffe711798",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "page": null,
+          "originalQuotation": null,
+          "section": "Complete governing palace section",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 789,
+            "endLine": 816,
+            "sha256": "1ad123491278d5fcc8c568956085100468f59e45bc57035339586d3387bc5757",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "page": null,
+          "originalQuotation": null,
+          "section": "Complete star block incl natal and temporal headings",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 200,
+            "endLine": 217,
+            "sha256": "1a2327d921b2a2ecf1138e23960cd0032987ed30e989e4ad95f34bc0dc0092d2",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": null,
+          "page": null,
+          "originalQuotation": null,
+          "section": "Complete selected Q&A question/answer/attributed layer",
+          "location": {
+            "path": "docs/knowledge/research/knowledge-first-batch-10/qa-dong-excerpt.txt",
+            "startLine": 1,
+            "endLine": 5,
+            "sha256": "2d169bd0599c11a6c2b4906a8ea6f99dbca061e72e02589c282c6fda543a2e8f",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "page": null,
+          "originalQuotation": null,
+          "section": "星五行 table and editorial正曜layer; classification not normalized",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 65,
+            "endLine": 85,
+            "sha256": "96282962abc95fe68b1dd29ec893df713c84c857ebf50f4504900e2decb16d6c",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          }
+        }
+      ],
+      "predicate": "thien_dong/phuc_duc — new full-context cell",
+      "meaningVi": "Đồng/Phúc mở vui có phúc thọ; Cự đồng nhiều lo ít vui, Âm đồng hưởng phúc, Lương đồng thanh nhàn vui. Không có standalone Lương trong toànmục; Đồng796chỉ là một endpoint cohost, không tạo entry Lương thất lạc. Cự801ngược lại Đồng đồng hưởng phúc trong entry nhiều lo cùng bộ sáu sát cuối; khác chiều câu nhưng chưa cùng tập điều kiện. QA nói không sợ nhiều sát rồi vẫn có nếu bốn sát ởTỵ/Hợi và vôphá; giữ cả hai tầng, không kết luận Đồng miễn sát. BảngQ70水金 khácprose201/QA113水 được ghi là lớp từ ngữ cần làm rõ, không sửa ngũ hành.",
+      "governingContext": {
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 789,
+          "endLine": 816,
+          "sha256": "1ad123491278d5fcc8c568956085100468f59e45bc57035339586d3387bc5757",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "preambleStatus": "No separate general preamble before first star in this retained section",
+        "meaningVi": "Read complete section including reciprocal entries and terminal temporal paragraph; entry characteristics/natal/time layers stay separate.",
+        "dependencies": [
+          "palace_scope",
+          "explicit_relation",
+          "brightness_qualifier",
+          "generic_vs_named_adverse",
+          "quantifier_scope",
+          "natal_vs_time"
+        ]
+      },
+      "conditions": [
+        "Đồng tại Phúc; entry796không nói độc thủ hoặcbrightness.",
+        "Cự/Âm/Lương có chữ同; không mở thành gặp hay hội chung.",
+        "Không có mệnh đề vắng sát hoặcTuần/Triệt trong entry796; thiếu không đồng nghĩa đượcmiễn."
+      ],
+      "modifiers": [
+        "Nhiều lo ít vui gắn Cự đồng tại796, không phủ mọi trường hợp Đồng.",
+        "Âm799Đồng đồng an tĩnh nhưng cuối có sáu sát; scope không tự truyền về796.",
+        "QA無破定為祥 là qualifier có破chưa đủ definition; bốn sát cộngTỵ/Hợi là nhánh có điều kiện, không phủđịnh mọi nhậpmiếu205."
+      ],
+      "exceptions": [
+        "Không chọn câu QAkhông sợ sát để xóa clauseCự796hoặc adverse ởentryđốiứng.",
+        "Thọ/lo/vui không chẩn đoán sức khỏe tâm thần hay tuổi thọ thực tế.",
+        "Q216–217nhập hạn và815–816ĐẩuQuân/tuếhạn khác nguyêncục."
+      ],
+      "relationships": [
+        {
+          "type": "reciprocal_or_related_entry",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 801,
+            "endLine": 801,
+            "sha256": "d7f557b50980277900520f8b89b73867189fa85e84b5969a694e416bcc1912ea",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "scope": "Cự entry: Đồng同享福 within a broader unrest entry and terminal adverse list; scope not proven identical to Cự同多憂少喜796."
+        },
+        {
+          "type": "reciprocal_or_related_entry",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 799,
+            "endLine": 799,
+            "sha256": "ae1f932e62b7d286c9d65d9f238e53bd059e60806d12a7927236e6c33549e0c1",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "scope": "Âm entry: Đồng同安靜無憂, then named adverse group with uncertain scope; do not transfer automatically to796."
+        }
+      ],
+      "positiveBranches": [
+        "Only exact favorable branches described in meaningVi and conditions; not a verified outcome."
+      ],
+      "adverseBranches": [
+        "Named adverse/opposing/uncertain clauses retained in modifiers and uncertainties; no synthesized dominance score."
+      ],
+      "comparisonIds": [
+        "B10C04"
+      ],
+      "uncertainties": [
+        "Cự–Đồng796soĐồng–Cự801khácscope/adverse: chưađủ xác định cùngpredicate hay phán quyếtmột bên.",
+        "Danh tính bốn sát/破trongQA và chủ thể bảng水金 cầnedition-specificgloss; khôngnormalize.",
+        "Không có chi/can,giới,thờiđiểm hoặcbrightness tại796."
+      ],
+      "contradicts": [],
+      "nextAction": "Find identified full796/801with scope gloss; clarify無破/four-sát and table水金 versus prose水; independent author exact Đồng/Phúc.",
+      "originalTerms": [
+        "天同",
+        "巨門同",
+        "太陰同",
+        "天梁同",
+        "無破",
+        "四殺"
+      ]
+    },
+    {
+      "recordId": "KRB10-NB-PHU-DEPTH",
+      "claimType": "interpretation",
+      "subject": {
+        "starId": "thien_phu",
+        "palaceId": "no_boc"
+      },
+      "schoolId": null,
+      "schoolScope": "Exact retained Quanshu layers only; no verified school assignment or automatic B3 brightness/profile equivalence",
+      "researchStorage": "accepted_for_bounded_research_with_uncertainty",
+      "status": {
+        "collection": "COLLECTED",
+        "contextMapping": "CONTEXT_MAPPED",
+        "comparison": "performed_with_identity_limits",
+        "research": "CONTEXT_MAPPED",
+        "sourceReview": "not_executed",
+        "runtimeApproval": "not_requested",
+        "publicRelease": "withheld_closed"
+      },
+      "verificationStatus": {
+        "implementationStatus": "not_executable",
+        "formulaStatus": "undocumented",
+        "bibliographicStatus": "secondary",
+        "interpretationStatus": "unreviewed"
+      },
+      "rights": {
+        "retention": "Bounded classical excerpts, exact existing source spans and original analysis only; no modern body/corpus redistribution",
+        "scope": "Digital pin is not historical edition authentication, expert review or public permission"
+      },
+      "exclusions": [
+        "Research only; traditional outcomes are not empirically verified personal advice.",
+        "No unapproved runtime/brightness/placement/score/relationship semantics; no public wording activation.",
+        "Unmentioned qualifiers are absent evidence, not satisfied predicates."
+      ],
+      "sourceFamilyDependencies": [
+        "quanshu-transmission: fresh Q&A and retained Juan2 are the same pinned software-hosted classical family, not independently authored confirmation"
+      ],
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-10/DOSSIER.md#krb10-nb-phu-depth",
+      "evidenceRef": "docs/knowledge/research/knowledge-first-batch-10/evidence.json",
+      "recordFile": "docs/knowledge/research/knowledge-first-batch-10/knowledge-records.json",
+      "sourceReferences": [
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "page": null,
+          "originalQuotation": null,
+          "section": "Selected palace entry",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 719,
+            "endLine": 719,
+            "sha256": "a754bb26697ff472606b10078d644c4f4803e6ff752a68b27d9c9897bddb2e46",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "page": null,
+          "originalQuotation": null,
+          "section": "Complete governing palace section",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 712,
+            "endLine": 736,
+            "sha256": "efe76b53589501d504df967b87a6ba97cc845756e62ded80f41a10ee80993647",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "page": null,
+          "originalQuotation": null,
+          "section": "Complete star block incl natal and temporal headings",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 236,
+            "endLine": 252,
+            "sha256": "6ee9e79a751a8615a287d96d6f4b9eae579718f54e9578c8b91e23a7c7510120",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": null,
+          "page": null,
+          "originalQuotation": null,
+          "section": "Complete selected Q&A question/answer/attributed layer",
+          "location": {
+            "path": "docs/knowledge/research/knowledge-first-batch-10/qa-phu-excerpt.txt",
+            "startLine": 1,
+            "endLine": 8,
+            "sha256": "d9a75d5a8a55834c9077b3807ef99b6838029ab32a322b3005ade503cf1a40d5",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "page": null,
+          "originalQuotation": null,
+          "section": "星五行 table and editorial正曜layer; classification not normalized",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 65,
+            "endLine": 85,
+            "sha256": "96282962abc95fe68b1dd29ec893df713c84c857ebf50f4504900e2decb16d6c",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          }
+        }
+      ],
+      "predicate": "thien_phu/no_boc — linked depth supplement",
+      "meaningVi": "Bổ sung chiều sâu cho Phủ/Nô: QA xếp Nô/tướng mạo vào yếu, lại nói nhiều cungcát nhưng gặpKhôngVongcôlập; Q719 mởđắclực và mô tảphảnchủ/bỏđi khi thêmsáu tên. Đây là nhận địnhloạicungvà qualifierkhác cấp, không chứngminh brightnesshãm Phủ ở mọichiNô hay xóađiều kiện entry. Giữ天家của retainedQ so衛家của scanB6; chưa có printglossmới. Q237mệnhthổ vàcát/sát, Q246tam phương/Hội vàKhôngKiếpđồngviên không thànhmodifierđãduyệtchoNô.",
+      "governingContext": {
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 712,
+          "endLine": 736,
+          "sha256": "efe76b53589501d504df967b87a6ba97cc845756e62ded80f41a10ee80993647",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "preambleStatus": "No separate general preamble before first star in this retained section",
+        "meaningVi": "Read complete section including reciprocal entries and terminal temporal paragraph; entry characteristics/natal/time layers stay separate.",
+        "dependencies": [
+          "palace_scope",
+          "explicit_relation",
+          "brightness_qualifier",
+          "generic_vs_named_adverse",
+          "quantifier_scope",
+          "natal_vs_time"
+        ]
+      },
+      "conditions": [
+        "Supplement extends existing Phủ/Nô records, not a newcell or replacement.",
+        "Q719Vi/Vũ同 giữ endpoint; QA Nô陷弱 is functional-palace description, not an accepted 12branch brightness table.",
+        "Named six adverse stars at719 retained; general QA空亡 not silently replaced with ĐịaKhông."
+      ],
+      "modifiers": [
+        "EntryVũ716Phủ同nhiều nô khác Q719Vũ đồngcó; specificity not universal count.",
+        "Generic assistant/cat favorable terms fromQA do not establish exact beneficial group forNô."
+      ],
+      "exceptions": [
+        "Do not call historical servants employees/friends or issue control/hiring advice.",
+        "No newly inspected scan; scan衛家 remains an explicitly historical B6 reading, not a new quotation."
+      ],
+      "relationships": [
+        {
+          "type": "reciprocal_or_related_entry",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 716,
+            "endLine": 716,
+            "sha256": "1de0aa071077594dc4bcb39016439ae023f5b6f57d2c5c9d45b26660d4afe7cb",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "scope": "Vũ entry: Phủ同多奴多婢, more specific quantity language than Phủ719Vũ同奴仆有; no uniform numeric conclusion."
+        }
+      ],
+      "positiveBranches": [
+        "Only exact favorable branches described in meaningVi and conditions; not a verified outcome."
+      ],
+      "adverseBranches": [
+        "Named adverse/opposing/uncertain clauses retained in modifiers and uncertainties; no synthesized dominance score."
+      ],
+      "comparisonIds": [
+        "B10C05"
+      ],
+      "uncertainties": [
+        "Functional 陷弱 versus branch hãm and globalpositive QA overlap lack printgloss.",
+        "天家/衛家 and quantity cannot be resolved by broader QA.",
+        "No source-specific Tuần/Triệt rule, stem condition, age or giáp relationship forNô found in selected passages."
+      ],
+      "contradicts": [],
+      "nextAction": "Identify print/folio and glossary for天家/衛家, functional弱 and branchbrightness; independently authored Phủ/Nô fullcontext.",
+      "originalTerms": [
+        "天府",
+        "奴仆",
+        "陷弱",
+        "得力",
+        "空亡",
+        "天家",
+        "衛家"
+      ],
+      "extendsRecordIds": [
+        "KRB3-NB-PHU",
+        "KRB4-NB-PHU-LDL",
+        "KRB6-NB-PHU-SCAN"
+      ]
+    },
+    {
+      "recordId": "KRB10-HD-AM-DEPTH",
+      "claimType": "interpretation",
+      "subject": {
+        "starId": "thai_am",
+        "palaceId": "huynh_de"
+      },
+      "schoolId": null,
+      "schoolScope": "Exact retained Quanshu layers only; no verified school assignment or automatic B3 brightness/profile equivalence",
+      "researchStorage": "accepted_for_bounded_research_with_uncertainty",
+      "status": {
+        "collection": "COLLECTED",
+        "contextMapping": "CONTEXT_MAPPED",
+        "comparison": "performed_with_identity_limits",
+        "research": "CONTEXT_MAPPED",
+        "sourceReview": "not_executed",
+        "runtimeApproval": "not_requested",
+        "publicRelease": "withheld_closed"
+      },
+      "verificationStatus": {
+        "implementationStatus": "not_executable",
+        "formulaStatus": "undocumented",
+        "bibliographicStatus": "secondary",
+        "interpretationStatus": "unreviewed"
+      },
+      "rights": {
+        "retention": "Bounded classical excerpts, exact existing source spans and original analysis only; no modern body/corpus redistribution",
+        "scope": "Digital pin is not historical edition authentication, expert review or public permission"
+      },
+      "exclusions": [
+        "Research only; traditional outcomes are not empirically verified personal advice.",
+        "No unapproved runtime/brightness/placement/score/relationship semantics; no public wording activation.",
+        "Unmentioned qualifiers are absent evidence, not satisfied predicates."
+      ],
+      "sourceFamilyDependencies": [
+        "quanshu-transmission: fresh Q&A and retained Juan2 are the same pinned software-hosted classical family, not independently authored confirmation"
+      ],
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-10/DOSSIER.md#krb10-hd-am-depth",
+      "evidenceRef": "docs/knowledge/research/knowledge-first-batch-10/evidence.json",
+      "recordFile": "docs/knowledge/research/knowledge-first-batch-10/knowledge-records.json",
+      "sourceReferences": [
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "page": null,
+          "originalQuotation": null,
+          "section": "Selected palace entry",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 561,
+            "endLine": 561,
+            "sha256": "9218c4c628eea829b58acb36ce5cb7f21bbf5d31103a1cd5fa9237d083f3fd04",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "page": null,
+          "originalQuotation": null,
+          "section": "Complete governing palace section",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 553,
+            "endLine": 575,
+            "sha256": "347e031b5cdac4ae4ce8d733f343eeee7fdf2a48c592ae3ba66263644d598f1d",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "page": null,
+          "originalQuotation": null,
+          "section": "Complete star block incl natal and temporal headings",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 253,
+            "endLine": 270,
+            "sha256": "c31a3d917282545ca6ebe0f05b399a62aceebced88fa48876df20b590d3d4c90",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": null,
+          "page": null,
+          "originalQuotation": null,
+          "section": "Complete selected Q&A question/answer/attributed layer",
+          "location": {
+            "path": "docs/knowledge/research/knowledge-first-batch-10/qa-am-excerpt.txt",
+            "startLine": 1,
+            "endLine": 5,
+            "sha256": "d29214f3498fee0583476fd495932ab2c3dbf6faeefe304c9c9bbea11ac23c50",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "page": null,
+          "originalQuotation": null,
+          "section": "星五行 table and editorial正曜layer; classification not normalized",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 65,
+            "endLine": 85,
+            "sha256": "96282962abc95fe68b1dd29ec893df713c84c857ebf50f4504900e2decb16d6c",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          }
+        }
+      ],
+      "predicate": "thai_am/huynh_de — linked depth supplement",
+      "meaningVi": "Bổ sung Âm/Huynh qua fullblockcharacter vàQA: QAđặtMùi trongnhómhãm, trongkhiQ257Mùi/Thânlợiích. Đó là khácnhãn của hai lớptrongcùngpin,chưa phải hai tácgiảđộc lập hoặc cáchsửa bảngruntime. Entry561chỉghi nhậpmiếu, Nhật/Cơ/KhoaQuyền vàbộsáusátgiảmnửa,chưa nói chọnbảngnào. QAthượng/hạhuyền, ThânkhácMệnh và giớikhông tựthêm vào sốanh/em. Giữsố5/5–6/2/4–5 vàđốiứngNhật556,Cơ555ởđúngentry,khôngchochúngđồngđầuvào.",
+      "governingContext": {
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 553,
+          "endLine": 575,
+          "sha256": "347e031b5cdac4ae4ce8d733f343eeee7fdf2a48c592ae3ba66263644d598f1d",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "preambleStatus": "No separate general preamble before first star in this retained section",
+        "meaningVi": "Read complete section including reciprocal entries and terminal temporal paragraph; entry characteristics/natal/time layers stay separate.",
+        "dependencies": [
+          "palace_scope",
+          "explicit_relation",
+          "brightness_qualifier",
+          "generic_vs_named_adverse",
+          "quantifier_scope",
+          "natal_vs_time"
+        ]
+      },
+      "conditions": [
+        "Extends existing Âm/Huynh context; explicit opening入廟 has no branch named in561.",
+        "未 maps to利益 inQ257and陷 inQA133; no automatic synonym/standard chosen.",
+        "科權同 in561has no explicitAND/OR rule, no namedhostoftransformation; no laterengineprojection."
+      ],
+      "modifiers": [
+        "Six-name adverse group561减半 and克; no numeric rounding/domainrule approved.",
+        "Nhật556Âm đồngnăm versusÂm561Nhật đồngnăm/sáu preserve specificity; Cơ555Âm2–3 versusÂm561Cơ2 preserved.",
+        "Q254maternal/spousecharacterdescription not a Huynh counting condition."
+      ],
+      "exceptions": [
+        "No phase-trăng algorithm, day/night or age convention derived fromQAterms.",
+        "No propagation of Q267–270temporalstatements into natal sibling count."
+      ],
+      "relationships": [
+        {
+          "type": "reciprocal_or_related_entry",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 555,
+            "endLine": 555,
+            "sha256": "dd687988d1f0190541c324c81aff34951564045eda9bf96540beaa10d91dec80",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "scope": "Cơ entry: Âm同二三人 versus Âm561Cơ同二人; scope/specificity preserved."
+        },
+        {
+          "type": "reciprocal_or_related_entry",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 556,
+            "endLine": 556,
+            "sha256": "ea1a1cecd1137b3984859e5ee2c9a0bbb39231fcaad217202a0079d84524dcb2",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "scope": "Nhật entry: Âm同五人 versus Âm561Nhật同五六人; no standard count selected."
+        },
+        {
+          "type": "reciprocal_or_related_entry",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 558,
+            "endLine": 558,
+            "sha256": "301729aa56fdd294be13793fbe822817bbfe46ef52be6267a2df4e889112b98e",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "scope": "Đồng entry: Âm同四五人; Âm561has no reciprocal Đồng clause, so no standalone/backfilled clause invented."
+        }
+      ],
+      "positiveBranches": [
+        "Only exact favorable branches described in meaningVi and conditions; not a verified outcome."
+      ],
+      "adverseBranches": [
+        "Named adverse/opposing/uncertain clauses retained in modifiers and uncertainties; no synthesized dominance score."
+      ],
+      "comparisonIds": [
+        "B10C06"
+      ],
+      "uncertainties": [
+        "B10D18needs identified fullbrightness/table/QA and glossary of利益 versus陷, not a vote amongmirrors.",
+        "No spouse/mother/personality predictions or real-world sibling counts approved.",
+        "No source-defined Tuần/Triệt, giáp relation or universaladverseoverride for561."
+      ],
+      "contradicts": [
+        "B10D18"
+      ],
+      "nextAction": "Obtain identified printed Q257 and QA133 plus correct editiongloss; preserve all labels and oldmodern-comparison limits.",
+      "originalTerms": [
+        "太陰",
+        "廟",
+        "利益",
+        "未",
+        "陷",
+        "科權",
+        "減半"
+      ],
+      "extendsRecordIds": [
+        "KRB3-HD-AM",
+        "KRB4-HD-AM-LDL"
+      ]
+    }
+  ]
+}

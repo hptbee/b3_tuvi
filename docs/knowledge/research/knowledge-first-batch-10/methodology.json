@@ -1,0 +1,143 @@
+{
+  "batchId": "KR-B10-20261017",
+  "newIndependentAuthoredWitnesses": 0,
+  "newModernOriginalBodiesRead": 0,
+  "baselineMatrixRef": "docs/knowledge/research/knowledge-first-batch-8/methodology.json",
+  "freshDirectEvidence": [
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-10/qa-phu-excerpt.txt",
+      "startLine": 1,
+      "endLine": 8,
+      "sha256": "d9a75d5a8a55834c9077b3807ef99b6838029ab32a322b3005ade503cf1a40d5",
+      "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-10/qa-dong-excerpt.txt",
+      "startLine": 1,
+      "endLine": 5,
+      "sha256": "2d169bd0599c11a6c2b4906a8ea6f99dbca061e72e02589c282c6fda543a2e8f",
+      "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-10/qa-duong-excerpt.txt",
+      "startLine": 1,
+      "endLine": 17,
+      "sha256": "6a5a0cdba631f5d4747ae7459dd0f7163ccbc49f782682941d0adda5dd0f247d",
+      "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-10/qa-am-excerpt.txt",
+      "startLine": 1,
+      "endLine": 5,
+      "sha256": "d29214f3498fee0583476fd495932ab2c3dbf6faeefe304c9c9bbea11ac23c50",
+      "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+    }
+  ],
+  "sourceSpecificFindings": [
+    {
+      "topic": "general_characteristic_vs_conditioned_palace",
+      "evidence": [
+        {
+          "path": "docs/knowledge/research/knowledge-first-batch-10/qa-phu-excerpt.txt",
+          "startLine": 1,
+          "endLine": 8,
+          "sha256": "d9a75d5a8a55834c9077b3807ef99b6838029ab32a322b3005ade503cf1a40d5",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 745,
+          "endLine": 745,
+          "sha256": "1d2c54e92ab7dfa18cc191f41e8c33886f30598fa7dbaba97fa9df8896735965",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 719,
+          "endLine": 719,
+          "sha256": "a754bb26697ff472606b10078d644c4f4803e6ff752a68b27d9c9897bddb2e46",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        }
+      ],
+      "observation": "Phủ general all-palace benefit coexists with not-liking-four-sát,空亡andfunctionweakness; exact Quan lists空耗then空劫 differ. No universal cancellation order or safe subset inferred."
+    },
+    {
+      "topic": "apparently_absolute_safety_vs_qualified_breaking",
+      "evidence": [
+        {
+          "path": "docs/knowledge/research/knowledge-first-batch-10/qa-dong-excerpt.txt",
+          "startLine": 1,
+          "endLine": 5,
+          "sha256": "2d169bd0599c11a6c2b4906a8ea6f99dbca061e72e02589c282c6fda543a2e8f",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 200,
+          "endLine": 217,
+          "sha256": "1a2327d921b2a2ecf1138e23960cd0032987ed30e989e4ad95f34bc0dc0092d2",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 796,
+          "endLine": 801,
+          "sha256": "a17ac9cf38f6c261446f647fa9f54ec661344ef17fb46d261e08cedf17731351",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 65,
+          "endLine": 85,
+          "sha256": "96282962abc95fe68b1dd29ec893df713c84c857ebf50f4504900e2decb16d6c",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        }
+      ],
+      "observation": "Đồng not-fearing-sát phrases coexist with無破 and conditioned four-sát+巳亥 adverse. Generic safety is not immunity; extra condition means do not label Q205入廟 and conditionalQA陷 unconditional contradiction. 水金Q70 versus prose水 retained."
+    },
+    {
+      "topic": "relation_endpoints_and_natal_temporal_order",
+      "evidence": [
+        {
+          "path": "docs/knowledge/research/knowledge-first-batch-10/qa-duong-excerpt.txt",
+          "startLine": 1,
+          "endLine": 17,
+          "sha256": "6a5a0cdba631f5d4747ae7459dd0f7163ccbc49f782682941d0adda5dd0f247d",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 740,
+          "endLine": 746,
+          "sha256": "7230a47e7b05064d85bf218b4c3783d78be0aa10a2c88080eb3371c2bbf38571",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        }
+      ],
+      "observation": "DươngQA三合拱照財官 and限不扶 differ from同Quanentry. No global reading order or automatic transit qualifier imported into natal statement."
+    },
+    {
+      "topic": "brightness_and_unparameterized_lunar_phase",
+      "evidence": [
+        {
+          "path": "docs/knowledge/research/knowledge-first-batch-10/qa-am-excerpt.txt",
+          "startLine": 1,
+          "endLine": 5,
+          "sha256": "d29214f3498fee0583476fd495932ab2c3dbf6faeefe304c9c9bbea11ac23c50",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 253,
+          "endLine": 270,
+          "sha256": "c31a3d917282545ca6ebe0f05b399a62aceebced88fa48876df20b590d3d4c90",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        }
+      ],
+      "observation": "上弦/下弦 terms lack calendar/threshold semantics;未labels differ. Keep source layers, no scoring/phase algorithm or universal brightness correction."
+    }
+  ],
+  "cross_sourceComparison": "NOT_EXPANDED: no new direct modern authored evidence; historical Hàm Số/Ling/Wang columns remain secondary with their existing limits",
+  "schoolMethodConsensus": "not_established",
+  "sourceReview": "not_executed",
+  "runtime": "not_requested"
+}

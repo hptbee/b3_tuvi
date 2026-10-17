@@ -190,6 +190,14 @@ The [Batch 9 handoff](../knowledge/research/knowledge-first-batch-8/HANDOFF_BATC
 
 All previous disposition fields and 132 historical hashes are preserved. Official NDL metadata access remains CONNECT-blocked; edition, printed pages, exact assistant configuration and previous variants remain unresolved. No AutoDev, source/runtime/public approval or application changes. The [Batch10 handoff](../knowledge/research/knowledge-first-batch-9/HANDOFF_BATCH_10.md) requires adaptive planning after the validated commit, then bounded new-star contexts, depth/audit and a read-only readiness assessment.
 
+## Batch 10 progress — 2026-10-17
+
+[Batch10](../knowledge/research/knowledge-first-batch-10/README.md) was planned after validated Batch9 commit `001948d`. Four new cells — Phủ/Quan, Âm/Tài, Dương/Quan, Đồng/Phúc — and two linked old-cell depth supplements bring **65 → 71 records, 47 → 51/168 contextual cells and 121 → 117 locator-only cells**. Phủ/Tài was already covered and was not duplicated. All six comparisons are same-family; authored-compared cells stay41. Seven cells retain CONFLICTING status;17carry explicit flags.
+
+The full selected palace/star/Q&A contexts preserve generic versus named adverse groups, relation endpoints, brightness and temporal qualifiers. New B10D18 preserves Âm/Mùi labels利益versus陷 without choosing a table. All17old questions and history remain unchanged; **18open/0evidence-resolved**. No new independent author, authenticated edition, printed page or source approval. The depth matrix, source-specific methodology and six-sample audit record missing semantics without inventing them.
+
+The [read-only readiness assessment](../knowledge/research/knowledge-first-batch-10/READINESS_ASSESSMENT.md) distinguishes71unreviewed research records from14existing narrowly approved internal claims, all publicly withheld and not expert verified. It recommends focused research and source-review preparation; no new engine/pilot/AutoDev or runtime activation. All156historical hashes protect Batch9, earlier evidence and the read-only contracts inspected. The [Batch11 handoff](../knowledge/research/knowledge-first-batch-10/HANDOFF_BATCH_11.md) identifies source/gloss and unstudied-star priorities; Batch11 has not begun. Public gates and T034 remain unchanged.
+
 ## Quality metrics and research completion
 
 Report a dated snapshot after each bounded research batch, with scope/denominator, source and edition references, unresolved counts and comparison to the previous snapshot. Store results with that topic packet, not in a new dashboard/framework. Initial documentation audit establishes 14 registered sources/five editions and the recorded engineering figures above; the research-depth metrics below were initially **not baselined**; the dated Batch 1–6 snapshots above now supply bounded denominators. Do not fill them from filenames or historical headline counts.
