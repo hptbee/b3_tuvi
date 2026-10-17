@@ -1,6 +1,6 @@
 # Autonomous Product Completion
 
-- version: 28
+- version: 31
 - source: User mission 2026-10-14; fresh run from upstream main 45615a48d0c75b90138cfc618320ffae6e9c34e0
 
 ## Original requirements
@@ -575,3 +575,44 @@ Version28: explicit user authorizes fresh invocation from latest main and replac
   - Independent finite fixture discovery, full-source/AST/wording/digest replay, actual dual source review, source tamper/real chart/unit/API tests, relevantCI and independent technical reviews within12pass cap
 
 Version28 task addition: independent audit proves reachable new uncovered-palace candidate, not approval. Candidate intake remains preliminary/not frozen. Original Priority B/C coverage and source requirements preserved; no completed historical task repeated.
+
+### T036 — reproducible approved-interpretation applicability measurement
+- status: completed
+- depends_on: []
+- scope: backend/scripts/interpretationApplicability.mjs, backend/test/interpretationApplicability.test.mjs, backend/scripts/runTests.mjs, backend/package.json, docs/engineering/quality/INTERPRETATION_COVERAGE.md, docs/engineering/TEST_FIXTURES.md
+- acceptance_criteria:
+  - Measure only actual source-bound executable internal claims through existing production pipeline on unchanged deterministic1152validsolarinputs, all12palaces, positive/negative/unresolved counts and exact claim overlap
+  - Distinguish approved binding count from actual matching charts; include unchanged cohort hash and per-chart claim identity for reproducible beforeafter comparison; reject incompatible or malformed baselines
+  - Enforce public prose/release withheld and no chart input, natal formula, interpretation approval, runtimeAPI or default behavior changes
+  - Existing7claim subset independently retains92matchingcharts and known perclaimcounts; actualCLI and malformed/overlap/comparison tests pass with relevantbackendCI and independent technicalreview
+- verification:
+  - Focused Node report/CLI suite, exact existing fixed input hash and independent direct-set baseline, fullbackendCI, documentationchecks and independent full-diff review
+
+### T037 — foundational single-major-star source-approved first tranche
+- status: completed
+- depends_on: [T036]
+- scope: existing pinned Juan2 palace source evidence and finite sourcePalaceBinding/interpretation registry/decisions; focused source/unit/API tests and reproducible applicability measurements; no new framework or public interpretation
+- acceptance_criteria:
+  - Prioritize precise foundational individual-major-star direct-host conditions in eight currently uncovered palaces; retain complete paragraph, palace preamble, natal contexts, adverse/brightness/standalone conditions and meaningful exclusions
+  - Freeze exact source/AST/wording/independently valid fixtures before actual independent two-model reviews and unchanged comparator replay; reject unsupported broadening rather than manufacturing30/50percent targets
+  - Activate only separately accepted internal attributed wording through existing finite binding; preserve existing7claims and all natal/default/public/narration gates
+  - Measure exact beforeafter actualchartapplicability on identical1152inputs, perpalace positives/negatives and overlap/marginal newcharts for every completedtranche
+  - Meaningful real positive/negative/wronghost and malformed/tamper/withheldHTTP checks pass with fullbackendCI and actual independent engineeringreviews within remaining12pass budget
+- verification:
+  - Complete pinned passage and immutable five-digest replay; independent fixed-grid fixtures; actualdualsourcereview; focusedNode/unit/API thenbackendCI; routedperformance/crosscut review; browserNOTRUN
+
+Version30: concrete inspection found two independently verifiable boundaries: reusable actual-applicability CLI is approval-neutral and can progress while source models review frozen claims; claim activation requires separate exact source gate. Narrow originalT036 to measurement, preserve all original source intent on nextunusedT037 dependingT036. No requirement dropped. Existing seven pipeline bindings and deterministic baseline are already auditable; no new evaluation engine is needed. User's new priority overrides old task order; T034 untouched andT035 remains pending. Target30then50percent remains source-gated prioritization, not guaranteed delivery. Samebranch/PR62 only.
+### T038 — foundational Huynh Đệ and Phu Thê source annotations
+- status: completed
+- depends_on: [T037]
+- scope: existing finite sourcePalaceBinding, interpretation claim/decision registry, docs/knowledge/research/juan2-palace/foundational-family-packet/, focused source/unit/HTTP tests and fixed-cohort coverage/docs; no public release or new engine
+- acceptance_criteria:
+  - Independently review exact opening notes for Tử Vi Huynh Đệ, Thiên Lương Phu Thê and Thiên Tướng Phu Thê with all historical sex/relative-age/kin-marriage, reciprocal/cohost/adverse and natal context retained
+  - Accept only actual distinct-model judgments of complete source/AST/wording/84 independently valid fixtures and unchanged comparator; no prior-tranche approval borrowed or modifier suppressed
+  - Add only separately accepted exact attributed notes through strict finite immutable bindings; preserve original7 and T037four claim sets and all natal/default/public/narration gates
+  - Measure actual positive/negative/unresolved, per-palace unique applicability and overlap on the unchanged1152-chart cohort beforeafter; 647/1152 is conditional reachability until actual runtimeverification
+  - Meaningful real and malformed/source-tamper/HTTP/client/privacy/withholding tests, full relevant backendCI and independent technical reviews fit remaining12pass budget before commit/pushsamePR
+- verification:
+  - Frozen29file/source/five-digest and84fixture/1152sharedtableinverse replay; actualdual source decisions; focusedNode and realHTTP integration; fixedcohort beforeafter and original11subset; fullbackendCI/docs and routedCORE/API/performance/crosscut review, browserNOTRUN
+
+Version31: independent source and fixture research proves three reachable precise new candidates in two further uncovered palaces. T038 is a coherent separately source-gated successor to T037, not a rewrite or approval transfer. Parents/children/health remain unresolved governed-source predicates; no broad claims invented to fill them. Exactsource review running while T037engineering gates finish, no T038runtimeedit before T037completion/readiness. Originalscope/acceptanceT037unchanged; readinessapproachversionadvanced withsamefingerprint.

@@ -239,3 +239,39 @@ Actualsame-PRdeliveryverified: gitpushnonforceexistingPR60branch655c219→ff153b
 - Finding: source proposal incorrectly specifies server chiIndex_0_to11; exact approved scope cannot be assumed from otherwise matching arithmetic.
 - Status: OPEN, intentionally preserved original frozen evidence; runtime never implemented. Fresh revised packet and fresh distinct-model actual source review required. No fabricated completed source review or approval.
 - Run outcome INCOMPLETE required-model resources exhausted; technical reviews0/12 this invocation, preceding12/12 record unchanged. No reviewer-loop PASS or product completion declared.
+
+## T036 — reproducible applicability reporting
+Taskbase e7feae516397e7530e69dd68e19ff4e2d4d5dddf, exact6files211lines, independent fullMEDIUMpass1 completeclear. Reviewer independently reproduces all7full1152-chart membershipsets,92unique/94hits/2overlap; CLI/malformed/syntheticcomparison testsPASS. Parent fullCIexit0 and scope/whitespace/docs checksPASS. No R4101 allocated/no confirmedfindings. ParentT036qualitygatePASS commit98496ca; currenttechnicalcounter1/12, notsourceapproval oroverallproductcompletion. SourceT034R4001 remainsOPEN/untouched.
+
+## T037 fullCI regression — R4301
+- R4301 CONFIRMED medium test-regression: interpretationPipeline.test.mjs:40 asserts every defaultstatement unavailable on a synthetic chart, but new source-approved direct-host notes legitimately match that chart. Actual fullCI log t037-backend-ci.log exits1 at that exactassertion; no production defect inferred.
+- Preserve negative behavior with an explicitly empty claim catalog and retain unreviewed-clone/publicprose assertions; do not delete or blanket-weaken eligibility tests. Newsource coretests independently cover actual positives and negatives.
+- Scope adds backend/test/interpretationPipeline.test.mjs (already inspected pipeline interface) beforefix. Fresh API/contract review must cover currentupdatedtests. Source/core productcode remains frozen.
+- R4301 FIXED/VERIFIED: isolatedfixer moved negativeassertion to existing synthetic missingstarbarefixture; originalred, correctedfocusedgreen twice, in-memory originalchart-for-bare mutationred proves sensitivity. Parent's suggestedclaims[] boundary rejected after actual additivecataloginspection; no runtimemodification. FreshAPIreviewpass3pending; notCLOSEDyet. Initial checkpoint-append command usedbackendcwd and failedwithouteditingfiles; retriedcorrectroot here.
+- R4301 CLOSED: actualindependentAPIpass3 reproduced fixednegativeboundary and positivecontrolfailure; currentpipelinechecks+128HTTP+coverageclear.
+
+## T037 second legacy assertion — R4501
+- R4501 CONFIRMED medium test-regression: fullCIretry failed sprint9Closure.test.mjs:85 allpalacesunavailable assumption on syntheticTửPhủwitness. Newsourceannotations canmatchotherpalaces independently; intendedformation-only/Mệnhsourcegate mustremain false. Add exacttestfile scopebeforefix, preserve slicefalse/publicprose/natalunchanged assertions. Freshcrosscutreview mustverifycurrentnewtestandinteraction, notfabricatePASSfrompriorAPIreview.
+- R4501 FIXED/VERIFIED: actualsyntheticwitness [can1,chi1,month1,hour7] hasMệnhTửPhủformationunavailable but legitimateNôBộcThiênLươngeligible. Fixer scopednegativeassertion to actualMệnhformationstatement, preservingallsource/public/natalchecks. Originalred/focusedgreentwice/forcedMệnheligibilityinmemoryred. Freshcrosscutpendingclosure; productCOREunchanged.
+- R4501 CLOSED: actualfreshcrosscutpass5 independentlyruns currentclosuretest and forcedMệnh-eligibilitymutation expectedexit1. Crosscutcurrentallinterfaces clear, noR4701allocated. ParentT037qualitygatePASS actualfullCI75scripts89.22/90.00; currenttechnicalcounter5/12(1measurement+CORE2/API3/performance4/crosscut5), no budgetreset. ExistingR4001sourceT034outofscopeunapproved remainsOPEN, notnewruntimepermission.
+
+## T037 staged-evidence portability — R4801
+- R4801 CONFIRMED medium: actual Gitindex byte verification beforecommit found three frozen helperfiles differ from reviewedmanifest solely because broad text eol=lf normalizes their originalCRLF: independent-fixture-research.mjs, verify-proposal.mjs, verify-source.py. Working30frozenfiles unchanged; no sourceapproval/datachange and nothingdelivered. Exact -text perfile overrides required to preserve reviewedbytes, not rehash/normalize evidence.
+- Fix scope .gitattributes alreadyinapproach plus trivial extraEOFnewline in unpinned sourcePalaceFoundationalApi.test.mjs. Frozenverify-proposalEOF/rawHTMLwhitespace mustremainexact. Freshcrosscut secondpass reviews currentinteraction andactualindexproof; counterprior5/12retained, notreset.
+
+R4801 CLOSED: fresh cross-cut iteration 2 independently verified all 30 frozen files through working tree, staged index and autocrlf=true checkout. Report t037-crosscut-review-2.md; technical review count 6/12. No new confirmed findings.
+
+## T038 CORE independent pass7
+No confirmed findings; R5001 unused. Exact29manifest/current source judgments, previous11records and focusedsource/core tests verified independently. API/performance/crosscut still pending. Technical completed7/12.
+
+## T038 API independent pass8
+No confirmed findings;R5101unused. Independent98HTTP/84unit/fixtureclassification passed. FullbackendCI77scripts89.27/90.01 parentprocess exit0. Technical8/12completed;performance9running,crosscut10pending.
+
+## T038 performance independent pass9
+No CONFIRMED/EVIDENCED RISK finding;R5201unused. Cold101→128reads/1789809→2639669bytes/76→100hashes, warmzeroFS/hash; localpipelineJSON0.70370→0.83633ms/chart, notproductionSLA. Technical9/12completed,crosscut10running.
+
+## T038 cross-cut pass10
+No confirmed findings,R5301unused. Exact29working/index/autocrlfcheckout;12672oldmemberships unchanged;91overlappairs/marginal56,82,90 andall12palaces independently agree. Unit84/HTTP98passed. Technical10/12completed;T038qualitygatePASS commit38ad920458d53c4b99be27946663c163072a9019.
+
+## Final cumulative independent pass11 — 2026-10-17
+No confirmed findings; R5401 unused. Exact five-commit range3613b68..38ad920 plus current administrative checkpoint reviewed for cross-task interactions. Independent exact Git archives/old7 andold11 runtime membership cells,59newfrozenfiles,64T034frozenhashes/all67T034paths,actualunit/CLI/98HTTP and all12palace/91overlap records agree. Prior R4301/R4501/R4801 remain CLOSED without new evidence. Technical11/12completed; one remaining cannot fully review another4-pass tranche. CompletedT036–T038qualitygatesPASS; overallall12goalINCOMPLETE(9/12). Public/narration/default/T034gatesunchanged. Final report interpretation-expansion/final-cumulative-review.md.
