@@ -1,0 +1,587 @@
+{
+  "batchId": "KR-B1-20261017",
+  "observedAt": "2026-10-17",
+  "baseCommit": "492eedd0a966cecd910bd4f07ab5f266236f5cb9",
+  "mode": "research_only_no_source_review_no_runtime_or_release_changes",
+  "repositories": [
+    {
+      "repo": "Renhuai123/ziwei-doushu",
+      "pin": "328337cbc3e005631142e5f9f6d6972040def7a5",
+      "defaultBranch": "main",
+      "fork": false,
+      "parent": null,
+      "declaredCodeLicense": "MIT",
+      "metadataUrl": "https://api.github.com/repos/Renhuai123/ziwei-doushu",
+      "treeUrl": "https://api.github.com/repos/Renhuai123/ziwei-doushu/git/trees/328337cbc3e005631142e5f9f6d6972040def7a5?recursive=1",
+      "files": [
+        {
+          "path": "DATASET-LICENSE",
+          "gitBlobSha": "54e6c9931f54819ffdc9e6e6b7215e64df7413aa",
+          "bytes": 3164
+        },
+        {
+          "path": "LICENSE",
+          "gitBlobSha": "8c86d267ce7829cf5b47ad9928eb34781e2ffffc",
+          "bytes": 1069
+        },
+        {
+          "path": "README.md",
+          "gitBlobSha": "8767cdb9943e2d119562ae26596ecb4b7758d608",
+          "bytes": 26152
+        },
+        {
+          "path": "lib/classics/data/quanshu.ts",
+          "gitBlobSha": "2e1b9a270332e763a91311022de129ecd6caea23",
+          "bytes": 5579
+        }
+      ],
+      "treeTruncated": false
+    },
+    {
+      "repo": "x-haose/x-iztro",
+      "pin": "2fad09aee358553049c8e2435ea62c70427888c5",
+      "defaultBranch": "main",
+      "fork": false,
+      "parent": null,
+      "declaredCodeLicense": "MIT",
+      "metadataUrl": "https://api.github.com/repos/x-haose/x-iztro",
+      "treeUrl": "https://api.github.com/repos/x-haose/x-iztro/git/trees/2fad09aee358553049c8e2435ea62c70427888c5?recursive=1",
+      "files": [
+        {
+          "path": "LICENSE",
+          "gitBlobSha": "37de576f9cfc634a08ef5b83c73492ee7ffb9cb6",
+          "bytes": 1079
+        },
+        {
+          "path": "README.md",
+          "gitBlobSha": "162f80cf61a84849b99d1e16575c709fb693f898",
+          "bytes": 23761
+        },
+        {
+          "path": "knowledge/SCHEMA.md",
+          "gitBlobSha": "61d6503a0cf664f7ba2686ef1ba5679a8360db12",
+          "bytes": 15907
+        },
+        {
+          "path": "src/data/knowledge/iztro_docs.zh-CN.json",
+          "gitBlobSha": "512767dd853982b7a82eea17082d6f1dcb5ae0d7",
+          "bytes": 237420
+        }
+      ],
+      "treeTruncated": false
+    },
+    {
+      "repo": "ziweiknows/ziwei-chat",
+      "pin": "ceef938a4ab8d50f864f690fa7d768b4294fcf77",
+      "defaultBranch": "master",
+      "fork": false,
+      "parent": null,
+      "declaredCodeLicense": "Apache-2.0",
+      "metadataUrl": "https://api.github.com/repos/ziweiknows/ziwei-chat",
+      "treeUrl": "https://api.github.com/repos/ziweiknows/ziwei-chat/git/trees/ceef938a4ab8d50f864f690fa7d768b4294fcf77?recursive=1",
+      "files": [
+        {
+          "path": "LICENSE",
+          "gitBlobSha": "148250cd68d92201679da9f4a91cce8a18259c5d",
+          "bytes": 11353
+        },
+        {
+          "path": "NOTICE",
+          "gitBlobSha": "1ee1eb0772e0f4677cfa8fe5bb5cbfdd7182ede0",
+          "bytes": 1562
+        },
+        {
+          "path": "README.md",
+          "gitBlobSha": "109e93b92b3e7aea96eb400730be95c3b1c863ba",
+          "bytes": 11333
+        },
+        {
+          "path": "content/knowledge/imported/ziwei-doushu/ziwei-doushu-classic-qs-5-2.md",
+          "gitBlobSha": "cb57ac54103d50f5a11df1586442794d5600cb1e",
+          "bytes": 522
+        },
+        {
+          "path": "docs/knowledge/knowledge-and-skills-spec.md",
+          "gitBlobSha": "99897d70bd5a4b5bf2ae5d8236ba310a63ffeceb",
+          "bytes": 4879
+        }
+      ],
+      "treeTruncated": false
+    },
+    {
+      "repo": "ziweiknows/ziwei-chart",
+      "pin": "614d6e104ad4d559193667187806cbb5760037ec",
+      "defaultBranch": "main",
+      "fork": false,
+      "parent": null,
+      "declaredCodeLicense": "GPL-3.0",
+      "metadataUrl": "https://api.github.com/repos/ziweiknows/ziwei-chart",
+      "treeUrl": "https://api.github.com/repos/ziweiknows/ziwei-chart/git/trees/614d6e104ad4d559193667187806cbb5760037ec?recursive=1",
+      "files": [
+        {
+          "path": "LICENSE",
+          "gitBlobSha": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+          "bytes": 35149
+        },
+        {
+          "path": "README.md",
+          "gitBlobSha": "055fb6ec67d4f59a4296c6f29da9fb4075fb1e29",
+          "bytes": 8951
+        },
+        {
+          "path": "app/src/knowledge-db/sources.ts",
+          "gitBlobSha": "a9e3e37dd897c0ee72e27f8a8577a3448dc3873f",
+          "bytes": 3016
+        }
+      ],
+      "treeTruncated": false
+    },
+    {
+      "repo": "por7/ziwei",
+      "pin": "2088612184ec60bbc8e3f02c09bd9b820d18739c",
+      "defaultBranch": "main",
+      "fork": true,
+      "parent": "ziweiknows/ziwei-chart",
+      "declaredCodeLicense": "MIT",
+      "metadataUrl": "https://api.github.com/repos/por7/ziwei",
+      "treeUrl": "https://api.github.com/repos/por7/ziwei/git/trees/2088612184ec60bbc8e3f02c09bd9b820d18739c?recursive=1",
+      "files": [
+        {
+          "path": "LICENSE",
+          "gitBlobSha": "365e10a5ad2298c4cf10a9d222180652e743f18d",
+          "bytes": 1067
+        },
+        {
+          "path": "README.md",
+          "gitBlobSha": "557c452fa58cc1f784489ccc1c17120c267f5c26",
+          "bytes": 5468
+        },
+        {
+          "path": "app/src/knowledge-db/sources.ts",
+          "gitBlobSha": "a9e3e37dd897c0ee72e27f8a8577a3448dc3873f",
+          "bytes": 3016
+        }
+      ],
+      "treeTruncated": false
+    },
+    {
+      "repo": "SylarLong/iztro",
+      "pin": "d05faecdb00dd074e73c90794345aa3a3c537f63",
+      "defaultBranch": "main",
+      "fork": false,
+      "parent": null,
+      "declaredCodeLicense": "MIT",
+      "metadataUrl": "https://api.github.com/repos/SylarLong/iztro",
+      "treeUrl": "https://api.github.com/repos/SylarLong/iztro/git/trees/d05faecdb00dd074e73c90794345aa3a3c537f63?recursive=1",
+      "files": [
+        {
+          "path": "LICENSE",
+          "gitBlobSha": "af1e0c83c0a8095bd9faa83265ba67a441422657",
+          "bytes": 1073
+        },
+        {
+          "path": "README.md",
+          "gitBlobSha": "ebae232f6579070baef45c717feefdd2a0b44720",
+          "bytes": 19266
+        }
+      ],
+      "treeTruncated": false
+    }
+  ],
+  "inspectedRepositoryFiles": [
+    {
+      "repo": "ziweiknows/ziwei-chat",
+      "path": "src/lib/agent/critic.ts",
+      "pin": "ceef938a4ab8d50f864f690fa7d768b4294fcf77",
+      "blob": "8296e67ea2b3eb6ef6927c85ab8fa107eab46056",
+      "url": "https://github.com/ziweiknows/ziwei-chat/blob/ceef938a4ab8d50f864f690fa7d768b4294fcf77/src/lib/agent/critic.ts",
+      "readScope": "source read; not executed"
+    },
+    {
+      "repo": "ziweiknows/ziwei-chat",
+      "path": "src/lib/db/knowledge-retrieval.ts",
+      "pin": "ceef938a4ab8d50f864f690fa7d768b4294fcf77",
+      "blob": "2a845cda63bf5724cf36f8f6a9758b5c5279f7e2",
+      "url": "https://github.com/ziweiknows/ziwei-chat/blob/ceef938a4ab8d50f864f690fa7d768b4294fcf77/src/lib/db/knowledge-retrieval.ts",
+      "readScope": "source read; not executed"
+    },
+    {
+      "repo": "ziweiknows/ziwei-chat",
+      "path": "src/lib/knowledge/ziwei-doushu-importer.ts",
+      "pin": "ceef938a4ab8d50f864f690fa7d768b4294fcf77",
+      "blob": "138cfc86fe34648c810f798218e4fc731802fcb8",
+      "url": "https://github.com/ziweiknows/ziwei-chat/blob/ceef938a4ab8d50f864f690fa7d768b4294fcf77/src/lib/knowledge/ziwei-doushu-importer.ts",
+      "readScope": "source read; not executed"
+    },
+  {
+    "repo": "Renhuai123/ziwei-doushu",
+    "path": "DATASET-LICENSE",
+    "pin": "328337cbc3e005631142e5f9f6d6972040def7a5",
+    "blob": "54e6c9931f54819ffdc9e6e6b7215e64df7413aa",
+    "url": "https://github.com/Renhuai123/ziwei-doushu/blob/328337cbc3e005631142e5f9f6d6972040def7a5/DATASET-LICENSE",
+    "readScope": "file contents inspected; notes retained, not full body vendored"
+  },
+  {
+    "repo": "Renhuai123/ziwei-doushu",
+    "path": "lib/classics/data/quanshu.ts",
+    "pin": "328337cbc3e005631142e5f9f6d6972040def7a5",
+    "blob": "2e1b9a270332e763a91311022de129ecd6caea23",
+    "url": "https://github.com/Renhuai123/ziwei-doushu/blob/328337cbc3e005631142e5f9f6d6972040def7a5/lib/classics/data/quanshu.ts",
+    "readScope": "file contents inspected; notes retained, not full body vendored"
+  },
+  {
+    "repo": "Renhuai123/ziwei-doushu",
+    "path": "lib/classics/data/quanji.ts",
+    "pin": "328337cbc3e005631142e5f9f6d6972040def7a5",
+    "blob": "c7eaaca16efde6dbb2db5ac9e342b89127c56b27",
+    "url": "https://github.com/Renhuai123/ziwei-doushu/blob/328337cbc3e005631142e5f9f6d6972040def7a5/lib/classics/data/quanji.ts",
+    "readScope": "file contents inspected; notes retained, not full body vendored"
+  },
+  {
+    "repo": "Renhuai123/ziwei-doushu",
+    "path": "docs/tianji-ziwei/LICENSE.md",
+    "pin": "328337cbc3e005631142e5f9f6d6972040def7a5",
+    "blob": "8af71c0a73a759f61f293d20b635a7311771eab9",
+    "url": "https://github.com/Renhuai123/ziwei-doushu/blob/328337cbc3e005631142e5f9f6d6972040def7a5/docs/tianji-ziwei/LICENSE.md",
+    "readScope": "file contents inspected; notes retained, not full body vendored"
+  },
+  {
+    "repo": "Renhuai123/ziwei-doushu",
+    "path": "lib/ziwei/patterns.ts",
+    "pin": "328337cbc3e005631142e5f9f6d6972040def7a5",
+    "blob": "772a77de94b2e612f5d33aeb05079b1562efe244",
+    "url": "https://github.com/Renhuai123/ziwei-doushu/blob/328337cbc3e005631142e5f9f6d6972040def7a5/lib/ziwei/patterns.ts",
+    "readScope": "comments, constants, getSanFangPalaces and first detectors"
+  },
+  {
+    "repo": "x-haose/x-iztro",
+    "path": "knowledge/SCHEMA.md",
+    "pin": "2fad09aee358553049c8e2435ea62c70427888c5",
+    "blob": "61d6503a0cf664f7ba2686ef1ba5679a8360db12",
+    "url": "https://github.com/x-haose/x-iztro/blob/2fad09aee358553049c8e2435ea62c70427888c5/knowledge/SCHEMA.md",
+    "readScope": "file contents inspected; notes retained, not full body vendored"
+  },
+  {
+    "repo": "x-haose/x-iztro",
+    "path": "docs/content/docs/guide/guides/knowledge-pack.en.mdx",
+    "pin": "2fad09aee358553049c8e2435ea62c70427888c5",
+    "blob": "87b1f5ae80eeeee12f2b5197f31a8a5ed60159f7",
+    "url": "https://github.com/x-haose/x-iztro/blob/2fad09aee358553049c8e2435ea62c70427888c5/docs/content/docs/guide/guides/knowledge-pack.en.mdx",
+    "readScope": "file contents inspected; notes retained, not full body vendored"
+  },
+  {
+    "repo": "x-haose/x-iztro",
+    "path": "src/data/knowledge/iztro_docs.zh-CN.json",
+    "pin": "2fad09aee358553049c8e2435ea62c70427888c5",
+    "blob": "512767dd853982b7a82eea17082d6f1dcb5ae0d7",
+    "url": "https://github.com/x-haose/x-iztro/blob/2fad09aee358553049c8e2435ea62c70427888c5/src/data/knowledge/iztro_docs.zh-CN.json",
+    "readScope": "full small237KBpack parsed in memory, selected concepts read"
+  },
+  {
+    "repo": "x-haose/x-iztro",
+    "path": "LICENSE",
+    "pin": "2fad09aee358553049c8e2435ea62c70427888c5",
+    "blob": "37de576f9cfc634a08ef5b83c73492ee7ffb9cb6",
+    "url": "https://github.com/x-haose/x-iztro/blob/2fad09aee358553049c8e2435ea62c70427888c5/LICENSE",
+    "readScope": "license header/terms, GPL header only for ziwei-chart"
+  },
+  {
+    "repo": "ziweiknows/ziwei-chat",
+    "path": "README.md",
+    "pin": "ceef938a4ab8d50f864f690fa7d768b4294fcf77",
+    "blob": "109e93b92b3e7aea96eb400730be95c3b1c863ba",
+    "url": "https://github.com/ziweiknows/ziwei-chat/blob/ceef938a4ab8d50f864f690fa7d768b4294fcf77/README.md",
+    "readScope": "file contents inspected; notes retained, not full body vendored"
+  },
+  {
+    "repo": "ziweiknows/ziwei-chat",
+    "path": "NOTICE",
+    "pin": "ceef938a4ab8d50f864f690fa7d768b4294fcf77",
+    "blob": "1ee1eb0772e0f4677cfa8fe5bb5cbfdd7182ede0",
+    "url": "https://github.com/ziweiknows/ziwei-chat/blob/ceef938a4ab8d50f864f690fa7d768b4294fcf77/NOTICE",
+    "readScope": "file contents inspected; notes retained, not full body vendored"
+  },
+  {
+    "repo": "ziweiknows/ziwei-chat",
+    "path": "docs/knowledge/knowledge-and-skills-spec.md",
+    "pin": "ceef938a4ab8d50f864f690fa7d768b4294fcf77",
+    "blob": "99897d70bd5a4b5bf2ae5d8236ba310a63ffeceb",
+    "url": "https://github.com/ziweiknows/ziwei-chat/blob/ceef938a4ab8d50f864f690fa7d768b4294fcf77/docs/knowledge/knowledge-and-skills-spec.md",
+    "readScope": "file contents inspected; notes retained, not full body vendored"
+  },
+  {
+    "repo": "ziweiknows/ziwei-chat",
+    "path": "content/knowledge/imported/ziwei-doushu/ziwei-doushu-classic-qs-5-2.md",
+    "pin": "ceef938a4ab8d50f864f690fa7d768b4294fcf77",
+    "blob": "cb57ac54103d50f5a11df1586442794d5600cb1e",
+    "url": "https://github.com/ziweiknows/ziwei-chat/blob/ceef938a4ab8d50f864f690fa7d768b4294fcf77/content/knowledge/imported/ziwei-doushu/ziwei-doushu-classic-qs-5-2.md",
+    "readScope": "file contents inspected; notes retained, not full body vendored"
+  },
+  {
+    "repo": "ziweiknows/ziwei-chart",
+    "path": "app/src/knowledge-db/sources.ts",
+    "pin": "614d6e104ad4d559193667187806cbb5760037ec",
+    "blob": "a9e3e37dd897c0ee72e27f8a8577a3448dc3873f",
+    "url": "https://github.com/ziweiknows/ziwei-chart/blob/614d6e104ad4d559193667187806cbb5760037ec/app/src/knowledge-db/sources.ts",
+    "readScope": "file contents inspected; notes retained, not full body vendored"
+  },
+  {
+    "repo": "ziweiknows/ziwei-chart",
+    "path": "app/src/knowledge-db/entries/principles.ts",
+    "pin": "614d6e104ad4d559193667187806cbb5760037ec",
+    "blob": "aea55835dd7995db56c5f516eff0f7d9325fc168",
+    "url": "https://github.com/ziweiknows/ziwei-chart/blob/614d6e104ad4d559193667187806cbb5760037ec/app/src/knowledge-db/entries/principles.ts",
+    "readScope": "file contents inspected; notes retained, not full body vendored"
+  },
+  {
+    "repo": "ziweiknows/ziwei-chart",
+    "path": "LICENSE",
+    "pin": "614d6e104ad4d559193667187806cbb5760037ec",
+    "blob": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+    "url": "https://github.com/ziweiknows/ziwei-chart/blob/614d6e104ad4d559193667187806cbb5760037ec/LICENSE",
+    "readScope": "license header/terms, GPL header only for ziwei-chart"
+  },
+  {
+    "repo": "por7/ziwei",
+    "path": "LICENSE",
+    "pin": "2088612184ec60bbc8e3f02c09bd9b820d18739c",
+    "blob": "365e10a5ad2298c4cf10a9d222180652e743f18d",
+    "url": "https://github.com/por7/ziwei/blob/2088612184ec60bbc8e3f02c09bd9b820d18739c/LICENSE",
+    "readScope": "license header/terms, GPL header only for ziwei-chart"
+  },
+  {
+    "repo": "SylarLong/iztro",
+    "path": "LICENSE",
+    "pin": "d05faecdb00dd074e73c90794345aa3a3c537f63",
+    "blob": "af1e0c83c0a8095bd9faa83265ba67a441422657",
+    "url": "https://github.com/SylarLong/iztro/blob/d05faecdb00dd074e73c90794345aa3a3c537f63/LICENSE",
+    "readScope": "license header/terms, GPL header only for ziwei-chart"
+  }
+],
+  "knowledgePack": {
+    "repo": "x-haose/x-iztro",
+    "file": "src/data/knowledge/iztro_docs.zh-CN.json",
+    "gitBlobSha": "512767dd853982b7a82eea17082d6f1dcb5ae0d7",
+    "source": {
+      "adapted": "文本由 x-iztro 在 iztro-docs 原文基础上整理改写为第三人称释义口吻，命理内容一仍其旧；仅勘正原文笔误两处：文曲斗分作北斗第四星、「佐九重于尧殿」按「佐/九重/于尧殿」断句释义；另将暗合宫一节的格局名依格局篇正式条目统一作科明暗禄；特殊宫位、宫位分类与飞星四化诸节释义按同一口吻补收；另补收 x-iztro 自撰的对照性条目：流耀 50 条（指向对应本命辅星，机器可读对照由内核 flowStarCounterparts 提供）与截路、旬中、年解、劫煞、岁破 5 条（只述安放事实与组别归属，劫煞、岁破沿用同名神煞的原释义，不新增解读）；华盖、咸池、天德、大耗四条兼作十二神与宫内杂耀，原文按源站分节拼接、首段限定于十二神语境，现改写为一段：杂耀语境在前、十二神语境作补充；病符、小耗同样去掉源站分节标题改为一段行文",
+      "author": "Sylar Long",
+      "commit": "ec2d58bb8b2a0d243d91212a1e3c87ab866858ee",
+      "license": "MIT",
+      "name": "iztro-docs",
+      "retrievedAt": "2026-08-19",
+      "url": "https://github.com/SylarLong/iztro-docs"
+    },
+    "version": "2026-08-19+ec2d58b",
+    "counts": {
+      "stars": 162,
+      "patterns": 64,
+      "palaces": 12,
+      "mutagens": 4,
+      "concepts": 49
+    },
+    "categories": {
+      "dec": 46,
+      "adjective": 38,
+      "minor": 14,
+      "major": 14,
+      "flow": 50
+    },
+    "schemaSection8StarCount": 107,
+    "guideStarCount": 162,
+    "note": "Actual pinned pack parsed; schema section8 is stale relative to pack/guide. Counts are software entries, not independent reviewed claims. Pack read in memory; not vendored."
+  },
+  "forkComparison": {
+    "chartPin": "614d6e104ad4d559193667187806cbb5760037ec",
+    "por7Pin": "2088612184ec60bbc8e3f02c09bd9b820d18739c",
+    "comparedFiles": [
+      {
+        "path": "app/src/knowledge-db/entries/combos.ts",
+        "chartBlob": "02ef79732b7d4d9cbbbdc49dbbd5917e050a9462",
+        "por7Blob": "02ef79732b7d4d9cbbbdc49dbbd5917e050a9462"
+      },
+      {
+        "path": "app/src/knowledge-db/entries/fortune.ts",
+        "chartBlob": "3792729486901bffeeeb95619be6fb44e0460eec",
+        "por7Blob": "3792729486901bffeeeb95619be6fb44e0460eec"
+      },
+      {
+        "path": "app/src/knowledge-db/entries/index.ts",
+        "chartBlob": "8235211498a083ff2f332eb91aca49b3f7dc0485",
+        "por7Blob": "8235211498a083ff2f332eb91aca49b3f7dc0485"
+      },
+      {
+        "path": "app/src/knowledge-db/entries/kline.ts",
+        "chartBlob": "0d799cd0a39b1f793315e6265dcde2e6a6b89a8d",
+        "por7Blob": "0d799cd0a39b1f793315e6265dcde2e6a6b89a8d"
+      },
+      {
+        "path": "app/src/knowledge-db/entries/match.ts",
+        "chartBlob": "fe9e6807fb6b1aae495032dd653c78415bd1873f",
+        "por7Blob": "fe9e6807fb6b1aae495032dd653c78415bd1873f"
+      },
+      {
+        "path": "app/src/knowledge-db/entries/palaces.ts",
+        "chartBlob": "012729f6d9cfa402a903fecf6174fd6adc445ddf",
+        "por7Blob": "012729f6d9cfa402a903fecf6174fd6adc445ddf"
+      },
+      {
+        "path": "app/src/knowledge-db/entries/principles.ts",
+        "chartBlob": "aea55835dd7995db56c5f516eff0f7d9325fc168",
+        "por7Blob": "aea55835dd7995db56c5f516eff0f7d9325fc168"
+      },
+      {
+        "path": "app/src/knowledge-db/entries/sihua.ts",
+        "chartBlob": "3b058417739ad77d3cb22258c6af6e0502fdcb6d",
+        "por7Blob": "3b058417739ad77d3cb22258c6af6e0502fdcb6d"
+      },
+      {
+        "path": "app/src/knowledge-db/entries/sihuaPalaces.ts",
+        "chartBlob": "23e73e67746bbfbea370669963761177e6cc04e1",
+        "por7Blob": "23e73e67746bbfbea370669963761177e6cc04e1"
+      },
+      {
+        "path": "app/src/knowledge-db/entries/stars.ts",
+        "chartBlob": "74262cc0cc79046b6d86d6e1285be8f57e859257",
+        "por7Blob": "74262cc0cc79046b6d86d6e1285be8f57e859257"
+      },
+      {
+        "path": "app/src/knowledge-db/entries/support.ts",
+        "chartBlob": "849506404ffcbf593b3a2ef86daff65b2ec60fde",
+        "por7Blob": "849506404ffcbf593b3a2ef86daff65b2ec60fde"
+      },
+      {
+        "path": "app/src/knowledge-db/index.ts",
+        "chartBlob": "b71a10ea717ca6bfbf6d4b70a57efa7a8aba6b83",
+        "por7Blob": "b71a10ea717ca6bfbf6d4b70a57efa7a8aba6b83"
+      },
+      {
+        "path": "app/src/knowledge-db/retrieval/context.test.ts",
+        "chartBlob": "b7c2c35eaea56754e57ee3969d7aba4641359c2f",
+        "por7Blob": "b7c2c35eaea56754e57ee3969d7aba4641359c2f"
+      },
+      {
+        "path": "app/src/knowledge-db/retrieval/context.ts",
+        "chartBlob": "7a1e870296047fa9aaa31841947fb26cc6c27b01",
+        "por7Blob": "7a1e870296047fa9aaa31841947fb26cc6c27b01"
+      },
+      {
+        "path": "app/src/knowledge-db/retrieval/retrieve.test.ts",
+        "chartBlob": "88dc0f29514f63be38185e688e7e726fbc0729a9",
+        "por7Blob": "88dc0f29514f63be38185e688e7e726fbc0729a9"
+      },
+      {
+        "path": "app/src/knowledge-db/retrieval/retrieve.ts",
+        "chartBlob": "e76c80d323531baa1def9ad8bb829d7fbf14493a",
+        "por7Blob": "e76c80d323531baa1def9ad8bb829d7fbf14493a"
+      },
+      {
+        "path": "app/src/knowledge-db/schema.ts",
+        "chartBlob": "789fac2f26c556e4c85a5461ee0987875be0bb49",
+        "por7Blob": "789fac2f26c556e4c85a5461ee0987875be0bb49"
+      },
+      {
+        "path": "app/src/knowledge-db/sources.ts",
+        "chartBlob": "a9e3e37dd897c0ee72e27f8a8577a3448dc3873f",
+        "por7Blob": "a9e3e37dd897c0ee72e27f8a8577a3448dc3873f"
+      }
+    ],
+    "allEqual": true,
+    "note": "GitHub parent metadata also identifies por7 as a fork. Root license differs; shared knowledge is not independent corroboration or automatically relicensed by the fork label."
+  },
+  "publisherPreview": {
+    "title": "斗數卷．卷二．星曜本義 (乙巳再行)",
+    "author": "葉漢良",
+    "isbn": "9789621476166",
+    "publisher": "萬里機構．圓方出版社",
+    "publicationDateDeclaredByPublisher": "2025-10-17",
+    "language": "zh-Hant",
+    "fullBookPagesDeclared": 424,
+    "url": "https://www.wanlibk.com/readers/preread/9789621476166.pdf",
+    "catalogUrl": "https://www.wanlibk.com/cgi-bin/isbn_pages.asp?txtIsbn=9789621476166",
+    "downloadedBytes": 701355,
+    "sha256": "2c6701dec4f6421a0fff56b4c6a2d7b28258c992c2845e7a1c3ae83035478398",
+    "pdfPages": 10,
+    "renderedAndVisuallyInspected": {
+      "zeroBasedPdfIndex": 6,
+      "printedPages": [
+        18,
+        19
+      ],
+      "section": "十四正曜 / 紫微"
+    },
+    "otherReadLocators": "Extracted preview table of contents and prefaces; not full-book reading.",
+    "rights": "Publisher-provided reading preview; no bulk reuse/redistribution grant observed. PDF/PNG kept in OS temp, not committed."
+  },
+  "wikisource": {
+    "type": "transcription_revision_not_print_edition",
+    "witnesses": [
+      {
+        "juan": 1,
+        "oldid": 7913704,
+        "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷一&oldid=7913704"
+      },
+      {
+        "juan": 2,
+        "oldid": 1963110,
+        "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷二&oldid=1963110"
+      },
+      {
+        "juan": 3,
+        "oldid": 2268626,
+        "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷三&oldid=2268626"
+      }
+    ],
+    "rights": "Page footer declares attribution/share-alike with additional terms; underlying classical text and modern edits must remain distinct. No complete transcription copied. Original print edition not authenticated or scan-collated."
+  },
+  "renhuaiDataset": {
+    "release": "v4.0-13d",
+    "releaseUrl": "https://github.com/Renhuai123/ziwei-doushu/releases/tag/v4.0-13d",
+    "declaredCharts": 674976,
+    "declaredDimensions": 13,
+    "declaredInterpretations": 8774688,
+    "declaredExpandedGB": 56.6,
+    "declaredGeneration": "deterministic engine plus nonpublic interpretation-rule library; README says not AI-generated",
+    "countsIndependentlyReproduced": false,
+    "datasetDownloaded": false,
+    "licenseRead": "DATASET-LICENSE at pinned repository commit; CC BY4 declaration with Ni Haixia quotation carve-out; tianji folder declares BY-NC-SA4 without proving rights-holder authority.",
+    "scope": "metadata/schema/license and selected public classic/rule files only"
+  },
+  "retainedEvidence": {
+    "juan2Path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/raw-juan2.html",
+    "sha256Rechecked": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+    "juan2DerivedPath": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+    "juan3DerivedPath": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+    "note": "Selected text/identity/provenance read; all prior evidence preserved. No existing source decision replayed or changed."
+  },
+  "accessLimitations": [
+    {
+      "url": "https://tusachtamlinh.net/product/tu-vi-tong-hop-nguyen-phat-loc/",
+      "observed": "web tool retrieval error; no HTTP status exposed"
+    },
+    {
+      "url": "https://hoc.kabala.vn/chuong-4-an-sao-la-so-tu-vi-phan-2/",
+      "observed": "web tool retrieval error; no HTTP status exposed"
+    },
+    {
+      "url": "https://phucvu.thuvientphcm.gov.vn/Item/ItemDetail/477358?siteid=2",
+      "observed": "web tool retrieval error; alternate EMIC605898 actual catalog readable"
+    },
+    {
+      "url": "https://archive.org/metadata/TuViDdauSoTanBien-VDThaiThuLang-DV",
+      "observed": "web tool retrieval error; item details page readable, no scan downloaded"
+    },
+    {
+      "url": "https://sachhuyenthuat.net/tu-vi-tong-hop-nguyen-phat-loc/",
+      "observed": "search-index metadata available, direct page error; not book reading"
+    },
+    {
+      "url": "https://www.books.com.tw/products/0010220838?loc=P_0003_070",
+      "observed": "search-index Feixing title lead; direct page error, no book read"
+    }
+  ],
+  "approval": {
+    "sourceReviewExecuted": false,
+    "runtimeRequested": false,
+    "publicReleasePermission": "unchanged_closed"
+  }
+}
