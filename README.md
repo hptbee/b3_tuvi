@@ -15,7 +15,7 @@
 | Vị trí theo nguồn | Thiên Đức / Nguyệt Đức theo năm xem; [Tiểu hạn iztro](docs/tuvi/MODERN_MINOR_PROFILE.md) tuổi mụ 1–120 và [Đại hạn iztro](docs/tuvi/MODERN_MAJOR_PROFILE.md) tuổi mụ 1–125, có lựa chọn chi cung, can–chi hoặc liên kết Tứ Hóa theo bảng mặc định iztro | Chỉ đối chiếu vị trí; Đại hạn chỉ 12 chặng Cục..Cục+119, không tự suy tuổi hoặc luận vận hạn; hồ sơ cổ điển giữ khóa riêng |
 | Ý nghĩa sao/cung | Chạm tên sao/cung để tra cứu API | Cần seed SQLite; nội dung tra cứu không phải luận giải cá nhân đã duyệt |
 | Cách cục | Đối chiếu catalog JSON; hiển thị trạng thái và giới hạn | Khớp điều kiện runtime không tự chứng minh thành/phá cách theo nguồn |
-| Phân tích có cấu trúc | Cung, sao, quan hệ, rule và trạng thái chứng cứ; 7 claim nội bộ được duyệt theo phạm vi nguồn, gồm Tài Bạch / Quan Lộc / Phúc Đức | Public prose vẫn khóa; claim truyền thống không xác minh sự kiện đời |
+| Phân tích có cấu trúc | Cung, sao, quan hệ, rule và trạng thái chứng cứ; 14 claim nội bộ theo đúng phạm vi nguồn trên 9 cung; ghi chú sao chính bổ sung Thiên Di / Nô Bộc / Điền Trạch / Huynh Đệ / Phu Thê | Public prose vẫn khóa; ghi chú mở đoạn của sách không phải dự đoán hay tổng luận cả cung |
 | In / xuất JSON | In lá số, tải `la-so.json` | Không kèm luận giải đã duyệt |
 | Thần Số Học | Báo cáo nhiều chương: 7 chỉ số, lưới/tên/ghép, chu kỳ, đỉnh/thử thách, 154 bài đọc được, 5 chỉ số nâng cao (công thức), JSON import/export, in A4 | Catalog thử nghiệm; Master 33 / Challenge 0 / 5 chỉ số nâng cao: lời luận withheld; nguồn sách chưa xác minh; chưa staging/production |
 | Nội dung khác | Các route Kiến thức, Tài liệu, Luận giải, Liên hệ | Nội dung vẫn còn sơ khai/placeholder |

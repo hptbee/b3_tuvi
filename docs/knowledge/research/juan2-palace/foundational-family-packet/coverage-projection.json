@@ -1,0 +1,118 @@
+{
+  "classification": "RECORDED_CONDITIONAL_FIXED_COHORT_SOURCE_CANDIDATE_REACHABILITY_NOT_CURRENT_DELIVERED_COVERAGE",
+  "gridSha256": "832ede7ac4ad680293365b09c2f4f2861a042802d6014d0eb2ad429bdbfdb630",
+  "total": 1152,
+  "conditionalInitialCount": 419,
+  "conditionalInitialAssumption": "All four earlier proposed claims accepted and implemented; not asserted here.",
+  "conditionalInitialKeys": [
+    "thien_di/thien_luong",
+    "no_boc/thien_luong",
+    "thien_di/cu_mon",
+    "dien_trach/thien_co"
+  ],
+  "steps": [
+    {
+      "key": "huynh_de/tu_vi",
+      "count": 88,
+      "overlapConditionalInitial": 32,
+      "marginalVsInitial": 56,
+      "marginalSequential": 56,
+      "cumulative": 475,
+      "percent": 41.232638888888886
+    },
+    {
+      "key": "phu_the/thien_luong",
+      "count": 96,
+      "overlapConditionalInitial": 0,
+      "marginalVsInitial": 96,
+      "marginalSequential": 82,
+      "cumulative": 557,
+      "percent": 48.35069444444444
+    },
+    {
+      "key": "phu_the/thien_tuong",
+      "count": 114,
+      "overlapConditionalInitial": 24,
+      "marginalVsInitial": 90,
+      "marginalSequential": 90,
+      "cumulative": 647,
+      "percent": 56.16319444444444
+    }
+  ],
+  "conditionalFinal": 647,
+  "conditionalFinalPercent": 56.16319444444444,
+  "conditionalNewPalaces": [
+    "huynh_de",
+    "phu_the"
+  ],
+  "conditionalPalaceBreadth": 9,
+  "overlapMatrix": {
+    "thien_di/thien_luong": {
+      "thien_di/thien_luong": 96,
+      "no_boc/thien_luong": 0,
+      "thien_di/cu_mon": 0,
+      "dien_trach/thien_co": 0,
+      "huynh_de/tu_vi": 20,
+      "phu_the/thien_luong": 0,
+      "phu_the/thien_tuong": 0
+    },
+    "no_boc/thien_luong": {
+      "thien_di/thien_luong": 0,
+      "no_boc/thien_luong": 92,
+      "thien_di/cu_mon": 0,
+      "dien_trach/thien_co": 22,
+      "huynh_de/tu_vi": 0,
+      "phu_the/thien_luong": 0,
+      "phu_the/thien_tuong": 0
+    },
+    "thien_di/cu_mon": {
+      "thien_di/thien_luong": 0,
+      "no_boc/thien_luong": 0,
+      "thien_di/cu_mon": 98,
+      "dien_trach/thien_co": 0,
+      "huynh_de/tu_vi": 12,
+      "phu_the/thien_luong": 0,
+      "phu_the/thien_tuong": 0
+    },
+    "dien_trach/thien_co": {
+      "thien_di/thien_luong": 0,
+      "no_boc/thien_luong": 22,
+      "thien_di/cu_mon": 0,
+      "dien_trach/thien_co": 92,
+      "huynh_de/tu_vi": 0,
+      "phu_the/thien_luong": 0,
+      "phu_the/thien_tuong": 18
+    },
+    "huynh_de/tu_vi": {
+      "thien_di/thien_luong": 20,
+      "no_boc/thien_luong": 0,
+      "thien_di/cu_mon": 12,
+      "dien_trach/thien_co": 0,
+      "huynh_de/tu_vi": 88,
+      "phu_the/thien_luong": 14,
+      "phu_the/thien_tuong": 0
+    },
+    "phu_the/thien_luong": {
+      "thien_di/thien_luong": 0,
+      "no_boc/thien_luong": 0,
+      "thien_di/cu_mon": 0,
+      "dien_trach/thien_co": 0,
+      "huynh_de/tu_vi": 14,
+      "phu_the/thien_luong": 96,
+      "phu_the/thien_tuong": 0
+    },
+    "phu_the/thien_tuong": {
+      "thien_di/thien_luong": 0,
+      "no_boc/thien_luong": 0,
+      "thien_di/cu_mon": 0,
+      "dien_trach/thien_co": 18,
+      "huynh_de/tu_vi": 0,
+      "phu_the/thien_luong": 0,
+      "phu_the/thien_tuong": 114
+    }
+  },
+  "sourceApproval": false,
+  "publicRelease": false,
+  "recordedPreT037ApprovedCoverage": 92,
+  "note": "Arithmetic recorded before T037 implementation: 419 means all four initial predicates actually accepted+implemented. T038 source reviewers do not approve targets by coverage arithmetic. Current delivered before/after must be measured by parent after each accepted implementation. No claim is selected to force a target."
+}

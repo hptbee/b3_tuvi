@@ -1,0 +1,17 @@
+{
+  "status": "PRELIMINARY_SOURCE_INSPECTED_NOT_APPROVED",
+  "sourceId": "ziwei-quanshu-iztro-transcription",
+  "editionId": "iztro-juan2-2f00e2ab0c80",
+  "gitCommit": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "gitPath": "docs/zh_TW/learn/ancientBook-2.html",
+  "url": "https://github.com/SylarLong/iztro/blob/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/ancientBook-2.html",
+  "rawHtmlSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+  "retrieval": "byte-exact committed prior reviewed source artifact; no fresh upstream Git object retrieval this subtask",
+  "fullSectionMatchesInertRaw": true,
+  "upstreamCodeExecuted": false,
+  "authenticated": false,
+  "bookVerified": false,
+  "expertVerified": false,
+  "publicRelease": false,
+  "historicalIndependence": "same existing modern transcription, not new independent historical witness"
+}

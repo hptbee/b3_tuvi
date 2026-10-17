@@ -1,22 +1,22 @@
 # Progress
 
-- b3_home: /workspace/b3_tuvi/.b3/runtime/b3_ai-engineering
-- product_root: /workspace/b3_tuvi
-- plan_id: Autonomous Product Completion version 27
-- plan_version: 27
-- branch: codex/tuvi-modern-decadal-stems
-- run_base_sha: 774ac6cff4b74e273a9bdf3a9c1ffa180d3d6b7b
+- b3_home: D:/Project/b3_ai-engineering
+- product_root: D:/Project/b3_tuvi
+- plan_id: Autonomous Product Completion version 31
+- plan_version: 31
+- branch: codex/tuvi-minor-stem-continuation
+- run_base_sha: 3613b68dd885dc382d6e1bcd080e1fcc60cd2710
 - preceding_invocation_base_sha: f0dec74973ef9d07129e19330356f8e6d2040227
 - previous_run_base_sha: 45615a48d0c75b90138cfc618320ffae6e9c34e0
-- current_task: none (T033 completed; review cap reached)
-- last_completed_task: T033
-- next_source_task: modern_minor_stem_candidate_research_not_approved
-- current_task_base_sha: dd92577c99b071afb12fec3dc8c400bd3da997d0
+- current_task: none; continuation review-budget boundary
+- last_completed_task: T038
+- next_source_task: governing_source_context_for_phu_mau_tu_tuc_tat_ach
+- current_task_base_sha: 6c947c3954b1aa1ede504cd7897277d5f63e6a6a
 - run_status: INCOMPLETE
 - previous_delivery_blocker: external_github_pr_api_forbidden_after_local_T030_T031_PASS
 - previous_invocation_stop_reason: invocation_review_pass_budget_exhausted_12_of_12
 - preceding_invocation_stop_reason: review_pass_budget_exhausted_after_12_completed_passes
-- updated: 2026-10-16
+- updated: 2026-10-17
 
 ## Historical reconciliation — preceding invocation
 Main fetched and ff-only advanced to f0dec74973ef9d07129e19330356f8e6d2040227; #49 is a separate research-only PR at 7d151bfa78f3151c3e1bcc5a0f1bead7fbb66582, read using its actual Git ref because GitHub GraphQL/REST return Forbidden. Previous checkpoint branch/path/table are historical; append-only completion receipts below remain evidence. T001–T006,T008,T009,T012 completion commits exist in merged main. T010/T011/T013–T015 not claimed complete by this resume. Backend full CI at current main PASS, coverage86.77/87.50. No domain formula/decision/release edits. User explicitly prioritizes Tử Vi source capabilities over previous queue; existing task IDs are preserved.
@@ -667,7 +667,7 @@ Gitls-remoteadvertised60pullheads: refs/pull/60/head exactly655c219(T030parent),
 
 
 ## Current final checkpoint — SAME PR60 updated, T033 completed
-- branch: codex/tuvi-modern-decadal-stems
+- branch: codex/tuvi-minor-stem-continuation
 - recovered_existing_pr: https://github.com/hptbee/b3_tuvi/pull/60
 - last_feature_commit: ff153baee9914b1bc8fb5d6a9916469cf55992bc
 - task_base: dd92577c99b071afb12fec3dc8c400bd3da997d0
@@ -716,3 +716,108 @@ T030/T031/T032/T033 commits are consolidated into this existing PR by fast-forwa
 Research intake for a possible future Tiểu hạn stem profile is explicitly unapproved and has no runtime activation.
 
 Nextaction: applythistitle/bodyONLYtoexistingPR60whenAPIaccessreturns, verifyhostedchecks/source/domain/releasegatesbeforeauthorizedauto-merge. No newPRandno directmainpush.
+
+## Invocation 2026-10-16 — explicit fresh continuation
+- Request: attached Pasted text.txt; one new branch / one draft PR / focused commits; no merge or deploy.
+- Current host paths and branch above supersede historical Linux/branch metadata by explicit user instruction. Historical receipts preserved below, prior 12/12 review count unchanged.
+- Prior invocation base: 774ac6cff4b74e273a9bdf3a9c1ffa180d3d6b7b; prior branch codex/tuvi-modern-decadal-stems.
+- Native git fetch origin main succeeded under authorized escalation; HEAD and origin/main are 3613b68dd885dc382d6e1bcd080e1fcc60cd2710.
+- GitHub connector actual get_pr_info: #60 merged at 74fc89f50a2dfe20e80d69e598eca77f4baed1e3, #61 merged at 3613b68dd885dc382d6e1bcd080e1fcc60cd2710. Previous API/unmerged blockers historical, not current blockers. No editing closed PR60.
+- Current technical reviews: 0/12; current source reviews: not executed. New invocation, no historical counter reset.
+- Node22.23.2, backend/frontend node_modules present. No browser risk; browser NOT RUN.
+- Parallel isolated research: complete pinned source chain; independent valid fixtures; 12-palace applicability audit. No formula implementation or approval inferred.
+- Task T034 readiness draft until complete packet, independent fixtures, actual distinct-model decisions and comparator replay.
+- Single draft PR pending first reviewable change; API resource available. Preserve one branch throughout.
+- Baseline backend CI npm run test:ci: sandbox HTTP failed EACCES 127.0.0.1; authorized escalated rerun PASS exit0, coverage89.15/89.99. No source defect inferred. Log new-backend-baseline-escalated.log.
+- Actual hosted CI for #61 head2fa3aad: run38923627596 completed success. New continuation hosted CI not yet available.
+- Applicability baseline: fixed valid grid1152 charts, approved7 claims over4 palaces, any92/none1060. Positive/negative perclaim Mệnh2/1150,Tài adverse22/1130,Phúc Đồng-Lương20/1132,Quan Dậu4/1148,Phúc Cơ-Cự18/1134,Tài Tử-Phá10/1142,Quan Mão18/1134. Eight palaces0. No population/expert/source approval inference. Reproducible script+inputs+hashes under new-invocation/coverage/.
+- Approach T034 detailed/draft persisted; no runtime readiness before actual frozen-packet dual model acceptance.
+- Frontend baseline npm run test:ci PASS exit0:314tests9files. Current UI unchanged. Parent deterministic independent fixture replay PASS60solar/lunarinverses,7200agecases,2880branches,120finite,180analyze; exact frozen fixture hash a332d28e4d5be29cda348f5e7e1192e12be11f40a63a0ef7ac5593768b318bbb.
+- Source candidate freeze1: source85596cfc1bb9d9bbbfe1e6da82e5a83222822fa5f63431a792f4ca2f1dc164de/context883b52b28675c8bc84a182b7a8e98e9eb893e1a95495d0d6c5bfd0ab57876c3a/algorithm1d420cc05ad462bb464423d21fb64549a133dece91a600d96fb5a066e4ea6f7c/compatibility612ca5002aa21a927eb000a182752f4309e1d1bb13541c62811859fc321d691c. Actual independent sol/astra reviews dispatched. No acceptance yet. ReviewerA preliminary frozen branch-index inconsistency reported; do not correct until actual reviews complete and historical packet preserved.
+- Independent source proof actual parent Python PASS46liveGitblobs/1440algebra. Source software correspondence only; no historical/expert approval.
+- T035 added pending as independently discovered source candidate. Fixed grid conditional12newpreviouslyuncoveredcharts, current baseline unchanged7claims4palaces92/1152matches. Reciprocal adverse/brightness question explicitly unresolved.
+
+## Invocation stop — required source models exhausted
+- run_status: INCOMPLETE
+- stop_reason: required_model_resources_exhausted
+- T034: incomplete; no completion commit, no runtime implementation, no source approval or completed review verdict. Both actual sol/astra agents errored usage limits. See source dossier review-execution-incomplete.json; no false available=true model record.
+- Preliminary concrete defect R4001: frozen compatibility birthYearBranch chiIndex_0_to11 contradicts actual server1..12. Original freeze retained unchanged. Fresh corrected packet and fresh actual dual review required; source comparison not accepted.
+- Technical reviews:0/12 completed current invocation, historical12/12 unchanged. Budget NOT exhausted. Cannot substitute hat-change or fabricated review for distinct model approvals.
+- T035 remains pending/preliminary; no source reviews or implementation. B/C source-gated candidates cannot proceed without exhausted required models. Existing blockers not repeated.
+- Delivery intent: one checkpoint-only commit and one draft PR on codex/tuvi-minor-stem-continuation, explicitly incomplete, no merge/deploy/publicrelease. No completed product task or numerical completion gain.
+- Evidence files source dossier retained; applicability audit and T035 ignored handoff under new-invocation/. Preserve on this checkout; do not lose when switching hosts.
+- Checkpoint-specific verification: frozen manifest64filesexact; docs selftestsPASS and links255PASS; no backend/frontend runtime or test diff. Checkpoint+STATUS+execution+attributes whitespacePASS; preserved exact review-context.txt has63source-whitespace diagnostics, no trimming/re-hash. These are evidence-preservation checks, not T034 source/technical acceptance.
+- Explicit user checkpoint preservation authorizes committing selected .b3/autodev/ records despite default ignore policy. This is an incomplete handoff commit; no task marked completed and no formula/code quality gate PASS. Preliminary ignored audit/candidate scripts and fixtures included explicitly for reproducible cross-host handoff; no broad git add.
+
+## Single draft PR delivery receipt — current invocation
+- Checkpoint commit:9cff66271b171049f7dea0da75f1505a47fae28f; not a completed product task.
+- Actual gitpush origin/codex/tuvi-minor-stem-continuation succeeded; GitHub create_pull_request confirms exacthead9cff662,targetmain3613b68,drafttrue,open.
+- Single PR:https://github.com/hptbee/b3_tuvi/pull/62, attached to current chat. No other PR/branch created for this invocation.
+- Actual hostedCI run38926208446 queued for9cff662 at receipt time; no hostedPASS claim. Prior main/#61CI success remains separate evidence.
+- Local worktree was clean after checkpoint commit. Subsequent sandbox-only ls-remote failed DNS-thread initialization; successful push and GitHub exact head are actual delivery proof, no fabricated remote command success.
+- Current stop/next action unchanged: INCOMPLETE required-model usage limits; preserve original index-defective packet and obtain fresh corrected-packet actual dual review before implementation. Technical reviews0/12, no feature tasks completed, coverage7claims4palaces92/1152 unchanged.
+
+## Resume — foundational interpretation priority (version29)
+- New explicit user request: expand individual-major-star palace foundations, progress across all12palaces, measure fixed-chart/per-palace/overlap beforeafter each task; target30then50percent only with source approval. PreserveT034 and allpublic/narration gates.
+- Actual fetchHEAD and origin/codex/tuvi-minor-stem-continuation both e7feae516397e7530e69dd68e19ff4e2d4d5dddf; origin/main3613b68 unchanged. Clean initialworktree, no overlapping useredits. PR62actualopen/draft, exactsamebranch/head; actualCI38926283537completedSUCCESS, supersedes previousqueued receipt.
+- No branch/newPR/merge/deploy. T034 original evidence untouched; no wait dependency on it. T035 pendinglowerpriority under newestuserdirection. Current taskT036sourceintake with independentcoverage-ranking research; no runtime readiness or source acceptance.
+- Technicalreview counter remains0/12 for ongoingPR62 continuation, historical12/12 preserved. New userresume does not manufacture verdicts orreset actual passes.
+- Research agents author full-context singlemajorstar candidates and independently measure14majorstars×12palaces/overlap/marginal coverage on exact1152grid. They do not approve their own source proposals or change runtime.
+- Concrete task split version30: T036 actualapplicability CLI (approvalneutral) ready; originalsourceintent all preservedT037 pendingT036. Source research continues inparallel; T034 untouched. T036basee7feae5, notesapproachT036ready afterinspection, no evaluator duplication. Currentreviewcounter0/12.
+
+## T036 completion — reviewed measurement capability
+- commit:98496ca93c2097cacc59d53d1886695446f9fb03; actual gitpush sameoriginbranch succeeded, no newPR/mainpush.
+- qualitygate:PASS forT036 only. Focused Node/actualCLI/malformedbaselines PASS; fullbackendCIexit0 coverage89.15/89.99; docs selftestsPASS/links259PASS; all6taskfiles whitespacePASS. No frontendchange/browserrisk; frontendCI/browserNOTRUN forthistask.
+- Independenttechnicalreviewpass1 completed clear: t036-review-1.md. Independently all7exact1152chartmembershipsets match directpredicateoracle; no R4101finding allocated, no fixneeded. MEDIUMfullscope211lines6files. Specialistperformance skipped boundedofflineonly/no request/cache/concurrencychange; generaldimensioncovered.
+- Actualcoveragebeforeafter unchanged7claims4palaces92/1152(7.9861percent),94hits2overlapcharts. T036measurescoverage, doesnotincreaseclaimcoverage orgrantapproval.
+- Technicalreviewsused1/12; nexttaskT037, taskbase98496ca. Sourcepacket4candidates112fixtures frozen; bothactualsource models reviewing independently. Exactfullsource+fixture parentreplayPASS, notsemanticapproval.
+- T034originalunapprovedpacket remainsuntouched, no runtimeactivation/sourceapproval inherited.
+- T037sourcegate: actual4each sol/astra MATCH+INTERPRETATION_SUPPORTED_WITH_LIMITS, parentunchangedcompareReviewsAI_ACCEPTED/MATCH4of4 after30frozenfiles/fivedigests/AST/wording/limitations andactualidentity checks. ActualAHTTP200 recoveredescalation; Bconnectorwitness exacthash/statusnull, nofabrication. Newaccepted-decisions andexecution separatefromfrozenproposal.
+- T037implementationreadinessnotesREADY atbase98496ca, exactexistingbinder finiteextension+fixedpacketbase routing, no algorithm/comparator weakening. Public/narration/default/natal/T034unchanged. Technicalcounterstill1/12, sourcejudgmentsseparate. Implementthenfulltests/review; noPASSbeforeactualcurrentcode.
+- Continued2026-10-17 after host interruption: existingCOREreport t037-core-review-1.md records completedclear independentpass2 withactualchecks, retainedcounter2/12. Previouslystartedfamily_source_a has no completedreviewartifact; no sourceapproval or verdict inferred, actualfreshfamilymodels must execute. InitialT037fullCIfailedexactoldblankeligibilityassertionR4301; no taskPASS/commit untilfixedandfullCI+freshAPIreview. T037COREruntime stillfrozen.
+- T037actualAPIpass3completeclear:128HTTP/112fixtures genuineclient/private/no-store/noSQLwrites/publicAIgates; independent419/1152+327gains/0losses andR4301sensitivityprobe clear. Technicalcounter3/12. R4301CLOSED; noR4401allocated.
+- FullCIretry revealed secondobsolete allpalacesunavailable assumption sprint9Closure:85(R4501); source/codeunchanged, minimalrelevantformationnegativefixture fix delegated. Newtestscopetofreshcrosscutreview, noPASS/commit untilfullCIgreen.
+- T038pendingtaskaddedversion31 after actual29file/84fixture independentintake. No runtimeactivation; actualfamily A_retry/B source models executing2026-10-17, priorinterruptedattempt no verdict. Currenttechnicalcounter3/12preserved, notresetbyresume.
+- T037 fullbackendCI finalexit0 aftertwoverifiedoldtestfixture corrections:75scripts(60unit15integration),coverage89.22/90.00. No failedattempt erased. Actualperformancepass4completeclear:0warmfsreads/hashes,medianwarm pipeline+JSON0.510→0.680ms/chart,JSON+~9percent; noSLA claim/noR4601allocated. Technicalcounter4/12. Freshcrosscutpass5runningcurrentwholeinteractioninclR4501testscope.
+- T038actualbothsource model judgments3eachMATCH/INTERPRETATION_SUPPORTED_WITH_LIMITS; parentunchangedcomparatorAI_ACCEPTED/MATCH3of3 afterexact29manifest/5digests/AST/wording. ActualA_retryHTTP200, actualBconnectorhash/statusnull. Newaccepted-decisions/executionseparatefrozenproposal. T038runtimeNOTstarted; awaitT037commit+JITready, sourceapprovalnotengineeringPASS.
+- T037parentqualitygatePASS:4actualseparate sourceapprovals, frozen5digests/AST/wording/112fixtures; fullbackendCI75scripts89.22/90.00; independentCORE2/API3/perf4/crosscut5clear. R4301/R4501CLOSEDactualred-green-sensitivity/freshreview; zero blockingconfirmedcurrenttaskfindings. Scopeincludes2legacynegativefixturerefinements namedbeforefix. No newfrontend/browserrisk; directproductionclientvalidators exercised128HTTP.
+- Actualcoverage92→419/1152(7.9861→36.3715percent),7→11claims,4→7palaces,327gains0losses,472hits53overlaps. Existing7exactmembershipsets unchanged. FrozenT034source+fortune modules unchanged. Technicalreviews5/12; T038has7remaining slotsforplanned4reviews+final/fixreserve.
+- T037focuscommit/pushnextsamePR62; T038implementationmuststartonlyafterthiscommit/JITready. Allsourceengineeringevidence copiedverbatimtopacket/engineering-evidence/ fordurablehandoff; compactactualcoverage.json includesbeforeafter/overlap/perpalace.
+- Precommitgate reopenedR4801: actualindexproof found3frozenCRLFhelper bytes changedbybroadLFattributes, despiteworkingmanifestexact. No commit/push yet forT037. Mustpreserveexact3bytesusingfile-specific-textoverrideandreindexexactpaths, then freshcrosscutiteration2 beforefinalPASS. Thisdoesnotresetprior5actualtechnicalpasses; secondcrosscutwillcount6. ExistingfullCI/runtime/sourcejudgments remainactualevidence; no rehashofreviewedinputs permitted.
+
+## T037 completion / T038 readiness — 2026-10-17
+T037 task_base98496ca93c2097cacc59d53d1886695446f9fb03 commit 6c947c3954b1aa1ede504cd7897277d5f63e6a6a exists and pushed same PR62 branch. Full backend75scripts89.22/90.00, actual419/1152(472hits53overlap), docs274+selftests and all30indexsourcebytes verified. Independent CORE/API/performance/crosscut and freshcrosscut clear; R4301/R4501/R4801 closed. Technical6/12 complete. T038 readiness ready at this exact base, actual independent source decisions3/3 retained. Continue unit-first; no public gates opened.
+
+## T038 implementation and verification in progress
+Base6c947c3954b1aa1ede504cd7897277d5f63e6a6a; actual14claims9palaces647/1152,770hits123overlap,228gains419retained0lost. Parent exactold11membership comparison unchanged. Unit84 passed; HTTP98requests passed after correcting duplicated backend command prefix. InitialfullCI failed fixtureClasses because newclassification doc had notyetbeenwritten; actualunitclass check nowpassed and fullCIrerun final log running. Early copiedtest adaptation asserted old7/4counts and oldlabels; correctedto11/3 and actualindependentlyfrozenlabelnames beforeunit passed. No sourceorproductionpredicate changed to fit tests. COREpass7clear; APIpass8running. All29stagedsource bytes match; whitespace diagnostics confined to reviewedraw/CRLF3paths, no appdiagnostic. T034/time protected diffempty. Browser/frontendCI NOTRUN nofrontendcodechange.
+
+| T037 | completed | 98496ca93c2097cacc59d53d1886695446f9fb03 | 6c947c3954b1aa1ede504cd7897277d5f63e6a6a | backend75scripts89.22/90.00;112fixtures128HTTP;419/1152;docs274;30frozenindex | CORE/API/perf/crosscut2 clear;6/12technical | notes | ready |
+| T038 | in_progress | 6c947c3954b1aa1ede504cd7897277d5f63e6a6a | pending | backend77scripts89.27/90.01;84fixtures98HTTP;647/1152;29frozenindex | COREclear7/12/APIongoing | notes | ready |
+
+Latest hosted T037 CI6c947c3 workflow38996979289 completed success (actual GitHub API). Existing PR62 remains open/draft, same branch and base main3613b68, unmerged. No PR creation, merge or deployment. T038fullCI process0 confirmed,61unit16integration count read from actual runner; no newcodechanges since. Actual source reviews excluded from technical count.
+
+## T038 completed — 2026-10-17
+Taskbase6c947c3954b1aa1ede504cd7897277d5f63e6a6a; commit38ad920458d53c4b99be27946663c163072a9019. QualitygatePASS: actualsource3/3two-modelAI_ACCEPTED/MATCH;84unitfixtures98actualHTTP,fullbackend77scripts89.27/90.01;source29working/index/autocrlfcheckout exact; docslinks+selftests;CORE7/API8/performance9/crosscut10clear,no confirmedfindings.647/1152,14claims9palaces,770hits123overlap,228gains419retained0lost. Crosscutindependentlycompared12672priorclaim/chartmembershipsunchanged. Technical10/12complete,finalcumulativepass11next. Public/narrationgatesclosed;T034unapproved. Taskcommitted,nopushyetpendingfinalreviewcheckpoint.
+
+## Invocation checkpoint — 2026-10-17 (authoritative current outcome)
+
+- run_status: INCOMPLETE
+- completed task gates: T036 PASS, T037 PASS, T038 PASS
+- technical_reviews_completed_this_invocation: 11/12 (not exhausted; one remaining)
+- source reviews: actual independent gpt-6.1-sol/gpt-6-astra; separate from technical counter
+- final cumulative report: interpretation-expansion/final-cumulative-review.md; no confirmed findings, R5401 unused
+- stop reason: next source/runtime tranche requires complete CORE/API/performance/crosscut review (four passes); one remaining cannot cover it. Do not start unreviewable product work or reset this invocation's counter.
+
+| task | task base | completion commit | result |
+| --- | --- | --- | --- |
+| T036 | e7feae516397e7530e69dd68e19ff4e2d4d5dddf | 98496ca93c2097cacc59d53d1886695446f9fb03 | actual applicability CLI; independent pass1; backend CI/docs passed |
+| T037 | 98496ca93c2097cacc59d53d1886695446f9fb03 | 6c947c3954b1aa1ede504cd7897277d5f63e6a6a | four exact source notes; source4/4;112fixtures128HTTP; backend75scripts89.22/90.00; passes2–6 clear |
+| T038 | 6c947c3954b1aa1ede504cd7897277d5f63e6a6a | 38ad920458d53c4b99be27946663c163072a9019 | three family notes; source3/3;84fixtures98HTTP; backend77scripts89.27/90.01; passes7–10 clear |
+
+Final cumulative pass11 independently reproduced committed historical runtimes:92→419→647/1152,14claims9palaces,770hits123overlap; all old7/old11 membership cells unchanged. Both new frozen manifests59files match working/index/HEAD; T03464frozen working hashes and all67committedpaths unchanged versus initial checkpoint. Parent final docs282+selftests, both staged-source proofs and protected runtime/ancestry checks passed. Only backend/src production diff is finite sourcePalaceBinding registration. No frontend code, browser-only risk, frontendCI or browser run claimed locally; actual HTTP uses genuine production client validators.
+
+Targets30%then50% achieved only for fixed-cohort internal annotation applicability. Full12-palace objective remains INCOMPLETE: Phụ Mẫu, Tử Tức and Tật Ách have no approved source claim. Next invocation should inspect precise governing source conditions/contexts before proposing new scope/predicates; do not flatten natal/brightness/day-night clauses or transfer existing approvals. T034 remains unapproved with prior evidence/known index-contract defect retained. No defaults, natal/time/calendar formulas, public interpretation, fortune prose or AI narration unlocked.
+
+Delivery: same existing draft PR62 and codex/tuvi-minor-stem-continuation branch only. Product task commits exclude .b3. This separate administrative checkpoint preserves committed run state under the user's explicit instruction. Push and actual latest-head CI/PR reconciliation follow; no new PR, merge or deploy.
+
+Administrative delivery correction: CRLF prevented the initial header-only regex update; authoritative receipt already saidINCOMPLETE, and the top header is now verifiedINCOMPLETE/current_tasknone/date2026-10-17. Product commits unchanged. Samebranch push of38ad920 andcheckpointce09d17 succeeded; actualheadCI reconciliation follows.

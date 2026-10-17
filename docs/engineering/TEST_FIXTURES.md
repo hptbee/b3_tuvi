@@ -32,6 +32,7 @@ Giữ hành vi đã có của engine, API, hoặc chuẩn hóa. Kết quả kỳ
 - `normalizeChart.test.mjs`
 - `ruleEngine.test.mjs`
 - `interpretationBinding.test.mjs`: existing interpretation evidence binding and unreviewed-clone regressions; no new source approval or expert verification.
+- `interpretationApplicability.test.mjs`: fixed 1,152-chart engineering applicability regression, independent seven-claim subset counts, overlap and local baseline validation. Synthetic snapshots test comparison only; no source or expert approval.
 - `modernMajorBinding.test.mjs`: separately approved immutable modern Đại hạn evidence, actual distinct-model decision replay and tamper withholding; not inherited minor approval or historical authentication.
 - `modernMajor.test.mjs`: independent real natal witnesses and finite decade boundaries, strict server metadata and adapter negatives; engineering/source-comparative fixtures, not life-outcome goldens.
 - `modernMajorStemBinding.test.mjs`: separately approved can–chi profile, immutable actual reviews and frozen artifacts, coherent forgery rejection, old-gate prerequisite and cached fixed-loader failures; no historical authentication.
@@ -45,6 +46,8 @@ Giữ hành vi đã có của engine, API, hoặc chuẩn hóa. Kết quả kỳ
 - `sourcePalacePhucCoCu.test.mjs`: nineteen independently replayed real solar witnesses of the source-scoped Phúc Đức Cơ–Cự baseline, immutable review/evidence mutations and withheld public output; engineering regressions, not health/personality or life-outcome goldens.
 - `sourcePalaceTaiTuViPha.test.mjs`: eight independently replayed real solar witnesses of the Tài Bạch Tử Vi–Phá Quân source branch, coexistence with the approved adverse-star note, immutable evidence and withheld public output; engineering regressions, not verified wealth or life outcomes.
 - `sourcePalaceQuanMao.test.mjs`: nine independently verified API-valid solar fixtures for the distinct Quan Lộc Cơ–Cự/Mão source branch, mutual exclusion with Dậu, immutable required-star/branch conditions and withheld public output; engineering regressions, not verified career outcomes.
+- `sourcePalaceFoundational.test.mjs`: 112 independently derived valid solar source-comparative fixtures for four separately accepted literal palace-opening annotations; direct-host/cohost/adverse cases, exact internal wording, immutable evidence forgery and cold-loader closure, plus the fixed 419-chart eleven-claim subset. Structural mutations are synthetic; no empirical prediction, historical authentication or expert verification.
+- `sourcePalaceFoundationalApi.test.mjs`: real HTTP replay of the 112 source-comparative fixtures through production frontend validators; internal wording/public prose/AI/fortune withholding, no-store, private-name/log boundaries and zero temporary SQLite writes. Invalid bodies are synthetic; HTTP acceptance is an engineering regression, not source approval.
 - `sourcePalaceInterpretation.test.mjs`: real solar inputs exercise reviewed source-palace predicates and withheld public prose; engineering witnesses, not historical life-outcome goldens.
 - `combinationRoute.integration.test.mjs`
 - `chartGenerate.test.mjs`
@@ -111,3 +114,6 @@ Khóa tính chất: không nâng nguồn từ test pass, catalog không thành p
 - `conditionEval.test.mjs`: typed condition contracts and three-valued Boolean cases. Not a historical formula proof.
 - `fixtureClasses.test.mjs`
 - `perfSmoke.test.mjs`
+
+- sourcePalaceFamily.test.mjs: 84 independently frozen valid solar source-comparative fixtures for three separately accepted family-palace opening notes. Both genders/all12positive branches/cohosts/named4adverse and wrong-host/opposite negatives; immutable evidence/forgery/cold-loader/cache synthetic boundaries. Previous11 membership subset419 preserved, current14 subset647/1152,770hits123overlap. Shared-table inverse is not astronomical or expert verification.
+- sourcePalaceFamilyApi.test.mjs: 84 actual fixture HTTP responses and14 boundary/ask requests through genuine production client validators. Withheld public/AI/fortune/internal text, no-store/privacy/logs and zero temporary SQLite writes; invalid bodies are synthetic engineering regressions, not source approval.

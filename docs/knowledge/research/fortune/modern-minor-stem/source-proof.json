@@ -1,0 +1,295 @@
+{
+  "status": "SOURCE_INSPECTED_NOT_APPROVED",
+  "repository": "https://github.com/SylarLong/iztro",
+  "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "tree": "3095b2e908923aea98072d1eb965a95028ebf995",
+  "acquisition": "Live GitHub connector exact-pin files and complete Git tree; reconstructed Git blob SHA1 validates every byte",
+  "recoveredFiles": [
+    {
+      "path": "LICENSE",
+      "bytes": 1073,
+      "gitBlob": "af1e0c83c0a8095bd9faa83265ba67a441422657",
+      "sha256": "e6c7b6e313cbda3135b41bccc66c98be132cb8319d0d465903d17e669e748b36"
+    },
+    {
+      "path": "package.json",
+      "bytes": 2732,
+      "gitBlob": "148bb95862f9fe623f828b872b62f3ba578c114f",
+      "sha256": "2b7d04100c48599e4fe02f5ec1521f5ca45b41914adf5a5472e86abc6dfa1ee6"
+    },
+    {
+      "path": "src/astro/astro.ts",
+      "bytes": 19029,
+      "gitBlob": "4111d5f58804e22de3664e0b008cbfb36bb2389e",
+      "sha256": "84e1fd5121bc6c5e7fb17ef3d8aadd0f8473ff8f2704c17c1af96e77388d49f8"
+    },
+    {
+      "path": "src/astro/config.ts",
+      "bytes": 3825,
+      "gitBlob": "14ce2e513ac697d871e205f0f1f5e97c6d0b2c73",
+      "sha256": "e74d2bf23630f8faadfae9fd2d29c592ceb7a18d7396c0aba5d74959ea5d134e"
+    },
+    {
+      "path": "src/astro/context.ts",
+      "bytes": 2200,
+      "gitBlob": "322324fefb6ef9d883253d2107ac8d0ca227994c",
+      "sha256": "e76bdb18f2ffa4a77d6c7364a5edb2838b5542f6b4e65fbc8be66e30dcedefdc"
+    },
+    {
+      "path": "src/astro/FunctionalAstrolabe.ts",
+      "bytes": 19616,
+      "gitBlob": "b00ceb08fed1f8e3288fed3c6d785f8eb8816937",
+      "sha256": "584fd8d2d3ac76b3b8d7990ec6d26cac42eb5f1fcac9175326f29497d60d2d9c"
+    },
+    {
+      "path": "src/astro/FunctionalPalace.ts",
+      "bytes": 9333,
+      "gitBlob": "6c40d1bafd0c0dc5cce2946267c111cb6ef6f700",
+      "sha256": "8e3c7fb122f168a91a08ea7285dbf9500d6a4136fb4a8ed98b68e57d3811ff7b"
+    },
+    {
+      "path": "src/astro/index.ts",
+      "bytes": 51,
+      "gitBlob": "f30914be07627318487360b51a4d09e3e31b9853",
+      "sha256": "e0de22a145f0a29a9bb60adddabd0e85376c15a4421c13726d63669570472517"
+    },
+    {
+      "path": "src/astro/palace.ts",
+      "bytes": 7799,
+      "gitBlob": "5a6912b9aaae65d24af32c8137c46442dd8cf4b4",
+      "sha256": "a9c6d8444d5edcd241068f5bd83fed3aa38a57b206cebb221f86b8d4057b5273"
+    },
+    {
+      "path": "src/data/constants.ts",
+      "bytes": 3871,
+      "gitBlob": "5fd18072bb84a7ff8998ca739fd62269a9aa1ce1",
+      "sha256": "e2411f73c7ea438b5186f2a3ef29fa54587ab78e25620b5a52b409ce9244043a"
+    },
+    {
+      "path": "src/data/index.ts",
+      "bytes": 122,
+      "gitBlob": "b45b10d98ce601e069721e51aaf777e6082c8868",
+      "sha256": "e45e0875d60c2aede27dad389f11d3cdda7e31d1694e5f53ff32cd025288f2a2"
+    },
+    {
+      "path": "src/data/types/astro.ts",
+      "bytes": 7671,
+      "gitBlob": "d120c6d4527a00b2a35547ef235fa1a5a13b5cb1",
+      "sha256": "b24c25fa535e6b89fbe9b0e93deebe3851dd943cdd3baa290747b863506e3b85"
+    },
+    {
+      "path": "src/data/types/index.ts",
+      "bytes": 102,
+      "gitBlob": "7c4337e39c3da3510974f5b0d824bd74c121724c",
+      "sha256": "5b5ab1ea2657dd3e4f704ea5050c0a12580e31d348beabd9b74ebf5b280929d2"
+    },
+    {
+      "path": "src/i18n/index.ts",
+      "bytes": 2943,
+      "gitBlob": "2243e4011b72296aed066f7e12acde8bdb2f496d",
+      "sha256": "06da411d37e4e5f3dc7d922f3dbce0f9fcb2fe1125619873e6a651eabc63d558"
+    },
+    {
+      "path": "src/i18n/locales/en-US/earthlyBranch.ts",
+      "bytes": 280,
+      "gitBlob": "7627495ca71126f7a1244faee59bfd1416ab7d20",
+      "sha256": "dcf7ffb67233fede74de6290e2c341dce80bcbd81b053c48e9667f42ad0bd0f2"
+    },
+    {
+      "path": "src/i18n/locales/en-US/gender.ts",
+      "bytes": 65,
+      "gitBlob": "f15f0c116312072457e28e0410e83aed6f6403c7",
+      "sha256": "8c2b91082c2d88bd27cc4678965003c67b8636799ed83bd2f94369de0e367a0d"
+    },
+    {
+      "path": "src/i18n/locales/en-US/heavenlyStem.ts",
+      "bytes": 249,
+      "gitBlob": "3c403553a98b59b1bf5eb1b6cc257c938210600b",
+      "sha256": "a7a236554edd39f0f062fd928eef24f10049fc8e648c6a0e97cbdabde1f6e06e"
+    },
+    {
+      "path": "src/i18n/locales/en-US/index.ts",
+      "bytes": 503,
+      "gitBlob": "61981406edb70a3e2afc5a348d34e4bd32caf170",
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007"
+    },
+    {
+      "path": "src/i18n/locales/ja-JP/earthlyBranch.ts",
+      "bytes": 280,
+      "gitBlob": "f967ec408eba11f7f487d56ced2458df2dab2b5c",
+      "sha256": "8672f42c8460b8ae0079e643e1fe62db133fcd19879dd2ad08b5ab3b606a2ab8"
+    },
+    {
+      "path": "src/i18n/locales/ja-JP/gender.ts",
+      "bytes": 61,
+      "gitBlob": "58a139cba9a77f8f1747f8c0642677db7263cefb",
+      "sha256": "a19607ebf4055ed0f0daa3a78b21288185a67fdf8190e750251be72de19e5d8d"
+    },
+    {
+      "path": "src/i18n/locales/ja-JP/heavenlyStem.ts",
+      "bytes": 249,
+      "gitBlob": "2fe8e7c5917c8bdd4fc6dd8a56a0773ca7eadd0d",
+      "sha256": "d4c37e5fb52592076c9889c4415bb5a2ae92790a2cf5d04a8c38e21d0cd6c9d3"
+    },
+    {
+      "path": "src/i18n/locales/ja-JP/index.ts",
+      "bytes": 503,
+      "gitBlob": "61981406edb70a3e2afc5a348d34e4bd32caf170",
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007"
+    },
+    {
+      "path": "src/i18n/locales/ko-KR/earthlyBranch.ts",
+      "bytes": 280,
+      "gitBlob": "6f9bb9d6052c0be294c5d8360747f97e9bd5a18c",
+      "sha256": "f2a7dc855e5cdf71c74dba286e3463f2fd063fa31b39ce3b14cced0da4784fc7"
+    },
+    {
+      "path": "src/i18n/locales/ko-KR/gender.ts",
+      "bytes": 67,
+      "gitBlob": "891d8a5b7a96b4dc2edb923bc873e7e0db8dbb90",
+      "sha256": "aa0f5ffe65da671b0c1c663e2bf4895801b02783e6e8c1e3f105d0046713b0e5"
+    },
+    {
+      "path": "src/i18n/locales/ko-KR/heavenlyStem.ts",
+      "bytes": 249,
+      "gitBlob": "316b6a9fcb452abb11e7b51acc3ef3db22088b4d",
+      "sha256": "d49b7fc362305c1a6d02b9d229522fc5fb052428d54a42b49b9704183f6c34a3"
+    },
+    {
+      "path": "src/i18n/locales/ko-KR/index.ts",
+      "bytes": 503,
+      "gitBlob": "61981406edb70a3e2afc5a348d34e4bd32caf170",
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007"
+    },
+    {
+      "path": "src/i18n/locales/vi-VN/earthlyBranch.ts",
+      "bytes": 300,
+      "gitBlob": "e2a21af03d63a279e9b629039e7573301b3b4aad",
+      "sha256": "933f9475bd0b580904515dc3198f059f8924310de10dd8538d2eb02e26311f0c"
+    },
+    {
+      "path": "src/i18n/locales/vi-VN/gender.ts",
+      "bytes": 62,
+      "gitBlob": "526354d4e97f450bce43402b04b936aa50508469",
+      "sha256": "79ab1b39e62fda211cd5b21e916446ee58d6afa10b3a639dd7799987ef7ef3d4"
+    },
+    {
+      "path": "src/i18n/locales/vi-VN/heavenlyStem.ts",
+      "bytes": 264,
+      "gitBlob": "b4841e7c96f3459164c814691737823bfe48b785",
+      "sha256": "4b0805baf3aa2555e4db3c804e6947f179e5905b1e73c9c261cbd35e38d6b2ea"
+    },
+    {
+      "path": "src/i18n/locales/vi-VN/index.ts",
+      "bytes": 503,
+      "gitBlob": "61981406edb70a3e2afc5a348d34e4bd32caf170",
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007"
+    },
+    {
+      "path": "src/i18n/locales/zh-CN/earthlyBranch.ts",
+      "bytes": 280,
+      "gitBlob": "f967ec408eba11f7f487d56ced2458df2dab2b5c",
+      "sha256": "8672f42c8460b8ae0079e643e1fe62db133fcd19879dd2ad08b5ab3b606a2ab8"
+    },
+    {
+      "path": "src/i18n/locales/zh-CN/gender.ts",
+      "bytes": 61,
+      "gitBlob": "58a139cba9a77f8f1747f8c0642677db7263cefb",
+      "sha256": "a19607ebf4055ed0f0daa3a78b21288185a67fdf8190e750251be72de19e5d8d"
+    },
+    {
+      "path": "src/i18n/locales/zh-CN/heavenlyStem.ts",
+      "bytes": 249,
+      "gitBlob": "2fe8e7c5917c8bdd4fc6dd8a56a0773ca7eadd0d",
+      "sha256": "d4c37e5fb52592076c9889c4415bb5a2ae92790a2cf5d04a8c38e21d0cd6c9d3"
+    },
+    {
+      "path": "src/i18n/locales/zh-CN/index.ts",
+      "bytes": 503,
+      "gitBlob": "61981406edb70a3e2afc5a348d34e4bd32caf170",
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007"
+    },
+    {
+      "path": "src/i18n/locales/zh-TW/earthlyBranch.ts",
+      "bytes": 280,
+      "gitBlob": "f967ec408eba11f7f487d56ced2458df2dab2b5c",
+      "sha256": "8672f42c8460b8ae0079e643e1fe62db133fcd19879dd2ad08b5ab3b606a2ab8"
+    },
+    {
+      "path": "src/i18n/locales/zh-TW/gender.ts",
+      "bytes": 61,
+      "gitBlob": "58a139cba9a77f8f1747f8c0642677db7263cefb",
+      "sha256": "a19607ebf4055ed0f0daa3a78b21288185a67fdf8190e750251be72de19e5d8d"
+    },
+    {
+      "path": "src/i18n/locales/zh-TW/heavenlyStem.ts",
+      "bytes": 249,
+      "gitBlob": "2fe8e7c5917c8bdd4fc6dd8a56a0773ca7eadd0d",
+      "sha256": "d4c37e5fb52592076c9889c4415bb5a2ae92790a2cf5d04a8c38e21d0cd6c9d3"
+    },
+    {
+      "path": "src/i18n/locales/zh-TW/index.ts",
+      "bytes": 503,
+      "gitBlob": "61981406edb70a3e2afc5a348d34e4bd32caf170",
+      "sha256": "8c29e943943dae442c5bd3e37924fbf7558f6f3ee14616b0a40d092f1c5f9007"
+    },
+    {
+      "path": "src/i18n/starAliases.ts",
+      "bytes": 744,
+      "gitBlob": "7d1e15be645bf723e7b6c4d39727fe0b57629a04",
+      "sha256": "5db704982d754e9e9487c80dfc171b51584cb89014b68171f7c6b87171a49b14"
+    },
+    {
+      "path": "src/i18n/types/EarthlyBranch.ts",
+      "bytes": 1125,
+      "gitBlob": "49499c23c469e62d64b8fec48bdfbdf35ae49f7d",
+      "sha256": "8cdccc6a4f3685e9fa3d98198be7c79a466c08d4109ec42716d1b5f52162593f"
+    },
+    {
+      "path": "src/i18n/types/Gender.ts",
+      "bytes": 837,
+      "gitBlob": "53587781e1f6ea8f1fa50ae857ddc61950c2894d",
+      "sha256": "5b78b18655cf37845d9ef2fde4f3e2112bb54d0d17e48fe5f5aac5946c3c86ba"
+    },
+    {
+      "path": "src/i18n/types/HeavenlyStem.ts",
+      "bytes": 1086,
+      "gitBlob": "595f26faa0ba481b68ffcd04cec916b3536aab25",
+      "sha256": "3ed84c7e10b8b98a6fe4fd82ec4d3922a10842270f7c41a20f2c399f49c2cb9b"
+    },
+    {
+      "path": "src/i18n/types/index.ts",
+      "bytes": 235,
+      "gitBlob": "859dff0836f44ad94d4fc7954d7a8245ba2fd0d6",
+      "sha256": "668edcd5a338e10da1d8e5c6df3591e725abfde7a538c604865e9709359cec89"
+    },
+    {
+      "path": "src/utils/index.ts",
+      "bytes": 7614,
+      "gitBlob": "9d4d230fff5427ebef3014f45a0ce69356e8c936",
+      "sha256": "9f3699115c9c149dc261f9a293e6c7ad40ac4f744884dba21b367b96d9bbfe16"
+    },
+    {
+      "path": "src/utils/validation.ts",
+      "bytes": 2786,
+      "gitBlob": "4cf941a413f03a8b890a41e3420fd6bfc837445e",
+      "sha256": "532b2398eb402f93376d59db99d0bf48be6635b5854fa67644c41c7bbbe3c914"
+    },
+    {
+      "path": "yarn.lock",
+      "bytes": 225441,
+      "gitBlob": "e6622cb10daad796215c2312250ac7617319b54e",
+      "sha256": "0a20660c41f9fe4ae7138fd508dd60a3399146a41bcc741bde375a1a285a2111"
+    }
+  ],
+  "algebraCases": 1440,
+  "algorithmApproval": false,
+  "upstreamCodeExecuted": false,
+  "independentFixtureChecks": "Owned separately; not established by this source verification",
+  "historicalAuthentication": false,
+  "calendarEquivalence": false,
+  "extractedFiles": {
+    "source-span.txt": "85596cfc1bb9d9bbbfe1e6da82e5a83222822fa5f63431a792f4ca2f1dc164de",
+    "review-context.txt": "883b52b28675c8bc84a182b7a8e98e9eb893e1a95495d0d6c5bfd0ab57876c3a"
+  }
+}

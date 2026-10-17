@@ -1,0 +1,395 @@
+{
+  "method": "GitHub connector fetch_file at exact commit, validated against separately fetched complete Git tree",
+  "directGitFailure": "getaddrinfo() thread failed to start",
+  "results": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/astro/FunctionalAstrolabe.ts",
+        "sha": "b00ceb08fed1f8e3288fed3c6d785f8eb8816937",
+        "treeSha": "b00ceb08fed1f8e3288fed3c6d785f8eb8816937",
+        "terminalLF": true
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/astro/FunctionalPalace.ts",
+        "sha": "6c40d1bafd0c0dc5cce2946267c111cb6ef6f700",
+        "treeSha": "6c40d1bafd0c0dc5cce2946267c111cb6ef6f700",
+        "terminalLF": true
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/astro/palace.ts",
+        "sha": "5a6912b9aaae65d24af32c8137c46442dd8cf4b4",
+        "treeSha": "5a6912b9aaae65d24af32c8137c46442dd8cf4b4",
+        "terminalLF": true
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/astro/astro.ts",
+        "sha": "4111d5f58804e22de3664e0b008cbfb36bb2389e",
+        "treeSha": "4111d5f58804e22de3664e0b008cbfb36bb2389e",
+        "terminalLF": true
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/astro/config.ts",
+        "sha": "14ce2e513ac697d871e205f0f1f5e97c6d0b2c73",
+        "treeSha": "14ce2e513ac697d871e205f0f1f5e97c6d0b2c73",
+        "terminalLF": true
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/astro/context.ts",
+        "sha": "322324fefb6ef9d883253d2107ac8d0ca227994c",
+        "treeSha": "322324fefb6ef9d883253d2107ac8d0ca227994c",
+        "terminalLF": true
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/data/constants.ts",
+        "sha": "5fd18072bb84a7ff8998ca739fd62269a9aa1ce1",
+        "treeSha": "5fd18072bb84a7ff8998ca739fd62269a9aa1ce1",
+        "terminalLF": true
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/data/index.ts",
+        "sha": "b45b10d98ce601e069721e51aaf777e6082c8868",
+        "treeSha": "b45b10d98ce601e069721e51aaf777e6082c8868",
+        "terminalLF": true
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/data/types/astro.ts",
+        "sha": "d120c6d4527a00b2a35547ef235fa1a5a13b5cb1",
+        "treeSha": "d120c6d4527a00b2a35547ef235fa1a5a13b5cb1",
+        "terminalLF": true
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/utils/index.ts",
+        "sha": "9d4d230fff5427ebef3014f45a0ce69356e8c936",
+        "treeSha": "9d4d230fff5427ebef3014f45a0ce69356e8c936",
+        "terminalLF": true
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/index.ts",
+        "sha": "2243e4011b72296aed066f7e12acde8bdb2f496d",
+        "treeSha": "2243e4011b72296aed066f7e12acde8bdb2f496d",
+        "terminalLF": true
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/starAliases.ts",
+        "sha": "7d1e15be645bf723e7b6c4d39727fe0b57629a04",
+        "treeSha": "7d1e15be645bf723e7b6c4d39727fe0b57629a04",
+        "terminalLF": true
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/locales/vi-VN/index.ts",
+        "sha": "61981406edb70a3e2afc5a348d34e4bd32caf170",
+        "treeSha": "61981406edb70a3e2afc5a348d34e4bd32caf170",
+        "terminalLF": true
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/locales/vi-VN/heavenlyStem.ts",
+        "sha": "b4841e7c96f3459164c814691737823bfe48b785",
+        "treeSha": "b4841e7c96f3459164c814691737823bfe48b785",
+        "terminalLF": true
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/locales/vi-VN/earthlyBranch.ts",
+        "sha": "e2a21af03d63a279e9b629039e7573301b3b4aad",
+        "treeSha": "e2a21af03d63a279e9b629039e7573301b3b4aad",
+        "terminalLF": true
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/locales/vi-VN/gender.ts",
+        "sha": "526354d4e97f450bce43402b04b936aa50508469",
+        "treeSha": "526354d4e97f450bce43402b04b936aa50508469",
+        "terminalLF": true
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/locales/en-US/index.ts",
+        "sha": "61981406edb70a3e2afc5a348d34e4bd32caf170",
+        "treeSha": "61981406edb70a3e2afc5a348d34e4bd32caf170",
+        "terminalLF": true
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/locales/en-US/earthlyBranch.ts",
+        "sha": "7627495ca71126f7a1244faee59bfd1416ab7d20",
+        "treeSha": "7627495ca71126f7a1244faee59bfd1416ab7d20",
+        "terminalLF": true
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "package.json",
+        "sha": "148bb95862f9fe623f828b872b62f3ba578c114f",
+        "treeSha": "148bb95862f9fe623f828b872b62f3ba578c114f",
+        "terminalLF": true
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "yarn.lock",
+        "sha": "e6622cb10daad796215c2312250ac7617319b54e",
+        "treeSha": "e6622cb10daad796215c2312250ac7617319b54e",
+        "terminalLF": true
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "LICENSE",
+        "sha": "af1e0c83c0a8095bd9faa83265ba67a441422657",
+        "treeSha": "af1e0c83c0a8095bd9faa83265ba67a441422657",
+        "terminalLF": true
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/astro/index.ts",
+        "sha": "f30914be07627318487360b51a4d09e3e31b9853",
+        "treeSha": "f30914be07627318487360b51a4d09e3e31b9853"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/data/types/index.ts",
+        "sha": "7c4337e39c3da3510974f5b0d824bd74c121724c",
+        "treeSha": "7c4337e39c3da3510974f5b0d824bd74c121724c"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/locales/en-US/gender.ts",
+        "sha": "f15f0c116312072457e28e0410e83aed6f6403c7",
+        "treeSha": "f15f0c116312072457e28e0410e83aed6f6403c7"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/locales/en-US/heavenlyStem.ts",
+        "sha": "3c403553a98b59b1bf5eb1b6cc257c938210600b",
+        "treeSha": "3c403553a98b59b1bf5eb1b6cc257c938210600b"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/locales/ja-JP/earthlyBranch.ts",
+        "sha": "f967ec408eba11f7f487d56ced2458df2dab2b5c",
+        "treeSha": "f967ec408eba11f7f487d56ced2458df2dab2b5c"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/locales/ja-JP/gender.ts",
+        "sha": "58a139cba9a77f8f1747f8c0642677db7263cefb",
+        "treeSha": "58a139cba9a77f8f1747f8c0642677db7263cefb"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/locales/ja-JP/heavenlyStem.ts",
+        "sha": "2fe8e7c5917c8bdd4fc6dd8a56a0773ca7eadd0d",
+        "treeSha": "2fe8e7c5917c8bdd4fc6dd8a56a0773ca7eadd0d"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/locales/ja-JP/index.ts",
+        "sha": "61981406edb70a3e2afc5a348d34e4bd32caf170",
+        "treeSha": "61981406edb70a3e2afc5a348d34e4bd32caf170"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/locales/ko-KR/earthlyBranch.ts",
+        "sha": "6f9bb9d6052c0be294c5d8360747f97e9bd5a18c",
+        "treeSha": "6f9bb9d6052c0be294c5d8360747f97e9bd5a18c"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/locales/ko-KR/gender.ts",
+        "sha": "891d8a5b7a96b4dc2edb923bc873e7e0db8dbb90",
+        "treeSha": "891d8a5b7a96b4dc2edb923bc873e7e0db8dbb90"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/locales/ko-KR/heavenlyStem.ts",
+        "sha": "316b6a9fcb452abb11e7b51acc3ef3db22088b4d",
+        "treeSha": "316b6a9fcb452abb11e7b51acc3ef3db22088b4d"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/locales/ko-KR/index.ts",
+        "sha": "61981406edb70a3e2afc5a348d34e4bd32caf170",
+        "treeSha": "61981406edb70a3e2afc5a348d34e4bd32caf170"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/locales/zh-CN/earthlyBranch.ts",
+        "sha": "f967ec408eba11f7f487d56ced2458df2dab2b5c",
+        "treeSha": "f967ec408eba11f7f487d56ced2458df2dab2b5c"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/locales/zh-CN/gender.ts",
+        "sha": "58a139cba9a77f8f1747f8c0642677db7263cefb",
+        "treeSha": "58a139cba9a77f8f1747f8c0642677db7263cefb"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/locales/zh-CN/heavenlyStem.ts",
+        "sha": "2fe8e7c5917c8bdd4fc6dd8a56a0773ca7eadd0d",
+        "treeSha": "2fe8e7c5917c8bdd4fc6dd8a56a0773ca7eadd0d"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/locales/zh-CN/index.ts",
+        "sha": "61981406edb70a3e2afc5a348d34e4bd32caf170",
+        "treeSha": "61981406edb70a3e2afc5a348d34e4bd32caf170"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/locales/zh-TW/earthlyBranch.ts",
+        "sha": "f967ec408eba11f7f487d56ced2458df2dab2b5c",
+        "treeSha": "f967ec408eba11f7f487d56ced2458df2dab2b5c"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/locales/zh-TW/gender.ts",
+        "sha": "58a139cba9a77f8f1747f8c0642677db7263cefb",
+        "treeSha": "58a139cba9a77f8f1747f8c0642677db7263cefb"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/locales/zh-TW/heavenlyStem.ts",
+        "sha": "2fe8e7c5917c8bdd4fc6dd8a56a0773ca7eadd0d",
+        "treeSha": "2fe8e7c5917c8bdd4fc6dd8a56a0773ca7eadd0d"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/locales/zh-TW/index.ts",
+        "sha": "61981406edb70a3e2afc5a348d34e4bd32caf170",
+        "treeSha": "61981406edb70a3e2afc5a348d34e4bd32caf170"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/types/EarthlyBranch.ts",
+        "sha": "49499c23c469e62d64b8fec48bdfbdf35ae49f7d",
+        "treeSha": "49499c23c469e62d64b8fec48bdfbdf35ae49f7d"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/types/Gender.ts",
+        "sha": "53587781e1f6ea8f1fa50ae857ddc61950c2894d",
+        "treeSha": "53587781e1f6ea8f1fa50ae857ddc61950c2894d"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/types/HeavenlyStem.ts",
+        "sha": "595f26faa0ba481b68ffcd04cec916b3536aab25",
+        "treeSha": "595f26faa0ba481b68ffcd04cec916b3536aab25"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/i18n/types/index.ts",
+        "sha": "859dff0836f44ad94d4fc7954d7a8245ba2fd0d6",
+        "treeSha": "859dff0836f44ad94d4fc7954d7a8245ba2fd0d6"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "path": "src/utils/validation.ts",
+        "sha": "4cf941a413f03a8b890a41e3420fd6bfc837445e",
+        "treeSha": "4cf941a413f03a8b890a41e3420fd6bfc837445e"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+# Independent engineering witnesses
+
+Run `node docs/knowledge/research/juan2-palace/foundational-family-packet/independent-fixtures/generate.mjs --check` from any checkout location to reproduce and compare frozen fixture and coverage bytes without writing files. Omit `--check` only when intentionally regenerating the authored fixture proposal.
+
+The generator contains the fixed 1,152-input grid definition, so no ignored checkpoint or absolute installation path is needed. Each fixture is a valid solar input, with a lunar conversion, independent inverse round trip, and actual normalized engine chart. Expected booleans are computed only by canonical star ID membership in the named host; no interpretation condition evaluator is imported. Expected values are not copied from another packet or the research chart sets.
+
+There are 84 witnesses: 28 for each of three proposed single-star predicates, including 24 positives and four negatives per predicate. Both genders have each of all 12 reachable positive branches, standalone and cohost examples, every reachable major-star cohost configuration, and presence and absence of the four named adverse stars. Negative examples cover the star in a wrong host and in the opposite host, with the target star absent from the intended host. All major stars exist somewhere in every valid generated chart; globally missing-star negative fixtures are therefore unreachable and explicitly recorded as zero, rather than synthesized.
+
+The inverse calendar implementation independently decodes month lengths and inverts lunar dates through UTC day arithmetic, sharing the B3 year-code tables. It verifies all 1,152 solar/lunar round trips. This is shared-table consistency evidence, not independent astronomical validation. Star placement and normalization use the production engine; only predicate membership expectations are independently derived. These are single `star_present` predicates; no independent full-AND evaluation is claimed.
+
+The four adverse IDs are Kình Dương, Đà La, Hỏa Tinh and Linh Tinh. Their absence does not imply absence of Địa Không, Địa Kiếp, Hóa Kỵ or a favorable chart. Cohost and adverse labels demonstrate engineering reachability; they do not establish that opening annotations are semantically valid under those contexts.
+
+`coverage.json` independently reconstructs the original seven-predicate baseline of 92/1,152 charts, the conditional T037 union of 419/1,152 and conditional T038 union of 647/1,152, including all 12 per-palace results, overlap counts, sequential marginal counts and a claim-match histogram. Conditional applicability is neither delivered approval nor population prevalence. This work grants no source approval, and opens no public interpretation or AI narration gate.

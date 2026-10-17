@@ -1,0 +1,3647 @@
+{
+  "sha": "3095b2e908923aea98072d1eb965a95028ebf995",
+  "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/3095b2e908923aea98072d1eb965a95028ebf995",
+  "tree": [
+    {
+      "path": ".babelrc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3313ff9ef06fbd931144b6c8c0fb62a57d053b64",
+      "size": 67,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/3313ff9ef06fbd931144b6c8c0fb62a57d053b64"
+    },
+    {
+      "path": ".eslintignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5df23197e60615c4fb78239f0ba5873ff4177364",
+      "size": 60,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/5df23197e60615c4fb78239f0ba5873ff4177364"
+    },
+    {
+      "path": ".eslintrc.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f86a2dcca8fca29a6c8490a46e2289df38788fe",
+      "size": 298,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/4f86a2dcca8fca29a6c8490a46e2289df38788fe"
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "da5434a36f83b68f86449047accf7524fea2d44a",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/da5434a36f83b68f86449047accf7524fea2d44a"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fd815b732fdd18221ba1c0f3d9090e73157cef28",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/fd815b732fdd18221ba1c0f3d9090e73157cef28"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug-report.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f0ab4dd816a8f74ec15e568299e288a5d7a723a",
+      "size": 508,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/0f0ab4dd816a8f74ec15e568299e288a5d7a723a"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/new-feature.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e49a68f3a3b1bce419c7a8cd1947765710ed8004",
+      "size": 481,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/e49a68f3a3b1bce419c7a8cd1947765710ed8004"
+    },
+    {
+      "path": ".github/workflows",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "18419d0a23d9cb735008c0f458bd856645c37a58",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/18419d0a23d9cb735008c0f458bd856645c37a58"
+    },
+    {
+      "path": ".github/workflows/Codecov.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16dc955497e871132ee2cf84b5389b7f1488857d",
+      "size": 706,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/16dc955497e871132ee2cf84b5389b7f1488857d"
+    },
+    {
+      "path": ".github/workflows/Document.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "564038071226ae14cdfc6541e7fde24ead8248b6",
+      "size": 1259,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/564038071226ae14cdfc6541e7fde24ead8248b6"
+    },
+    {
+      "path": ".github/workflows/Release.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1089e7e6098b48e32b6ba44e6531756202ab9412",
+      "size": 2135,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/1089e7e6098b48e32b6ba44e6531756202ab9412"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "287aa08b6e939d3b6c86fccc48710503c216eef2",
+      "size": 90,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/287aa08b6e939d3b6c86fccc48710503c216eef2"
+    },
+    {
+      "path": ".gitlab-ci.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fc7d0554de25dfcd3be6003d5fce52db2f18255b",
+      "size": 509,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/fc7d0554de25dfcd3be6003d5fce52db2f18255b"
+    },
+    {
+      "path": ".nojekyll",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+      "size": 1,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/8b137891791fe96927ad78e64b0aad7bded08bdc"
+    },
+    {
+      "path": ".prettierrc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0d1c9a90f1c0e0ab88f20d4bf452d5995711e10",
+      "size": 73,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/a0d1c9a90f1c0e0ab88f20d4bf452d5995711e10"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a83b51612493a306f29399ff23359d947dba7db",
+      "size": 11295,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/8a83b51612493a306f29399ff23359d947dba7db"
+    },
+    {
+      "path": "CNAME",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e987c3249cbe8781255082f61233d07e731ac17",
+      "size": 15,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/5e987c3249cbe8781255082f61233d07e731ac17"
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "db1a097473576b2ba14e1b8736d609add39e1387",
+      "size": 5221,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/db1a097473576b2ba14e1b8736d609add39e1387"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0e57f60cf5e3dbb686ee29580c3807c921ab8b0",
+      "size": 4209,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/d0e57f60cf5e3dbb686ee29580c3807c921ab8b0"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "af1e0c83c0a8095bd9faa83265ba67a441422657",
+      "size": 1073,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/af1e0c83c0a8095bd9faa83265ba67a441422657"
+    },
+    {
+      "path": "README-en_US.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b3dcbc8c5b21547f166c205d570d705b9a77f7bc",
+      "size": 16856,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/b3dcbc8c5b21547f166c205d570d705b9a77f7bc"
+    },
+    {
+      "path": "README-zh_TW.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "155a936d92d41a678a2a78b5359098e4051e9043",
+      "size": 18872,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/155a936d92d41a678a2a78b5359098e4051e9043"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ebae232f6579070baef45c717feefdd2a0b44720",
+      "size": 19266,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/ebae232f6579070baef45c717feefdd2a0b44720"
+    },
+    {
+      "path": "SECURITY.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9641e6a01e570ff775d5ca3b5b2af6510c4766c3",
+      "size": 394,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/9641e6a01e570ff775d5ca3b5b2af6510c4766c3"
+    },
+    {
+      "path": "docs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "66a5ddaec3870df2fe7d13a14b47873ca9ac573c",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/66a5ddaec3870df2fe7d13a14b47873ca9ac573c"
+    },
+    {
+      "path": "docs/404.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d18a1b9220e7587d535a729e07f73ed2d981b0cd",
+      "size": 27824,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/d18a1b9220e7587d535a729e07f73ed2d981b0cd"
+    },
+    {
+      "path": "docs/README.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8159f2f96bb34dd9f772bf3f59e88a13fc109513",
+      "size": 39087,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/8159f2f96bb34dd9f772bf3f59e88a13fc109513"
+    },
+    {
+      "path": "docs/about.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fcade7826c09ad00ac4704b88c232bceca0856c",
+      "size": 46659,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/4fcade7826c09ad00ac4704b88c232bceca0856c"
+    },
+    {
+      "path": "docs/ai",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8bf8a19e41af2f9837a7faffddce7689595fe3a9",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/8bf8a19e41af2f9837a7faffddce7689595fe3a9"
+    },
+    {
+      "path": "docs/ai/overview.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2708513cc0d9217a377fa9c4deb812486c136b8",
+      "size": 44651,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/e2708513cc0d9217a377fa9c4deb812486c136b8"
+    },
+    {
+      "path": "docs/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "46d99d78cfc37511d9bcafd5791680a6ede9560e",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/46d99d78cfc37511d9bcafd5791680a6ede9560e"
+    },
+    {
+      "path": "docs/assets/4elements.05efd33c.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0ea118178f0db132a1bdb4547413385313812eba",
+      "size": 30062,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/0ea118178f0db132a1bdb4547413385313812eba"
+    },
+    {
+      "path": "docs/assets/5elements-1.0d22f4ae.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "668de65c06024bedc56f6390a6a01db556257846",
+      "size": 12002,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/668de65c06024bedc56f6390a6a01db556257846"
+    },
+    {
+      "path": "docs/assets/5elements-2.2d6b1012.webp",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "19c6ad840143e8877a430daa42faab58a6f4a7e9",
+      "size": 18948,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/19c6ad840143e8877a430daa42faab58a6f4a7e9"
+    },
+    {
+      "path": "docs/assets/README.md.09f566f2.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ceb0f93bbcd593814d7d31fd01c27d8528f720c8",
+      "size": 560,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/ceb0f93bbcd593814d7d31fd01c27d8528f720c8"
+    },
+    {
+      "path": "docs/assets/README.md.09f566f2.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ceb0f93bbcd593814d7d31fd01c27d8528f720c8",
+      "size": 560,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/ceb0f93bbcd593814d7d31fd01c27d8528f720c8"
+    },
+    {
+      "path": "docs/assets/about.md.8ed3a7d3.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fffe10ef0ae88a252d5459328b25a9e4372fc7ce",
+      "size": 8333,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/fffe10ef0ae88a252d5459328b25a9e4372fc7ce"
+    },
+    {
+      "path": "docs/assets/about.md.8ed3a7d3.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28cc49b025376e308b4ec3eccafbe291ea3c8991",
+      "size": 689,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/28cc49b025376e308b4ec3eccafbe291ea3c8991"
+    },
+    {
+      "path": "docs/assets/ai_overview.md.6762cb91.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01c220f1a99ca035fcf56760548dd7dac520ab50",
+      "size": 6085,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/01c220f1a99ca035fcf56760548dd7dac520ab50"
+    },
+    {
+      "path": "docs/assets/ai_overview.md.6762cb91.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7a8dc8d0db8d64a27ea3e19bd0085b892f2008a6",
+      "size": 382,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/7a8dc8d0db8d64a27ea3e19bd0085b892f2008a6"
+    },
+    {
+      "path": "docs/assets/alipay.4018db41.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f3106b9f9d8be9b339cf7f4507b419d4d54e8fdb",
+      "size": 76499,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/f3106b9f9d8be9b339cf7f4507b419d4d54e8fdb"
+    },
+    {
+      "path": "docs/assets/app.99021867.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8df4fbf419694c46e071f382a779b788a204439b",
+      "size": 4344,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/8df4fbf419694c46e071f382a779b788a204439b"
+    },
+    {
+      "path": "docs/assets/astrolabe@2x.5039cc7c.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6678ce1276cf3718113e80d326632737d6b41ee4",
+      "size": 1883517,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/6678ce1276cf3718113e80d326632737d6b41ee4"
+    },
+    {
+      "path": "docs/assets/chunks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eb3ba94a0a9ab8cd40d4207022881781a235c96f",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/eb3ba94a0a9ab8cd40d4207022881781a235c96f"
+    },
+    {
+      "path": "docs/assets/chunks/5elements-2.75774190.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "44206a780ade9dfc4942c5cdfacfad43a8d3a15e",
+      "size": 148,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/44206a780ade9dfc4942c5cdfacfad43a8d3a15e"
+    },
+    {
+      "path": "docs/assets/chunks/@localSearchIndexen_US.f184edda.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8ec748489b875e180b50631047485eb592f11e27",
+      "size": 83143,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/8ec748489b875e180b50631047485eb592f11e27"
+    },
+    {
+      "path": "docs/assets/chunks/@localSearchIndexroot.bcb043d4.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cd1748aa1bf1f0c9d972a82f2698051f274282a",
+      "size": 856045,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/1cd1748aa1bf1f0c9d972a82f2698051f274282a"
+    },
+    {
+      "path": "docs/assets/chunks/@localSearchIndexzh_TW.03605ac6.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58751277339c541938a71d4d37df6df955eb73e6",
+      "size": 860024,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/58751277339c541938a71d4d37df6df955eb73e6"
+    },
+    {
+      "path": "docs/assets/chunks/VPLocalSearchBox.1afd6751.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6094e6247cd0ea8e6628bea7e95a8c761b4600cb",
+      "size": 70704,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/6094e6247cd0ea8e6628bea7e95a8c761b4600cb"
+    },
+    {
+      "path": "docs/assets/chunks/donate.1bf9771d.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac78d86a7c1780f4b5a04c61fa509c283fb583d4",
+      "size": 1312,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/ac78d86a7c1780f4b5a04c61fa509c283fb583d4"
+    },
+    {
+      "path": "docs/assets/chunks/feixing.8f86e254.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "784f7a981c8692372540d3fa7cdf6ec3f21cbcdf",
+      "size": 55,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/784f7a981c8692372540d3fa7cdf6ec3f21cbcdf"
+    },
+    {
+      "path": "docs/assets/chunks/framework.589369be.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "446798fc5663f6c81815bcaca65aa230a64b8e00",
+      "size": 78975,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/446798fc5663f6c81815bcaca65aa230a64b8e00"
+    },
+    {
+      "path": "docs/assets/chunks/palace@2x.07328b4c.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a91c970c60bdd35a68b9d941b6828080062119c4",
+      "size": 97,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/a91c970c60bdd35a68b9d941b6828080062119c4"
+    },
+    {
+      "path": "docs/assets/chunks/theme.6289b4a3.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8fc3007e4c59506b42519c3e86ac1380e57fa6c",
+      "size": 76868,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/a8fc3007e4c59506b42519c3e86ac1380e57fa6c"
+    },
+    {
+      "path": "docs/assets/chunks/wcpay.d0e1a780.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4fee5957ff44cbd8f3e141bde480ad0d31277ab0",
+      "size": 87,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/4fee5957ff44cbd8f3e141bde480ad0d31277ab0"
+    },
+    {
+      "path": "docs/assets/en_US.md.fa04505b.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "080e6d864199ca7968055212e95f2a82d88cc976",
+      "size": 1146,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/080e6d864199ca7968055212e95f2a82d88cc976"
+    },
+    {
+      "path": "docs/assets/en_US.md.fa04505b.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "080e6d864199ca7968055212e95f2a82d88cc976",
+      "size": 1146,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/080e6d864199ca7968055212e95f2a82d88cc976"
+    },
+    {
+      "path": "docs/assets/en_US_about.md.60cc2486.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0b3ebd447e00d5f03ff4078e7b8723940af36f6",
+      "size": 8767,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/e0b3ebd447e00d5f03ff4078e7b8723940af36f6"
+    },
+    {
+      "path": "docs/assets/en_US_about.md.60cc2486.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b61b69be02b01a40398674345e9152c3139008c1",
+      "size": 790,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/b61b69be02b01a40398674345e9152c3139008c1"
+    },
+    {
+      "path": "docs/assets/en_US_ai_overview.md.ab8bb6e6.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1183d9b43e374ed7c507fe4f146a9a0b3eee13e6",
+      "size": 6118,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/1183d9b43e374ed7c507fe4f146a9a0b3eee13e6"
+    },
+    {
+      "path": "docs/assets/en_US_ai_overview.md.ab8bb6e6.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8e3529894c9326f9a425d03f20bf0dab4dfd612a",
+      "size": 400,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/8e3529894c9326f9a425d03f20bf0dab4dfd612a"
+    },
+    {
+      "path": "docs/assets/en_US_index.md.218fb498.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd7127c6ca0ac100f9f51616c24f5b4f09466cb5",
+      "size": 1551,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/dd7127c6ca0ac100f9f51616c24f5b4f09466cb5"
+    },
+    {
+      "path": "docs/assets/en_US_index.md.218fb498.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd7127c6ca0ac100f9f51616c24f5b4f09466cb5",
+      "size": 1551,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/dd7127c6ca0ac100f9f51616c24f5b4f09466cb5"
+    },
+    {
+      "path": "docs/assets/en_US_posts_astrolabe.md.380ec93a.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1857682fe61cf83b1ce4a1cf20808ad778e7707c",
+      "size": 70850,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/1857682fe61cf83b1ce4a1cf20808ad778e7707c"
+    },
+    {
+      "path": "docs/assets/en_US_posts_astrolabe.md.380ec93a.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9cff303b7f6c2a834a710f1ec21086eb48bb0c38",
+      "size": 14888,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/9cff303b7f6c2a834a710f1ec21086eb48bb0c38"
+    },
+    {
+      "path": "docs/assets/en_US_posts_config-n-plugin.md.89bb891d.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6569fbedfc31a25e3e4964b01694e6e78c0b4f39",
+      "size": 41910,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/6569fbedfc31a25e3e4964b01694e6e78c0b4f39"
+    },
+    {
+      "path": "docs/assets/en_US_posts_config-n-plugin.md.89bb891d.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb0155133a8db8f9b206d0db212247ff832da6f9",
+      "size": 4248,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/cb0155133a8db8f9b206d0db212247ff832da6f9"
+    },
+    {
+      "path": "docs/assets/en_US_posts_horoscope.md.bc7a06de.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0be88492a27de3079cebdf73747d8e00a98b0bdb",
+      "size": 42598,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/0be88492a27de3079cebdf73747d8e00a98b0bdb"
+    },
+    {
+      "path": "docs/assets/en_US_posts_horoscope.md.bc7a06de.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b700827cbcb54b7616b5269e5a5c4466a2c553cf",
+      "size": 4465,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/b700827cbcb54b7616b5269e5a5c4466a2c553cf"
+    },
+    {
+      "path": "docs/assets/en_US_posts_palace.md.12e93f7f.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "abaa28b6e44fe9b166ada1c81cc930022d785f12",
+      "size": 49602,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/abaa28b6e44fe9b166ada1c81cc930022d785f12"
+    },
+    {
+      "path": "docs/assets/en_US_posts_palace.md.12e93f7f.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "647d81d6940d62d22ae7158d04db6b645178c7fe",
+      "size": 7897,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/647d81d6940d62d22ae7158d04db6b645178c7fe"
+    },
+    {
+      "path": "docs/assets/en_US_posts_star.md.4f5eb111.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8da12c3334cb541defd404c8f047cb308417d10",
+      "size": 25111,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/d8da12c3334cb541defd404c8f047cb308417d10"
+    },
+    {
+      "path": "docs/assets/en_US_posts_star.md.4f5eb111.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "59cb5e059c517dcbfaac7eecef27b836e2d91ed0",
+      "size": 1564,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/59cb5e059c517dcbfaac7eecef27b836e2d91ed0"
+    },
+    {
+      "path": "docs/assets/en_US_quick-start.md.6266f219.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5672236abfc4cfbd0d74667ab86921a5a545b67b",
+      "size": 222954,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/5672236abfc4cfbd0d74667ab86921a5a545b67b"
+    },
+    {
+      "path": "docs/assets/en_US_quick-start.md.6266f219.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e51dc935c8ecfa5048690bbc5124975888025934",
+      "size": 22261,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/e51dc935c8ecfa5048690bbc5124975888025934"
+    },
+    {
+      "path": "docs/assets/feixing.3b0a025d.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d02f87966d26d916c76ad13e37c9443a582df14e",
+      "size": 65070,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/d02f87966d26d916c76ad13e37c9443a582df14e"
+    },
+    {
+      "path": "docs/assets/index.md.02c40d55.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58f3935e09b9ee93d7736e8663bcf2495ea247d8",
+      "size": 3347,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/58f3935e09b9ee93d7736e8663bcf2495ea247d8"
+    },
+    {
+      "path": "docs/assets/index.md.02c40d55.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58f3935e09b9ee93d7736e8663bcf2495ea247d8",
+      "size": 3347,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/58f3935e09b9ee93d7736e8663bcf2495ea247d8"
+    },
+    {
+      "path": "docs/assets/inter-italic-cyrillic-ext.33bd5a8e.woff2",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a687296748f6b8bc8076cd11bde49cd27e4442b",
+      "size": 28332,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/2a687296748f6b8bc8076cd11bde49cd27e4442b"
+    },
+    {
+      "path": "docs/assets/inter-italic-cyrillic.ea42a392.woff2",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f64035158d7e4c01654e3f23dcd6e8299928a28c",
+      "size": 17824,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/f64035158d7e4c01654e3f23dcd6e8299928a28c"
+    },
+    {
+      "path": "docs/assets/inter-italic-greek-ext.4fbe9427.woff2",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00218960325a4636092b66a46e701c2bf4bb0466",
+      "size": 12188,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/00218960325a4636092b66a46e701c2bf4bb0466"
+    },
+    {
+      "path": "docs/assets/inter-italic-greek.8f4463c4.woff2",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "71c265f85c9b45b6a3f2df9a0c6aa39547501b98",
+      "size": 23264,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/71c265f85c9b45b6a3f2df9a0c6aa39547501b98"
+    },
+    {
+      "path": "docs/assets/inter-italic-latin-ext.bd8920cc.woff2",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9c1b9440ed419d4a71ba46b0db3951164f9e10df",
+      "size": 63552,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/9c1b9440ed419d4a71ba46b0db3951164f9e10df"
+    },
+    {
+      "path": "docs/assets/inter-italic-latin.bd3b6f56.woff2",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "01fcf20724f915f68a974ef2fb85f86f3039b1d8",
+      "size": 46048,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/01fcf20724f915f68a974ef2fb85f86f3039b1d8"
+    },
+    {
+      "path": "docs/assets/inter-italic-vietnamese.6ce511fb.woff2",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e4f788ee02bb687bc1d5045483ff0d381e7654e0",
+      "size": 8784,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/e4f788ee02bb687bc1d5045483ff0d381e7654e0"
+    },
+    {
+      "path": "docs/assets/inter-roman-cyrillic-ext.e75737ce.woff2",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "28593ccb8a4d849a746f2b970678fe426cb136e8",
+      "size": 26600,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/28593ccb8a4d849a746f2b970678fe426cb136e8"
+    },
+    {
+      "path": "docs/assets/inter-roman-cyrillic.5f2c6c8c.woff2",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a20adc161f433a7c4e3d92306301b9228bcf9fb4",
+      "size": 16780,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/a20adc161f433a7c4e3d92306301b9228bcf9fb4"
+    },
+    {
+      "path": "docs/assets/inter-roman-greek-ext.ab0619bc.woff2",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e3b0be76db2641253744aa613469eedb118667da",
+      "size": 11808,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/e3b0be76db2641253744aa613469eedb118667da"
+    },
+    {
+      "path": "docs/assets/inter-roman-greek.d5a6d92a.woff2",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f790e047daa346583880da2be470431e35aa6054",
+      "size": 21776,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/f790e047daa346583880da2be470431e35aa6054"
+    },
+    {
+      "path": "docs/assets/inter-roman-latin-ext.0030eebd.woff2",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "715bd903b9b14d22a056f10e6d13b8d7e0acce57",
+      "size": 59608,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/715bd903b9b14d22a056f10e6d13b8d7e0acce57"
+    },
+    {
+      "path": "docs/assets/inter-roman-latin.2ed14f66.woff2",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a540b7afe7a46b9ff1412f433cd5180a9a9ab77d",
+      "size": 42464,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/a540b7afe7a46b9ff1412f433cd5180a9a9ab77d"
+    },
+    {
+      "path": "docs/assets/inter-roman-vietnamese.14ce25a6.woff2",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a9f9cb9ca0cd78b6ea2f3e5c9d2838dc8895598",
+      "size": 8492,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/5a9f9cb9ca0cd78b6ea2f3e5c9d2838dc8895598"
+    },
+    {
+      "path": "docs/assets/learn_adj-star.md.6fc4d886.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b5dc390ddbe5768998f7233d53293ba5611f3ee1",
+      "size": 22197,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/b5dc390ddbe5768998f7233d53293ba5611f3ee1"
+    },
+    {
+      "path": "docs/assets/learn_adj-star.md.6fc4d886.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fa6fdbe2d0e8e5ec2323a5f63507fe8deef6ab06",
+      "size": 13612,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/fa6fdbe2d0e8e5ec2323a5f63507fe8deef6ab06"
+    },
+    {
+      "path": "docs/assets/learn_ancientBook-1.md.bfe0aacb.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f4adedc16178b52a2385f23222059fa372530df3",
+      "size": 31879,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/f4adedc16178b52a2385f23222059fa372530df3"
+    },
+    {
+      "path": "docs/assets/learn_ancientBook-1.md.bfe0aacb.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a3de781e66bd396a9f5b7867670b799302595a61",
+      "size": 805,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/a3de781e66bd396a9f5b7867670b799302595a61"
+    },
+    {
+      "path": "docs/assets/learn_ancientBook-2.md.9f2746a6.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4c3b2dea625b80676fbc848e16ce67c8d192c31d",
+      "size": 92361,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/4c3b2dea625b80676fbc848e16ce67c8d192c31d"
+    },
+    {
+      "path": "docs/assets/learn_ancientBook-2.md.9f2746a6.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d75f54c7e7ed959992ff4d03e76c0a73c14ad0a0",
+      "size": 554,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/d75f54c7e7ed959992ff4d03e76c0a73c14ad0a0"
+    },
+    {
+      "path": "docs/assets/learn_ancientBook-3.md.500636b7.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1a802213fdcb51d8584912fac479227e63136384",
+      "size": 45093,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/1a802213fdcb51d8584912fac479227e63136384"
+    },
+    {
+      "path": "docs/assets/learn_ancientBook-3.md.500636b7.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b38b5effb4245483b8501f72342aa362c5848242",
+      "size": 548,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/b38b5effb4245483b8501f72342aa362c5848242"
+    },
+    {
+      "path": "docs/assets/learn_ancientBook-qa.md.b8323f23.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "464abc397aba3c4c690ea03741fe82191d9ae3be",
+      "size": 45754,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/464abc397aba3c4c690ea03741fe82191d9ae3be"
+    },
+    {
+      "path": "docs/assets/learn_ancientBook-qa.md.b8323f23.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "436b4e228cfa8ff8b0fddddaf1bafa496482c759",
+      "size": 417,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/436b4e228cfa8ff8b0fddddaf1bafa496482c759"
+    },
+    {
+      "path": "docs/assets/learn_ancientBook.md.739e4513.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b6c56b60e27e498e25b6056035ac4b3fe25606b",
+      "size": 6716,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/7b6c56b60e27e498e25b6056035ac4b3fe25606b"
+    },
+    {
+      "path": "docs/assets/learn_ancientBook.md.739e4513.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "854c2b21ff737d255c92294688b824a237fcf822",
+      "size": 634,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/854c2b21ff737d255c92294688b824a237fcf822"
+    },
+    {
+      "path": "docs/assets/learn_astrolabe.md.74c626cc.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "561027c7c39cae05ffe26821fb9c0e50296027f3",
+      "size": 11118,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/561027c7c39cae05ffe26821fb9c0e50296027f3"
+    },
+    {
+      "path": "docs/assets/learn_astrolabe.md.74c626cc.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "678f87fc4a6bf660b28a17bbfbd35e1955d535c1",
+      "size": 776,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/678f87fc4a6bf660b28a17bbfbd35e1955d535c1"
+    },
+    {
+      "path": "docs/assets/learn_basis.md.046ed2c0.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e23ab77d25bb9789e35ba55e9871f86cc1082952",
+      "size": 26024,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/e23ab77d25bb9789e35ba55e9871f86cc1082952"
+    },
+    {
+      "path": "docs/assets/learn_basis.md.046ed2c0.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29947cfba11e0b23036c7e2f13a58733149d3deb",
+      "size": 821,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/29947cfba11e0b23036c7e2f13a58733149d3deb"
+    },
+    {
+      "path": "docs/assets/learn_dec-star.md.ae53d1aa.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "382476e73cf782f48c257a9b7c2792d84be58589",
+      "size": 12967,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/382476e73cf782f48c257a9b7c2792d84be58589"
+    },
+    {
+      "path": "docs/assets/learn_dec-star.md.ae53d1aa.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8481b47c12855d379662933ece63f3e02f241edc",
+      "size": 4953,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/8481b47c12855d379662933ece63f3e02f241edc"
+    },
+    {
+      "path": "docs/assets/learn_horoscope.md.ca311b15.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4d49ffbaf17cf3758f464dad5f68b7be5821603c",
+      "size": 7932,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/4d49ffbaf17cf3758f464dad5f68b7be5821603c"
+    },
+    {
+      "path": "docs/assets/learn_horoscope.md.ca311b15.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35500607ed1e7a1faacd95d0ed9e27a4afaea09d",
+      "size": 487,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/35500607ed1e7a1faacd95d0ed9e27a4afaea09d"
+    },
+    {
+      "path": "docs/assets/learn_major-star.md.3c4d56a6.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c84ac7508b308ce99922a0fc16524712d414d107",
+      "size": 89322,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/c84ac7508b308ce99922a0fc16524712d414d107"
+    },
+    {
+      "path": "docs/assets/learn_major-star.md.3c4d56a6.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8353ab61739abcaa38cf01542dc285f413b405d1",
+      "size": 43689,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/8353ab61739abcaa38cf01542dc285f413b405d1"
+    },
+    {
+      "path": "docs/assets/learn_minor-star.md.6c6fdc9e.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6050036a036851e568668f1f6d8255026c5692ec",
+      "size": 27360,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/6050036a036851e568668f1f6d8255026c5692ec"
+    },
+    {
+      "path": "docs/assets/learn_minor-star.md.6c6fdc9e.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "68d8140fe23d8c31ca5e18e47a1911a1d77e1c92",
+      "size": 763,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/68d8140fe23d8c31ca5e18e47a1911a1d77e1c92"
+    },
+    {
+      "path": "docs/assets/learn_mutagen.md.d3464c28.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbb644734d6814d523800ac69e258e53783fca50",
+      "size": 18769,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/cbb644734d6814d523800ac69e258e53783fca50"
+    },
+    {
+      "path": "docs/assets/learn_mutagen.md.d3464c28.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc279ccb57d8b3ff27a0d9bd32ee6cec36c333d8",
+      "size": 1376,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/bc279ccb57d8b3ff27a0d9bd32ee6cec36c333d8"
+    },
+    {
+      "path": "docs/assets/learn_palace.md.735abee9.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "54948e4be074d222190268b03707b9c2ea438b8f",
+      "size": 36958,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/54948e4be074d222190268b03707b9c2ea438b8f"
+    },
+    {
+      "path": "docs/assets/learn_palace.md.735abee9.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2943c4dd0223fa34eb4912cbc534d8fd4deb9489",
+      "size": 753,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/2943c4dd0223fa34eb4912cbc534d8fd4deb9489"
+    },
+    {
+      "path": "docs/assets/learn_pattern.md.08d6fd6c.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "26b6fd9d32962ddb4aca4dbe2a3adb2157448ab3",
+      "size": 132968,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/26b6fd9d32962ddb4aca4dbe2a3adb2157448ab3"
+    },
+    {
+      "path": "docs/assets/learn_pattern.md.08d6fd6c.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cd39068e97314c62fce3790b457605808c1cd606",
+      "size": 525,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/cd39068e97314c62fce3790b457605808c1cd606"
+    },
+    {
+      "path": "docs/assets/learn_setup.md.c530cde1.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4f4e96b661f612aaf465309a7ed531cfc910b32",
+      "size": 22479,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/a4f4e96b661f612aaf465309a7ed531cfc910b32"
+    },
+    {
+      "path": "docs/assets/learn_setup.md.c530cde1.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a9a0c934819305a4e5ec498e6d4eab5e3b59bbc",
+      "size": 734,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/2a9a0c934819305a4e5ec498e6d4eab5e3b59bbc"
+    },
+    {
+      "path": "docs/assets/learn_star.md.8965a663.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7c5d26ecdcdf43a93fd2b73f4187755af0aeb26",
+      "size": 15387,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/f7c5d26ecdcdf43a93fd2b73f4187755af0aeb26"
+    },
+    {
+      "path": "docs/assets/learn_star.md.8965a663.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4f3b749cefd0d282713f2ce3496bb39c1ad0c22c",
+      "size": 787,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/4f3b749cefd0d282713f2ce3496bb39c1ad0c22c"
+    },
+    {
+      "path": "docs/assets/palace@2x.522dfd81.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "caaaa6866d222c753a2352c17170f4f56f2b27b8",
+      "size": 110784,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/caaaa6866d222c753a2352c17170f4f56f2b27b8"
+    },
+    {
+      "path": "docs/assets/posts_astrolabe.md.98b89f49.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca23dbf1036a529586a8ae0f4af4f0186ff9ac53",
+      "size": 142583,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/ca23dbf1036a529586a8ae0f4af4f0186ff9ac53"
+    },
+    {
+      "path": "docs/assets/posts_astrolabe.md.98b89f49.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a7d9e0351ba30f326ca6b37149ae9016c3fc4d85",
+      "size": 24920,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/a7d9e0351ba30f326ca6b37149ae9016c3fc4d85"
+    },
+    {
+      "path": "docs/assets/posts_config-n-plugin.md.0ab156dd.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0265e398ba9ea75a0d13f9f02711434224d4a5b",
+      "size": 41290,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/d0265e398ba9ea75a0d13f9f02711434224d4a5b"
+    },
+    {
+      "path": "docs/assets/posts_config-n-plugin.md.0ab156dd.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "caae78459a50d9cd255428e482e9303765e5070f",
+      "size": 4505,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/caae78459a50d9cd255428e482e9303765e5070f"
+    },
+    {
+      "path": "docs/assets/posts_horoscope.md.152f8460.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "510bf568990a590f6d63f8c6093209ae43644d19",
+      "size": 60167,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/510bf568990a590f6d63f8c6093209ae43644d19"
+    },
+    {
+      "path": "docs/assets/posts_horoscope.md.152f8460.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b589495291c84aac9c8ff42b723001320a5e8dca",
+      "size": 4482,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/b589495291c84aac9c8ff42b723001320a5e8dca"
+    },
+    {
+      "path": "docs/assets/posts_palace.md.c64eb037.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d5e8ceec7fe757880bd57e538fee5a5dc9e597c6",
+      "size": 90824,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/d5e8ceec7fe757880bd57e538fee5a5dc9e597c6"
+    },
+    {
+      "path": "docs/assets/posts_palace.md.c64eb037.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bdd6b16d635347af1f58d229361528b2354f3296",
+      "size": 6246,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/bdd6b16d635347af1f58d229361528b2354f3296"
+    },
+    {
+      "path": "docs/assets/posts_star.md.eea741f1.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ead8f0334bd815b33a05ac6e4b2b220a0cfd64dd",
+      "size": 32869,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/ead8f0334bd815b33a05ac6e4b2b220a0cfd64dd"
+    },
+    {
+      "path": "docs/assets/posts_star.md.eea741f1.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76cd3e9b01473d1ea5e07c2a01ead7a668fc5c2d",
+      "size": 1523,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/76cd3e9b01473d1ea5e07c2a01ead7a668fc5c2d"
+    },
+    {
+      "path": "docs/assets/quick-start.md.906a77a9.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dc3afd5cbe7c7a75f749200309febde94ea6c1b7",
+      "size": 224979,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/dc3afd5cbe7c7a75f749200309febde94ea6c1b7"
+    },
+    {
+      "path": "docs/assets/quick-start.md.906a77a9.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0348b07651dc79eac757952f0b4c3fcded34c68",
+      "size": 24698,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/a0348b07651dc79eac757952f0b4c3fcded34c68"
+    },
+    {
+      "path": "docs/assets/style.1799bce1.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95bce7bd1e689bb7001478d164d8c7969db68c24",
+      "size": 106542,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/95bce7bd1e689bb7001478d164d8c7969db68c24"
+    },
+    {
+      "path": "docs/assets/type-definition.md.96de3910.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "21c18777250dd45e2c779634dd2db1e28286c52e",
+      "size": 125975,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/21c18777250dd45e2c779634dd2db1e28286c52e"
+    },
+    {
+      "path": "docs/assets/type-definition.md.96de3910.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5e1051234641ea84474a4f6ef1587c402aa7a060",
+      "size": 40194,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/5e1051234641ea84474a4f6ef1587c402aa7a060"
+    },
+    {
+      "path": "docs/assets/wcpay.44f75c57.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bc3cbe39c3e7d68020e6e83cad2579a664e05591",
+      "size": 99476,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/bc3cbe39c3e7d68020e6e83cad2579a664e05591"
+    },
+    {
+      "path": "docs/assets/zh_TW_about.md.8a6e7d56.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "77500f0e5f82638978adfc3fcb2d448d52e5311c",
+      "size": 8351,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/77500f0e5f82638978adfc3fcb2d448d52e5311c"
+    },
+    {
+      "path": "docs/assets/zh_TW_about.md.8a6e7d56.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50c925097ab4b1e48a2a7dbc997f27a387e96217",
+      "size": 707,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/50c925097ab4b1e48a2a7dbc997f27a387e96217"
+    },
+    {
+      "path": "docs/assets/zh_TW_ai_overview.md.2b2d90a2.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "84c46b4d4dbb5232086bd537c1e346bde3439347",
+      "size": 6118,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/84c46b4d4dbb5232086bd537c1e346bde3439347"
+    },
+    {
+      "path": "docs/assets/zh_TW_ai_overview.md.2b2d90a2.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c8bd0e51c3e82ec3c29c1c7748bf0dba0fd7c808",
+      "size": 400,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/c8bd0e51c3e82ec3c29c1c7748bf0dba0fd7c808"
+    },
+    {
+      "path": "docs/assets/zh_TW_index.md.12c436ae.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d05a11348deddfdd2101926c1e4c0e2f6884f603",
+      "size": 3365,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/d05a11348deddfdd2101926c1e4c0e2f6884f603"
+    },
+    {
+      "path": "docs/assets/zh_TW_index.md.12c436ae.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d05a11348deddfdd2101926c1e4c0e2f6884f603",
+      "size": 3365,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/d05a11348deddfdd2101926c1e4c0e2f6884f603"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_adj-star.md.b992aea1.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "69dbcb9ec0d345cb32f3deb30bc9c471d57f15f3",
+      "size": 22215,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/69dbcb9ec0d345cb32f3deb30bc9c471d57f15f3"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_adj-star.md.b992aea1.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "513771512b357a5de5879ce6cf928a8702803721",
+      "size": 13630,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/513771512b357a5de5879ce6cf928a8702803721"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_ancientBook-1.md.bced6fa5.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "401055b5851660c0bc0a02325e846a4cef7da250",
+      "size": 31897,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/401055b5851660c0bc0a02325e846a4cef7da250"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_ancientBook-1.md.bced6fa5.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c31069e313b1f2feaec24eaa6044d21f34521a0b",
+      "size": 823,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/c31069e313b1f2feaec24eaa6044d21f34521a0b"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_ancientBook-2.md.0199f753.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c30d98c2b976346797e2b3aa058bfedfe5670c01",
+      "size": 92379,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/c30d98c2b976346797e2b3aa058bfedfe5670c01"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_ancientBook-2.md.0199f753.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c4b3f40fcbc98b961ef4a20dafa2783882ad283",
+      "size": 572,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/8c4b3f40fcbc98b961ef4a20dafa2783882ad283"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_ancientBook-3.md.616efbd6.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "39ce8ac9416731aecfa03386fcdf134b40ac28ba",
+      "size": 45111,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/39ce8ac9416731aecfa03386fcdf134b40ac28ba"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_ancientBook-3.md.616efbd6.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cdd97b88c4223e467b5da9b93d146d26f5a018c0",
+      "size": 566,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/cdd97b88c4223e467b5da9b93d146d26f5a018c0"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_ancientBook-qa.md.28189ca7.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d06adb080015137bee8fb062d78bf50e2627f3da",
+      "size": 45772,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/d06adb080015137bee8fb062d78bf50e2627f3da"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_ancientBook-qa.md.28189ca7.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d2ea87861ac56a76660d47f6c7a5fc2424182d34",
+      "size": 435,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/d2ea87861ac56a76660d47f6c7a5fc2424182d34"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_ancientBook.md.e72a790d.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "709a52e8c239eb22539d62b900f18bd9fd4afd33",
+      "size": 6734,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/709a52e8c239eb22539d62b900f18bd9fd4afd33"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_ancientBook.md.e72a790d.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c86f817412020f78e603f07e6a950fb93c0a5243",
+      "size": 652,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/c86f817412020f78e603f07e6a950fb93c0a5243"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_astrolabe.md.52d94c85.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4dd0283a1d8e106f703d6fea10e1f525bd045cf5",
+      "size": 11136,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/4dd0283a1d8e106f703d6fea10e1f525bd045cf5"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_astrolabe.md.52d94c85.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "93c292c0b4717e9c19672fa83f5da225302f1351",
+      "size": 794,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/93c292c0b4717e9c19672fa83f5da225302f1351"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_basis.md.d799af2f.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "faf0e918bebe0fa44ce58ea3963a1c5df4d92d15",
+      "size": 26042,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/faf0e918bebe0fa44ce58ea3963a1c5df4d92d15"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_basis.md.d799af2f.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87a39880b458b86f86b683c32bdf556998bcf844",
+      "size": 839,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/87a39880b458b86f86b683c32bdf556998bcf844"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_dec-star.md.883f27ed.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "35d76c08056846373e01ba5323f7aa3ef46b21a3",
+      "size": 12985,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/35d76c08056846373e01ba5323f7aa3ef46b21a3"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_dec-star.md.883f27ed.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6da6196a70d053397bf07c79acad49de750a11c6",
+      "size": 4971,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/6da6196a70d053397bf07c79acad49de750a11c6"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_horoscope.md.741147ae.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1028210a8e78e1be2073cf6982a31fa1a928576d",
+      "size": 7950,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/1028210a8e78e1be2073cf6982a31fa1a928576d"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_horoscope.md.741147ae.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d32902d2bcd6ef7008cb386721e5cedc55255ba",
+      "size": 505,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/9d32902d2bcd6ef7008cb386721e5cedc55255ba"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_major-star.md.32e48709.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9ebccbcc971302728d57b9dbf88063da3dbdda1c",
+      "size": 89340,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/9ebccbcc971302728d57b9dbf88063da3dbdda1c"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_major-star.md.32e48709.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fefa78b7c37771241b87d3c4f73f1907c4d7970c",
+      "size": 43707,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/fefa78b7c37771241b87d3c4f73f1907c4d7970c"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_minor-star.md.78f31839.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88feae334de83f5f45c874614f0d7910d941b639",
+      "size": 27378,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/88feae334de83f5f45c874614f0d7910d941b639"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_minor-star.md.78f31839.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "17b698a6a94e2c143eec62d44b38adb353c95989",
+      "size": 781,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/17b698a6a94e2c143eec62d44b38adb353c95989"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_mutagen.md.238cfae1.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a2610bcc20d434adfa11a19219321bd3aaa9cf5",
+      "size": 18787,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/5a2610bcc20d434adfa11a19219321bd3aaa9cf5"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_mutagen.md.238cfae1.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c11b6edc768797da2e7c5bbf5812c3cc6c78462e",
+      "size": 1394,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/c11b6edc768797da2e7c5bbf5812c3cc6c78462e"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_palace.md.44d2ccd8.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a8feb489dbc85d5b803ee5204b3b4c61943595be",
+      "size": 36976,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/a8feb489dbc85d5b803ee5204b3b4c61943595be"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_palace.md.44d2ccd8.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "caaf9c8a947d24fa278e8f523adbad2eb52b90d3",
+      "size": 771,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/caaf9c8a947d24fa278e8f523adbad2eb52b90d3"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_pattern.md.b81c183d.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "47ad365efda35cac0a62140a87025179d24c92f7",
+      "size": 132692,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/47ad365efda35cac0a62140a87025179d24c92f7"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_pattern.md.b81c183d.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3cad1f8568b5e77c3e8b418e52926aefeb44fb4d",
+      "size": 543,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/3cad1f8568b5e77c3e8b418e52926aefeb44fb4d"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_setup.md.a85e05a0.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e81c5af02a41465b00e177fdaf5999add25a1715",
+      "size": 22497,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/e81c5af02a41465b00e177fdaf5999add25a1715"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_setup.md.a85e05a0.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29f05d9053bfb0831770a21d4e8838aa760e5afd",
+      "size": 752,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/29f05d9053bfb0831770a21d4e8838aa760e5afd"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_star.md.89ba6b2b.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "281e1d76e6d25561421116328cea84dba50000a5",
+      "size": 15405,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/281e1d76e6d25561421116328cea84dba50000a5"
+    },
+    {
+      "path": "docs/assets/zh_TW_learn_star.md.89ba6b2b.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "da575f6f3653c01543d4f432f38edb2fd607ebf9",
+      "size": 805,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/da575f6f3653c01543d4f432f38edb2fd607ebf9"
+    },
+    {
+      "path": "docs/assets/zh_TW_posts_astrolabe.md.d19d061d.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0597858bf5e03a8e566f065113bebfbfa64358a",
+      "size": 141079,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/b0597858bf5e03a8e566f065113bebfbfa64358a"
+    },
+    {
+      "path": "docs/assets/zh_TW_posts_astrolabe.md.d19d061d.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d8ba280d1f4aa8c217489727f580dec5e12d06ba",
+      "size": 23299,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/d8ba280d1f4aa8c217489727f580dec5e12d06ba"
+    },
+    {
+      "path": "docs/assets/zh_TW_posts_config-n-plugin.md.1717f975.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20e31122ee371ddcd8cc6e0a6138ba35440260b3",
+      "size": 41311,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/20e31122ee371ddcd8cc6e0a6138ba35440260b3"
+    },
+    {
+      "path": "docs/assets/zh_TW_posts_config-n-plugin.md.1717f975.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "624543d9910d4b39302448867dfa39b59635a2eb",
+      "size": 4532,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/624543d9910d4b39302448867dfa39b59635a2eb"
+    },
+    {
+      "path": "docs/assets/zh_TW_posts_horoscope.md.e99248ff.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "843f906c519c9b3883ff46e263f8c16156cae96b",
+      "size": 60188,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/843f906c519c9b3883ff46e263f8c16156cae96b"
+    },
+    {
+      "path": "docs/assets/zh_TW_posts_horoscope.md.e99248ff.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9aedcb85dd3bb3ec3eae4a25ea8d1d9aade8328",
+      "size": 4503,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/e9aedcb85dd3bb3ec3eae4a25ea8d1d9aade8328"
+    },
+    {
+      "path": "docs/assets/zh_TW_posts_palace.md.d11e442d.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4705b68de4449dc835c1c85ebb5a3e1d417fcf3d",
+      "size": 90842,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/4705b68de4449dc835c1c85ebb5a3e1d417fcf3d"
+    },
+    {
+      "path": "docs/assets/zh_TW_posts_palace.md.d11e442d.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0bcb77d652473153fb33a51de46e20389e25121",
+      "size": 6264,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/f0bcb77d652473153fb33a51de46e20389e25121"
+    },
+    {
+      "path": "docs/assets/zh_TW_posts_star.md.93fe422c.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4480e0fb4a593d56bb8f8306efd8016fd6b6135d",
+      "size": 32745,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/4480e0fb4a593d56bb8f8306efd8016fd6b6135d"
+    },
+    {
+      "path": "docs/assets/zh_TW_posts_star.md.93fe422c.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "79455b37884208527e0254e66a5ac637f63011ba",
+      "size": 1425,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/79455b37884208527e0254e66a5ac637f63011ba"
+    },
+    {
+      "path": "docs/assets/zh_TW_quick-start.md.589a5a10.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "56f588aadddb2e9604c3c68d9d78177337976ae2",
+      "size": 224997,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/56f588aadddb2e9604c3c68d9d78177337976ae2"
+    },
+    {
+      "path": "docs/assets/zh_TW_quick-start.md.589a5a10.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14bcb5524b311502f742f40b96cc0e8942dd46cd",
+      "size": 24716,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/14bcb5524b311502f742f40b96cc0e8942dd46cd"
+    },
+    {
+      "path": "docs/assets/zh_TW_type-definition.md.554d4994.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c764d792217f3d6a834e570806edf970769f307a",
+      "size": 124688,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/c764d792217f3d6a834e570806edf970769f307a"
+    },
+    {
+      "path": "docs/assets/zh_TW_type-definition.md.554d4994.lean.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ffa001f8bfcbf065429d6b6399cf2eada51ecb9c",
+      "size": 37683,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/ffa001f8bfcbf065429d6b6399cf2eada51ecb9c"
+    },
+    {
+      "path": "docs/en_US.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "412b557a001ddcdc79b52823d550810b7194a5ca",
+      "size": 29952,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/412b557a001ddcdc79b52823d550810b7194a5ca"
+    },
+    {
+      "path": "docs/en_US",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b41161ee2d3b5865425012763cd1c0f04231ffca",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/b41161ee2d3b5865425012763cd1c0f04231ffca"
+    },
+    {
+      "path": "docs/en_US/about.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1bdaf22a320f11a914fa8f9083809d7290c04468",
+      "size": 40513,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/1bdaf22a320f11a914fa8f9083809d7290c04468"
+    },
+    {
+      "path": "docs/en_US/ai",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fcc6be11518f6df4c78dea61c2723400099914f6",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/fcc6be11518f6df4c78dea61c2723400099914f6"
+    },
+    {
+      "path": "docs/en_US/ai/overview.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a25319c35ba2a915ce490867bc470eb4cdc0cf26",
+      "size": 38150,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/a25319c35ba2a915ce490867bc470eb4cdc0cf26"
+    },
+    {
+      "path": "docs/en_US/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d349eb73cfc8dfc55ef7c5b2e3f4d78dee75447",
+      "size": 29963,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/0d349eb73cfc8dfc55ef7c5b2e3f4d78dee75447"
+    },
+    {
+      "path": "docs/en_US/posts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7a4ab9df44e500b6c3ebc059836d5baf5f851384",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/7a4ab9df44e500b6c3ebc059836d5baf5f851384"
+    },
+    {
+      "path": "docs/en_US/posts/astrolabe.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0d446e6e341cd089b818ae95eee0b41c6de5712b",
+      "size": 102095,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/0d446e6e341cd089b818ae95eee0b41c6de5712b"
+    },
+    {
+      "path": "docs/en_US/posts/config-n-plugin.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "846d105186437c05efe0df1220edb86f81eaf04b",
+      "size": 73344,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/846d105186437c05efe0df1220edb86f81eaf04b"
+    },
+    {
+      "path": "docs/en_US/posts/horoscope.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9653177261016f7cb3b7f91fa471c427cd1562c7",
+      "size": 74740,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/9653177261016f7cb3b7f91fa471c427cd1562c7"
+    },
+    {
+      "path": "docs/en_US/posts/palace.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8aa5f62dd5b6edea1567342d1ed6d9ac62016131",
+      "size": 81670,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/8aa5f62dd5b6edea1567342d1ed6d9ac62016131"
+    },
+    {
+      "path": "docs/en_US/posts/star.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f781a5fdbd055f321008866d85baebe5c3b69af1",
+      "size": 57090,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/f781a5fdbd055f321008866d85baebe5c3b69af1"
+    },
+    {
+      "path": "docs/en_US/quick-start.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4ab3c736113e45c2ba11473ed637c1a12bea8d8",
+      "size": 244972,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/d4ab3c736113e45c2ba11473ed637c1a12bea8d8"
+    },
+    {
+      "path": "docs/hashmap.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dd86083df215a0a6dd1c2726ef9e6fb1422b07f9",
+      "size": 2187,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/dd86083df215a0a6dd1c2726ef9e6fb1422b07f9"
+    },
+    {
+      "path": "docs/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76e9c9262af913cc4d212fc59005de1d6cc6e44a",
+      "size": 32108,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/76e9c9262af913cc4d212fc59005de1d6cc6e44a"
+    },
+    {
+      "path": "docs/learn",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5775d566bb2a3c3a385c8beecb6044253e9e977a",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/5775d566bb2a3c3a385c8beecb6044253e9e977a"
+    },
+    {
+      "path": "docs/learn/adj-star.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42d5e0a9692341c31885cbcebc025d67eaa5c779",
+      "size": 61677,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/42d5e0a9692341c31885cbcebc025d67eaa5c779"
+    },
+    {
+      "path": "docs/learn/ancientBook-1.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cbac701a148e9e8e12a25717f292f0540bdaca78",
+      "size": 70340,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/cbac701a148e9e8e12a25717f292f0540bdaca78"
+    },
+    {
+      "path": "docs/learn/ancientBook-2.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b528cd7d2958c1f3e6b15b2f0cb76cd2c822b06",
+      "size": 130937,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/7b528cd7d2958c1f3e6b15b2f0cb76cd2c822b06"
+    },
+    {
+      "path": "docs/learn/ancientBook-3.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c367d53e61387ecb09c40a8e0d5ff15a8f1164dd",
+      "size": 83685,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/c367d53e61387ecb09c40a8e0d5ff15a8f1164dd"
+    },
+    {
+      "path": "docs/learn/ancientBook-qa.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2687e546502926578864662a04a3a4672a2150bb",
+      "size": 84356,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/2687e546502926578864662a04a3a4672a2150bb"
+    },
+    {
+      "path": "docs/learn/ancientBook.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c15b59be49a31d735cb7db9a9f98060e9cb0dc3",
+      "size": 45221,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/2c15b59be49a31d735cb7db9a9f98060e9cb0dc3"
+    },
+    {
+      "path": "docs/learn/astrolabe.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c0982487e94dd96cdb0b9d830109ede7b54fae8b",
+      "size": 50155,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/c0982487e94dd96cdb0b9d830109ede7b54fae8b"
+    },
+    {
+      "path": "docs/learn/basis.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f9c98db54295bfcdd63eebd293213fbca3e7713a",
+      "size": 65076,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/f9c98db54295bfcdd63eebd293213fbca3e7713a"
+    },
+    {
+      "path": "docs/learn/dec-star.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "76daeec4e88b87035f33be232d0e05209ff19032",
+      "size": 52463,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/76daeec4e88b87035f33be232d0e05209ff19032"
+    },
+    {
+      "path": "docs/learn/horoscope.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95ef170c74d2f100023645c0236f6a28cfc785d8",
+      "size": 47158,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/95ef170c74d2f100023645c0236f6a28cfc785d8"
+    },
+    {
+      "path": "docs/learn/major-star.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b787fc53542616db2cde139328ca48b67250b362",
+      "size": 128665,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/b787fc53542616db2cde139328ca48b67250b362"
+    },
+    {
+      "path": "docs/learn/minor-star.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "78080c172555a7e3d6ed348b83d6657363e582e7",
+      "size": 66322,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/78080c172555a7e3d6ed348b83d6657363e582e7"
+    },
+    {
+      "path": "docs/learn/mutagen.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0c5d3ae75541a94f09f4c0a9f4df086c6fac771",
+      "size": 57478,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/f0c5d3ae75541a94f09f4c0a9f4df086c6fac771"
+    },
+    {
+      "path": "docs/learn/palace.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f8771852be05d3649ae4f919982bc7d77d397826",
+      "size": 75910,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/f8771852be05d3649ae4f919982bc7d77d397826"
+    },
+    {
+      "path": "docs/learn/pattern.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2b7a9db3bebe8e7599a46eb4057cf75a7533a7c",
+      "size": 173393,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/a2b7a9db3bebe8e7599a46eb4057cf75a7533a7c"
+    },
+    {
+      "path": "docs/learn/setup.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ccd46d8ee9d173c6327d0e6e531a6a6f26274c8c",
+      "size": 61436,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/ccd46d8ee9d173c6327d0e6e531a6a6f26274c8c"
+    },
+    {
+      "path": "docs/learn/star.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5076f846092e6261e8640952cba86d867238324",
+      "size": 54307,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/c5076f846092e6261e8640952cba86d867238324"
+    },
+    {
+      "path": "docs/posts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "bf3a5e1341ba3bcbb5908e9e59e38a0718c120f9",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/bf3a5e1341ba3bcbb5908e9e59e38a0718c120f9"
+    },
+    {
+      "path": "docs/posts/astrolabe.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55df8d561a1f2f4f0633aa6edf91626d2ea3aeb1",
+      "size": 172523,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/55df8d561a1f2f4f0633aa6edf91626d2ea3aeb1"
+    },
+    {
+      "path": "docs/posts/config-n-plugin.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "645f50a7fa8c4c98dfc084a2ba19637e60a467ba",
+      "size": 79323,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/645f50a7fa8c4c98dfc084a2ba19637e60a467ba"
+    },
+    {
+      "path": "docs/posts/horoscope.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d4df4e791102d5cec600a62f0821077bb5ef77de",
+      "size": 98770,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/d4df4e791102d5cec600a62f0821077bb5ef77de"
+    },
+    {
+      "path": "docs/posts/palace.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "00ac64e93d0ffebdd0e9945334558a69ca3832ec",
+      "size": 129670,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/00ac64e93d0ffebdd0e9945334558a69ca3832ec"
+    },
+    {
+      "path": "docs/posts/star.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2902944c469f3b709fe9be31538940e561c031b9",
+      "size": 71327,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/2902944c469f3b709fe9be31538940e561c031b9"
+    },
+    {
+      "path": "docs/quick-start.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11483dd148e33926676cebb9d172a1abc529da25",
+      "size": 250948,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/11483dd148e33926676cebb9d172a1abc529da25"
+    },
+    {
+      "path": "docs/robots.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4056879178066172df0eef7e9e94d4bda3344ed6",
+      "size": 659,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/4056879178066172df0eef7e9e94d4bda3344ed6"
+    },
+    {
+      "path": "docs/sitemap.xml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e83523e411e8c7e520cf9dbd8a0077474f094f54",
+      "size": 18561,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/e83523e411e8c7e520cf9dbd8a0077474f094f54"
+    },
+    {
+      "path": "docs/static",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c3bd6041036a583aff39a4fd097d5d3bfba9b314",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/c3bd6041036a583aff39a4fd097d5d3bfba9b314"
+    },
+    {
+      "path": "docs/static/android-chrome-192x192.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7281109da568047633c303d7bc30811c970c8bbd",
+      "size": 46475,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/7281109da568047633c303d7bc30811c970c8bbd"
+    },
+    {
+      "path": "docs/static/android-chrome-512x512.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7f2b1ee23e6c962aefacfb04267bc44a6a5bb40",
+      "size": 186269,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/b7f2b1ee23e6c962aefacfb04267bc44a6a5bb40"
+    },
+    {
+      "path": "docs/static/apple-touch-icon.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51c3363d141e15bb4246eba6c2d455be176a0e0c",
+      "size": 41886,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/51c3363d141e15bb4246eba6c2d455be176a0e0c"
+    },
+    {
+      "path": "docs/static/favicon-16x16.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8a4a5385762e8465a42f1f5cd04a3ec5385038ac",
+      "size": 943,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/8a4a5385762e8465a42f1f5cd04a3ec5385038ac"
+    },
+    {
+      "path": "docs/static/favicon-32x32.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c565a7ff4260e55d65138f5756f6dff27c073a24",
+      "size": 2694,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/c565a7ff4260e55d65138f5756f6dff27c073a24"
+    },
+    {
+      "path": "docs/static/favicon.ico",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "42be46e261e91155c41fc547cfdd4f9e8195f5d5",
+      "size": 15406,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/42be46e261e91155c41fc547cfdd4f9e8195f5d5"
+    },
+    {
+      "path": "docs/static/feixing.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d02f87966d26d916c76ad13e37c9443a582df14e",
+      "size": 65070,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/d02f87966d26d916c76ad13e37c9443a582df14e"
+    },
+    {
+      "path": "docs/static/home_img.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61747fce4db61f1e73ec677b175cddb8a2d3bd87",
+      "size": 628372,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/61747fce4db61f1e73ec677b175cddb8a2d3bd87"
+    },
+    {
+      "path": "docs/static/site.webmanifest",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "45dc8a20658bd09ecb8ca1c88f94fe80cc4ca286",
+      "size": 263,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/45dc8a20658bd09ecb8ca1c88f94fe80cc4ca286"
+    },
+    {
+      "path": "docs/type-definition.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f071242882b53e60a2aa6d62c67d36aa836e18e",
+      "size": 142429,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/3f071242882b53e60a2aa6d62c67d36aa836e18e"
+    },
+    {
+      "path": "docs/zh_TW",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9f44046c4b66d8fe71e3f8c8153d72884f1298c3",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/9f44046c4b66d8fe71e3f8c8153d72884f1298c3"
+    },
+    {
+      "path": "docs/zh_TW/about.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11cd288e7932c13050aa013b995dfbf7adffc798",
+      "size": 46845,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/11cd288e7932c13050aa013b995dfbf7adffc798"
+    },
+    {
+      "path": "docs/zh_TW/ai",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fc92ae855ac94aa26986e32410ea81d80fede628",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/fc92ae855ac94aa26986e32410ea81d80fede628"
+    },
+    {
+      "path": "docs/zh_TW/ai/overview.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5611690f86d0bd065c408b0c6f1596d03d98e9d2",
+      "size": 44852,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/5611690f86d0bd065c408b0c6f1596d03d98e9d2"
+    },
+    {
+      "path": "docs/zh_TW/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "51488efb7771e50a0a862426de3c35a33207d9c6",
+      "size": 32138,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/51488efb7771e50a0a862426de3c35a33207d9c6"
+    },
+    {
+      "path": "docs/zh_TW/learn",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9536b2293e35f628e35751af9f50edff77f361fa",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/9536b2293e35f628e35751af9f50edff77f361fa"
+    },
+    {
+      "path": "docs/zh_TW/learn/adj-star.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7008dbf9a82221775b70009dbb06a89ab5b4c27b",
+      "size": 61869,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/7008dbf9a82221775b70009dbb06a89ab5b4c27b"
+    },
+    {
+      "path": "docs/zh_TW/learn/ancientBook-1.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "982752a5822c3ff3c7df2d243f1f39d7febe4d5e",
+      "size": 70532,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/982752a5822c3ff3c7df2d243f1f39d7febe4d5e"
+    },
+    {
+      "path": "docs/zh_TW/learn/ancientBook-2.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46da42b57e34aa2ae4dadf52ae9b3b051d42394d",
+      "size": 131129,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/46da42b57e34aa2ae4dadf52ae9b3b051d42394d"
+    },
+    {
+      "path": "docs/zh_TW/learn/ancientBook-3.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b812b134a2a5c24908a65534ae456dd899bf6392",
+      "size": 83877,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/b812b134a2a5c24908a65534ae456dd899bf6392"
+    },
+    {
+      "path": "docs/zh_TW/learn/ancientBook-qa.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a0f07762f10dd291aa6f049f841a1c0c937e1adb",
+      "size": 84542,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/a0f07762f10dd291aa6f049f841a1c0c937e1adb"
+    },
+    {
+      "path": "docs/zh_TW/learn/ancientBook.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c48b6aacddb2ef727a2e0e0fb4d1bc86f4eae871",
+      "size": 45413,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/c48b6aacddb2ef727a2e0e0fb4d1bc86f4eae871"
+    },
+    {
+      "path": "docs/zh_TW/learn/astrolabe.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b578ef24384635946d010cb03dbcdd384ef015ac",
+      "size": 50347,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/b578ef24384635946d010cb03dbcdd384ef015ac"
+    },
+    {
+      "path": "docs/zh_TW/learn/basis.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "730d3c7bb6810707d6e553eac803606b8e0d3b78",
+      "size": 65268,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/730d3c7bb6810707d6e553eac803606b8e0d3b78"
+    },
+    {
+      "path": "docs/zh_TW/learn/dec-star.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8955fd6d60ebc238212ccb61ceadaf9ed8ea6ed0",
+      "size": 52655,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/8955fd6d60ebc238212ccb61ceadaf9ed8ea6ed0"
+    },
+    {
+      "path": "docs/zh_TW/learn/horoscope.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a0d1c39691d4f516148f35f55b22c5638550e7b",
+      "size": 47350,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/9a0d1c39691d4f516148f35f55b22c5638550e7b"
+    },
+    {
+      "path": "docs/zh_TW/learn/major-star.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "492681da51c0c587c430f98e1b4f442a56e6fd6f",
+      "size": 128857,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/492681da51c0c587c430f98e1b4f442a56e6fd6f"
+    },
+    {
+      "path": "docs/zh_TW/learn/minor-star.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "83d22933fc10177d850574ac1b50da908d8bc700",
+      "size": 66514,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/83d22933fc10177d850574ac1b50da908d8bc700"
+    },
+    {
+      "path": "docs/zh_TW/learn/mutagen.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad97af220cf24ae7934e19cca32c9df004fe3996",
+      "size": 57670,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/ad97af220cf24ae7934e19cca32c9df004fe3996"
+    },
+    {
+      "path": "docs/zh_TW/learn/palace.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "621fb6eddbb959c87f4b32c85a59aa2c7967e1ee",
+      "size": 76102,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/621fb6eddbb959c87f4b32c85a59aa2c7967e1ee"
+    },
+    {
+      "path": "docs/zh_TW/learn/pattern.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e1aa80a8ef4140c8501b0a72b4eb71c009138ed",
+      "size": 173291,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/7e1aa80a8ef4140c8501b0a72b4eb71c009138ed"
+    },
+    {
+      "path": "docs/zh_TW/learn/setup.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "876e7cfa2d95d7d774f6a5195e279c3a9d115825",
+      "size": 61628,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/876e7cfa2d95d7d774f6a5195e279c3a9d115825"
+    },
+    {
+      "path": "docs/zh_TW/learn/star.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "aef711b15dd6074a7bada0b6b1880ebc9f550265",
+      "size": 54499,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/aef711b15dd6074a7bada0b6b1880ebc9f550265"
+    },
+    {
+      "path": "docs/zh_TW/posts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "73762b1a4db9a4625074ea454a5215559d0f1374",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/73762b1a4db9a4625074ea454a5215559d0f1374"
+    },
+    {
+      "path": "docs/zh_TW/posts/astrolabe.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d9a30911ad827372b70ea212b31c26f01669f15c",
+      "size": 171226,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/d9a30911ad827372b70ea212b31c26f01669f15c"
+    },
+    {
+      "path": "docs/zh_TW/posts/config-n-plugin.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f76014d86fff2482b9be3084275f70891bb05262",
+      "size": 79518,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/f76014d86fff2482b9be3084275f70891bb05262"
+    },
+    {
+      "path": "docs/zh_TW/posts/horoscope.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3fbfccea95297c571405b18efcca7fc728133b5a",
+      "size": 98965,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/3fbfccea95297c571405b18efcca7fc728133b5a"
+    },
+    {
+      "path": "docs/zh_TW/posts/palace.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c3581941606327f2c23cb442c2910de201ae8d4",
+      "size": 129862,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/8c3581941606327f2c23cb442c2910de201ae8d4"
+    },
+    {
+      "path": "docs/zh_TW/posts/star.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5cd2e957334e1c90d0981bc840e6ac3276a96f30",
+      "size": 71435,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/5cd2e957334e1c90d0981bc840e6ac3276a96f30"
+    },
+    {
+      "path": "docs/zh_TW/quick-start.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2d5cb25d7f9b987f7944baef078074c67af2d45",
+      "size": 251134,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/b2d5cb25d7f9b987f7944baef078074c67af2d45"
+    },
+    {
+      "path": "docs/zh_TW/type-definition.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f18e2e49b7b0776fb9e3fee58b4637cc9483d5e2",
+      "size": 142059,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/f18e2e49b7b0776fb9e3fee58b4637cc9483d5e2"
+    },
+    {
+      "path": "examples",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8149a6dc10ad14b3cc1000786f32ed34ee908364",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/8149a6dc10ad14b3cc1000786f32ed34ee908364"
+    },
+    {
+      "path": "examples/chat-api",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9ec7e70a848b71e3696805049fe909fa325ad08e",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/9ec7e70a848b71e3696805049fe909fa325ad08e"
+    },
+    {
+      "path": "examples/chat-api/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "81442b963755de6e0e3fffc9b8ae1a40419808b8",
+      "size": 1248,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/81442b963755de6e0e3fffc9b8ae1a40419808b8"
+    },
+    {
+      "path": "examples/chat-api/chat-completion.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "22e92c54e926eb6f2014bf22ebe7d07c083c5d73",
+      "size": 769,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/22e92c54e926eb6f2014bf22ebe7d07c083c5d73"
+    },
+    {
+      "path": "examples/chat-api/chat-session.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a4c82c1bbb02547863d335748f78b3fa1370e88f",
+      "size": 1062,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/a4c82c1bbb02547863d335748f78b3fa1370e88f"
+    },
+    {
+      "path": "examples/chat-api/chat_completion.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c43e45726389884a2533c3fb26298160983d05be",
+      "size": 778,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/c43e45726389884a2533c3fb26298160983d05be"
+    },
+    {
+      "path": "examples/chat-api/chat_session.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97e91b610ccfefce56440fd3acda66a78aff7397",
+      "size": 1102,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/97e91b610ccfefce56440fd3acda66a78aff7397"
+    },
+    {
+      "path": "examples/fullstack-demo",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "0bf7e51cf2fcc1482035de0e249d7a4d24c41af6",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/0bf7e51cf2fcc1482035de0e249d7a4d24c41af6"
+    },
+    {
+      "path": "examples/fullstack-demo/README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d01aae9dcf97a52b560de2f963f6c27916bbb01b",
+      "size": 2791,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/d01aae9dcf97a52b560de2f963f6c27916bbb01b"
+    },
+    {
+      "path": "examples/fullstack-demo/assets",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "518d762b7b4239f896b9c4eb3fc002bc4af5ca65",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/518d762b7b4239f896b9c4eb3fc002bc4af5ca65"
+    },
+    {
+      "path": "examples/fullstack-demo/assets/chat-session-workbench.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "86b493f513477247fc50cd379bc7fa4e53e3b16d",
+      "size": 206929,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/86b493f513477247fc50cd379bc7fa4e53e3b16d"
+    },
+    {
+      "path": "examples/fullstack-demo/backend",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2127816dde80361220c13fcbfb5e2ea323000c73",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/2127816dde80361220c13fcbfb5e2ea323000c73"
+    },
+    {
+      "path": "examples/fullstack-demo/backend/.env.example",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9b69656ba55db27d0fc04768f708d44718432e46",
+      "size": 90,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/9b69656ba55db27d0fc04768f708d44718432e46"
+    },
+    {
+      "path": "examples/fullstack-demo/backend/package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0abbd21e6b6c4d0103f8f1b24df16fb769b532d2",
+      "size": 32410,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/0abbd21e6b6c4d0103f8f1b24df16fb769b532d2"
+    },
+    {
+      "path": "examples/fullstack-demo/backend/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e0d157e1e72d73aea1bf64ebf23cac90970dffb5",
+      "size": 344,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/e0d157e1e72d73aea1bf64ebf23cac90970dffb5"
+    },
+    {
+      "path": "examples/fullstack-demo/backend/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8470078760af312edb391cb52dae1291d03b6d8c",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/8470078760af312edb391cb52dae1291d03b6d8c"
+    },
+    {
+      "path": "examples/fullstack-demo/backend/src/server.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b81ad4313390c904cebcbe81598556b4e7df90ee",
+      "size": 6237,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/b81ad4313390c904cebcbe81598556b4e7df90ee"
+    },
+    {
+      "path": "examples/fullstack-demo/frontend",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ff4979c16ebf80a389e08f9dd6441ef9736a0c44",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/ff4979c16ebf80a389e08f9dd6441ef9736a0c44"
+    },
+    {
+      "path": "examples/fullstack-demo/frontend/.env.example",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "526229d458204934ac656429a5df219eedbfbdff",
+      "size": 139,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/526229d458204934ac656429a5df219eedbfbdff"
+    },
+    {
+      "path": "examples/fullstack-demo/frontend/index.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "62573ca5cd3cc72cf725d48296a4c391e9a246b6",
+      "size": 301,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/62573ca5cd3cc72cf725d48296a4c391e9a246b6"
+    },
+    {
+      "path": "examples/fullstack-demo/frontend/package-lock.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fae3f158a4f65fe1446d7a23e72f7d7c7869e68",
+      "size": 32061,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/6fae3f158a4f65fe1446d7a23e72f7d7c7869e68"
+    },
+    {
+      "path": "examples/fullstack-demo/frontend/package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "be40830eccf2d5326df5ed3dfbd1606bf79648fd",
+      "size": 505,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/be40830eccf2d5326df5ed3dfbd1606bf79648fd"
+    },
+    {
+      "path": "examples/fullstack-demo/frontend/src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "43f59462e323627b6973faf9d600797dff580e38",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/43f59462e323627b6973faf9d600797dff580e38"
+    },
+    {
+      "path": "examples/fullstack-demo/frontend/src/App.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d193a241d3a3a9f68914181dedd7764487b194ee",
+      "size": 12402,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/d193a241d3a3a9f68914181dedd7764487b194ee"
+    },
+    {
+      "path": "examples/fullstack-demo/frontend/src/main.tsx",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ed0dc63303710c4dff6c4d65e8451eac14f0f5e1",
+      "size": 242,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/ed0dc63303710c4dff6c4d65e8451eac14f0f5e1"
+    },
+    {
+      "path": "examples/fullstack-demo/frontend/src/styles.css",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "152b6b366ece8a8e018d57ba48e7e1a2fa15dd2c",
+      "size": 5458,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/152b6b366ece8a8e018d57ba48e7e1a2fa15dd2c"
+    },
+    {
+      "path": "examples/fullstack-demo/frontend/src/vite-env.d.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "11f02fe2a0061d6e6e1f271b21da95423b448b32",
+      "size": 38,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/11f02fe2a0061d6e6e1f271b21da95423b448b32"
+    },
+    {
+      "path": "examples/fullstack-demo/frontend/tsconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c69ba7c7b5a8b90c26588679d2417409eec537e",
+      "size": 524,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/8c69ba7c7b5a8b90c26588679d2417409eec537e"
+    },
+    {
+      "path": "examples/fullstack-demo/frontend/vite.config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2c201ca34f2593dca7b9cfcccb2b66ab1c630233",
+      "size": 190,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/2c201ca34f2593dca7b9cfcccb2b66ab1c630233"
+    },
+    {
+      "path": "examples/fullstack-demo/python-backend",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "1d74ed71fc527963cba4a750bc3dd979dbd3ecc0",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/1d74ed71fc527963cba4a750bc3dd979dbd3ecc0"
+    },
+    {
+      "path": "examples/fullstack-demo/python-backend/.env.example",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a016db365f517b5f8434e7d94cde75504f6342f",
+      "size": 80,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/6a016db365f517b5f8434e7d94cde75504f6342f"
+    },
+    {
+      "path": "examples/fullstack-demo/python-backend/app",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c9f490ef6f4ad8f92429869407ccd8722116060a",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/c9f490ef6f4ad8f92429869407ccd8722116060a"
+    },
+    {
+      "path": "examples/fullstack-demo/python-backend/app/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+      "size": 1,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/8b137891791fe96927ad78e64b0aad7bded08bdc"
+    },
+    {
+      "path": "examples/fullstack-demo/python-backend/app/main.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b7b8acf13b49eaa34d8588df6f0f8507f0622df9",
+      "size": 6905,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/b7b8acf13b49eaa34d8588df6f0f8507f0622df9"
+    },
+    {
+      "path": "examples/fullstack-demo/python-backend/requirements.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7048f621f2ac4c964c7a97184bd9df4a1260d98",
+      "size": 78,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/f7048f621f2ac4c964c7a97184bd9df4a1260d98"
+    },
+    {
+      "path": "jestconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "20c25c0f71db4bec9369885f87f96613366600cd",
+      "size": 196,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/20c25c0f71db4bec9369885f87f96613366600cd"
+    },
+    {
+      "path": "package.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "148bb95862f9fe623f828b872b62f3ba578c114f",
+      "size": 2732,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/148bb95862f9fe623f828b872b62f3ba578c114f"
+    },
+    {
+      "path": "scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7c183ae9e4906532ef0518a6aa70c952043ddcd1",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/7c183ae9e4906532ef0518a6aa70c952043ddcd1"
+    },
+    {
+      "path": "scripts/verify-umd.cjs",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2a8fc6ee63d82d93653856be2f0d538a064db89f",
+      "size": 5622,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/2a8fc6ee63d82d93653856be2f0d538a064db89f"
+    },
+    {
+      "path": "src",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ae8e17fadac97ea80407d4d1541a8e391b6bde27",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/ae8e17fadac97ea80407d4d1541a8e391b6bde27"
+    },
+    {
+      "path": "src/__tests__",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ea4e1c73cd555f5da84bed51f70a60b0dbc5302f",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/ea4e1c73cd555f5da84bed51f70a60b0dbc5302f"
+    },
+    {
+      "path": "src/__tests__/astro",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "33f5a0a44dfd57ac4e8a2264ec36d04a46c3f05a",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/33f5a0a44dfd57ac4e8a2264ec36d04a46c3f05a"
+    },
+    {
+      "path": "src/__tests__/astro/analysis-boundaries.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d512311cb5d7c2a8a4193ec25bf267113cb80798",
+      "size": 4757,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/d512311cb5d7c2a8a4193ec25bf267113cb80798"
+    },
+    {
+      "path": "src/__tests__/astro/analyzer.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "793ef7429e0f3e0262a2ff900d766b69faa1d05f",
+      "size": 13832,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/793ef7429e0f3e0262a2ff900d766b69faa1d05f"
+    },
+    {
+      "path": "src/__tests__/astro/astro.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8d86d1da1006fda97d4dc190d0e7f3ad42edad72",
+      "size": 54130,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/8d86d1da1006fda97d4dc190d0e7f3ad42edad72"
+    },
+    {
+      "path": "src/__tests__/astro/context-validation.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f262a49c24568bf01800451b27a3a7d5cf8c22ba",
+      "size": 10926,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/f262a49c24568bf01800451b27a3a7d5cf8c22ba"
+    },
+    {
+      "path": "src/__tests__/astro/default-options.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6185536b94cb2486be340b491cc064f7dcfcca61",
+      "size": 2074,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/6185536b94cb2486be340b491cc064f7dcfcca61"
+    },
+    {
+      "path": "src/__tests__/astro/palace-language.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "116ba57d2fd49acd086ce2750467f835521d18ea",
+      "size": 3095,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/116ba57d2fd49acd086ce2750467f835521d18ea"
+    },
+    {
+      "path": "src/__tests__/astro/palace.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cb6a634f70a5610b0242f2a19074ca42da14b980",
+      "size": 5992,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/cb6a634f70a5610b0242f2a19074ca42da14b980"
+    },
+    {
+      "path": "src/__tests__/astro/plugin.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eab4520e76ddbf03c457d1642001aa7de15f32f6",
+      "size": 3055,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/eab4520e76ddbf03c457d1642001aa7de15f32f6"
+    },
+    {
+      "path": "src/__tests__/i18n",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "843571d9eeb54f0daaee2894ae2505e2abc0f644",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/843571d9eeb54f0daaee2894ae2505e2abc0f644"
+    },
+    {
+      "path": "src/__tests__/i18n/index.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f51717467dc28f9356481761f74252209f334fa6",
+      "size": 1206,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/f51717467dc28f9356481761f74252209f334fa6"
+    },
+    {
+      "path": "src/__tests__/star",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "158498c4974c16f44894d78d33f1e603f5805894",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/158498c4974c16f44894d78d33f1e603f5805894"
+    },
+    {
+      "path": "src/__tests__/star/location.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e19682e9b1f74d7633a5006706a411e2aee31222",
+      "size": 20392,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/e19682e9b1f74d7633a5006706a411e2aee31222"
+    },
+    {
+      "path": "src/__tests__/star/star.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "88004d21e13b3c0c53d22b5ec592f7739a2169a4",
+      "size": 14412,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/88004d21e13b3c0c53d22b5ec592f7739a2169a4"
+    },
+    {
+      "path": "src/__tests__/utils",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5e4e45a7420fdb416e232b79289e036044330c9b",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/5e4e45a7420fdb416e232b79289e036044330c9b"
+    },
+    {
+      "path": "src/__tests__/utils/index.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "453ac694baa002c2c3a31e948bcdac38cc04faa6",
+      "size": 2978,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/453ac694baa002c2c3a31e948bcdac38cc04faa6"
+    },
+    {
+      "path": "src/__tests__/utils/toJSON.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "add23fdace8d632688bbb56a14a0b11803aa8a07",
+      "size": 2123,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/add23fdace8d632688bbb56a14a0b11803aa8a07"
+    },
+    {
+      "path": "src/__tests__/utils/validation.test.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d0bddcbe670e1f1db15c7a660a4551ee19906bec",
+      "size": 3173,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/d0bddcbe670e1f1db15c7a660a4551ee19906bec"
+    },
+    {
+      "path": "src/astro",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3991da9eac84225ddbedc18b75165b28e24c9591",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/3991da9eac84225ddbedc18b75165b28e24c9591"
+    },
+    {
+      "path": "src/astro/FunctionalAstrolabe.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b00ceb08fed1f8e3288fed3c6d785f8eb8816937",
+      "size": 19616,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/b00ceb08fed1f8e3288fed3c6d785f8eb8816937"
+    },
+    {
+      "path": "src/astro/FunctionalFlankingPalaces.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b145983f8d58eeee61aa2ec2fe9bbe689d0e1505",
+      "size": 2756,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/b145983f8d58eeee61aa2ec2fe9bbe689d0e1505"
+    },
+    {
+      "path": "src/astro/FunctionalHoroscope.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f0094603853e853100e751da1de8ee198586f51",
+      "size": 7251,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/7f0094603853e853100e751da1de8ee198586f51"
+    },
+    {
+      "path": "src/astro/FunctionalPalace.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c40d1bafd0c0dc5cce2946267c111cb6ef6f700",
+      "size": 9333,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/6c40d1bafd0c0dc5cce2946267c111cb6ef6f700"
+    },
+    {
+      "path": "src/astro/FunctionalSurpalaces.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f2240014e7d492c44b6d9d82a7c4515aadafa8c2",
+      "size": 2770,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/f2240014e7d492c44b6d9d82a7c4515aadafa8c2"
+    },
+    {
+      "path": "src/astro/analyzer.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5b040a24a667ae910011190e51c90dfdc2359867",
+      "size": 10544,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/5b040a24a667ae910011190e51c90dfdc2359867"
+    },
+    {
+      "path": "src/astro/astro.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4111d5f58804e22de3664e0b008cbfb36bb2389e",
+      "size": 19029,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/4111d5f58804e22de3664e0b008cbfb36bb2389e"
+    },
+    {
+      "path": "src/astro/config.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "14ce2e513ac697d871e205f0f1f5e97c6d0b2c73",
+      "size": 3825,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/14ce2e513ac697d871e205f0f1f5e97c6d0b2c73"
+    },
+    {
+      "path": "src/astro/context.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "322324fefb6ef9d883253d2107ac8d0ca227994c",
+      "size": 2200,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/322324fefb6ef9d883253d2107ac8d0ca227994c"
+    },
+    {
+      "path": "src/astro/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f30914be07627318487360b51a4d09e3e31b9853",
+      "size": 51,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/f30914be07627318487360b51a4d09e3e31b9853"
+    },
+    {
+      "path": "src/astro/palace.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a6912b9aaae65d24af32c8137c46442dd8cf4b4",
+      "size": 7799,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/5a6912b9aaae65d24af32c8137c46442dd8cf4b4"
+    },
+    {
+      "path": "src/data",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "908b17e65c5ca9ebf03446fd7c113400e813824a",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/908b17e65c5ca9ebf03446fd7c113400e813824a"
+    },
+    {
+      "path": "src/data/constants.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5fd18072bb84a7ff8998ca739fd62269a9aa1ce1",
+      "size": 3871,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/5fd18072bb84a7ff8998ca739fd62269a9aa1ce1"
+    },
+    {
+      "path": "src/data/earthlyBranches.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4a55cad461f044a2598bc8777cced9b4474876d6",
+      "size": 3599,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/4a55cad461f044a2598bc8777cced9b4474876d6"
+    },
+    {
+      "path": "src/data/heavenlyStems.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6c5016e2f5e026a7c8abf5a6595bbe3270d1e34d",
+      "size": 2351,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/6c5016e2f5e026a7c8abf5a6595bbe3270d1e34d"
+    },
+    {
+      "path": "src/data/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b45b10d98ce601e069721e51aaf777e6082c8868",
+      "size": 122,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/b45b10d98ce601e069721e51aaf777e6082c8868"
+    },
+    {
+      "path": "src/data/stars.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "25514c3426e1ac3966d422649de16d901f311867",
+      "size": 3460,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/25514c3426e1ac3966d422649de16d901f311867"
+    },
+    {
+      "path": "src/data/types",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "9f35ae3c57108310b4c7659a1026ff7430c07ed3",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/9f35ae3c57108310b4c7659a1026ff7430c07ed3"
+    },
+    {
+      "path": "src/data/types/astro.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d120c6d4527a00b2a35547ef235fa1a5a13b5cb1",
+      "size": 7671,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/d120c6d4527a00b2a35547ef235fa1a5a13b5cb1"
+    },
+    {
+      "path": "src/data/types/general.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "73c197168bb7cc8e83935741d27e91be9ca148e2",
+      "size": 730,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/73c197168bb7cc8e83935741d27e91be9ca148e2"
+    },
+    {
+      "path": "src/data/types/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7c4337e39c3da3510974f5b0d824bd74c121724c",
+      "size": 102,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/7c4337e39c3da3510974f5b0d824bd74c121724c"
+    },
+    {
+      "path": "src/data/types/palace.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a4a394ef7e89a8d34738a983093944e16b2c266",
+      "size": 2506,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/3a4a394ef7e89a8d34738a983093944e16b2c266"
+    },
+    {
+      "path": "src/data/types/star.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a242bbddc2ce71423363625d5d39a1ac2fbd35f7",
+      "size": 735,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/a242bbddc2ce71423363625d5d39a1ac2fbd35f7"
+    },
+    {
+      "path": "src/i18n",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "314d904d28e6d1d6a0007fe3f14d9f96f2953a87",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/314d904d28e6d1d6a0007fe3f14d9f96f2953a87"
+    },
+    {
+      "path": "src/i18n/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2243e4011b72296aed066f7e12acde8bdb2f496d",
+      "size": 2943,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/2243e4011b72296aed066f7e12acde8bdb2f496d"
+    },
+    {
+      "path": "src/i18n/locales",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "6ccaab9e8f8e9ae22fa5e257bb1152908d9a9885",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/6ccaab9e8f8e9ae22fa5e257bb1152908d9a9885"
+    },
+    {
+      "path": "src/i18n/locales/en-US",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "62fe8e964911050e9effc1e5b4cf61df0638a117",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/62fe8e964911050e9effc1e5b4cf61df0638a117"
+    },
+    {
+      "path": "src/i18n/locales/en-US/brightness.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eae83df6199ab6851fd2fefa7ff3126cc7005acd",
+      "size": 134,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/eae83df6199ab6851fd2fefa7ff3126cc7005acd"
+    },
+    {
+      "path": "src/i18n/locales/en-US/common.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3de7b6eb4ffb54ee0a210ba810b8356a42b4811c",
+      "size": 1109,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/3de7b6eb4ffb54ee0a210ba810b8356a42b4811c"
+    },
+    {
+      "path": "src/i18n/locales/en-US/earthlyBranch.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7627495ca71126f7a1244faee59bfd1416ab7d20",
+      "size": 280,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/7627495ca71126f7a1244faee59bfd1416ab7d20"
+    },
+    {
+      "path": "src/i18n/locales/en-US/fiveElementsClass.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "29da03f31f8820d2cdb25990a1a21256f35d4853",
+      "size": 150,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/29da03f31f8820d2cdb25990a1a21256f35d4853"
+    },
+    {
+      "path": "src/i18n/locales/en-US/gender.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f15f0c116312072457e28e0410e83aed6f6403c7",
+      "size": 65,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/f15f0c116312072457e28e0410e83aed6f6403c7"
+    },
+    {
+      "path": "src/i18n/locales/en-US/heavenlyStem.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3c403553a98b59b1bf5eb1b6cc257c938210600b",
+      "size": 249,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/3c403553a98b59b1bf5eb1b6cc257c938210600b"
+    },
+    {
+      "path": "src/i18n/locales/en-US/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61981406edb70a3e2afc5a348d34e4bd32caf170",
+      "size": 503,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/61981406edb70a3e2afc5a348d34e4bd32caf170"
+    },
+    {
+      "path": "src/i18n/locales/en-US/mutagen.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cbeb0f6f4aea467bdf27d26d7b87630f28f1bef",
+      "size": 95,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/1cbeb0f6f4aea467bdf27d26d7b87630f28f1bef"
+    },
+    {
+      "path": "src/i18n/locales/en-US/palace.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b2c68aed0df137f7dfb2d7bc0adbdc988a3c2f55",
+      "size": 405,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/b2c68aed0df137f7dfb2d7bc0adbdc988a3c2f55"
+    },
+    {
+      "path": "src/i18n/locales/en-US/star.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a386939340ffbd5b62a98c596d28d8e43dea99a",
+      "size": 3674,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/3a386939340ffbd5b62a98c596d28d8e43dea99a"
+    },
+    {
+      "path": "src/i18n/locales/ja-JP",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "16c58a3522753c360979280acf21706be00f9281",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/16c58a3522753c360979280acf21706be00f9281"
+    },
+    {
+      "path": "src/i18n/locales/ja-JP/brightness.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cba0695227e621543bca92a84a17f5ad4a28176",
+      "size": 128,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/1cba0695227e621543bca92a84a17f5ad4a28176"
+    },
+    {
+      "path": "src/i18n/locales/ja-JP/common.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3af0b031c16568bae1495936451f01e6513de6dd",
+      "size": 1132,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/3af0b031c16568bae1495936451f01e6513de6dd"
+    },
+    {
+      "path": "src/i18n/locales/ja-JP/earthlyBranch.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f967ec408eba11f7f487d56ced2458df2dab2b5c",
+      "size": 280,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/f967ec408eba11f7f487d56ced2458df2dab2b5c"
+    },
+    {
+      "path": "src/i18n/locales/ja-JP/fiveElementsClass.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d81974bfdbf81ee31895f9f675d5ab6d063a1701",
+      "size": 167,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/d81974bfdbf81ee31895f9f675d5ab6d063a1701"
+    },
+    {
+      "path": "src/i18n/locales/ja-JP/gender.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58a139cba9a77f8f1747f8c0642677db7263cefb",
+      "size": 61,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/58a139cba9a77f8f1747f8c0642677db7263cefb"
+    },
+    {
+      "path": "src/i18n/locales/ja-JP/heavenlyStem.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fe8e7c5917c8bdd4fc6dd8a56a0773ca7eadd0d",
+      "size": 249,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/2fe8e7c5917c8bdd4fc6dd8a56a0773ca7eadd0d"
+    },
+    {
+      "path": "src/i18n/locales/ja-JP/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61981406edb70a3e2afc5a348d34e4bd32caf170",
+      "size": 503,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/61981406edb70a3e2afc5a348d34e4bd32caf170"
+    },
+    {
+      "path": "src/i18n/locales/ja-JP/mutagen.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3bd0857b7bc1b4d1fbac5f01f088acf4fb5986d7",
+      "size": 103,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/3bd0857b7bc1b4d1fbac5f01f088acf4fb5986d7"
+    },
+    {
+      "path": "src/i18n/locales/ja-JP/palace.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ecf73ce12c9b1d0ce51a989e99bdfc45ed00de9",
+      "size": 400,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/2ecf73ce12c9b1d0ce51a989e99bdfc45ed00de9"
+    },
+    {
+      "path": "src/i18n/locales/ja-JP/star.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a12f2a9a0663858169bf731dc68142334190a091",
+      "size": 3510,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/a12f2a9a0663858169bf731dc68142334190a091"
+    },
+    {
+      "path": "src/i18n/locales/ko-KR",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "01c520c24d68157ceb1a198cb8fea28ccb0b0dea",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/01c520c24d68157ceb1a198cb8fea28ccb0b0dea"
+    },
+    {
+      "path": "src/i18n/locales/ko-KR/brightness.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eae83df6199ab6851fd2fefa7ff3126cc7005acd",
+      "size": 134,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/eae83df6199ab6851fd2fefa7ff3126cc7005acd"
+    },
+    {
+      "path": "src/i18n/locales/ko-KR/common.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8cb7d8390c78844b0fea7b3da0d44ff7baaf150c",
+      "size": 1131,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/8cb7d8390c78844b0fea7b3da0d44ff7baaf150c"
+    },
+    {
+      "path": "src/i18n/locales/ko-KR/earthlyBranch.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6f9bb9d6052c0be294c5d8360747f97e9bd5a18c",
+      "size": 280,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/6f9bb9d6052c0be294c5d8360747f97e9bd5a18c"
+    },
+    {
+      "path": "src/i18n/locales/ko-KR/fiveElementsClass.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8574127a3bda7b4171cd6ceb853ce182f5291156",
+      "size": 152,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/8574127a3bda7b4171cd6ceb853ce182f5291156"
+    },
+    {
+      "path": "src/i18n/locales/ko-KR/gender.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "891d8a5b7a96b4dc2edb923bc873e7e0db8dbb90",
+      "size": 67,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/891d8a5b7a96b4dc2edb923bc873e7e0db8dbb90"
+    },
+    {
+      "path": "src/i18n/locales/ko-KR/heavenlyStem.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "316b6a9fcb452abb11e7b51acc3ef3db22088b4d",
+      "size": 249,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/316b6a9fcb452abb11e7b51acc3ef3db22088b4d"
+    },
+    {
+      "path": "src/i18n/locales/ko-KR/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61981406edb70a3e2afc5a348d34e4bd32caf170",
+      "size": 503,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/61981406edb70a3e2afc5a348d34e4bd32caf170"
+    },
+    {
+      "path": "src/i18n/locales/ko-KR/mutagen.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "304d990a5f577c2eb23ee5340cb75ebbd94b4052",
+      "size": 103,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/304d990a5f577c2eb23ee5340cb75ebbd94b4052"
+    },
+    {
+      "path": "src/i18n/locales/ko-KR/palace.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0c9733ef55e5f545a7c79892c9bb96fde1732cda",
+      "size": 400,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/0c9733ef55e5f545a7c79892c9bb96fde1732cda"
+    },
+    {
+      "path": "src/i18n/locales/ko-KR/star.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "55b1848a663d174d96da1e7a5d11f1207f112e56",
+      "size": 3642,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/55b1848a663d174d96da1e7a5d11f1207f112e56"
+    },
+    {
+      "path": "src/i18n/locales/vi-VN",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "c0765b6628db0239f7467bbc328bc1431f5f223b",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/c0765b6628db0239f7467bbc328bc1431f5f223b"
+    },
+    {
+      "path": "src/i18n/locales/vi-VN/brightness.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50774ef6407e3a1ba3deb5cc4884bf59b0337996",
+      "size": 147,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/50774ef6407e3a1ba3deb5cc4884bf59b0337996"
+    },
+    {
+      "path": "src/i18n/locales/vi-VN/common.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "000e21b16799f2a159994b913c1bb00395ef28f8",
+      "size": 1328,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/000e21b16799f2a159994b913c1bb00395ef28f8"
+    },
+    {
+      "path": "src/i18n/locales/vi-VN/earthlyBranch.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e2a21af03d63a279e9b629039e7573301b3b4aad",
+      "size": 300,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/e2a21af03d63a279e9b629039e7573301b3b4aad"
+    },
+    {
+      "path": "src/i18n/locales/vi-VN/fiveElementsClass.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba2cf2ea6230d386e26bd6503554f9953387cfa3",
+      "size": 187,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/ba2cf2ea6230d386e26bd6503554f9953387cfa3"
+    },
+    {
+      "path": "src/i18n/locales/vi-VN/gender.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "526354d4e97f450bce43402b04b936aa50508469",
+      "size": 62,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/526354d4e97f450bce43402b04b936aa50508469"
+    },
+    {
+      "path": "src/i18n/locales/vi-VN/heavenlyStem.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4841e7c96f3459164c814691737823bfe48b785",
+      "size": 264,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/b4841e7c96f3459164c814691737823bfe48b785"
+    },
+    {
+      "path": "src/i18n/locales/vi-VN/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61981406edb70a3e2afc5a348d34e4bd32caf170",
+      "size": 503,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/61981406edb70a3e2afc5a348d34e4bd32caf170"
+    },
+    {
+      "path": "src/i18n/locales/vi-VN/mutagen.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca5d4caefa662ab338dea57fb8494f08ccab2d53",
+      "size": 111,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/ca5d4caefa662ab338dea57fb8494f08ccab2d53"
+    },
+    {
+      "path": "src/i18n/locales/vi-VN/palace.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3819b6ac13fd9455f62bc0b4a14077f3840709b0",
+      "size": 451,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/3819b6ac13fd9455f62bc0b4a14077f3840709b0"
+    },
+    {
+      "path": "src/i18n/locales/vi-VN/star.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a7ad475c438aad5fa84f31b5c618d8e655fc8ae",
+      "size": 4232,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/9a7ad475c438aad5fa84f31b5c618d8e655fc8ae"
+    },
+    {
+      "path": "src/i18n/locales/zh-CN",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "e938574c86b9514984312664ba5894f4ebd88a3a",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/e938574c86b9514984312664ba5894f4ebd88a3a"
+    },
+    {
+      "path": "src/i18n/locales/zh-CN/brightness.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ba6828e790ab53da6f4eb93559b414a06f269d2a",
+      "size": 128,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/ba6828e790ab53da6f4eb93559b414a06f269d2a"
+    },
+    {
+      "path": "src/i18n/locales/zh-CN/common.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0a1af394460c9b58697cf337dd242973192d14e",
+      "size": 1008,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/f0a1af394460c9b58697cf337dd242973192d14e"
+    },
+    {
+      "path": "src/i18n/locales/zh-CN/earthlyBranch.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f967ec408eba11f7f487d56ced2458df2dab2b5c",
+      "size": 280,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/f967ec408eba11f7f487d56ced2458df2dab2b5c"
+    },
+    {
+      "path": "src/i18n/locales/zh-CN/fiveElementsClass.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2cf6e285c89f58347caf67d1ce52628792ca4b23",
+      "size": 152,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/2cf6e285c89f58347caf67d1ce52628792ca4b23"
+    },
+    {
+      "path": "src/i18n/locales/zh-CN/gender.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58a139cba9a77f8f1747f8c0642677db7263cefb",
+      "size": 61,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/58a139cba9a77f8f1747f8c0642677db7263cefb"
+    },
+    {
+      "path": "src/i18n/locales/zh-CN/heavenlyStem.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fe8e7c5917c8bdd4fc6dd8a56a0773ca7eadd0d",
+      "size": 249,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/2fe8e7c5917c8bdd4fc6dd8a56a0773ca7eadd0d"
+    },
+    {
+      "path": "src/i18n/locales/zh-CN/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61981406edb70a3e2afc5a348d34e4bd32caf170",
+      "size": 503,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/61981406edb70a3e2afc5a348d34e4bd32caf170"
+    },
+    {
+      "path": "src/i18n/locales/zh-CN/mutagen.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7bb0325767a33ffc0c2e9c5952e3ac43c1978e80",
+      "size": 103,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/7bb0325767a33ffc0c2e9c5952e3ac43c1978e80"
+    },
+    {
+      "path": "src/i18n/locales/zh-CN/palace.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e5be898c87830b61ae38b153117f8d0061039320",
+      "size": 400,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/e5be898c87830b61ae38b153117f8d0061039320"
+    },
+    {
+      "path": "src/i18n/locales/zh-CN/star.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b4003585c0470f4c72687040fb02ebaed0d1d90e",
+      "size": 3357,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/b4003585c0470f4c72687040fb02ebaed0d1d90e"
+    },
+    {
+      "path": "src/i18n/locales/zh-TW",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "d832db74de86cf80c4d1e1aed37c4116a45e9489",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/d832db74de86cf80c4d1e1aed37c4116a45e9489"
+    },
+    {
+      "path": "src/i18n/locales/zh-TW/brightness.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1cba0695227e621543bca92a84a17f5ad4a28176",
+      "size": 128,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/1cba0695227e621543bca92a84a17f5ad4a28176"
+    },
+    {
+      "path": "src/i18n/locales/zh-TW/common.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6361d193b37c5c3a07f5aa396e997c03848a85f2",
+      "size": 1008,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/6361d193b37c5c3a07f5aa396e997c03848a85f2"
+    },
+    {
+      "path": "src/i18n/locales/zh-TW/earthlyBranch.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f967ec408eba11f7f487d56ced2458df2dab2b5c",
+      "size": 280,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/f967ec408eba11f7f487d56ced2458df2dab2b5c"
+    },
+    {
+      "path": "src/i18n/locales/zh-TW/fiveElementsClass.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2cf6e285c89f58347caf67d1ce52628792ca4b23",
+      "size": 152,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/2cf6e285c89f58347caf67d1ce52628792ca4b23"
+    },
+    {
+      "path": "src/i18n/locales/zh-TW/gender.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "58a139cba9a77f8f1747f8c0642677db7263cefb",
+      "size": 61,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/58a139cba9a77f8f1747f8c0642677db7263cefb"
+    },
+    {
+      "path": "src/i18n/locales/zh-TW/heavenlyStem.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2fe8e7c5917c8bdd4fc6dd8a56a0773ca7eadd0d",
+      "size": 249,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/2fe8e7c5917c8bdd4fc6dd8a56a0773ca7eadd0d"
+    },
+    {
+      "path": "src/i18n/locales/zh-TW/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "61981406edb70a3e2afc5a348d34e4bd32caf170",
+      "size": 503,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/61981406edb70a3e2afc5a348d34e4bd32caf170"
+    },
+    {
+      "path": "src/i18n/locales/zh-TW/mutagen.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3bd0857b7bc1b4d1fbac5f01f088acf4fb5986d7",
+      "size": 103,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/3bd0857b7bc1b4d1fbac5f01f088acf4fb5986d7"
+    },
+    {
+      "path": "src/i18n/locales/zh-TW/palace.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2ecf73ce12c9b1d0ce51a989e99bdfc45ed00de9",
+      "size": 400,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/2ecf73ce12c9b1d0ce51a989e99bdfc45ed00de9"
+    },
+    {
+      "path": "src/i18n/locales/zh-TW/star.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3f9597cd1194084e8d0975b641550bd68942176e",
+      "size": 3357,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/3f9597cd1194084e8d0975b641550bd68942176e"
+    },
+    {
+      "path": "src/i18n/starAliases.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7d1e15be645bf723e7b6c4d39727fe0b57629a04",
+      "size": 744,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/7d1e15be645bf723e7b6c4d39727fe0b57629a04"
+    },
+    {
+      "path": "src/i18n/types",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8d8d5abd33257f812251b2ce2d7666b6013872d4",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/8d8d5abd33257f812251b2ce2d7666b6013872d4"
+    },
+    {
+      "path": "src/i18n/types/Brightness.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "46198e514086c435395ad2eb10d2044912f92e81",
+      "size": 1010,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/46198e514086c435395ad2eb10d2044912f92e81"
+    },
+    {
+      "path": "src/i18n/types/EarthlyBranch.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "49499c23c469e62d64b8fec48bdfbdf35ae49f7d",
+      "size": 1125,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/49499c23c469e62d64b8fec48bdfbdf35ae49f7d"
+    },
+    {
+      "path": "src/i18n/types/FiveElementsClass.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7ee510c8bcbdb62f74663a366a71dc213126a0a5",
+      "size": 1281,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/7ee510c8bcbdb62f74663a366a71dc213126a0a5"
+    },
+    {
+      "path": "src/i18n/types/Gender.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "53587781e1f6ea8f1fa50ae857ddc61950c2894d",
+      "size": 837,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/53587781e1f6ea8f1fa50ae857ddc61950c2894d"
+    },
+    {
+      "path": "src/i18n/types/HeavenlyStem.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "595f26faa0ba481b68ffcd04cec916b3536aab25",
+      "size": 1086,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/595f26faa0ba481b68ffcd04cec916b3536aab25"
+    },
+    {
+      "path": "src/i18n/types/Palace.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "293aac61910796348e22662607c1486e1bfeb380",
+      "size": 837,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/293aac61910796348e22662607c1486e1bfeb380"
+    },
+    {
+      "path": "src/i18n/types/Star.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "473aa934de9cb8ab42ed45077fa7ab72d5a1772b",
+      "size": 815,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/473aa934de9cb8ab42ed45077fa7ab72d5a1772b"
+    },
+    {
+      "path": "src/i18n/types/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "859dff0836f44ad94d4fc7954d7a8245ba2fd0d6",
+      "size": 235,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/859dff0836f44ad94d4fc7954d7a8245ba2fd0d6"
+    },
+    {
+      "path": "src/i18n/types/mutagen.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "268d2440e3ea024a07673942cbe313bfe752fca3",
+      "size": 872,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/268d2440e3ea024a07673942cbe313bfe752fca3"
+    },
+    {
+      "path": "src/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7abe1c8b614f7cebdc82e9a6f75e69d8f05aa945",
+      "size": 131,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/7abe1c8b614f7cebdc82e9a6f75e69d8f05aa945"
+    },
+    {
+      "path": "src/star",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ca34d992280deb45d2459c7161df5dfdcb77a399",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/ca34d992280deb45d2459c7161df5dfdcb77a399"
+    },
+    {
+      "path": "src/star/FunctionalStar.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c5324af1d9da790b1174c07e0d30a905aa34c0d1",
+      "size": 3901,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/c5324af1d9da790b1174c07e0d30a905aa34c0d1"
+    },
+    {
+      "path": "src/star/adjectiveStar.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d92d0a715c1765cdd3882872de691f723c9d07f",
+      "size": 6445,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/1d92d0a715c1765cdd3882872de691f723c9d07f"
+    },
+    {
+      "path": "src/star/decorativeStar.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "87f6d0131fed094bdebc711599420ffc358c4e7a",
+      "size": 7877,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/87f6d0131fed094bdebc711599420ffc358c4e7a"
+    },
+    {
+      "path": "src/star/horoscopeStar.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f83f9a0868b9b30bcb16e033d1e856909112eaa5",
+      "size": 4162,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/f83f9a0868b9b30bcb16e033d1e856909112eaa5"
+    },
+    {
+      "path": "src/star/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7df9b3c2e0cd2c622c61fae6f75246b00be5efcc",
+      "size": 336,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/7df9b3c2e0cd2c622c61fae6f75246b00be5efcc"
+    },
+    {
+      "path": "src/star/location.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "67b6b699549f129fed6427c0ff97dd4c211c5eb1",
+      "size": 29173,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/67b6b699549f129fed6427c0ff97dd4c211c5eb1"
+    },
+    {
+      "path": "src/star/majorStar.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7572d7f06f117def64815bf27b1ffdac8e37500",
+      "size": 2316,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/f7572d7f06f117def64815bf27b1ffdac8e37500"
+    },
+    {
+      "path": "src/star/minorStar.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b81a53a0c219cb9a5b62858b8b541c0ce282aadb",
+      "size": 4389,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/b81a53a0c219cb9a5b62858b8b541c0ce282aadb"
+    },
+    {
+      "path": "src/utils",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "f68e8d22fdffde616e9632ac2d986b63f2bdadfe",
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/trees/f68e8d22fdffde616e9632ac2d986b63f2bdadfe"
+    },
+    {
+      "path": "src/utils/index.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d4d230fff5427ebef3014f45a0ce69356e8c936",
+      "size": 7614,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/9d4d230fff5427ebef3014f45a0ce69356e8c936"
+    },
+    {
+      "path": "src/utils/toJSON.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "157fe061f2753fb3cdb09fccb75f6633224ae7a7",
+      "size": 1657,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/157fe061f2753fb3cdb09fccb75f6633224ae7a7"
+    },
+    {
+      "path": "src/utils/validation.ts",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "4cf941a413f03a8b890a41e3420fd6bfc837445e",
+      "size": 2786,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/4cf941a413f03a8b890a41e3420fd6bfc837445e"
+    },
+    {
+      "path": "tsconfig.json",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d867d579e495e65b63ec1e0e565de64ddafef1cf",
+      "size": 276,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/d867d579e495e65b63ec1e0e565de64ddafef1cf"
+    },
+    {
+      "path": "webpack.config.js",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7f278b4df56eb6dc351844adb3fa24e478fe8be6",
+      "size": 2078,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/7f278b4df56eb6dc351844adb3fa24e478fe8be6"
+    },
+    {
+      "path": "yarn.lock",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6622cb10daad796215c2312250ac7617319b54e",
+      "size": 225441,
+      "url": "https://api.github.com/repos/SylarLong/iztro/git/blobs/e6622cb10daad796215c2312250ac7617319b54e"
+    }
+  ],
+  "truncated": false
+}

@@ -1,0 +1,66 @@
+{
+  "status": "FROZEN_PROPOSAL_NOT_APPROVED",
+  "revision": 1,
+  "candidateCount": 3,
+  "fixtureCount": 84,
+  "positiveCount": 72,
+  "negativeCount": 12,
+  "allFixtureInputsAPIValid": true,
+  "files": {
+    "candidate-report.md": "611407cbbc84443ba5f79c855be1c822fbe7865de6f4c51759a3774eff5411f5",
+    "coverage-projection.json": "44d6936075ad4cd17c163d410cbf8d8e522f8f968d712f3ca303a400a929b04e",
+    "derived-juan2.txt": "b824c61e1bdec55ecdc7123ff1e79bce9648f07d67d054c43a59ce731572d4a7",
+    "fixtures.json": "db223e60056103f57101ff43b3e21670c5ffece0266c8ac85f9ce20c09a139fd",
+    "huynh-de-full-section.txt": "5f30ae0ba2cf9fb07f273166faa3d99edf795375ddeeba3734b885c04b2fe05d",
+    "huynh-de-tu-vi-context.txt": "942fc38de490d0204a85ed272da3f982db415162f69da9ae74623930ecfe2c97",
+    "huynh-de-tu-vi-span.txt": "fe1d0cd0683232fa5ab9bf3cfd9e81608314f94f9195e673bce0622ee8183e5a",
+    "independent-fixtures/coverage.json": "f12b1b1eef0e59344db93e376b161dc11397a3b4c8df68f1780eb35007b27162",
+    "independent-fixtures/fixtures.json": "c8db7e76f513ee74c5b3ca598d996ac8dbb4d60dd9ea484a7c9326f593f310dc",
+    "independent-fixtures/generate.mjs": "e0f0293c62f968fd8edad5341b6a027dfac148e41ceadceb38e4ed8c70876455",
+    "independent-fixtures/README.md": "2a320c89e637b535f31cd1e4664c49789a1c6931ed739fd2ad784216489eab02",
+    "mirror-LICENSE.txt": "e6c7b6e313cbda3135b41bccc66c98be132cb8319d0d465903d17e669e748b36",
+    "natal-thien-luong.txt": "be8f333ac05035e0182eadad3dfb8b8aa8adbef0a9c2deb49f516a29915b50d7",
+    "natal-thien-tuong.txt": "0ae22877ad4e7591573158c35076cd99b53a9bdd005b975c98eeecf8388afeb2",
+    "natal-tu-vi.txt": "355e624e72918bce7f0ba6bd25ae85a8c17fdd45837d3e0d93362b12c6bcaa43",
+    "phu-the-full-section.txt": "d1148ac4482c0a605391568d73f275235dfdbe395a80f15c1a82c457bd9ec9f1",
+    "phu-the-thien-luong-context.txt": "edc5f04d128d12cadd447f093e983621b177c61bdf80a7b048bf42fdcfa3ce38",
+    "phu-the-thien-luong-span.txt": "c241087fa39c77a40db731dec371f0e141a00c79c80652ce877fd560baa41aed",
+    "phu-the-thien-tuong-context.txt": "d889dcd19caabb150b5b371fbf20b3bc33d1aed2b7a9e36db4bf03e7b0060104",
+    "phu-the-thien-tuong-span.txt": "37ecb598f32da2f117340fa258b14e6c262a6004079f7b42e38b80e52e0fca73",
+    "raw-juan2.html": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+    "README.md": "ef08139b0dc12fdcc4164756f6944cd614e6fb57031e1a6da1197b1d3d89b215",
+    "review-bundle.json": "8c5282edcb8c41bc1591ce44e79568687ae299cfdeb861521bd0f4dd1aedae0d",
+    "review-output-contract.json": "857b5b408ef96d2ba99ebdec3bfe0a4e79377b9226158b4f8c9e0b42a7250bc3",
+    "source-identity.json": "e64bea56180e457366e8bd134d66310af27ff419954f20593fa2f65c8e656ceb",
+    "source-provenance.json": "88c835f1fdc5faa570ad1a1db0012ffe24991b9a252961c0c85f8bcbec4c6842",
+    "STATUS.md": "2131319976630e10389045dee81c44b6a94f14538405d70e0406e70b597f8c3b",
+    "verify-proposal.mjs": "5399910c3ed6ae48526b78e6ac30ef7024e85d2c9fe74376a4925df5bce10993",
+    "verify-source.py": "6f2a76976637b7e407f1cde38b498271620e787c0b6ab7aa6d4468235e5eaf5f"
+  },
+  "candidateDigests": {
+    "interp-quanshu-huynh-de-tu-vi-host": {
+      "sourceDigest": "fe1d0cd0683232fa5ab9bf3cfd9e81608314f94f9195e673bce0622ee8183e5a",
+      "contextDigest": "942fc38de490d0204a85ed272da3f982db415162f69da9ae74623930ecfe2c97",
+      "conditionTreeDigest": "47de012421ba8b852ebd5c8ac4864f7e00b047320cb5ee601ea0cf24b3f95bc2",
+      "wordingDigest": "13f6fd1a623b3e5b2d1b74517941a8a15a6f7710b2b1dea6f765f6bfa8f877b8",
+      "fixturesDigest": "123570975dbd59cbafc983309d0d1697f13c6599223dcd5b5079cfacbd98edbd"
+    },
+    "interp-quanshu-phu-the-thien-luong-host": {
+      "sourceDigest": "c241087fa39c77a40db731dec371f0e141a00c79c80652ce877fd560baa41aed",
+      "contextDigest": "edc5f04d128d12cadd447f093e983621b177c61bdf80a7b048bf42fdcfa3ce38",
+      "conditionTreeDigest": "804531a61b034b0787d853d1b94a38bff8de91d48fd7d47d27d9e8328b04f9ee",
+      "wordingDigest": "bb6f290924b0bcb1483d8400377f7011c9b1c8a8342a9c65c4348dae8a6ff41d",
+      "fixturesDigest": "5c3dfd3277128eb08508d86826f10c0412c38bc6231a195ad8711c2299f8e899"
+    },
+    "interp-quanshu-phu-the-thien-tuong-host": {
+      "sourceDigest": "37ecb598f32da2f117340fa258b14e6c262a6004079f7b42e38b80e52e0fca73",
+      "contextDigest": "d889dcd19caabb150b5b371fbf20b3bc33d1aed2b7a9e36db4bf03e7b0060104",
+      "conditionTreeDigest": "8e9d9aefb12e6ce2aa8758170ad76d36558bbaad7ea50980a0651a085664fcef",
+      "wordingDigest": "5a1c85f939f4f0c75b44cbf3d6090fa6509a7397333a0c867260b63677e57f91",
+      "fixturesDigest": "50db4654dd5ae0f1bb1f1cef09703f161857ac38ac15f11544cd7958a7364067"
+    }
+  },
+  "actualSourceReviewsExecuted": 0,
+  "sourceApproval": false,
+  "publicRelease": false
+}

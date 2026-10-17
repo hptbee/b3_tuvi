@@ -1,0 +1,208 @@
+{
+  "classification": "Literal direct-host candidate reachability only. Hypothetical projections require independent source approval; these are not approved interpretation coverage, population prevalence, or source judgments.",
+  "inputSha256": "832ede7ac4ad680293365b09c2f4f2861a042802d6014d0eb2ad429bdbfdb630",
+  "grid": {
+    "calendar": "solar",
+    "day": 15,
+    "years": [
+      1984,
+      1995
+    ],
+    "months": [
+      1,
+      12
+    ],
+    "hours": [
+      0,
+      6,
+      12,
+      18
+    ],
+    "genders": [
+      -1,
+      1
+    ],
+    "total": 1152
+  },
+  "baseline": {
+    "count": 92,
+    "total": 1152,
+    "percent": 7.986111111111111,
+    "perClaim": {
+      "interp-tu-phu-dong-cung-giap-menh": 2,
+      "interp-quanshu-tai-bach-tu-vi-four-adverse-host": 22,
+      "interp-quanshu-phuc-duc-dong-luong-host": 20,
+      "interp-quanshu-quan-loc-co-cu-dau-host": 4,
+      "interp-quanshu-phuc-co-cu-host": 18,
+      "interp-quanshu-tai-tuvi-pha-quan-host": 10,
+      "interp-quanshu-quan-co-cu-mao-host": 18
+    },
+    "perPalace": {
+      "menh": {
+        "claimCount": 1,
+        "count": 2
+      },
+      "phu_mau": {
+        "claimCount": 0,
+        "count": 0
+      },
+      "phuc_duc": {
+        "claimCount": 2,
+        "count": 38
+      },
+      "dien_trach": {
+        "claimCount": 0,
+        "count": 0
+      },
+      "quan_loc": {
+        "claimCount": 2,
+        "count": 22
+      },
+      "no_boc": {
+        "claimCount": 0,
+        "count": 0
+      },
+      "thien_di": {
+        "claimCount": 0,
+        "count": 0
+      },
+      "tat_ach": {
+        "claimCount": 0,
+        "count": 0
+      },
+      "tai_bach": {
+        "claimCount": 2,
+        "count": 30
+      },
+      "tu_tuc": {
+        "claimCount": 0,
+        "count": 0
+      },
+      "phu_the": {
+        "claimCount": 0,
+        "count": 0
+      },
+      "huynh_de": {
+        "claimCount": 0,
+        "count": 0
+      }
+    },
+    "overlapMatrix": [
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        22,
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        20,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        18,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        0,
+        10,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        18
+      ]
+    ],
+    "overlapKeys": [
+      "interp-tu-phu-dong-cung-giap-menh",
+      "interp-quanshu-tai-bach-tu-vi-four-adverse-host",
+      "interp-quanshu-phuc-duc-dong-luong-host",
+      "interp-quanshu-quan-loc-co-cu-dau-host",
+      "interp-quanshu-phuc-co-cu-host",
+      "interp-quanshu-tai-tuvi-pha-quan-host",
+      "interp-quanshu-quan-co-cu-mao-host"
+    ],
+    "histogram": {
+      "0": 1060,
+      "1": 90,
+      "2": 2,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0
+    }
+  },
+  "proposedSteps": [
+    {
+      "key": "thien_di/thien_luong",
+      "count": 96,
+      "marginal": 74,
+      "cumulative": 166,
+      "percent": 14.409722222222221
+    },
+    {
+      "key": "no_boc/thien_luong",
+      "count": 92,
+      "marginal": 85,
+      "cumulative": 251,
+      "percent": 21.788194444444443
+    },
+    {
+      "key": "thien_di/cu_mon",
+      "count": 98,
+      "marginal": 98,
+      "cumulative": 349,
+      "percent": 30.29513888888889
+    },
+    {
+      "key": "dien_trach/thien_co",
+      "count": 92,
+      "marginal": 70,
+      "cumulative": 419,
+      "percent": 36.37152777777778
+    }
+  ],
+  "actualApprovedCoverageAfterProposal": 92,
+  "sourceApproval": false,
+  "note": "Hypothetical applicability only. Independent packet witnesses are selected from this exact fixed cohort. This is not population prevalence. Fixture adverseStars/adverse-present/adverse-absent refer ONLY to Kình Dương, Đà La, Hỏa Tinh and Linh Tinh direct host membership. Empty four-adverse sets do not exclude Địa Không/Địa Kiếp/Hóa Kỵ or certify favorable chart."
+}

@@ -1,0 +1,180 @@
+{
+  "classification": "Conditional unapproved predicate reachability; no source judgment; original seven baseline independently reconstructed",
+  "gridSha256": "832ede7ac4ad680293365b09c2f4f2861a042802d6014d0eb2ad429bdbfdb630",
+  "total": 1152,
+  "originalSevenApproved": 92,
+  "conditionalT037": 419,
+  "conditionalT038": 647,
+  "steps": [
+    {
+      "key": "huynh_de/tu_vi",
+      "count": 88,
+      "overlapPriorCumulative": 32,
+      "marginal": 56,
+      "cumulative": 475,
+      "percent": 41.232638888888886
+    },
+    {
+      "key": "phu_the/thien_luong",
+      "count": 96,
+      "overlapPriorCumulative": 14,
+      "marginal": 82,
+      "cumulative": 557,
+      "percent": 48.35069444444444
+    },
+    {
+      "key": "phu_the/thien_tuong",
+      "count": 114,
+      "overlapPriorCumulative": 24,
+      "marginal": 90,
+      "cumulative": 647,
+      "percent": 56.16319444444444
+    }
+  ],
+  "perPalace": {
+    "huynh_de": {
+      "originalSeven": 0,
+      "conditionalT037": 0,
+      "conditionalT038": 88
+    },
+    "menh": {
+      "originalSeven": 2,
+      "conditionalT037": 2,
+      "conditionalT038": 2
+    },
+    "phu_mau": {
+      "originalSeven": 0,
+      "conditionalT037": 0,
+      "conditionalT038": 0
+    },
+    "phuc_duc": {
+      "originalSeven": 38,
+      "conditionalT037": 38,
+      "conditionalT038": 38
+    },
+    "dien_trach": {
+      "originalSeven": 0,
+      "conditionalT037": 92,
+      "conditionalT038": 92
+    },
+    "quan_loc": {
+      "originalSeven": 22,
+      "conditionalT037": 22,
+      "conditionalT038": 22
+    },
+    "no_boc": {
+      "originalSeven": 0,
+      "conditionalT037": 92,
+      "conditionalT038": 92
+    },
+    "thien_di": {
+      "originalSeven": 0,
+      "conditionalT037": 194,
+      "conditionalT038": 194
+    },
+    "tat_ach": {
+      "originalSeven": 0,
+      "conditionalT037": 0,
+      "conditionalT038": 0
+    },
+    "tai_bach": {
+      "originalSeven": 30,
+      "conditionalT037": 30,
+      "conditionalT038": 30
+    },
+    "tu_tuc": {
+      "originalSeven": 0,
+      "conditionalT037": 0,
+      "conditionalT038": 0
+    },
+    "phu_the": {
+      "originalSeven": 0,
+      "conditionalT037": 0,
+      "conditionalT038": 210
+    }
+  },
+  "overlapMatrix": {
+    "huynh_de/tu_vi": {
+      "huynh_de/tu_vi": 88,
+      "phu_the/thien_luong": 14,
+      "phu_the/thien_tuong": 0,
+      "thien_di/thien_luong": 20,
+      "no_boc/thien_luong": 0,
+      "thien_di/cu_mon": 12,
+      "dien_trach/thien_co": 0
+    },
+    "phu_the/thien_luong": {
+      "huynh_de/tu_vi": 14,
+      "phu_the/thien_luong": 96,
+      "phu_the/thien_tuong": 0,
+      "thien_di/thien_luong": 0,
+      "no_boc/thien_luong": 0,
+      "thien_di/cu_mon": 0,
+      "dien_trach/thien_co": 0
+    },
+    "phu_the/thien_tuong": {
+      "huynh_de/tu_vi": 0,
+      "phu_the/thien_luong": 0,
+      "phu_the/thien_tuong": 114,
+      "thien_di/thien_luong": 0,
+      "no_boc/thien_luong": 0,
+      "thien_di/cu_mon": 0,
+      "dien_trach/thien_co": 18
+    },
+    "thien_di/thien_luong": {
+      "huynh_de/tu_vi": 20,
+      "phu_the/thien_luong": 0,
+      "phu_the/thien_tuong": 0,
+      "thien_di/thien_luong": 96,
+      "no_boc/thien_luong": 0,
+      "thien_di/cu_mon": 0,
+      "dien_trach/thien_co": 0
+    },
+    "no_boc/thien_luong": {
+      "huynh_de/tu_vi": 0,
+      "phu_the/thien_luong": 0,
+      "phu_the/thien_tuong": 0,
+      "thien_di/thien_luong": 0,
+      "no_boc/thien_luong": 92,
+      "thien_di/cu_mon": 0,
+      "dien_trach/thien_co": 22
+    },
+    "thien_di/cu_mon": {
+      "huynh_de/tu_vi": 12,
+      "phu_the/thien_luong": 0,
+      "phu_the/thien_tuong": 0,
+      "thien_di/thien_luong": 0,
+      "no_boc/thien_luong": 0,
+      "thien_di/cu_mon": 98,
+      "dien_trach/thien_co": 0
+    },
+    "dien_trach/thien_co": {
+      "huynh_de/tu_vi": 0,
+      "phu_the/thien_luong": 0,
+      "phu_the/thien_tuong": 18,
+      "thien_di/thien_luong": 0,
+      "no_boc/thien_luong": 22,
+      "thien_di/cu_mon": 0,
+      "dien_trach/thien_co": 92
+    }
+  },
+  "conditionalT038ClaimMatchHistogram": {
+    "0": 505,
+    "1": 524,
+    "2": 123,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 0,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0,
+    "11": 0,
+    "12": 0,
+    "13": 0,
+    "14": 0
+  },
+  "sourceApproval": false,
+  "publicRelease": false
+}

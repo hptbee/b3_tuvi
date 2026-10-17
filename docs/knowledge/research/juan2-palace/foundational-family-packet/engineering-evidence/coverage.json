@@ -1,0 +1,914 @@
+{
+  "taskBase": "6c947c3954b1aa1ede504cd7897277d5f63e6a6a",
+  "cohortId": "solar-1984-1995-monthly15-hours0-6-12-18-sex-v1",
+  "inputSha256": "832ede7ac4ad680293365b09c2f4f2861a042802d6014d0eb2ad429bdbfdb630",
+  "before": {
+    "charts": 1152,
+    "approvedExecutableClaims": 11,
+    "palacesWithApprovedClaims": 7,
+    "chartsWithAnyClaim": 419,
+    "chartsWithoutAnyClaim": 733,
+    "applicabilityPercent": 36.37152777777778,
+    "claimHits": 472,
+    "chartsWithOverlappingClaims": 53
+  },
+  "after": {
+    "charts": 1152,
+    "approvedExecutableClaims": 14,
+    "palacesWithApprovedClaims": 9,
+    "chartsWithAnyClaim": 647,
+    "chartsWithoutAnyClaim": 505,
+    "applicabilityPercent": 56.16319444444444,
+    "claimHits": 770,
+    "chartsWithOverlappingClaims": 123
+  },
+  "comparison": {
+    "gainedCharts": 228,
+    "lostCharts": 0,
+    "retainedCharts": 419,
+    "netCharts": 228,
+    "perPalace": {
+      "menh": {
+        "gained": 0,
+        "lost": 0,
+        "before": 2,
+        "after": 2
+      },
+      "phu_mau": {
+        "gained": 0,
+        "lost": 0,
+        "before": 0,
+        "after": 0
+      },
+      "phuc_duc": {
+        "gained": 0,
+        "lost": 0,
+        "before": 38,
+        "after": 38
+      },
+      "dien_trach": {
+        "gained": 0,
+        "lost": 0,
+        "before": 92,
+        "after": 92
+      },
+      "quan_loc": {
+        "gained": 0,
+        "lost": 0,
+        "before": 22,
+        "after": 22
+      },
+      "no_boc": {
+        "gained": 0,
+        "lost": 0,
+        "before": 92,
+        "after": 92
+      },
+      "thien_di": {
+        "gained": 0,
+        "lost": 0,
+        "before": 194,
+        "after": 194
+      },
+      "tat_ach": {
+        "gained": 0,
+        "lost": 0,
+        "before": 0,
+        "after": 0
+      },
+      "tai_bach": {
+        "gained": 0,
+        "lost": 0,
+        "before": 30,
+        "after": 30
+      },
+      "tu_tuc": {
+        "gained": 0,
+        "lost": 0,
+        "before": 0,
+        "after": 0
+      },
+      "phu_the": {
+        "gained": 210,
+        "lost": 0,
+        "before": 0,
+        "after": 210
+      },
+      "huynh_de": {
+        "gained": 88,
+        "lost": 0,
+        "before": 0,
+        "after": 88
+      }
+    }
+  },
+  "perPalace": {
+    "menh": {
+      "approvedClaims": 1,
+      "positive": 2,
+      "negative": 1150,
+      "unresolved": 0
+    },
+    "phu_mau": {
+      "approvedClaims": 0,
+      "positive": 0,
+      "negative": 1152,
+      "unresolved": 0
+    },
+    "phuc_duc": {
+      "approvedClaims": 2,
+      "positive": 38,
+      "negative": 1114,
+      "unresolved": 0
+    },
+    "dien_trach": {
+      "approvedClaims": 1,
+      "positive": 92,
+      "negative": 1060,
+      "unresolved": 0
+    },
+    "quan_loc": {
+      "approvedClaims": 2,
+      "positive": 22,
+      "negative": 1130,
+      "unresolved": 0
+    },
+    "no_boc": {
+      "approvedClaims": 1,
+      "positive": 92,
+      "negative": 1060,
+      "unresolved": 0
+    },
+    "thien_di": {
+      "approvedClaims": 2,
+      "positive": 194,
+      "negative": 958,
+      "unresolved": 0
+    },
+    "tat_ach": {
+      "approvedClaims": 0,
+      "positive": 0,
+      "negative": 1152,
+      "unresolved": 0
+    },
+    "tai_bach": {
+      "approvedClaims": 2,
+      "positive": 30,
+      "negative": 1122,
+      "unresolved": 0
+    },
+    "tu_tuc": {
+      "approvedClaims": 0,
+      "positive": 0,
+      "negative": 1152,
+      "unresolved": 0
+    },
+    "phu_the": {
+      "approvedClaims": 2,
+      "positive": 210,
+      "negative": 942,
+      "unresolved": 0
+    },
+    "huynh_de": {
+      "approvedClaims": 1,
+      "positive": 88,
+      "negative": 1064,
+      "unresolved": 0
+    }
+  },
+  "perClaim": {
+    "interp-tu-phu-dong-cung-giap-menh": {
+      "positive": 2,
+      "negative": 1150,
+      "unresolved": 0
+    },
+    "interp-quanshu-tai-bach-tu-vi-four-adverse-host": {
+      "positive": 22,
+      "negative": 1130,
+      "unresolved": 0
+    },
+    "interp-quanshu-phuc-duc-dong-luong-host": {
+      "positive": 20,
+      "negative": 1132,
+      "unresolved": 0
+    },
+    "interp-quanshu-quan-loc-co-cu-dau-host": {
+      "positive": 4,
+      "negative": 1148,
+      "unresolved": 0
+    },
+    "interp-quanshu-phuc-co-cu-host": {
+      "positive": 18,
+      "negative": 1134,
+      "unresolved": 0
+    },
+    "interp-quanshu-tai-tuvi-pha-quan-host": {
+      "positive": 10,
+      "negative": 1142,
+      "unresolved": 0
+    },
+    "interp-quanshu-quan-co-cu-mao-host": {
+      "positive": 18,
+      "negative": 1134,
+      "unresolved": 0
+    },
+    "interp-quanshu-thien-di-thien-luong-host": {
+      "positive": 96,
+      "negative": 1056,
+      "unresolved": 0
+    },
+    "interp-quanshu-no-boc-thien-luong-host": {
+      "positive": 92,
+      "negative": 1060,
+      "unresolved": 0
+    },
+    "interp-quanshu-thien-di-cu-mon-host": {
+      "positive": 98,
+      "negative": 1054,
+      "unresolved": 0
+    },
+    "interp-quanshu-dien-trach-thien-co-host": {
+      "positive": 92,
+      "negative": 1060,
+      "unresolved": 0
+    },
+    "interp-quanshu-huynh-de-tu-vi-host": {
+      "positive": 88,
+      "negative": 1064,
+      "unresolved": 0
+    },
+    "interp-quanshu-phu-the-thien-luong-host": {
+      "positive": 96,
+      "negative": 1056,
+      "unresolved": 0
+    },
+    "interp-quanshu-phu-the-thien-tuong-host": {
+      "positive": 114,
+      "negative": 1038,
+      "unresolved": 0
+    }
+  },
+  "claimCountHistogram": {
+    "0": 505,
+    "1": 524,
+    "2": 123
+  },
+  "previous11MembershipSets": "independently compared unchanged on every ordered chart",
+  "classification": "internal engineering applicability; not population prevalence, source approval or expert verification",
+  "overlap": [
+    {
+      "claimIds": [
+        "interp-tu-phu-dong-cung-giap-menh",
+        "interp-quanshu-tai-bach-tu-vi-four-adverse-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-tu-phu-dong-cung-giap-menh",
+        "interp-quanshu-phuc-duc-dong-luong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-tu-phu-dong-cung-giap-menh",
+        "interp-quanshu-quan-loc-co-cu-dau-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-tu-phu-dong-cung-giap-menh",
+        "interp-quanshu-phuc-co-cu-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-tu-phu-dong-cung-giap-menh",
+        "interp-quanshu-tai-tuvi-pha-quan-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-tu-phu-dong-cung-giap-menh",
+        "interp-quanshu-quan-co-cu-mao-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-tu-phu-dong-cung-giap-menh",
+        "interp-quanshu-thien-di-thien-luong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-tu-phu-dong-cung-giap-menh",
+        "interp-quanshu-no-boc-thien-luong-host"
+      ],
+      "charts": 2
+    },
+    {
+      "claimIds": [
+        "interp-tu-phu-dong-cung-giap-menh",
+        "interp-quanshu-thien-di-cu-mon-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-tu-phu-dong-cung-giap-menh",
+        "interp-quanshu-dien-trach-thien-co-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-tu-phu-dong-cung-giap-menh",
+        "interp-quanshu-huynh-de-tu-vi-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-tu-phu-dong-cung-giap-menh",
+        "interp-quanshu-phu-the-thien-luong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-tu-phu-dong-cung-giap-menh",
+        "interp-quanshu-phu-the-thien-tuong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-tai-bach-tu-vi-four-adverse-host",
+        "interp-quanshu-phuc-duc-dong-luong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-tai-bach-tu-vi-four-adverse-host",
+        "interp-quanshu-quan-loc-co-cu-dau-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-tai-bach-tu-vi-four-adverse-host",
+        "interp-quanshu-phuc-co-cu-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-tai-bach-tu-vi-four-adverse-host",
+        "interp-quanshu-tai-tuvi-pha-quan-host"
+      ],
+      "charts": 2
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-tai-bach-tu-vi-four-adverse-host",
+        "interp-quanshu-quan-co-cu-mao-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-tai-bach-tu-vi-four-adverse-host",
+        "interp-quanshu-thien-di-thien-luong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-tai-bach-tu-vi-four-adverse-host",
+        "interp-quanshu-no-boc-thien-luong-host"
+      ],
+      "charts": 5
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-tai-bach-tu-vi-four-adverse-host",
+        "interp-quanshu-thien-di-cu-mon-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-tai-bach-tu-vi-four-adverse-host",
+        "interp-quanshu-dien-trach-thien-co-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-tai-bach-tu-vi-four-adverse-host",
+        "interp-quanshu-huynh-de-tu-vi-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-tai-bach-tu-vi-four-adverse-host",
+        "interp-quanshu-phu-the-thien-luong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-tai-bach-tu-vi-four-adverse-host",
+        "interp-quanshu-phu-the-thien-tuong-host"
+      ],
+      "charts": 6
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-phuc-duc-dong-luong-host",
+        "interp-quanshu-quan-loc-co-cu-dau-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-phuc-duc-dong-luong-host",
+        "interp-quanshu-phuc-co-cu-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-phuc-duc-dong-luong-host",
+        "interp-quanshu-tai-tuvi-pha-quan-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-phuc-duc-dong-luong-host",
+        "interp-quanshu-quan-co-cu-mao-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-phuc-duc-dong-luong-host",
+        "interp-quanshu-thien-di-thien-luong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-phuc-duc-dong-luong-host",
+        "interp-quanshu-no-boc-thien-luong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-phuc-duc-dong-luong-host",
+        "interp-quanshu-thien-di-cu-mon-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-phuc-duc-dong-luong-host",
+        "interp-quanshu-dien-trach-thien-co-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-phuc-duc-dong-luong-host",
+        "interp-quanshu-huynh-de-tu-vi-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-phuc-duc-dong-luong-host",
+        "interp-quanshu-phu-the-thien-luong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-phuc-duc-dong-luong-host",
+        "interp-quanshu-phu-the-thien-tuong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-quan-loc-co-cu-dau-host",
+        "interp-quanshu-phuc-co-cu-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-quan-loc-co-cu-dau-host",
+        "interp-quanshu-tai-tuvi-pha-quan-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-quan-loc-co-cu-dau-host",
+        "interp-quanshu-quan-co-cu-mao-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-quan-loc-co-cu-dau-host",
+        "interp-quanshu-thien-di-thien-luong-host"
+      ],
+      "charts": 4
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-quan-loc-co-cu-dau-host",
+        "interp-quanshu-no-boc-thien-luong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-quan-loc-co-cu-dau-host",
+        "interp-quanshu-thien-di-cu-mon-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-quan-loc-co-cu-dau-host",
+        "interp-quanshu-dien-trach-thien-co-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-quan-loc-co-cu-dau-host",
+        "interp-quanshu-huynh-de-tu-vi-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-quan-loc-co-cu-dau-host",
+        "interp-quanshu-phu-the-thien-luong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-quan-loc-co-cu-dau-host",
+        "interp-quanshu-phu-the-thien-tuong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-phuc-co-cu-host",
+        "interp-quanshu-tai-tuvi-pha-quan-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-phuc-co-cu-host",
+        "interp-quanshu-quan-co-cu-mao-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-phuc-co-cu-host",
+        "interp-quanshu-thien-di-thien-luong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-phuc-co-cu-host",
+        "interp-quanshu-no-boc-thien-luong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-phuc-co-cu-host",
+        "interp-quanshu-thien-di-cu-mon-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-phuc-co-cu-host",
+        "interp-quanshu-dien-trach-thien-co-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-phuc-co-cu-host",
+        "interp-quanshu-huynh-de-tu-vi-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-phuc-co-cu-host",
+        "interp-quanshu-phu-the-thien-luong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-phuc-co-cu-host",
+        "interp-quanshu-phu-the-thien-tuong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-tai-tuvi-pha-quan-host",
+        "interp-quanshu-quan-co-cu-mao-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-tai-tuvi-pha-quan-host",
+        "interp-quanshu-thien-di-thien-luong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-tai-tuvi-pha-quan-host",
+        "interp-quanshu-no-boc-thien-luong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-tai-tuvi-pha-quan-host",
+        "interp-quanshu-thien-di-cu-mon-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-tai-tuvi-pha-quan-host",
+        "interp-quanshu-dien-trach-thien-co-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-tai-tuvi-pha-quan-host",
+        "interp-quanshu-huynh-de-tu-vi-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-tai-tuvi-pha-quan-host",
+        "interp-quanshu-phu-the-thien-luong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-tai-tuvi-pha-quan-host",
+        "interp-quanshu-phu-the-thien-tuong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-quan-co-cu-mao-host",
+        "interp-quanshu-thien-di-thien-luong-host"
+      ],
+      "charts": 18
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-quan-co-cu-mao-host",
+        "interp-quanshu-no-boc-thien-luong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-quan-co-cu-mao-host",
+        "interp-quanshu-thien-di-cu-mon-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-quan-co-cu-mao-host",
+        "interp-quanshu-dien-trach-thien-co-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-quan-co-cu-mao-host",
+        "interp-quanshu-huynh-de-tu-vi-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-quan-co-cu-mao-host",
+        "interp-quanshu-phu-the-thien-luong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-quan-co-cu-mao-host",
+        "interp-quanshu-phu-the-thien-tuong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-thien-di-thien-luong-host",
+        "interp-quanshu-no-boc-thien-luong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-thien-di-thien-luong-host",
+        "interp-quanshu-thien-di-cu-mon-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-thien-di-thien-luong-host",
+        "interp-quanshu-dien-trach-thien-co-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-thien-di-thien-luong-host",
+        "interp-quanshu-huynh-de-tu-vi-host"
+      ],
+      "charts": 20
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-thien-di-thien-luong-host",
+        "interp-quanshu-phu-the-thien-luong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-thien-di-thien-luong-host",
+        "interp-quanshu-phu-the-thien-tuong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-no-boc-thien-luong-host",
+        "interp-quanshu-thien-di-cu-mon-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-no-boc-thien-luong-host",
+        "interp-quanshu-dien-trach-thien-co-host"
+      ],
+      "charts": 22
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-no-boc-thien-luong-host",
+        "interp-quanshu-huynh-de-tu-vi-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-no-boc-thien-luong-host",
+        "interp-quanshu-phu-the-thien-luong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-no-boc-thien-luong-host",
+        "interp-quanshu-phu-the-thien-tuong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-thien-di-cu-mon-host",
+        "interp-quanshu-dien-trach-thien-co-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-thien-di-cu-mon-host",
+        "interp-quanshu-huynh-de-tu-vi-host"
+      ],
+      "charts": 12
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-thien-di-cu-mon-host",
+        "interp-quanshu-phu-the-thien-luong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-thien-di-cu-mon-host",
+        "interp-quanshu-phu-the-thien-tuong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-dien-trach-thien-co-host",
+        "interp-quanshu-huynh-de-tu-vi-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-dien-trach-thien-co-host",
+        "interp-quanshu-phu-the-thien-luong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-dien-trach-thien-co-host",
+        "interp-quanshu-phu-the-thien-tuong-host"
+      ],
+      "charts": 18
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-huynh-de-tu-vi-host",
+        "interp-quanshu-phu-the-thien-luong-host"
+      ],
+      "charts": 14
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-huynh-de-tu-vi-host",
+        "interp-quanshu-phu-the-thien-tuong-host"
+      ],
+      "charts": 0
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-phu-the-thien-luong-host",
+        "interp-quanshu-phu-the-thien-tuong-host"
+      ],
+      "charts": 0
+    }
+  ],
+  "sequentialMarginalGains": [
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host",
+      "gained": 56,
+      "cumulative": 475
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host",
+      "gained": 82,
+      "cumulative": 557
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host",
+      "gained": 90,
+      "cumulative": 647
+    }
+  ]
+}

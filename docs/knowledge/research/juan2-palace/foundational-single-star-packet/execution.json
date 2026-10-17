@@ -1,0 +1,33 @@
+{
+  "reviewers": [
+    {
+      "model": "gpt-6.1-sol",
+      "agentId": "/root/foundational_review_a",
+      "reviewRef": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/review-a.json",
+      "requestedModel": "gpt-6.1-sol",
+      "hostBuildId": null
+    },
+    {
+      "model": "gpt-6-astra",
+      "agentId": "/root/foundational_review_b",
+      "reviewRef": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/review-b.json",
+      "requestedModel": "gpt-6-astra",
+      "hostBuildId": null
+    }
+  ],
+  "attemptHistory": [
+    {
+      "status": "EXECUTED",
+      "reason": "Actual independent assigned models completed frozen four-claim/112-fixture source and wording judgments. A own HTTP200 witness after authorized escalation; B independent exact-pin connector witness, HTTP status unavailable and not fabricated."
+    }
+  ],
+  "rawReviewSha256": {
+    "a": "31d33a41b876031bc8407ebe3c9e58811635f63fddeee9e91f9dfcda5fbb2528",
+    "b": "8ea3cdc893729d5a6415739f70879a4c85976a6c781205a694992929ebeb65fa"
+  },
+  "canonicalReviewDocumentSha256": {
+    "a": "88e717a166970004d4d5134136724e4c96cebaca285213698101f8a6cf43ed76",
+    "b": "524f6941bded067b55de7d8019b94bcf7443f5f5b8bd426322317fff73f0bde3"
+  },
+  "note": "Assigned tool model identities and canonical task names are actual execution metadata; host build not exposed/null. No other current reviewer output was read by either model."
+}

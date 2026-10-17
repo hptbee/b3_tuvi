@@ -1,0 +1,134 @@
+{
+  "profileId": "iztro-pinned-age1-sex-triad-stem",
+  "baseProfileId": "iztro-pinned-age1-sex-triad",
+  "baseAlgorithmSpec": {
+    "profileId": "iztro-pinned-age1-sex-triad",
+    "inputFields": [
+      "birthYearBranch",
+      "gender",
+      "nominalAge"
+    ],
+    "branchOrder": [
+      "Tí",
+      "Sửu",
+      "Dần",
+      "Mão",
+      "Thìn",
+      "Tị",
+      "Ngọ",
+      "Mùi",
+      "Thân",
+      "Dậu",
+      "Tuất",
+      "Hợi"
+    ],
+    "branchIds": "one_based_1_to_12",
+    "triadStarts": [
+      {
+        "birthBranches": [
+          "Dần",
+          "Ngọ",
+          "Tuất"
+        ],
+        "startBranch": "Thìn",
+        "startBranchId": 5
+      },
+      {
+        "birthBranches": [
+          "Thân",
+          "Tí",
+          "Thìn"
+        ],
+        "startBranch": "Tuất",
+        "startBranchId": 11
+      },
+      {
+        "birthBranches": [
+          "Tị",
+          "Dậu",
+          "Sửu"
+        ],
+        "startBranch": "Mùi",
+        "startBranchId": 8
+      },
+      {
+        "birthBranches": [
+          "Hợi",
+          "Mão",
+          "Mùi"
+        ],
+        "startBranch": "Sửu",
+        "startBranchId": 2
+      }
+    ],
+    "genderDirections": [
+      {
+        "gender": 1,
+        "sourceKey": "male",
+        "direction": 1
+      },
+      {
+        "gender": -1,
+        "sourceKey": "female",
+        "direction": -1
+      }
+    ],
+    "ageAtStart": 1,
+    "ageStep": 1,
+    "palacesPerAgeStep": 1,
+    "wrap": 12,
+    "nominalAgeRange": {
+      "min": 1,
+      "max": 120,
+      "integer": true
+    },
+    "outputFormula": "branchId = ((startBranchId - 1 + direction * (nominalAge - 1)) % 12 + 12) % 12 + 1",
+    "sourcePalaceToProductBranchId": "((sourcePalaceIndex + 2) % 12) + 1",
+    "yearYinYangAffectsDirection": false,
+    "calendarAgeDerivation": false,
+    "extendsBeyondSourceRange": false
+  },
+  "inputFields": [
+    "birthYearBranch",
+    "birthYearStem",
+    "gender",
+    "nominalAge"
+  ],
+  "selection": "select_natal_palace_by_ages_includes_explicit_nominalAge_not_decadal_range",
+  "stemOrder": [
+    "Giáp",
+    "Ất",
+    "Bính",
+    "Đinh",
+    "Mậu",
+    "Kỷ",
+    "Canh",
+    "Tân",
+    "Nhâm",
+    "Quý"
+  ],
+  "tigerStartStemByBirthStem": [
+    "Bính",
+    "Mậu",
+    "Canh",
+    "Nhâm",
+    "Giáp",
+    "Bính",
+    "Mậu",
+    "Canh",
+    "Nhâm",
+    "Giáp"
+  ],
+  "sourcePalaceCoordinate": "mod12(selectedProductBranchId - 3)",
+  "natalStemDerivation": "mod10(mod10(tigerStartStemIndex+soulIndex)-soulIndex+sourcePalaceCoordinate)",
+  "reducedStemIndex": "mod10(tigerStartStemIndex+sourcePalaceCoordinate)",
+  "output": "canonical_pinned_vi_VN_natal_stem_at_selected_minor_physical_palace",
+  "nominalAge": {
+    "integer": true,
+    "min": 1,
+    "max": 120
+  },
+  "calendarAgeDerivation": false,
+  "interpretationReviewed": false,
+  "publicFortune": false
+}
