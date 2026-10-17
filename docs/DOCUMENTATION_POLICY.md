@@ -5,6 +5,7 @@ Applies to `hptbee/b3_tuvi` and B3 AutoDev runs attached to this repository.
 ## Canonical vs supporting vs archive
 
 - **Canonical** documents are listed in [engineering/meta/CANONICAL_SOURCES.md](engineering/meta/CANONICAL_SOURCES.md). Only one active tracker per concern (e.g. `planning/AUTODEV_MASTER_PLAN_V2.md` for Tử Vi AutoDev tasks).
+- **Current Tử Vi research planning:** [ROADMAP_KNOWLEDGE_RESEARCH.md](planning/ROADMAP_KNOWLEDGE_RESEARCH.md) alone owns research priorities, backlog, inventory strategy, research statuses and quality metrics. Master Plan V2 retains engineering history/future tasks; Sprint 9–14 retains the previous conditional engineering sequence. Reuse source registry identities and topic evidence packets; do not create duplicate catalogs or promote collected material into source/runtime/public approval. Research-planning changes do not invoke AutoDev or technical review loops.
 - **Supporting** documents explain how to work in the repo (engineering, domain references, numerology specs).
 - **Research evidence** lives primarily under `docs/knowledge/` (JSON decisions, passages, reviews). Superseded one-off research dossiers and execution prompts may live under `docs/archive/prompts/` with JSON companions remaining in `docs/knowledge/research/`. Treat as evidence, not as “current product behavior” unless cross-checked with code.
 - **Historical** sprint reports, P0/P1 write-ups, and superseded prompts live under `docs/archive/`. Do not rewrite historical conclusions to match today’s code; add a new active doc or archive note instead.

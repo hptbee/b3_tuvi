@@ -6,6 +6,8 @@
 
 > Dành cho developers/agents: bắt đầu tại [Documentation index](docs/README.md), rồi [AI Context](docs/engineering/AI_CONTEXT.md), [Agent Engineering](docs/engineering/AGENT_ENGINEERING.md) và [Contributing](docs/engineering/CONTRIBUTING.md). Trước khi sửa công thức Tử Vi, đọc thêm [Domain Knowledge](docs/tuvi/DOMAIN_KNOWLEDGE.md). Test phần mềm đạt không đồng nghĩa công thức hoặc lời luận đã được đối chiếu nguồn.
 
+**Ưu tiên hiện tại — Knowledge-First Research Strategy:** xây dựng tri thức Tử Vi đa nguồn, có xuất xứ, ngữ cảnh và khác biệt trường phái trước khi triển khai thêm tính năng. [Roadmap nghiên cứu chính thức](docs/planning/ROADMAP_KNOWLEDGE_RESEARCH.md) giữ backlog, chiến lược kiểm kê nguồn, trạng thái nghiên cứu và chỉ số chất lượng. T030–T038 cùng chứng cứ được giữ nguyên; T034 chưa được duyệt. AutoDev dành cho yêu cầu engineering sau này; public interpretation và AI narration vẫn khóa.
+
 ## Trạng thái tính năng
 
 | Khu vực | Hiện có | Giới hạn |
@@ -283,8 +285,9 @@ Tử Vi và Thần Số Học là các hệ thống diễn giải mang tính tha
 |---|---|
 | [Trạng thái Thần Số Học](docs/numerology/IMPLEMENTATION_STATUS.md) | Năng lực MVP hiện có, test evidence và backlog kế tiếp |
 | [Roadmap Thần Số Học A–Z](docs/planning/ROADMAP_NUMEROLOGY_A_TO_Z.md) | Kế hoạch mới: công thức, chuẩn hóa tên, engine, API, nội dung, UX, tests và phát hành |
-| [Roadmap Tử Vi Sprint 9–14](docs/planning/ROADMAP_SPRINT_9_14.md) | Tri thức Tử Vi, đối chiếu nguồn, vận hạn và AI có chứng cứ |
-| [Autodev Master Plan V2](docs/planning/AUTODEV_MASTER_PLAN_V2.md) | Kế hoạch/điều phối hiện có; không thay bằng roadmap Thần Số Học |
+| [Roadmap nghiên cứu Tử Vi — Knowledge-First](docs/planning/ROADMAP_KNOWLEDGE_RESEARCH.md) | **Đang áp dụng:** nghiên cứu đa nguồn, kiểm kê sách/ebook, tri thức và khác biệt trường phái; không tự khởi chạy AutoDev |
+| [Roadmap Tử Vi Sprint 9–14](docs/planning/ROADMAP_SPRINT_9_14.md) | Lịch sử kế hoạch engineering, hiện tạm hoãn sau khi chuyển hướng sang nghiên cứu |
+| [AutoDev Master Plan V2](docs/planning/AUTODEV_MASTER_PLAN_V2.md) | Lưu lịch sử và backlog engineering; chỉ dùng khi có yêu cầu triển khai riêng |
 | [AI Context](docs/engineering/AI_CONTEXT.md) | Map file và hướng dẫn developers/agents |
 | [Architectural Overview](docs/architecture/ARCHITECTURAL_OVERVIEW.md) | Luồng dữ liệu và kiến trúc Tử Vi |
 | [Contributing](docs/engineering/CONTRIBUTING.md) | Quy tắc thay đổi mã nguồn, domain và dữ liệu |

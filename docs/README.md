@@ -13,10 +13,13 @@ Single navigation entry for human-readable documentation. Runtime knowledge JSON
 
 ## Planning and task tracking
 
+**Current priority: Knowledge-First Research Strategy.** Build a deep, multi-source Tử Vi knowledge base before adding features. Research collection, source review, runtime approval and public-release permission remain separate; research planning does not invoke AutoDev.
+
 | Document | Role |
 | --- | --- |
-| [AUTODEV_MASTER_PLAN_V2.md](planning/AUTODEV_MASTER_PLAN_V2.md) | **Active** Tử Vi AutoDev task tracker |
-| [ROADMAP_SPRINT_9_14.md](planning/ROADMAP_SPRINT_9_14.md) | Tử Vi roadmap (Sprints 9–14) |
+| [ROADMAP_KNOWLEDGE_RESEARCH.md](planning/ROADMAP_KNOWLEDGE_RESEARCH.md) | **Active canonical Tử Vi research roadmap**: priorities, backlog, source inventory strategy, statuses and quality metrics |
+| [AUTODEV_MASTER_PLAN_V2.md](planning/AUTODEV_MASTER_PLAN_V2.md) | Preserved engineering task history/backlog, including T030–T038 and unresolved T034; future AutoDev only when requested |
+| [ROADMAP_SPRINT_9_14.md](planning/ROADMAP_SPRINT_9_14.md) | Previous conditional engineering sequence; deferred behind current research priorities |
 | [ROADMAP_NUMEROLOGY_A_TO_Z.md](planning/ROADMAP_NUMEROLOGY_A_TO_Z.md) | Thần Số Học roadmap |
 | [AUTODEV_MASTER_PLAN.md](archive/planning/AUTODEV_MASTER_PLAN.md) | Historical V1 plan (locked; do not edit for V2 status) |
 
@@ -45,6 +48,8 @@ Do not create a competing “Master Plan V3”. Completed sprint **reports** liv
 **Live formula spec:** Formula V1 in code (`backend/src/data/formulaV1.mjs`, evaluated via `backend/src/engine/combinationMatch.js`); human spec in [SPRINT_9_FINAL_FORMULA_SPEC.md](archive/sprints/tuvi/sprint-9/SPRINT_9_FINAL_FORMULA_SPEC.md). `rulesV2.json` is a research snapshot, not the runtime matcher.
 
 **Active backlog (research):** [UNRESOLVED_COMBINATIONS.md](knowledge/UNRESOLVED_COMBINATIONS.md), [RULE_REMEDIATION_BACKLOG.md](knowledge/RULE_REMEDIATION_BACKLOG.md).
+
+Research priority and batch selection belong to the [knowledge research roadmap](planning/ROADMAP_KNOWLEDGE_RESEARCH.md). The two lists above retain detailed combination gaps, not a competing roadmap. Registered identities remain in [sources.json](knowledge/sources.json); the [dated source register](tuvi/TU_VI_SOURCE_REGISTRY.md) and [source coverage report](knowledge/SOURCE_COVERAGE_REPORT.md) retain their historical scope. New topic research reuses [knowledge/research/](knowledge/research/), existing passages, reviews and decisions.
 
 ## Thần Số Học domain
 
