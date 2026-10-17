@@ -1,0 +1,203 @@
+{
+  "batchId": "KR-B5-20261017",
+  "purpose": "Ten prior dispositions retained, four new bounded questions; no issue resolved with authenticated evidence",
+  "dispositions": [
+    {
+      "dispositionId": "B4D01",
+      "topic": "Nhật–Lương reciprocal / Phụ Mẫu",
+      "disposition": "STILL_UNRESOLVED",
+      "recordIds": [
+        "KRB2-PM-LUONG",
+        "KRB2-PM-DUONG"
+      ],
+      "basis": "No newly authenticated exact reciprocal wording; general Cơ material does not settle it.",
+      "nextAction": "Obtain identified pages for both entries including qualifiers.",
+      "resolutionClaim": false,
+      "carriedFrom": "docs/knowledge/research/knowledge-first-batch-4/dispositions.json#B4D01",
+      "batch5Observation": "No newly authenticated original page closes this question; prior evidence remains unchanged."
+    },
+    {
+      "dispositionId": "B4D02",
+      "topic": "Tử–Tham / Phụ Mẫu",
+      "disposition": "STILL_UNRESOLVED",
+      "recordIds": [
+        "KRB2-PM-ZIWEI"
+      ],
+      "basis": "New Quan material is a different palace, not resolution of favorable/no-sát versus adverse scope.",
+      "nextAction": "Collate both complete Phụ Mẫu paragraphs, not a general Tham description.",
+      "resolutionClaim": false,
+      "carriedFrom": "docs/knowledge/research/knowledge-first-batch-4/dispositions.json#B4D02",
+      "batch5Observation": "No newly authenticated original page closes this question; prior evidence remains unchanged."
+    },
+    {
+      "dispositionId": "B4D03",
+      "topic": "Thiên Lương brightness at Thân",
+      "disposition": "SOURCE_VARIANT",
+      "recordIds": [
+        "KRB3-M-LUONG"
+      ],
+      "basis": "Retained table/prose and phú give different brightness; label is observational, correction remains unresolved.",
+      "nextAction": "Locate identified print table and complete phú.",
+      "resolutionClaim": false,
+      "carriedFrom": "docs/knowledge/research/knowledge-first-batch-4/dispositions.json#B4D03",
+      "batch5Observation": "No newly authenticated original page closes this question; prior evidence remains unchanged."
+    },
+    {
+      "dispositionId": "B4D04",
+      "topic": "Thái Dương / Phu Thê timing",
+      "disposition": "INTERPRETATION_DIFFERENCE",
+      "recordIds": [
+        "KRB3-PT-DUONG"
+      ],
+      "basis": "Prior authored timing/scope tension remains; Cơ spouse clauses have different subjects and cannot resolve it.",
+      "nextAction": "Compare matching placements, age subject and adverse set in an identified edition.",
+      "resolutionClaim": false,
+      "carriedFrom": "docs/knowledge/research/knowledge-first-batch-4/dispositions.json#B4D04",
+      "batch5Observation": "No newly authenticated original page closes this question; prior evidence remains unchanged."
+    },
+    {
+      "dispositionId": "B4D05",
+      "topic": "吉星 / 四殺 / 空 / 耗",
+      "disposition": "STILL_UNRESOLVED",
+      "recordIds": [
+        "KRB3-TERM-LAYERS"
+      ],
+      "basis": "New Cơ–Cự/Nô still leaves 吉星 unnamed; explicit six-name lists elsewhere do not define all generic rosters.",
+      "nextAction": "Preserve clause-specific operands; obtain glossary tied to the same edition.",
+      "resolutionClaim": false,
+      "carriedFrom": "docs/knowledge/research/knowledge-first-batch-4/dispositions.json#B4D05",
+      "batch5Observation": "No newly authenticated original page closes this question; prior evidence remains unchanged."
+    },
+    {
+      "dispositionId": "B4D06",
+      "topic": "Kiếp Sát / Địa Kiếp / Không Vong / Địa Không",
+      "disposition": "STILL_UNRESOLVED",
+      "recordIds": [
+        "KRB2-TA-PHU",
+        "KRB3-TERM-LAYERS"
+      ],
+      "basis": "A modern article naming Địa Không/Địa Kiếp does not define all classical 劫殺/空亡 occurrences.",
+      "nextAction": "Collate exact Tật wording and edition glossary; never replace by convenient runtime IDs.",
+      "resolutionClaim": false,
+      "carriedFrom": "docs/knowledge/research/knowledge-first-batch-4/dispositions.json#B4D06",
+      "batch5Observation": "No newly authenticated original page closes this question; prior evidence remains unchanged."
+    },
+    {
+      "dispositionId": "B4D07",
+      "topic": "Editorial HTML tip: eighteen 正曜",
+      "disposition": "STILL_UNRESOLVED",
+      "recordIds": [
+        "KRB3-TERM-LAYERS"
+      ],
+      "basis": "Existing tip/custom-block layer evidence preserved; no newly identified textual author or original print.",
+      "nextAction": "Trace upstream editorial history with an identifiable citation; do not retry old scan routes without a new lead.",
+      "resolutionClaim": false,
+      "carriedFrom": "docs/knowledge/research/knowledge-first-batch-4/dispositions.json#B4D07",
+      "batch5Observation": "No newly authenticated original page closes this question; prior evidence remains unchanged."
+    },
+    {
+      "dispositionId": "B4D08",
+      "topic": "Thiên Cơ brightness: Q versus Hàm Số",
+      "disposition": "INTERPRETATION_DIFFERENCE",
+      "recordIds": [
+        "KRB4-M-CO"
+      ],
+      "basis": "Q148–153 and V2158–2166 attach different brightness to several positions. Both remain source-scoped, no default table selected.",
+      "nextAction": "Identify print tables and school/edition context before interpreting the difference.",
+      "resolutionClaim": false,
+      "carriedFrom": "docs/knowledge/research/knowledge-first-batch-4/dispositions.json#B4D08",
+      "batch5Observation": "Wikisource revision1963110 position block was read and agrees in labels with retained Q. Related-family agreement does not choose a correct table against V; linked KRB5-M-CO-COLLATION."
+    },
+    {
+      "dispositionId": "B4D09",
+      "topic": "Cơ/Quan 良巨 and 見羊陀火鈴方宜",
+      "disposition": "TRANSCRIPTION_UNCERTAIN",
+      "recordIds": [
+        "KRB4-QL-CO"
+      ],
+      "basis": "Awkward retained strings at Q739; no independent original correction, no blanket beneficial-sát exception inferred.",
+      "nextAction": "Collate a whole page with identifiable edition and punctuation.",
+      "resolutionClaim": false,
+      "carriedFrom": "docs/knowledge/research/knowledge-first-batch-4/dispositions.json#B4D09",
+      "batch5Observation": "Full Wikisource Quan section read; reader1487 retains both hard strings. No original scan acquired or warranted correction; linked KRB5-QL-CO-COLLATION."
+    },
+    {
+      "dispositionId": "B4D10",
+      "topic": "Hàm Số Cơ/Điền Cự Nguyệt; Cơ/Phúc Cự Lương",
+      "disposition": "TRANSCRIPTION_UNCERTAIN",
+      "recordIds": [
+        "KRB4-DT-CO",
+        "KRB4-PD-CO"
+      ],
+      "basis": "Exact strings V2338/2349 look unexpected in these headings. Neither silently changed to Cơ, nor counted as exact cohost corroboration.",
+      "nextAction": "Check a lawful identified page; until then compare only unaffected clauses.",
+      "resolutionClaim": false,
+      "carriedFrom": "docs/knowledge/research/knowledge-first-batch-4/dispositions.json#B4D10",
+      "batch5Observation": "No newly authenticated original page closes this question; prior evidence remains unchanged."
+    },
+    {
+      "dispositionId": "B5D11",
+      "topic": "Cơ–Lương / Tả–Hữu method exception",
+      "disposition": "STILL_UNRESOLVED",
+      "recordIds": [
+        "KRB4-METHOD-CO-ASSISTANTS",
+        "KRB5-METHOD-V-CONTEXT"
+      ],
+      "basis": "V palace-specific examples do not match the complete Mệnh/Phụ Mẫu inputs of Ling. Different contexts can coexist; neither proves a universal assistant rule.",
+      "nextAction": "Read an independent author addressing the same host, cohost, assistant relation and target palace.",
+      "resolutionClaim": false
+    },
+    {
+      "dispositionId": "B5D12",
+      "topic": "Cơ–Lương / Tử Tức chi versus natal block",
+      "disposition": "SOURCE_VARIANT",
+      "recordIds": [
+        "KRB5-TT-CO"
+      ],
+      "basis": "Q607 gives 寅/申 in the Cơ–Lương clause, while Q150/152 give Cơ–Âm寅申 and Cơ–Lương辰戌. Preserve the literal discrepancy; no print or placement correction.",
+      "nextAction": "Obtain a single edition with both full passages and commentary on their relationship.",
+      "resolutionClaim": false
+    },
+    {
+      "dispositionId": "B5D13",
+      "topic": "Cự Lương in Hàm Số Thiên Cơ bệnh lý",
+      "disposition": "TRANSCRIPTION_UNCERTAIN",
+      "recordIds": [
+        "KRB5-TA-CO"
+      ],
+      "basis": "V2179 literally uses Cự Lương, not Cơ Lương; do not silently repair it or count it as exact Cơ–Lương corroboration.",
+      "nextAction": "Locate the lawful identified print page; compare unaffected branches meanwhile.",
+      "resolutionClaim": false
+    },
+    {
+      "dispositionId": "B5D14",
+      "topic": "Tử–Phá / Thiên Di conditional scope",
+      "disposition": "INTERPRETATION_DIFFERENCE",
+      "recordIds": [
+        "KRB5-TD-ZIWEI"
+      ],
+      "basis": "Q688 has a favorable quý-nhân clause with 小人不足; V3157 groups Phá among adverse Di cases. Same star/palace does not establish identical omitted modifiers.",
+      "nextAction": "Find an identified commentary explaining the full compound inputs and the difficult Q phrase.",
+      "resolutionClaim": false
+    }
+  ],
+  "p1Followups": [
+    {
+      "topic": "Phủ/Nô",
+      "recordIds": [
+        "KRB3-NB-PHU",
+        "KRB4-NB-PHU-LDL"
+      ],
+      "observation": "Wikisource related witness still has 天家 at reader1465. No new independent authored comparator or print meaning/quantity validation; preserve old uncertainty."
+    },
+    {
+      "topic": "Âm/Huynh",
+      "recordIds": [
+        "KRB3-HD-AM",
+        "KRB4-HD-AM-LDL"
+      ],
+      "observation": "No materially new author/edition acquired. Do not repeat the same article as another independent source or upgrade quantities."
+    }
+  ],
+  "t034": "Unresolved/unapproved; unchanged"
+}

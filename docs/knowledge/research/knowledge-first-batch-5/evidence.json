@@ -1,0 +1,259 @@
+{
+  "batchId": "KR-B5-20261017",
+  "date": "2026-10-17",
+  "branch": "codex/knowledge-research-batch-5",
+  "baseCommit": "0bb82f99a717ba092fe66375f8a7f7dde6824d6f",
+  "baselineVerification": {
+    "pr": 67,
+    "merged": true,
+    "mergedAt": "2026-10-17T11:10:44Z",
+    "mergeCommit": "0bb82f99a717ba092fe66375f8a7f7dde6824d6f",
+    "source": "GitHub REST pull67 plus fetched origin/main",
+    "committedCounts": {
+      "records": 37,
+      "contextualCells": 31,
+      "locatedOnlyCells": 137,
+      "unresolvedDispositions": 10
+    },
+    "baselineIndexSha256LF": "7177c4e95a9554a5fa3664f50d2c2f54123a40e6d43ccd5a68bddd1bde9409e5"
+  },
+  "primary": {
+    "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+    "sha256": "b824c61e1bdec55ecdc7123ff1e79bce9648f07d67d054c43a59ce731572d4a7",
+    "sourceId": "ziwei-quanshu-iztro-transcription",
+    "editionId": "iztro-juan2-2f00e2ab0c80",
+    "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+    "completeSectionsRead": [
+      [
+        576,
+        599
+      ],
+      [
+        600,
+        632
+      ],
+      [
+        633,
+        662
+      ],
+      [
+        663,
+        686
+      ],
+      [
+        687,
+        711
+      ],
+      [
+        817,
+        846
+      ]
+    ],
+    "additionalSpansRead": [
+      [
+        146,
+        162
+      ],
+      [
+        737,
+        764
+      ]
+    ],
+    "interpretationLimit": "Complete selected palace sections and exact adjacent/natal clauses read, not an authenticated original print book"
+  },
+  "methodWitness": {
+    "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+    "sha256": "bc1a8d8f3d124c06c3845b6a687149bd9900f06b97d86db202b6016dfeffe35b",
+    "readSpan": {
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 48,
+      "endLine": 66,
+      "sha256": "523b5fab97f6e7303aa8d539cad986617c6b37120e8e1b9c05c5eebd97f4ee33",
+      "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+    },
+    "family": "quanshu-transmission"
+  },
+  "vietnameseWitness": {
+    "sourceId": "nguyen-phat-loc-ham-so",
+    "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+    "sectionsRead": [
+      [
+        460,
+        532
+      ],
+      [
+        2154,
+        2365
+      ],
+      [
+        2637,
+        2682
+      ],
+      [
+        3154,
+        3174
+      ]
+    ],
+    "meaning": "Selected complete subsections and surrounding relevant chapter context actually read; not the whole print work",
+    "rights": "Metadata, precise references and brief original observations; no modern source text retained",
+    "identityLimit": "Selected web attribution. Edition, original pages and genealogy unverified; borrowed author references do not add separately read books."
+  },
+  "authoredWitnesses": [
+    {
+      "provisionalWitnessId": "ling-donglai-thien-co-169-web-20261017",
+      "author": "令东来",
+      "url": "https://www.xuanmen.com.cn/archives/169.html",
+      "sha256": "6e8a9ef8ef3aa68ab6edbacca28f5e15f3331998a1b0f4143c337e8425fe251e",
+      "decodedHtmlCharacters": 54590,
+      "work": "紫微斗数命理学：天机星",
+      "readScope": "Credited author article; full substantive Cơ body through closing family-palace paragraphs read, including exact Tật, Phụ, Tử and assistant exceptions",
+      "status": 200,
+      "sourceTextRetained": false,
+      "access": "Web reader internal error; restricted shell DNS failed; normal HTTPS outside restricted sandbox succeeded",
+      "hashMeaning": "SHA256 observed decoded HTML re-encoded UTF8, dynamic metadata; not retained content, not replayable offline",
+      "rights": "Credit notice is not an open reuse license; metadata and bounded original analysis only",
+      "printIdentity": "Author-declared book extract; edition/year/page unverified",
+      "family": "ling-donglai-authored-commentary"
+    }
+  ],
+  "dependentWitness": {
+    "provisionalWitnessId": "quanshu-wikisource-juan2-1963110",
+    "sourceId": "ziwei-quanshu-tradition",
+    "editionId": null,
+    "author": null,
+    "work": "紫微斗數全書/卷二 — Wikisource digital transcription",
+    "url": "https://zh.wikisource.org/wiki/紫微斗數全書/卷二",
+    "revisionUrl": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷二&oldid=1963110",
+    "revision": 1963110,
+    "observedFooterRevision": true,
+    "sourceTextRetained": false,
+    "family": "quanshu-transmission",
+    "independence": "Dependent digital transmission; neither new authored family nor authenticated original edition",
+    "rights": "Footer: CC BY-SA4.0 plus possible additional terms. Store precise references and original analysis only, no transcription body.",
+    "readScope": "Cơ natal705–726, full Quan1483–1531, family/health and Di entries with context, footer1625–1629",
+    "exactContextRead": [
+      "Mệnh Cơ position block",
+      "Quan entire star/poem section",
+      "Tật preamble/entry",
+      "Di entries",
+      "Phụ preamble and entry",
+      "Nô Thiên Phủ entry"
+    ],
+    "relevance": "Recover exact digital wording; not resolve original print or authored independence"
+  },
+  "acquisitionLimits": [
+    {
+      "url": "https://xingge.tw/ja/quanshu/gong-guanlu",
+      "result": "Web reader internal error. Search snippet suggests editorial emendation, not read full text or print evidence; rejected as correction proof."
+    },
+    {
+      "url": "https://play.google.com/store/books/details?id=aIRbDgAAQBAJ&hl=en-US",
+      "result": "New bounded access route from an edition lead returned web reader internal error; no preview/target page read or retained. Catalog/search text is a lead, not textual collation."
+    },
+    {
+      "priorRoutes": "Japanese official archive scan, forum RAR and lecture PDFs",
+      "result": "Not retried without materially different access/target-page evidence. No scan or extra independent book acquired."
+    }
+  ],
+  "review": {
+    "type": "Research context/traceability self-audit and independent textual-source comparison only",
+    "independentSourceReview": "not_executed",
+    "expertVerification": "not_executed",
+    "limit": "No model consensus used as evidence and no technical review loop"
+  },
+  "approval": {
+    "sourceReviewExecuted": false,
+    "runtimeApprovalRequested": false,
+    "publicReleasePermission": "unchanged_closed",
+    "t034": "unresolved_unapproved"
+  },
+  "historicalSnapshots": {
+    ".b3/autodev/progress.md": "a26dff94175c6b8d7610d0567a6d6e484f0cfb4176b010cdbaa9d5a57a21a608",
+    "docs/knowledge/decisions/am-loc.json": "4be5dffa6d03d9248bcfb2981dd1d50e64f5231e8e10958d6939b411fa095a4b",
+    "docs/knowledge/decisions/co-nguyet-dong-luong.json": "619349f0f6f4214ecb9280f577977f5ba8c9e7728713cb16a91571976c6dc02f",
+    "docs/knowledge/decisions/cu-hoa-kinh-duong.json": "4d6e01d9481d2cfea6b2d76e0310362456142e395f16db90d9de40a19ad692f7",
+    "docs/knowledge/decisions/cu-nhat-dong-cung.json": "bea6e5c2ea406a75777e0588e1993ff3eecdcfbbef443594bbc06ae355739ab2",
+    "docs/knowledge/decisions/hinh-tu-giap-an.json": "321e856d74ddffea2c56c881409522e3963f34a3dab08a3c0a573f16356e7f8f",
+    "docs/knowledge/decisions/khoa-minh-loc-am.json": "2a9726b7316390f9294bea401aaa8cc40758e13daec29c7c1bd29c5f5566018a",
+    "docs/knowledge/decisions/kinh-duong-nhap-mieu.json": "8e17e83f2d335351c3007c5b85ef8d29c6e7fb8c725e3adafa003709caf84a4b",
+    "docs/knowledge/decisions/loc-ma-giao-tri.json": "cd672ea919dac6d54578c6e33ee6dbda0673817cbaf616766676ef8230ea8f34",
+    "docs/knowledge/decisions/loc-phung-xung-pha.json": "2deea5a6f346c61bc8d0de5d34ae1ed89f6012ae19b8e3d88e118cf06b651d85",
+    "docs/knowledge/decisions/ma-lac-khong-vong.json": "82ca3ed643a5e7ae77d5a5f86393a4cc87962220a3874870cb4a2d906ee15457",
+    "docs/knowledge/decisions/menh-vo-chinh-dieu.json": "ce504c6636641dfe303b3469901790758576bb5176b05564ffb17251ff29c366",
+    "docs/knowledge/decisions/minh-chau-xuat-hai.json": "7eb49180a0d32ef42f1f43c01e2c983c90c46455c03023862bf700fe89da9526",
+    "docs/knowledge/decisions/nguyet-lang-thien-mon.json": "5891edde4973883b703fa2b68b581a57467e3dd616d3924e457695a8c519bfde",
+    "docs/knowledge/decisions/nhat-le-trung-thien.json": "4d500a9f320d9839f46f9650f9aae9476dad3921e0b36be1462909f9e38c7c7e",
+    "docs/knowledge/decisions/nhat-nguyet-dong-lam.json": "050487091be6e8dfd78205a243bc6f28a0d329dbac657a5dd95491332c2cdecb",
+    "docs/knowledge/decisions/nhat-nguyet-tinh-minh.json": "1ab77a05167dabc59553e7bcf354ac74944b3c693223ea77a80efd3dfeac84ec",
+    "docs/knowledge/decisions/phiem-thuy-dao-hoa.json": "b335b81b52e2b264eaf8d7d243c3dd2308a0f8d6853f4fd2ce401d46664ff6fb",
+    "docs/knowledge/decisions/phu-tuong-trieu-vien.json": "df5e0f49866923824cbb715295c9a274d6515622bb07569f65801a02e4c73a14",
+    "docs/knowledge/decisions/quan-than-khanh-hoi.json": "ad1dd7b44012b6728fcc628add52b31d701de0e97639e4226f6253eaee5ece3b",
+    "docs/knowledge/decisions/ta-huu-dong-cung.json": "f15168e02ad46a33280b4c3a94e3ee6c16c929dc043c7bfdf6c6043ed2dd722f",
+    "docs/knowledge/decisions/tham-vu-dong-hanh.json": "ca712aae6cb949a44cd2f1ce07ee777d7fafafefe7f3e359e4a8eed4a8ea02c3",
+    "docs/knowledge/decisions/that-sat-trieu-dau.json": "765f6cfa773da5b9d9fecb97c3fc3e4ef021009462cd944f451a38af44363993",
+    "docs/knowledge/decisions/tu-phu-dong-cung.json": "b5faade35b04152126a457d6c6a2c87b0eaea75a5ad905ec466e95b8f61a93e8",
+    "docs/knowledge/decisions/tu-phu-trieu-vien.json": "e82d904b7b4d33d3bb56cd1bde723cfe94197a79462ed306f6d294c9ee552d28",
+    "docs/knowledge/interpretation-claims.json": "3b3f4587a8850c44b57953a783f404663bdd429aaa5fc75e518241e614ec4b7d",
+    "docs/knowledge/interpretation-decisions/co-nguyet-dong-luong.json": "32c277999f7afe620f5508495df79ed31cf8a16763c07b1531594ab99619144a",
+    "docs/knowledge/interpretation-decisions/juan2-family-huynh-de-tu-vi.json": "1eaca4ce00456fdf0fdd9a1076718402d13804091fb9640c47f31b08ee417795",
+    "docs/knowledge/interpretation-decisions/juan2-family-phu-the-thien-luong.json": "94951881f7d6456fea3a288c2469c0d3bbc92311b6f59ac1059a4148a0e2912c",
+    "docs/knowledge/interpretation-decisions/juan2-family-phu-the-thien-tuong.json": "9e35b3eb8e8419afa1318c4274a750b6f1c311d52f92cc31cd875af8357d35ed",
+    "docs/knowledge/interpretation-decisions/juan2-foundational-dien-trach-thien-co.json": "b08d54e14a52d2f17682b1ca4d1303aeea2424e196a30460ad3df892c27ffd04",
+    "docs/knowledge/interpretation-decisions/juan2-foundational-no-boc-thien-luong.json": "925cc96225d1e696af5e86ffc2fffb9704eaf65782fe0550174ea5ad79157339",
+    "docs/knowledge/interpretation-decisions/juan2-foundational-thien-di-cu-mon.json": "39e78665d19b1972100f89a2fdf58d15c09adfc7f21a2057ec0e24a2473c5cde",
+    "docs/knowledge/interpretation-decisions/juan2-foundational-thien-di-thien-luong.json": "101a52b3a7d25c3d76a8c5797efbf520d2bb52f993a333ae079fe0df64d0020a",
+    "docs/knowledge/interpretation-decisions/juan2-phuc-co-cu.json": "c2258755e4caec5ecb7ebfd5d46c72c8a40aa01d6f1c0b5d3f7151570251d9f3",
+    "docs/knowledge/interpretation-decisions/juan2-phuc-dong-luong.json": "5c3b27092cb303cbddd0963dfb1d61ae081c3cc7c0005bf2555de86d74452d21",
+    "docs/knowledge/interpretation-decisions/juan2-quan-co-cu-dau.json": "b4e8014c425c0716cc6d4b20e614301c28d23d544ff1c0f4a58e548436e8a99b",
+    "docs/knowledge/interpretation-decisions/juan2-quan-co-cu-mao.json": "fe33bcc6d3e7544f3d3fb7e8b56bcc34aa2c25fb711f688f81b194f4320e25b2",
+    "docs/knowledge/interpretation-decisions/juan2-tai-tuvi-pha.json": "85fafd2b78e75dd8f2e82ca2ebdc8d9c081732749e32aefcc1368fdb071b89a1",
+    "docs/knowledge/interpretation-decisions/juan2-tai-tuvi.json": "f9bc08dc182d95d524af215b8630ba4a2f011ce9da774e126cb5491947edcf74",
+    "docs/knowledge/interpretation-decisions/menh-vo-chinh-dieu.json": "1e1774dc039cad21f34f2de28bf0fa866094f34cc8ba822ad52d2276c05b5756",
+    "docs/knowledge/interpretation-decisions/tu-phu-dong-cung.json": "0eb63c851dde5aae142a521d477c5f519500f5e7cd0206db5a49857c63fd1c62",
+    "docs/knowledge/pilotClaims.json": "a5d24345c851d404f932c25fa7e8fa7f7bfa840b8b53da3a443e9bf82395c95a",
+    "docs/knowledge/research/knowledge-first-batch-1/ACQUISITION.md": "e2f834cf97a40abd299bba43dd90bf1157dd591ee510085ebd1f2c2aca69291f",
+    "docs/knowledge/research/knowledge-first-batch-1/DOSSIER.md": "48f37773c7f6c45f9086bd81f4fc8c2a7335178e12b0f025e48cfe770d050d5c",
+    "docs/knowledge/research/knowledge-first-batch-1/PALACE_GAPS.md": "a874b1760a612f72281f993324c1f5ad7705314268612e16ba34f4bf1eecd2ed",
+    "docs/knowledge/research/knowledge-first-batch-1/README.md": "36408e611fb358ac0814310cc39b53a892b13beb019c5afc83b69afde91571ab",
+    "docs/knowledge/research/knowledge-first-batch-1/evidence.json": "e69ebd6111e9ab10266ee2351871ca1714fd8df7de40100c9661c1af801ffb56",
+    "docs/knowledge/research/knowledge-first-batch-1/inventory.json": "4cef38d91238d980415b7e4b75ee5d9180a9a9238120716e0ad82f7d7e88f900",
+    "docs/knowledge/research/knowledge-first-batch-1/validate.mjs": "e21e5e5bc81cc8e54a11d10796638653f979ac600a00df6450155fd797fdfa55",
+    "docs/knowledge/research/knowledge-first-batch-2/DOSSIER.md": "b12b46f9779ded25c64fc48c8f834bf0ddc83eb7af6cdd5ec139ca50cbfb24de",
+    "docs/knowledge/research/knowledge-first-batch-2/README.md": "352a38c10187622672fa43c8b0e39821cb93dbeb631ff6870a3aaa4ff1be2c00",
+    "docs/knowledge/research/knowledge-first-batch-2/build-index.mjs": "471eddb837b79f5fad2680a3a20475f7411d0af7952e95c5bf0f619336732539",
+    "docs/knowledge/research/knowledge-first-batch-2/comparisons.json": "b4059ae79134a37985c00b8859bcc75b8af52c12fcffe9810b99538b9f5c877b",
+    "docs/knowledge/research/knowledge-first-batch-2/evidence.json": "3abf3445096720de8c579c996aea09b5b72ded31c2c718c9069eeceed80b8296",
+    "docs/knowledge/research/knowledge-first-batch-2/knowledge-records.json": "7b276fb7065263ad2894e67a96857de1fb7057fbc2a378c731794c7af0cf3125",
+    "docs/knowledge/research/knowledge-first-batch-2/major-star-palace-index.json": "c8ed6c450aa6a4e2d69fe60f218271a9b92556c335b524f4b41fae5eae7a5448",
+    "docs/knowledge/research/knowledge-first-batch-2/validate.mjs": "77325892b897b249ed07882042a62a7e4d58e251d8712ce23b7c2855024a08fd",
+    "docs/knowledge/research/knowledge-first-batch-3/DOSSIER.md": "c6023029516b1a444d09e2626d567a8924266e43493ef2235fa2518145e548bb",
+    "docs/knowledge/research/knowledge-first-batch-3/README.md": "873b57e6e9272bb236c6da4392747c237ae48db7ca53a8ad3d8ab252bfbaa1fa",
+    "docs/knowledge/research/knowledge-first-batch-3/comparisons.json": "7e91eb0f5a2149fb918710f562867d4b4edea167269063c15ed53178c0ba4505",
+    "docs/knowledge/research/knowledge-first-batch-3/evidence.json": "f865742d938ef51c88e5fa444a5664ac93441da693eccf80d94b63a277962189",
+    "docs/knowledge/research/knowledge-first-batch-3/knowledge-records.json": "7c719e7c86f4f67983367be52853a73a3f5c2baa3fab758898ba2bc8ee0f7575",
+    "docs/knowledge/research/knowledge-first-batch-3/refresh-index.mjs": "96dc114b7878451760e9eb0d6c8f3a53b690144addbdd4cdfa04b12f7ab3bdd5",
+    "docs/knowledge/research/knowledge-first-batch-3/validate.mjs": "e34f22d8dbaad776bdc0fda190782f60610cf65a949ab496e4227d153027f340",
+    "docs/knowledge/research/knowledge-first-batch-4/DOSSIER.md": "90e8198a6c4cf466fa7f99bec64f83671371059dcb0fc739e99a4e9f099a22e9",
+    "docs/knowledge/research/knowledge-first-batch-4/README.md": "cc151ceda7bede1f2271b7c888c4c5629c8f37cba9cea2152c0bee3c56c7ba40",
+    "docs/knowledge/research/knowledge-first-batch-4/comparisons.json": "24ab2b0cca2a6c28024fcdb95abb401e4ee9df94f2309097b2d6f945b3311d35",
+    "docs/knowledge/research/knowledge-first-batch-4/dispositions.json": "abcab057c7d4620c03c29314c9b315513ac1c58983fefe61afd04675058d917e",
+    "docs/knowledge/research/knowledge-first-batch-4/evidence.json": "584cbdb31bb179535a161b66f2558b4fca230b814bc1101fcb56ae694744c591",
+    "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json": "b34e6f79586c2beb703743dbe5b2ba05a8bcb8142119ac0bf4580949191e4446",
+    "docs/knowledge/research/knowledge-first-batch-4/validate.mjs": "a0741183c642f09541b7e0d29ba56d828cf9a55f73ad2983d6a46e6330269cf3",
+    "docs/knowledge/sources.json": "15749672a8a7781db4ae6c8ccbdf06f58fe0b78f268e71f5eaa396c62b503671",
+    "docs/planning/AUTODEV_MASTER_PLAN_V2.md": "3164999f6872a895b91b0f991c7e84f9674229f423f2498e59118988a7cb0395"
+  },
+  "historicalSnapshotHashMethod": "UTF8 CRLF normalized LF; no other normalization",
+  "historicalPolicy": "All Batch1–4 files including historical helpers/validators preserved. Batch5 owns the current bounded refresh/validator; no historical snapshot rewritten.",
+  "retention": "Original analytic records and locators only; no new book/article/PDF/dataset body retained",
+  "validation": {
+    "packet": "PASS: 11 records, 12 authored comparisons, 2 dependent collations; 48 canonical records / 38 cells; 14 open dispositions with all ten originals retained",
+    "unitChecks": "PASS: five focused validator/helper tests",
+    "historicalSnapshots": "PASS: 74 protected historical/registry/decision/history files, normalized-LF SHA256",
+    "documentationCheckerTests": "PASS",
+    "documentationLinks": "PASS: 295 Markdown files",
+    "whitespace": "PASS: git diff --check",
+    "applicationFiles": "No changes; research-only diff allowlist checked against base commit",
+    "limits": "Consistency/self-audit only. No independent source review, original-edition authentication, expert validation or application test suite."
+  }
+}
