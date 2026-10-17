@@ -82,7 +82,9 @@ assert.ok(names.some((item) => item.name === 'Tử Phủ Đồng Cung'));
 assert.ok(names.every((item) => item.expertVerified === false && item.publicInterpretationAllowed === false));
 assert.ok(!names.some((item) => item.engineeringState === 'DISABLED' || item.engineeringState === 'INTERNAL_ONLY'));
 assert.ok(analysis.statements.every((item) => item.prose === null));
-assert.ok(analysis.statements.every((item) => item.availabilityStatus !== 'eligible_claims_present'));
+const menhStatement = analysis.statements.find((item) => item.statementId === 'palace:menh');
+assert.ok(menhStatement.formulaEvaluations.some((item) => item.name === 'Tử Phủ Đồng Cung'));
+assert.notStrictEqual(menhStatement.availabilityStatus, 'eligible_claims_present');
 
 const before = JSON.stringify(positive.chart.palaces);
 evaluations(positive.chart, 'modern-108s');

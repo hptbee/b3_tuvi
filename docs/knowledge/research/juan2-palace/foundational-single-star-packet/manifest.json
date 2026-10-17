@@ -1,0 +1,74 @@
+{
+  "status": "FROZEN_PROPOSAL_NOT_APPROVED",
+  "revision": 1,
+  "candidateCount": 4,
+  "fixtureCount": 112,
+  "positiveCount": 96,
+  "negativeCount": 16,
+  "allFixtureInputsAPIValid": true,
+  "files": {
+    "README.md": "d5bcbd5a92aedc98c78cb066cbd38d99a7ce1e4ad241cbb60863c86f0bb14e2a",
+    "STATUS.md": "8e34519041ea79eda007176cc939d0f4f00f619a5bacb224e28939c8fcd468a4",
+    "candidate-report.md": "65ea1705826245eb392ecc6ba2cb7a8309031e3b905fb64fcf9095f2678f89a2",
+    "coverage-projection.json": "3aafd61a193626065bdfb010d3df4d4052187a02c6c7306eb9c76dd33b69a27a",
+    "derived-juan2.txt": "b824c61e1bdec55ecdc7123ff1e79bce9648f07d67d054c43a59ce731572d4a7",
+    "dien-trach-full-section.txt": "9faf5bda3f394161267039e63915d61a9ab37319ebf1a9adc833f52730ed6877",
+    "dien-trach-thien-co-context.txt": "dcc35fed124101895768b322b65bca804bfd9279afd747f20dd3579e02a05971",
+    "dien-trach-thien-co-span.txt": "4aeb0c94263499259240be3230a90c6aa9227135c49131029c638d834fadecdd",
+    "fixtures.json": "589d4de619b52bcde1cbdf94824db4dba1916c8b7299b025773f45372fba9ead",
+    "independent-fixture-research.mjs": "47c8fe002d6ebf9ca96929e2050b64dd7972e0b86d992e9b8596468149378bb0",
+    "independent-fixtures.json": "e77501aa052e0fb8ea025cfda0f9ddabaf1a71e376da7f0b9248e318a7f7715d",
+    "mirror-LICENSE.txt": "e6c7b6e313cbda3135b41bccc66c98be132cb8319d0d465903d17e669e748b36",
+    "natal-cu-mon.txt": "c8968d50c4125876f5e6b3f9e4ad3da5d3a4976ad80d0390ad696d71cce2915e",
+    "natal-thien-co.txt": "512e902a01179a8bd05903717322fb4d483594849223a5f4078a189c12a043e3",
+    "natal-thien-luong.txt": "be8f333ac05035e0182eadad3dfb8b8aa8adbef0a9c2deb49f516a29915b50d7",
+    "no-boc-full-section.txt": "37ae5195d2d4f65fecde82dacecc7572c7ad9944d26905e61057ed841896280e",
+    "no-boc-thien-luong-context.txt": "5c5f7a54b37ec1695bd08f0b6c8691760955c3c3c1bdc33cae4569838986acf2",
+    "no-boc-thien-luong-span.txt": "525f6d99ce9ea7241944b550fe9587f318eaad1e32c4d24bca43bc6380549989",
+    "raw-juan2.html": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+    "review-bundle.json": "a0e055e85ca462a52c2deb6a6c1af64d8e4fdf65f06e4268d2b1e57ee0fc9dfe",
+    "review-output-contract.json": "890825f68a598768402d9ab1d81d3a9406bc18abb7630f4dafdb61638365e50d",
+    "source-identity.json": "e64bea56180e457366e8bd134d66310af27ff419954f20593fa2f65c8e656ceb",
+    "source-provenance.json": "a550a08f88ea8ce47668dbe84bbfb4db0e2929ba4e11d1ba88ca776e0668ef1a",
+    "thien-di-cu-mon-context.txt": "bb3286776f073e145c1ca12a20c79d1bf81afdd626a0bedd3abac9574a873e73",
+    "thien-di-cu-mon-span.txt": "07a3061d21a4bbc92d6d0f06d8915ea3a6a52b87f1a74d7f5a537ff04dd7bce7",
+    "thien-di-full-section.txt": "543a7bda5d3b2f0de535d52328e3dff8e1ca929a0d3ed26751a6580bdfeb1fe7",
+    "thien-di-thien-luong-context.txt": "e5319ff9178dfe2c269c1ca97db08ef187a59cfe044d3ab2449c1b7e638cadee",
+    "thien-di-thien-luong-span.txt": "dd94a7c808ecefcfe95c66fd8f6c3ec2e6b61a6bb23f604a56a4b9e64be8b217",
+    "verify-proposal.mjs": "a0b105b216efcec0e484c766efddeeb6c1a5cf1bc31f8ab1ed01a20bd2492033",
+    "verify-source.py": "4a6ed691bbdad66695d968325131f01adc44cb05d013d8f8a77565c70a38f2f0"
+  },
+  "candidateDigests": {
+    "interp-quanshu-thien-di-thien-luong-host": {
+      "sourceDigest": "dd94a7c808ecefcfe95c66fd8f6c3ec2e6b61a6bb23f604a56a4b9e64be8b217",
+      "contextDigest": "e5319ff9178dfe2c269c1ca97db08ef187a59cfe044d3ab2449c1b7e638cadee",
+      "conditionTreeDigest": "f09f1fe7b4476fa3b3991eb6a7129b9c1bfce1d459e74d180cb9617422605869",
+      "wordingDigest": "870f7b3a90dcbedeb9829a39d464085b55f0d8174edfd94dcee09f99cad4bb25",
+      "fixturesDigest": "9704f4c4e926fb61af1d79a3e20ffce785d5e372de424f6e0ac357d3ab440062"
+    },
+    "interp-quanshu-no-boc-thien-luong-host": {
+      "sourceDigest": "525f6d99ce9ea7241944b550fe9587f318eaad1e32c4d24bca43bc6380549989",
+      "contextDigest": "5c5f7a54b37ec1695bd08f0b6c8691760955c3c3c1bdc33cae4569838986acf2",
+      "conditionTreeDigest": "d4d3437aa6b1cddeebf08546b61fc59e8be95b854194d6cd60786b01690c4b50",
+      "wordingDigest": "c3002bfb51953aece27e0871bf9df6bbe60fca73083685f892a503af6f4f130f",
+      "fixturesDigest": "a61319638ed1c8ca0fd96cca0ebf5657bfbad5dc4bedab18cce8adfedec722f5"
+    },
+    "interp-quanshu-thien-di-cu-mon-host": {
+      "sourceDigest": "07a3061d21a4bbc92d6d0f06d8915ea3a6a52b87f1a74d7f5a537ff04dd7bce7",
+      "contextDigest": "bb3286776f073e145c1ca12a20c79d1bf81afdd626a0bedd3abac9574a873e73",
+      "conditionTreeDigest": "47a77add0f31e36965310131185d13fbf825a6823ba3138e38c0c957cc25f833",
+      "wordingDigest": "fa83219c0dea5a5be74fbeb1dbc7063564a9a416fb703c59a88e89b3c210dd9e",
+      "fixturesDigest": "206de75c37766f01fc1a10148a8a0bbb27a021303c4e4f3b996627df6ef22a06"
+    },
+    "interp-quanshu-dien-trach-thien-co-host": {
+      "sourceDigest": "4aeb0c94263499259240be3230a90c6aa9227135c49131029c638d834fadecdd",
+      "contextDigest": "dcc35fed124101895768b322b65bca804bfd9279afd747f20dd3579e02a05971",
+      "conditionTreeDigest": "b29b13f211f2928407a4ef7c6ac77a7b8b4cf64db177ca3bb1c2981fa7557b9e",
+      "wordingDigest": "2e86d4a925be056009cb346b566e539650374c9b9637fad04608bb8634cc623e",
+      "fixturesDigest": "4adf22000781ce980959d38ceb1bf3f49553b4bbc472ea22cd5c28be0195121a"
+    }
+  },
+  "actualSourceReviewsExecuted": 0,
+  "sourceApproval": false,
+  "publicRelease": false
+}

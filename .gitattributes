@@ -31,3 +31,10 @@ docs/knowledge/research/fortune/modern-decadal-mutagen/** text eol=lf
 
 # Unapproved T034 candidate: preserve frozen source/fixture bytes for future fresh reviews.
 docs/knowledge/research/fortune/modern-minor-stem/** text eol=lf
+
+# T037 exact source, wording, fixtures and actual independent judgments.
+docs/knowledge/research/juan2-palace/foundational-single-star-packet/** text eol=lf
+# These reviewed helpers contain original CRLF bytes; preserve them verbatim.
+docs/knowledge/research/juan2-palace/foundational-single-star-packet/independent-fixture-research.mjs -text
+docs/knowledge/research/juan2-palace/foundational-single-star-packet/verify-proposal.mjs -text
+docs/knowledge/research/juan2-palace/foundational-single-star-packet/verify-source.py -text

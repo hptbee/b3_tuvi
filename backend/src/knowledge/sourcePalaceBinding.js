@@ -26,7 +26,74 @@ const QUAN_RESOURCES = {
 };
 const CLAIMS = 'docs/knowledge/interpretation-claims.json';
 const SOURCES = 'docs/knowledge/sources.json';
+const FOUNDATIONAL_RESOURCES = {
+    evidenceBase: 'docs/knowledge/research/juan2-palace/foundational-single-star-packet/',
+    reviewA: 'docs/knowledge/research/juan2-palace/foundational-single-star-packet/review-a.json',
+    reviewB: 'docs/knowledge/research/juan2-palace/foundational-single-star-packet/review-b.json',
+    bundleFile: 'docs/knowledge/research/juan2-palace/foundational-single-star-packet/review-bundle.json',
+    executionFile: 'docs/knowledge/research/juan2-palace/foundational-single-star-packet/execution.json',
+    reviewDocumentDigests: [
+        '88e717a166970004d4d5134136724e4c96cebaca285213698101f8a6cf43ed76',
+        '524f6941bded067b55de7d8019b94bcf7443f5f5b8bd426322317fff73f0bde3'
+    ]
+};
 const SUBJECTS = {
+    'interp-quanshu-thien-di-thien-luong-host': {
+        ...FOUNDATIONAL_RESOURCES,
+        decisionRef: 'docs/knowledge/interpretation-decisions/juan2-foundational-thien-di-thien-luong.json',
+        target: 'thien_di',
+        spanFile: 'thien-di-thien-luong-span.txt',
+        contextFile: 'thien-di-thien-luong-context.txt',
+        acceptedDigests: {
+            sourceDigest: 'dd94a7c808ecefcfe95c66fd8f6c3ec2e6b61a6bb23f604a56a4b9e64be8b217',
+            contextDigest: 'e5319ff9178dfe2c269c1ca97db08ef187a59cfe044d3ab2449c1b7e638cadee',
+            conditionTreeDigest: 'f09f1fe7b4476fa3b3991eb6a7129b9c1bfce1d459e74d180cb9617422605869',
+            wordingDigest: '870f7b3a90dcbedeb9829a39d464085b55f0d8174edfd94dcee09f99cad4bb25',
+            fixturesDigest: '9704f4c4e926fb61af1d79a3e20ffce785d5e372de424f6e0ac357d3ab440062'
+        }
+    },
+    'interp-quanshu-no-boc-thien-luong-host': {
+        ...FOUNDATIONAL_RESOURCES,
+        decisionRef: 'docs/knowledge/interpretation-decisions/juan2-foundational-no-boc-thien-luong.json',
+        target: 'no_boc',
+        spanFile: 'no-boc-thien-luong-span.txt',
+        contextFile: 'no-boc-thien-luong-context.txt',
+        acceptedDigests: {
+            sourceDigest: '525f6d99ce9ea7241944b550fe9587f318eaad1e32c4d24bca43bc6380549989',
+            contextDigest: '5c5f7a54b37ec1695bd08f0b6c8691760955c3c3c1bdc33cae4569838986acf2',
+            conditionTreeDigest: 'd4d3437aa6b1cddeebf08546b61fc59e8be95b854194d6cd60786b01690c4b50',
+            wordingDigest: 'c3002bfb51953aece27e0871bf9df6bbe60fca73083685f892a503af6f4f130f',
+            fixturesDigest: 'a61319638ed1c8ca0fd96cca0ebf5657bfbad5dc4bedab18cce8adfedec722f5'
+        }
+    },
+    'interp-quanshu-thien-di-cu-mon-host': {
+        ...FOUNDATIONAL_RESOURCES,
+        decisionRef: 'docs/knowledge/interpretation-decisions/juan2-foundational-thien-di-cu-mon.json',
+        target: 'thien_di',
+        spanFile: 'thien-di-cu-mon-span.txt',
+        contextFile: 'thien-di-cu-mon-context.txt',
+        acceptedDigests: {
+            sourceDigest: '07a3061d21a4bbc92d6d0f06d8915ea3a6a52b87f1a74d7f5a537ff04dd7bce7',
+            contextDigest: 'bb3286776f073e145c1ca12a20c79d1bf81afdd626a0bedd3abac9574a873e73',
+            conditionTreeDigest: '47a77add0f31e36965310131185d13fbf825a6823ba3138e38c0c957cc25f833',
+            wordingDigest: 'fa83219c0dea5a5be74fbeb1dbc7063564a9a416fb703c59a88e89b3c210dd9e',
+            fixturesDigest: '206de75c37766f01fc1a10148a8a0bbb27a021303c4e4f3b996627df6ef22a06'
+        }
+    },
+    'interp-quanshu-dien-trach-thien-co-host': {
+        ...FOUNDATIONAL_RESOURCES,
+        decisionRef: 'docs/knowledge/interpretation-decisions/juan2-foundational-dien-trach-thien-co.json',
+        target: 'dien_trach',
+        spanFile: 'dien-trach-thien-co-span.txt',
+        contextFile: 'dien-trach-thien-co-context.txt',
+        acceptedDigests: {
+            sourceDigest: '4aeb0c94263499259240be3230a90c6aa9227135c49131029c638d834fadecdd',
+            contextDigest: 'dcc35fed124101895768b322b65bca804bfd9279afd747f20dd3579e02a05971',
+            conditionTreeDigest: 'b29b13f211f2928407a4ef7c6ac77a7b8b4cf64db177ca3bb1c2981fa7557b9e',
+            wordingDigest: '2e86d4a925be056009cb346b566e539650374c9b9637fad04608bb8634cc623e',
+            fixturesDigest: '4adf22000781ce980959d38ceb1bf3f49553b4bbc472ea22cd5c28be0195121a'
+        }
+    },
     'interp-quanshu-tai-bach-tu-vi-four-adverse-host': {
         ...ORIGINAL_RESOURCES,
         decisionRef: 'docs/knowledge/interpretation-decisions/juan2-tai-tuvi.json',
@@ -102,7 +169,7 @@ const SUBJECTS = {
 const FILES = new Set([
     CLAIMS, SOURCES,
     ...Object.values(SUBJECTS).flatMap((subject) => [subject.decisionRef, subject.reviewA, subject.reviewB,
-        subject.bundleFile, subject.executionFile, RESEARCH + subject.spanFile, RESEARCH + subject.contextFile])
+        subject.bundleFile, subject.executionFile, (subject.evidenceBase || RESEARCH) + subject.spanFile, (subject.evidenceBase || RESEARCH) + subject.contextFile])
 ]);
 const text = (value) => typeof value === 'string' && value.trim() !== '' && value === value.trim();
 const object = (value) => value !== null && typeof value === 'object' && !Array.isArray(value);
@@ -123,7 +190,7 @@ function loadEvidence(subject) {
         claims: json(CLAIMS).claims, sources: json(SOURCES),
         decision: json(subject.decisionRef), bundle: json(subject.bundleFile),
         reviewA: json(subject.reviewA), reviewB: json(subject.reviewB), execution: json(subject.executionFile),
-        span: read(RESEARCH + subject.spanFile), context: read(RESEARCH + subject.contextFile)
+        span: read((subject.evidenceBase || RESEARCH) + subject.spanFile), context: read((subject.evidenceBase || RESEARCH) + subject.contextFile)
     };
 }
 
@@ -176,7 +243,7 @@ export function verifyStoredSourcePalaceEvidence(claimId, evidence = {}) {
         || decision.subjectId !== claimId || decision.claimId !== claimId || !text(decision.decisionId)
         || decision.interpretationDecision !== 'AI_CROSS_REVIEWED' || decision.interpretationVerdict !== VERDICT
         || decision.reviewBundleFile !== subject.bundleFile || decision.executionFile !== subject.executionFile
-        || decision.spanFile !== RESEARCH + subject.spanFile || decision.contextFile !== RESEARCH + subject.contextFile
+        || decision.spanFile !== (subject.evidenceBase || RESEARCH) + subject.spanFile || decision.contextFile !== (subject.evidenceBase || RESEARCH) + subject.contextFile
         || decision.sourcePin !== PIN || decision.artifactSha256 !== HTML_DIGEST
         || decision.bookVerified !== false || decision.publicRelease !== false || decision.releasePermission !== 'withheld'
         || decision.runtimeRuleChangeApplied !== false || decision.compatibilityNote !== COMPATIBILITY

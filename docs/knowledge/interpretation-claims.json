@@ -369,6 +369,196 @@
         "no_public_release"
       ],
       "compatibilityNote": "condition_read_only_projection_not_natal_formula_certification"
+    },
+    {
+      "claimId": "interp-quanshu-thien-di-thien-luong-host",
+      "claimType": "interpretation",
+      "interpretationKind": "source_palace_interpretation",
+      "sourceId": "ziwei-quanshu-iztro-transcription",
+      "editionId": "iztro-juan2-2f00e2ab0c80",
+      "section": "juan2/遷移宮/天梁",
+      "schoolId": "vn-tam-hop-default",
+      "sourceProfile": "quanshu-iztro-2f00e2ab",
+      "sourceReviewStatus": "AI_CROSS_REVIEWED",
+      "interpretationDecisionRef": "docs/knowledge/interpretation-decisions/juan2-foundational-thien-di-thien-luong.json",
+      "formulaComparisonStatus": "MATCH",
+      "approvedForInterpretation": true,
+      "interpretationStatus": "sourced",
+      "releasePermission": "withheld",
+      "expertVerified": false,
+      "bookVerified": false,
+      "relatedPalaces": [
+        "thien_di"
+      ],
+      "conditionTree": {
+        "op": "star_present",
+        "target": "thien_di",
+        "star": "Thiên Lương"
+      },
+      "conditionIds": [
+        "palace_thien_di",
+        "thien_luong_in_host",
+        "direct_host_only"
+      ],
+      "approvedWording": "Với Thiên Lương trực tiếp ở Thiên Di, bản chép Juan2 mở mục bằng hình ảnh ra ngoài gần người quyền quý, được quý nhân giúp thành việc. Đây chỉ là ghi chú hình ảnh của câu mở đầu trong nguồn; các nhánh đồng cung Thiên Đồng và Thiên Cơ chưa được diễn giải, không phải kết luận về cuộc đời.",
+      "limitations": [
+        "literal_source_opening_annotation_only",
+        "direct_host_only",
+        "not_a_standalone_star_predicate",
+        "cohost_branches_preserved_not_evaluated",
+        "not_an_integrated_palace_judgment",
+        "not_a_whole_chart_judgment",
+        "natal_star_section_retained_not_imported_as_palace_conditions",
+        "not_a_brightness_change",
+        "source_brightness_not_engine_equivalence",
+        "not_a_verified_life_event",
+        "no_public_release"
+      ],
+      "compatibilityNote": "condition_read_only_projection_not_natal_formula_certification"
+    },
+    {
+      "claimId": "interp-quanshu-no-boc-thien-luong-host",
+      "claimType": "interpretation",
+      "interpretationKind": "source_palace_interpretation",
+      "sourceId": "ziwei-quanshu-iztro-transcription",
+      "editionId": "iztro-juan2-2f00e2ab0c80",
+      "section": "juan2/奴仆宮/天梁",
+      "schoolId": "vn-tam-hop-default",
+      "sourceProfile": "quanshu-iztro-2f00e2ab",
+      "sourceReviewStatus": "AI_CROSS_REVIEWED",
+      "interpretationDecisionRef": "docs/knowledge/interpretation-decisions/juan2-foundational-no-boc-thien-luong.json",
+      "formulaComparisonStatus": "MATCH",
+      "approvedForInterpretation": true,
+      "interpretationStatus": "sourced",
+      "releasePermission": "withheld",
+      "expertVerified": false,
+      "bookVerified": false,
+      "relatedPalaces": [
+        "no_boc"
+      ],
+      "conditionTree": {
+        "op": "star_present",
+        "target": "no_boc",
+        "star": "Thiên Lương"
+      },
+      "conditionIds": [
+        "palace_no_boc",
+        "thien_luong_in_host",
+        "direct_host_only"
+      ],
+      "approvedWording": "Với Thiên Lương trực tiếp ở Nô Bộc, bản chép Juan2 dùng hình ảnh nhiều người hầu giúp chủ. Đây là cách gọi quan hệ chủ–tớ trong văn bản cổ, không được tự đổi thành lời dự đoán về bạn bè hoặc đồng nghiệp; các nhánh đồng cung chưa được diễn giải.",
+      "limitations": [
+        "literal_source_opening_annotation_only",
+        "direct_host_only",
+        "not_a_standalone_star_predicate",
+        "cohost_branches_preserved_not_evaluated",
+        "not_an_integrated_palace_judgment",
+        "not_a_whole_chart_judgment",
+        "natal_star_section_retained_not_imported_as_palace_conditions",
+        "not_a_brightness_change",
+        "source_brightness_not_engine_equivalence",
+        "not_a_verified_life_event",
+        "no_public_release",
+        "historical_servant_role_not_general_friend_or_colleague",
+        "not_a_relationship_prediction"
+      ],
+      "compatibilityNote": "condition_read_only_projection_not_natal_formula_certification"
+    },
+    {
+      "claimId": "interp-quanshu-thien-di-cu-mon-host",
+      "claimType": "interpretation",
+      "interpretationKind": "source_palace_interpretation",
+      "sourceId": "ziwei-quanshu-iztro-transcription",
+      "editionId": "iztro-juan2-2f00e2ab0c80",
+      "section": "juan2/遷移宮/巨門",
+      "schoolId": "vn-tam-hop-default",
+      "sourceProfile": "quanshu-iztro-2f00e2ab",
+      "sourceReviewStatus": "AI_CROSS_REVIEWED",
+      "interpretationDecisionRef": "docs/knowledge/interpretation-decisions/juan2-foundational-thien-di-cu-mon.json",
+      "formulaComparisonStatus": "MATCH",
+      "approvedForInterpretation": true,
+      "interpretationStatus": "sourced",
+      "releasePermission": "withheld",
+      "expertVerified": false,
+      "bookVerified": false,
+      "relatedPalaces": [
+        "thien_di"
+      ],
+      "conditionTree": {
+        "op": "star_present",
+        "target": "thien_di",
+        "star": "Cự Môn"
+      },
+      "conditionIds": [
+        "palace_thien_di",
+        "cu_mon_in_host",
+        "direct_host_only"
+      ],
+      "approvedWording": "Với Cự Môn trực tiếp ở Thiên Di, câu mở đầu trong bản chép Juan2 dùng hình ảnh ra ngoài lo nghĩ, khó yên và dễ có điều tiếng trong quan hệ. Đây là ghi chú lời nguồn; nhánh gia Kình, Đà, Hỏa, Linh, Không, Kiếp còn được giữ nhưng chưa đánh giá, không phải dự báo sự việc.",
+      "limitations": [
+        "literal_source_opening_annotation_only",
+        "direct_host_only",
+        "not_a_standalone_star_predicate",
+        "cohost_branches_preserved_not_evaluated",
+        "not_an_integrated_palace_judgment",
+        "not_a_whole_chart_judgment",
+        "natal_star_section_retained_not_imported_as_palace_conditions",
+        "not_a_brightness_change",
+        "source_brightness_not_engine_equivalence",
+        "not_a_verified_life_event",
+        "no_public_release",
+        "six_adverse_intensifier_retained_not_evaluated",
+        "not_a_diagnosis_or_behavior_prediction"
+      ],
+      "compatibilityNote": "condition_read_only_projection_not_natal_formula_certification"
+    },
+    {
+      "claimId": "interp-quanshu-dien-trach-thien-co-host",
+      "claimType": "interpretation",
+      "interpretationKind": "source_palace_interpretation",
+      "sourceId": "ziwei-quanshu-iztro-transcription",
+      "editionId": "iztro-juan2-2f00e2ab0c80",
+      "section": "juan2/田宅宮/天機",
+      "schoolId": "vn-tam-hop-default",
+      "sourceProfile": "quanshu-iztro-2f00e2ab",
+      "sourceReviewStatus": "AI_CROSS_REVIEWED",
+      "interpretationDecisionRef": "docs/knowledge/interpretation-decisions/juan2-foundational-dien-trach-thien-co.json",
+      "formulaComparisonStatus": "MATCH",
+      "approvedForInterpretation": true,
+      "interpretationStatus": "sourced",
+      "releasePermission": "withheld",
+      "expertVerified": false,
+      "bookVerified": false,
+      "relatedPalaces": [
+        "dien_trach"
+      ],
+      "conditionTree": {
+        "op": "star_present",
+        "target": "dien_trach",
+        "star": "Thiên Cơ"
+      },
+      "conditionIds": [
+        "palace_dien_trach",
+        "thien_co_in_host",
+        "direct_host_only"
+      ],
+      "approvedWording": "Với Thiên Cơ trực tiếp ở Điền Trạch, bản chép Juan2 mở mục bằng hình ảnh rời sản nghiệp tổ tiên và tạo dựng mới. Ghi chú này chỉ thuật lại câu mở đầu, chưa tổng hợp các nhánh Cự Môn ở Mão/Dậu, Thiên Lương và Thái Âm, không phải dự đoán tài sản.",
+      "limitations": [
+        "literal_source_opening_annotation_only",
+        "direct_host_only",
+        "not_a_standalone_star_predicate",
+        "cohost_branches_preserved_not_evaluated",
+        "not_an_integrated_palace_judgment",
+        "not_a_whole_chart_judgment",
+        "natal_star_section_retained_not_imported_as_palace_conditions",
+        "not_a_brightness_change",
+        "source_brightness_not_engine_equivalence",
+        "not_a_verified_life_event",
+        "no_public_release",
+        "mao_dau_cohost_distinction_retained_not_evaluated",
+        "not_a_property_prediction"
+      ],
+      "compatibilityNote": "condition_read_only_projection_not_natal_formula_certification"
     }
   ]
 }

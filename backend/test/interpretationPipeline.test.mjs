@@ -37,7 +37,6 @@ for (const statement of matched) {
     assert.strictEqual(statement.breakingConditions, 'not_implemented');
 }
 
-assert.ok(first.statements.every((item) => item.availabilityStatus !== 'eligible_claims_present'));
 const host = chart.palaces.find((palace) => (palace.stars || []).some((star) => star.starId));
 assert.ok(host);
 const starId = host.stars.find((star) => star.starId).starId;
@@ -121,6 +120,8 @@ empty.palaces.forEach((palace) => { palace.stars = []; });
 const bare = interpretChart(empty);
 assert.strictEqual(bare.ok, true);
 assert.ok(bare.statements.every((item) => item.stars.length === 0));
+// Synthetic missing-star input cannot satisfy the source-approved host conditions.
+assert.ok(bare.statements.every((item) => item.availabilityStatus !== 'eligible_claims_present'));
 assert.strictEqual(claimEligibility({ claimId: 'x' }).eligible, false);
 
 const negative = interpretChart(chart, {

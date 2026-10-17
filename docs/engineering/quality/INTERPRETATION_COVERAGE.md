@@ -11,3 +11,11 @@ Snapshots include eligible claim identities on each fixed chart. Comparison reje
 The initial seven-claim subset has92matchingcharts,94claimhits and2charts with overlapping claims. Approved claims occupy Mệnh, Phúc Đức, Quan Lộc and Tài Bạch. New claims must preserve that subset. Targets30% and50% never override source scope or reviews.
 
 The command fails if chart/knowledge construction is unavailable, readings omit a registered claim, or public prose/release gates open. It accepts no private birth inputs or custom approval. It changes no API, chart, claim or release permission. Browser testing is unnecessary for this offline report.
+
+## First foundational tranche
+
+Four separately reviewed source opening annotations add Thiên Lương at Thiên Di and Nô Bộc, Cự Môn at Thiên Di, and Thiên Cơ at Điền Trạch. The exact direct-host predicates and attributed wording have actual independent source decisions; this does not approve an integrated palace judgment or real-life prediction. Historical Nô Bộc terminology remains historical servants, without generalization to modern friends or colleagues.
+
+The unchanged fixed cohort rises from92/1152(7.99%) to419/1152(36.37%):327newly matching charts,92retained,0lost. Registered source-bound claims increase7→11 and palace coverage4→7. There are472claimhits over419distinctcharts;53charts have overlapping claims. Existing seven-claim membership sets remain unchanged. Per-palace positives are Mệnh2, Phúc Đức38, Quan Lộc22, Tài Bạch30, Điền Trạch92, Nô Bộc92 and Thiên Di194; Phụ Mẫu, Tật Ách, Tử Tức, Phu Thê and Huynh Đệ remain0. These counts describe eligible internal source notes, not public readings or complete interpretations.
+
+Each new claim's positives/negatives on the1,152charts are: Thiên Lương–Thiên Di96/1056, Thiên Lương–Nô Bộc92/1060, Cự Môn–Thiên Di98/1054, Thiên Cơ–Điền Trạch92/1060. None has an unresolved runtime predicate on this cohort. Retained source modifiers and historical authentication remain outside that runtime observation. Full evidence and exact scope are recorded in the [source packet](../../knowledge/research/juan2-palace/foundational-single-star-packet/CURRENT_STATUS.md).

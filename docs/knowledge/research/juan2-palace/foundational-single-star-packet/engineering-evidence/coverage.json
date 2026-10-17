@@ -1,0 +1,484 @@
+{
+  "classification": "actual source-bound internal opening-note applicability, not predictions or public release",
+  "cohortId": "solar-1984-1995-monthly15-hours0-6-12-18-sex-v1",
+  "inputSha256": "832ede7ac4ad680293365b09c2f4f2861a042802d6014d0eb2ad429bdbfdb630",
+  "baselineCodeCommit": "98496ca93c2097cacc59d53d1886695446f9fb03",
+  "replay": "node backend/scripts/interpretationApplicability.mjs --baseline before.json",
+  "before": {
+    "charts": 1152,
+    "approvedExecutableClaims": 7,
+    "palacesWithApprovedClaims": 4,
+    "chartsWithAnyClaim": 92,
+    "chartsWithoutAnyClaim": 1060,
+    "applicabilityPercent": 7.986111111111111,
+    "claimHits": 94,
+    "chartsWithOverlappingClaims": 2
+  },
+  "after": {
+    "charts": 1152,
+    "approvedExecutableClaims": 11,
+    "palacesWithApprovedClaims": 7,
+    "chartsWithAnyClaim": 419,
+    "chartsWithoutAnyClaim": 733,
+    "applicabilityPercent": 36.37152777777778,
+    "claimHits": 472,
+    "chartsWithOverlappingClaims": 53
+  },
+  "comparison": {
+    "gainedCharts": 327,
+    "lostCharts": 0,
+    "retainedCharts": 92,
+    "netCharts": 327,
+    "perPalace": {
+      "menh": {
+        "gained": 0,
+        "lost": 0,
+        "before": 2,
+        "after": 2
+      },
+      "phu_mau": {
+        "gained": 0,
+        "lost": 0,
+        "before": 0,
+        "after": 0
+      },
+      "phuc_duc": {
+        "gained": 0,
+        "lost": 0,
+        "before": 38,
+        "after": 38
+      },
+      "dien_trach": {
+        "gained": 92,
+        "lost": 0,
+        "before": 0,
+        "after": 92
+      },
+      "quan_loc": {
+        "gained": 0,
+        "lost": 0,
+        "before": 22,
+        "after": 22
+      },
+      "no_boc": {
+        "gained": 92,
+        "lost": 0,
+        "before": 0,
+        "after": 92
+      },
+      "thien_di": {
+        "gained": 194,
+        "lost": 0,
+        "before": 0,
+        "after": 194
+      },
+      "tat_ach": {
+        "gained": 0,
+        "lost": 0,
+        "before": 0,
+        "after": 0
+      },
+      "tai_bach": {
+        "gained": 0,
+        "lost": 0,
+        "before": 30,
+        "after": 30
+      },
+      "tu_tuc": {
+        "gained": 0,
+        "lost": 0,
+        "before": 0,
+        "after": 0
+      },
+      "phu_the": {
+        "gained": 0,
+        "lost": 0,
+        "before": 0,
+        "after": 0
+      },
+      "huynh_de": {
+        "gained": 0,
+        "lost": 0,
+        "before": 0,
+        "after": 0
+      }
+    }
+  },
+  "perClaim": {
+    "interp-tu-phu-dong-cung-giap-menh": {
+      "claimId": "interp-tu-phu-dong-cung-giap-menh",
+      "palace": "menh",
+      "bindingVerified": true,
+      "limitations": [
+        "giap_age_only",
+        "not_a_verified_life_event",
+        "verse_vo_sat_not_in_approved_sentence",
+        "grade_not_certified",
+        "breaking_not_implemented"
+      ],
+      "positive": 2,
+      "negative": 1150,
+      "unresolved": 0,
+      "reasons": {
+        "year_stem_not_met": 960,
+        "formula_runtime_not_matched": 1138
+      }
+    },
+    "interp-quanshu-tai-bach-tu-vi-four-adverse-host": {
+      "claimId": "interp-quanshu-tai-bach-tu-vi-four-adverse-host",
+      "palace": "tai_bach",
+      "bindingVerified": true,
+      "limitations": [
+        "paragraph_scoped_only",
+        "direct_host_sufficient_subset_only",
+        "khong_kiep_aliases_not_implemented",
+        "not_a_brightness_change",
+        "not_a_verified_life_event",
+        "no_whole_chart_or_public_release"
+      ],
+      "positive": 22,
+      "negative": 1130,
+      "unresolved": 0,
+      "reasons": {
+        "conditions_not_met": 1130
+      }
+    },
+    "interp-quanshu-phuc-duc-dong-luong-host": {
+      "claimId": "interp-quanshu-phuc-duc-dong-luong-host",
+      "palace": "phuc_duc",
+      "bindingVerified": true,
+      "limitations": [
+        "paragraph_scoped_only",
+        "dong_cu_tension_not_adjudicated",
+        "no_inherited_longevity_claim",
+        "not_a_whole_chart_judgment",
+        "not_a_verified_life_event",
+        "no_public_release"
+      ],
+      "positive": 20,
+      "negative": 1132,
+      "unresolved": 0,
+      "reasons": {
+        "conditions_not_met": 1132
+      }
+    },
+    "interp-quanshu-quan-loc-co-cu-dau-host": {
+      "claimId": "interp-quanshu-quan-loc-co-cu-dau-host",
+      "palace": "quan_loc",
+      "bindingVerified": true,
+      "limitations": [
+        "paragraph_scoped_only",
+        "textual_branch_clause_only",
+        "modifier_not_evaluated",
+        "following_adverse_clause_not_omitted",
+        "not_an_integrated_career_judgment",
+        "not_a_whole_chart_judgment",
+        "not_a_brightness_change",
+        "source_brightness_not_engine_equivalence",
+        "not_a_verified_life_event",
+        "no_public_release"
+      ],
+      "positive": 4,
+      "negative": 1148,
+      "unresolved": 0,
+      "reasons": {
+        "conditions_not_met": 1148
+      }
+    },
+    "interp-quanshu-phuc-co-cu-host": {
+      "claimId": "interp-quanshu-phuc-co-cu-host",
+      "palace": "phuc_duc",
+      "bindingVerified": true,
+      "limitations": [
+        "reciprocal_paragraph_baseline_only",
+        "direct_host_only",
+        "added_adverse_clauses_retained_but_not_evaluated",
+        "kong_kiep_aliases_not_implemented",
+        "no_invented_brightness_or_branch_requirement",
+        "not_personality_or_health_diagnosis",
+        "not_a_whole_chart_judgment",
+        "not_a_verified_life_event",
+        "no_natal_formula_change",
+        "no_public_release"
+      ],
+      "positive": 18,
+      "negative": 1134,
+      "unresolved": 0,
+      "reasons": {
+        "conditions_not_met": 1134
+      }
+    },
+    "interp-quanshu-tai-tuvi-pha-quan-host": {
+      "claimId": "interp-quanshu-tai-tuvi-pha-quan-host",
+      "palace": "tai_bach",
+      "bindingVerified": true,
+      "limitations": [
+        "primary_paragraph_baseline_only",
+        "direct_host_only",
+        "reciprocal_context_retained_not_harmonized",
+        "added_adverse_clauses_retained_but_not_evaluated",
+        "kong_kiep_aliases_not_implemented",
+        "no_invented_brightness_or_branch_requirement",
+        "no_age_or_date_prediction",
+        "not_a_whole_chart_judgment",
+        "not_a_verified_life_event",
+        "no_natal_formula_change",
+        "no_public_release"
+      ],
+      "positive": 10,
+      "negative": 1142,
+      "unresolved": 0,
+      "reasons": {
+        "conditions_not_met": 1142
+      }
+    },
+    "interp-quanshu-quan-co-cu-mao-host": {
+      "claimId": "interp-quanshu-quan-co-cu-mao-host",
+      "palace": "quan_loc",
+      "bindingVerified": true,
+      "limitations": [
+        "paragraph_scoped_only",
+        "textual_branch_clause_only",
+        "modifier_not_evaluated",
+        "following_adverse_clause_not_omitted",
+        "not_an_integrated_career_judgment",
+        "not_a_whole_chart_judgment",
+        "not_a_brightness_change",
+        "source_brightness_not_engine_equivalence",
+        "not_a_verified_life_event",
+        "no_public_release"
+      ],
+      "positive": 18,
+      "negative": 1134,
+      "unresolved": 0,
+      "reasons": {
+        "conditions_not_met": 1134
+      }
+    },
+    "interp-quanshu-thien-di-thien-luong-host": {
+      "claimId": "interp-quanshu-thien-di-thien-luong-host",
+      "palace": "thien_di",
+      "bindingVerified": true,
+      "limitations": [
+        "literal_source_opening_annotation_only",
+        "direct_host_only",
+        "not_a_standalone_star_predicate",
+        "cohost_branches_preserved_not_evaluated",
+        "not_an_integrated_palace_judgment",
+        "not_a_whole_chart_judgment",
+        "natal_star_section_retained_not_imported_as_palace_conditions",
+        "not_a_brightness_change",
+        "source_brightness_not_engine_equivalence",
+        "not_a_verified_life_event",
+        "no_public_release"
+      ],
+      "positive": 96,
+      "negative": 1056,
+      "unresolved": 0,
+      "reasons": {
+        "conditions_not_met": 1056
+      }
+    },
+    "interp-quanshu-no-boc-thien-luong-host": {
+      "claimId": "interp-quanshu-no-boc-thien-luong-host",
+      "palace": "no_boc",
+      "bindingVerified": true,
+      "limitations": [
+        "literal_source_opening_annotation_only",
+        "direct_host_only",
+        "not_a_standalone_star_predicate",
+        "cohost_branches_preserved_not_evaluated",
+        "not_an_integrated_palace_judgment",
+        "not_a_whole_chart_judgment",
+        "natal_star_section_retained_not_imported_as_palace_conditions",
+        "not_a_brightness_change",
+        "source_brightness_not_engine_equivalence",
+        "not_a_verified_life_event",
+        "no_public_release",
+        "historical_servant_role_not_general_friend_or_colleague",
+        "not_a_relationship_prediction"
+      ],
+      "positive": 92,
+      "negative": 1060,
+      "unresolved": 0,
+      "reasons": {
+        "conditions_not_met": 1060
+      }
+    },
+    "interp-quanshu-thien-di-cu-mon-host": {
+      "claimId": "interp-quanshu-thien-di-cu-mon-host",
+      "palace": "thien_di",
+      "bindingVerified": true,
+      "limitations": [
+        "literal_source_opening_annotation_only",
+        "direct_host_only",
+        "not_a_standalone_star_predicate",
+        "cohost_branches_preserved_not_evaluated",
+        "not_an_integrated_palace_judgment",
+        "not_a_whole_chart_judgment",
+        "natal_star_section_retained_not_imported_as_palace_conditions",
+        "not_a_brightness_change",
+        "source_brightness_not_engine_equivalence",
+        "not_a_verified_life_event",
+        "no_public_release",
+        "six_adverse_intensifier_retained_not_evaluated",
+        "not_a_diagnosis_or_behavior_prediction"
+      ],
+      "positive": 98,
+      "negative": 1054,
+      "unresolved": 0,
+      "reasons": {
+        "conditions_not_met": 1054
+      }
+    },
+    "interp-quanshu-dien-trach-thien-co-host": {
+      "claimId": "interp-quanshu-dien-trach-thien-co-host",
+      "palace": "dien_trach",
+      "bindingVerified": true,
+      "limitations": [
+        "literal_source_opening_annotation_only",
+        "direct_host_only",
+        "not_a_standalone_star_predicate",
+        "cohost_branches_preserved_not_evaluated",
+        "not_an_integrated_palace_judgment",
+        "not_a_whole_chart_judgment",
+        "natal_star_section_retained_not_imported_as_palace_conditions",
+        "not_a_brightness_change",
+        "source_brightness_not_engine_equivalence",
+        "not_a_verified_life_event",
+        "no_public_release",
+        "mao_dau_cohost_distinction_retained_not_evaluated",
+        "not_a_property_prediction"
+      ],
+      "positive": 92,
+      "negative": 1060,
+      "unresolved": 0,
+      "reasons": {
+        "conditions_not_met": 1060
+      }
+    }
+  },
+  "perPalace": {
+    "menh": {
+      "approvedClaims": 1,
+      "positive": 2,
+      "negative": 1150,
+      "unresolved": 0
+    },
+    "phu_mau": {
+      "approvedClaims": 0,
+      "positive": 0,
+      "negative": 1152,
+      "unresolved": 0
+    },
+    "phuc_duc": {
+      "approvedClaims": 2,
+      "positive": 38,
+      "negative": 1114,
+      "unresolved": 0
+    },
+    "dien_trach": {
+      "approvedClaims": 1,
+      "positive": 92,
+      "negative": 1060,
+      "unresolved": 0
+    },
+    "quan_loc": {
+      "approvedClaims": 2,
+      "positive": 22,
+      "negative": 1130,
+      "unresolved": 0
+    },
+    "no_boc": {
+      "approvedClaims": 1,
+      "positive": 92,
+      "negative": 1060,
+      "unresolved": 0
+    },
+    "thien_di": {
+      "approvedClaims": 2,
+      "positive": 194,
+      "negative": 958,
+      "unresolved": 0
+    },
+    "tat_ach": {
+      "approvedClaims": 0,
+      "positive": 0,
+      "negative": 1152,
+      "unresolved": 0
+    },
+    "tai_bach": {
+      "approvedClaims": 2,
+      "positive": 30,
+      "negative": 1122,
+      "unresolved": 0
+    },
+    "tu_tuc": {
+      "approvedClaims": 0,
+      "positive": 0,
+      "negative": 1152,
+      "unresolved": 0
+    },
+    "phu_the": {
+      "approvedClaims": 0,
+      "positive": 0,
+      "negative": 1152,
+      "unresolved": 0
+    },
+    "huynh_de": {
+      "approvedClaims": 0,
+      "positive": 0,
+      "negative": 1152,
+      "unresolved": 0
+    }
+  },
+  "claimCountHistogram": {
+    "0": 733,
+    "1": 366,
+    "2": 53
+  },
+  "nonzeroPairwiseOverlap": [
+    {
+      "claimIds": [
+        "interp-tu-phu-dong-cung-giap-menh",
+        "interp-quanshu-no-boc-thien-luong-host"
+      ],
+      "charts": 2
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-tai-bach-tu-vi-four-adverse-host",
+        "interp-quanshu-tai-tuvi-pha-quan-host"
+      ],
+      "charts": 2
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-tai-bach-tu-vi-four-adverse-host",
+        "interp-quanshu-no-boc-thien-luong-host"
+      ],
+      "charts": 5
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-quan-loc-co-cu-dau-host",
+        "interp-quanshu-thien-di-thien-luong-host"
+      ],
+      "charts": 4
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-quan-co-cu-mao-host",
+        "interp-quanshu-thien-di-thien-luong-host"
+      ],
+      "charts": 18
+    },
+    {
+      "claimIds": [
+        "interp-quanshu-no-boc-thien-luong-host",
+        "interp-quanshu-dien-trach-thien-co-host"
+      ],
+      "charts": 22
+    }
+  ]
+}

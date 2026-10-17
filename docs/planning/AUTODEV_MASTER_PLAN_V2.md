@@ -412,3 +412,11 @@ Capability coverage at baseline: chart generation/normalization, Formula V1 matc
 
 Release remains **NO-GO** pending actual staging (SPA refresh/API/catalog/mobile/print), shared proxy rate-limit validation, rollback rehearsal, monitoring/runbook agreement and owner sign-off. Source/edition/expert verification, disputed fortune age/offset semantics, production knowledge migration, public Tử Vi prose and AI narration keep their existing separate gates. Passing code checks does not satisfy them. No auto-merge or deployment is authorized.
 
+## Foundational internal interpretation coverage — PR62 continuation
+
+The fixed1,152-chart applicability command measures actual source-bound production eligibility across all12palaces and records overlap and per-chart identity for before/after comparison. Its seven-claim baseline is92matchingcharts(7.99%),94claimhits and2overlaps; it does not count hypothetical source candidates.
+
+The first foundational tranche has separate actual two-model acceptance for four exact single-major-star opening annotations at Thiên Di, Nô Bộc and Điền Trạch. Existing predicates, source identities and natal/default/public gates remain unchanged. Actual fixed-cohort applicability is419/1152(36.37%),11claims and7palaces, with327gains and0losses. These are source-attributed internal notes with explicitly retained cohost/adverse limits, not integrated palace readings. See [measurement and limits](../engineering/quality/INTERPRETATION_COVERAGE.md).
+
+Continue progressively into Huynh Đệ and Phu Thê only after new exact source/wording/fixture reviews; previous approvals do not transfer. Phụ Mẫu, Tử Tức and Tật Ách require unresolved governing context, rather than invented broad single-star predictions. T034 remains unapproved and independent. Target30%then50%guides selection without weakening any approval gate. Use existing draftPR62 and its branch; no newPR, merge, deploy or public narration.
+
