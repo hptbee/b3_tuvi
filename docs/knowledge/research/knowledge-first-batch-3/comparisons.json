@@ -1,0 +1,285 @@
+{
+  "batchId": "KR-B3-20261017",
+  "comparisons": [
+    {
+      "comparisonId": "B3C01",
+      "recordIds": [
+        "KRB3-M-ZIWEI"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution, not print-authenticated)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "section": "TỬ VI / 1, 3–6",
+        "readerLines": [
+          2957,
+          3102
+        ],
+        "page": null,
+        "language": "vi",
+        "originalQuotation": null
+      },
+      "observationVi": "V tranh luận bảng sáng và giữ điều kiện trợ/sát; không xác nhận toàn bộ can/vị trí Q.",
+      "family": "ham-so-attributed-web",
+      "independence": "Separate authored attribution; embedded Thái Thứ Lang citations and any borrowing are not independent third witnesses",
+      "rights": "Original bounded note and precise locator; no quotation or full body retained; permissions unknown",
+      "status": "COMPARED_WITH_EDITION_LIMITS"
+    },
+    {
+      "comparisonId": "B3C02",
+      "recordIds": [
+        "KRB3-M-PHU"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution, not print-authenticated)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "section": "THIÊN PHỦ / 3–4",
+        "readerLines": [
+          2745,
+          2781
+        ],
+        "page": null,
+        "language": "vi",
+        "originalQuotation": null
+      },
+      "observationVi": "V giữ giới hạn chế sát, đặc biệt khi đủ bốn sao; không phải miễn mọi sát.",
+      "family": "ham-so-attributed-web",
+      "independence": "Separate authored attribution; embedded Thái Thứ Lang citations and any borrowing are not independent third witnesses",
+      "rights": "Original bounded note and precise locator; no quotation or full body retained; permissions unknown",
+      "status": "COMPARED_WITH_EDITION_LIMITS"
+    },
+    {
+      "comparisonId": "B3C03",
+      "recordIds": [
+        "KRB3-QL-LUONG"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution, not print-authenticated)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "section": "THIÊN LƯƠNG / 7 / e) Ở QUAN",
+        "readerLines": [
+          2684,
+          2697
+        ],
+        "page": null,
+        "language": "vi",
+        "originalQuotation": null
+      },
+      "observationVi": "V phân vị trí/nghề; không giải chữ 廟午 hay xác nhận mọi nhánh sát Q.",
+      "family": "ham-so-attributed-web",
+      "independence": "Separate authored attribution; embedded Thái Thứ Lang citations and any borrowing are not independent third witnesses",
+      "rights": "Original bounded note and precise locator; no quotation or full body retained; permissions unknown",
+      "status": "COMPARED_WITH_EDITION_LIMITS"
+    },
+    {
+      "comparisonId": "B3C04",
+      "recordIds": [
+        "KRB3-TB-PHU"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution, not print-authenticated)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "section": "THIÊN PHỦ / 6 / b) Ở TÀI, ĐIỀN; section4",
+        "readerLines": [
+          2791,
+          2792
+        ],
+        "page": null,
+        "language": "vi",
+        "originalQuotation": null
+      },
+      "observationVi": "V dùng vị trí và đồng cung thuận; giữ giới hạn sát ở phần chung.",
+      "family": "ham-so-attributed-web",
+      "independence": "Separate authored attribution; embedded Thái Thứ Lang citations and any borrowing are not independent third witnesses",
+      "rights": "Original bounded note and precise locator; no quotation or full body retained; permissions unknown",
+      "status": "COMPARED_WITH_EDITION_LIMITS"
+    },
+    {
+      "comparisonId": "B3C05",
+      "recordIds": [
+        "KRB3-PD-AM"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution, not print-authenticated)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "section": "THÁI ÂM / 9 / k) Ở PHÚC",
+        "readerLines": [
+          1603,
+          1605
+        ],
+        "page": null,
+        "language": "vi",
+        "originalQuotation": null
+      },
+      "observationVi": "V nói sáng và âm đức; không lặp toàn bộ tâm bận/đồng cung Q.",
+      "family": "ham-so-attributed-web",
+      "independence": "Separate authored attribution; embedded Thái Thứ Lang citations and any borrowing are not independent third witnesses",
+      "rights": "Original bounded note and precise locator; no quotation or full body retained; permissions unknown",
+      "status": "COMPARED_WITH_EDITION_LIMITS"
+    },
+    {
+      "comparisonId": "B3C06",
+      "recordIds": [
+        "KRB3-TD-DUONG"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution, not print-authenticated)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "section": "THÁI DƯƠNG / f) Ở DI",
+        "readerLines": [
+          1859,
+          1863
+        ],
+        "page": null,
+        "language": "vi",
+        "originalQuotation": null
+      },
+      "observationVi": "V thêm sáng, Tam Hóa và trợ tinh; không tương đương điều kiện ra ngoài chung.",
+      "family": "ham-so-attributed-web",
+      "independence": "Separate authored attribution; embedded Thái Thứ Lang citations and any borrowing are not independent third witnesses",
+      "rights": "Original bounded note and precise locator; no quotation or full body retained; permissions unknown",
+      "status": "COMPARED_WITH_EDITION_LIMITS"
+    },
+    {
+      "comparisonId": "B3C07",
+      "recordIds": [
+        "KRB3-DT-AM"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution, not print-authenticated)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "section": "THÁI ÂM / 9 / j) Ở ĐIỀN",
+        "readerLines": [
+          1598,
+          1601
+        ],
+        "page": null,
+        "language": "vi",
+        "originalQuotation": null
+      },
+      "observationVi": "V phân sáng/hãm; chưa xác nhận các tổ hợp tự tạo và sát cụ thể Q.",
+      "family": "ham-so-attributed-web",
+      "independence": "Separate authored attribution; embedded Thái Thứ Lang citations and any borrowing are not independent third witnesses",
+      "rights": "Original bounded note and precise locator; no quotation or full body retained; permissions unknown",
+      "status": "COMPARED_WITH_EDITION_LIMITS"
+    },
+    {
+      "comparisonId": "B3C08",
+      "recordIds": [
+        "KRB3-PT-DUONG"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution, not print-authenticated)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "section": "THÁI DƯƠNG / b) Ở PHU THÊ",
+        "readerLines": [
+          1831,
+          1840
+        ],
+        "page": null,
+        "language": "vi",
+        "originalQuotation": null
+      },
+      "observationVi": "V có nhánh Nhật–Nguyệt miếu thuận duyên sớm, tạo căng thẳng phạm vi với Q.",
+      "family": "ham-so-attributed-web",
+      "independence": "Separate authored attribution; embedded Thái Thứ Lang citations and any borrowing are not independent third witnesses",
+      "rights": "Original bounded note and precise locator; no quotation or full body retained; permissions unknown",
+      "status": "COMPARED_WITH_EDITION_LIMITS"
+    },
+    {
+      "comparisonId": "B3C10",
+      "recordIds": [
+        "KRB3-TA-PHU-V"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution, not print-authenticated)",
+        "work": "Tử Vi Hàm Số — selected web witness",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "section": "THIÊN PHỦ / 6 / c) Ở TẬT; section4",
+        "readerLines": [
+          2794,
+          2796
+        ],
+        "page": null,
+        "language": "vi",
+        "originalQuotation": null
+      },
+      "observationVi": "V có lời giảm tai ở Tật; phần chung vẫn hạn chế chế sát.",
+      "family": "ham-so-attributed-web",
+      "independence": "Separate authored attribution; embedded Thái Thứ Lang citations and any borrowing are not independent third witnesses",
+      "rights": "Original bounded note and precise locator; no quotation or full body retained; permissions unknown",
+      "status": "COMPARED_WITH_EDITION_LIMITS"
+    },
+    {
+      "comparisonId": "B3C09",
+      "recordIds": [
+        "KRB3-QL-LUONG"
+      ],
+      "sourceReference": {
+        "provisionalWitnessId": "ling-donglai-minglixue-tianliang-154",
+        "sourceId": null,
+        "editionId": null,
+        "author": "令东来",
+        "work": "紫微斗数命理学：天梁星",
+        "url": "https://www.xuanmen.com.cn/archives/154.html",
+        "section": "第七节、天梁星 / paragraph beginning 天梁在官禄宫时",
+        "page": null,
+        "language": "zh-Hans",
+        "originalQuotation": null
+      },
+      "observationVi": "Tác giả phân trợ/độ sáng, văn tinh và sát theo chức năng; không chỉ xếp cùng cấp bình như Q.",
+      "family": "ling-donglai-authored-commentary",
+      "independence": "Author-published modern analysis; quotations of Quanshu/陸斌兆 in the same article remain dependent, not another inspected edition",
+      "rights": "Original bounded analysis and locator only; no article copy retained",
+      "status": "COMPARED_AUTHORED_WEB_CONTEXT_NOT_PRINT_EDITION"
+    },
+    {
+      "comparisonId": "B3C11",
+      "recordIds": [
+        "KRB3-M-LUONG"
+      ],
+      "sourceReference": {
+        "provisionalWitnessId": "ling-donglai-minglixue-tianliang-154",
+        "sourceId": null,
+        "editionId": null,
+        "author": "令东来",
+        "work": "紫微斗数命理学：天梁星",
+        "url": "https://www.xuanmen.com.cn/archives/154.html",
+        "section": "第七节、天梁星 / paragraphs on 同梁 寅申 and male 日照雷门",
+        "page": null,
+        "language": "zh-Hans",
+        "originalQuotation": null
+      },
+      "observationVi": "Bài theo Thân hãm; riêng nhánh Nhật chiếu Lương dùng Dần–Mùi ngày, Thân–Sửu đêm. Không giải dị văn Q.",
+      "family": "ling-donglai-authored-commentary",
+      "independence": "Author-published modern analysis; quotations of Quanshu/陸斌兆 in the same article remain dependent, not another inspected edition",
+      "rights": "Original bounded analysis and locator only; no article copy retained",
+      "status": "COMPARED_AUTHORED_WEB_CONTEXT_NOT_PRINT_EDITION"
+    }
+  ]
+}

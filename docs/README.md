@@ -51,7 +51,7 @@ Do not create a competing “Master Plan V3”. Completed sprint **reports** liv
 
 Research priority and batch selection belong to the [knowledge research roadmap](planning/ROADMAP_KNOWLEDGE_RESEARCH.md). The two lists above retain detailed combination gaps, not a competing roadmap. Registered identities remain in [sources.json](knowledge/sources.json); the [dated source register](tuvi/TU_VI_SOURCE_REGISTRY.md) and [source coverage report](knowledge/SOURCE_COVERAGE_REPORT.md) retain their historical scope. New topic research reuses [knowledge/research/](knowledge/research/), existing passages, reviews and decisions.
 
-Latest bounded research: [Batch 2 — Deep interpretation knowledge](knowledge/research/knowledge-first-batch-2/README.md), with nine persisted conditional knowledge records, comparison evidence and the 168-cell research index. [Batch 1](knowledge/research/knowledge-first-batch-1/README.md) preserves the source/edition and repository audit. Acceptance for research storage does not grant source, runtime or release approval.
+Latest bounded research: [Batch 3 — Multi-source expansion](knowledge/research/knowledge-first-batch-3/README.md), adding 14 persisted records (11 new star/palace cells, two linked witness supplements and one terminology record). The [cumulative record reference](knowledge/research/KNOWLEDGE_RECORD_INDEX.json) links 23 records across 20 contextual cells without copying historical records. [Batch 2](knowledge/research/knowledge-first-batch-2/README.md) preserves the 168-cell navigation baseline; [Batch 1](knowledge/research/knowledge-first-batch-1/README.md) preserves the acquisition audit. Research storage grants no source, runtime or release approval.
 
 ## Thần Số Học domain
 
