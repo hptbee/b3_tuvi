@@ -1,0 +1,1367 @@
+{
+  "batchId": "KR-B2-20261017",
+  "purpose": "Persistent non-runtime research knowledge; accepted for research storage is not source/runtime/public approval",
+  "conventionRef": "docs/tuvi/KNOWLEDGE_CLAIM_MODEL.md",
+  "records": [
+    {
+      "recordId": "KRB2-PM-ZIWEI",
+      "claimType": "interpretation",
+      "subject": {
+        "starId": "tu_vi",
+        "palaceId": "phu_mau"
+      },
+      "schoolId": null,
+      "schoolScope": "Quanshu digital transmission only; no universal school equivalence asserted",
+      "sourceReferences": [
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "work": "紫微斗數全書 / Juan2",
+          "author": null,
+          "authorAttribution": "Traditional attribution unresolved; no authenticated author/print edition established",
+          "schoolId": null,
+          "section": "十二父母 / 紫微",
+          "page": null,
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 819,
+            "endLine": 819,
+            "sha256": "494150ddc49adc232d4f775b0a62bbd758b9c0ae7728d9ae30abae8a1b088982",
+            "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+          },
+          "originalLanguage": "zh-Hant",
+          "originalQuotation": null,
+          "quotationPolicy": "Reference to existing retained text; no new source-text copy",
+          "digitalPin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+          "bibliographicStatus": "secondary_transcription_original_edition_unauthenticated",
+          "family": "quanshu-transmission",
+          "supportType": "paraphrase",
+          "comparedDigitalWitness": {
+            "sourceId": "ziwei-quanshu-tradition",
+            "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷二&oldid=1963110",
+            "webReaderLines": [
+              1595,
+              1595
+            ],
+            "independentFamily": false,
+            "scope": "Selected spans and complete three priority sections read; no full-file equality claimed"
+          }
+        }
+      ],
+      "governingContext": {
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 818,
+          "endLine": 818,
+          "sha256": "527ade043dd46e7895658280aa27e4b602824737051f7ae2a17f703237fa8794",
+          "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+        },
+        "meaningVi": "Preamble đặt Nhật/Nguyệt làm biểu tượng cha/mẹ, phân biệt hãm, ngày/đêm sinh và sáng/tối; sau đó phối bản cung và ác sát. Lời tự nhận nghiệm của văn bản không phải kiểm chứng thực nghiệm.",
+        "dependencies": [
+          "thai_duong",
+          "thai_am",
+          "birth_day_or_night",
+          "brightness",
+          "palace_star_and_adverse_context"
+        ],
+        "uncertainty": "Không tự xác định ngưỡng ngày/đêm hay bảng độ sáng; cách ngắt câu phản bối/ám hối cần bản in."
+      },
+      "comparisonIds": [
+        "V01"
+      ],
+      "sourceFamilyDependencies": [
+        "quanshu-transmission; Wikisource and iztro are related witnesses, not independent authorities",
+        "ham-so-attributed-web: separately authored attribution, original edition and independence not fully authenticated"
+      ],
+      "researchStorage": "accepted_for_bounded_research_with_uncertainty",
+      "status": {
+        "collection": "COLLECTED",
+        "contextMapping": "CONTEXT_MAPPED",
+        "comparison": "performed_with_edition_limits",
+        "research": "CONFLICTING",
+        "sourceReview": "not_executed",
+        "runtimeApproval": "not_requested",
+        "publicRelease": "withheld_closed"
+      },
+      "verificationStatus": {
+        "implementationStatus": "not_executable",
+        "formulaStatus": "undocumented",
+        "bibliographicStatus": "secondary",
+        "interpretationStatus": "unreviewed"
+      },
+      "rights": {
+        "retention": "Original Vietnamese analytical paraphrase, source locators and hashes only; no new book/corpus copy",
+        "classicalAndModernLayers": "Old underlying work distinct from modern transcription; original authentication not established",
+        "modernComparator": "No quotation or bulk text retained; permissions unknown; see comparisons.json",
+        "publicPersonalInterpretationPermission": "not_granted"
+      },
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-2/DOSSIER.md#krb2-pm-ziwei",
+      "evidenceRef": "docs/knowledge/research/knowledge-first-batch-2/evidence.json",
+      "exclusions": [
+        "Không dùng làm dự đoán cá nhân hoặc tư vấn sức khỏe/sinh sản/gia đình",
+        "Không chuyển thành điều kiện runtime hay kế thừa phê duyệt của đoạn khác"
+      ],
+      "predicate": "Mô tả thuận của Tử Vi ở Phụ Mẫu bị giới hạn bởi sát tinh và tổ hợp đồng cung.",
+      "meaningVi": "Đoạn mở đầu dùng vô khắc; Thiên Phủ và Thiên Tướng đồng cung được gắn vô hình. Tham Lang đi cùng chỉ thuộc nhánh thuận khi không thêm sát. Phá Quân đồng cung và nhánh thêm Dương/Đà/Hỏa/Linh/Không/Kiếp chuyển sang ngôn ngữ hình khắc. Đây là lời sách về quan hệ gia đình lịch sử, không phải sự kiện đời.",
+      "conditions": [
+        "Tử Vi ở Phụ Mẫu; giữ preamble Nhật/Nguyệt và ngày/đêm",
+        "Nhánh Tham Lang thuận yêu cầu rõ không thêm sát"
+      ],
+      "modifiers": [
+        "thien_phu đồng cung",
+        "thien_tuong đồng cung",
+        "tham_lang đồng cung + vô sát",
+        "pha_quan đồng cung",
+        "duong_da_hoa_linh_khong_kiep"
+      ],
+      "exceptions": [
+        "Không suy từ vô khắc đầu câu thành miễn mọi hình khắc"
+      ],
+      "relationships": [
+        {
+          "type": "same_palace",
+          "stars": [
+            "thien_phu",
+            "thien_tuong",
+            "tham_lang",
+            "pha_quan"
+          ]
+        },
+        {
+          "type": "preamble_dependency",
+          "stars": [
+            "thai_duong",
+            "thai_am"
+          ]
+        }
+      ],
+      "positiveBranches": [
+        "Mở đầu vô khắc; Phủ/Tướng đồng cung vô hình; Tham đồng cung phải vô sát"
+      ],
+      "adverseBranches": [
+        "Thêm nhóm sát nêu tên vẫn khắc",
+        "Phá đồng cung được mô tả khắc sớm"
+      ],
+      "uncertainties": [
+        "V01 giữ bất đồng về phạm vi Tham đồng cung; chưa xác thực bản in Hàm Số",
+        "加 không được tự hiểu chỉ đồng cung hoặc mọi hội chiếu; không có phép ưu tiên khi nhiều nhánh cùng xuất hiện"
+      ],
+      "contradicts": [
+        "V01: potential scope conflict; no adjudication"
+      ],
+      "nextAction": "Đối chiếu đúng đoạn Tham đồng cung trong bản in Hàm Số và bản cổ có định danh."
+    },
+    {
+      "recordId": "KRB2-PM-LUONG",
+      "claimType": "interpretation",
+      "subject": {
+        "starId": "thien_luong",
+        "palaceId": "phu_mau"
+      },
+      "schoolId": null,
+      "schoolScope": "Quanshu digital transmission only; no universal school equivalence asserted",
+      "sourceReferences": [
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "work": "紫微斗數全書 / Juan2",
+          "author": null,
+          "authorAttribution": "Traditional attribution unresolved; no authenticated author/print edition established",
+          "schoolId": null,
+          "section": "十二父母 / 天梁; reciprocal 太陽",
+          "page": null,
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 832,
+            "endLine": 833,
+            "sha256": "09463570afcb2a3499e698def85211dd36ba19deb8e36ee0237ad90213e5808a",
+            "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+          },
+          "originalLanguage": "zh-Hant",
+          "originalQuotation": null,
+          "quotationPolicy": "Reference to existing retained text; no new source-text copy",
+          "digitalPin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+          "bibliographicStatus": "secondary_transcription_original_edition_unauthenticated",
+          "family": "quanshu-transmission",
+          "supportType": "paraphrase",
+          "comparedDigitalWitness": {
+            "sourceId": "ziwei-quanshu-tradition",
+            "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷二&oldid=1963110",
+            "webReaderLines": [
+              1608,
+              1609
+            ],
+            "independentFamily": false,
+            "scope": "Selected spans and complete three priority sections read; no full-file equality claimed"
+          }
+        }
+      ],
+      "governingContext": {
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 818,
+          "endLine": 818,
+          "sha256": "527ade043dd46e7895658280aa27e4b602824737051f7ae2a17f703237fa8794",
+          "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+        },
+        "meaningVi": "Preamble đặt Nhật/Nguyệt làm biểu tượng cha/mẹ, phân biệt hãm, ngày/đêm sinh và sáng/tối; sau đó phối bản cung và ác sát. Lời tự nhận nghiệm của văn bản không phải kiểm chứng thực nghiệm.",
+        "dependencies": [
+          "thai_duong",
+          "thai_am",
+          "birth_day_or_night",
+          "brightness",
+          "palace_star_and_adverse_context"
+        ],
+        "uncertainty": "Không tự xác định ngưỡng ngày/đêm hay bảng độ sáng; cách ngắt câu phản bối/ám hối cần bản in."
+      },
+      "comparisonIds": [
+        "V02"
+      ],
+      "sourceFamilyDependencies": [
+        "quanshu-transmission; Wikisource and iztro are related witnesses, not independent authorities",
+        "ham-so-attributed-web: separately authored attribution, original edition and independence not fully authenticated"
+      ],
+      "researchStorage": "accepted_for_bounded_research_with_uncertainty",
+      "status": {
+        "collection": "COLLECTED",
+        "contextMapping": "CONTEXT_MAPPED",
+        "comparison": "performed_with_edition_limits",
+        "research": "CONFLICTING",
+        "sourceReview": "not_executed",
+        "runtimeApproval": "not_requested",
+        "publicRelease": "withheld_closed"
+      },
+      "verificationStatus": {
+        "implementationStatus": "not_executable",
+        "formulaStatus": "undocumented",
+        "bibliographicStatus": "secondary",
+        "interpretationStatus": "unreviewed"
+      },
+      "rights": {
+        "retention": "Original Vietnamese analytical paraphrase, source locators and hashes only; no new book/corpus copy",
+        "classicalAndModernLayers": "Old underlying work distinct from modern transcription; original authentication not established",
+        "modernComparator": "No quotation or bulk text retained; permissions unknown; see comparisons.json",
+        "publicPersonalInterpretationPermission": "not_granted"
+      },
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-2/DOSSIER.md#krb2-pm-luong",
+      "evidenceRef": "docs/knowledge/research/knowledge-first-batch-2/evidence.json",
+      "exclusions": [
+        "Không dùng làm dự đoán cá nhân hoặc tư vấn sức khỏe/sinh sản/gia đình",
+        "Không chuyển thành điều kiện runtime hay kế thừa phê duyệt của đoạn khác"
+      ],
+      "predicate": "Thiên Lương ở Phụ Mẫu có nhánh lạc hãm/sát và các tổ hợp riêng, không phải phúc tinh tuyệt đối.",
+      "meaningVi": "Lạc hãm đi với Dương/Đà/Hỏa/Linh dẫn vào mô tả cô khắc và các hình thức rời tổ/gửi nuôi/đổi danh. Đồng–Lương được tách có bốn sát thì hình, vô sát thì vô hình; Cơ–Lương vô hình. Nhật–Lương ở mục Lương ghi khắc muộn, thêm bốn sát/Không Kiếp thành sớm, trong khi mục Nhật ghi Lương đồng cung vô hình. Các cách gửi nuôi/đổi danh là quan niệm hóa giải lịch sử, không khuyến nghị hành động.",
+      "conditions": [
+        "Thiên Lương ở Phụ Mẫu",
+        "Giữ lạc hãm và nhóm sát trong nhánh đầu; không tách lạc hãm thành tất yếu độc lập"
+      ],
+      "modifiers": [
+        "thien_dong đồng cung + có/không bốn sát",
+        "thien_co đồng cung",
+        "thai_duong đồng cung + bốn sát/Không Kiếp",
+        "historical_rearing_alternatives"
+      ],
+      "exceptions": [
+        "Nhật–Lương: không tự chọn câu vô hình hay câu khắc muộn làm đúng duy nhất"
+      ],
+      "relationships": [
+        {
+          "type": "same_palace",
+          "stars": [
+            "thien_dong",
+            "thien_co",
+            "thai_duong"
+          ]
+        },
+        {
+          "type": "reciprocal_entry",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 822,
+            "endLine": 823,
+            "sha256": "3bfe36b1ad3d4e9b08a41899e2083f9051c13d8bfc3d7b371bb75a8c64427416",
+            "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+          }
+        }
+      ],
+      "positiveBranches": [
+        "Đồng–Lương vô sát: vô hình",
+        "Cơ–Lương: vô hình"
+      ],
+      "adverseBranches": [
+        "Đồng–Lương có bốn sát: hình",
+        "Nhật–Lương mục Lương: muộn; thêm nhóm sát nêu tên: sớm"
+      ],
+      "uncertainties": [
+        "Bất đồng nội văn với mục Thái Dương có thể do lược điều kiện hoặc dị bản; chưa phân xử",
+        "V02 mô tả các vị trí tốt/xấu; không đủ để giải quyết cặp Nhật–Lương này"
+      ],
+      "contradicts": [
+        "KRB2-PM-DUONG: reciprocal wording differs for Sun/Luong; inputs not fully specified"
+      ],
+      "nextAction": "Ưu tiên ảnh bản cổ ở cả hai mục Nhật/Lương và chú giải rõ điều kiện bị lược."
+    },
+    {
+      "recordId": "KRB2-PM-DUONG",
+      "claimType": "interpretation",
+      "subject": {
+        "starId": "thai_duong",
+        "palaceId": "phu_mau"
+      },
+      "schoolId": null,
+      "schoolScope": "Quanshu digital transmission only; no universal school equivalence asserted",
+      "sourceReferences": [
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "work": "紫微斗數全書 / Juan2",
+          "author": null,
+          "authorAttribution": "Traditional attribution unresolved; no authenticated author/print edition established",
+          "schoolId": null,
+          "section": "十二父母 / 太陽",
+          "page": null,
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 822,
+            "endLine": 823,
+            "sha256": "3bfe36b1ad3d4e9b08a41899e2083f9051c13d8bfc3d7b371bb75a8c64427416",
+            "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+          },
+          "originalLanguage": "zh-Hant",
+          "originalQuotation": null,
+          "quotationPolicy": "Reference to existing retained text; no new source-text copy",
+          "digitalPin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+          "bibliographicStatus": "secondary_transcription_original_edition_unauthenticated",
+          "family": "quanshu-transmission",
+          "supportType": "paraphrase",
+          "comparedDigitalWitness": {
+            "sourceId": "ziwei-quanshu-tradition",
+            "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷二&oldid=1963110",
+            "webReaderLines": [
+              1598,
+              1599
+            ],
+            "independentFamily": false,
+            "scope": "Selected spans and complete three priority sections read; no full-file equality claimed"
+          }
+        }
+      ],
+      "governingContext": {
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 818,
+          "endLine": 818,
+          "sha256": "527ade043dd46e7895658280aa27e4b602824737051f7ae2a17f703237fa8794",
+          "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+        },
+        "meaningVi": "Preamble đặt Nhật/Nguyệt làm biểu tượng cha/mẹ, phân biệt hãm, ngày/đêm sinh và sáng/tối; sau đó phối bản cung và ác sát. Lời tự nhận nghiệm của văn bản không phải kiểm chứng thực nghiệm.",
+        "dependencies": [
+          "thai_duong",
+          "thai_am",
+          "birth_day_or_night",
+          "brightness",
+          "palace_star_and_adverse_context"
+        ],
+        "uncertainty": "Không tự xác định ngưỡng ngày/đêm hay bảng độ sáng; cách ngắt câu phản bối/ám hối cần bản in."
+      },
+      "comparisonIds": [
+        "V03"
+      ],
+      "sourceFamilyDependencies": [
+        "quanshu-transmission; Wikisource and iztro are related witnesses, not independent authorities",
+        "ham-so-attributed-web: separately authored attribution, original edition and independence not fully authenticated"
+      ],
+      "researchStorage": "accepted_for_bounded_research_with_uncertainty",
+      "status": {
+        "collection": "COLLECTED",
+        "contextMapping": "CONTEXT_MAPPED",
+        "comparison": "performed_with_edition_limits",
+        "research": "COMPARED",
+        "sourceReview": "not_executed",
+        "runtimeApproval": "not_requested",
+        "publicRelease": "withheld_closed"
+      },
+      "verificationStatus": {
+        "implementationStatus": "not_executable",
+        "formulaStatus": "undocumented",
+        "bibliographicStatus": "secondary",
+        "interpretationStatus": "unreviewed"
+      },
+      "rights": {
+        "retention": "Original Vietnamese analytical paraphrase, source locators and hashes only; no new book/corpus copy",
+        "classicalAndModernLayers": "Old underlying work distinct from modern transcription; original authentication not established",
+        "modernComparator": "No quotation or bulk text retained; permissions unknown; see comparisons.json",
+        "publicPersonalInterpretationPermission": "not_granted"
+      },
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-2/DOSSIER.md#krb2-pm-duong",
+      "evidenceRef": "docs/knowledge/research/knowledge-first-batch-2/evidence.json",
+      "exclusions": [
+        "Không dùng làm dự đoán cá nhân hoặc tư vấn sức khỏe/sinh sản/gia đình",
+        "Không chuyển thành điều kiện runtime hay kế thừa phê duyệt của đoạn khác"
+      ],
+      "predicate": "Thái Dương ở Phụ Mẫu cần tách miếu/hãm, sát và Nhật–Nguyệt khỏi mô tả chung.",
+      "meaningVi": "Nhập miếu được mô tả vô khắc; hãm chuyển sang khắc cha, thêm nhóm Dương/Đà/Hỏa/Linh/Không/Kiếp thành nhánh sớm. Cự đồng cung cộng bốn sát/Không Kiếp có nhánh bất lợi. Lương đồng cung tại mục Nhật ghi vô hình, khác mục Lương. Câu liên quan Thái Âm có chuỗi chữ khó phân đoạn nên giữ locator, không tự khôi phục một điều kiện rõ giả tạo.",
+      "conditions": [
+        "Thái Dương ở Phụ Mẫu",
+        "Xét preamble Nhật/Nguyệt ở vị trí của chúng và ngày/đêm sinh, không coi là chỉ sao bản cung"
+      ],
+      "modifiers": [
+        "miếu/hãm",
+        "cu_mon đồng cung + bốn sát/Không Kiếp",
+        "thien_luong đồng cung",
+        "thai_am đồng cung: punctuation unresolved"
+      ],
+      "exceptions": [
+        "Không đổi miếu/hãm thành một bảng độ sáng do dự án tự chọn",
+        "Không giải câu Thái Âm mơ hồ bằng suy đoán"
+      ],
+      "relationships": [
+        {
+          "type": "same_palace",
+          "stars": [
+            "thai_am",
+            "cu_mon",
+            "thien_luong"
+          ]
+        },
+        {
+          "type": "day_night",
+          "scope": "preamble"
+        }
+      ],
+      "positiveBranches": [
+        "Nhập miếu: vô khắc",
+        "Lương đồng cung: mục Nhật ghi vô hình"
+      ],
+      "adverseBranches": [
+        "Hãm: khắc cha theo văn bản",
+        "Thêm sát: nhánh khắc sớm"
+      ],
+      "uncertainties": [
+        "KRB2-PM-LUONG lưu câu khác về chính cặp Nhật–Lương",
+        "Chuỗi Thái Âm đồng... trong dòng 823 chưa được giải nghĩa chắc chắn",
+        "Ngày/đêm không có ngưỡng giờ được định nghĩa trong đoạn"
+      ],
+      "contradicts": [
+        "KRB2-PM-LUONG: unresolved reciprocal wording"
+      ],
+      "nextAction": "Đối chữ dòng 823 với bản in; không dịch phần chưa rõ thành tiên đoán."
+    },
+    {
+      "recordId": "KRB2-PM-AM",
+      "claimType": "interpretation",
+      "subject": {
+        "starId": "thai_am",
+        "palaceId": "phu_mau"
+      },
+      "schoolId": null,
+      "schoolScope": "Quanshu digital transmission only; no universal school equivalence asserted",
+      "sourceReferences": [
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "work": "紫微斗數全書 / Juan2",
+          "author": null,
+          "authorAttribution": "Traditional attribution unresolved; no authenticated author/print edition established",
+          "schoolId": null,
+          "section": "十二父母 / 太陰",
+          "page": null,
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 828,
+            "endLine": 828,
+            "sha256": "8c72e51a98a423895beefcb31e7473655a8d6910e10f9984441f71ccbc99d606",
+            "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+          },
+          "originalLanguage": "zh-Hant",
+          "originalQuotation": null,
+          "quotationPolicy": "Reference to existing retained text; no new source-text copy",
+          "digitalPin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+          "bibliographicStatus": "secondary_transcription_original_edition_unauthenticated",
+          "family": "quanshu-transmission",
+          "supportType": "paraphrase",
+          "comparedDigitalWitness": {
+            "sourceId": "ziwei-quanshu-tradition",
+            "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷二&oldid=1963110",
+            "webReaderLines": [
+              1604,
+              1604
+            ],
+            "independentFamily": false,
+            "scope": "Selected spans and complete three priority sections read; no full-file equality claimed"
+          }
+        }
+      ],
+      "governingContext": {
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 818,
+          "endLine": 818,
+          "sha256": "527ade043dd46e7895658280aa27e4b602824737051f7ae2a17f703237fa8794",
+          "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+        },
+        "meaningVi": "Preamble đặt Nhật/Nguyệt làm biểu tượng cha/mẹ, phân biệt hãm, ngày/đêm sinh và sáng/tối; sau đó phối bản cung và ác sát. Lời tự nhận nghiệm của văn bản không phải kiểm chứng thực nghiệm.",
+        "dependencies": [
+          "thai_duong",
+          "thai_am",
+          "birth_day_or_night",
+          "brightness",
+          "palace_star_and_adverse_context"
+        ],
+        "uncertainty": "Không tự xác định ngưỡng ngày/đêm hay bảng độ sáng; cách ngắt câu phản bối/ám hối cần bản in."
+      },
+      "comparisonIds": [
+        "V03"
+      ],
+      "sourceFamilyDependencies": [
+        "quanshu-transmission; Wikisource and iztro are related witnesses, not independent authorities",
+        "ham-so-attributed-web: separately authored attribution, original edition and independence not fully authenticated"
+      ],
+      "researchStorage": "accepted_for_bounded_research_with_uncertainty",
+      "status": {
+        "collection": "COLLECTED",
+        "contextMapping": "CONTEXT_MAPPED",
+        "comparison": "performed_with_edition_limits",
+        "research": "COMPARED",
+        "sourceReview": "not_executed",
+        "runtimeApproval": "not_requested",
+        "publicRelease": "withheld_closed"
+      },
+      "verificationStatus": {
+        "implementationStatus": "not_executable",
+        "formulaStatus": "undocumented",
+        "bibliographicStatus": "secondary",
+        "interpretationStatus": "unreviewed"
+      },
+      "rights": {
+        "retention": "Original Vietnamese analytical paraphrase, source locators and hashes only; no new book/corpus copy",
+        "classicalAndModernLayers": "Old underlying work distinct from modern transcription; original authentication not established",
+        "modernComparator": "No quotation or bulk text retained; permissions unknown; see comparisons.json",
+        "publicPersonalInterpretationPermission": "not_granted"
+      },
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-2/DOSSIER.md#krb2-pm-am",
+      "evidenceRef": "docs/knowledge/research/knowledge-first-batch-2/evidence.json",
+      "exclusions": [
+        "Không dùng làm dự đoán cá nhân hoặc tư vấn sức khỏe/sinh sản/gia đình",
+        "Không chuyển thành điều kiện runtime hay kế thừa phê duyệt của đoạn khác"
+      ],
+      "predicate": "Thái Âm ở Phụ Mẫu có nhánh thuận khi miếu, nhưng nhóm sát và tổ hợp Nhật thay đổi điều kiện.",
+      "meaningVi": "Nhập miếu dùng vô khắc; Dương/Đà/Hỏa/Linh đi kèm chuyển sang mô tả khắc mẹ hoặc việc rời tổ/gửi nuôi. Nhật đồng cung chỉ thuộc nhánh cha mẹ song toàn khi vô bốn sát. Cơ đồng cung ghi vô hình; Đồng đồng cung cực mỹ. Các câu này vẫn phải đọc cùng preamble sáng/tối và ngày/đêm, không thể xem Nhật–Nguyệt như hai nhãn độc lập.",
+      "conditions": [
+        "Thái Âm ở Phụ Mẫu",
+        "Nhật–Nguyệt đồng cung thuận đòi hỏi vô bốn sát trong câu"
+      ],
+      "modifiers": [
+        "nhập miếu",
+        "duong_da_hoa_linh",
+        "thai_duong đồng cung + vô bốn sát",
+        "thien_co đồng cung",
+        "thien_dong đồng cung"
+      ],
+      "exceptions": [
+        "Danh sách sát trong mục này không tự mở rộng thành Không Kiếp nếu câu không viết; preamble vẫn được giữ riêng"
+      ],
+      "relationships": [
+        {
+          "type": "same_palace",
+          "stars": [
+            "thai_duong",
+            "thien_co",
+            "thien_dong"
+          ]
+        },
+        {
+          "type": "day_night",
+          "scope": "preamble"
+        }
+      ],
+      "positiveBranches": [
+        "Miếu vô khắc",
+        "Nhật đồng cung vô bốn sát: song toàn",
+        "Cơ: vô hình; Đồng: cực mỹ"
+      ],
+      "adverseBranches": [
+        "Dương/Đà/Hỏa/Linh: khắc mẹ hoặc lựa chọn gia đình theo quan niệm cổ"
+      ],
+      "uncertainties": [
+        "V03 là tham chiếu chung Nhật–Nguyệt chứ không một chứng nhân độc lập cho mọi tổ hợp trong mục Âm",
+        "Không diễn giải gửi nuôi thành khuyến nghị"
+      ],
+      "contradicts": [],
+      "nextAction": "Đối chiếu đầy đủ các nhánh Nhật/Nguyệt và bản in trước khi đề xuất tổng hợp."
+    },
+    {
+      "recordId": "KRB2-TT-ZIWEI",
+      "claimType": "interpretation",
+      "subject": {
+        "starId": "tu_vi",
+        "palaceId": "tu_tuc"
+      },
+      "schoolId": null,
+      "schoolScope": "Quanshu digital transmission only; no universal school equivalence asserted",
+      "sourceReferences": [
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "work": "紫微斗數全書 / Juan2",
+          "author": null,
+          "authorAttribution": "Traditional attribution unresolved; no authenticated author/print edition established",
+          "schoolId": null,
+          "section": "四子女 / 紫微; reciprocal 七殺",
+          "page": null,
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 605,
+            "endLine": 606,
+            "sha256": "a0cbc6935f00334647135fd5c7d8e3256d4d6cbd7ba43d957318b2c9d75e9c76",
+            "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+          },
+          "originalLanguage": "zh-Hant",
+          "originalQuotation": null,
+          "quotationPolicy": "Reference to existing retained text; no new source-text copy",
+          "digitalPin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+          "bibliographicStatus": "secondary_transcription_original_edition_unauthenticated",
+          "family": "quanshu-transmission",
+          "supportType": "paraphrase",
+          "comparedDigitalWitness": {
+            "sourceId": "ziwei-quanshu-tradition",
+            "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷二&oldid=1963110",
+            "webReaderLines": [
+              1343,
+              1344
+            ],
+            "independentFamily": false,
+            "scope": "Selected spans and complete three priority sections read; no full-file equality claimed"
+          }
+        }
+      ],
+      "governingContext": {
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 601,
+          "endLine": 604,
+          "sha256": "2e9035e99db67e134fbc37a64b415e808c24624b4d41c7a470f6145ca0cad9cf",
+          "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+        },
+        "meaningVi": "Xét sao bản cung và sát/kỵ, đối cung xung hình; khi bản cung vô tinh diệu thì xem đối cung; tiếp xét tam phương tứ chính, Nam/Bắc Đẩu, Nhật/Nguyệt và ngày/đêm. Các mệnh đề số con là quan niệm lịch sử.",
+        "dependencies": [
+          "opposite_palace",
+          "san_fang_si_zheng",
+          "benefic_adverse_balance",
+          "day_night_and_sun_moon"
+        ],
+        "uncertainty": "Vô tinh diệu chưa có roster xác định; không đồng nhất với không có 14 chính tinh. Không tự tạo thuật toán tổng hợp số con."
+      },
+      "comparisonIds": [
+        "V04"
+      ],
+      "sourceFamilyDependencies": [
+        "quanshu-transmission; Wikisource and iztro are related witnesses, not independent authorities",
+        "ham-so-attributed-web: separately authored attribution, original edition and independence not fully authenticated"
+      ],
+      "researchStorage": "accepted_for_bounded_research_with_uncertainty",
+      "status": {
+        "collection": "COLLECTED",
+        "contextMapping": "CONTEXT_MAPPED",
+        "comparison": "performed_with_edition_limits",
+        "research": "COMPARED",
+        "sourceReview": "not_executed",
+        "runtimeApproval": "not_requested",
+        "publicRelease": "withheld_closed"
+      },
+      "verificationStatus": {
+        "implementationStatus": "not_executable",
+        "formulaStatus": "undocumented",
+        "bibliographicStatus": "secondary",
+        "interpretationStatus": "unreviewed"
+      },
+      "rights": {
+        "retention": "Original Vietnamese analytical paraphrase, source locators and hashes only; no new book/corpus copy",
+        "classicalAndModernLayers": "Old underlying work distinct from modern transcription; original authentication not established",
+        "modernComparator": "No quotation or bulk text retained; permissions unknown; see comparisons.json",
+        "publicPersonalInterpretationPermission": "not_granted"
+      },
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-2/DOSSIER.md#krb2-tt-ziwei",
+      "evidenceRef": "docs/knowledge/research/knowledge-first-batch-2/evidence.json",
+      "exclusions": [
+        "Không dùng làm dự đoán cá nhân hoặc tư vấn sức khỏe/sinh sản/gia đình",
+        "Không chuyển thành điều kiện runtime hay kế thừa phê duyệt của đoạn khác"
+      ],
+      "predicate": "Tử Vi ở Tử Tức có lượng số cổ phụ thuộc độ sáng, trợ tinh, sát và đồng cung.",
+      "meaningVi": "Miếu/vượng nêu ba trai hai gái; thêm Tả/Hữu/Xương/Khúc nêu năm; nhóm sát chuyển sang một đôi và các khả năng con thứ/nhánh gia đình hoặc con thừa tự. Phá đồng cung nêu ba; Phủ đồng cung cộng cát nêu bốn/năm, thêm Xương/Khúc/Tả/Hữu có quý tử. Độc thủ cộng Không Kiếp dẫn vào hình tượng cô quân. Những con số này được lưu như cấu trúc mệnh đề lịch sử, không phải ước lượng sinh sản.",
+      "conditions": [
+        "Tử Vi ở Tử Tức; dùng preamble bản/đối cung và quan hệ",
+        "Phải giữ riêng điều kiện miếu/vượng, độc thủ, đồng cung và thêm sao"
+      ],
+      "modifiers": [
+        "ta_phu_huu_bat_van_xuong_van_khuc",
+        "duong_da_hoa_linh_khong_kiep",
+        "pha_quan đồng cung",
+        "thien_phu đồng cung + cát",
+        "độc thủ + Không Kiếp"
+      ],
+      "exceptions": [
+        "Nhánh số lượng không tạo được phép cộng/trừ số con",
+        "Mục Thất Sát có Tử Vi+cát và sát riêng; không nhập vào nhánh độc thủ Tử Vi"
+      ],
+      "relationships": [
+        {
+          "type": "same_palace",
+          "stars": [
+            "pha_quan",
+            "thien_phu"
+          ]
+        },
+        {
+          "type": "reciprocal_entry",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 621,
+            "endLine": 621,
+            "sha256": "eb81f6a4aeca698cb444f31bef01fdcdb7546e0095709a047dd8f31d3e7caefc",
+            "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+          }
+        },
+        {
+          "type": "preamble",
+          "palaces": [
+            "opposite_palace",
+            "san_fang_si_zheng"
+          ]
+        }
+      ],
+      "positiveBranches": [
+        "Miếu/vượng và trợ tinh: lượng số/miêu tả thuận được nêu có điều kiện",
+        "Phủ+cát và Xương/Khúc/Tả/Hữu: quý tử theo sách"
+      ],
+      "adverseBranches": [
+        "Nhóm sát: lượng số giảm/nhánh gia đình khác",
+        "Độc thủ+Không Kiếp: cô quân"
+      ],
+      "uncertainties": [
+        "吉星 không có roster hoàn chỉnh trong đoạn; trợ tinh được nêu tên không tự định nghĩa toàn bộ cát tinh",
+        "Cô quân là hình tượng cần chú giải, không mặc định bằng không con",
+        "V04 dùng mô tả định tính; không xác nhận các lượng số này"
+      ],
+      "contradicts": [],
+      "nextAction": "Đối chiếu preamble và các mục đối ứng Phủ/Sát; không tạo claim số con."
+    },
+    {
+      "recordId": "KRB2-TT-LUONG",
+      "claimType": "interpretation",
+      "subject": {
+        "starId": "thien_luong",
+        "palaceId": "tu_tuc"
+      },
+      "schoolId": null,
+      "schoolScope": "Quanshu digital transmission only; no universal school equivalence asserted",
+      "sourceReferences": [
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "work": "紫微斗數全書 / Juan2",
+          "author": null,
+          "authorAttribution": "Traditional attribution unresolved; no authenticated author/print edition established",
+          "schoolId": null,
+          "section": "四子女 / 天梁; reciprocal 天機 and 天同",
+          "page": null,
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 620,
+            "endLine": 620,
+            "sha256": "7d6fc53ea621439ab292ffd71ff5555ee7a6ad9807f79eda28afc191d26cae07",
+            "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+          },
+          "originalLanguage": "zh-Hant",
+          "originalQuotation": null,
+          "quotationPolicy": "Reference to existing retained text; no new source-text copy",
+          "digitalPin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+          "bibliographicStatus": "secondary_transcription_original_edition_unauthenticated",
+          "family": "quanshu-transmission",
+          "supportType": "paraphrase",
+          "comparedDigitalWitness": {
+            "sourceId": "ziwei-quanshu-tradition",
+            "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷二&oldid=1963110",
+            "webReaderLines": [
+              1358,
+              1358
+            ],
+            "independentFamily": false,
+            "scope": "Selected spans and complete three priority sections read; no full-file equality claimed"
+          }
+        }
+      ],
+      "governingContext": {
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 601,
+          "endLine": 604,
+          "sha256": "2e9035e99db67e134fbc37a64b415e808c24624b4d41c7a470f6145ca0cad9cf",
+          "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+        },
+        "meaningVi": "Xét sao bản cung và sát/kỵ, đối cung xung hình; khi bản cung vô tinh diệu thì xem đối cung; tiếp xét tam phương tứ chính, Nam/Bắc Đẩu, Nhật/Nguyệt và ngày/đêm. Các mệnh đề số con là quan niệm lịch sử.",
+        "dependencies": [
+          "opposite_palace",
+          "san_fang_si_zheng",
+          "benefic_adverse_balance",
+          "day_night_and_sun_moon"
+        ],
+        "uncertainty": "Vô tinh diệu chưa có roster xác định; không đồng nhất với không có 14 chính tinh. Không tự tạo thuật toán tổng hợp số con."
+      },
+      "comparisonIds": [
+        "V05"
+      ],
+      "sourceFamilyDependencies": [
+        "quanshu-transmission; Wikisource and iztro are related witnesses, not independent authorities",
+        "ham-so-attributed-web: separately authored attribution, original edition and independence not fully authenticated"
+      ],
+      "researchStorage": "accepted_for_bounded_research_with_uncertainty",
+      "status": {
+        "collection": "COLLECTED",
+        "contextMapping": "CONTEXT_MAPPED",
+        "comparison": "performed_with_edition_limits",
+        "research": "COMPARED",
+        "sourceReview": "not_executed",
+        "runtimeApproval": "not_requested",
+        "publicRelease": "withheld_closed"
+      },
+      "verificationStatus": {
+        "implementationStatus": "not_executable",
+        "formulaStatus": "undocumented",
+        "bibliographicStatus": "secondary",
+        "interpretationStatus": "unreviewed"
+      },
+      "rights": {
+        "retention": "Original Vietnamese analytical paraphrase, source locators and hashes only; no new book/corpus copy",
+        "classicalAndModernLayers": "Old underlying work distinct from modern transcription; original authentication not established",
+        "modernComparator": "No quotation or bulk text retained; permissions unknown; see comparisons.json",
+        "publicPersonalInterpretationPermission": "not_granted"
+      },
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-2/DOSSIER.md#krb2-tt-luong",
+      "evidenceRef": "docs/knowledge/research/knowledge-first-batch-2/evidence.json",
+      "exclusions": [
+        "Không dùng làm dự đoán cá nhân hoặc tư vấn sức khỏe/sinh sản/gia đình",
+        "Không chuyển thành điều kiện runtime hay kế thừa phê duyệt của đoạn khác"
+      ],
+      "predicate": "Thiên Lương ở Tử Tức không giữ cùng ý nghĩa khi thêm sát hoặc đổi đồng cung.",
+      "meaningVi": "Miếu/vượng nêu hai; nhóm Dương/Đà/Hỏa/Linh/Không/Kiếp có nhánh khắc sớm. Đồng–Lương cộng Xương/Khúc/Tả/Hữu và cát tinh nêu ba; Cơ–Lương nêu hai; nhánh cuối thêm nhóm sát nêu toàn vô. Mục Cơ lại phân Dần và Thân cho Cơ–Lương; mục Đồng phân Dần/Thân và thêm cát/sát. Không bỏ các mục đối ứng chỉ để giữ một câu ngắn thuận lợi.",
+      "conditions": [
+        "Thiên Lương ở Tử Tức; miếu/vượng cho nhánh đầu",
+        "Đồng–Lương thuận giữ cả trợ tinh/cát",
+        "Cần tham chiếu vị trí Dần/Thân tại mục Cơ/Đồng"
+      ],
+      "modifiers": [
+        "brightness",
+        "thien_dong đồng cung + Xương/Khúc/Tả/Hữu/cát",
+        "thien_co đồng cung",
+        "Dần/Thân tại mục đối ứng",
+        "duong_da_hoa_linh_khong_kiep"
+      ],
+      "exceptions": [
+        "Phạm vi nhánh thêm sát cuối câu có thể gần Cơ–Lương hoặc rộng hơn; chưa cố định một parse",
+        "Đông con trong V05 không bằng chính xác hai/ba của Q"
+      ],
+      "relationships": [
+        {
+          "type": "same_palace",
+          "stars": [
+            "thien_co",
+            "thien_dong"
+          ]
+        },
+        {
+          "type": "reciprocal_entry",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 607,
+            "endLine": 607,
+            "sha256": "154ae025fe5e5786f98436d55eaca65ce366894fb9bcdff41b224eab4f1fc04f",
+            "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+          }
+        },
+        {
+          "type": "reciprocal_entry",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 610,
+            "endLine": 611,
+            "sha256": "83aec2cee6f54b3e3e0a2d7eac282e6bd4f629e5fdc421b06bebc806e7deaedf",
+            "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+          }
+        }
+      ],
+      "positiveBranches": [
+        "Miếu/vượng: hai theo lượng số cổ",
+        "Đồng–Lương+trợ/cát: ba; Cơ–Lương: hai"
+      ],
+      "adverseBranches": [
+        "Thêm nhóm sát: khắc sớm; nhánh cuối toàn vô cần giữ phạm vi chưa chắc"
+      ],
+      "uncertainties": [
+        "Đồng–Lương phần đối ứng khác điều kiện nhấn mạnh; không gộp thành một số lượng",
+        "Dần/Thân được giữ như quan sát bản chép tại mục Cơ/Đồng; chưa xác nhận tương thích bảng an sao, không tự sửa sang vị trí khác",
+        "Cát tinh không được định nghĩa roster đầy đủ",
+        "Ngắt câu chữ 加 ở cuối chưa được bản in giải quyết"
+      ],
+      "contradicts": [],
+      "nextAction": "Đối chiếu ba mục Lương/Cơ/Đồng theo cùng vị trí; xin bình chú có định danh thay vì trung bình hóa lượng số."
+    },
+    {
+      "recordId": "KRB2-TA-ZIWEI",
+      "claimType": "interpretation",
+      "subject": {
+        "starId": "tu_vi",
+        "palaceId": "tat_ach"
+      },
+      "schoolId": null,
+      "schoolScope": "Quanshu digital transmission only; no universal school equivalence asserted",
+      "sourceReferences": [
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "work": "紫微斗數全書 / Juan2",
+          "author": null,
+          "authorAttribution": "Traditional attribution unresolved; no authenticated author/print edition established",
+          "schoolId": null,
+          "section": "六疾厄 / 紫微; reciprocal 天相 and 破軍",
+          "page": null,
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 665,
+            "endLine": 665,
+            "sha256": "b201b622d83036b55e1b75292c9e834b04633409733e4b5959a51591859ec1ec",
+            "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+          },
+          "originalLanguage": "zh-Hant",
+          "originalQuotation": null,
+          "quotationPolicy": "Reference to existing retained text; no new source-text copy",
+          "digitalPin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+          "bibliographicStatus": "secondary_transcription_original_edition_unauthenticated",
+          "family": "quanshu-transmission",
+          "supportType": "paraphrase",
+          "comparedDigitalWitness": {
+            "sourceId": "ziwei-quanshu-tradition",
+            "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷二&oldid=1963110",
+            "webReaderLines": [
+              1407,
+              1407
+            ],
+            "independentFamily": false,
+            "scope": "Selected spans and complete three priority sections read; no full-file equality claimed"
+          }
+        }
+      ],
+      "governingContext": {
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 664,
+          "endLine": 664,
+          "sha256": "68f8092ca016f30a51db79b4f1c7b2658b8aa73fcbbe8eaff4bb110d572d2b48",
+          "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+        },
+        "meaningVi": "Preamble yêu cầu xem Mệnh và tình trạng lạc hãm/sát/kỵ thủ chiếu, rồi mới xét thiện/ác, miếu/vượng/hãm của sao Tật Ách. Các tên bệnh cổ là biểu tượng lịch sử, không phải chẩn đoán.",
+        "dependencies": [
+          "menh",
+          "host_and_illumination_relations",
+          "brightness",
+          "adverse_stars",
+          "hoa_ky"
+        ],
+        "uncertainty": "Chưa có định nghĩa đủ để tự động cân trọng Mệnh với Tật; không ánh xạ bệnh danh cổ thành chẩn đoán hiện đại."
+      },
+      "comparisonIds": [
+        "V06"
+      ],
+      "sourceFamilyDependencies": [
+        "quanshu-transmission; Wikisource and iztro are related witnesses, not independent authorities",
+        "ham-so-attributed-web: separately authored attribution, original edition and independence not fully authenticated"
+      ],
+      "researchStorage": "accepted_for_bounded_research_with_uncertainty",
+      "status": {
+        "collection": "COLLECTED",
+        "contextMapping": "CONTEXT_MAPPED",
+        "comparison": "performed_with_edition_limits",
+        "research": "COMPARED",
+        "sourceReview": "not_executed",
+        "runtimeApproval": "not_requested",
+        "publicRelease": "withheld_closed"
+      },
+      "verificationStatus": {
+        "implementationStatus": "not_executable",
+        "formulaStatus": "undocumented",
+        "bibliographicStatus": "secondary",
+        "interpretationStatus": "unreviewed"
+      },
+      "rights": {
+        "retention": "Original Vietnamese analytical paraphrase, source locators and hashes only; no new book/corpus copy",
+        "classicalAndModernLayers": "Old underlying work distinct from modern transcription; original authentication not established",
+        "modernComparator": "No quotation or bulk text retained; permissions unknown; see comparisons.json",
+        "publicPersonalInterpretationPermission": "not_granted"
+      },
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-2/DOSSIER.md#krb2-ta-ziwei",
+      "evidenceRef": "docs/knowledge/research/knowledge-first-batch-2/evidence.json",
+      "exclusions": [
+        "Không dùng làm dự đoán cá nhân hoặc tư vấn sức khỏe/sinh sản/gia đình",
+        "Không chuyển thành điều kiện runtime hay kế thừa phê duyệt của đoạn khác"
+      ],
+      "predicate": "Câu Tử Vi tai ít ở Tật Ách không loại bỏ các nhánh bệnh danh và ảnh hưởng của Mệnh.",
+      "meaningVi": "Đầu mục ghi tai ít và Phủ đồng cung cũng ít; sau đó tách Tướng, Phá Quân, Dương/Linh và Không/Kiếp với các tên bệnh/triệu chứng cổ. Cặp Phá–Vi ở mục Phá lại ghi tai ít; cặp Tướng–Vi ở mục Tướng cũng vậy. Tai ít và có một bệnh danh không nhất thiết phủ định nhau; không ép thành nhị phân khỏe/bệnh hoặc tự dịch bệnh cổ thành bệnh hiện đại.",
+      "conditions": [
+        "Tử Vi ở Tật Ách",
+        "Luôn giữ kiểm tra Mệnh, lạc hãm/sát/kỵ thủ chiếu và tình trạng sao Tật từ preamble"
+      ],
+      "modifiers": [
+        "thien_phu đồng cung",
+        "thien_tuong đồng cung",
+        "pha_quan đồng cung",
+        "duong_linh",
+        "khong_kiep"
+      ],
+      "exceptions": [
+        "Không dùng tai ít để suy ra vô bệnh",
+        "Không dùng một bệnh danh để suy ngược thành mọi tai họa nhiều",
+        "Cặp đối ứng có cách nhấn mạnh khác, chưa có quy tắc ưu tiên"
+      ],
+      "relationships": [
+        {
+          "type": "same_palace",
+          "stars": [
+            "thien_phu",
+            "thien_tuong",
+            "pha_quan"
+          ]
+        },
+        {
+          "type": "reciprocal_entry",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 675,
+            "endLine": 675,
+            "sha256": "a3eb4224e2ead3467f7ad20c3dae48af0022ef20ca8c813fc65805b24f1e4319",
+            "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+          }
+        },
+        {
+          "type": "reciprocal_entry",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 677,
+            "endLine": 677,
+            "sha256": "4928c19163281891fc943fa1f6bc27254c328f4a9f992c32a5d09bc4f8a880aa",
+            "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+          }
+        },
+        {
+          "type": "governing_palace",
+          "palace": "menh"
+        }
+      ],
+      "positiveBranches": [
+        "Đầu mục tai ít; Phủ đồng cung cũng ít"
+      ],
+      "adverseBranches": [
+        "Tướng: cụm 皮胎勞 chưa giải nghĩa chắc",
+        "Phá: huyết khí bất hòa theo sách",
+        "Dương/Linh: ám tật; Không/Kiếp: các cụm bệnh cổ cần giữ nguyên locator"
+      ],
+      "uncertainties": [
+        "Thuật ngữ bệnh cổ chưa có chú giải y sử; không chẩn đoán",
+        "V06 nhấn mạnh cứu giải, không lặp lại toàn bộ nhánh Q; không chứng minh miễn sát",
+        "Đối ứng bất đối xứng chưa được bản cổ giải thích"
+      ],
+      "contradicts": [],
+      "nextAction": "Đối chữ các cụm bệnh và so các mục đối ứng; tìm chú giải lịch sử thay vì ánh xạ bệnh hiện đại."
+    },
+    {
+      "recordId": "KRB2-TA-LUONG",
+      "claimType": "interpretation",
+      "subject": {
+        "starId": "thien_luong",
+        "palaceId": "tat_ach"
+      },
+      "schoolId": null,
+      "schoolScope": "Quanshu digital transmission only; no universal school equivalence asserted",
+      "sourceReferences": [
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "work": "紫微斗數全書 / Juan2",
+          "author": null,
+          "authorAttribution": "Traditional attribution unresolved; no authenticated author/print edition established",
+          "schoolId": null,
+          "section": "六疾厄 / 天機 and 天同 cohost clauses; no standalone 天梁 paragraph",
+          "page": null,
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 666,
+            "endLine": 669,
+            "sha256": "d80a0eb8fa3ae6cf6ce0479fb0d9ae04d8f43216ed1da7b7cae302bf1be860ce",
+            "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+          },
+          "originalLanguage": "zh-Hant",
+          "originalQuotation": null,
+          "quotationPolicy": "Reference to existing retained text; no new source-text copy",
+          "digitalPin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+          "bibliographicStatus": "secondary_transcription_original_edition_unauthenticated",
+          "family": "quanshu-transmission",
+          "supportType": "paraphrase",
+          "comparedDigitalWitness": {
+            "sourceId": "ziwei-quanshu-tradition",
+            "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷二&oldid=1963110",
+            "webReaderLines": [
+              1408,
+              1411
+            ],
+            "independentFamily": false,
+            "scope": "Selected spans and complete three priority sections read; no full-file equality claimed"
+          }
+        }
+      ],
+      "governingContext": {
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 664,
+          "endLine": 664,
+          "sha256": "68f8092ca016f30a51db79b4f1c7b2658b8aa73fcbbe8eaff4bb110d572d2b48",
+          "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+        },
+        "meaningVi": "Preamble yêu cầu xem Mệnh và tình trạng lạc hãm/sát/kỵ thủ chiếu, rồi mới xét thiện/ác, miếu/vượng/hãm của sao Tật Ách. Các tên bệnh cổ là biểu tượng lịch sử, không phải chẩn đoán.",
+        "dependencies": [
+          "menh",
+          "host_and_illumination_relations",
+          "brightness",
+          "adverse_stars",
+          "hoa_ky"
+        ],
+        "uncertainty": "Chưa có định nghĩa đủ để tự động cân trọng Mệnh với Tật; không ánh xạ bệnh danh cổ thành chẩn đoán hiện đại."
+      },
+      "comparisonIds": [],
+      "sourceFamilyDependencies": [
+        "quanshu-transmission; Wikisource and iztro are related witnesses, not independent authorities"
+      ],
+      "researchStorage": "accepted_for_bounded_research_with_uncertainty",
+      "status": {
+        "collection": "COLLECTED",
+        "contextMapping": "CONTEXT_MAPPED",
+        "comparison": "not_performed_for_this_case",
+        "research": "CONTEXT_MAPPED",
+        "sourceReview": "not_executed",
+        "runtimeApproval": "not_requested",
+        "publicRelease": "withheld_closed"
+      },
+      "verificationStatus": {
+        "implementationStatus": "not_executable",
+        "formulaStatus": "undocumented",
+        "bibliographicStatus": "secondary",
+        "interpretationStatus": "unreviewed"
+      },
+      "rights": {
+        "retention": "Original Vietnamese analytical paraphrase, source locators and hashes only; no new book/corpus copy",
+        "classicalAndModernLayers": "Old underlying work distinct from modern transcription; original authentication not established",
+        "modernComparator": "not_used",
+        "publicPersonalInterpretationPermission": "not_granted"
+      },
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-2/DOSSIER.md#krb2-ta-luong",
+      "evidenceRef": "docs/knowledge/research/knowledge-first-batch-2/evidence.json",
+      "exclusions": [
+        "Không dùng làm dự đoán cá nhân hoặc tư vấn sức khỏe/sinh sản/gia đình",
+        "Không chuyển thành điều kiện runtime hay kế thừa phê duyệt của đoạn khác"
+      ],
+      "predicate": "Bằng chứng Thiên Lương ở Tật Ách trong hai bản chép hiện tại chỉ hỗ trợ một số tổ hợp đồng cung.",
+      "meaningVi": "Đã đọc trọn mục: không có đoạn mở đầu riêng cho Thiên Lương, nhưng mục Thiên Cơ có Cơ–Lương gắn cụm bệnh hạ bộ; mục Thiên Đồng có Đồng–Lương cộng bốn sát gắn tâm khí tật. Vì có các đoạn này nên không được ghi không có mọi bằng chứng cho Lương; cũng không được tạo mô tả riêng cho Lương độc thủ từ tên phúc tinh.",
+      "conditions": [
+        "Thiên Lương ở Tật Ách trong tổ hợp được nêu, không phải độc thủ",
+        "Cơ–Lương: lấy đúng nhánh trong mục Cơ",
+        "Đồng–Lương: phải có điều kiện thêm bốn sát"
+      ],
+      "modifiers": [
+        "thien_co đồng cung",
+        "thien_dong đồng cung + bốn sát",
+        "Mệnh và độ sáng từ preamble"
+      ],
+      "exceptions": [
+        "Không có đoạn riêng không có nghĩa sao vắng khỏi mục",
+        "Không nhập nhận xét phúc thọ chung ở Hàm Số thành đoạn Tật Ách đặc thù"
+      ],
+      "relationships": [
+        {
+          "type": "same_palace",
+          "stars": [
+            "thien_co",
+            "thien_dong"
+          ]
+        },
+        {
+          "type": "governing_palace",
+          "palace": "menh"
+        }
+      ],
+      "positiveBranches": [],
+      "adverseBranches": [
+        "Cơ–Lương: bệnh danh hạ bộ cổ, chưa chẩn nghĩa hiện đại",
+        "Đồng–Lương+bốn sát: tâm khí tật theo sách"
+      ],
+      "uncertainties": [
+        "Thiếu đoạn độc thủ trong đúng hai chứng nhân đã đọc; không kết luận toàn bộ truyền thống đều thiếu",
+        "Bốn sát không được khai triển tại riêng câu này; giữ chữ nguồn thay vì điền roster bất kỳ",
+        "Chưa có so sánh độc lập đúng nhánh"
+      ],
+      "contradicts": [],
+      "nextAction": "Tìm bản cổ mục luận Tật Ách và một bình chú có định danh; chỉ bổ sung phần độc thủ khi có đoạn thực."
+    },
+    {
+      "recordId": "KRB2-TA-PHU",
+      "claimType": "interpretation",
+      "subject": {
+        "starId": "thien_phu",
+        "palaceId": "tat_ach"
+      },
+      "schoolId": null,
+      "schoolScope": "Quanshu digital transmission only; no universal school equivalence asserted",
+      "sourceReferences": [
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "work": "紫微斗數全書 / Juan2",
+          "author": null,
+          "authorAttribution": "Traditional attribution unresolved; no authenticated author/print edition established",
+          "schoolId": null,
+          "section": "六疾厄 / 天府; reciprocal 廉貞 and 紫微",
+          "page": null,
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 671,
+            "endLine": 671,
+            "sha256": "8619c9e8ed8456528a87788dace39c3d27b804e9cd6a0ba03496fdd77ed5e223",
+            "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+          },
+          "originalLanguage": "zh-Hant",
+          "originalQuotation": null,
+          "quotationPolicy": "Reference to existing retained text; no new source-text copy",
+          "digitalPin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+          "bibliographicStatus": "secondary_transcription_original_edition_unauthenticated",
+          "family": "quanshu-transmission",
+          "supportType": "paraphrase",
+          "comparedDigitalWitness": {
+            "sourceId": "ziwei-quanshu-tradition",
+            "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷二&oldid=1963110",
+            "webReaderLines": [
+              1413,
+              1413
+            ],
+            "independentFamily": false,
+            "scope": "Selected spans and complete three priority sections read; no full-file equality claimed"
+          }
+        }
+      ],
+      "governingContext": {
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 664,
+          "endLine": 664,
+          "sha256": "68f8092ca016f30a51db79b4f1c7b2658b8aa73fcbbe8eaff4bb110d572d2b48",
+          "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+        },
+        "meaningVi": "Preamble yêu cầu xem Mệnh và tình trạng lạc hãm/sát/kỵ thủ chiếu, rồi mới xét thiện/ác, miếu/vượng/hãm của sao Tật Ách. Các tên bệnh cổ là biểu tượng lịch sử, không phải chẩn đoán.",
+        "dependencies": [
+          "menh",
+          "host_and_illumination_relations",
+          "brightness",
+          "adverse_stars",
+          "hoa_ky"
+        ],
+        "uncertainty": "Chưa có định nghĩa đủ để tự động cân trọng Mệnh với Tật; không ánh xạ bệnh danh cổ thành chẩn đoán hiện đại."
+      },
+      "comparisonIds": [],
+      "sourceFamilyDependencies": [
+        "quanshu-transmission; Wikisource and iztro are related witnesses, not independent authorities"
+      ],
+      "researchStorage": "accepted_for_bounded_research_with_uncertainty",
+      "status": {
+        "collection": "COLLECTED",
+        "contextMapping": "CONTEXT_MAPPED",
+        "comparison": "not_performed_for_this_case",
+        "research": "CONTEXT_MAPPED",
+        "sourceReview": "not_executed",
+        "runtimeApproval": "not_requested",
+        "publicRelease": "withheld_closed"
+      },
+      "verificationStatus": {
+        "implementationStatus": "not_executable",
+        "formulaStatus": "undocumented",
+        "bibliographicStatus": "secondary",
+        "interpretationStatus": "unreviewed"
+      },
+      "rights": {
+        "retention": "Original Vietnamese analytical paraphrase, source locators and hashes only; no new book/corpus copy",
+        "classicalAndModernLayers": "Old underlying work distinct from modern transcription; original authentication not established",
+        "modernComparator": "not_used",
+        "publicPersonalInterpretationPermission": "not_granted"
+      },
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-2/DOSSIER.md#krb2-ta-phu",
+      "evidenceRef": "docs/knowledge/research/knowledge-first-batch-2/evidence.json",
+      "exclusions": [
+        "Không dùng làm dự đoán cá nhân hoặc tư vấn sức khỏe/sinh sản/gia đình",
+        "Không chuyển thành điều kiện runtime hay kế thừa phê duyệt của đoạn khác"
+      ],
+      "predicate": "Thiên Phủ tại Tật Ách có mô tả cứu giải nhưng vẫn nêu nhánh sát và tổ hợp bất lợi.",
+      "meaningVi": "Đầu mục mô tả tai ít, gặp tai có cứu; Vi đồng cung cũng tai ít. Tiếp theo nhóm Dương/Đà/Hỏa/Linh/Không/Kiếp có bệnh danh cổ; Liêm đồng cung thêm Kiếp Sát/Không Vong có nhánh tổn thương giữa đường đời. Mục Liêm đồng cung Phủ lại ghi tai ít mà không khai triển tổ hợp thêm Kiếp Sát/Không Vong. Phải giữ lớp điều kiện cộng thêm thay vì coi hai câu đơn giản phủ định nhau.",
+      "conditions": [
+        "Thiên Phủ ở Tật Ách; giữ kiểm tra Mệnh từ preamble",
+        "Nhánh Liêm–Phủ bất lợi còn có Kiếp Sát/Không Vong"
+      ],
+      "modifiers": [
+        "tu_vi đồng cung",
+        "duong_da_hoa_linh_khong_kiep",
+        "liem_trinh đồng cung + kiep_sat/khong_vong"
+      ],
+      "exceptions": [
+        "Kiếp Sát không tự đồng nhất Địa Kiếp",
+        "Không Vong không tự đồng nhất Địa Không",
+        "Tai ít không đồng nghĩa không thể có tai"
+      ],
+      "relationships": [
+        {
+          "type": "same_palace",
+          "stars": [
+            "tu_vi",
+            "liem_trinh"
+          ]
+        },
+        {
+          "type": "reciprocal_entry",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 670,
+            "endLine": 670,
+            "sha256": "94c350c83d7c70166d8774884a8b923949c569307dca639b6135fa25b4cc0f3e",
+            "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+          }
+        },
+        {
+          "type": "reciprocal_entry",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 665,
+            "endLine": 665,
+            "sha256": "b201b622d83036b55e1b75292c9e834b04633409733e4b5959a51591859ec1ec",
+            "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+          }
+        }
+      ],
+      "positiveBranches": [
+        "Tai ít, có cứu theo mở đầu; Vi đồng cung cũng ít"
+      ],
+      "adverseBranches": [
+        "Nhóm sát nêu tên: bệnh danh cổ",
+        "Liêm đồng cung + Kiếp Sát/Không Vong: nhánh tổn thương lịch sử"
+      ],
+      "uncertainties": [
+        "Tên 空亡/劫殺 cần phân biệt theo ấn bản; chưa có registry/predicate chính xác cho các thuật ngữ này",
+        "Chưa so sánh độc lập riêng mục Phủ ở Tật; Batch 1 K03 chỉ là nhận xét phương pháp rộng hơn"
+      ],
+      "contradicts": [],
+      "nextAction": "Đối chiếu hai thuật ngữ Kiếp Sát/Không Vong và vị trí nhánh với bản in; không suy diễn chế mọi sát."
+    }
+  ]
+}

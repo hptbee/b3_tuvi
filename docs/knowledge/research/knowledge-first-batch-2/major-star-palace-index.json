@@ -1,0 +1,2511 @@
+{
+  "batchId": "KR-B2-20261017",
+  "scope": "168-cell research navigation over one retained digital witness; automated location plus nine manually researched cases. Not a runtime knowledge catalog.",
+  "statusVocabulary": [
+    "NOT_RESEARCHED",
+    "PASSAGE_LOCATED",
+    "CONTEXT_MAPPED",
+    "COMPARED",
+    "CONFLICTING",
+    "NO_PASSAGE_FOUND_IN_SEARCHED_CORPUS"
+  ],
+  "absenceMeaning": "Only the named searched section of the named byte-identified corpus. A cohost mention is a located reference, not a standalone interpretation. No all-source absence asserted.",
+  "corpus": {
+    "sourceId": "ziwei-quanshu-iztro-transcription",
+    "editionId": "iztro-juan2-2f00e2ab0c80",
+    "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+    "sha256": "b824c61e1bdec55ecdc7123ff1e79bce9648f07d67d054c43a59ce731572d4a7",
+    "search": "Exact traditional star-name string, restricted to the corresponding palaces entry line bounds; no all-book search"
+  },
+  "earlierResearch": "This navigation index does not downgrade existing decisions or assert prior research never occurred. Historical approved scope remains in unchanged docs/knowledge/interpretation-claims.json.",
+  "depth": "Cells without recordIds are literal locations only, not contextual interpretations. Referenced records govern scope and uncertainties, including cohost-only cases.",
+  "sourceReviewThisBatch": "not_executed",
+  "runtimeApprovalThisBatch": "not_requested",
+  "stars": [
+    {
+      "starId": "tu_vi",
+      "name": "紫微"
+    },
+    {
+      "starId": "thien_co",
+      "name": "天機"
+    },
+    {
+      "starId": "thai_duong",
+      "name": "太陽"
+    },
+    {
+      "starId": "vu_khuc",
+      "name": "武曲"
+    },
+    {
+      "starId": "thien_dong",
+      "name": "天同"
+    },
+    {
+      "starId": "liem_trinh",
+      "name": "廉貞"
+    },
+    {
+      "starId": "thien_phu",
+      "name": "天府"
+    },
+    {
+      "starId": "thai_am",
+      "name": "太陰"
+    },
+    {
+      "starId": "tham_lang",
+      "name": "貪狼"
+    },
+    {
+      "starId": "cu_mon",
+      "name": "巨門"
+    },
+    {
+      "starId": "thien_tuong",
+      "name": "天相"
+    },
+    {
+      "starId": "thien_luong",
+      "name": "天梁"
+    },
+    {
+      "starId": "that_sat",
+      "name": "七殺"
+    },
+    {
+      "starId": "pha_quan",
+      "name": "破軍"
+    }
+  ],
+  "palaces": [
+    {
+      "palaceId": "menh",
+      "name": "命宮",
+      "startLine": 125,
+      "endLine": 552
+    },
+    {
+      "palaceId": "huynh_de",
+      "name": "兄弟宮",
+      "startLine": 553,
+      "endLine": 575
+    },
+    {
+      "palaceId": "phu_the",
+      "name": "夫妻宮",
+      "startLine": 576,
+      "endLine": 599
+    },
+    {
+      "palaceId": "tu_tuc",
+      "name": "子女宮",
+      "startLine": 600,
+      "endLine": 632
+    },
+    {
+      "palaceId": "tai_bach",
+      "name": "財帛宮",
+      "startLine": 633,
+      "endLine": 662
+    },
+    {
+      "palaceId": "tat_ach",
+      "name": "疾厄宮",
+      "startLine": 663,
+      "endLine": 686
+    },
+    {
+      "palaceId": "thien_di",
+      "name": "遷移宮",
+      "startLine": 687,
+      "endLine": 711
+    },
+    {
+      "palaceId": "no_boc",
+      "name": "奴仆宮",
+      "startLine": 712,
+      "endLine": 736
+    },
+    {
+      "palaceId": "quan_loc",
+      "name": "官祿宮",
+      "startLine": 737,
+      "endLine": 764
+    },
+    {
+      "palaceId": "dien_trach",
+      "name": "田宅宮",
+      "startLine": 765,
+      "endLine": 788
+    },
+    {
+      "palaceId": "phuc_duc",
+      "name": "福德宮",
+      "startLine": 789,
+      "endLine": 816
+    },
+    {
+      "palaceId": "phu_mau",
+      "name": "父母宮",
+      "startLine": 817,
+      "endLine": 846
+    }
+  ],
+  "counts": {
+    "PASSAGE_LOCATED": 159,
+    "COMPARED": 5,
+    "CONTEXT_MAPPED": 2,
+    "CONFLICTING": 2
+  },
+  "cells": [
+    {
+      "cellId": "menh:tu_vi",
+      "palaceId": "menh",
+      "starId": "tu_vi",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          126,
+          127,
+          135,
+          136,
+          137,
+          138,
+          140,
+          141,
+          142,
+          143,
+          144,
+          145
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "menh:thien_co",
+      "palaceId": "menh",
+      "starId": "thien_co",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          146,
+          147,
+          154,
+          156,
+          157,
+          158,
+          159,
+          160,
+          162
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "menh:thai_duong",
+      "palaceId": "menh",
+      "starId": "thai_duong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          163,
+          164,
+          171,
+          175,
+          176,
+          177,
+          178,
+          179,
+          181
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "menh:vu_khuc",
+      "palaceId": "menh",
+      "starId": "vu_khuc",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          182,
+          183,
+          190,
+          191,
+          192,
+          193,
+          196,
+          198,
+          199
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "menh:thien_dong",
+      "palaceId": "menh",
+      "starId": "thien_dong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          200,
+          201,
+          208,
+          209,
+          210,
+          211,
+          212,
+          213,
+          214,
+          215
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "menh:liem_trinh",
+      "palaceId": "menh",
+      "starId": "liem_trinh",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          218,
+          219,
+          226,
+          227,
+          228,
+          229,
+          230,
+          232,
+          233,
+          234
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "menh:thien_phu",
+      "palaceId": "menh",
+      "starId": "thien_phu",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          236,
+          237,
+          244,
+          245,
+          247,
+          250
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "menh:thai_am",
+      "palaceId": "menh",
+      "starId": "thai_am",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          253,
+          254,
+          259,
+          260,
+          261,
+          263,
+          264,
+          266,
+          267,
+          268
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "menh:tham_lang",
+      "palaceId": "menh",
+      "starId": "tham_lang",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          271,
+          272,
+          279,
+          281,
+          283,
+          285,
+          286,
+          288
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "menh:cu_mon",
+      "palaceId": "menh",
+      "starId": "cu_mon",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          291,
+          292,
+          300,
+          301,
+          303,
+          304,
+          305,
+          306,
+          307,
+          308,
+          309,
+          310
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "menh:thien_tuong",
+      "palaceId": "menh",
+      "starId": "thien_tuong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          311,
+          312,
+          320,
+          321,
+          322,
+          323,
+          324,
+          327,
+          328,
+          329
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "menh:thien_luong",
+      "palaceId": "menh",
+      "starId": "thien_luong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          331,
+          332,
+          339,
+          340,
+          341,
+          342,
+          344,
+          345,
+          347
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "menh:that_sat",
+      "palaceId": "menh",
+      "starId": "that_sat",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          348,
+          349,
+          356,
+          357,
+          359,
+          360,
+          362,
+          363,
+          365
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "menh:pha_quan",
+      "palaceId": "menh",
+      "starId": "pha_quan",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          326,
+          366,
+          367,
+          375,
+          376,
+          377,
+          378,
+          379,
+          380,
+          381,
+          382,
+          383,
+          384,
+          385,
+          386
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "huynh_de:tu_vi",
+      "palaceId": "huynh_de",
+      "starId": "tu_vi",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          554
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "huynh_de:thien_co",
+      "palaceId": "huynh_de",
+      "starId": "thien_co",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          555
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "huynh_de:thai_duong",
+      "palaceId": "huynh_de",
+      "starId": "thai_duong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          556
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "huynh_de:vu_khuc",
+      "palaceId": "huynh_de",
+      "starId": "vu_khuc",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          557
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "huynh_de:thien_dong",
+      "palaceId": "huynh_de",
+      "starId": "thien_dong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          558
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "huynh_de:liem_trinh",
+      "palaceId": "huynh_de",
+      "starId": "liem_trinh",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          559
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "huynh_de:thien_phu",
+      "palaceId": "huynh_de",
+      "starId": "thien_phu",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          560
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "huynh_de:thai_am",
+      "palaceId": "huynh_de",
+      "starId": "thai_am",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          561
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "huynh_de:tham_lang",
+      "palaceId": "huynh_de",
+      "starId": "tham_lang",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          562
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "huynh_de:cu_mon",
+      "palaceId": "huynh_de",
+      "starId": "cu_mon",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          563
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "huynh_de:thien_tuong",
+      "palaceId": "huynh_de",
+      "starId": "thien_tuong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          564
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "huynh_de:thien_luong",
+      "palaceId": "huynh_de",
+      "starId": "thien_luong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          565
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "huynh_de:that_sat",
+      "palaceId": "huynh_de",
+      "starId": "that_sat",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          566
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "huynh_de:pha_quan",
+      "palaceId": "huynh_de",
+      "starId": "pha_quan",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          567
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phu_the:tu_vi",
+      "palaceId": "phu_the",
+      "starId": "tu_vi",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          577
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phu_the:thien_co",
+      "palaceId": "phu_the",
+      "starId": "thien_co",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          578
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phu_the:thai_duong",
+      "palaceId": "phu_the",
+      "starId": "thai_duong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          579
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phu_the:vu_khuc",
+      "palaceId": "phu_the",
+      "starId": "vu_khuc",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          581
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phu_the:thien_dong",
+      "palaceId": "phu_the",
+      "starId": "thien_dong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          582
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phu_the:liem_trinh",
+      "palaceId": "phu_the",
+      "starId": "liem_trinh",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          583
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phu_the:thien_phu",
+      "palaceId": "phu_the",
+      "starId": "thien_phu",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          584
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phu_the:thai_am",
+      "palaceId": "phu_the",
+      "starId": "thai_am",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          580,
+          585
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phu_the:tham_lang",
+      "palaceId": "phu_the",
+      "starId": "tham_lang",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          586
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phu_the:cu_mon",
+      "palaceId": "phu_the",
+      "starId": "cu_mon",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          587
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phu_the:thien_tuong",
+      "palaceId": "phu_the",
+      "starId": "thien_tuong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          588
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phu_the:thien_luong",
+      "palaceId": "phu_the",
+      "starId": "thien_luong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          589
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phu_the:that_sat",
+      "palaceId": "phu_the",
+      "starId": "that_sat",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          590
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phu_the:pha_quan",
+      "palaceId": "phu_the",
+      "starId": "pha_quan",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          591
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tu_tuc:tu_vi",
+      "palaceId": "tu_tuc",
+      "starId": "tu_vi",
+      "status": "COMPARED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          605,
+          619
+        ]
+      },
+      "recordIds": [
+        "KRB2-TT-ZIWEI"
+      ]
+    },
+    {
+      "cellId": "tu_tuc:thien_co",
+      "palaceId": "tu_tuc",
+      "starId": "thien_co",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          607
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tu_tuc:thai_duong",
+      "palaceId": "tu_tuc",
+      "starId": "thai_duong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          608,
+          615
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tu_tuc:vu_khuc",
+      "palaceId": "tu_tuc",
+      "starId": "vu_khuc",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          609
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tu_tuc:thien_dong",
+      "palaceId": "tu_tuc",
+      "starId": "thien_dong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          610
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tu_tuc:liem_trinh",
+      "palaceId": "tu_tuc",
+      "starId": "liem_trinh",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          612
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tu_tuc:thien_phu",
+      "palaceId": "tu_tuc",
+      "starId": "thien_phu",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          606,
+          613
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tu_tuc:thai_am",
+      "palaceId": "tu_tuc",
+      "starId": "thai_am",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          614
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tu_tuc:tham_lang",
+      "palaceId": "tu_tuc",
+      "starId": "tham_lang",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          616
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tu_tuc:cu_mon",
+      "palaceId": "tu_tuc",
+      "starId": "cu_mon",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          617
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tu_tuc:thien_tuong",
+      "palaceId": "tu_tuc",
+      "starId": "thien_tuong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          618
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tu_tuc:thien_luong",
+      "palaceId": "tu_tuc",
+      "starId": "thien_luong",
+      "status": "COMPARED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          620
+        ]
+      },
+      "recordIds": [
+        "KRB2-TT-LUONG"
+      ]
+    },
+    {
+      "cellId": "tu_tuc:that_sat",
+      "palaceId": "tu_tuc",
+      "starId": "that_sat",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          621
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tu_tuc:pha_quan",
+      "palaceId": "tu_tuc",
+      "starId": "pha_quan",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          622
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tai_bach:tu_vi",
+      "palaceId": "tai_bach",
+      "starId": "tu_vi",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          634
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tai_bach:thien_co",
+      "palaceId": "tai_bach",
+      "starId": "thien_co",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          636,
+          650
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tai_bach:thai_duong",
+      "palaceId": "tai_bach",
+      "starId": "thai_duong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          637,
+          647
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tai_bach:vu_khuc",
+      "palaceId": "tai_bach",
+      "starId": "vu_khuc",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          638,
+          652
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tai_bach:thien_dong",
+      "palaceId": "tai_bach",
+      "starId": "thien_dong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          640
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tai_bach:liem_trinh",
+      "palaceId": "tai_bach",
+      "starId": "liem_trinh",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          641
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tai_bach:thien_phu",
+      "palaceId": "tai_bach",
+      "starId": "thien_phu",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          635,
+          643
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tai_bach:thai_am",
+      "palaceId": "tai_bach",
+      "starId": "thai_am",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          644
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tai_bach:tham_lang",
+      "palaceId": "tai_bach",
+      "starId": "tham_lang",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          645
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tai_bach:cu_mon",
+      "palaceId": "tai_bach",
+      "starId": "cu_mon",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          646
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tai_bach:thien_tuong",
+      "palaceId": "tai_bach",
+      "starId": "thien_tuong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          648
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tai_bach:thien_luong",
+      "palaceId": "tai_bach",
+      "starId": "thien_luong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          649
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tai_bach:that_sat",
+      "palaceId": "tai_bach",
+      "starId": "that_sat",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          639,
+          642
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tai_bach:pha_quan",
+      "palaceId": "tai_bach",
+      "starId": "pha_quan",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          651
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tat_ach:tu_vi",
+      "palaceId": "tat_ach",
+      "starId": "tu_vi",
+      "status": "COMPARED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          665
+        ]
+      },
+      "recordIds": [
+        "KRB2-TA-ZIWEI"
+      ]
+    },
+    {
+      "cellId": "tat_ach:thien_co",
+      "palaceId": "tat_ach",
+      "starId": "thien_co",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          666
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tat_ach:thai_duong",
+      "palaceId": "tat_ach",
+      "starId": "thai_duong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          667
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tat_ach:vu_khuc",
+      "palaceId": "tat_ach",
+      "starId": "vu_khuc",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          668
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tat_ach:thien_dong",
+      "palaceId": "tat_ach",
+      "starId": "thien_dong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          669
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tat_ach:liem_trinh",
+      "palaceId": "tat_ach",
+      "starId": "liem_trinh",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          670
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tat_ach:thien_phu",
+      "palaceId": "tat_ach",
+      "starId": "thien_phu",
+      "status": "CONTEXT_MAPPED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          671
+        ]
+      },
+      "recordIds": [
+        "KRB2-TA-PHU"
+      ]
+    },
+    {
+      "cellId": "tat_ach:thai_am",
+      "palaceId": "tat_ach",
+      "starId": "thai_am",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          672
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tat_ach:tham_lang",
+      "palaceId": "tat_ach",
+      "starId": "tham_lang",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "explicit_reference_only",
+        "lineNumbers": [
+          668,
+          670
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tat_ach:cu_mon",
+      "palaceId": "tat_ach",
+      "starId": "cu_mon",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          674
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tat_ach:thien_tuong",
+      "palaceId": "tat_ach",
+      "starId": "thien_tuong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          675
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tat_ach:thien_luong",
+      "palaceId": "tat_ach",
+      "starId": "thien_luong",
+      "status": "CONTEXT_MAPPED",
+      "location": {
+        "kind": "explicit_reference_only",
+        "lineNumbers": [
+          666,
+          669
+        ]
+      },
+      "recordIds": [
+        "KRB2-TA-LUONG"
+      ]
+    },
+    {
+      "cellId": "tat_ach:that_sat",
+      "palaceId": "tat_ach",
+      "starId": "that_sat",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          676
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "tat_ach:pha_quan",
+      "palaceId": "tat_ach",
+      "starId": "pha_quan",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          677
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "thien_di:tu_vi",
+      "palaceId": "thien_di",
+      "starId": "tu_vi",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          688
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "thien_di:thien_co",
+      "palaceId": "thien_di",
+      "starId": "thien_co",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          689
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "thien_di:thai_duong",
+      "palaceId": "thien_di",
+      "starId": "thai_duong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          690
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "thien_di:vu_khuc",
+      "palaceId": "thien_di",
+      "starId": "vu_khuc",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          691
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "thien_di:thien_dong",
+      "palaceId": "thien_di",
+      "starId": "thien_dong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          692
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "thien_di:liem_trinh",
+      "palaceId": "thien_di",
+      "starId": "liem_trinh",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          693
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "thien_di:thien_phu",
+      "palaceId": "thien_di",
+      "starId": "thien_phu",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          694
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "thien_di:thai_am",
+      "palaceId": "thien_di",
+      "starId": "thai_am",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          695
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "thien_di:tham_lang",
+      "palaceId": "thien_di",
+      "starId": "tham_lang",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          696
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "thien_di:cu_mon",
+      "palaceId": "thien_di",
+      "starId": "cu_mon",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          697
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "thien_di:thien_tuong",
+      "palaceId": "thien_di",
+      "starId": "thien_tuong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          698
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "thien_di:thien_luong",
+      "palaceId": "thien_di",
+      "starId": "thien_luong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          699
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "thien_di:that_sat",
+      "palaceId": "thien_di",
+      "starId": "that_sat",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          700
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "thien_di:pha_quan",
+      "palaceId": "thien_di",
+      "starId": "pha_quan",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          701
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "no_boc:tu_vi",
+      "palaceId": "no_boc",
+      "starId": "tu_vi",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          713
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "no_boc:thien_co",
+      "palaceId": "no_boc",
+      "starId": "thien_co",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          714
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "no_boc:thai_duong",
+      "palaceId": "no_boc",
+      "starId": "thai_duong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          715
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "no_boc:vu_khuc",
+      "palaceId": "no_boc",
+      "starId": "vu_khuc",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          716
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "no_boc:thien_dong",
+      "palaceId": "no_boc",
+      "starId": "thien_dong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          717
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "no_boc:liem_trinh",
+      "palaceId": "no_boc",
+      "starId": "liem_trinh",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          718
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "no_boc:thien_phu",
+      "palaceId": "no_boc",
+      "starId": "thien_phu",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          719
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "no_boc:thai_am",
+      "palaceId": "no_boc",
+      "starId": "thai_am",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          720
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "no_boc:tham_lang",
+      "palaceId": "no_boc",
+      "starId": "tham_lang",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          721
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "no_boc:cu_mon",
+      "palaceId": "no_boc",
+      "starId": "cu_mon",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          722
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "no_boc:thien_tuong",
+      "palaceId": "no_boc",
+      "starId": "thien_tuong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          723
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "no_boc:thien_luong",
+      "palaceId": "no_boc",
+      "starId": "thien_luong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          724
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "no_boc:that_sat",
+      "palaceId": "no_boc",
+      "starId": "that_sat",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          725
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "no_boc:pha_quan",
+      "palaceId": "no_boc",
+      "starId": "pha_quan",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          726
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "quan_loc:tu_vi",
+      "palaceId": "quan_loc",
+      "starId": "tu_vi",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          738
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "quan_loc:thien_co",
+      "palaceId": "quan_loc",
+      "starId": "thien_co",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          739
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "quan_loc:thai_duong",
+      "palaceId": "quan_loc",
+      "starId": "thai_duong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          740
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "quan_loc:vu_khuc",
+      "palaceId": "quan_loc",
+      "starId": "vu_khuc",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          741,
+          751
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "quan_loc:thien_dong",
+      "palaceId": "quan_loc",
+      "starId": "thien_dong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          743
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "quan_loc:liem_trinh",
+      "palaceId": "quan_loc",
+      "starId": "liem_trinh",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          744
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "quan_loc:thien_phu",
+      "palaceId": "quan_loc",
+      "starId": "thien_phu",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          745
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "quan_loc:thai_am",
+      "palaceId": "quan_loc",
+      "starId": "thai_am",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          746
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "quan_loc:tham_lang",
+      "palaceId": "quan_loc",
+      "starId": "tham_lang",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          747
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "quan_loc:cu_mon",
+      "palaceId": "quan_loc",
+      "starId": "cu_mon",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          748
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "quan_loc:thien_tuong",
+      "palaceId": "quan_loc",
+      "starId": "thien_tuong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          750
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "quan_loc:thien_luong",
+      "palaceId": "quan_loc",
+      "starId": "thien_luong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          752
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "quan_loc:that_sat",
+      "palaceId": "quan_loc",
+      "starId": "that_sat",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          753
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "quan_loc:pha_quan",
+      "palaceId": "quan_loc",
+      "starId": "pha_quan",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          754
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "dien_trach:tu_vi",
+      "palaceId": "dien_trach",
+      "starId": "tu_vi",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          766
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "dien_trach:thien_co",
+      "palaceId": "dien_trach",
+      "starId": "thien_co",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          767
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "dien_trach:thai_duong",
+      "palaceId": "dien_trach",
+      "starId": "thai_duong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          768
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "dien_trach:vu_khuc",
+      "palaceId": "dien_trach",
+      "starId": "vu_khuc",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          769
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "dien_trach:thien_dong",
+      "palaceId": "dien_trach",
+      "starId": "thien_dong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          771
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "dien_trach:liem_trinh",
+      "palaceId": "dien_trach",
+      "starId": "liem_trinh",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          772
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "dien_trach:thien_phu",
+      "palaceId": "dien_trach",
+      "starId": "thien_phu",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          773
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "dien_trach:thai_am",
+      "palaceId": "dien_trach",
+      "starId": "thai_am",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          774
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "dien_trach:tham_lang",
+      "palaceId": "dien_trach",
+      "starId": "tham_lang",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          775
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "dien_trach:cu_mon",
+      "palaceId": "dien_trach",
+      "starId": "cu_mon",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          776
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "dien_trach:thien_tuong",
+      "palaceId": "dien_trach",
+      "starId": "thien_tuong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          770,
+          777
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "dien_trach:thien_luong",
+      "palaceId": "dien_trach",
+      "starId": "thien_luong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          778
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "dien_trach:that_sat",
+      "palaceId": "dien_trach",
+      "starId": "that_sat",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "explicit_reference_only",
+        "lineNumbers": [
+          770,
+          772
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "dien_trach:pha_quan",
+      "palaceId": "dien_trach",
+      "starId": "pha_quan",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          779
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phuc_duc:tu_vi",
+      "palaceId": "phuc_duc",
+      "starId": "tu_vi",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          790,
+          804
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phuc_duc:thien_co",
+      "palaceId": "phuc_duc",
+      "starId": "thien_co",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          791
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phuc_duc:thai_duong",
+      "palaceId": "phuc_duc",
+      "starId": "thai_duong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          792
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phuc_duc:vu_khuc",
+      "palaceId": "phuc_duc",
+      "starId": "vu_khuc",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          794
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phuc_duc:thien_dong",
+      "palaceId": "phuc_duc",
+      "starId": "thien_dong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          796
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phuc_duc:liem_trinh",
+      "palaceId": "phuc_duc",
+      "starId": "liem_trinh",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          797
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phuc_duc:thien_phu",
+      "palaceId": "phuc_duc",
+      "starId": "thien_phu",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          798
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phuc_duc:thai_am",
+      "palaceId": "phuc_duc",
+      "starId": "thai_am",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          799
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phuc_duc:tham_lang",
+      "palaceId": "phuc_duc",
+      "starId": "tham_lang",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          800
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phuc_duc:cu_mon",
+      "palaceId": "phuc_duc",
+      "starId": "cu_mon",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          801
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phuc_duc:thien_tuong",
+      "palaceId": "phuc_duc",
+      "starId": "thien_tuong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          802
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phuc_duc:thien_luong",
+      "palaceId": "phuc_duc",
+      "starId": "thien_luong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "explicit_reference_only",
+        "lineNumbers": [
+          791,
+          792,
+          796
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phuc_duc:that_sat",
+      "palaceId": "phuc_duc",
+      "starId": "that_sat",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          795,
+          803
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phuc_duc:pha_quan",
+      "palaceId": "phuc_duc",
+      "starId": "pha_quan",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          805
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phu_mau:tu_vi",
+      "palaceId": "phu_mau",
+      "starId": "tu_vi",
+      "status": "CONFLICTING",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          819
+        ]
+      },
+      "recordIds": [
+        "KRB2-PM-ZIWEI"
+      ]
+    },
+    {
+      "cellId": "phu_mau:thien_co",
+      "palaceId": "phu_mau",
+      "starId": "thien_co",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          820
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phu_mau:thai_duong",
+      "palaceId": "phu_mau",
+      "starId": "thai_duong",
+      "status": "COMPARED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          822
+        ]
+      },
+      "recordIds": [
+        "KRB2-PM-DUONG"
+      ]
+    },
+    {
+      "cellId": "phu_mau:vu_khuc",
+      "palaceId": "phu_mau",
+      "starId": "vu_khuc",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          824
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phu_mau:thien_dong",
+      "palaceId": "phu_mau",
+      "starId": "thien_dong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          825,
+          833
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phu_mau:liem_trinh",
+      "palaceId": "phu_mau",
+      "starId": "liem_trinh",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          826
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phu_mau:thien_phu",
+      "palaceId": "phu_mau",
+      "starId": "thien_phu",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          827
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phu_mau:thai_am",
+      "palaceId": "phu_mau",
+      "starId": "thai_am",
+      "status": "COMPARED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          821,
+          823,
+          828
+        ]
+      },
+      "recordIds": [
+        "KRB2-PM-AM"
+      ]
+    },
+    {
+      "cellId": "phu_mau:tham_lang",
+      "palaceId": "phu_mau",
+      "starId": "tham_lang",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          829
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phu_mau:cu_mon",
+      "palaceId": "phu_mau",
+      "starId": "cu_mon",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          830
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phu_mau:thien_tuong",
+      "palaceId": "phu_mau",
+      "starId": "thien_tuong",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          831
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phu_mau:thien_luong",
+      "palaceId": "phu_mau",
+      "starId": "thien_luong",
+      "status": "CONFLICTING",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          832
+        ]
+      },
+      "recordIds": [
+        "KRB2-PM-LUONG"
+      ]
+    },
+    {
+      "cellId": "phu_mau:that_sat",
+      "palaceId": "phu_mau",
+      "starId": "that_sat",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          834
+        ]
+      },
+      "recordIds": []
+    },
+    {
+      "cellId": "phu_mau:pha_quan",
+      "palaceId": "phu_mau",
+      "starId": "pha_quan",
+      "status": "PASSAGE_LOCATED",
+      "location": {
+        "kind": "paragraph_opening",
+        "lineNumbers": [
+          835
+        ]
+      },
+      "recordIds": []
+    }
+  ]
+}

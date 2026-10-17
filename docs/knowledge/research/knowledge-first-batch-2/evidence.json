@@ -1,0 +1,145 @@
+{
+  "batchId": "KR-B2-20261017",
+  "observedAt": "2026-10-17",
+  "baseCommit": "05e5c2dc8fe4d946e1b6d97002827654ca052213",
+  "prerequisite": {
+    "pr": 64,
+    "merged": true,
+    "mergedAt": "2026-10-17T09:08:51Z",
+    "batch1Commit": "4a6d051175c952fe91ad8e33a29630e350711ffb"
+  },
+  "primary": {
+    "sourceId": "ziwei-quanshu-iztro-transcription",
+    "editionId": "iztro-juan2-2f00e2ab0c80",
+    "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+    "sha256": "b824c61e1bdec55ecdc7123ff1e79bce9648f07d67d054c43a59ce731572d4a7",
+    "rawIdentityRef": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/source-identity.json",
+    "sourceFamily": "quanshu-transmission",
+    "originalPrintAuthenticated": false
+  },
+  "fullSectionsRead": [
+    {
+      "palaceId": "tu_tuc",
+      "span": {
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 600,
+        "endLine": 632,
+        "sha256": "62e3e8d293004ef7be24b576c1fffb71166d96fb0af0c6c408513b416dce0721",
+        "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+      },
+      "wikiReaderLines": [
+        1336,
+        1370
+      ]
+    },
+    {
+      "palaceId": "tat_ach",
+      "span": {
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 663,
+        "endLine": 686,
+        "sha256": "5983082017347cc98238f468190117431f69e4818aac31ad739196496855534a",
+        "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+      },
+      "wikiReaderLines": [
+        1403,
+        1428
+      ]
+    },
+    {
+      "palaceId": "phu_mau",
+      "span": {
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 817,
+        "endLine": 846,
+        "sha256": "92df67c009e504f7c395daa520ba747e2a42beadd7bb020e9d2740d947c59137",
+        "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+      },
+      "wikiReaderLines": [
+        1588,
+        1622
+      ]
+    }
+  ],
+  "webWitness": {
+    "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷二&oldid=1963110",
+    "workingUrl": "https://zh.wikisource.org/wiki/紫微斗數全書/卷二",
+    "footerRevision": 1963110,
+    "accessedAt": "2026-10-17",
+    "observation": "oldid direct URL failed retrieval; ordinary page readable and footer reports oldid1963110. Three full priority sections read. Traditional retained text and reader simplified rendering differ in script; no full-file or original-edition collation claimed.",
+    "rights": "Footer explicitly declares CC BY-SA4 with additional terms; no complete text copied. Original analytical notes and retained-file locators only."
+  },
+  "boundedSearchObservations": [
+    {
+      "topic": "Standalone Thiên Lương paragraph in Tật Ách",
+      "searched": [
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 663,
+          "endLine": 686,
+          "sha256": "5983082017347cc98238f468190117431f69e4818aac31ad739196496855534a",
+          "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "url": "https://zh.wikisource.org/w/index.php?title=紫微斗數全書/卷二&oldid=1963110",
+          "section": "六疾厄"
+        }
+      ],
+      "result": "No standalone 天梁 opening paragraph; explicit cohost clauses exist at retained666 and669. Not absence of all material, not absence across all editions."
+    },
+    {
+      "topic": "Reciprocal Sun/Luong wording",
+      "spans": [
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 822,
+          "endLine": 823,
+          "sha256": "3bfe36b1ad3d4e9b08a41899e2083f9051c13d8bfc3d7b371bb75a8c64427416",
+          "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 832,
+          "endLine": 833,
+          "sha256": "09463570afcb2a3499e698def85211dd36ba19deb8e36ee0237ad90213e5808a",
+          "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+        }
+      ],
+      "result": "Sun entry says Luong cohost no hinh; Luong entry says Sun cohost late khac and extra adverse early khac. No harmonizing condition supplied."
+    }
+  ],
+  "acquisitionChecks": [
+    {
+      "url": "https://www.digital.archives.go.jp/das/meta/F1000000000000101426",
+      "via": "https://www.shuge.org/view/zi_wei_dou_shu_quan_shu/",
+      "result": "Official item URL fetch returned403; no original scan read or downloaded; title/edition claims from Shuge remain secondary metadata."
+    },
+    {
+      "url": "https://www.shuge.org/view/zi_wei_dou_shu_quan_shu/",
+      "result": "Catalog and volume organization read: seven-volume work; palace chapters assigned volume4. Do not equate chapter numbering with WikiJuan2 without collation; no large PDF downloaded."
+    },
+    {
+      "url": "https://www.shidianguji.com/zh/book/SDZJ0170/chapter/1jvzooy7dkbhh",
+      "result": "Digital volume3 page read selectively; placement/natal material, not the target palace chapter; not used as independent commentary or an inspected print scan."
+    },
+    {
+      "url": "https://tve-4u.org/threads/tu-vi-ham-so-nguyen-phat-loc.4387/",
+      "result": "Forum lists972.6KB RAR, contributor transcription; no print title/copyright pages or permission established. Attachment not downloaded."
+    },
+    {
+      "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+      "result": "Selected attributed web sections actually read; exact comparator locators in comparisons.json. No print edition/page authenticated."
+    }
+  ],
+  "deferred": {
+    "trungChau": "Existing publisher sample has no relevant complete palace chapters; not substituted for actual new reading.",
+    "phiTinh": "No identifiable lawful relevant passage obtained; no school comparison claimed.",
+    "thaiThuLang": "Existing edition identity retained; no new rights-cleared target pages collated in this batch."
+  },
+  "approval": {
+    "sourceReviewExecuted": false,
+    "runtimeApprovalRequested": false,
+    "publicReleasePermission": "unchanged_closed"
+  },
+  "retention": "No source PDF, book scan, dataset or whole new web text retained. Span hashes reference existing frozen derived text; Vietnamese analytic records are durable."
+}
