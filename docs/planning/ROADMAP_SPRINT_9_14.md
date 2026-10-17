@@ -1,8 +1,10 @@
 # B3 Tử Vi — Roadmap sau Sprint 8 (Sprint 9–14)
 
+> **Planning precedence — 2026-10-17:** [Knowledge-First Research Strategy](ROADMAP_KNOWLEDGE_RESEARCH.md) now owns active Tử Vi research priorities, backlog and quality metrics. This document preserves the previous conditional engineering sequence and dated evidence. Feature implementation and the old sprint order are deferred behind research; historical `READY`/`GO` statements below do not start work or grant current source/runtime/release approval. AutoDev remains available for future explicitly requested engineering and is not invoked for this strategy update.
+
 > **Loại tài liệu:** Roadmap thực thi có điều kiện cho Sprint 9–14  
 > **Phiên bản:** 1.2 · **Ngày cập nhật:** 2026-10-14  
-> **Trạng thái:** `ACTIVE` — Sprint 9 engineering integration đã merge; Sprint 10 `READY / CONDITIONAL GO`; không hàm ý release approval  
+> **Trạng thái:** `ENGINEERING REFERENCE / DEFERRED` — trạng thái Sprint 9–14 bên dưới là snapshot lịch sử; ưu tiên hiện tại theo roadmap nghiên cứu
 > **Đường dẫn:** `docs/planning/ROADMAP_SPRINT_9_14.md`  
 > **Mốc thực hiện:** Sprint 9 → 14, **không ấn định ngày kết thúc** hoặc cam kết phát hành.
 

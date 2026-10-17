@@ -6,6 +6,8 @@
 
 > Dành cho developers/agents: bắt đầu tại [Documentation index](docs/README.md), rồi [AI Context](docs/engineering/AI_CONTEXT.md), [Agent Engineering](docs/engineering/AGENT_ENGINEERING.md) và [Contributing](docs/engineering/CONTRIBUTING.md). Trước khi sửa công thức Tử Vi, đọc thêm [Domain Knowledge](docs/tuvi/DOMAIN_KNOWLEDGE.md). Test phần mềm đạt không đồng nghĩa công thức hoặc lời luận đã được đối chiếu nguồn.
 
+**Ưu tiên hiện tại — Knowledge-First Research Strategy:** xây dựng tri thức Tử Vi đa nguồn, có xuất xứ, ngữ cảnh và khác biệt trường phái trước khi triển khai thêm tính năng. [Roadmap nghiên cứu chính thức](docs/planning/ROADMAP_KNOWLEDGE_RESEARCH.md) giữ backlog, chiến lược kiểm kê nguồn, trạng thái nghiên cứu và chỉ số chất lượng. T030–T038 cùng chứng cứ được giữ nguyên; T034 chưa được duyệt. AutoDev dành cho yêu cầu engineering sau này; public interpretation và AI narration vẫn khóa.
+
 ## Trạng thái tính năng
 
 | Khu vực | Hiện có | Giới hạn |

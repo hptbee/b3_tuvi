@@ -1,5 +1,7 @@
 # Sổ nguồn Tử Vi
 
+> Dated bibliographic snapshot, not the current acquisition backlog or an inventory of fully reviewed books. [sources.json](../knowledge/sources.json) remains authoritative for registered source/edition identities; later passages and actual decisions remain under [knowledge/](../knowledge/). Use the [Knowledge-First Research Strategy](../planning/ROADMAP_KNOWLEDGE_RESEARCH.md) for current inventory/rights work, independent source-family comparison and research priorities. The historical statements below describe their original batch and do not reset later evidence or approval scopes.
+
 Máy đọc: `docs/knowledge/sources.json`. Truy cập các URL trong sổ: 2026-10-12.
 
 Không điền năm, nhà xuất bản, chương, trang khi các trang thứ cấp không thống nhất hoặc khi chưa thấy ấn bản. Không có mục nào ở trạng thái `primary`.

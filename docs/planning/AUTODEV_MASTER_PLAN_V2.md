@@ -1,5 +1,7 @@
 # AutoDev Master Plan V2 — Tử Vi Việt Nam (`b3_tuvi`)
 
+> **Current priority override — 2026-10-17:** the [Knowledge-First Research Strategy](ROADMAP_KNOWLEDGE_RESEARCH.md) is the canonical active research roadmap/backlog. Build multi-source knowledge, contextual comparisons and interpretation methodology before scheduling more application features. This file remains the engineering history and future engineering backlog; older `READY`, auto-merge or continuation wording below is historical context, not authorization to resume AutoDev, implement, merge or deploy in this research phase. T030–T038, all source decisions/evidence and unresolved T034 are preserved without reclassification. Public interpretation and AI narration remain closed. No AutoDev checkpoint or review budget is changed by this documentation update.
+
 - version: 2
 - coordination: tài liệu này điều phối việc **sau** V1
 - history: `docs/archive/planning/AUTODEV_MASTER_PLAN.md` giữ nguyên, không sửa để phản ánh V2

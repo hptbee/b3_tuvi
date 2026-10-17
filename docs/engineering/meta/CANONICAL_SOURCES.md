@@ -2,10 +2,13 @@
 
 Last rebaseline: 2026-10-14 (documentation architecture cleanup).
 
+Planning precedence updated 2026-10-17: Knowledge-First Research Strategy is the active Tử Vi priority; existing engineering history and all source evidence remain in place.
+
 | Concern | Authoritative location | Notes |
 | --- | --- | --- |
-| Tử Vi AutoDev task tracking | [planning/AUTODEV_MASTER_PLAN_V2.md](../../planning/AUTODEV_MASTER_PLAN_V2.md) | V1 plan is historical only |
-| Tử Vi roadmap (Sprints 9–14) | [planning/ROADMAP_SPRINT_9_14.md](../../planning/ROADMAP_SPRINT_9_14.md) | § coordinates with Master Plan V2 |
+| Tử Vi research strategy, backlog, inventory process, research statuses and metrics | [planning/ROADMAP_KNOWLEDGE_RESEARCH.md](../../planning/ROADMAP_KNOWLEDGE_RESEARCH.md) | Active knowledge-first priority; collected/source-reviewed/runtime-approved/public permissions stay separate |
+| Tử Vi engineering task history and future AutoDev tracking | [planning/AUTODEV_MASTER_PLAN_V2.md](../../planning/AUTODEV_MASTER_PLAN_V2.md) | T030–T038 and unresolved T034 preserved; no current AutoDev invocation implied |
+| Previous Tử Vi engineering sequence (Sprints 9–14) | [planning/ROADMAP_SPRINT_9_14.md](../../planning/ROADMAP_SPRINT_9_14.md) | Reference/deferred behind research strategy; historical baselines retained |
 | Thần Số Học roadmap | [planning/ROADMAP_NUMEROLOGY_A_TO_Z.md](../../planning/ROADMAP_NUMEROLOGY_A_TO_Z.md) | |
 | System architecture | [architecture/ARCHITECTURAL_OVERVIEW.md](../../architecture/ARCHITECTURAL_OVERVIEW.md) | |
 | Normalized chart model | [architecture/CHART_DOMAIN_MODEL.md](../../architecture/CHART_DOMAIN_MODEL.md) | |
