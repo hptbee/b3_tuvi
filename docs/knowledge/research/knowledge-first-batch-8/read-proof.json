@@ -1,0 +1,308 @@
+{
+  "contexts": [
+    {
+      "batchId": "KR-B8-20261017",
+      "readMode": "Direct inspection of complete retained primary contexts and reciprocal entries; not fresh external acquisition",
+      "governingSpans": [
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 553,
+          "endLine": 575,
+          "sha256": "347e031b5cdac4ae4ce8d733f343eeee7fdf2a48c592ae3ba66263644d598f1d",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 712,
+          "endLine": 736,
+          "sha256": "efe76b53589501d504df967b87a6ba97cc845756e62ded80f41a10ee80993647",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        }
+      ],
+      "generalMethod": {
+        "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+        "startLine": 48,
+        "endLine": 66,
+        "sha256": "523b5fab97f6e7303aa8d539cad986617c6b37120e8e1b9c05c5eebd97f4ee33",
+        "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+      },
+      "exactEntries": [
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 554,
+          "endLine": 554,
+          "sha256": "fe1d0cd0683232fa5ab9bf3cfd9e81608314f94f9195e673bce0622ee8183e5a",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 560,
+          "endLine": 560,
+          "sha256": "2872c857201a46a7e6552ba365141167b1af3f7653650417922eabc98d4db8d5",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 562,
+          "endLine": 562,
+          "sha256": "5636d2492ed647b0c0d69988094a0f1ca8280ee3cd33236a1f6923d6b312774f",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 564,
+          "endLine": 564,
+          "sha256": "12873d5b0aff78afa4adb182124f7f81c2f804392715f8e35034c03f690c5759",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 567,
+          "endLine": 567,
+          "sha256": "ef78da41dcc198d1b3b233a3253a2d94a684016b3c44b35834a9c2212fb273ef",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 570,
+          "endLine": 570,
+          "sha256": "9638f25b7cfbe2a6b8bf9ad187bae1f5f820badfe81cc44224c935d02a654a14",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 575,
+          "endLine": 575,
+          "sha256": "8af32a4a6ef8588bc9f337de3109ebd548ed322347caf6700af90f7c93fddfe3",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 714,
+          "endLine": 714,
+          "sha256": "ec0d012a8e84bceb4ee57dd2c85b32c8dbfaf9e8856e2d0ad4f0c2799a1c6232",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 717,
+          "endLine": 717,
+          "sha256": "b800f8abe7e9756f534bdacfee7e7c5c41e47e751f87d2ecea41396d0763be90",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 724,
+          "endLine": 724,
+          "sha256": "525f6d99ce9ea7241944b550fe9587f318eaad1e32c4d24bca43bc6380549989",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 736,
+          "endLine": 736,
+          "sha256": "b588f68e07c9297a54d2b185073d97dd59c0fb6b412fcc0291bafa596d2eb918",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        }
+      ],
+      "independentNewAuthors": 0,
+      "newExternalSourceBodies": 0,
+      "networkRetries": 0,
+      "sourceFileSha256": "b824c61e1bdec55ecdc7123ff1e79bce9648f07d67d054c43a59ce731572d4a7",
+      "limits": [
+        "Retained digital witness, not authenticated original print",
+        "Same-family reciprocal comparison only",
+        "Modern source access blockers inherited, no route retried",
+        "No old disposition closed or historical record modified"
+      ]
+    },
+    {
+      "task": "b8-property-fortune",
+      "scope": "Scratch artifacts only; no repository mutations, external fetches, app tests, source reviews or approvals",
+      "fullPrimaryReads": [
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 765,
+          "endLine": 788,
+          "sha256": "66c1a214119aab5b0228ef7cf74fe15f99fa7b01fd5ff0b8704de22aaf6dac83",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 789,
+          "endLine": 816,
+          "sha256": "1ad123491278d5fcc8c568956085100468f59e45bc57035339586d3387bc5757",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+          "startLine": 48,
+          "endLine": 66,
+          "sha256": "523b5fab97f6e7303aa8d539cad986617c6b37120e8e1b9c05c5eebd97f4ee33",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        }
+      ],
+      "entryReads": [
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 766,
+          "endLine": 766,
+          "sha256": "eecb46d1daf90b16dcd165e50cd7a4223b97592643c3c7c443f94c0a9ef64701",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 773,
+          "endLine": 773,
+          "sha256": "c1dc2ef3b6ab47c6597544bd6eb420c5491689f6dad75be19d0cf69a6ca1f6cd",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 775,
+          "endLine": 775,
+          "sha256": "e676d0836423a21b31f0f52de09b504d7e1a0c6a875a7abb00ca7aad3a4bff58",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 777,
+          "endLine": 777,
+          "sha256": "78556d2a754f1853d4aa38b184ef2f65073a7ecb3e7a6c23834ec0ff5876acb7",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 779,
+          "endLine": 779,
+          "sha256": "53778b07e3161973d4a3c0a2c8d7abdf909c1131925bdd90077ffada7e9a2d83",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 790,
+          "endLine": 790,
+          "sha256": "b8baa51cf0b10f4f8afe12ddfa4c88cf81567fe795e28c6a6332427fffaf1ef4",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 791,
+          "endLine": 791,
+          "sha256": "4f88f899563c41f21430fb4f6a5240e754a9683f65327833fe0eb9ac3ee16294",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 798,
+          "endLine": 798,
+          "sha256": "d8bbf41bffbbd89ba5edf3da840681349e62cd80a8de43eaf24ddf6acb69a867",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 800,
+          "endLine": 800,
+          "sha256": "49acc2ee555ade8f754c56c73a47b5abd977bd5fe092fe6c6792786ff73da2a1",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 802,
+          "endLine": 802,
+          "sha256": "cd522db7425a61433e367dcb7156df0cf77f12729f2047edbdff7351b8ac1211",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 805,
+          "endLine": 805,
+          "sha256": "2130af8b897c398e3e73e302fc46ae46e80082f57b27c1aa1e5720f21a513d2f",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 803,
+          "endLine": 804,
+          "sha256": "72efdd42fa285a1c916bd76127ed98ebf2f035250bc35c1d83eecf5a84abea12",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        }
+      ],
+      "schemaBasis": "knowledge-first-batch-7/knowledge-records.json and comparisons.json",
+      "historicalReadBasis": [
+        "KRB6-DT-LUONG",
+        "KRB6-PD-LUONG",
+        "KRB7-NB-ZIWEI"
+      ],
+      "negativeEvidence": [
+        "No palace preamble in765–788 or789–816",
+        "No standalone 天梁 entry in789–816",
+        "No 火 in adverse list790",
+        "No Vi cohost in791 despite Cơ cohost in790",
+        "No independent authored comparator acquired"
+      ],
+      "questionRecommendations": [
+        {
+          "topic": "Tử–Phá / Điền reciprocal scope",
+          "recordIds": [
+            "KRB8-DT-ZIWEI"
+          ],
+          "locations": [
+            {
+              "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+              "startLine": 766,
+              "endLine": 766,
+              "sha256": "eecb46d1daf90b16dcd165e50cd7a4223b97592643c3c7c443f94c0a9ef64701",
+              "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+            },
+            {
+              "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+              "startLine": 779,
+              "endLine": 779,
+              "sha256": "53778b07e3161973d4a3c0a2c8d7abdf909c1131925bdd90077ffada7e9a2d83",
+              "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+            }
+          ],
+          "basis": "退祖 versus 有見成家業; check property category and scope of子午; no forced reconciliation",
+          "nextAction": "Identified complete print page and edition-specific gloss",
+          "resolutionClaim": false
+        },
+        {
+          "topic": "Tử–Phá / Phúc reciprocal direction and adverse scope",
+          "recordIds": [
+            "KRB8-PD-ZIWEI"
+          ],
+          "locations": [
+            {
+              "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+              "startLine": 790,
+              "endLine": 790,
+              "sha256": "b8baa51cf0b10f4f8afe12ddfa4c88cf81567fe795e28c6a6332427fffaf1ef4",
+              "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+            },
+            {
+              "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+              "startLine": 805,
+              "endLine": 805,
+              "sha256": "2130af8b897c398e3e73e302fc46ae46e80082f57b27c1aa1e5720f21a513d2f",
+              "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+            }
+          ],
+          "basis": "勞心費力不安 versus 安樂; five-name list790 omits火; no timing gloss in790/805",
+          "nextAction": "Identified complete print page and commentary; keep adverse lists local",
+          "resolutionClaim": false
+        }
+      ],
+      "scratchValidation": {
+        "spanOccurrencesVerified": 41,
+        "recordCount": 2,
+        "comparisonCount": 2,
+        "assertions": "All persisted source-span hashes replayed; research and three approval statuses asserted; page and originalQuotation remain null",
+        "status": "executed_passed",
+        "notClaimed": "No repository packet validator, independent review, application test or source review performed by this worker"
+      }
+    }
+  ],
+  "methodologyRef": "docs/knowledge/research/knowledge-first-batch-8/methodology.json",
+  "meaning": "Local retained-source inspection; neither print authentication nor formal source review"
+}

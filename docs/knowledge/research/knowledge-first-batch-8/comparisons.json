@@ -1,0 +1,125 @@
+{
+  "batchId": "KR-B8-20261017",
+  "comparisons": [
+    {
+      "comparisonId": "B8C01",
+      "recordIds": [
+        "KRB8-HD-ZIWEI"
+      ],
+      "sourceReference": {
+        "sourceId": "ziwei-quanshu-iztro-transcription",
+        "editionId": "iztro-juan2-2f00e2ab0c80",
+        "author": null,
+        "authorAttribution": "Traditional attribution; retained transcription, not authenticated original edition",
+        "work": "紫微斗數全書 — retained iztro transcription",
+        "section": "兄弟宮 / 紫微 — complete reciprocal context",
+        "page": null,
+        "language": "zh-Hant",
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 553,
+          "endLine": 575,
+          "sha256": "347e031b5cdac4ae4ce8d733f343eeee7fdf2a48c592ae3ba66263644d598f1d",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "originalQuotation": null
+      },
+      "family": "quanshu-transmission",
+      "kind": "within_source_context_comparison",
+      "independence": "Not independent: same retained Juan2 witness; zero new independent authors, no authored COMPARED status",
+      "rights": "Existing retained source locators/hashes and bounded original terms with original analysis only",
+      "observationVi": "554 Vi–Phá ba,567 Phá–Vi hai: quanh567 có miếu/hãm/sát và trợ tinh, nên chưa chốt cùng predicate hay lỗi chữ. Vi–Phủ ba tại554 so sáu–bảy tại560 có nhóm phụ tá thêm; Tướng ba–bốn tại554/564 gần lượng số nhưng terminal scope vẫn mở. Không chuẩn số hoặc khẳng định hai câu mâu thuẫn.",
+      "status": "performed_with_identity_limits"
+    },
+    {
+      "comparisonId": "B8C02",
+      "recordIds": [
+        "KRB8-NB-LUONG"
+      ],
+      "sourceReference": {
+        "sourceId": "ziwei-quanshu-iztro-transcription",
+        "editionId": "iztro-juan2-2f00e2ab0c80",
+        "author": null,
+        "authorAttribution": "Traditional attribution; retained transcription, not authenticated original edition",
+        "work": "紫微斗數全書 — retained iztro transcription",
+        "section": "奴仆宮 / 天梁 — complete reciprocal context",
+        "page": null,
+        "language": "zh-Hant",
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 712,
+          "endLine": 736,
+          "sha256": "efe76b53589501d504df967b87a6ba97cc845756e62ded80f41a10ee80993647",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "originalQuotation": null
+      },
+      "family": "quanshu-transmission",
+      "kind": "within_source_context_comparison",
+      "independence": "Not independent: same retained Juan2 witness; zero new independent authors, no authored COMPARED status",
+      "rights": "Existing retained source locators/hashes and bounded original terms with original analysis only",
+      "observationVi": "724 Đồng–Lương giữ nhà,717 Đồng–Lương giúp chủ: gần chiều thuận, chưa hoàn toàn đồng nghĩa.724 Cơ–Lương không một lòng,714 Cơ–Lương muộn thu nhận: khác phương diện, có thể đồng tồn tại. Không đưa brightness/bộ sát của entry Cơ/Đồng vào Lương đơn thủ, không lấy 旺主 làm độ sáng.",
+      "status": "performed_with_identity_limits"
+    },
+    {
+      "comparisonId": "B8C03",
+      "recordIds": [
+        "KRB8-DT-ZIWEI"
+      ],
+      "sourceReference": {
+        "sourceId": "ziwei-quanshu-iztro-transcription",
+        "editionId": "iztro-juan2-2f00e2ab0c80",
+        "author": null,
+        "authorAttribution": "Traditional attribution; retained transcription, not authenticated original edition",
+        "work": "紫微斗數全書 — retained iztro transcription",
+        "section": "田宅宮 / 紫微 — complete reciprocal context",
+        "page": null,
+        "language": "zh-Hant",
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 765,
+          "endLine": 788,
+          "sha256": "66c1a214119aab5b0228ef7cf74fe15f99fa7b01fd5ff0b8704de22aaf6dac83",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "originalQuotation": null
+      },
+      "family": "quanshu-transmission",
+      "kind": "within_source_context_comparison",
+      "independence": "Not independent: entries in the same retained Juan2 witness only; no authored COMPARED status or source approval",
+      "rights": "Existing retained source locators/hashes and original analysis only; no new text or article retained",
+      "observationVi": "Điền cùng witness:766 Vi–Phá lui tổ nghiệp so779 Phá–Vi có gia nghiệp sẵn, chưa đủ điều kiện để hòa giải;766 Tướng đồng gia nghiệp sẵn so777 Vi đồng tự tạo khác trọng tâm.773 Vi đồng đại phú và775 Vi đồng tổ nghiệp không là corroboration độc lập. Giữ qualifier mỗi entry, gồm phạm vi TýNgọ779, bộ sáu adverse766 và trợ tinh cuối766.",
+      "status": "CONTEXT_MAPPED_ONLY"
+    },
+    {
+      "comparisonId": "B8C04",
+      "recordIds": [
+        "KRB8-PD-ZIWEI"
+      ],
+      "sourceReference": {
+        "sourceId": "ziwei-quanshu-iztro-transcription",
+        "editionId": "iztro-juan2-2f00e2ab0c80",
+        "author": null,
+        "authorAttribution": "Traditional attribution; retained transcription, not authenticated original edition",
+        "work": "紫微斗數全書 — retained iztro transcription",
+        "section": "福德宮 / 紫微 — complete reciprocal context",
+        "page": null,
+        "language": "zh-Hant",
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 789,
+          "endLine": 816,
+          "sha256": "1ad123491278d5fcc8c568956085100468f59e45bc57035339586d3387bc5757",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "originalQuotation": null
+      },
+      "family": "quanshu-transmission",
+      "kind": "within_source_context_comparison",
+      "independence": "Not independent: entries in the same retained Juan2 witness only; no authored COMPARED status or source approval",
+      "rights": "Existing retained source locators/hashes and original analysis only; no new text or article retained",
+      "observationVi": "Phúc cùng witness:790 Vi–Phá nhọc/bất an đối805 Phá–Vi an lạc; không tự thêm sớm/muộn.798/802 Vi đồng vui;800 thêm muộn;803–804 thêm trước nhọc sau nhàn/cuối như ý.791 không có Vi đồng dù790 có Cơ đồng.790 chỉ có năm tên adverse, thiếu Hỏa; không đồng nhất sáu tên của entry khác. Không có standalone Lương trong toàn789–816.",
+      "status": "CONTEXT_MAPPED_ONLY"
+    }
+  ]
+}

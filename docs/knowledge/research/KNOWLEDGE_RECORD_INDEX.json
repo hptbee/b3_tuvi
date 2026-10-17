@@ -8,18 +8,19 @@
     "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
     "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
     "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
-    "docs/knowledge/research/knowledge-first-batch-7/knowledge-records.json"
+    "docs/knowledge/research/knowledge-first-batch-7/knowledge-records.json",
+    "docs/knowledge/research/knowledge-first-batch-8/knowledge-records.json"
   ],
   "metrics": {
     "indexedCells": 168,
-    "persistedRecords": 60,
-    "starPalaceRecords": 54,
+    "persistedRecords": 64,
+    "starPalaceRecords": 58,
     "nonCellRecords": 6,
-    "contextualCells": 43,
-    "locatedOnlyCells": 125,
+    "contextualCells": 47,
+    "locatedOnlyCells": 121,
     "comparedCellsIncludingDisputed": 41,
     "cellsWithConflictingResearchStatus": 7,
-    "cellsWithContradictionFlags": 12,
+    "cellsWithContradictionFlags": 15,
     "palacesWithContextualRecords": 12,
     "newBatch3Records": 14,
     "newBatch3Cells": 11,
@@ -30,7 +31,9 @@
     "newBatch6Records": 9,
     "newBatch6Cells": 3,
     "newBatch7Records": 3,
-    "newBatch7Cells": 2
+    "newBatch7Cells": 2,
+    "newBatch8Records": 4,
+    "newBatch8Cells": 4
   },
   "metricMeaning": "Compared includes actually performed conditional comparisons with identity limits and disputed readings; not source acceptance. Contradiction flags include a linked dispute on a record whose main research status may be COMPARED.",
   "familySummary": [
@@ -639,6 +642,42 @@
         ]
       },
       "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB8-HD-ZIWEI",
+      "file": "docs/knowledge/research/knowledge-first-batch-8/knowledge-records.json",
+      "subject": {
+        "starId": "tu_vi",
+        "palaceId": "huynh_de"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB8-NB-LUONG",
+      "file": "docs/knowledge/research/knowledge-first-batch-8/knowledge-records.json",
+      "subject": {
+        "starId": "thien_luong",
+        "palaceId": "no_boc"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB8-DT-ZIWEI",
+      "file": "docs/knowledge/research/knowledge-first-batch-8/knowledge-records.json",
+      "subject": {
+        "starId": "tu_vi",
+        "palaceId": "dien_trach"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB8-PD-ZIWEI",
+      "file": "docs/knowledge/research/knowledge-first-batch-8/knowledge-records.json",
+      "subject": {
+        "starId": "tu_vi",
+        "palaceId": "phuc_duc"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
     }
   ],
   "cells": [
@@ -1047,7 +1086,43 @@
       "researchStatesObserved": [
         "CONTEXT_MAPPED"
       ]
+    },
+    {
+      "cellId": "huynh_de:tu_vi",
+      "recordIds": [
+        "KRB8-HD-ZIWEI"
+      ],
+      "researchStatesObserved": [
+        "CONTEXT_MAPPED"
+      ]
+    },
+    {
+      "cellId": "no_boc:thien_luong",
+      "recordIds": [
+        "KRB8-NB-LUONG"
+      ],
+      "researchStatesObserved": [
+        "CONTEXT_MAPPED"
+      ]
+    },
+    {
+      "cellId": "dien_trach:tu_vi",
+      "recordIds": [
+        "KRB8-DT-ZIWEI"
+      ],
+      "researchStatesObserved": [
+        "CONTEXT_MAPPED"
+      ]
+    },
+    {
+      "cellId": "phuc_duc:tu_vi",
+      "recordIds": [
+        "KRB8-PD-ZIWEI"
+      ],
+      "researchStatesObserved": [
+        "CONTEXT_MAPPED"
+      ]
     }
   ],
-  "refreshToolRef": "docs/knowledge/research/knowledge-first-batch-7/refresh-index.mjs"
+  "refreshToolRef": "docs/knowledge/research/knowledge-first-batch-8/refresh-index.mjs"
 }

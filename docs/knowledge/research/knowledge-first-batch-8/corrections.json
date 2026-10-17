@@ -1,0 +1,37 @@
+{
+  "batchId": "KR-B8-20261017",
+  "kind": "additive_scope_clarification",
+  "historicalFilesEdited": false,
+  "supplements": [
+    {
+      "supplementId": "B8-AUDIT-SUPPLEMENT-PD-LUONG-SCHOOL-SCOPE",
+      "oldRecordId": "KRB6-PD-LUONG",
+      "field": "schoolScope",
+      "oldValue": "Witness-specific attribution only; Wang describes 中州派, no runtime school ID or authenticated universal profile",
+      "finding": "Extraneous/ambiguous record-level boilerplate about Wang/中州派; it is not evidence of a school assignment to this Q+Ling claim. Actual references and B6C03 identify Q and Ling154.",
+      "proposedReading": "Q + Ling154 research context; no verified school assignment for this record.",
+      "sourceReview": "unchanged_not_executed",
+      "dispositionResolution": "none; no RESOLVED_WITH_EVIDENCE",
+      "evidence": [
+        {
+          "path": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+          "jsonPointer": "/records/2",
+          "id": "KRB6-PD-LUONG",
+          "fileSha256LF": "5f305f9d53e18d7ce384ad68dfeb816e71401cf6421e715f8d6023461dd53a45",
+          "objectSha256": "32dbd5e6f94eef1fa49010e1ef62fc82fc5b37a3c702fd88e33ba489819dbd7d",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        },
+        {
+          "path": "docs/knowledge/research/knowledge-first-batch-6/comparisons.json",
+          "jsonPointer": "/comparisons/2",
+          "id": "B6C03",
+          "fileSha256LF": "6e1e3b4167b0cdb90d3364370adec95f8e63a95b4e0c7d6d916085c32e997539",
+          "objectSha256": "47e7dc7c9a4148e801568a3480878a01b8f0b4dce0d5ab06156f806c2dbeaf8b",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      ],
+      "effect": "Clarify metadata attribution only; no textual emendation, status/approval change, new record/cell, or disposition resolution.",
+      "historicalEdit": false
+    }
+  ]
+}

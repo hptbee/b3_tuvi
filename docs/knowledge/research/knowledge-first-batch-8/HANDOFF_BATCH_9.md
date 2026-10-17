@@ -1,0 +1,12 @@
+# Batch 9 handoff — recommendations, not execution
+
+Start from committed Batch 8 and recount the canonical index: 64 records, 47 contextual cells, 121 locator-only cells, 41 authored-compared cells including partial/disputed overlap, 17 open questions and zero evidence-resolved. All 24 Vi/Lương cells have some context; Lương/Phúc remains cohost-only. No full star interpretation is complete.
+
+1. Prioritize edition-identified complete pages and glosses for B8D15–17: Vi–Phá/Huynh Q554/567, Điền766/779 and Phúc790/805. Preserve the full entry conditions, possible Tý/Ngọ scope, property-category difference and exact adverse lists. A matching mirrored clause is not an independent author; no majority vote or forced reconciliation.
+2. When a genuinely usable access route appears, authenticate the Batch 6 reproduction via official shelfmark/catalogue/colophon and printed folios. Keep all four prior Quanshu variants, including Cơ–Lương/Tử 寅申 versus natal 辰戌. Current CONNECT denial is neither source absence nor authentication. Do not repeat identical failed requests without new access or a materially different lead.
+3. Acquire the actual Hàm Số printed page corresponding to web locator V2179, and resolve heading/body and edition/pagination uncertainty from that work itself. Seek exact Wang898/909 print context and a separate attributed author for the complete Cơ–Lương/Tả–Hữu/Vi–Phụ configuration. Partial overlap is not exact confirmation.
+4. Deepen the 47 contextual cells with actual independent authored witnesses and complete conditions before chasing record counts. For new cells among the remaining 121, select bounded readable major-star/palace sections with full preambles, reciprocal evidence and meaningful exceptions; use the actual index to avoid duplicates.
+5. Revisit the methodology matrix only with original modern pages or new exact evidence. Current Hàm Số/Ling/Wang columns are secondary historical notes, not fresh original verification. Keep source-specific order and relation endpoints separate; no universal score. Preserve the explicit schoolScope clarification for KRB6-PD-LUONG without rewriting historical records.
+6. Preserve both checkpoints and all 17 unresolved dispositions. Validate new evidence and recount records/cells independently. Source review, runtime activation and public release require separate future authorization and gates.
+
+Batch 9 has not been planned in detail or researched in this task. No AutoDev transition, application implementation, merge or deployment is authorized by this handoff.
