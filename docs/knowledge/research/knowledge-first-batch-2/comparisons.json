@@ -1,0 +1,207 @@
+{
+  "batchId": "KR-B2-20261017",
+  "note": "One concise observation per comparator, referenced rather than copied into every record. Web reader line numbers are access-session aids, headings are durable locators. No authenticated Ham So print page.",
+  "comparisons": [
+    {
+      "comparisonId": "V01",
+      "recordIds": [
+        "KRB2-PM-ZIWEI"
+      ],
+      "locator": "TỬ VI / 7 / a) Ở PHỤ",
+      "readerLines": [
+        3106,
+        3123
+      ],
+      "observationVi": "Tử–Tham bị xếp bất lợi; Q có nhánh vô sát thuận. V cũng yêu cầu phối Nhật–Nguyệt.",
+      "disposition": "potential_scope_conflict_not_adjudicated",
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "work": "Tử Vi Hàm Số — attributed selected web text",
+        "author": "Nguyễn Phát Lộc (page attribution; not print-authenticated)",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "language": "vi",
+        "page": null,
+        "originalQuotation": null,
+        "accessedAt": "2026-10-17"
+      },
+      "sourceFamily": "ham-so-attributed-web",
+      "independence": "Distinct authored attribution from Quanshu; original edition and any borrowing not fully authenticated",
+      "schoolId": null,
+      "status": "COMPARED_WITH_EDITION_LIMITS",
+      "rights": "No bulk text or quotation retained; original bounded analysis and locators only; reuse permission unknown",
+      "sourceReview": "not_executed",
+      "runtimeApproval": "not_requested",
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-2/DOSSIER.md#cross-source-comparison"
+    },
+    {
+      "comparisonId": "V02",
+      "recordIds": [
+        "KRB2-PM-LUONG"
+      ],
+      "locator": "THIÊN LƯƠNG / 7 / h) Ở PHỤ; f) Ở ĐIỀN for antecedent",
+      "readerLines": [
+        2699,
+        2716
+      ],
+      "observationVi": "V phân vị trí thuận, Sửu/Mùi trung bình và Tỵ/Hợi bất lợi; không giải quyết đối ứng Nhật–Lương ở Q.",
+      "disposition": "compared_different_condition_granularity",
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "work": "Tử Vi Hàm Số — attributed selected web text",
+        "author": "Nguyễn Phát Lộc (page attribution; not print-authenticated)",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "language": "vi",
+        "page": null,
+        "originalQuotation": null,
+        "accessedAt": "2026-10-17"
+      },
+      "sourceFamily": "ham-so-attributed-web",
+      "independence": "Distinct authored attribution from Quanshu; original edition and any borrowing not fully authenticated",
+      "schoolId": null,
+      "status": "COMPARED_WITH_EDITION_LIMITS",
+      "rights": "No bulk text or quotation retained; original bounded analysis and locators only; reuse permission unknown",
+      "sourceReview": "not_executed",
+      "runtimeApproval": "not_requested",
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-2/DOSSIER.md#cross-source-comparison"
+    },
+    {
+      "comparisonId": "V03",
+      "recordIds": [
+        "KRB2-PM-DUONG",
+        "KRB2-PM-AM"
+      ],
+      "locator": "THÁI DƯƠNG / h) Ở PHỤ; THÁI ÂM / l) Ở PHỤ cross-reference",
+      "readerLines": [
+        1871,
+        1875
+      ],
+      "secondaryReaderLines": [
+        1607,
+        1609
+      ],
+      "observationVi": "V dùng sáng/tối và Tuần/Triệt; mục Âm dẫn sang mục Dương. Không xác nhận trọn điều kiện ngày/đêm ở Q.",
+      "disposition": "shared_brightness_dependency_not_full_agreement",
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "work": "Tử Vi Hàm Số — attributed selected web text",
+        "author": "Nguyễn Phát Lộc (page attribution; not print-authenticated)",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "language": "vi",
+        "page": null,
+        "originalQuotation": null,
+        "accessedAt": "2026-10-17"
+      },
+      "sourceFamily": "ham-so-attributed-web",
+      "independence": "Distinct authored attribution from Quanshu; original edition and any borrowing not fully authenticated",
+      "schoolId": null,
+      "status": "COMPARED_WITH_EDITION_LIMITS",
+      "rights": "No bulk text or quotation retained; original bounded analysis and locators only; reuse permission unknown",
+      "sourceReview": "not_executed",
+      "runtimeApproval": "not_requested",
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-2/DOSSIER.md#cross-source-comparison"
+    },
+    {
+      "comparisonId": "V04",
+      "recordIds": [
+        "KRB2-TT-ZIWEI"
+      ],
+      "locator": "TỬ VI / 7 / h) Ở TỬ",
+      "readerLines": [
+        3176,
+        3182
+      ],
+      "observationVi": "V dùng định tính, tách Phủ/Tướng thuận khỏi Sát/Phá/Tham và sao xấu; không xác nhận lượng số Q.",
+      "disposition": "partial_method_agreement_not_numerical_corroboration",
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "work": "Tử Vi Hàm Số — attributed selected web text",
+        "author": "Nguyễn Phát Lộc (page attribution; not print-authenticated)",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "language": "vi",
+        "page": null,
+        "originalQuotation": null,
+        "accessedAt": "2026-10-17"
+      },
+      "sourceFamily": "ham-so-attributed-web",
+      "independence": "Distinct authored attribution from Quanshu; original edition and any borrowing not fully authenticated",
+      "schoolId": null,
+      "status": "COMPARED_WITH_EDITION_LIMITS",
+      "rights": "No bulk text or quotation retained; original bounded analysis and locators only; reuse permission unknown",
+      "sourceReview": "not_executed",
+      "runtimeApproval": "not_requested",
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-2/DOSSIER.md#cross-source-comparison"
+    },
+    {
+      "comparisonId": "V05",
+      "recordIds": [
+        "KRB2-TT-LUONG"
+      ],
+      "locator": "THIÊN LƯƠNG / 7 / b) Ở TỬ",
+      "readerLines": [
+        2650,
+        2659
+      ],
+      "observationVi": "V phân vị trí và tổ hợp; đông con không tương đương các số hai/ba ở Q. Dòng Nhật–Lương/Dậu cần kiểm bản.",
+      "disposition": "different_granularity_and_possible_web_editing_issue",
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "work": "Tử Vi Hàm Số — attributed selected web text",
+        "author": "Nguyễn Phát Lộc (page attribution; not print-authenticated)",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "language": "vi",
+        "page": null,
+        "originalQuotation": null,
+        "accessedAt": "2026-10-17"
+      },
+      "sourceFamily": "ham-so-attributed-web",
+      "independence": "Distinct authored attribution from Quanshu; original edition and any borrowing not fully authenticated",
+      "schoolId": null,
+      "status": "COMPARED_WITH_EDITION_LIMITS",
+      "rights": "No bulk text or quotation retained; original bounded analysis and locators only; reuse permission unknown",
+      "sourceReview": "not_executed",
+      "runtimeApproval": "not_requested",
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-2/DOSSIER.md#cross-source-comparison"
+    },
+    {
+      "comparisonId": "V06",
+      "recordIds": [
+        "KRB2-TA-ZIWEI"
+      ],
+      "locator": "TỬ VI / 7 / f) Ở TẬT; general section 5 as surrounding scope",
+      "readerLines": [
+        3159,
+        3162
+      ],
+      "contextReaderLines": [
+        3048,
+        3053
+      ],
+      "observationVi": "V nhấn cứu giải, kể cả Thất Sát; phần chung vẫn có hạn chế. Không xác nhận miễn mọi sát.",
+      "disposition": "partial_agreement_not_immunity",
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "work": "Tử Vi Hàm Số — attributed selected web text",
+        "author": "Nguyễn Phát Lộc (page attribution; not print-authenticated)",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "language": "vi",
+        "page": null,
+        "originalQuotation": null,
+        "accessedAt": "2026-10-17"
+      },
+      "sourceFamily": "ham-so-attributed-web",
+      "independence": "Distinct authored attribution from Quanshu; original edition and any borrowing not fully authenticated",
+      "schoolId": null,
+      "status": "COMPARED_WITH_EDITION_LIMITS",
+      "rights": "No bulk text or quotation retained; original bounded analysis and locators only; reuse permission unknown",
+      "sourceReview": "not_executed",
+      "runtimeApproval": "not_requested",
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-2/DOSSIER.md#cross-source-comparison"
+    }
+  ]
+}
