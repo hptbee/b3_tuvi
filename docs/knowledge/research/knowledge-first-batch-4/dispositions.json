@@ -1,0 +1,119 @@
+{
+  "purpose": "Research dispositions, not runtime enums or source decisions; none resolved with evidence this batch",
+  "dispositions": [
+    {
+      "dispositionId": "B4D01",
+      "topic": "Nhật–Lương reciprocal / Phụ Mẫu",
+      "disposition": "STILL_UNRESOLVED",
+      "recordIds": [
+        "KRB2-PM-LUONG",
+        "KRB2-PM-DUONG"
+      ],
+      "basis": "No newly authenticated exact reciprocal wording; general Cơ material does not settle it.",
+      "nextAction": "Obtain identified pages for both entries including qualifiers.",
+      "resolutionClaim": false
+    },
+    {
+      "dispositionId": "B4D02",
+      "topic": "Tử–Tham / Phụ Mẫu",
+      "disposition": "STILL_UNRESOLVED",
+      "recordIds": [
+        "KRB2-PM-ZIWEI"
+      ],
+      "basis": "New Quan material is a different palace, not resolution of favorable/no-sát versus adverse scope.",
+      "nextAction": "Collate both complete Phụ Mẫu paragraphs, not a general Tham description.",
+      "resolutionClaim": false
+    },
+    {
+      "dispositionId": "B4D03",
+      "topic": "Thiên Lương brightness at Thân",
+      "disposition": "SOURCE_VARIANT",
+      "recordIds": [
+        "KRB3-M-LUONG"
+      ],
+      "basis": "Retained table/prose and phú give different brightness; label is observational, correction remains unresolved.",
+      "nextAction": "Locate identified print table and complete phú.",
+      "resolutionClaim": false
+    },
+    {
+      "dispositionId": "B4D04",
+      "topic": "Thái Dương / Phu Thê timing",
+      "disposition": "INTERPRETATION_DIFFERENCE",
+      "recordIds": [
+        "KRB3-PT-DUONG"
+      ],
+      "basis": "Prior authored timing/scope tension remains; Cơ spouse clauses have different subjects and cannot resolve it.",
+      "nextAction": "Compare matching placements, age subject and adverse set in an identified edition.",
+      "resolutionClaim": false
+    },
+    {
+      "dispositionId": "B4D05",
+      "topic": "吉星 / 四殺 / 空 / 耗",
+      "disposition": "STILL_UNRESOLVED",
+      "recordIds": [
+        "KRB3-TERM-LAYERS"
+      ],
+      "basis": "New Cơ–Cự/Nô still leaves 吉星 unnamed; explicit six-name lists elsewhere do not define all generic rosters.",
+      "nextAction": "Preserve clause-specific operands; obtain glossary tied to the same edition.",
+      "resolutionClaim": false
+    },
+    {
+      "dispositionId": "B4D06",
+      "topic": "Kiếp Sát / Địa Kiếp / Không Vong / Địa Không",
+      "disposition": "STILL_UNRESOLVED",
+      "recordIds": [
+        "KRB2-TA-PHU",
+        "KRB3-TERM-LAYERS"
+      ],
+      "basis": "A modern article naming Địa Không/Địa Kiếp does not define all classical 劫殺/空亡 occurrences.",
+      "nextAction": "Collate exact Tật wording and edition glossary; never replace by convenient runtime IDs.",
+      "resolutionClaim": false
+    },
+    {
+      "dispositionId": "B4D07",
+      "topic": "Editorial HTML tip: eighteen 正曜",
+      "disposition": "STILL_UNRESOLVED",
+      "recordIds": [
+        "KRB3-TERM-LAYERS"
+      ],
+      "basis": "Existing tip/custom-block layer evidence preserved; no newly identified textual author or original print.",
+      "nextAction": "Trace upstream editorial history with an identifiable citation; do not retry old scan routes without a new lead.",
+      "resolutionClaim": false
+    },
+    {
+      "dispositionId": "B4D08",
+      "topic": "Thiên Cơ brightness: Q versus Hàm Số",
+      "disposition": "INTERPRETATION_DIFFERENCE",
+      "recordIds": [
+        "KRB4-M-CO"
+      ],
+      "basis": "Q148–153 and V2158–2166 attach different brightness to several positions. Both remain source-scoped, no default table selected.",
+      "nextAction": "Identify print tables and school/edition context before interpreting the difference.",
+      "resolutionClaim": false
+    },
+    {
+      "dispositionId": "B4D09",
+      "topic": "Cơ/Quan 良巨 and 見羊陀火鈴方宜",
+      "disposition": "TRANSCRIPTION_UNCERTAIN",
+      "recordIds": [
+        "KRB4-QL-CO"
+      ],
+      "basis": "Awkward retained strings at Q739; no independent original correction, no blanket beneficial-sát exception inferred.",
+      "nextAction": "Collate a whole page with identifiable edition and punctuation.",
+      "resolutionClaim": false
+    },
+    {
+      "dispositionId": "B4D10",
+      "topic": "Hàm Số Cơ/Điền Cự Nguyệt; Cơ/Phúc Cự Lương",
+      "disposition": "TRANSCRIPTION_UNCERTAIN",
+      "recordIds": [
+        "KRB4-DT-CO",
+        "KRB4-PD-CO"
+      ],
+      "basis": "Exact strings V2338/2349 look unexpected in these headings. Neither silently changed to Cơ, nor counted as exact cohost corroboration.",
+      "nextAction": "Check a lawful identified page; until then compare only unaffected clauses.",
+      "resolutionClaim": false
+    }
+  ],
+  "t034": "Unresolved and unapproved; no decision/evidence changes"
+}
