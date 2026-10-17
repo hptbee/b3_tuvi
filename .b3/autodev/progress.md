@@ -8,15 +8,15 @@
 - run_base_sha: 3613b68dd885dc382d6e1bcd080e1fcc60cd2710
 - preceding_invocation_base_sha: f0dec74973ef9d07129e19330356f8e6d2040227
 - previous_run_base_sha: 45615a48d0c75b90138cfc618320ffae6e9c34e0
-- current_task: final cumulative verification
+- current_task: none; continuation review-budget boundary
 - last_completed_task: T038
-- next_source_task: modern_minor_stem_candidate_research_not_approved
+- next_source_task: governing_source_context_for_phu_mau_tu_tuc_tat_ach
 - current_task_base_sha: 6c947c3954b1aa1ede504cd7897277d5f63e6a6a
-- run_status: running
+- run_status: INCOMPLETE
 - previous_delivery_blocker: external_github_pr_api_forbidden_after_local_T030_T031_PASS
 - previous_invocation_stop_reason: invocation_review_pass_budget_exhausted_12_of_12
 - preceding_invocation_stop_reason: review_pass_budget_exhausted_after_12_completed_passes
-- updated: 2026-10-16
+- updated: 2026-10-17
 
 ## Historical reconciliation — preceding invocation
 Main fetched and ff-only advanced to f0dec74973ef9d07129e19330356f8e6d2040227; #49 is a separate research-only PR at 7d151bfa78f3151c3e1bcc5a0f1bead7fbb66582, read using its actual Git ref because GitHub GraphQL/REST return Forbidden. Previous checkpoint branch/path/table are historical; append-only completion receipts below remain evidence. T001–T006,T008,T009,T012 completion commits exist in merged main. T010/T011/T013–T015 not claimed complete by this resume. Backend full CI at current main PASS, coverage86.77/87.50. No domain formula/decision/release edits. User explicitly prioritizes Tử Vi source capabilities over previous queue; existing task IDs are preserved.
@@ -819,3 +819,5 @@ Final cumulative pass11 independently reproduced committed historical runtimes:9
 Targets30%then50% achieved only for fixed-cohort internal annotation applicability. Full12-palace objective remains INCOMPLETE: Phụ Mẫu, Tử Tức and Tật Ách have no approved source claim. Next invocation should inspect precise governing source conditions/contexts before proposing new scope/predicates; do not flatten natal/brightness/day-night clauses or transfer existing approvals. T034 remains unapproved with prior evidence/known index-contract defect retained. No defaults, natal/time/calendar formulas, public interpretation, fortune prose or AI narration unlocked.
 
 Delivery: same existing draft PR62 and codex/tuvi-minor-stem-continuation branch only. Product task commits exclude .b3. This separate administrative checkpoint preserves committed run state under the user's explicit instruction. Push and actual latest-head CI/PR reconciliation follow; no new PR, merge or deploy.
+
+Administrative delivery correction: CRLF prevented the initial header-only regex update; authoritative receipt already saidINCOMPLETE, and the top header is now verifiedINCOMPLETE/current_tasknone/date2026-10-17. Product commits unchanged. Samebranch push of38ad920 andcheckpointce09d17 succeeded; actualheadCI reconciliation follows.
