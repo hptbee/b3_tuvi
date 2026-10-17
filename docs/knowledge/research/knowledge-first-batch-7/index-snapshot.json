@@ -1,0 +1,1053 @@
+{
+  "purpose": "Canonical research-only navigation to persisted records; no runtime loading or approval changes",
+  "updatedAt": "2026-10-17",
+  "baselineNavigationIndexRef": "docs/knowledge/research/knowledge-first-batch-2/major-star-palace-index.json",
+  "recordFiles": [
+    "docs/knowledge/research/knowledge-first-batch-2/knowledge-records.json",
+    "docs/knowledge/research/knowledge-first-batch-3/knowledge-records.json",
+    "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+    "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+    "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+    "docs/knowledge/research/knowledge-first-batch-7/knowledge-records.json"
+  ],
+  "metrics": {
+    "indexedCells": 168,
+    "persistedRecords": 60,
+    "starPalaceRecords": 54,
+    "nonCellRecords": 6,
+    "contextualCells": 43,
+    "locatedOnlyCells": 125,
+    "comparedCellsIncludingDisputed": 41,
+    "cellsWithConflictingResearchStatus": 7,
+    "cellsWithContradictionFlags": 12,
+    "palacesWithContextualRecords": 12,
+    "newBatch3Records": 14,
+    "newBatch3Cells": 11,
+    "newBatch4Records": 14,
+    "newBatch4Cells": 11,
+    "newBatch5Records": 11,
+    "newBatch5Cells": 7,
+    "newBatch6Records": 9,
+    "newBatch6Cells": 3,
+    "newBatch7Records": 3,
+    "newBatch7Cells": 2
+  },
+  "metricMeaning": "Compared includes actually performed conditional comparisons with identity limits and disputed readings; not source acceptance. Contradiction flags include a linked dispute on a record whose main research status may be COMPARED.",
+  "familySummary": [
+    "quanshu-transmission: pinned digital witnesses, not independent mirrors",
+    "ham-so-attributed-web: separate authored attribution, print edition unresolved",
+    "ling-donglai-authored-commentary: author-published web discussion, print edition unresolved; classical/book quotations remain dependent",
+    "wang-tingzhi-attributed-lingtan: provisional fourth authored attribution; Scribd edition/borrowing unverified, Ling cites Wang; not proven independent historical family"
+  ],
+  "sourceReviewThisBatch": "not_executed",
+  "runtimeApprovalThisBatch": "not_requested",
+  "publicReleasePermission": "unchanged_closed",
+  "records": [
+    {
+      "recordId": "KRB2-PM-ZIWEI",
+      "file": "docs/knowledge/research/knowledge-first-batch-2/knowledge-records.json",
+      "subject": {
+        "starId": "tu_vi",
+        "palaceId": "phu_mau"
+      },
+      "researchStatus": "CONFLICTING"
+    },
+    {
+      "recordId": "KRB2-PM-LUONG",
+      "file": "docs/knowledge/research/knowledge-first-batch-2/knowledge-records.json",
+      "subject": {
+        "starId": "thien_luong",
+        "palaceId": "phu_mau"
+      },
+      "researchStatus": "CONFLICTING"
+    },
+    {
+      "recordId": "KRB2-PM-DUONG",
+      "file": "docs/knowledge/research/knowledge-first-batch-2/knowledge-records.json",
+      "subject": {
+        "starId": "thai_duong",
+        "palaceId": "phu_mau"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB2-PM-AM",
+      "file": "docs/knowledge/research/knowledge-first-batch-2/knowledge-records.json",
+      "subject": {
+        "starId": "thai_am",
+        "palaceId": "phu_mau"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB2-TT-ZIWEI",
+      "file": "docs/knowledge/research/knowledge-first-batch-2/knowledge-records.json",
+      "subject": {
+        "starId": "tu_vi",
+        "palaceId": "tu_tuc"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB2-TT-LUONG",
+      "file": "docs/knowledge/research/knowledge-first-batch-2/knowledge-records.json",
+      "subject": {
+        "starId": "thien_luong",
+        "palaceId": "tu_tuc"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB2-TA-ZIWEI",
+      "file": "docs/knowledge/research/knowledge-first-batch-2/knowledge-records.json",
+      "subject": {
+        "starId": "tu_vi",
+        "palaceId": "tat_ach"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB2-TA-LUONG",
+      "file": "docs/knowledge/research/knowledge-first-batch-2/knowledge-records.json",
+      "subject": {
+        "starId": "thien_luong",
+        "palaceId": "tat_ach"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB2-TA-PHU",
+      "file": "docs/knowledge/research/knowledge-first-batch-2/knowledge-records.json",
+      "subject": {
+        "starId": "thien_phu",
+        "palaceId": "tat_ach"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB3-M-ZIWEI",
+      "file": "docs/knowledge/research/knowledge-first-batch-3/knowledge-records.json",
+      "subject": {
+        "starId": "tu_vi",
+        "palaceId": "menh"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB3-M-PHU",
+      "file": "docs/knowledge/research/knowledge-first-batch-3/knowledge-records.json",
+      "subject": {
+        "starId": "thien_phu",
+        "palaceId": "menh"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB3-M-LUONG",
+      "file": "docs/knowledge/research/knowledge-first-batch-3/knowledge-records.json",
+      "subject": {
+        "starId": "thien_luong",
+        "palaceId": "menh"
+      },
+      "researchStatus": "CONFLICTING"
+    },
+    {
+      "recordId": "KRB3-QL-LUONG",
+      "file": "docs/knowledge/research/knowledge-first-batch-3/knowledge-records.json",
+      "subject": {
+        "starId": "thien_luong",
+        "palaceId": "quan_loc"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB3-TB-PHU",
+      "file": "docs/knowledge/research/knowledge-first-batch-3/knowledge-records.json",
+      "subject": {
+        "starId": "thien_phu",
+        "palaceId": "tai_bach"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB3-PD-AM",
+      "file": "docs/knowledge/research/knowledge-first-batch-3/knowledge-records.json",
+      "subject": {
+        "starId": "thai_am",
+        "palaceId": "phuc_duc"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB3-TD-DUONG",
+      "file": "docs/knowledge/research/knowledge-first-batch-3/knowledge-records.json",
+      "subject": {
+        "starId": "thai_duong",
+        "palaceId": "thien_di"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB3-DT-AM",
+      "file": "docs/knowledge/research/knowledge-first-batch-3/knowledge-records.json",
+      "subject": {
+        "starId": "thai_am",
+        "palaceId": "dien_trach"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB3-NB-PHU",
+      "file": "docs/knowledge/research/knowledge-first-batch-3/knowledge-records.json",
+      "subject": {
+        "starId": "thien_phu",
+        "palaceId": "no_boc"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB3-PT-DUONG",
+      "file": "docs/knowledge/research/knowledge-first-batch-3/knowledge-records.json",
+      "subject": {
+        "starId": "thai_duong",
+        "palaceId": "phu_the"
+      },
+      "researchStatus": "CONFLICTING"
+    },
+    {
+      "recordId": "KRB3-HD-AM",
+      "file": "docs/knowledge/research/knowledge-first-batch-3/knowledge-records.json",
+      "subject": {
+        "starId": "thai_am",
+        "palaceId": "huynh_de"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB3-TA-LUONG-LDL",
+      "file": "docs/knowledge/research/knowledge-first-batch-3/knowledge-records.json",
+      "subject": {
+        "starId": "thien_luong",
+        "palaceId": "tat_ach"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB3-TA-PHU-V",
+      "file": "docs/knowledge/research/knowledge-first-batch-3/knowledge-records.json",
+      "subject": {
+        "starId": "thien_phu",
+        "palaceId": "tat_ach"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB3-TERM-LAYERS",
+      "file": "docs/knowledge/research/knowledge-first-batch-3/knowledge-records.json",
+      "subject": {
+        "starId": null,
+        "palaceId": null,
+        "terms": [
+          "正曜",
+          "吉星",
+          "耗",
+          "空亡",
+          "劫殺"
+        ]
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB4-M-CO",
+      "file": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+      "subject": {
+        "starId": "thien_co",
+        "palaceId": "menh"
+      },
+      "researchStatus": "CONFLICTING"
+    },
+    {
+      "recordId": "KRB4-QL-CO",
+      "file": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+      "subject": {
+        "starId": "thien_co",
+        "palaceId": "quan_loc"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB4-TB-CO",
+      "file": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+      "subject": {
+        "starId": "thien_co",
+        "palaceId": "tai_bach"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB4-PD-CO",
+      "file": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+      "subject": {
+        "starId": "thien_co",
+        "palaceId": "phuc_duc"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB4-TD-CO",
+      "file": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+      "subject": {
+        "starId": "thien_co",
+        "palaceId": "thien_di"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB4-DT-CO",
+      "file": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+      "subject": {
+        "starId": "thien_co",
+        "palaceId": "dien_trach"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB4-NB-CO",
+      "file": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+      "subject": {
+        "starId": "thien_co",
+        "palaceId": "no_boc"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB4-PT-CO",
+      "file": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+      "subject": {
+        "starId": "thien_co",
+        "palaceId": "phu_the"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB4-HD-CO",
+      "file": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+      "subject": {
+        "starId": "thien_co",
+        "palaceId": "huynh_de"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB4-QL-ZIWEI",
+      "file": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+      "subject": {
+        "starId": "tu_vi",
+        "palaceId": "quan_loc"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB4-TB-LUONG",
+      "file": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+      "subject": {
+        "starId": "thien_luong",
+        "palaceId": "tai_bach"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB4-NB-PHU-LDL",
+      "file": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+      "subject": {
+        "starId": "thien_phu",
+        "palaceId": "no_boc"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB4-HD-AM-LDL",
+      "file": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+      "subject": {
+        "starId": "thai_am",
+        "palaceId": "huynh_de"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB4-METHOD-CO-ASSISTANTS",
+      "file": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+      "subject": {
+        "starId": null,
+        "palaceId": null,
+        "terms": [
+          "Thiên Cơ",
+          "Tả Phù/Hữu Bật",
+          "Thiên Lương",
+          "Phụ Mẫu",
+          "same_palace_vs_related_palace"
+        ]
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB5-PM-CO",
+      "file": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+      "subject": {
+        "starId": "thien_co",
+        "palaceId": "phu_mau"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB5-TT-CO",
+      "file": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+      "subject": {
+        "starId": "thien_co",
+        "palaceId": "tu_tuc"
+      },
+      "researchStatus": "CONFLICTING"
+    },
+    {
+      "recordId": "KRB5-TA-CO",
+      "file": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+      "subject": {
+        "starId": "thien_co",
+        "palaceId": "tat_ach"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB5-TB-ZIWEI",
+      "file": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+      "subject": {
+        "starId": "tu_vi",
+        "palaceId": "tai_bach"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB5-TD-ZIWEI",
+      "file": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+      "subject": {
+        "starId": "tu_vi",
+        "palaceId": "thien_di"
+      },
+      "researchStatus": "CONFLICTING"
+    },
+    {
+      "recordId": "KRB5-PT-LUONG",
+      "file": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+      "subject": {
+        "starId": "thien_luong",
+        "palaceId": "phu_the"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB5-TD-LUONG",
+      "file": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+      "subject": {
+        "starId": "thien_luong",
+        "palaceId": "thien_di"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB5-M-CO-COLLATION",
+      "file": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+      "subject": {
+        "starId": "thien_co",
+        "palaceId": "menh"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB5-QL-CO-COLLATION",
+      "file": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+      "subject": {
+        "starId": "thien_co",
+        "palaceId": "quan_loc"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB5-METHOD-Q3-CONDITIONS",
+      "file": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+      "subject": {
+        "starId": null,
+        "palaceId": null,
+        "terms": [
+          "談星要論",
+          "正曜",
+          "吉星",
+          "廟旺落陷",
+          "命身",
+          "財官",
+          "破格",
+          "十幹祿元"
+        ]
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB5-METHOD-V-CONTEXT",
+      "file": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+      "subject": {
+        "starId": null,
+        "palaceId": null,
+        "terms": [
+          "Cách",
+          "chính tinh",
+          "trợ tinh",
+          "brightness",
+          "Cơ–Lương",
+          "Tả/Hữu",
+          "Mệnh vs Nô vs Phu Thê"
+        ]
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB6-PT-ZIWEI",
+      "file": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "subject": {
+        "starId": "tu_vi",
+        "palaceId": "phu_the"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB6-DT-LUONG",
+      "file": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "subject": {
+        "starId": "thien_luong",
+        "palaceId": "dien_trach"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB6-PD-LUONG",
+      "file": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "subject": {
+        "starId": "thien_luong",
+        "palaceId": "phuc_duc"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB6-M-CO-SCAN",
+      "file": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "subject": {
+        "starId": "thien_co",
+        "palaceId": "menh"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB6-TT-CO-SCAN",
+      "file": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "subject": {
+        "starId": "thien_co",
+        "palaceId": "tu_tuc"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB6-TA-CO-SCAN",
+      "file": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "subject": {
+        "starId": "thien_co",
+        "palaceId": "tat_ach"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB6-QL-CO-SCAN",
+      "file": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "subject": {
+        "starId": "thien_co",
+        "palaceId": "quan_loc"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB6-NB-PHU-SCAN",
+      "file": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "subject": {
+        "starId": "thien_phu",
+        "palaceId": "no_boc"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB6-METHOD-WANG-PARTIAL",
+      "file": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "subject": {
+        "starId": null,
+        "palaceId": null,
+        "terms": [
+          "天機",
+          "天梁",
+          "左輔",
+          "右弼",
+          "文昌",
+          "文曲",
+          "會合",
+          "見"
+        ]
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB7-NB-ZIWEI",
+      "file": "docs/knowledge/research/knowledge-first-batch-7/knowledge-records.json",
+      "subject": {
+        "starId": "tu_vi",
+        "palaceId": "no_boc"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB7-HD-LUONG",
+      "file": "docs/knowledge/research/knowledge-first-batch-7/knowledge-records.json",
+      "subject": {
+        "starId": "thien_luong",
+        "palaceId": "huynh_de"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB7-METHOD-ASSISTANT-OPERANDS",
+      "file": "docs/knowledge/research/knowledge-first-batch-7/knowledge-records.json",
+      "subject": {
+        "starId": null,
+        "palaceId": null,
+        "terms": [
+          "天機",
+          "天梁",
+          "左輔",
+          "右弼",
+          "紫微",
+          "父母宮",
+          "會合",
+          "嘉會",
+          "同度",
+          "同垣",
+          "clause_subject",
+          "assistance_recipient"
+        ]
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    }
+  ],
+  "cells": [
+    {
+      "cellId": "phu_mau:tu_vi",
+      "recordIds": [
+        "KRB2-PM-ZIWEI"
+      ],
+      "researchStatesObserved": [
+        "CONFLICTING"
+      ]
+    },
+    {
+      "cellId": "phu_mau:thien_luong",
+      "recordIds": [
+        "KRB2-PM-LUONG"
+      ],
+      "researchStatesObserved": [
+        "CONFLICTING"
+      ]
+    },
+    {
+      "cellId": "phu_mau:thai_duong",
+      "recordIds": [
+        "KRB2-PM-DUONG"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "phu_mau:thai_am",
+      "recordIds": [
+        "KRB2-PM-AM"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "tu_tuc:tu_vi",
+      "recordIds": [
+        "KRB2-TT-ZIWEI"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "tu_tuc:thien_luong",
+      "recordIds": [
+        "KRB2-TT-LUONG"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "tat_ach:tu_vi",
+      "recordIds": [
+        "KRB2-TA-ZIWEI"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "tat_ach:thien_luong",
+      "recordIds": [
+        "KRB2-TA-LUONG",
+        "KRB3-TA-LUONG-LDL"
+      ],
+      "researchStatesObserved": [
+        "CONTEXT_MAPPED",
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "tat_ach:thien_phu",
+      "recordIds": [
+        "KRB2-TA-PHU",
+        "KRB3-TA-PHU-V"
+      ],
+      "researchStatesObserved": [
+        "CONTEXT_MAPPED",
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "menh:tu_vi",
+      "recordIds": [
+        "KRB3-M-ZIWEI"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "menh:thien_phu",
+      "recordIds": [
+        "KRB3-M-PHU"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "menh:thien_luong",
+      "recordIds": [
+        "KRB3-M-LUONG"
+      ],
+      "researchStatesObserved": [
+        "CONFLICTING"
+      ]
+    },
+    {
+      "cellId": "quan_loc:thien_luong",
+      "recordIds": [
+        "KRB3-QL-LUONG"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "tai_bach:thien_phu",
+      "recordIds": [
+        "KRB3-TB-PHU"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "phuc_duc:thai_am",
+      "recordIds": [
+        "KRB3-PD-AM"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "thien_di:thai_duong",
+      "recordIds": [
+        "KRB3-TD-DUONG"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "dien_trach:thai_am",
+      "recordIds": [
+        "KRB3-DT-AM"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "no_boc:thien_phu",
+      "recordIds": [
+        "KRB3-NB-PHU",
+        "KRB4-NB-PHU-LDL",
+        "KRB6-NB-PHU-SCAN"
+      ],
+      "researchStatesObserved": [
+        "CONTEXT_MAPPED",
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "phu_the:thai_duong",
+      "recordIds": [
+        "KRB3-PT-DUONG"
+      ],
+      "researchStatesObserved": [
+        "CONFLICTING"
+      ]
+    },
+    {
+      "cellId": "huynh_de:thai_am",
+      "recordIds": [
+        "KRB3-HD-AM",
+        "KRB4-HD-AM-LDL"
+      ],
+      "researchStatesObserved": [
+        "CONTEXT_MAPPED",
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "menh:thien_co",
+      "recordIds": [
+        "KRB4-M-CO",
+        "KRB5-M-CO-COLLATION",
+        "KRB6-M-CO-SCAN"
+      ],
+      "researchStatesObserved": [
+        "CONFLICTING",
+        "CONTEXT_MAPPED"
+      ]
+    },
+    {
+      "cellId": "quan_loc:thien_co",
+      "recordIds": [
+        "KRB4-QL-CO",
+        "KRB5-QL-CO-COLLATION",
+        "KRB6-QL-CO-SCAN"
+      ],
+      "researchStatesObserved": [
+        "COMPARED",
+        "CONTEXT_MAPPED"
+      ]
+    },
+    {
+      "cellId": "tai_bach:thien_co",
+      "recordIds": [
+        "KRB4-TB-CO"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "phuc_duc:thien_co",
+      "recordIds": [
+        "KRB4-PD-CO"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "thien_di:thien_co",
+      "recordIds": [
+        "KRB4-TD-CO"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "dien_trach:thien_co",
+      "recordIds": [
+        "KRB4-DT-CO"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "no_boc:thien_co",
+      "recordIds": [
+        "KRB4-NB-CO"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "phu_the:thien_co",
+      "recordIds": [
+        "KRB4-PT-CO"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "huynh_de:thien_co",
+      "recordIds": [
+        "KRB4-HD-CO"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "quan_loc:tu_vi",
+      "recordIds": [
+        "KRB4-QL-ZIWEI"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "tai_bach:thien_luong",
+      "recordIds": [
+        "KRB4-TB-LUONG"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "phu_mau:thien_co",
+      "recordIds": [
+        "KRB5-PM-CO"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "tu_tuc:thien_co",
+      "recordIds": [
+        "KRB5-TT-CO",
+        "KRB6-TT-CO-SCAN"
+      ],
+      "researchStatesObserved": [
+        "CONFLICTING",
+        "CONTEXT_MAPPED"
+      ]
+    },
+    {
+      "cellId": "tat_ach:thien_co",
+      "recordIds": [
+        "KRB5-TA-CO",
+        "KRB6-TA-CO-SCAN"
+      ],
+      "researchStatesObserved": [
+        "COMPARED",
+        "CONTEXT_MAPPED"
+      ]
+    },
+    {
+      "cellId": "tai_bach:tu_vi",
+      "recordIds": [
+        "KRB5-TB-ZIWEI"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "thien_di:tu_vi",
+      "recordIds": [
+        "KRB5-TD-ZIWEI"
+      ],
+      "researchStatesObserved": [
+        "CONFLICTING"
+      ]
+    },
+    {
+      "cellId": "phu_the:thien_luong",
+      "recordIds": [
+        "KRB5-PT-LUONG"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "thien_di:thien_luong",
+      "recordIds": [
+        "KRB5-TD-LUONG"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "phu_the:tu_vi",
+      "recordIds": [
+        "KRB6-PT-ZIWEI"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "dien_trach:thien_luong",
+      "recordIds": [
+        "KRB6-DT-LUONG"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "phuc_duc:thien_luong",
+      "recordIds": [
+        "KRB6-PD-LUONG"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "no_boc:tu_vi",
+      "recordIds": [
+        "KRB7-NB-ZIWEI"
+      ],
+      "researchStatesObserved": [
+        "CONTEXT_MAPPED"
+      ]
+    },
+    {
+      "cellId": "huynh_de:thien_luong",
+      "recordIds": [
+        "KRB7-HD-LUONG"
+      ],
+      "researchStatesObserved": [
+        "CONTEXT_MAPPED"
+      ]
+    }
+  ],
+  "refreshToolRef": "docs/knowledge/research/knowledge-first-batch-7/refresh-index.mjs"
+}

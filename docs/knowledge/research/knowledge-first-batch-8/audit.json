@@ -1,0 +1,655 @@
+{
+  "batch": 8,
+  "kind": "representative_research_audit",
+  "sampleCount": 7,
+  "newRecords": 0,
+  "newIndependentSources": 0,
+  "sourceApproval": "not_executed",
+  "runtimeApproval": "not_requested",
+  "modernOriginalInspection": "LIMITATION: not retained and current access unavailable; no fresh body inspection claimed",
+  "historicalPreservation": "No historical file edited. Batch6 gap list already corrected by Batch7 corrections.json, not a new finding; Batch7 brightness draft error already removed.",
+  "samples": [
+    {
+      "oldRecordId": "KRB2-TA-ZIWEI",
+      "recordReference": {
+        "path": "docs/knowledge/research/knowledge-first-batch-2/knowledge-records.json",
+        "jsonPointer": "/records/6",
+        "id": "KRB2-TA-ZIWEI",
+        "fileSha256LF": "7b276fb7065263ad2894e67a96857de1fb7057fbc2a378c731794c7af0cf3125",
+        "objectSha256": "d5dced5b4fdc33cddf745cf3837f4679cd187dae1b97240d25d9babc2e6864ef",
+        "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+      },
+      "comparisonReferences": [
+        {
+          "path": "docs/knowledge/research/knowledge-first-batch-2/comparisons.json",
+          "jsonPointer": "/comparisons/5",
+          "id": "V06",
+          "fileSha256LF": "b4059ae79134a37985c00b8859bcc75b8af52c12fcffe9810b99538b9f5c877b",
+          "objectSha256": "349f452c0cd9327dcfa636faa5721e1717892ebb9c20250f85dbca092dc17d3b",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      ],
+      "whatActuallyChecked": "Q2 full663–686, preamble664;665 and reciprocal675/677 preserve tai ít versus named disease branches. No immunity claim; disease terms historical.",
+      "finding": "No correction proposed; medical gloss and V06 modern body cannot be checked anew.",
+      "retainedSpanChecks": [
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 665,
+            "endLine": 665,
+            "sha256": "b201b622d83036b55e1b75292c9e834b04633409733e4b5959a51591859ec1ec",
+            "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "b201b622d83036b55e1b75292c9e834b04633409733e4b5959a51591859ec1ec",
+          "result": "PASS"
+        },
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 664,
+            "endLine": 664,
+            "sha256": "68f8092ca016f30a51db79b4f1c7b2658b8aa73fcbbe8eaff4bb110d572d2b48",
+            "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "68f8092ca016f30a51db79b4f1c7b2658b8aa73fcbbe8eaff4bb110d572d2b48",
+          "result": "PASS"
+        },
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 675,
+            "endLine": 675,
+            "sha256": "a3eb4224e2ead3467f7ad20c3dae48af0022ef20ca8c813fc65805b24f1e4319",
+            "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "a3eb4224e2ead3467f7ad20c3dae48af0022ef20ca8c813fc65805b24f1e4319",
+          "result": "PASS"
+        },
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 677,
+            "endLine": 677,
+            "sha256": "4928c19163281891fc943fa1f6bc27254c328f4a9f992c32a5d09bc4f8a880aa",
+            "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "4928c19163281891fc943fa1f6bc27254c328f4a9f992c32a5d09bc4f8a880aa",
+          "result": "PASS"
+        }
+      ],
+      "localIntegrity": "PASS",
+      "historicalRecordIdentity": {
+        "baselineCommit": "5d7757245fe2f046756156f32953a3e7e52dc8c4",
+        "fileSha256LF": "7b276fb7065263ad2894e67a96857de1fb7057fbc2a378c731794c7af0cf3125",
+        "matchesBaseline": true
+      },
+      "modernOriginalInspection": "LIMITATION",
+      "scopeStatus": "NO_NEW_LOCAL_OVERSTATEMENT_FOUND_WITH_LIMITATIONS",
+      "familyAccounting": [
+        "quanshu-transmission; Wikisource and iztro are related witnesses, not independent authorities",
+        "ham-so-attributed-web: separately authored attribution, original edition and independence not fully authenticated"
+      ],
+      "rightsChecked": {
+        "retention": "Original Vietnamese analytical paraphrase, source locators and hashes only; no new book/corpus copy",
+        "classicalAndModernLayers": "Old underlying work distinct from modern transcription; original authentication not established",
+        "modernComparator": "No quotation or bulk text retained; permissions unknown; see comparisons.json",
+        "publicPersonalInterpretationPermission": "not_granted"
+      },
+      "newFactsVsReused": "Fresh local hash/context check; modern source claims reused from exact historical records, not freshly verified."
+    },
+    {
+      "oldRecordId": "KRB4-TB-LUONG",
+      "recordReference": {
+        "path": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+        "jsonPointer": "/records/10",
+        "id": "KRB4-TB-LUONG",
+        "fileSha256LF": "b34e6f79586c2beb703743dbe5b2ba05a8bcb8142119ac0bf4580949191e4446",
+        "objectSha256": "9c78f553726d00c71e38a00c7e9a1b4267b7043c5c6245db0e83bdc1297ab1f2",
+        "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+      },
+      "comparisonReferences": [
+        {
+          "path": "docs/knowledge/research/knowledge-first-batch-4/comparisons.json",
+          "jsonPointer": "/comparisons/10",
+          "id": "B4C11",
+          "fileSha256LF": "24ab2b0cca2a6c28024fcdb95abb401e4ee9df94f2309097b2d6f945b3311d35",
+          "objectSha256": "27012413fd24e3c4b9616d4a25c1a95b81d7656c2af28bbd87350b8ccc2dba00",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      ],
+      "whatActuallyChecked": "Full633–662 has no separate preamble.649–650 miếu/hãm, Đồng/Cơ and final adverse clause retained;636/640 reciprocal detail does not establish guaranteed wealth.",
+      "finding": "No correction proposed; final adverse clause scope explicitly uncertain. B4C11 V2661–2669 is partial and unavailable anew.",
+      "retainedSpanChecks": [
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 649,
+            "endLine": 650,
+            "sha256": "cef02d12a3926d391d87687a6d9089d694a485d064b54c3da086cf4507c8bf6f",
+            "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "cef02d12a3926d391d87687a6d9089d694a485d064b54c3da086cf4507c8bf6f",
+          "result": "PASS"
+        },
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 633,
+            "endLine": 662,
+            "sha256": "18e05f3a45cf27553642da48035fa263e267e90d49c9a1211df734a6dc54ee13",
+            "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "18e05f3a45cf27553642da48035fa263e267e90d49c9a1211df734a6dc54ee13",
+          "result": "PASS"
+        },
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+            "startLine": 48,
+            "endLine": 66,
+            "sha256": "523b5fab97f6e7303aa8d539cad986617c6b37120e8e1b9c05c5eebd97f4ee33",
+            "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "523b5fab97f6e7303aa8d539cad986617c6b37120e8e1b9c05c5eebd97f4ee33",
+          "result": "PASS"
+        },
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 636,
+            "endLine": 636,
+            "sha256": "a41e2c92935aff69625f57ffde88fa0224f0c7414e8f85502bcb5b673a138dd1",
+            "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "a41e2c92935aff69625f57ffde88fa0224f0c7414e8f85502bcb5b673a138dd1",
+          "result": "PASS"
+        },
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 640,
+            "endLine": 640,
+            "sha256": "e2676e81747847f8436be4c118127a2cbeae575f937e34c1e039a2280f059a1e",
+            "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "e2676e81747847f8436be4c118127a2cbeae575f937e34c1e039a2280f059a1e",
+          "result": "PASS"
+        }
+      ],
+      "localIntegrity": "PASS",
+      "historicalRecordIdentity": {
+        "baselineCommit": "5d7757245fe2f046756156f32953a3e7e52dc8c4",
+        "fileSha256LF": "b34e6f79586c2beb703743dbe5b2ba05a8bcb8142119ac0bf4580949191e4446",
+        "matchesBaseline": true
+      },
+      "modernOriginalInspection": "LIMITATION",
+      "scopeStatus": "NO_NEW_LOCAL_OVERSTATEMENT_FOUND_WITH_LIMITATIONS",
+      "familyAccounting": [
+        "quanshu-transmission: retained digital text; no original print authentication",
+        "Any linked authored commentary is separate where actually authored; classical quotations inside it remain dependent"
+      ],
+      "rightsChecked": {
+        "retention": "Original Vietnamese analysis, precise references and hashes only; no new source text/HTML/PDF stored",
+        "scope": "Research-storage suitability does not grant book redistribution, runtime approval or personalized public interpretation"
+      },
+      "newFactsVsReused": "Fresh local hash/context check; modern source claims reused from exact historical records, not freshly verified."
+    },
+    {
+      "oldRecordId": "KRB6-PD-LUONG",
+      "recordReference": {
+        "path": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+        "jsonPointer": "/records/2",
+        "id": "KRB6-PD-LUONG",
+        "fileSha256LF": "5f305f9d53e18d7ce384ad68dfeb816e71401cf6421e715f8d6023461dd53a45",
+        "objectSha256": "32dbd5e6f94eef1fa49010e1ef62fc82fc5b37a3c702fd88e33ba489819dbd7d",
+        "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+      },
+      "comparisonReferences": [
+        {
+          "path": "docs/knowledge/research/knowledge-first-batch-6/comparisons.json",
+          "jsonPointer": "/comparisons/2",
+          "id": "B6C03",
+          "fileSha256LF": "6e1e3b4167b0cdb90d3364370adec95f8e63a95b4e0c7d6d916085c32e997539",
+          "objectSha256": "47e7dc7c9a4148e801568a3480878a01b8f0b4dce0d5ab06156f806c2dbeaf8b",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      ],
+      "whatActuallyChecked": "Full789–816 verifies no standalone Lương entry;791/792–793/796 only cohost references. Cơ adverse and Nhật clause scope retained; Ling standalone modern scope differs.",
+      "finding": "Additive metadata clarification: generic schoolScope mentions Wang/中州派 although the actual sample sources are Q + Ling154/B6C03. This is extraneous/ambiguous packet-level boilerplate, not an explicit proven Wang school assignment to the Q+Ling claim.",
+      "retainedSpanChecks": [
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 791,
+            "endLine": 796,
+            "sha256": "8cbe52aa0c78947a9492d29cc0a318ab140cf78b7e3ba2bd019f19bb45df4237",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "8cbe52aa0c78947a9492d29cc0a318ab140cf78b7e3ba2bd019f19bb45df4237",
+          "result": "PASS"
+        },
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 789,
+            "endLine": 816,
+            "sha256": "1ad123491278d5fcc8c568956085100468f59e45bc57035339586d3387bc5757",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "1ad123491278d5fcc8c568956085100468f59e45bc57035339586d3387bc5757",
+          "result": "PASS"
+        },
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 791,
+            "endLine": 791,
+            "sha256": "4f88f899563c41f21430fb4f6a5240e754a9683f65327833fe0eb9ac3ee16294",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "4f88f899563c41f21430fb4f6a5240e754a9683f65327833fe0eb9ac3ee16294",
+          "result": "PASS"
+        },
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 792,
+            "endLine": 793,
+            "sha256": "4a2e2dedf20f2fb2862789e962395953e23de28c132f2236a77f4d021434deeb",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "4a2e2dedf20f2fb2862789e962395953e23de28c132f2236a77f4d021434deeb",
+          "result": "PASS"
+        },
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 796,
+            "endLine": 796,
+            "sha256": "d0ef3ada30bc2f7c5a9ec33e3d94ad295a05ba621db929c8812b11cffe711798",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "d0ef3ada30bc2f7c5a9ec33e3d94ad295a05ba621db929c8812b11cffe711798",
+          "result": "PASS"
+        }
+      ],
+      "localIntegrity": "PASS",
+      "historicalRecordIdentity": {
+        "baselineCommit": "5d7757245fe2f046756156f32953a3e7e52dc8c4",
+        "fileSha256LF": "5f305f9d53e18d7ce384ad68dfeb816e71401cf6421e715f8d6023461dd53a45",
+        "matchesBaseline": true
+      },
+      "modernOriginalInspection": "LIMITATION",
+      "scopeStatus": "METADATA_SUPPLEMENT_NEEDED",
+      "familyAccounting": [
+        "ling-donglai-authored-commentary",
+        "Different authored attribution does not establish historical independence or lack of borrowing"
+      ],
+      "rightsChecked": {
+        "retention": "Modern works: locators and short original analytical notes only. Ancient scan: bounded manual collation excerpts, no images/OCR/book corpus redistributed; scan reuse license unknown.",
+        "scope": "Research storage only; not source-review, runtime, public-release or redistribution permission"
+      },
+      "newFactsVsReused": "Fresh local hash/context check; modern source claims reused from exact historical records, not freshly verified."
+    },
+    {
+      "oldRecordId": "KRB5-TT-CO",
+      "recordReference": {
+        "path": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+        "jsonPointer": "/records/1",
+        "id": "KRB5-TT-CO",
+        "fileSha256LF": "dce09d726ef1944a06f5032c958aac4bfa9f4744ba9adc836ff7ab853feac13d",
+        "objectSha256": "a318f7a66e6d5be4b688be75ec65b6483e45d75682c29671710940ed2915ec38",
+        "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+      },
+      "comparisonReferences": [
+        {
+          "path": "docs/knowledge/research/knowledge-first-batch-5/comparisons.json",
+          "jsonPointer": "/comparisons/1",
+          "id": "B5C02",
+          "fileSha256LF": "2c7e60c2984ff0cadaccc8fdd8b299562313b7e055ff7684cf4f3bf720b015a2",
+          "objectSha256": "73dc165c694baa12e63cda52cd26103e86f24af7a7013e28eaeef63dcdc20760",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        },
+        {
+          "path": "docs/knowledge/research/knowledge-first-batch-5/comparisons.json",
+          "jsonPointer": "/comparisons/8",
+          "id": "B5C09",
+          "fileSha256LF": "2c7e60c2984ff0cadaccc8fdd8b299562313b7e055ff7684cf4f3bf720b015a2",
+          "objectSha256": "8f7c7de113a99ab56d21af9b3462765001af407815d6a4f0c1efe497fa9586f3",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      ],
+      "whatActuallyChecked": "Full600–632 incl601–604 preamble,607 and reciprocal614–615/617/620;146–162 natal context. Preserves 寅申 versus 辰戌 mismatch and number/branch differences; no fertility prediction.",
+      "finding": "No new error: Batch6 scan supplement already preserved same artifact mismatch. No repetition as new correction; V/Ling bodies unavailable anew.",
+      "retainedSpanChecks": [
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 607,
+            "endLine": 607,
+            "sha256": "154ae025fe5e5786f98436d55eaca65ce366894fb9bcdff41b224eab4f1fc04f",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "154ae025fe5e5786f98436d55eaca65ce366894fb9bcdff41b224eab4f1fc04f",
+          "result": "PASS"
+        },
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 600,
+            "endLine": 632,
+            "sha256": "62e3e8d293004ef7be24b576c1fffb71166d96fb0af0c6c408513b416dce0721",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "62e3e8d293004ef7be24b576c1fffb71166d96fb0af0c6c408513b416dce0721",
+          "result": "PASS"
+        },
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 601,
+            "endLine": 604,
+            "sha256": "2e9035e99db67e134fbc37a64b415e808c24624b4d41c7a470f6145ca0cad9cf",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "2e9035e99db67e134fbc37a64b415e808c24624b4d41c7a470f6145ca0cad9cf",
+          "result": "PASS"
+        },
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+            "startLine": 48,
+            "endLine": 66,
+            "sha256": "523b5fab97f6e7303aa8d539cad986617c6b37120e8e1b9c05c5eebd97f4ee33",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "523b5fab97f6e7303aa8d539cad986617c6b37120e8e1b9c05c5eebd97f4ee33",
+          "result": "PASS"
+        },
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 614,
+            "endLine": 615,
+            "sha256": "d1fec1bf41684688cee8f6fcf98bfdf71a6ef82faf59ead699008bb143a1d6e9",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "d1fec1bf41684688cee8f6fcf98bfdf71a6ef82faf59ead699008bb143a1d6e9",
+          "result": "PASS"
+        },
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 617,
+            "endLine": 617,
+            "sha256": "991dce7f67bf6ce49045ed035adab12c251cddd6cdc76631ee77725e0636ac42",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "991dce7f67bf6ce49045ed035adab12c251cddd6cdc76631ee77725e0636ac42",
+          "result": "PASS"
+        },
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 620,
+            "endLine": 620,
+            "sha256": "7d6fc53ea621439ab292ffd71ff5555ee7a6ad9807f79eda28afc191d26cae07",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "7d6fc53ea621439ab292ffd71ff5555ee7a6ad9807f79eda28afc191d26cae07",
+          "result": "PASS"
+        },
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 148,
+            "endLine": 153,
+            "sha256": "25a6f5fb4bec484f4e8a8222075d558c60ec32b2c69d80d410807e7341e630b1",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "25a6f5fb4bec484f4e8a8222075d558c60ec32b2c69d80d410807e7341e630b1",
+          "result": "PASS"
+        }
+      ],
+      "localIntegrity": "PASS",
+      "historicalRecordIdentity": {
+        "baselineCommit": "5d7757245fe2f046756156f32953a3e7e52dc8c4",
+        "fileSha256LF": "dce09d726ef1944a06f5032c958aac4bfa9f4744ba9adc836ff7ab853feac13d",
+        "matchesBaseline": true
+      },
+      "modernOriginalInspection": "LIMITATION",
+      "scopeStatus": "NO_NEW_LOCAL_OVERSTATEMENT_FOUND_WITH_LIMITATIONS",
+      "familyAccounting": [
+        "quanshu-transmission: retained iztro and Wikisource are related, not independent",
+        "ham-so-attributed-web: attributed authored comparison with unverified print and borrowing; quoted authors not new books"
+      ],
+      "rightsChecked": {
+        "retention": "Original Vietnamese analysis, precise references and hashes only; no new source text/HTML/PDF stored",
+        "scope": "Research-storage suitability does not grant book redistribution, runtime approval or personalized public interpretation"
+      },
+      "newFactsVsReused": "Fresh local hash/context check; modern source claims reused from exact historical records, not freshly verified."
+    },
+    {
+      "oldRecordId": "KRB4-METHOD-CO-ASSISTANTS",
+      "recordReference": {
+        "path": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+        "jsonPointer": "/records/13",
+        "id": "KRB4-METHOD-CO-ASSISTANTS",
+        "fileSha256LF": "b34e6f79586c2beb703743dbe5b2ba05a8bcb8142119ac0bf4580949191e4446",
+        "objectSha256": "514dd1304eeecde95360b9b69165d9115f4b90e3d673378fa755165305f49279",
+        "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+      },
+      "comparisonReferences": [],
+      "whatActuallyChecked": "Exact retained record and historical source metadata checked; natal/timing, cohost/opposition, Cơ/Lương versus Vi/Phụ receiving assistance remain distinct. Modern original paragraphs not inspected.",
+      "finding": "LIMITATION: contextual fidelity of full Ling body cannot receive PASS. Record comparison not_performed remains appropriate; B5/B6/B7 supplements do not establish exact independent match.",
+      "retainedSpanChecks": [],
+      "localIntegrity": "NOT_APPLICABLE_NO_RETAINED_SOURCE_SPANS",
+      "historicalRecordIdentity": {
+        "baselineCommit": "5d7757245fe2f046756156f32953a3e7e52dc8c4",
+        "fileSha256LF": "b34e6f79586c2beb703743dbe5b2ba05a8bcb8142119ac0bf4580949191e4446",
+        "matchesBaseline": true
+      },
+      "modernOriginalInspection": "LIMITATION",
+      "scopeStatus": "NO_NEW_LOCAL_OVERSTATEMENT_FOUND_WITH_LIMITATIONS",
+      "familyAccounting": [
+        "ling-donglai-authored-commentary: same author family as other articles, no independent extra witness"
+      ],
+      "rightsChecked": {
+        "retention": "Original Vietnamese analysis, precise references and hashes only; no new source text/HTML/PDF stored",
+        "scope": "Research-storage suitability does not grant book redistribution, runtime approval or personalized public interpretation"
+      },
+      "newFactsVsReused": "Fresh local hash/context check; modern source claims reused from exact historical records, not freshly verified."
+    },
+    {
+      "oldRecordId": "KRB6-METHOD-WANG-PARTIAL",
+      "recordReference": {
+        "path": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+        "jsonPointer": "/records/8",
+        "id": "KRB6-METHOD-WANG-PARTIAL",
+        "fileSha256LF": "5f305f9d53e18d7ce384ad68dfeb816e71401cf6421e715f8d6023461dd53a45",
+        "objectSha256": "af28cab79d77c46a39f2beef86b6160c6d3e76e125425303ebd725dcf6519e44",
+        "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+      },
+      "comparisonReferences": [
+        {
+          "path": "docs/knowledge/research/knowledge-first-batch-6/comparisons.json",
+          "jsonPointer": "/comparisons/8",
+          "id": "B6C09",
+          "fileSha256LF": "6e1e3b4167b0cdb90d3364370adec95f8e63a95b4e0c7d6d916085c32e997539",
+          "objectSha256": "8bfa566a574f3a76ce37c715b17a814f1654448b8a2d2d36913237899a405846",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      ],
+      "whatActuallyChecked": "Exact retained note850–913, extra Xương/Khúc859–861, broad hội versus cohost891–913, missing Vi/Phụ and898/909 ambiguity checked at record level. No print page authenticated.",
+      "finding": "LIMITATION: cannot verify original two-column text anew. Partial comparison preserved; Ling quoting Wang blocks assumption of independence.",
+      "retainedSpanChecks": [],
+      "localIntegrity": "NOT_APPLICABLE_NO_RETAINED_SOURCE_SPANS",
+      "historicalRecordIdentity": {
+        "baselineCommit": "5d7757245fe2f046756156f32953a3e7e52dc8c4",
+        "fileSha256LF": "5f305f9d53e18d7ce384ad68dfeb816e71401cf6421e715f8d6023461dd53a45",
+        "matchesBaseline": true
+      },
+      "modernOriginalInspection": "LIMITATION",
+      "scopeStatus": "NO_NEW_LOCAL_OVERSTATEMENT_FOUND_WITH_LIMITATIONS",
+      "familyAccounting": [
+        "wang-tingzhi-attributed-lingtan",
+        "Different authored attribution does not establish historical independence or lack of borrowing"
+      ],
+      "rightsChecked": {
+        "retention": "Modern works: locators and short original analytical notes only. Ancient scan: bounded manual collation excerpts, no images/OCR/book corpus redistributed; scan reuse license unknown.",
+        "scope": "Research storage only; not source-review, runtime, public-release or redistribution permission"
+      },
+      "newFactsVsReused": "Fresh local hash/context check; modern source claims reused from exact historical records, not freshly verified."
+    },
+    {
+      "oldRecordId": "KRB7-NB-ZIWEI",
+      "recordReference": {
+        "path": "docs/knowledge/research/knowledge-first-batch-7/knowledge-records.json",
+        "jsonPointer": "/records/0",
+        "id": "KRB7-NB-ZIWEI",
+        "fileSha256LF": "1cc8895fcbf96644710797c6a5977b352d23a509caa9dbca1a319805ebbf344d",
+        "objectSha256": "86d983c6bc5ff9feeab2a3450af97345aec1c7ff3970d431553c99f94fa2c394",
+        "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+      },
+      "comparisonReferences": [
+        {
+          "path": "docs/knowledge/research/knowledge-first-batch-7/comparisons.json",
+          "jsonPointer": "/comparisons/0",
+          "id": "B7C01",
+          "fileSha256LF": "9d0694d4a7a67247b3d18889ba26d5d9cff3bfa9378789dc7e7c59aeb62c309a",
+          "objectSha256": "9b17974b8d0bec92ee40e8e4eeecb03fa75627dfe6e1281b7deba60561745775",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      ],
+      "whatActuallyChecked": "Full712–736;713 branches and reciprocal719/721/723/726. Current record explicitly retains 旺主生財 parse uncertainty, compares 旺主720/724 with 旺相717, and does not establish brightness. 空劫 tail scope remains unresolved.",
+      "finding": "No new brightness error: already removed in Batch7. Preserve 天家 in Q719 versus earlier scan 衛家 as different witnesses; no new modern independent comparison.",
+      "retainedSpanChecks": [
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 713,
+            "endLine": 713,
+            "sha256": "f8a3b1884b2d48c66faa7ac3b2ec8691e443bcad639768f2c5d14f96c545d022",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "f8a3b1884b2d48c66faa7ac3b2ec8691e443bcad639768f2c5d14f96c545d022",
+          "result": "PASS"
+        },
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 712,
+            "endLine": 736,
+            "sha256": "efe76b53589501d504df967b87a6ba97cc845756e62ded80f41a10ee80993647",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "efe76b53589501d504df967b87a6ba97cc845756e62ded80f41a10ee80993647",
+          "result": "PASS"
+        },
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+            "startLine": 48,
+            "endLine": 66,
+            "sha256": "523b5fab97f6e7303aa8d539cad986617c6b37120e8e1b9c05c5eebd97f4ee33",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "523b5fab97f6e7303aa8d539cad986617c6b37120e8e1b9c05c5eebd97f4ee33",
+          "result": "PASS"
+        },
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 719,
+            "endLine": 719,
+            "sha256": "a754bb26697ff472606b10078d644c4f4803e6ff752a68b27d9c9897bddb2e46",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "a754bb26697ff472606b10078d644c4f4803e6ff752a68b27d9c9897bddb2e46",
+          "result": "PASS"
+        },
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 721,
+            "endLine": 721,
+            "sha256": "2af117988a7a4ac34934c95c725507f38f1014a75aca5491870001d882e86983",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "2af117988a7a4ac34934c95c725507f38f1014a75aca5491870001d882e86983",
+          "result": "PASS"
+        },
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 723,
+            "endLine": 723,
+            "sha256": "ef45ac25546b3613c0eea5a800f6d2786f2647f3c616f89ee9645e8d28eb385b",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "ef45ac25546b3613c0eea5a800f6d2786f2647f3c616f89ee9645e8d28eb385b",
+          "result": "PASS"
+        },
+        {
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 726,
+            "endLine": 726,
+            "sha256": "91b0da6da3483edb12bf6511b3c34f7c37110dcd8a255b4ec879a0c39a554b7e",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "actualSha256": "91b0da6da3483edb12bf6511b3c34f7c37110dcd8a255b4ec879a0c39a554b7e",
+          "result": "PASS"
+        }
+      ],
+      "localIntegrity": "PASS",
+      "historicalRecordIdentity": {
+        "baselineCommit": "5d7757245fe2f046756156f32953a3e7e52dc8c4",
+        "fileSha256LF": "1cc8895fcbf96644710797c6a5977b352d23a509caa9dbca1a319805ebbf344d",
+        "matchesBaseline": true
+      },
+      "modernOriginalInspection": "NO_NEW_MODERN_COMPARATOR_CLAIMED",
+      "scopeStatus": "NO_NEW_LOCAL_OVERSTATEMENT_FOUND_WITH_LIMITATIONS",
+      "familyAccounting": [
+        "quanshu-transmission: every cited entry is from the same retained witness, not independent corroboration"
+      ],
+      "rightsChecked": {
+        "retention": "Existing retained source referenced by exact span/hash; original analytical notes and bounded original terms only; no new article/book text copy",
+        "scope": "Research storage only; no authentication, source-review, runtime or public-release approval"
+      },
+      "newFactsVsReused": "Fresh local hash/context check; modern source claims reused from exact historical records, not freshly verified."
+    }
+  ],
+  "proposedSupplements": [
+    {
+      "supplementId": "B8-AUDIT-SUPPLEMENT-PD-LUONG-SCHOOL-SCOPE",
+      "oldRecordId": "KRB6-PD-LUONG",
+      "field": "schoolScope",
+      "oldValue": "Witness-specific attribution only; Wang describes 中州派, no runtime school ID or authenticated universal profile",
+      "finding": "Extraneous/ambiguous record-level boilerplate about Wang/中州派; it is not evidence of a school assignment to this Q+Ling claim. Actual references and B6C03 identify Q and Ling154.",
+      "proposedReading": "Q + Ling154 research context; no verified school assignment for this record.",
+      "sourceReview": "unchanged_not_executed",
+      "dispositionResolution": "none; no RESOLVED_WITH_EVIDENCE",
+      "evidence": [
+        {
+          "path": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+          "jsonPointer": "/records/2",
+          "id": "KRB6-PD-LUONG",
+          "fileSha256LF": "5f305f9d53e18d7ce384ad68dfeb816e71401cf6421e715f8d6023461dd53a45",
+          "objectSha256": "32dbd5e6f94eef1fa49010e1ef62fc82fc5b37a3c702fd88e33ba489819dbd7d",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        },
+        {
+          "path": "docs/knowledge/research/knowledge-first-batch-6/comparisons.json",
+          "jsonPointer": "/comparisons/2",
+          "id": "B6C03",
+          "fileSha256LF": "6e1e3b4167b0cdb90d3364370adec95f8e63a95b4e0c7d6d916085c32e997539",
+          "objectSha256": "47e7dc7c9a4148e801568a3480878a01b8f0b4dce0d5ab06156f806c2dbeaf8b",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      ],
+      "effect": "Clarify metadata attribution only; no textual emendation, status/approval change, new record/cell, or disposition resolution.",
+      "historicalEdit": false
+    }
+  ]
+}

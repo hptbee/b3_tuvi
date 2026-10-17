@@ -1,0 +1,540 @@
+{
+  "batch": 8,
+  "kind": "research_methodology_report",
+  "newKnowledgeRecords": 0,
+  "newIndependentAuthoredSources": 0,
+  "newModernSourceBodiesRead": 0,
+  "readingStatus": {
+    "primary": "Fresh inspection of listed retained Quanshu transcription spans; not original-print authentication",
+    "modern": "SECONDARY_RESEARCH_NOTES: exact retained historical record-level analysis only; no freshly inspected full modern text",
+    "external": "Known CONNECT403/no available external web tools; no retries performed"
+  },
+  "rights": "References, hashes and original bounded analysis only. No new modern source body, scan, translation corpus or redistributed book. Public personal interpretation permission not granted.",
+  "primaryReadSpans": [
+    {
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 48,
+      "endLine": 66,
+      "sha256": "523b5fab97f6e7303aa8d539cad986617c6b37120e8e1b9c05c5eebd97f4ee33",
+      "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+    },
+    {
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 67,
+      "endLine": 73,
+      "sha256": "87f41689f810ea0b2fbb4fd18bdb4a41a83bb67c4577e5f8f3f3a6852ac6f4e5",
+      "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+    },
+    {
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 74,
+      "endLine": 91,
+      "sha256": "f28b539496f2b381d4cf943a0320919d00fe1f1067bddae3c5bf5aee6145f98f",
+      "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+    },
+    {
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 92,
+      "endLine": 99,
+      "sha256": "786049c4fc8938c5afd2df5b4e74f5befa135a4ef5ae1a6b58ed75b7d04b586f",
+      "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+    },
+    {
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 146,
+      "endLine": 162,
+      "sha256": "85191478474108ae6f95d0e3ffcfa97ecd13251780ad2133d8f59f957a791cd2",
+      "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+    },
+    {
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 553,
+      "endLine": 575,
+      "sha256": "347e031b5cdac4ae4ce8d733f343eeee7fdf2a48c592ae3ba66263644d598f1d",
+      "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+    },
+    {
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 600,
+      "endLine": 632,
+      "sha256": "62e3e8d293004ef7be24b576c1fffb71166d96fb0af0c6c408513b416dce0721",
+      "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+    },
+    {
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 633,
+      "endLine": 662,
+      "sha256": "18e05f3a45cf27553642da48035fa263e267e90d49c9a1211df734a6dc54ee13",
+      "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+    },
+    {
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 663,
+      "endLine": 686,
+      "sha256": "5983082017347cc98238f468190117431f69e4818aac31ad739196496855534a",
+      "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+    },
+    {
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 712,
+      "endLine": 736,
+      "sha256": "efe76b53589501d504df967b87a6ba97cc845756e62ded80f41a10ee80993647",
+      "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+    },
+    {
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 789,
+      "endLine": 816,
+      "sha256": "1ad123491278d5fcc8c568956085100468f59e45bc57035339586d3387bc5757",
+      "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+    },
+    {
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 817,
+      "endLine": 846,
+      "sha256": "92df67c009e504f7c395daa520ba747e2a42beadd7bb020e9d2740d947c59137",
+      "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+    }
+  ],
+  "modernResearchNoteReferences": {
+    "V": {
+      "path": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+      "jsonPointer": "/records/10",
+      "id": "KRB5-METHOD-V-CONTEXT",
+      "fileSha256LF": "dce09d726ef1944a06f5032c958aac4bfa9f4744ba9adc836ff7ab853feac13d",
+      "objectSha256": "7877cbc2ee1bfefe4d42ff9d9a62f63d0774e54125b89322deaf02e32fe2d20e",
+      "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+    },
+    "Ling": {
+      "path": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+      "jsonPointer": "/records/13",
+      "id": "KRB4-METHOD-CO-ASSISTANTS",
+      "fileSha256LF": "b34e6f79586c2beb703743dbe5b2ba05a8bcb8142119ac0bf4580949191e4446",
+      "objectSha256": "514dd1304eeecde95360b9b69165d9115f4b90e3d673378fa755165305f49279",
+      "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+    },
+    "Wang": {
+      "path": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "jsonPointer": "/records/8",
+      "id": "KRB6-METHOD-WANG-PARTIAL",
+      "fileSha256LF": "5f305f9d53e18d7ce384ad68dfeb816e71401cf6421e715f8d6023461dd53a45",
+      "objectSha256": "af28cab79d77c46a39f2beef86b6160c6d3e76e125425303ebd725dcf6519e44",
+      "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+    }
+  },
+  "matrix": [
+    {
+      "topic": "brightness",
+      "Quanshu": {
+        "evidenceLevel": "FRESH_RETAINED_PRIMARY_READING",
+        "analysis": "Q xét 廟旺/陷 cùng hóa, quan hệ và sát; 62 sáng vẫn phá, 63 hãm vẫn có nhánh cứu, không có điểm số.",
+        "references": [
+          {
+            "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+            "startLine": 50,
+            "endLine": 66,
+            "sha256": "e0670ee74ef3f4f9a9bc1062bba3daf1c57ba13bc86008e92bebb9049ed6087c",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          }
+        ]
+      },
+      "HamSo": {
+        "evidenceLevel": "SECONDARY_RESEARCH_NOTES",
+        "analysis": "Phân Cách gồm chính tinh và trợ sáng, Mệnh–Cục/âm dương; Thượng/Trung/Hạ/Phi thường là mô tả điều kiện chưa thành predicate AND/OR hoàn chỉnh.",
+        "reference": {
+          "path": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+          "jsonPointer": "/records/10",
+          "id": "KRB5-METHOD-V-CONTEXT",
+          "fileSha256LF": "dce09d726ef1944a06f5032c958aac4bfa9f4744ba9adc836ff7ab853feac13d",
+          "objectSha256": "7877cbc2ee1bfefe4d42ff9d9a62f63d0774e54125b89322deaf02e32fe2d20e",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      },
+      "Ling": {
+        "evidenceLevel": "SECONDARY_RESEARCH_NOTES",
+        "analysis": "Note assistant không cấp bảng sáng hoặc thứ bậc độ sáng; không suy thêm từ tên sao.",
+        "reference": {
+          "path": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+          "jsonPointer": "/records/13",
+          "id": "KRB4-METHOD-CO-ASSISTANTS",
+          "fileSha256LF": "b34e6f79586c2beb703743dbe5b2ba05a8bcb8142119ac0bf4580949191e4446",
+          "objectSha256": "514dd1304eeecde95360b9b69165d9115f4b90e3d673378fa755165305f49279",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      },
+      "Wang": {
+        "evidenceLevel": "SECONDARY_RESEARCH_NOTES_PROVISIONAL_ATTRIBUTION",
+        "analysis": "Note không cấp bảng sáng; không suy thứ bậc từ Lương nổi trội ở một passage.",
+        "reference": {
+          "path": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+          "jsonPointer": "/records/8",
+          "id": "KRB6-METHOD-WANG-PARTIAL",
+          "fileSha256LF": "5f305f9d53e18d7ce384ad68dfeb816e71401cf6421e715f8d6023461dd53a45",
+          "objectSha256": "af28cab79d77c46a39f2beef86b6160c6d3e76e125425303ebd725dcf6519e44",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      }
+    },
+    {
+      "topic": "same_palace_vs_hui_zhao",
+      "Quanshu": {
+        "evidenceLevel": "FRESH_RETAINED_PRIMARY_READING",
+        "analysis": "財官二宮 và 拱照 là endpoint cụ thể; 會合 ở59 khác 同 ở từng entry Q2. Không thay hai cung bằng mọi cát tinh liên hệ.",
+        "references": [
+          {
+            "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+            "startLine": 52,
+            "endLine": 59,
+            "sha256": "5ee254f4282a8b29927eeebecd7e32d6d431e381cff8c23f72adf244edc781f3",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          }
+        ]
+      },
+      "HamSo": {
+        "evidenceLevel": "SECONDARY_RESEARCH_NOTES",
+        "analysis": "Ví dụ Cơ–Lương/Tả-Hữu ở Nô khác Phu; note chưa xác minh lại relation gốc, không chuyển sang Mệnh.",
+        "reference": {
+          "path": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+          "jsonPointer": "/records/10",
+          "id": "KRB5-METHOD-V-CONTEXT",
+          "fileSha256LF": "dce09d726ef1944a06f5032c958aac4bfa9f4744ba9adc836ff7ab853feac13d",
+          "objectSha256": "7877cbc2ee1bfefe4d42ff9d9a62f63d0774e54125b89322deaf02e32fe2d20e",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      },
+      "Ling": {
+        "evidenceLevel": "SECONDARY_RESEARCH_NOTES",
+        "analysis": "Đồng Mệnh Cơ được tách khỏi trợ Lương và Vi/Phụ; cohost và opposition khác nhau theo note.",
+        "reference": {
+          "path": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+          "jsonPointer": "/records/13",
+          "id": "KRB4-METHOD-CO-ASSISTANTS",
+          "fileSha256LF": "b34e6f79586c2beb703743dbe5b2ba05a8bcb8142119ac0bf4580949191e4446",
+          "objectSha256": "514dd1304eeecde95360b9b69165d9115f4b90e3d673378fa755165305f49279",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      },
+      "Wang": {
+        "evidenceLevel": "SECONDARY_RESEARCH_NOTES_PROVISIONAL_ATTRIBUTION",
+        "analysis": "會合/見 ở850–861 không tự là tất cả đồng cung; cohost Mệnh辰戌891–913 là đoạn khác.",
+        "reference": {
+          "path": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+          "jsonPointer": "/records/8",
+          "id": "KRB6-METHOD-WANG-PARTIAL",
+          "fileSha256LF": "5f305f9d53e18d7ce384ad68dfeb816e71401cf6421e715f8d6023461dd53a45",
+          "objectSha256": "af28cab79d77c46a39f2beef86b6160c6d3e76e125425303ebd725dcf6519e44",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      }
+    },
+    {
+      "topic": "support_and_adverse",
+      "Quanshu": {
+        "evidenceLevel": "FRESH_RETAINED_PRIMARY_READING",
+        "analysis": "Giữ riêng 吉/兇/hóa, 空亡/天空/截空/旬空49 và nhóm Dương/Đà/Hỏa/Linh/Không/Kiếp66; từ cát chưa định nghĩa roster phổ quát.",
+        "references": [
+          {
+            "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+            "startLine": 49,
+            "endLine": 66,
+            "sha256": "12ca73664f71d73ce59370f7b228662a1280f4d01b7baf3983e85e25c12f98a6",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          }
+        ]
+      },
+      "HamSo": {
+        "evidenceLevel": "SECONDARY_RESEARCH_NOTES",
+        "analysis": "Bộ chính/trợ và sát/bại/Tuần/Triệt trong phân Cách; tác dụng trợ tùy cung, không chứng thực ngoại lệ Mệnh.",
+        "reference": {
+          "path": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+          "jsonPointer": "/records/10",
+          "id": "KRB5-METHOD-V-CONTEXT",
+          "fileSha256LF": "dce09d726ef1944a06f5032c958aac4bfa9f4744ba9adc836ff7ab853feac13d",
+          "objectSha256": "7877cbc2ee1bfefe4d42ff9d9a62f63d0774e54125b89322deaf02e32fe2d20e",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      },
+      "Ling": {
+        "evidenceLevel": "SECONDARY_RESEARCH_NOTES",
+        "analysis": "Tả/Hữu không trợ mọi host như nhau; Cơ–Lương nhận trợ qua Lương theo note, không blanket benefic.",
+        "reference": {
+          "path": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+          "jsonPointer": "/records/13",
+          "id": "KRB4-METHOD-CO-ASSISTANTS",
+          "fileSha256LF": "b34e6f79586c2beb703743dbe5b2ba05a8bcb8142119ac0bf4580949191e4446",
+          "objectSha256": "514dd1304eeecde95360b9b69165d9115f4b90e3d673378fa755165305f49279",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      },
+      "Wang": {
+        "evidenceLevel": "SECONDARY_RESEARCH_NOTES_PROVISIONAL_ATTRIBUTION",
+        "analysis": "Phụ/Bật cùng Xương/Khúc trong branch859–861; không rút thành chỉ Tả/Hữu.",
+        "reference": {
+          "path": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+          "jsonPointer": "/records/8",
+          "id": "KRB6-METHOD-WANG-PARTIAL",
+          "fileSha256LF": "5f305f9d53e18d7ce384ad68dfeb816e71401cf6421e715f8d6023461dd53a45",
+          "objectSha256": "af28cab79d77c46a39f2beef86b6160c6d3e76e125425303ebd725dcf6519e44",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      }
+    },
+    {
+      "topic": "qualifiers_and_overrides",
+      "Quanshu": {
+        "evidenceLevel": "FRESH_RETAINED_PRIMARY_READING",
+        "analysis": "55 có ngoại lệ giờ Mão/Dậu chưa giải; 57 điều kiện vô chính diệu;63 十幹祿元 chưa có định nghĩa đủ;65 cứu có giới hạn không bền.",
+        "references": [
+          {
+            "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+            "startLine": 55,
+            "endLine": 65,
+            "sha256": "bd47405dafed825f8ce91a9bdcb60accc756684b74f6e25a27fd462a60187f4d",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          }
+        ]
+      },
+      "HamSo": {
+        "evidenceLevel": "SECONDARY_RESEARCH_NOTES",
+        "analysis": "Cách không bảo đảm phúc mọi lĩnh vực; Nô/Phu khác cung không quyết định ngoại lệ Mệnh của Ling.",
+        "reference": {
+          "path": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+          "jsonPointer": "/records/10",
+          "id": "KRB5-METHOD-V-CONTEXT",
+          "fileSha256LF": "dce09d726ef1944a06f5032c958aac4bfa9f4744ba9adc836ff7ab853feac13d",
+          "objectSha256": "7877cbc2ee1bfefe4d42ff9d9a62f63d0774e54125b89322deaf02e32fe2d20e",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      },
+      "Ling": {
+        "evidenceLevel": "SECONDARY_RESEARCH_NOTES",
+        "analysis": "Host/cohost/cung nhận trợ là điều kiện; Cơ–Âm/Cự không mặc nhiên hưởng ngoại lệ Cơ–Lương.",
+        "reference": {
+          "path": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+          "jsonPointer": "/records/13",
+          "id": "KRB4-METHOD-CO-ASSISTANTS",
+          "fileSha256LF": "b34e6f79586c2beb703743dbe5b2ba05a8bcb8142119ac0bf4580949191e4446",
+          "objectSha256": "514dd1304eeecde95360b9b69165d9115f4b90e3d673378fa755165305f49279",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      },
+      "Wang": {
+        "evidenceLevel": "SECONDARY_RESEARCH_NOTES_PROVISIONAL_ATTRIBUTION",
+        "analysis": "Thiếu Vi/Phụ nhận trợ nên không xác nhận hay bác exact exception; publisher/edition/page còn null.",
+        "reference": {
+          "path": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+          "jsonPointer": "/records/8",
+          "id": "KRB6-METHOD-WANG-PARTIAL",
+          "fileSha256LF": "5f305f9d53e18d7ce384ad68dfeb816e71401cf6421e715f8d6023461dd53a45",
+          "objectSha256": "af28cab79d77c46a39f2beef86b6160c6d3e76e125425303ebd725dcf6519e44",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      }
+    },
+    {
+      "topic": "formation_and_breaking",
+      "Quanshu": {
+        "evidenceLevel": "FRESH_RETAINED_PRIMARY_READING",
+        "analysis": "Đọc thêm 入格67–73: miếu/cát/hóa và hãm/sát/Kỵ làm thay đổi phân hạng;73 không phải định lượng tỷ lệ hay universal score.",
+        "references": [
+          {
+            "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+            "startLine": 59,
+            "endLine": 65,
+            "sha256": "928a19dba6687a9c68e40542b0c18f29bd1b924f7e7df837c9c944be14ffdb7e",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          {
+            "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+            "startLine": 67,
+            "endLine": 73,
+            "sha256": "87f41689f810ea0b2fbb4fd18bdb4a41a83bb67c4577e5f8f3f3a6852ac6f4e5",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          }
+        ]
+      },
+      "HamSo": {
+        "evidenceLevel": "SECONDARY_RESEARCH_NOTES",
+        "analysis": "Thượng/Trung/Hạ/Phi thường trong Cách là phân loại riêng; không đồng nhất với Q 入格/破格.",
+        "reference": {
+          "path": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+          "jsonPointer": "/records/10",
+          "id": "KRB5-METHOD-V-CONTEXT",
+          "fileSha256LF": "dce09d726ef1944a06f5032c958aac4bfa9f4744ba9adc836ff7ab853feac13d",
+          "objectSha256": "7877cbc2ee1bfefe4d42ff9d9a62f63d0774e54125b89322deaf02e32fe2d20e",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      },
+      "Ling": {
+        "evidenceLevel": "SECONDARY_RESEARCH_NOTES",
+        "analysis": "Chỉ note ngoại lệ trợ/cohost; không có hệ thành/phá cách đầy đủ đã giữ.",
+        "reference": {
+          "path": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+          "jsonPointer": "/records/13",
+          "id": "KRB4-METHOD-CO-ASSISTANTS",
+          "fileSha256LF": "b34e6f79586c2beb703743dbe5b2ba05a8bcb8142119ac0bf4580949191e4446",
+          "objectSha256": "514dd1304eeecde95360b9b69165d9115f4b90e3d673378fa755165305f49279",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      },
+      "Wang": {
+        "evidenceLevel": "SECONDARY_RESEARCH_NOTES_PROVISIONAL_ATTRIBUTION",
+        "analysis": "Partial Cơ–Lương comparator, không đủ phương pháp thành/phá hoàn chỉnh.",
+        "reference": {
+          "path": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+          "jsonPointer": "/records/8",
+          "id": "KRB6-METHOD-WANG-PARTIAL",
+          "fileSha256LF": "5f305f9d53e18d7ce384ad68dfeb816e71401cf6421e715f8d6023461dd53a45",
+          "objectSha256": "af28cab79d77c46a39f2beef86b6160c6d3e76e125425303ebd725dcf6519e44",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      }
+    },
+    {
+      "topic": "contradiction_handling",
+      "Quanshu": {
+        "evidenceLevel": "FRESH_RETAINED_PRIMARY_READING",
+        "analysis": "Q có cát/hung tương bạn61, sáng bị phá62, hãm có cứu63 rồi giới hạn65. Các nhánh theo điều kiện, không bỏ một bên. Q2 Cơ/Tử607 寅申 khác Mệnh150/152, giữ mismatch.",
+        "references": [
+          {
+            "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+            "startLine": 61,
+            "endLine": 65,
+            "sha256": "979d781708bf9b42175045cededdccd503c766ec7f676e3ae8165b52d840c8a4",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 600,
+            "endLine": 632,
+            "sha256": "62e3e8d293004ef7be24b576c1fffb71166d96fb0af0c6c408513b416dce0721",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 146,
+            "endLine": 162,
+            "sha256": "85191478474108ae6f95d0e3ffcfa97ecd13251780ad2133d8f59f957a791cd2",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          }
+        ]
+      },
+      "HamSo": {
+        "evidenceLevel": "SECONDARY_RESEARCH_NOTES",
+        "analysis": "Khác cung/tiền đề có thể cùng tồn tại; note không cho chọn một tác giả làm trọng tài. Citation Thái Thứ Lang trong V không là sách riêng đã đọc.",
+        "reference": {
+          "path": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+          "jsonPointer": "/records/10",
+          "id": "KRB5-METHOD-V-CONTEXT",
+          "fileSha256LF": "dce09d726ef1944a06f5032c958aac4bfa9f4744ba9adc836ff7ab853feac13d",
+          "objectSha256": "7877cbc2ee1bfefe4d42ff9d9a62f63d0774e54125b89322deaf02e32fe2d20e",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      },
+      "Ling": {
+        "evidenceLevel": "SECONDARY_RESEARCH_NOTES",
+        "analysis": "Chưa exact independent comparison; note ngoại lệ không chứng minh quy tắc chung hoặc triệt tiêu nguồn khác.",
+        "reference": {
+          "path": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+          "jsonPointer": "/records/13",
+          "id": "KRB4-METHOD-CO-ASSISTANTS",
+          "fileSha256LF": "b34e6f79586c2beb703743dbe5b2ba05a8bcb8142119ac0bf4580949191e4446",
+          "objectSha256": "514dd1304eeecde95360b9b69165d9115f4b90e3d673378fa755165305f49279",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      },
+      "Wang": {
+        "evidenceLevel": "SECONDARY_RESEARCH_NOTES_PROVISIONAL_ATTRIBUTION",
+        "analysis": "Note898/909 căng khác chủ thể khi Hình/Kỵ; cần print, không chọn đúng bằng đa số hoặc sửa chép.",
+        "reference": {
+          "path": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+          "jsonPointer": "/records/8",
+          "id": "KRB6-METHOD-WANG-PARTIAL",
+          "fileSha256LF": "5f305f9d53e18d7ce384ad68dfeb816e71401cf6421e715f8d6023461dd53a45",
+          "objectSha256": "af28cab79d77c46a39f2beef86b6160c6d3e76e125425303ebd725dcf6519e44",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      }
+    },
+    {
+      "topic": "source_specific_order",
+      "Quanshu": {
+        "evidenceLevel": "FRESH_RETAINED_PRIMARY_READING",
+        "analysis": "49 kiểm không-vong, rồi 第一 Mệnh50, 次 Thân chủ51, 三 Di/Tài/Quan52, 四 Phúc53, 又 Phụ/thê/tử56. Q3 94–99 cho trật tự nam/nữ lịch sử khác; Q2 Tử601–604 và Tật664 có lời dẫn riêng. Đây là thứ tự đọc theo đoạn, chưa là thuật toán ưu tiên.",
+        "references": [
+          {
+            "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+            "startLine": 49,
+            "endLine": 56,
+            "sha256": "6e4f1d3be49506c1552b91b0cc77bbf29d3f770c58156c63ec223de9e64634c6",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          {
+            "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+            "startLine": 92,
+            "endLine": 99,
+            "sha256": "786049c4fc8938c5afd2df5b4e74f5befa135a4ef5ae1a6b58ed75b7d04b586f",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 600,
+            "endLine": 632,
+            "sha256": "62e3e8d293004ef7be24b576c1fffb71166d96fb0af0c6c408513b416dce0721",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 663,
+            "endLine": 686,
+            "sha256": "5983082017347cc98238f468190117431f69e4818aac31ad739196496855534a",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          }
+        ]
+      },
+      "HamSo": {
+        "evidenceLevel": "SECONDARY_RESEARCH_NOTES",
+        "analysis": "Notes chỉ giữ phân Cách và ví dụ liên cung; không có full reading order độc lập được kiểm mới.",
+        "reference": {
+          "path": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+          "jsonPointer": "/records/10",
+          "id": "KRB5-METHOD-V-CONTEXT",
+          "fileSha256LF": "dce09d726ef1944a06f5032c958aac4bfa9f4744ba9adc836ff7ab853feac13d",
+          "objectSha256": "7877cbc2ee1bfefe4d42ff9d9a62f63d0774e54125b89322deaf02e32fe2d20e",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      },
+      "Ling": {
+        "evidenceLevel": "SECONDARY_RESEARCH_NOTES",
+        "analysis": "Notes giữ nguyên cục khác lưu niên, Cơ–Cự/Âm/Lương và beneficiary; không có toàn thứ tự đọc.",
+        "reference": {
+          "path": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+          "jsonPointer": "/records/13",
+          "id": "KRB4-METHOD-CO-ASSISTANTS",
+          "fileSha256LF": "b34e6f79586c2beb703743dbe5b2ba05a8bcb8142119ac0bf4580949191e4446",
+          "objectSha256": "514dd1304eeecde95360b9b69165d9115f4b90e3d673378fa755165305f49279",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      },
+      "Wang": {
+        "evidenceLevel": "SECONDARY_RESEARCH_NOTES_PROVISIONAL_ATTRIBUTION",
+        "analysis": "Notes giữ heading/subsection và quan hệ rộng trước cohost辰戌; không có đầy đủ thứ tự toàn sách.",
+        "reference": {
+          "path": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+          "jsonPointer": "/records/8",
+          "id": "KRB6-METHOD-WANG-PARTIAL",
+          "fileSha256LF": "5f305f9d53e18d7ce384ad68dfeb816e71401cf6421e715f8d6023461dd53a45",
+          "objectSha256": "af28cab79d77c46a39f2beef86b6160c6d3e76e125425303ebd725dcf6519e44",
+          "objectHashMethod": "SHA256 UTF8 JSON ensure_ascii=false sort_keys=true separators comma/colon"
+        }
+      }
+    }
+  ],
+  "familyAccounting": "All retained Q sections one Quanshu transmission family. V/Ling/Wang are attributed authorship, not proven historically independent witnesses; Ling quotations of Wang preserve borrowing risk. Quoted Thái Thứ Lang not independently inspected.",
+  "newFactsVsReused": "Fresh verification of retained method context, with Q3 67–99 additional adjacent scope emphasized; all modern observations reused. This report synthesizes existing method records without new record/cell/source count.",
+  "approval": {
+    "sourceReview": "not_executed",
+    "runtimeApproval": "not_requested",
+    "publicRelease": "unchanged_closed"
+  }
+}

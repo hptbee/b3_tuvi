@@ -1,0 +1,20 @@
+# Batch 8 — adaptive execution plan, after checkpoint 7
+
+Created after successful Batch7commit `5d7757245fe2f046756156f32953a3e7e52dc8c4`, rereading its final handoff and independently recounting60records/43contextual/125locator/41comparedcells,14open/0evidence-resolved. Original main811655f. Same feature branch; Batch7and1–6snapshots immutable. No Batch8research preceded this plan.
+
+## Actual findings that determine this plan
+
+Batch7corrected mistaken gap identities and mapped Vi/Nô, Lương/Huynh. It added primary assistant-operand analysis, not an exact independent author match. No external source bodies acquired: official catalogue/IA/printed Hàm Số/Wang routes failed at CONNECT proxy. `旺主` illustrates why a familiar word cannot automatically become a brightness operand. Two intra-witness comparisons did not increase independent breadth.
+
+## Ordered, bounded work
+
+1. **Context completion where readable:** research Vi/Huynh, Vi/Điền, Vi/Phúc, Lương/Nô only, complete retained Q governing sections553–575,712–736,765–788,789–816 plus reciprocal entries and relevant general method. Preserve missing standalone entries, vague quantifiers, clause scope, cohost versus hội/chiếu, same-source asymmetry and exceptions. Do not promote contextual completion to star completeness, independent comparison or formula approval. Add only substantive source-scoped records.
+2. **Deepen actual unresolved comparisons:** retain official/print/source-access blockers and the four earlier textual variants. Only seek a new external route if access changes or a materially new lead exists; do not repeat identical denied routes. Within-source newly observed differences must not be called independent authors. No source consensus or missing print text will be invented.
+3. **Conditional methodology:** read actual retained primary method and compare it to precisely cited retained research observations for Hàm Số, Ling and provisional Wang. Explicitly distinguish primary inspection from secondary record-level synthesis; independence/borrowing remain uncertain. Cover brightness, relation endpoints, supports/adverse groups, qualifier/override scope, formation/breaking, contradiction and source-specific order. No universal score or priority model; zero new full modern witnesses unless actually acquired.
+4. **Representative audit:** inspect KRB2-TA-ZIWEI, KRB4-TB-LUONG, KRB6-PD-LUONG, KRB5-TT-CO, KRB4-METHOD-CO-ASSISTANTS, KRB6-METHOD-WANG-PARTIAL and KRB7-NB-ZIWEI against complete available source/evidence. Check preambles/exceptions/cohost-only scope, reproducible hashes, copied-family accounting and status overstatement. Record explicit supplements/corrections with old-record references; never rewrite history. Unavailable original modern pages remain a limit.
+5. **Questions and next checkpoint:** preserve all14existing disposition fields; add a separately evidenced unresolved question only if actual new scope warrants it. Rebuild canonical index and own immutable snapshot, protect every Batch7file and all historical bytes, run both packet validators/negative tests/docs-links/scope checks and independent review. Commit Batch8separately, record the SHA in final delivery/PR metadata.
+6. **One final draft PR only:** review combined diff against811655f, push one branch, create one draft PR describing each batch separately. If API access blocks creation, preserve an exact reviewable draft and report the actual failure without inventing a PR URL. No merge/deploy. Batch9handoff is recommendations only; do not begin Batch9.
+
+## Boundaries
+
+Source review, runtime approval and public release are separate from research validation. No AutoDev, runtime algorithm/FormulaV1/catalog/source-registry/decision/T030–T038/T034status changes; no RAG/crawler/dependencies/UI/E2E/app-CI. Modern books retain unknown-rights restrictions: locators and original bounded analysis only, not body/corpus redistribution. Historical family/health/gender/servant/fortune claims are not verified personal outcomes or advice.

@@ -1,0 +1,2149 @@
+{
+  "reviewer": "independent delegated read-only content/history review",
+  "timeUTC": "2026-10-17T14:12:37.101577+00:00",
+  "baselineCommit": "5d7757245fe2f046756156f32953a3e7e52dc8c4",
+  "originalMain": "811655f90102c062458735371d326b8bcbc8848f",
+  "spanChecks": [
+    {
+      "origin": "audit.json/samples/0/retainedSpanChecks/0/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 665,
+      "endLine": 665,
+      "actualSha256": "b201b622d83036b55e1b75292c9e834b04633409733e4b5959a51591859ec1ec",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/0/retainedSpanChecks/1/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 664,
+      "endLine": 664,
+      "actualSha256": "68f8092ca016f30a51db79b4f1c7b2658b8aa73fcbbe8eaff4bb110d572d2b48",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/0/retainedSpanChecks/2/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 675,
+      "endLine": 675,
+      "actualSha256": "a3eb4224e2ead3467f7ad20c3dae48af0022ef20ca8c813fc65805b24f1e4319",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/0/retainedSpanChecks/3/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 677,
+      "endLine": 677,
+      "actualSha256": "4928c19163281891fc943fa1f6bc27254c328f4a9f992c32a5d09bc4f8a880aa",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/1/retainedSpanChecks/0/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 649,
+      "endLine": 650,
+      "actualSha256": "cef02d12a3926d391d87687a6d9089d694a485d064b54c3da086cf4507c8bf6f",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/1/retainedSpanChecks/1/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 633,
+      "endLine": 662,
+      "actualSha256": "18e05f3a45cf27553642da48035fa263e267e90d49c9a1211df734a6dc54ee13",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/1/retainedSpanChecks/2/location",
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 48,
+      "endLine": 66,
+      "actualSha256": "523b5fab97f6e7303aa8d539cad986617c6b37120e8e1b9c05c5eebd97f4ee33",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/1/retainedSpanChecks/3/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 636,
+      "endLine": 636,
+      "actualSha256": "a41e2c92935aff69625f57ffde88fa0224f0c7414e8f85502bcb5b673a138dd1",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/1/retainedSpanChecks/4/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 640,
+      "endLine": 640,
+      "actualSha256": "e2676e81747847f8436be4c118127a2cbeae575f937e34c1e039a2280f059a1e",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/2/retainedSpanChecks/0/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 791,
+      "endLine": 796,
+      "actualSha256": "8cbe52aa0c78947a9492d29cc0a318ab140cf78b7e3ba2bd019f19bb45df4237",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/2/retainedSpanChecks/1/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 789,
+      "endLine": 816,
+      "actualSha256": "1ad123491278d5fcc8c568956085100468f59e45bc57035339586d3387bc5757",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/2/retainedSpanChecks/2/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 791,
+      "endLine": 791,
+      "actualSha256": "4f88f899563c41f21430fb4f6a5240e754a9683f65327833fe0eb9ac3ee16294",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/2/retainedSpanChecks/3/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 792,
+      "endLine": 793,
+      "actualSha256": "4a2e2dedf20f2fb2862789e962395953e23de28c132f2236a77f4d021434deeb",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/2/retainedSpanChecks/4/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 796,
+      "endLine": 796,
+      "actualSha256": "d0ef3ada30bc2f7c5a9ec33e3d94ad295a05ba621db929c8812b11cffe711798",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/3/retainedSpanChecks/0/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 607,
+      "endLine": 607,
+      "actualSha256": "154ae025fe5e5786f98436d55eaca65ce366894fb9bcdff41b224eab4f1fc04f",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/3/retainedSpanChecks/1/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 600,
+      "endLine": 632,
+      "actualSha256": "62e3e8d293004ef7be24b576c1fffb71166d96fb0af0c6c408513b416dce0721",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/3/retainedSpanChecks/2/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 601,
+      "endLine": 604,
+      "actualSha256": "2e9035e99db67e134fbc37a64b415e808c24624b4d41c7a470f6145ca0cad9cf",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/3/retainedSpanChecks/3/location",
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 48,
+      "endLine": 66,
+      "actualSha256": "523b5fab97f6e7303aa8d539cad986617c6b37120e8e1b9c05c5eebd97f4ee33",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/3/retainedSpanChecks/4/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 614,
+      "endLine": 615,
+      "actualSha256": "d1fec1bf41684688cee8f6fcf98bfdf71a6ef82faf59ead699008bb143a1d6e9",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/3/retainedSpanChecks/5/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 617,
+      "endLine": 617,
+      "actualSha256": "991dce7f67bf6ce49045ed035adab12c251cddd6cdc76631ee77725e0636ac42",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/3/retainedSpanChecks/6/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 620,
+      "endLine": 620,
+      "actualSha256": "7d6fc53ea621439ab292ffd71ff5555ee7a6ad9807f79eda28afc191d26cae07",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/3/retainedSpanChecks/7/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 148,
+      "endLine": 153,
+      "actualSha256": "25a6f5fb4bec484f4e8a8222075d558c60ec32b2c69d80d410807e7341e630b1",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/6/retainedSpanChecks/0/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 713,
+      "endLine": 713,
+      "actualSha256": "f8a3b1884b2d48c66faa7ac3b2ec8691e443bcad639768f2c5d14f96c545d022",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/6/retainedSpanChecks/1/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 712,
+      "endLine": 736,
+      "actualSha256": "efe76b53589501d504df967b87a6ba97cc845756e62ded80f41a10ee80993647",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/6/retainedSpanChecks/2/location",
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 48,
+      "endLine": 66,
+      "actualSha256": "523b5fab97f6e7303aa8d539cad986617c6b37120e8e1b9c05c5eebd97f4ee33",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/6/retainedSpanChecks/3/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 719,
+      "endLine": 719,
+      "actualSha256": "a754bb26697ff472606b10078d644c4f4803e6ff752a68b27d9c9897bddb2e46",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/6/retainedSpanChecks/4/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 721,
+      "endLine": 721,
+      "actualSha256": "2af117988a7a4ac34934c95c725507f38f1014a75aca5491870001d882e86983",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/6/retainedSpanChecks/5/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 723,
+      "endLine": 723,
+      "actualSha256": "ef45ac25546b3613c0eea5a800f6d2786f2647f3c616f89ee9645e8d28eb385b",
+      "pass": true
+    },
+    {
+      "origin": "audit.json/samples/6/retainedSpanChecks/6/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 726,
+      "endLine": 726,
+      "actualSha256": "91b0da6da3483edb12bf6511b3c34f7c37110dcd8a255b4ec879a0c39a554b7e",
+      "pass": true
+    },
+    {
+      "origin": "comparisons.json/comparisons/0/sourceReference/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 553,
+      "endLine": 575,
+      "actualSha256": "347e031b5cdac4ae4ce8d733f343eeee7fdf2a48c592ae3ba66263644d598f1d",
+      "pass": true
+    },
+    {
+      "origin": "comparisons.json/comparisons/1/sourceReference/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 712,
+      "endLine": 736,
+      "actualSha256": "efe76b53589501d504df967b87a6ba97cc845756e62ded80f41a10ee80993647",
+      "pass": true
+    },
+    {
+      "origin": "comparisons.json/comparisons/2/sourceReference/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 765,
+      "endLine": 788,
+      "actualSha256": "66c1a214119aab5b0228ef7cf74fe15f99fa7b01fd5ff0b8704de22aaf6dac83",
+      "pass": true
+    },
+    {
+      "origin": "comparisons.json/comparisons/3/sourceReference/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 789,
+      "endLine": 816,
+      "actualSha256": "1ad123491278d5fcc8c568956085100468f59e45bc57035339586d3387bc5757",
+      "pass": true
+    },
+    {
+      "origin": "dispositions.json/dispositions/14/sourceReferences/0/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 554,
+      "endLine": 554,
+      "actualSha256": "fe1d0cd0683232fa5ab9bf3cfd9e81608314f94f9195e673bce0622ee8183e5a",
+      "pass": true
+    },
+    {
+      "origin": "dispositions.json/dispositions/14/sourceReferences/1/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 567,
+      "endLine": 567,
+      "actualSha256": "ef78da41dcc198d1b3b233a3253a2d94a684016b3c44b35834a9c2212fb273ef",
+      "pass": true
+    },
+    {
+      "origin": "dispositions.json/dispositions/15/exactSourceSpans/0",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 766,
+      "endLine": 766,
+      "actualSha256": "eecb46d1daf90b16dcd165e50cd7a4223b97592643c3c7c443f94c0a9ef64701",
+      "pass": true
+    },
+    {
+      "origin": "dispositions.json/dispositions/15/exactSourceSpans/1",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 779,
+      "endLine": 779,
+      "actualSha256": "53778b07e3161973d4a3c0a2c8d7abdf909c1131925bdd90077ffada7e9a2d83",
+      "pass": true
+    },
+    {
+      "origin": "dispositions.json/dispositions/16/exactSourceSpans/0",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 790,
+      "endLine": 790,
+      "actualSha256": "b8baa51cf0b10f4f8afe12ddfa4c88cf81567fe795e28c6a6332427fffaf1ef4",
+      "pass": true
+    },
+    {
+      "origin": "dispositions.json/dispositions/16/exactSourceSpans/1",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 805,
+      "endLine": 805,
+      "actualSha256": "2130af8b897c398e3e73e302fc46ae46e80082f57b27c1aa1e5720f21a513d2f",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/0/sourceReferences/0/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 554,
+      "endLine": 554,
+      "actualSha256": "fe1d0cd0683232fa5ab9bf3cfd9e81608314f94f9195e673bce0622ee8183e5a",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/0/governingContext/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 553,
+      "endLine": 575,
+      "actualSha256": "347e031b5cdac4ae4ce8d733f343eeee7fdf2a48c592ae3ba66263644d598f1d",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/0/governingContext/generalMethodReference/location",
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 48,
+      "endLine": 66,
+      "actualSha256": "523b5fab97f6e7303aa8d539cad986617c6b37120e8e1b9c05c5eebd97f4ee33",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/0/relationships/0/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 560,
+      "endLine": 560,
+      "actualSha256": "2872c857201a46a7e6552ba365141167b1af3f7653650417922eabc98d4db8d5",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/0/relationships/1/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 562,
+      "endLine": 562,
+      "actualSha256": "5636d2492ed647b0c0d69988094a0f1ca8280ee3cd33236a1f6923d6b312774f",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/0/relationships/2/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 564,
+      "endLine": 564,
+      "actualSha256": "12873d5b0aff78afa4adb182124f7f81c2f804392715f8e35034c03f690c5759",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/0/relationships/3/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 567,
+      "endLine": 567,
+      "actualSha256": "ef78da41dcc198d1b3b233a3253a2d94a684016b3c44b35834a9c2212fb273ef",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/0/relationships/4/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 570,
+      "endLine": 570,
+      "actualSha256": "9638f25b7cfbe2a6b8bf9ad187bae1f5f820badfe81cc44224c935d02a654a14",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/1/sourceReferences/0/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 724,
+      "endLine": 724,
+      "actualSha256": "525f6d99ce9ea7241944b550fe9587f318eaad1e32c4d24bca43bc6380549989",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/1/governingContext/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 712,
+      "endLine": 736,
+      "actualSha256": "efe76b53589501d504df967b87a6ba97cc845756e62ded80f41a10ee80993647",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/1/governingContext/generalMethodReference/location",
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 48,
+      "endLine": 66,
+      "actualSha256": "523b5fab97f6e7303aa8d539cad986617c6b37120e8e1b9c05c5eebd97f4ee33",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/1/relationships/0/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 717,
+      "endLine": 717,
+      "actualSha256": "b800f8abe7e9756f534bdacfee7e7c5c41e47e751f87d2ecea41396d0763be90",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/1/relationships/1/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 714,
+      "endLine": 714,
+      "actualSha256": "ec0d012a8e84bceb4ee57dd2c85b32c8dbfaf9e8856e2d0ad4f0c2799a1c6232",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/2/sourceReferences/0/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 766,
+      "endLine": 766,
+      "actualSha256": "eecb46d1daf90b16dcd165e50cd7a4223b97592643c3c7c443f94c0a9ef64701",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/2/governingContext/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 765,
+      "endLine": 788,
+      "actualSha256": "66c1a214119aab5b0228ef7cf74fe15f99fa7b01fd5ff0b8704de22aaf6dac83",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/2/governingContext/generalMethodReference/location",
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 48,
+      "endLine": 66,
+      "actualSha256": "523b5fab97f6e7303aa8d539cad986617c6b37120e8e1b9c05c5eebd97f4ee33",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/2/relationships/0/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 773,
+      "endLine": 773,
+      "actualSha256": "c1dc2ef3b6ab47c6597544bd6eb420c5491689f6dad75be19d0cf69a6ca1f6cd",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/2/relationships/1/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 775,
+      "endLine": 775,
+      "actualSha256": "e676d0836423a21b31f0f52de09b504d7e1a0c6a875a7abb00ca7aad3a4bff58",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/2/relationships/2/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 777,
+      "endLine": 777,
+      "actualSha256": "78556d2a754f1853d4aa38b184ef2f65073a7ecb3e7a6c23834ec0ff5876acb7",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/2/relationships/3/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 779,
+      "endLine": 779,
+      "actualSha256": "53778b07e3161973d4a3c0a2c8d7abdf909c1131925bdd90077ffada7e9a2d83",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/3/sourceReferences/0/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 790,
+      "endLine": 790,
+      "actualSha256": "b8baa51cf0b10f4f8afe12ddfa4c88cf81567fe795e28c6a6332427fffaf1ef4",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/3/governingContext/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 789,
+      "endLine": 816,
+      "actualSha256": "1ad123491278d5fcc8c568956085100468f59e45bc57035339586d3387bc5757",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/3/governingContext/generalMethodReference/location",
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 48,
+      "endLine": 66,
+      "actualSha256": "523b5fab97f6e7303aa8d539cad986617c6b37120e8e1b9c05c5eebd97f4ee33",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/3/relationships/0/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 798,
+      "endLine": 798,
+      "actualSha256": "d8bbf41bffbbd89ba5edf3da840681349e62cd80a8de43eaf24ddf6acb69a867",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/3/relationships/1/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 800,
+      "endLine": 800,
+      "actualSha256": "49acc2ee555ade8f754c56c73a47b5abd977bd5fe092fe6c6792786ff73da2a1",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/3/relationships/2/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 802,
+      "endLine": 802,
+      "actualSha256": "cd522db7425a61433e367dcb7156df0cf77f12729f2047edbdff7351b8ac1211",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/3/relationships/3/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 803,
+      "endLine": 804,
+      "actualSha256": "72efdd42fa285a1c916bd76127ed98ebf2f035250bc35c1d83eecf5a84abea12",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/3/relationships/4/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 805,
+      "endLine": 805,
+      "actualSha256": "2130af8b897c398e3e73e302fc46ae46e80082f57b27c1aa1e5720f21a513d2f",
+      "pass": true
+    },
+    {
+      "origin": "knowledge-records.json/records/3/relationships/5/location",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 791,
+      "endLine": 791,
+      "actualSha256": "4f88f899563c41f21430fb4f6a5240e754a9683f65327833fe0eb9ac3ee16294",
+      "pass": true
+    },
+    {
+      "origin": "methodology.json/primaryReadSpans/0",
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 48,
+      "endLine": 66,
+      "actualSha256": "523b5fab97f6e7303aa8d539cad986617c6b37120e8e1b9c05c5eebd97f4ee33",
+      "pass": true
+    },
+    {
+      "origin": "methodology.json/primaryReadSpans/1",
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 67,
+      "endLine": 73,
+      "actualSha256": "87f41689f810ea0b2fbb4fd18bdb4a41a83bb67c4577e5f8f3f3a6852ac6f4e5",
+      "pass": true
+    },
+    {
+      "origin": "methodology.json/primaryReadSpans/2",
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 74,
+      "endLine": 91,
+      "actualSha256": "f28b539496f2b381d4cf943a0320919d00fe1f1067bddae3c5bf5aee6145f98f",
+      "pass": true
+    },
+    {
+      "origin": "methodology.json/primaryReadSpans/3",
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 92,
+      "endLine": 99,
+      "actualSha256": "786049c4fc8938c5afd2df5b4e74f5befa135a4ef5ae1a6b58ed75b7d04b586f",
+      "pass": true
+    },
+    {
+      "origin": "methodology.json/primaryReadSpans/4",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 146,
+      "endLine": 162,
+      "actualSha256": "85191478474108ae6f95d0e3ffcfa97ecd13251780ad2133d8f59f957a791cd2",
+      "pass": true
+    },
+    {
+      "origin": "methodology.json/primaryReadSpans/5",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 553,
+      "endLine": 575,
+      "actualSha256": "347e031b5cdac4ae4ce8d733f343eeee7fdf2a48c592ae3ba66263644d598f1d",
+      "pass": true
+    },
+    {
+      "origin": "methodology.json/primaryReadSpans/6",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 600,
+      "endLine": 632,
+      "actualSha256": "62e3e8d293004ef7be24b576c1fffb71166d96fb0af0c6c408513b416dce0721",
+      "pass": true
+    },
+    {
+      "origin": "methodology.json/primaryReadSpans/7",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 633,
+      "endLine": 662,
+      "actualSha256": "18e05f3a45cf27553642da48035fa263e267e90d49c9a1211df734a6dc54ee13",
+      "pass": true
+    },
+    {
+      "origin": "methodology.json/primaryReadSpans/8",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 663,
+      "endLine": 686,
+      "actualSha256": "5983082017347cc98238f468190117431f69e4818aac31ad739196496855534a",
+      "pass": true
+    },
+    {
+      "origin": "methodology.json/primaryReadSpans/9",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 712,
+      "endLine": 736,
+      "actualSha256": "efe76b53589501d504df967b87a6ba97cc845756e62ded80f41a10ee80993647",
+      "pass": true
+    },
+    {
+      "origin": "methodology.json/primaryReadSpans/10",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 789,
+      "endLine": 816,
+      "actualSha256": "1ad123491278d5fcc8c568956085100468f59e45bc57035339586d3387bc5757",
+      "pass": true
+    },
+    {
+      "origin": "methodology.json/primaryReadSpans/11",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 817,
+      "endLine": 846,
+      "actualSha256": "92df67c009e504f7c395daa520ba747e2a42beadd7bb020e9d2740d947c59137",
+      "pass": true
+    },
+    {
+      "origin": "methodology.json/matrix/0/Quanshu/references/0",
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 50,
+      "endLine": 66,
+      "actualSha256": "e0670ee74ef3f4f9a9bc1062bba3daf1c57ba13bc86008e92bebb9049ed6087c",
+      "pass": true
+    },
+    {
+      "origin": "methodology.json/matrix/1/Quanshu/references/0",
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 52,
+      "endLine": 59,
+      "actualSha256": "5ee254f4282a8b29927eeebecd7e32d6d431e381cff8c23f72adf244edc781f3",
+      "pass": true
+    },
+    {
+      "origin": "methodology.json/matrix/2/Quanshu/references/0",
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 49,
+      "endLine": 66,
+      "actualSha256": "12ca73664f71d73ce59370f7b228662a1280f4d01b7baf3983e85e25c12f98a6",
+      "pass": true
+    },
+    {
+      "origin": "methodology.json/matrix/3/Quanshu/references/0",
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 55,
+      "endLine": 65,
+      "actualSha256": "bd47405dafed825f8ce91a9bdcb60accc756684b74f6e25a27fd462a60187f4d",
+      "pass": true
+    },
+    {
+      "origin": "methodology.json/matrix/4/Quanshu/references/0",
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 59,
+      "endLine": 65,
+      "actualSha256": "928a19dba6687a9c68e40542b0c18f29bd1b924f7e7df837c9c944be14ffdb7e",
+      "pass": true
+    },
+    {
+      "origin": "methodology.json/matrix/4/Quanshu/references/1",
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 67,
+      "endLine": 73,
+      "actualSha256": "87f41689f810ea0b2fbb4fd18bdb4a41a83bb67c4577e5f8f3f3a6852ac6f4e5",
+      "pass": true
+    },
+    {
+      "origin": "methodology.json/matrix/5/Quanshu/references/0",
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 61,
+      "endLine": 65,
+      "actualSha256": "979d781708bf9b42175045cededdccd503c766ec7f676e3ae8165b52d840c8a4",
+      "pass": true
+    },
+    {
+      "origin": "methodology.json/matrix/5/Quanshu/references/1",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 600,
+      "endLine": 632,
+      "actualSha256": "62e3e8d293004ef7be24b576c1fffb71166d96fb0af0c6c408513b416dce0721",
+      "pass": true
+    },
+    {
+      "origin": "methodology.json/matrix/5/Quanshu/references/2",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 146,
+      "endLine": 162,
+      "actualSha256": "85191478474108ae6f95d0e3ffcfa97ecd13251780ad2133d8f59f957a791cd2",
+      "pass": true
+    },
+    {
+      "origin": "methodology.json/matrix/6/Quanshu/references/0",
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 49,
+      "endLine": 56,
+      "actualSha256": "6e4f1d3be49506c1552b91b0cc77bbf29d3f770c58156c63ec223de9e64634c6",
+      "pass": true
+    },
+    {
+      "origin": "methodology.json/matrix/6/Quanshu/references/1",
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 92,
+      "endLine": 99,
+      "actualSha256": "786049c4fc8938c5afd2df5b4e74f5befa135a4ef5ae1a6b58ed75b7d04b586f",
+      "pass": true
+    },
+    {
+      "origin": "methodology.json/matrix/6/Quanshu/references/2",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 600,
+      "endLine": 632,
+      "actualSha256": "62e3e8d293004ef7be24b576c1fffb71166d96fb0af0c6c408513b416dce0721",
+      "pass": true
+    },
+    {
+      "origin": "methodology.json/matrix/6/Quanshu/references/3",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 663,
+      "endLine": 686,
+      "actualSha256": "5983082017347cc98238f468190117431f69e4818aac31ad739196496855534a",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/0/governingSpans/0",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 553,
+      "endLine": 575,
+      "actualSha256": "347e031b5cdac4ae4ce8d733f343eeee7fdf2a48c592ae3ba66263644d598f1d",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/0/governingSpans/1",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 712,
+      "endLine": 736,
+      "actualSha256": "efe76b53589501d504df967b87a6ba97cc845756e62ded80f41a10ee80993647",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/0/generalMethod",
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 48,
+      "endLine": 66,
+      "actualSha256": "523b5fab97f6e7303aa8d539cad986617c6b37120e8e1b9c05c5eebd97f4ee33",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/0/exactEntries/0",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 554,
+      "endLine": 554,
+      "actualSha256": "fe1d0cd0683232fa5ab9bf3cfd9e81608314f94f9195e673bce0622ee8183e5a",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/0/exactEntries/1",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 560,
+      "endLine": 560,
+      "actualSha256": "2872c857201a46a7e6552ba365141167b1af3f7653650417922eabc98d4db8d5",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/0/exactEntries/2",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 562,
+      "endLine": 562,
+      "actualSha256": "5636d2492ed647b0c0d69988094a0f1ca8280ee3cd33236a1f6923d6b312774f",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/0/exactEntries/3",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 564,
+      "endLine": 564,
+      "actualSha256": "12873d5b0aff78afa4adb182124f7f81c2f804392715f8e35034c03f690c5759",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/0/exactEntries/4",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 567,
+      "endLine": 567,
+      "actualSha256": "ef78da41dcc198d1b3b233a3253a2d94a684016b3c44b35834a9c2212fb273ef",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/0/exactEntries/5",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 570,
+      "endLine": 570,
+      "actualSha256": "9638f25b7cfbe2a6b8bf9ad187bae1f5f820badfe81cc44224c935d02a654a14",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/0/exactEntries/6",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 575,
+      "endLine": 575,
+      "actualSha256": "8af32a4a6ef8588bc9f337de3109ebd548ed322347caf6700af90f7c93fddfe3",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/0/exactEntries/7",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 714,
+      "endLine": 714,
+      "actualSha256": "ec0d012a8e84bceb4ee57dd2c85b32c8dbfaf9e8856e2d0ad4f0c2799a1c6232",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/0/exactEntries/8",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 717,
+      "endLine": 717,
+      "actualSha256": "b800f8abe7e9756f534bdacfee7e7c5c41e47e751f87d2ecea41396d0763be90",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/0/exactEntries/9",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 724,
+      "endLine": 724,
+      "actualSha256": "525f6d99ce9ea7241944b550fe9587f318eaad1e32c4d24bca43bc6380549989",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/0/exactEntries/10",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 736,
+      "endLine": 736,
+      "actualSha256": "b588f68e07c9297a54d2b185073d97dd59c0fb6b412fcc0291bafa596d2eb918",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/1/fullPrimaryReads/0",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 765,
+      "endLine": 788,
+      "actualSha256": "66c1a214119aab5b0228ef7cf74fe15f99fa7b01fd5ff0b8704de22aaf6dac83",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/1/fullPrimaryReads/1",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 789,
+      "endLine": 816,
+      "actualSha256": "1ad123491278d5fcc8c568956085100468f59e45bc57035339586d3387bc5757",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/1/fullPrimaryReads/2",
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 48,
+      "endLine": 66,
+      "actualSha256": "523b5fab97f6e7303aa8d539cad986617c6b37120e8e1b9c05c5eebd97f4ee33",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/1/entryReads/0",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 766,
+      "endLine": 766,
+      "actualSha256": "eecb46d1daf90b16dcd165e50cd7a4223b97592643c3c7c443f94c0a9ef64701",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/1/entryReads/1",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 773,
+      "endLine": 773,
+      "actualSha256": "c1dc2ef3b6ab47c6597544bd6eb420c5491689f6dad75be19d0cf69a6ca1f6cd",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/1/entryReads/2",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 775,
+      "endLine": 775,
+      "actualSha256": "e676d0836423a21b31f0f52de09b504d7e1a0c6a875a7abb00ca7aad3a4bff58",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/1/entryReads/3",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 777,
+      "endLine": 777,
+      "actualSha256": "78556d2a754f1853d4aa38b184ef2f65073a7ecb3e7a6c23834ec0ff5876acb7",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/1/entryReads/4",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 779,
+      "endLine": 779,
+      "actualSha256": "53778b07e3161973d4a3c0a2c8d7abdf909c1131925bdd90077ffada7e9a2d83",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/1/entryReads/5",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 790,
+      "endLine": 790,
+      "actualSha256": "b8baa51cf0b10f4f8afe12ddfa4c88cf81567fe795e28c6a6332427fffaf1ef4",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/1/entryReads/6",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 791,
+      "endLine": 791,
+      "actualSha256": "4f88f899563c41f21430fb4f6a5240e754a9683f65327833fe0eb9ac3ee16294",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/1/entryReads/7",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 798,
+      "endLine": 798,
+      "actualSha256": "d8bbf41bffbbd89ba5edf3da840681349e62cd80a8de43eaf24ddf6acb69a867",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/1/entryReads/8",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 800,
+      "endLine": 800,
+      "actualSha256": "49acc2ee555ade8f754c56c73a47b5abd977bd5fe092fe6c6792786ff73da2a1",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/1/entryReads/9",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 802,
+      "endLine": 802,
+      "actualSha256": "cd522db7425a61433e367dcb7156df0cf77f12729f2047edbdff7351b8ac1211",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/1/entryReads/10",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 805,
+      "endLine": 805,
+      "actualSha256": "2130af8b897c398e3e73e302fc46ae46e80082f57b27c1aa1e5720f21a513d2f",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/1/entryReads/11",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 803,
+      "endLine": 804,
+      "actualSha256": "72efdd42fa285a1c916bd76127ed98ebf2f035250bc35c1d83eecf5a84abea12",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/1/questionRecommendations/0/locations/0",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 766,
+      "endLine": 766,
+      "actualSha256": "eecb46d1daf90b16dcd165e50cd7a4223b97592643c3c7c443f94c0a9ef64701",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/1/questionRecommendations/0/locations/1",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 779,
+      "endLine": 779,
+      "actualSha256": "53778b07e3161973d4a3c0a2c8d7abdf909c1131925bdd90077ffada7e9a2d83",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/1/questionRecommendations/1/locations/0",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 790,
+      "endLine": 790,
+      "actualSha256": "b8baa51cf0b10f4f8afe12ddfa4c88cf81567fe795e28c6a6332427fffaf1ef4",
+      "pass": true
+    },
+    {
+      "origin": "read-proof.json/contexts/1/questionRecommendations/1/locations/1",
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 805,
+      "endLine": 805,
+      "actualSha256": "2130af8b897c398e3e73e302fc46ae46e80082f57b27c1aa1e5720f21a513d2f",
+      "pass": true
+    }
+  ],
+  "referenceChecks": [
+    {
+      "origin": "audit.json/samples/0/recordReference",
+      "path": "docs/knowledge/research/knowledge-first-batch-2/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "audit.json/samples/0/comparisonReferences/0",
+      "path": "docs/knowledge/research/knowledge-first-batch-2/comparisons.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "audit.json/samples/1/recordReference",
+      "path": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "audit.json/samples/1/comparisonReferences/0",
+      "path": "docs/knowledge/research/knowledge-first-batch-4/comparisons.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "audit.json/samples/2/recordReference",
+      "path": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "audit.json/samples/2/comparisonReferences/0",
+      "path": "docs/knowledge/research/knowledge-first-batch-6/comparisons.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "audit.json/samples/3/recordReference",
+      "path": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "audit.json/samples/3/comparisonReferences/0",
+      "path": "docs/knowledge/research/knowledge-first-batch-5/comparisons.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "audit.json/samples/3/comparisonReferences/1",
+      "path": "docs/knowledge/research/knowledge-first-batch-5/comparisons.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "audit.json/samples/4/recordReference",
+      "path": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "audit.json/samples/5/recordReference",
+      "path": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "audit.json/samples/5/comparisonReferences/0",
+      "path": "docs/knowledge/research/knowledge-first-batch-6/comparisons.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "audit.json/samples/6/recordReference",
+      "path": "docs/knowledge/research/knowledge-first-batch-7/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "audit.json/samples/6/comparisonReferences/0",
+      "path": "docs/knowledge/research/knowledge-first-batch-7/comparisons.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "audit.json/proposedSupplements/0/evidence/0",
+      "path": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "audit.json/proposedSupplements/0/evidence/1",
+      "path": "docs/knowledge/research/knowledge-first-batch-6/comparisons.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "corrections.json/supplements/0/evidence/0",
+      "path": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "corrections.json/supplements/0/evidence/1",
+      "path": "docs/knowledge/research/knowledge-first-batch-6/comparisons.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "methodology.json/modernResearchNoteReferences/V",
+      "path": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "methodology.json/modernResearchNoteReferences/Ling",
+      "path": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "methodology.json/modernResearchNoteReferences/Wang",
+      "path": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "methodology.json/matrix/0/HamSo/reference",
+      "path": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "methodology.json/matrix/0/Ling/reference",
+      "path": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "methodology.json/matrix/0/Wang/reference",
+      "path": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "methodology.json/matrix/1/HamSo/reference",
+      "path": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "methodology.json/matrix/1/Ling/reference",
+      "path": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "methodology.json/matrix/1/Wang/reference",
+      "path": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "methodology.json/matrix/2/HamSo/reference",
+      "path": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "methodology.json/matrix/2/Ling/reference",
+      "path": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "methodology.json/matrix/2/Wang/reference",
+      "path": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "methodology.json/matrix/3/HamSo/reference",
+      "path": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "methodology.json/matrix/3/Ling/reference",
+      "path": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "methodology.json/matrix/3/Wang/reference",
+      "path": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "methodology.json/matrix/4/HamSo/reference",
+      "path": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "methodology.json/matrix/4/Ling/reference",
+      "path": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "methodology.json/matrix/4/Wang/reference",
+      "path": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "methodology.json/matrix/5/HamSo/reference",
+      "path": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "methodology.json/matrix/5/Ling/reference",
+      "path": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "methodology.json/matrix/5/Wang/reference",
+      "path": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "methodology.json/matrix/6/HamSo/reference",
+      "path": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "methodology.json/matrix/6/Ling/reference",
+      "path": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    },
+    {
+      "origin": "methodology.json/matrix/6/Wang/reference",
+      "path": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "filePass": true,
+      "objectPass": true
+    }
+  ],
+  "historicalChecks": [
+    {
+      "path": ".b3/autodev/progress.md",
+      "actualSha256LF": "a26dff94175c6b8d7610d0567a6d6e484f0cfb4176b010cdbaa9d5a57a21a608",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/decisions/am-loc.json",
+      "actualSha256LF": "4be5dffa6d03d9248bcfb2981dd1d50e64f5231e8e10958d6939b411fa095a4b",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/decisions/co-nguyet-dong-luong.json",
+      "actualSha256LF": "619349f0f6f4214ecb9280f577977f5ba8c9e7728713cb16a91571976c6dc02f",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/decisions/cu-hoa-kinh-duong.json",
+      "actualSha256LF": "4d6e01d9481d2cfea6b2d76e0310362456142e395f16db90d9de40a19ad692f7",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/decisions/cu-nhat-dong-cung.json",
+      "actualSha256LF": "bea6e5c2ea406a75777e0588e1993ff3eecdcfbbef443594bbc06ae355739ab2",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/decisions/hinh-tu-giap-an.json",
+      "actualSha256LF": "321e856d74ddffea2c56c881409522e3963f34a3dab08a3c0a573f16356e7f8f",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/decisions/khoa-minh-loc-am.json",
+      "actualSha256LF": "2a9726b7316390f9294bea401aaa8cc40758e13daec29c7c1bd29c5f5566018a",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/decisions/kinh-duong-nhap-mieu.json",
+      "actualSha256LF": "8e17e83f2d335351c3007c5b85ef8d29c6e7fb8c725e3adafa003709caf84a4b",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/decisions/loc-ma-giao-tri.json",
+      "actualSha256LF": "cd672ea919dac6d54578c6e33ee6dbda0673817cbaf616766676ef8230ea8f34",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/decisions/loc-phung-xung-pha.json",
+      "actualSha256LF": "2deea5a6f346c61bc8d0de5d34ae1ed89f6012ae19b8e3d88e118cf06b651d85",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/decisions/ma-lac-khong-vong.json",
+      "actualSha256LF": "82ca3ed643a5e7ae77d5a5f86393a4cc87962220a3874870cb4a2d906ee15457",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/decisions/menh-vo-chinh-dieu.json",
+      "actualSha256LF": "ce504c6636641dfe303b3469901790758576bb5176b05564ffb17251ff29c366",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/decisions/minh-chau-xuat-hai.json",
+      "actualSha256LF": "7eb49180a0d32ef42f1f43c01e2c983c90c46455c03023862bf700fe89da9526",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/decisions/nguyet-lang-thien-mon.json",
+      "actualSha256LF": "5891edde4973883b703fa2b68b581a57467e3dd616d3924e457695a8c519bfde",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/decisions/nhat-le-trung-thien.json",
+      "actualSha256LF": "4d500a9f320d9839f46f9650f9aae9476dad3921e0b36be1462909f9e38c7c7e",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/decisions/nhat-nguyet-dong-lam.json",
+      "actualSha256LF": "050487091be6e8dfd78205a243bc6f28a0d329dbac657a5dd95491332c2cdecb",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/decisions/nhat-nguyet-tinh-minh.json",
+      "actualSha256LF": "1ab77a05167dabc59553e7bcf354ac74944b3c693223ea77a80efd3dfeac84ec",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/decisions/phiem-thuy-dao-hoa.json",
+      "actualSha256LF": "b335b81b52e2b264eaf8d7d243c3dd2308a0f8d6853f4fd2ce401d46664ff6fb",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/decisions/phu-tuong-trieu-vien.json",
+      "actualSha256LF": "df5e0f49866923824cbb715295c9a274d6515622bb07569f65801a02e4c73a14",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/decisions/quan-than-khanh-hoi.json",
+      "actualSha256LF": "ad1dd7b44012b6728fcc628add52b31d701de0e97639e4226f6253eaee5ece3b",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/decisions/ta-huu-dong-cung.json",
+      "actualSha256LF": "f15168e02ad46a33280b4c3a94e3ee6c16c929dc043c7bfdf6c6043ed2dd722f",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/decisions/tham-vu-dong-hanh.json",
+      "actualSha256LF": "ca712aae6cb949a44cd2f1ce07ee777d7fafafefe7f3e359e4a8eed4a8ea02c3",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/decisions/that-sat-trieu-dau.json",
+      "actualSha256LF": "765f6cfa773da5b9d9fecb97c3fc3e4ef021009462cd944f451a38af44363993",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/decisions/tu-phu-dong-cung.json",
+      "actualSha256LF": "b5faade35b04152126a457d6c6a2c87b0eaea75a5ad905ec466e95b8f61a93e8",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/decisions/tu-phu-trieu-vien.json",
+      "actualSha256LF": "e82d904b7b4d33d3bb56cd1bde723cfe94197a79462ed306f6d294c9ee552d28",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/interpretation-claims.json",
+      "actualSha256LF": "3b3f4587a8850c44b57953a783f404663bdd429aaa5fc75e518241e614ec4b7d",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/interpretation-decisions/co-nguyet-dong-luong.json",
+      "actualSha256LF": "32c277999f7afe620f5508495df79ed31cf8a16763c07b1531594ab99619144a",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/interpretation-decisions/juan2-family-huynh-de-tu-vi.json",
+      "actualSha256LF": "1eaca4ce00456fdf0fdd9a1076718402d13804091fb9640c47f31b08ee417795",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/interpretation-decisions/juan2-family-phu-the-thien-luong.json",
+      "actualSha256LF": "94951881f7d6456fea3a288c2469c0d3bbc92311b6f59ac1059a4148a0e2912c",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/interpretation-decisions/juan2-family-phu-the-thien-tuong.json",
+      "actualSha256LF": "9e35b3eb8e8419afa1318c4274a750b6f1c311d52f92cc31cd875af8357d35ed",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/interpretation-decisions/juan2-foundational-dien-trach-thien-co.json",
+      "actualSha256LF": "b08d54e14a52d2f17682b1ca4d1303aeea2424e196a30460ad3df892c27ffd04",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/interpretation-decisions/juan2-foundational-no-boc-thien-luong.json",
+      "actualSha256LF": "925cc96225d1e696af5e86ffc2fffb9704eaf65782fe0550174ea5ad79157339",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/interpretation-decisions/juan2-foundational-thien-di-cu-mon.json",
+      "actualSha256LF": "39e78665d19b1972100f89a2fdf58d15c09adfc7f21a2057ec0e24a2473c5cde",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/interpretation-decisions/juan2-foundational-thien-di-thien-luong.json",
+      "actualSha256LF": "101a52b3a7d25c3d76a8c5797efbf520d2bb52f993a333ae079fe0df64d0020a",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/interpretation-decisions/juan2-phuc-co-cu.json",
+      "actualSha256LF": "c2258755e4caec5ecb7ebfd5d46c72c8a40aa01d6f1c0b5d3f7151570251d9f3",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/interpretation-decisions/juan2-phuc-dong-luong.json",
+      "actualSha256LF": "5c3b27092cb303cbddd0963dfb1d61ae081c3cc7c0005bf2555de86d74452d21",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/interpretation-decisions/juan2-quan-co-cu-dau.json",
+      "actualSha256LF": "b4e8014c425c0716cc6d4b20e614301c28d23d544ff1c0f4a58e548436e8a99b",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/interpretation-decisions/juan2-quan-co-cu-mao.json",
+      "actualSha256LF": "fe33bcc6d3e7544f3d3fb7e8b56bcc34aa2c25fb711f688f81b194f4320e25b2",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/interpretation-decisions/juan2-tai-tuvi-pha.json",
+      "actualSha256LF": "85fafd2b78e75dd8f2e82ca2ebdc8d9c081732749e32aefcc1368fdb071b89a1",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/interpretation-decisions/juan2-tai-tuvi.json",
+      "actualSha256LF": "f9bc08dc182d95d524af215b8630ba4a2f011ce9da774e126cb5491947edcf74",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/interpretation-decisions/menh-vo-chinh-dieu.json",
+      "actualSha256LF": "1e1774dc039cad21f34f2de28bf0fa866094f34cc8ba822ad52d2276c05b5756",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/interpretation-decisions/tu-phu-dong-cung.json",
+      "actualSha256LF": "0eb63c851dde5aae142a521d477c5f519500f5e7cd0206db5a49857c63fd1c62",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/pilotClaims.json",
+      "actualSha256LF": "a5d24345c851d404f932c25fa7e8fa7f7bfa840b8b53da3a443e9bf82395c95a",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-1/ACQUISITION.md",
+      "actualSha256LF": "e2f834cf97a40abd299bba43dd90bf1157dd591ee510085ebd1f2c2aca69291f",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-1/DOSSIER.md",
+      "actualSha256LF": "48f37773c7f6c45f9086bd81f4fc8c2a7335178e12b0f025e48cfe770d050d5c",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-1/PALACE_GAPS.md",
+      "actualSha256LF": "a874b1760a612f72281f993324c1f5ad7705314268612e16ba34f4bf1eecd2ed",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-1/README.md",
+      "actualSha256LF": "36408e611fb358ac0814310cc39b53a892b13beb019c5afc83b69afde91571ab",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-1/evidence.json",
+      "actualSha256LF": "e69ebd6111e9ab10266ee2351871ca1714fd8df7de40100c9661c1af801ffb56",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-1/inventory.json",
+      "actualSha256LF": "4cef38d91238d980415b7e4b75ee5d9180a9a9238120716e0ad82f7d7e88f900",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-1/validate.mjs",
+      "actualSha256LF": "e21e5e5bc81cc8e54a11d10796638653f979ac600a00df6450155fd797fdfa55",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-2/DOSSIER.md",
+      "actualSha256LF": "b12b46f9779ded25c64fc48c8f834bf0ddc83eb7af6cdd5ec139ca50cbfb24de",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-2/README.md",
+      "actualSha256LF": "352a38c10187622672fa43c8b0e39821cb93dbeb631ff6870a3aaa4ff1be2c00",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-2/build-index.mjs",
+      "actualSha256LF": "471eddb837b79f5fad2680a3a20475f7411d0af7952e95c5bf0f619336732539",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-2/comparisons.json",
+      "actualSha256LF": "b4059ae79134a37985c00b8859bcc75b8af52c12fcffe9810b99538b9f5c877b",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-2/evidence.json",
+      "actualSha256LF": "3abf3445096720de8c579c996aea09b5b72ded31c2c718c9069eeceed80b8296",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-2/knowledge-records.json",
+      "actualSha256LF": "7b276fb7065263ad2894e67a96857de1fb7057fbc2a378c731794c7af0cf3125",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-2/major-star-palace-index.json",
+      "actualSha256LF": "c8ed6c450aa6a4e2d69fe60f218271a9b92556c335b524f4b41fae5eae7a5448",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-2/validate.mjs",
+      "actualSha256LF": "77325892b897b249ed07882042a62a7e4d58e251d8712ce23b7c2855024a08fd",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-3/DOSSIER.md",
+      "actualSha256LF": "c6023029516b1a444d09e2626d567a8924266e43493ef2235fa2518145e548bb",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-3/README.md",
+      "actualSha256LF": "873b57e6e9272bb236c6da4392747c237ae48db7ca53a8ad3d8ab252bfbaa1fa",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-3/comparisons.json",
+      "actualSha256LF": "7e91eb0f5a2149fb918710f562867d4b4edea167269063c15ed53178c0ba4505",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-3/evidence.json",
+      "actualSha256LF": "f865742d938ef51c88e5fa444a5664ac93441da693eccf80d94b63a277962189",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-3/knowledge-records.json",
+      "actualSha256LF": "7c719e7c86f4f67983367be52853a73a3f5c2baa3fab758898ba2bc8ee0f7575",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-3/refresh-index.mjs",
+      "actualSha256LF": "96dc114b7878451760e9eb0d6c8f3a53b690144addbdd4cdfa04b12f7ab3bdd5",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-3/validate.mjs",
+      "actualSha256LF": "e34f22d8dbaad776bdc0fda190782f60610cf65a949ab496e4227d153027f340",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-4/DOSSIER.md",
+      "actualSha256LF": "90e8198a6c4cf466fa7f99bec64f83671371059dcb0fc739e99a4e9f099a22e9",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-4/README.md",
+      "actualSha256LF": "cc151ceda7bede1f2271b7c888c4c5629c8f37cba9cea2152c0bee3c56c7ba40",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-4/comparisons.json",
+      "actualSha256LF": "24ab2b0cca2a6c28024fcdb95abb401e4ee9df94f2309097b2d6f945b3311d35",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-4/dispositions.json",
+      "actualSha256LF": "abcab057c7d4620c03c29314c9b315513ac1c58983fefe61afd04675058d917e",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-4/evidence.json",
+      "actualSha256LF": "584cbdb31bb179535a161b66f2558b4fca230b814bc1101fcb56ae694744c591",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+      "actualSha256LF": "b34e6f79586c2beb703743dbe5b2ba05a8bcb8142119ac0bf4580949191e4446",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-4/validate.mjs",
+      "actualSha256LF": "a0741183c642f09541b7e0d29ba56d828cf9a55f73ad2983d6a46e6330269cf3",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/sources.json",
+      "actualSha256LF": "15749672a8a7781db4ae6c8ccbdf06f58fe0b78f268e71f5eaa396c62b503671",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/planning/AUTODEV_MASTER_PLAN_V2.md",
+      "actualSha256LF": "3164999f6872a895b91b0f991c7e84f9674229f423f2498e59118988a7cb0395",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-5/DOSSIER.md",
+      "actualSha256LF": "cb4ddf43f5c9f0e8b09c56f680b48e197cdd47a65fa19fb9486251c98d945e49",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-5/README.md",
+      "actualSha256LF": "f760e4db9f9d44b2b70763895c4af9b79200296bc95daa5c9e76481663eabd67",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-5/comparisons.json",
+      "actualSha256LF": "2c7e60c2984ff0cadaccc8fdd8b299562313b7e055ff7684cf4f3bf720b015a2",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-5/dispositions.json",
+      "actualSha256LF": "67638b8fb81ec3053eec3a708bc2e6550607e3e87b6781fd632dcd6dec8763ae",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-5/evidence.json",
+      "actualSha256LF": "e311d30ea8746721766fc1734c34482d9dcd4867996abc777dc16551fbb4944c",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+      "actualSha256LF": "dce09d726ef1944a06f5032c958aac4bfa9f4744ba9adc836ff7ab853feac13d",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-5/refresh-index.mjs",
+      "actualSha256LF": "91a3a5ff627fb5dfa05699766684ab78b259100c98e0c15c6ccb535059d5a8bd",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-5/validate.mjs",
+      "actualSha256LF": "e799ea5801d8293881a0cb36cf311344cdf01164ee28c16c6e257390775cacb7",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-5/validate.test.mjs",
+      "actualSha256LF": "89e896ab6582e1c0a4ef88769a72ff49eb57548323d0977892c5c58cfa012c0c",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-6/scan-collation.json",
+      "actualSha256LF": "48bf103b460dcf3ff31bc29c12a5d22129ee150b53cd039211c72398e2d1f5cb",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-6/refresh-index.mjs",
+      "actualSha256LF": "ffad97abea59b7676f30b22d1e6c6c197f079319f9f5d1872b2792c2eda4a55a",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-6/validate.test.mjs",
+      "actualSha256LF": "2f53a6e9d882693cc30c5e0f396ff10e68a8d7f7942502bcd3767679c8062681",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-6/evidence.json",
+      "actualSha256LF": "21cd78af380273da526bf6096ed62be07daf1f620bca1a7512930e4b4d2bdccd",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "actualSha256LF": "5f305f9d53e18d7ce384ad68dfeb816e71401cf6421e715f8d6023461dd53a45",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-6/dispositions.json",
+      "actualSha256LF": "7e7ff94645d50f437e0e1b8997457dd017c03b0b9347321323e7089549b150a9",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-6/README.md",
+      "actualSha256LF": "e76cac0bdf8bbc5f4d7ce7246e8f46067821b8093434a16808b3e8df209492df",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-6/DOSSIER.md",
+      "actualSha256LF": "b61e6ce98b7bf01c498ad09868e976a409ba0869e68e716952ed6a6f12245f73",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-6/validate.mjs",
+      "actualSha256LF": "d9c5e9030497fe2edebdd68f4c9e2a523ff15e61e3f9a8c676ded3d9eb5b2bbf",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-6/comparisons.json",
+      "actualSha256LF": "6e1e3b4167b0cdb90d3364370adec95f8e63a95b4e0c7d6d916085c32e997539",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-7/DOSSIER.md",
+      "actualSha256LF": "b90bb88c252e72ccb40f75ef833b26e144cf1a6077fb12b6dca2b49d721da792",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-7/EXECUTION_PLAN.md",
+      "actualSha256LF": "e3a965f179876b5ea8f4fd87a0533e0e37cf889d8199968d5368596230ce1a5a",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-7/HANDOFF_BATCH_8.md",
+      "actualSha256LF": "f866945b4deee895ddea1d47579eaafe60d56e7a41835d71212ea85b95546c65",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-7/README.md",
+      "actualSha256LF": "10ecffe4bd4abbe7451c190d267a6a6ed928c6eb32c0e9e772a831dee3fc3f1a",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-7/assistant-configuration.json",
+      "actualSha256LF": "47abaa6a46a7ae69096f9ff604ab5381a0b867c0cd2a3c5106b1e4f136a54aac",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-7/comparisons.json",
+      "actualSha256LF": "9d0694d4a7a67247b3d18889ba26d5d9cff3bfa9378789dc7e7c59aeb62c309a",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-7/corrections.json",
+      "actualSha256LF": "e0dfe985550fb501f4cc3a8cd7a4c8feff302fc9728fa94c8289ed42025683f4",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-7/dispositions.json",
+      "actualSha256LF": "37d6c4eaa2d986f7b40c6387ef0a739e59d205308d0fb307da2fd972988c739b",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-7/evidence.json",
+      "actualSha256LF": "8635531f93f7b4062280e8e598da55f4ac40766bfe0f5ca3192c5be4b2eab527",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-7/independent-proof.json",
+      "actualSha256LF": "66b8eb0d22a97cae9fe80348cdc810e59eced0733c68ff507f6ed8c3bbd32cb1",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-7/independent-review.md",
+      "actualSha256LF": "0dc59af4f65e1a01f463fe208201924ea6f4017f13965582c0cd25169a22bf3c",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-7/index-snapshot.json",
+      "actualSha256LF": "6bb0db728b7aa05b662b6790c20f1a23f0e580f71bd413a3faab56ad619a6162",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-7/knowledge-records.json",
+      "actualSha256LF": "1cc8895fcbf96644710797c6a5977b352d23a509caa9dbca1a319805ebbf344d",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-7/refresh-index.mjs",
+      "actualSha256LF": "2ac27f05a94f29c8747f6abc3b3131b961e0a24e0f0818f3d012c59a7a82ffe0",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-7/source-observations.json",
+      "actualSha256LF": "0c1020495cf4ba0194d7ba64f8c142102a9cf4da30147ee8c00801e344f89c9f",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-7/validate.mjs",
+      "actualSha256LF": "ce820f5712db4919646688003f781a5ad1a84b451a5e6a93259cb30e18ffe14d",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-7/validate.test.mjs",
+      "actualSha256LF": "89cac96dd4dbc7376e06cba916fb6b2b362192b4d813fb6bb8985c22b0742f8f",
+      "matchesManifest": true,
+      "matchesCheckpoint": true
+    }
+  ],
+  "failures": [],
+  "batch7FileCount": 17,
+  "priorDispositionFieldChecks": [
+    {
+      "id": "B4D01",
+      "oldFieldCount": 12,
+      "changedFields": []
+    },
+    {
+      "id": "B4D02",
+      "oldFieldCount": 12,
+      "changedFields": []
+    },
+    {
+      "id": "B4D03",
+      "oldFieldCount": 12,
+      "changedFields": []
+    },
+    {
+      "id": "B4D04",
+      "oldFieldCount": 12,
+      "changedFields": []
+    },
+    {
+      "id": "B4D05",
+      "oldFieldCount": 12,
+      "changedFields": []
+    },
+    {
+      "id": "B4D06",
+      "oldFieldCount": 12,
+      "changedFields": []
+    },
+    {
+      "id": "B4D07",
+      "oldFieldCount": 12,
+      "changedFields": []
+    },
+    {
+      "id": "B4D08",
+      "oldFieldCount": 12,
+      "changedFields": []
+    },
+    {
+      "id": "B4D09",
+      "oldFieldCount": 12,
+      "changedFields": []
+    },
+    {
+      "id": "B4D10",
+      "oldFieldCount": 12,
+      "changedFields": []
+    },
+    {
+      "id": "B5D11",
+      "oldFieldCount": 10,
+      "changedFields": []
+    },
+    {
+      "id": "B5D12",
+      "oldFieldCount": 10,
+      "changedFields": []
+    },
+    {
+      "id": "B5D13",
+      "oldFieldCount": 10,
+      "changedFields": []
+    },
+    {
+      "id": "B5D14",
+      "oldFieldCount": 10,
+      "changedFields": []
+    }
+  ],
+  "dispositionCounts": {
+    "prior": 14,
+    "current": 17,
+    "open": 17,
+    "resolved": 0
+  },
+  "recomputedCounts": {
+    "records": 64,
+    "starPalaceRecords": 58,
+    "nonCellRecords": 6,
+    "contextualCells": 47,
+    "locatorOnlyCells": 121,
+    "authoredComparedCellsIncludingDisputed": 41,
+    "conflictingCells": 7
+  },
+  "methodEvidenceLevels": [
+    {
+      "topic": "brightness",
+      "Quanshu": "FRESH_RETAINED_PRIMARY_READING",
+      "HamSo": "SECONDARY_RESEARCH_NOTES",
+      "Ling": "SECONDARY_RESEARCH_NOTES",
+      "Wang": "SECONDARY_RESEARCH_NOTES_PROVISIONAL_ATTRIBUTION"
+    },
+    {
+      "topic": "same_palace_vs_hui_zhao",
+      "Quanshu": "FRESH_RETAINED_PRIMARY_READING",
+      "HamSo": "SECONDARY_RESEARCH_NOTES",
+      "Ling": "SECONDARY_RESEARCH_NOTES",
+      "Wang": "SECONDARY_RESEARCH_NOTES_PROVISIONAL_ATTRIBUTION"
+    },
+    {
+      "topic": "support_and_adverse",
+      "Quanshu": "FRESH_RETAINED_PRIMARY_READING",
+      "HamSo": "SECONDARY_RESEARCH_NOTES",
+      "Ling": "SECONDARY_RESEARCH_NOTES",
+      "Wang": "SECONDARY_RESEARCH_NOTES_PROVISIONAL_ATTRIBUTION"
+    },
+    {
+      "topic": "qualifiers_and_overrides",
+      "Quanshu": "FRESH_RETAINED_PRIMARY_READING",
+      "HamSo": "SECONDARY_RESEARCH_NOTES",
+      "Ling": "SECONDARY_RESEARCH_NOTES",
+      "Wang": "SECONDARY_RESEARCH_NOTES_PROVISIONAL_ATTRIBUTION"
+    },
+    {
+      "topic": "formation_and_breaking",
+      "Quanshu": "FRESH_RETAINED_PRIMARY_READING",
+      "HamSo": "SECONDARY_RESEARCH_NOTES",
+      "Ling": "SECONDARY_RESEARCH_NOTES",
+      "Wang": "SECONDARY_RESEARCH_NOTES_PROVISIONAL_ATTRIBUTION"
+    },
+    {
+      "topic": "contradiction_handling",
+      "Quanshu": "FRESH_RETAINED_PRIMARY_READING",
+      "HamSo": "SECONDARY_RESEARCH_NOTES",
+      "Ling": "SECONDARY_RESEARCH_NOTES",
+      "Wang": "SECONDARY_RESEARCH_NOTES_PROVISIONAL_ATTRIBUTION"
+    },
+    {
+      "topic": "source_specific_order",
+      "Quanshu": "FRESH_RETAINED_PRIMARY_READING",
+      "HamSo": "SECONDARY_RESEARCH_NOTES",
+      "Ling": "SECONDARY_RESEARCH_NOTES",
+      "Wang": "SECONDARY_RESEARCH_NOTES_PROVISIONAL_ATTRIBUTION"
+    }
+  ],
+  "validationCommands": [
+    {
+      "command": "node docs/knowledge/research/knowledge-first-batch-7/validate.mjs",
+      "exitCode": 0,
+      "stdout": "{\"batchNumber\":7,\"records\":3,\"newCells\":2,\"authoredComparisons\":0,\"metrics\":{\"indexedCells\":168,\"persistedRecords\":60,\"starPalaceRecords\":54,\"nonCellRecords\":6,\"contextualCells\":43,\"locatedOnlyCells\":125,\"comparedCellsIncludingDisputed\":41,\"cellsWithConflictingResearchStatus\":7,\"cellsWithContradictionFlags\":12,\"palacesWithContextualRecords\":12,\"newBatch3Records\":14,\"newBatch3Cells\":11,\"newBatch4Records\":14,\"newBatch4Cells\":11,\"newBatch5Records\":11,\"newBatch5Cells\":7,\"newBatch6Records\":9,\"newBatch6Cells\":3,\"newBatch7Records\":3,\"newBatch7Cells\":2}}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node docs/knowledge/research/knowledge-first-batch-8/validate.mjs",
+      "exitCode": 0,
+      "stdout": "{\"batchNumber\":8,\"records\":4,\"newCells\":4,\"authoredComparisons\":0,\"metrics\":{\"indexedCells\":168,\"persistedRecords\":64,\"starPalaceRecords\":58,\"nonCellRecords\":6,\"contextualCells\":47,\"locatedOnlyCells\":121,\"comparedCellsIncludingDisputed\":41,\"cellsWithConflictingResearchStatus\":7,\"cellsWithContradictionFlags\":15,\"palacesWithContextualRecords\":12,\"newBatch3Records\":14,\"newBatch3Cells\":11,\"newBatch4Records\":14,\"newBatch4Cells\":11,\"newBatch5Records\":11,\"newBatch5Cells\":7,\"newBatch6Records\":9,\"newBatch6Cells\":3,\"newBatch7Records\":3,\"newBatch7Cells\":2,\"newBatch8Records\":4,\"newBatch8Cells\":4},\"openDispositions\":17,\"resolvedWithEvidence\":0}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node --test docs/knowledge/research/knowledge-first-batch-7/validate.test.mjs docs/knowledge/research/knowledge-first-batch-8/validate.test.mjs",
+      "exitCode": 0,
+      "stdout": "✔ unperformed research remains context-mapped with all approval gates closed (2.024128ms)\n✔ dependent collation and no comparison cannot promote authored COMPARED (0.219477ms)\n✔ comparison kinds, author identity and same-family independence are checked (0.46241ms)\n✔ within-source context comparison remains distinct from authored comparison (0.179958ms)\n✔ duplicate identities, stale comparison state and broken links fail (0.206699ms)\n✔ historical disposition status, basis and P1 fields cannot be overwritten (1.522541ms)\n✔ retained primary span cannot be modified or silently moved (4.026385ms)\n✔ new source-scoped unresolved questions may be added without rewriting history (1.771512ms)\n✔ index reuse counts genuine additions once and is immutable across next batch (0.66405ms)\n✔ unperformed research remains context-mapped with all approval gates closed (1.400789ms)\n✔ dependent collation and no comparison cannot promote authored COMPARED (0.235351ms)\n✔ comparison kinds, author identity and same-family independence are checked (0.392645ms)\n✔ within-source context comparison remains distinct from authored comparison (0.151055ms)\n✔ duplicate identities, stale comparison state and broken links fail (0.200179ms)\n✔ historical disposition status, basis and P1 fields cannot be overwritten (1.424926ms)\n✔ retained primary span cannot be modified or silently moved (3.987948ms)\n✔ new source-scoped unresolved questions may be added without rewriting history (1.537924ms)\n✔ index reuse counts genuine additions once and is immutable across next batch (0.68423ms)\n✔ Batch8 must protect every independently committed Batch7 artifact (15.026752ms)\nℹ tests 19\nℹ suites 0\nℹ pass 19\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 66.234387\n",
+      "stderr": ""
+    }
+  ],
+  "result": "NO_BLOCKING_FINDINGS",
+  "manualContentReview": {
+    "fullRetainedQ2Sections": [
+      [
+        553,
+        575
+      ],
+      [
+        712,
+        736
+      ],
+      [
+        765,
+        788
+      ],
+      [
+        789,
+        816
+      ]
+    ],
+    "Q3Method": [
+      48,
+      99
+    ],
+    "additionalAuditQ2": [
+      [
+        146,
+        162
+      ],
+      [
+        600,
+        632
+      ],
+      [
+        633,
+        662
+      ],
+      [
+        663,
+        686
+      ]
+    ],
+    "recordIds": [
+      "KRB8-HD-ZIWEI",
+      "KRB8-NB-LUONG",
+      "KRB8-DT-ZIWEI",
+      "KRB8-PD-ZIWEI"
+    ],
+    "findings": "No blocking findings; nuanced cohost, qualifier, timing, adverse roster and missing-entry scope retained; modern notes explicitly secondary; schoolScope clarification precise and additive",
+    "limits": [
+      "No original modern source reinspection",
+      "No source/edition authentication",
+      "No expert approval",
+      "No runtime or release authorization"
+    ],
+    "report": "/tmp/batch8-independent-review.md"
+  }
+}

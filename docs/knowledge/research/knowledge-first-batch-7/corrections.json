@@ -1,0 +1,38 @@
+{
+  "corrections": [
+    {
+      "correctionId": "KRB7-HANDOFF-CELL-IDENTITIES",
+      "kind": "traceable_navigation_correction_not_source_text_emendation",
+      "corrects": "docs/knowledge/research/knowledge-first-batch-6/README.md#batch-7",
+      "priorEvidenceUnchanged": true,
+      "countUnchanged": 6,
+      "alreadyCovered": [
+        {
+          "cell": "tat_ach:tu_vi",
+          "recordId": "KRB2-TA-ZIWEI"
+        },
+        {
+          "cell": "tai_bach:thien_luong",
+          "recordId": "KRB4-TB-LUONG"
+        }
+      ],
+      "omittedActualGaps": [
+        "huynh_de:tu_vi",
+        "no_boc:thien_luong"
+      ],
+      "method": "Recount subjects from all57committed records, not record-ID abbreviations or prose handoff",
+      "effect": "Avoid duplicates; no claim text, source status, historical file or runtime edit"
+    }
+  ],
+  "draftQualityFindings": [
+    {
+      "findingId": "B7Q-WANGZHU",
+      "status": "corrected_before_checkpoint_not_a_resolved_research_disposition",
+      "draftIssue": "Initial Vi/Nô draft treated 旺 in 旺主生財 as a mandatory brightness operand",
+      "evidence": "Actual retainedQ713 compared with717 旺相 and720/724 旺主; lexical syntax is not authenticated",
+      "correction": "Keep exact phrase and explicit uncertainty; do not introduce a miếu/vượng requirement or universal brightness table",
+      "historicalRecordsChanged": false,
+      "newSourceApproval": false
+    }
+  ]
+}

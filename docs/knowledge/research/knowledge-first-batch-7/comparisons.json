@@ -1,0 +1,66 @@
+{
+  "batchId": "KR-B7-20261017",
+  "meaning": "Within-source reciprocal analysis only; zero authored comparisons, no research-status promotion",
+  "comparisons": [
+    {
+      "comparisonId": "B7C01",
+      "recordIds": [
+        "KRB7-NB-ZIWEI"
+      ],
+      "sourceReference": {
+        "sourceId": "ziwei-quanshu-iztro-transcription",
+        "editionId": "iztro-juan2-2f00e2ab0c80",
+        "author": null,
+        "authorAttribution": "Traditional attribution; retained transcription, not authenticated original edition",
+        "work": "紫微斗數全書 — retained iztro transcription",
+        "section": "奴仆宮 / 紫微 — complete reciprocal context",
+        "page": null,
+        "language": "zh-Hant",
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 712,
+          "endLine": 736,
+          "sha256": "efe76b53589501d504df967b87a6ba97cc845756e62ded80f41a10ee80993647",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "originalQuotation": null
+      },
+      "family": "quanshu-transmission",
+      "kind": "within_source_context_comparison",
+      "independence": "Not independent: entries in the same retained Juan2 witness only; no authored COMPARED status or source approval",
+      "rights": "Existing retained source locators/hashes and original analysis only; no new text or article retained",
+      "observationVi": "Trong cùng witness:713 nêu Phá đồng trước khó sau có và Tướng đồng đắc lực;726 nêu Vi đồng đắc lực và723 nêu Vi đồng nhiều người hầu. Các câu khác độ nhấn và điều kiện, không chứng minh một precedence chung.719 vẫn là天家; không đổi sang cách đọc scan của batch trước. Không có nguồn tác giả độc lập mới. Đọc lại713–724: 旺主 còn gặp trong entry Âm720 và Lương724, trong khi Đồng717 ghi 旺相. Đây chỉ là ngữ cảnh để giữ mở nghĩa “giúp chủ thịnh” của 旺主生財, không xác nhận độ sáng hoặc công thức; chưa có chú giải độc lập.",
+      "status": "CONTEXT_MAPPED_ONLY"
+    },
+    {
+      "comparisonId": "B7C02",
+      "recordIds": [
+        "KRB7-HD-LUONG"
+      ],
+      "sourceReference": {
+        "sourceId": "ziwei-quanshu-iztro-transcription",
+        "editionId": "iztro-juan2-2f00e2ab0c80",
+        "author": null,
+        "authorAttribution": "Traditional attribution; retained transcription, not authenticated original edition",
+        "work": "紫微斗數全書 — retained iztro transcription",
+        "section": "兄弟宮 / 天梁 — complete reciprocal context",
+        "page": null,
+        "language": "zh-Hant",
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 553,
+          "endLine": 575,
+          "sha256": "347e031b5cdac4ae4ce8d733f343eeee7fdf2a48c592ae3ba66263644d598f1d",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "originalQuotation": null
+      },
+      "family": "quanshu-transmission",
+      "kind": "within_source_context_comparison",
+      "independence": "Not independent: entries in the same retained Juan2 witness only; no authored COMPARED status or source approval",
+      "rights": "Existing retained source locators/hashes and original analysis only; no new text or article retained",
+      "observationVi": "Trong cùng witness:565 Đồng–Lương ghi ba,558 ghi hai–ba; đây là khác độ đặc hiệu chứ không tất yếu mâu thuẫn.565 Cơ–Lương ghi hai và555 cũng hai, nhưng cùng truyền bản không là corroboration độc lập. Nhánh khác bào/bất hòa cùng entry không bị câu miếu/vượng hòa thuận triệt tiêu.",
+      "status": "CONTEXT_MAPPED_ONLY"
+    }
+  ]
+}
