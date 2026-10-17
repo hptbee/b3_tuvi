@@ -1,0 +1,202 @@
+{
+  "batchId": "KR-B3-20261017",
+  "observedAt": "2026-10-17",
+  "baseCommit": "af410ab841bfcae8672be0c952842e4fb461b3e6",
+  "mode": "research_only_no_autodev_or_review_loop",
+  "primary": {
+    "sourceId": "ziwei-quanshu-iztro-transcription",
+    "editionId": "iztro-juan2-2f00e2ab0c80",
+    "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+    "sha256": "b824c61e1bdec55ecdc7123ff1e79bce9648f07d67d054c43a59ce731572d4a7",
+    "originalPrintAuthenticated": false
+  },
+  "methodWitness": {
+    "sourceId": "ziwei-quanshu-tradition",
+    "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+    "sha256": "bc1a8d8f3d124c06c3845b6a687149bd9900f06b97d86db202b6016dfeffe35b",
+    "span": {
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 48,
+      "endLine": 66,
+      "sha256": "523b5fab97f6e7303aa8d539cad986617c6b37120e8e1b9c05c5eebd97f4ee33",
+      "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+    },
+    "family": "same_quanshu_transmission"
+  },
+  "readScope": {
+    "natal": "Opening classification/element context61–104, full Tử Vi126–145 and Thiên Phủ236–252 blocks; other natal-star passages only as reciprocal context, not full natal chapter research; full Thiên Lương331–347 block also read, including internal申brightness discrepancy",
+    "fullPalaceSectionsRead": [
+      {
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 553,
+        "endLine": 575,
+        "sha256": "347e031b5cdac4ae4ce8d733f343eeee7fdf2a48c592ae3ba66263644d598f1d",
+        "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+      },
+      {
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 576,
+        "endLine": 599,
+        "sha256": "5a30d0702bae7452547d2f7f965ad9e8dc3b84b3a8b07753b9172563c7691a74",
+        "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+      },
+      {
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 633,
+        "endLine": 662,
+        "sha256": "18e05f3a45cf27553642da48035fa263e267e90d49c9a1211df734a6dc54ee13",
+        "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+      },
+      {
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 687,
+        "endLine": 711,
+        "sha256": "13c11e31194596e1f7c20d8a5ab975cd566d90c6b5d681cf097053c9033f9591",
+        "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+      },
+      {
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 712,
+        "endLine": 736,
+        "sha256": "efe76b53589501d504df967b87a6ba97cc845756e62ded80f41a10ee80993647",
+        "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+      },
+      {
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 737,
+        "endLine": 764,
+        "sha256": "e036adb619841d719ea2aff35cb75880ae8b050e4aae7702924382383c0e9743",
+        "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+      },
+      {
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 765,
+        "endLine": 788,
+        "sha256": "66c1a214119aab5b0228ef7cf74fe15f99fa7b01fd5ff0b8704de22aaf6dac83",
+        "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+      },
+      {
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 789,
+        "endLine": 816,
+        "sha256": "1ad123491278d5fcc8c568956085100468f59e45bc57035339586d3387bc5757",
+        "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+      }
+    ],
+    "scopeNote": "No separate common preamble before first star in these sections; retain full relevant section and broader Juan3 method, not the earlier Phụ/Tử/Tật preambles"
+  },
+  "lingDirectAccess": {
+    "provisionalWitnessId": "ling-donglai-minglixue-tianliang-154",
+    "author": "令东来",
+    "title": "紫微斗数命理学：天梁星",
+    "url": "https://www.xuanmen.com.cn/archives/154.html",
+    "accessedAt": "2026-10-17",
+    "webReaderResult": "403; bare-host retry inaccessible",
+    "directHttpResult": 200,
+    "decodedHtmlCharacters": 56500,
+    "decodedHtmlUtf8Sha256": "b2e63fd96062f374f1d716e8a478c56a2f205e63523aafefae6eb9df3cc5e90e",
+    "hashScope": "Observed decoded HTML encoded UTF8, not a retained/replayable artifact; dynamic page bytes may change",
+    "readScope": "Author credit and opening; entire relevant 官禄/疾厄 paragraphs and surrounding concluding sections; not the print book; explicit Đồng–Lương 寅申 and male 日照雷门 day/night paragraphs read",
+    "authorClaim": "Page explicitly labels extract of 紫微斗数命理学 and credits 令东来; print edition/year not authenticated",
+    "rights": "Page requests author attribution for repost; no scope assumed for book/dataset redistribution. No HTML/article/book copy retained; original analysis/locators only",
+    "sourceFamily": "ling-donglai-authored-commentary; quoted Quanshu/陸斌兆 passages remain dependent",
+    "schoolId": null
+  },
+  "textualLayerObservation": {
+    "location": {
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 84,
+      "endLine": 85,
+      "sha256": "b9578619d80bd81a7b1fb5b7f7e319dbba43d1de395bbb458546c53689ce3a97",
+      "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+    },
+    "rawHtmlRef": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/raw-juan2.html",
+    "observedMarkup": "div.tip.custom-block with custom-block-title 提示; preceding/following lists in blockquote",
+    "meaning": "Retain layer uncertainty; do not attribute the roster tip to an authenticated original author"
+  },
+  "accessAndRejectedComparisons": [
+    {
+      "url": "https://www.digital.archives.go.jp/das/meta/F1000000000000101426",
+      "result": "Single reader attempt did not provide usable scan; earlier Batch2 recorded403. No new scan read or original collation; no further scan retries this batch."
+    },
+    {
+      "url": "https://vr-d.com/pdf-file/紫微斗数/紫微斗數講義3_星曜性質(下)-王亭之.pdf",
+      "result": "Reader retrieval inaccessible; no PDF pages inspected or downloaded, no inferred textbook support."
+    },
+    {
+      "sourceId": "nguyen-phat-loc-ham-so",
+      "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+      "section": "THÁI ÂM / 9 / b) Ở BÀO",
+      "readerLines": [
+        1552,
+        1553
+      ],
+      "result": "Giáp Thai topic is not Âm thủ Huynh; excluded as support for the new exact case."
+    },
+    {
+      "sourceId": "nguyen-phat-loc-ham-so",
+      "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+      "section": "THIÊN PHỦ / 6",
+      "readerLines": [
+        2783,
+        2809
+      ],
+      "result": "No Nô-specific subsection in this inspected selected chapter; generic Phủ text not substituted for exact Phủ/Nô comparison."
+    }
+  ],
+  "dispositions": [
+    {
+      "topic": "Nhật–Lương / Phụ Mẫu",
+      "status": "unresolved",
+      "refs": [
+        "KRB2-PM-LUONG",
+        "KRB2-PM-DUONG"
+      ],
+      "reason": "New commentary cannot supply missing original reciprocal qualifiers; no authenticated scan."
+    },
+    {
+      "topic": "Tử–Tham / Phụ Mẫu",
+      "status": "unresolved",
+      "refs": [
+        "KRB2-PM-ZIWEI"
+      ],
+      "reason": "No new edition-specific passage settles favorable-vô-sát versus adverse scope; no forced reconciliation."
+    },
+    {
+      "topic": "Thiên Lương / Tật Ách",
+      "status": "independent_authored_web_comparison_added_not_classical_gap_resolved",
+      "refs": [
+        "KRB2-TA-LUONG",
+        "KRB3-TA-LUONG-LDL"
+      ]
+    },
+    {
+      "topic": "Thiên Phủ / Tật Ách",
+      "status": "exact_vietnamese_palace_comparator_added_with_print_limits",
+      "refs": [
+        "KRB2-TA-PHU",
+        "KRB3-TA-PHU-V"
+      ]
+    },
+    {
+      "topic": "Thiên Lương/Mệnh internal brightness",
+      "status": "new_unresolved_text_variant",
+      "refs": [
+        "KRB3-M-LUONG"
+      ],
+      "reason": "Retained prose/position line338 says申陷, verse341 lists申入廟; new authored explanation matches one branch but does not authenticate a correction."
+    }
+  ],
+  "approval": {
+    "sourceReviewExecuted": false,
+    "runtimeApprovalRequested": false,
+    "publicReleasePermission": "unchanged_closed"
+  },
+  "retention": "Existing source files referenced, not modified. No source PDF, article body, corpus or dataset imported.",
+  "historicalSnapshots": {
+    "docs/knowledge/research/knowledge-first-batch-2/knowledge-records.json": "7b276fb7065263ad2894e67a96857de1fb7057fbc2a378c731794c7af0cf3125",
+    "docs/knowledge/research/knowledge-first-batch-2/major-star-palace-index.json": "c8ed6c450aa6a4e2d69fe60f218271a9b92556c335b524f4b41fae5eae7a5448",
+    "docs/knowledge/research/knowledge-first-batch-2/DOSSIER.md": "b12b46f9779ded25c64fc48c8f834bf0ddc83eb7af6cdd5ec139ca50cbfb24de"
+  },
+  "historicalSnapshotHashMethod": "UTF8 content with CRLF normalized to LF; no other normalization"
+}
