@@ -1,0 +1,478 @@
+[
+  {
+    "model": "gpt-6.1-sol",
+    "available": true,
+    "independent": true,
+    "otherReviewerVerdictsRead": false,
+    "requestedModel": "gpt-6.1-sol",
+    "agentId": "/root/family_source_a_retry",
+    "hostBuildId": null,
+    "modelIdentityBasis": "Actual delegated task assignment identifies gpt-6.1-sol; host build ID is not exposed. No inference from a prior review document.",
+    "reviewRef": "docs/knowledge/research/juan2-palace/foundational-family-packet/review-a.json",
+    "sourceId": "ziwei-quanshu-iztro-transcription",
+    "sourceProfile": "quanshu-iztro-2f00e2ab",
+    "claimId": "interp-quanshu-huynh-de-tu-vi-host",
+    "target": "huynh_de",
+    "editionId": "iztro-juan2-2f00e2ab0c80",
+    "schoolId": "vn-tam-hop-default",
+    "locator": "juan2/兄弟宮/紫微",
+    "quotationPolicy": "source-sentence-v2",
+    "sourceDigest": "fe1d0cd0683232fa5ab9bf3cfd9e81608314f94f9195e673bce0622ee8183e5a",
+    "contextDigest": "942fc38de490d0204a85ed272da3f982db415162f69da9ae74623930ecfe2c97",
+    "conditionTreeDigest": "47de012421ba8b852ebd5c8ac4864f7e00b047320cb5ee601ea0cf24b3f95bc2",
+    "wordingDigest": "13f6fd1a623b3e5b2d1b74517941a8a15a6f7710b2b1dea6f765f6bfa8f877b8",
+    "fixturesDigest": "123570975dbd59cbafc983309d0d1697f13c6599223dcd5b5079cfacbd98edbd",
+    "quotation": "紫微有倚靠年長之兄，天府同三人，天相同三四人，破軍同亦有三人，或各胞生，加羊陀火鈴空劫克害有則欠和。",
+    "conditions": [
+      "palace_huynh_de",
+      "tu_vi_in_host",
+      "direct_host_only"
+    ],
+    "conditionIds": [
+      "palace_huynh_de",
+      "tu_vi_in_host",
+      "direct_host_only"
+    ],
+    "exceptions": [],
+    "conditionTree": {
+      "op": "star_present",
+      "target": "huynh_de",
+      "star": "Tử Vi"
+    },
+    "limitations": [
+      "literal_source_opening_annotation_only",
+      "direct_host_only",
+      "presence_does_not_mean_standalone",
+      "cohost_branches_preserved_not_evaluated",
+      "adverse_branches_preserved_not_evaluated",
+      "not_an_integrated_palace_judgment",
+      "not_a_whole_chart_judgment",
+      "natal_star_context_retained_not_imported_as_palace_conditions",
+      "not_a_brightness_change",
+      "source_brightness_not_engine_equivalence",
+      "not_a_verified_life_event",
+      "no_public_release",
+      "no_factual_older_brother_or_support_claim",
+      "cohost_numeric_counts_unevaluated"
+    ],
+    "reviewedWording": "Trong mục Huynh Đệ của bản chép Juan2, câu mở đầu ở Tử Vi nêu hình ảnh nương nhờ người anh lớn tuổi. Đây là ghi chú đúng câu mở đầu trong nguồn; các nhánh đồng cung và gia Kình, Đà, Hỏa, Linh, Không, Kiếp trong toàn đoạn còn được giữ nhưng chưa đánh giá. Không suy ra người có lá số thực tế có anh trai hay được anh giúp đỡ.",
+    "formulaComparison": "MATCH",
+    "verdict": "MATCH",
+    "interpretationVerdict": "INTERPRETATION_SUPPORTED_WITH_LIMITS",
+    "usage": "internal_research",
+    "releasePermission": "withheld",
+    "expertVerified": false,
+    "bookVerified": false,
+    "publicRelease": false,
+    "runtimeRuleChangeApplied": false,
+    "defaultFormulaChangeAuthorized": false,
+    "empiricalTruthVerified": false,
+    "sourceAssessment": {
+      "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+      "rawHtmlSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+      "editionAuthenticated": false,
+      "originalEditionAuthenticated": false,
+      "textCollatedAgainstOriginal": false,
+      "digitalArtifactVerified": true,
+      "derivedTextSha256": "b824c61e1bdec55ecdc7123ff1e79bce9648f07d67d054c43a59ce731572d4a7",
+      "documentType": "pinned_html_transcription",
+      "sourceType": "secondary_transcription",
+      "independentPinnedRawFetch": {
+        "url": "https://raw.githubusercontent.com/SylarLong/iztro/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/ancientBook-2.html",
+        "method": "PowerShell Invoke-WebRequest -UseBasicParsing; own fresh escalated tool execution; SHA256 over RawContentStream.ToArray()",
+        "status": 200,
+        "sha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+        "bytes": 131129,
+        "retrievedAtUtc": "2026-10-17T02:44:25.3850688Z"
+      },
+      "readingScope": "Read full 850-line derived Juan2 text, both complete family-palace sections and three complete natal subsections; independently fetched raw bytes and inspected inert raw paragraph/context reconstruction. Read current sourcePalaceBinding.js, crossReview.js and output contract. Prior single-star review A read for field names only; no other family reviewer output read.",
+      "preambleAudit": "Both family headings are followed directly by a first-star paragraph; no separate prose preamble exists. Every reciprocal/cohost/adverse paragraph retained.",
+      "authenticityLimit": "Verified exact pinned modern HTML artifact only. No historical edition, expert, empirical event, astronomical calendar, natal formula or public-release authentication follows."
+    },
+    "reasoning": {
+      "translation": "紫微有倚靠年長之兄 presents reliance on an older brother. 年長之兄 is an elder male sibling; 倚靠 is reliance/support. The Vietnamese opening correctly attributes that image to the source and explicitly denies an inference that the chart owner actually has such a brother or obtains help.",
+      "opening": "The entry begins immediately after the 兄弟宮 heading. Neither an independent preamble nor a brightness/standalone/no-adverse qualification precedes 紫微有倚靠年長之兄. The host-star predicate can identify this source entry for an opening-only historical note; it cannot establish the opening as an actual family outcome.",
+      "cohosts": "Complete same-paragraph branches retained: 天府同三人, 天相同三四人, 破軍同亦有三人, 或各胞生. Reciprocal 天府 entry adds 紫微同加左右昌曲有六七人, reciprocal 天相 gives 紫微同有三四人, 貪狼 has 紫微同有三人, and 破軍 gives 紫微同二人. The two-versus-three discrepancy is retained as a transcription/context tension; no numeric reconciliation or sibling-count prediction is authorized. Reachable Thất Sát and Tham Lang cohosts are not silently interpreted through the opening.",
+      "adverse": "加羊陀火鈴空劫克害有則欠和 closes the complete paragraph with harm/disharmony language. It remains intact and unevaluated, so the opening cannot mean a supported or harmonious real sibling relationship in adverse charts. The wording explicitly says these branches have not been assessed.",
+      "natal": "Read the complete 紫微 natal subsection, its male/female/limit verses, brightness/branch and birth-stem qualifications, and the female spouse-palace verse. They have distinct Mệnh/Thân/limits or explicit own scopes; none licenses transferring natal formulas into the sibling note. No natal/source brightness equivalence is asserted.",
+      "conclusion": "MATCH is limited to exact attribution of the opening image under direct-host Tử Vi. No additional sex, actual sibling-existence, age, standalone or adverse-free predicate is needed to say what this source entry opens with. Any chart-level sibling-support or count conclusion would require a separate source review."
+    },
+    "conditionAnalysis": "Exact direct-host star_present AST identifies the named source entry only; presence is not standalone. For this carefully attributed opening note I find no additional actual sex/age/kin/brightness/adverse predicate. Source modifiers and historical qualifications remain binding interpretation limits and are discussed individually; they are not falsely encoded as evaluated chart conditions.",
+    "exceptionSemantics": "exceptions is empty because I require no additional predicate exception for exact textual attribution. This does not erase any source cohost/adverse condition; those retained branches are outside the approved opening-only judgment and are explicitly unevaluated.",
+    "scopeFlags": {
+      "historicalAttributionOnly": true,
+      "integratedPalaceAssessmentApproved": false,
+      "wholeChartAssessmentApproved": false,
+      "siblingOrSpouseExistenceVerified": false,
+      "actualSpouseTraitsVerified": false,
+      "actualMarriageEventVerified": false,
+      "historicalAdviceEndorsed": false,
+      "natalFormulaCertified": false,
+      "engineBrightnessEquivalenceCertified": false,
+      "publicInterpretationAuthorized": false,
+      "aiNarrationAuthorized": false
+    },
+    "evidence": {
+      "frozenBundleSha256": "8c5282edcb8c41bc1591ce44e79568687ae299cfdeb861521bd0f4dd1aedae0d",
+      "frozenManifestSha256": "95cccf23030357af011a106ab5c233a959259b8a946404e5e703b8d97b5db70f",
+      "manifestFiles": 29,
+      "verifiedCommands": [
+        {
+          "command": "node docs/knowledge/research/juan2-palace/foundational-family-packet/verify-proposal.mjs",
+          "exitCode": 0,
+          "result": "PASS_PROPOSAL_INTEGRITY_API_VALID_REPLAY_NOT_SOURCE_APPROVAL; 84 valid-input analyzer status-200 witnesses; all five digest classes/raw/derived/manifest exact; immutable chart replay"
+        },
+        {
+          "command": "node docs/knowledge/research/juan2-palace/foundational-family-packet/independent-fixtures/generate.mjs --check",
+          "exitCode": 0,
+          "result": "PASS_ENGINEERING_ONLY; frozen bytes reproduced; all 1152 independent inverse lunar round trips; 28 fixtures/24 positive/4 negative per predicate"
+        },
+        {
+          "command": "python docs/knowledge/research/juan2-palace/foundational-family-packet/verify-source.py",
+          "exitCode": 0,
+          "result": "PASS_LOCAL_SOURCE_BYTE_CONTEXT_REPLAY_NOT_SEMANTIC_APPROVAL; complete original paragraphs, complete family sections and complete natal subsections exact"
+        },
+        {
+          "command": "Independent reviewer inline Node checker via PowerShell stdin (not persisted)",
+          "exitCode": 0,
+          "result": "PASS_ENGINEERING_WITNESS_ONLY; separately recomputed 29 file hashes and all five classes; direct canonical starId host membership before evaluator; all 84 lunar/host/star/major/four-adverse fields; both genders all 12 positive branches and every reachable major cohost configuration; opposite-only negatives; evaluator/no-mutation checks"
+        }
+      ],
+      "fixtureClassification": "Real solar-input engineering witnesses. Star placement uses production engine/normalizer; expected membership does not use condition evaluator. Inverse lunar method shares year-code tables and is not independent astronomy.",
+      "fixtureCount": 28,
+      "positiveCount": 24,
+      "negativeCount": 4,
+      "perGender": {
+        "positive": 12,
+        "negative": 2,
+        "positiveHostBranches": 12
+      },
+      "fixtureLimits": [
+        "Four-adverse labels mean Kình Dương/Đà La/Hỏa Tinh/Linh Tinh only; absence does not exclude Không/Kiếp/Kỵ or imply favorable chart.",
+        "A globally absent major star cannot occur in valid chart output and is explicitly unreachable, not synthesized.",
+        "Both-gender fixtures prove direct membership behavior, not application of sex-specific historical advice to either gender.",
+        "Fixed-grid reachability and conditional coverage are engineering arithmetic, not population prevalence or semantic approval."
+      ],
+      "unrunChecks": "No full backend/frontend/browser suite: no product code edited; scoped source/evidence review used relevant read-only replay checks. No browser-only risk."
+    }
+  },
+  {
+    "model": "gpt-6.1-sol",
+    "available": true,
+    "independent": true,
+    "otherReviewerVerdictsRead": false,
+    "requestedModel": "gpt-6.1-sol",
+    "agentId": "/root/family_source_a_retry",
+    "hostBuildId": null,
+    "modelIdentityBasis": "Actual delegated task assignment identifies gpt-6.1-sol; host build ID is not exposed. No inference from a prior review document.",
+    "reviewRef": "docs/knowledge/research/juan2-palace/foundational-family-packet/review-a.json",
+    "sourceId": "ziwei-quanshu-iztro-transcription",
+    "sourceProfile": "quanshu-iztro-2f00e2ab",
+    "claimId": "interp-quanshu-phu-the-thien-luong-host",
+    "target": "phu_the",
+    "editionId": "iztro-juan2-2f00e2ab0c80",
+    "schoolId": "vn-tam-hop-default",
+    "locator": "juan2/夫妻宮/天梁",
+    "quotationPolicy": "source-sentence-v2",
+    "sourceDigest": "c241087fa39c77a40db731dec371f0e141a00c79c80652ce877fd560baa41aed",
+    "contextDigest": "edc5f04d128d12cadd447f093e983621b177c61bdf80a7b048bf42fdcfa3ce38",
+    "conditionTreeDigest": "804531a61b034b0787d853d1b94a38bff8de91d48fd7d47d27d9e8328b04f9ee",
+    "wordingDigest": "bb6f290924b0bcb1483d8400377f7011c9b1c8a8342a9c65c4348dae8a6ff41d",
+    "fixturesDigest": "5c3dfd3277128eb08508d86826f10c0412c38bc6231a195ad8711c2299f8e899",
+    "quotation": "天梁妻宜大美容，天同同和氣，天機招美淑，加羊陀火鈴空劫朵不和順。",
+    "conditions": [
+      "palace_phu_the",
+      "thien_luong_in_host",
+      "direct_host_only"
+    ],
+    "conditionIds": [
+      "palace_phu_the",
+      "thien_luong_in_host",
+      "direct_host_only"
+    ],
+    "exceptions": [],
+    "conditionTree": {
+      "op": "star_present",
+      "target": "phu_the",
+      "star": "Thiên Lương"
+    },
+    "limitations": [
+      "literal_source_opening_annotation_only",
+      "direct_host_only",
+      "presence_does_not_mean_standalone",
+      "cohost_branches_preserved_not_evaluated",
+      "adverse_branches_preserved_not_evaluated",
+      "not_an_integrated_palace_judgment",
+      "not_a_whole_chart_judgment",
+      "natal_star_context_retained_not_imported_as_palace_conditions",
+      "not_a_brightness_change",
+      "source_brightness_not_engine_equivalence",
+      "not_a_verified_life_event",
+      "no_public_release",
+      "historical_gender_and_relative_age_preserved",
+      "not_personal_marriage_advice",
+      "no_factual_spouse_traits_or_marriage_event_claim",
+      "original_adverse_transcription_not_silently_emended"
+    ],
+    "reviewedWording": "Trong mục Phu Thê của bản chép Juan2, câu mở đầu ở Thiên Lương nêu “妻宜大美容”, lời mô tả truyền thống về người vợ nên lớn tuổi và có dung mạo đẹp. Đây chỉ là ghi chú lời nguồn, chưa đánh giá các nhánh đồng cung Thiên Đồng, Thiên Cơ hoặc gia Kình, Đà, Hỏa, Linh, Không, Kiếp trong toàn đoạn; không khẳng định người phối ngẫu thực tế có đặc điểm này và không phải lời khuyên hôn nhân cá nhân.",
+    "formulaComparison": "MATCH",
+    "verdict": "MATCH",
+    "interpretationVerdict": "INTERPRETATION_SUPPORTED_WITH_LIMITS",
+    "usage": "internal_research",
+    "releasePermission": "withheld",
+    "expertVerified": false,
+    "bookVerified": false,
+    "publicRelease": false,
+    "runtimeRuleChangeApplied": false,
+    "defaultFormulaChangeAuthorized": false,
+    "empiricalTruthVerified": false,
+    "sourceAssessment": {
+      "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+      "rawHtmlSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+      "editionAuthenticated": false,
+      "originalEditionAuthenticated": false,
+      "textCollatedAgainstOriginal": false,
+      "digitalArtifactVerified": true,
+      "derivedTextSha256": "b824c61e1bdec55ecdc7123ff1e79bce9648f07d67d054c43a59ce731572d4a7",
+      "documentType": "pinned_html_transcription",
+      "sourceType": "secondary_transcription",
+      "independentPinnedRawFetch": {
+        "url": "https://raw.githubusercontent.com/SylarLong/iztro/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/ancientBook-2.html",
+        "method": "PowerShell Invoke-WebRequest -UseBasicParsing; own fresh escalated tool execution; SHA256 over RawContentStream.ToArray()",
+        "status": 200,
+        "sha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+        "bytes": 131129,
+        "retrievedAtUtc": "2026-10-17T02:44:25.3850688Z"
+      },
+      "readingScope": "Read full 850-line derived Juan2 text, both complete family-palace sections and three complete natal subsections; independently fetched raw bytes and inspected inert raw paragraph/context reconstruction. Read current sourcePalaceBinding.js, crossReview.js and output contract. Prior single-star review A read for field names only; no other family reviewer output read.",
+      "preambleAudit": "Both family headings are followed directly by a first-star paragraph; no separate prose preamble exists. Every reciprocal/cohost/adverse paragraph retained.",
+      "authenticityLimit": "Verified exact pinned modern HTML artifact only. No historical edition, expert, empirical event, astronomical calendar, natal formula or public-release authentication follows."
+    },
+    "reasoning": {
+      "translation": "I read 妻宜大美容 as wife [traditionally] preferably older, with a beautiful appearance: 妻 retains wife, 宜 retains the prescriptive historical wording, 大 supplies relative seniority in this marriage context, and 美容 describes appearance, not cosmetic treatment. The same section explicitly uses 天梁同宜年長 in the 天機 reciprocal entry. This supports the age reading without supplying a numerical age difference. The exact Chinese phrase is quoted in the Vietnamese note; lớn tuổi is understood comparatively in this historical marriage phrasing, not as a verified absolute age or age threshold.",
+      "opening": "The complete 夫妻宮 section has no separate introductory prose before its first star entry. 天梁妻宜大美容 is the opening of the Thiên Lương entry, with no initial 入廟/旺/獨守/無殺 qualifier. A direct-host Thiên Lương predicate identifies the entry for source attribution; the note does not test a real wife, spouse sex, age, beauty or marriage status.",
+      "cohosts": "Complete same-paragraph branches 天同同和氣 and 天機招美淑 remain unevaluated. Reciprocal 天機 has 天梁同宜年長; reciprocal 天同 has 天梁同極美夫婦; 太陽 has 與天梁同加左右招賢明之妻, with its explicit 加左右 condition. The note does not convert any of these conditional branches into a general harmonious or beautiful spouse judgment, including in the reachable Thái Dương cohost configuration.",
+      "adverse": "The exact closure is 加羊陀火鈴空劫朵不和順. The anomalous 朵 is preserved in the raw paragraph/span/quotation/context; I do not emend it to 多 or import an edited reading. 不和順 remains adverse disharmony language, and the note says the six named adverse branches remain unassessed.",
+      "natal": "Read the complete 天梁 natal subsection and male/limit verses, including 要入廟方富貴, 陷地遇火羊破局 and female-specific natal statements. Their Mệnh/limits-specific qualifications are not omitted from evidence, are not general spouse conditions for textual attribution, and are not mapped onto engine brightness.",
+      "conclusion": "MATCH is limited to the exact historically attributed opening and its retained sex/relative-age/appearance wording. The candidate does not generalize this into a gender-neutral harmony claim or modern marriage advice. Additional spouse-age/sex eligibility predicates would change the claim from text attribution toward factual application; no such application is approved."
+    },
+    "conditionAnalysis": "Exact direct-host star_present AST identifies the named source entry only; presence is not standalone. For this carefully attributed opening note I find no additional actual sex/age/kin/brightness/adverse predicate. Source modifiers and historical qualifications remain binding interpretation limits and are discussed individually; they are not falsely encoded as evaluated chart conditions.",
+    "exceptionSemantics": "exceptions is empty because I require no additional predicate exception for exact textual attribution. This does not erase any source cohost/adverse condition; those retained branches are outside the approved opening-only judgment and are explicitly unevaluated.",
+    "scopeFlags": {
+      "historicalAttributionOnly": true,
+      "integratedPalaceAssessmentApproved": false,
+      "wholeChartAssessmentApproved": false,
+      "siblingOrSpouseExistenceVerified": false,
+      "actualSpouseTraitsVerified": false,
+      "actualMarriageEventVerified": false,
+      "historicalAdviceEndorsed": false,
+      "natalFormulaCertified": false,
+      "engineBrightnessEquivalenceCertified": false,
+      "publicInterpretationAuthorized": false,
+      "aiNarrationAuthorized": false
+    },
+    "evidence": {
+      "frozenBundleSha256": "8c5282edcb8c41bc1591ce44e79568687ae299cfdeb861521bd0f4dd1aedae0d",
+      "frozenManifestSha256": "95cccf23030357af011a106ab5c233a959259b8a946404e5e703b8d97b5db70f",
+      "manifestFiles": 29,
+      "verifiedCommands": [
+        {
+          "command": "node docs/knowledge/research/juan2-palace/foundational-family-packet/verify-proposal.mjs",
+          "exitCode": 0,
+          "result": "PASS_PROPOSAL_INTEGRITY_API_VALID_REPLAY_NOT_SOURCE_APPROVAL; 84 valid-input analyzer status-200 witnesses; all five digest classes/raw/derived/manifest exact; immutable chart replay"
+        },
+        {
+          "command": "node docs/knowledge/research/juan2-palace/foundational-family-packet/independent-fixtures/generate.mjs --check",
+          "exitCode": 0,
+          "result": "PASS_ENGINEERING_ONLY; frozen bytes reproduced; all 1152 independent inverse lunar round trips; 28 fixtures/24 positive/4 negative per predicate"
+        },
+        {
+          "command": "python docs/knowledge/research/juan2-palace/foundational-family-packet/verify-source.py",
+          "exitCode": 0,
+          "result": "PASS_LOCAL_SOURCE_BYTE_CONTEXT_REPLAY_NOT_SEMANTIC_APPROVAL; complete original paragraphs, complete family sections and complete natal subsections exact"
+        },
+        {
+          "command": "Independent reviewer inline Node checker via PowerShell stdin (not persisted)",
+          "exitCode": 0,
+          "result": "PASS_ENGINEERING_WITNESS_ONLY; separately recomputed 29 file hashes and all five classes; direct canonical starId host membership before evaluator; all 84 lunar/host/star/major/four-adverse fields; both genders all 12 positive branches and every reachable major cohost configuration; opposite-only negatives; evaluator/no-mutation checks"
+        }
+      ],
+      "fixtureClassification": "Real solar-input engineering witnesses. Star placement uses production engine/normalizer; expected membership does not use condition evaluator. Inverse lunar method shares year-code tables and is not independent astronomy.",
+      "fixtureCount": 28,
+      "positiveCount": 24,
+      "negativeCount": 4,
+      "perGender": {
+        "positive": 12,
+        "negative": 2,
+        "positiveHostBranches": 12
+      },
+      "fixtureLimits": [
+        "Four-adverse labels mean Kình Dương/Đà La/Hỏa Tinh/Linh Tinh only; absence does not exclude Không/Kiếp/Kỵ or imply favorable chart.",
+        "A globally absent major star cannot occur in valid chart output and is explicitly unreachable, not synthesized.",
+        "Both-gender fixtures prove direct membership behavior, not application of sex-specific historical advice to either gender.",
+        "Fixed-grid reachability and conditional coverage are engineering arithmetic, not population prevalence or semantic approval."
+      ],
+      "unrunChecks": "No full backend/frontend/browser suite: no product code edited; scoped source/evidence review used relevant read-only replay checks. No browser-only risk."
+    }
+  },
+  {
+    "model": "gpt-6.1-sol",
+    "available": true,
+    "independent": true,
+    "otherReviewerVerdictsRead": false,
+    "requestedModel": "gpt-6.1-sol",
+    "agentId": "/root/family_source_a_retry",
+    "hostBuildId": null,
+    "modelIdentityBasis": "Actual delegated task assignment identifies gpt-6.1-sol; host build ID is not exposed. No inference from a prior review document.",
+    "reviewRef": "docs/knowledge/research/juan2-palace/foundational-family-packet/review-a.json",
+    "sourceId": "ziwei-quanshu-iztro-transcription",
+    "sourceProfile": "quanshu-iztro-2f00e2ab",
+    "claimId": "interp-quanshu-phu-the-thien-tuong-host",
+    "target": "phu_the",
+    "editionId": "iztro-juan2-2f00e2ab0c80",
+    "schoolId": "vn-tam-hop-default",
+    "locator": "juan2/夫妻宮/天相",
+    "quotationPolicy": "source-sentence-v2",
+    "sourceDigest": "37ecb598f32da2f117340fa258b14e6c262a6004079f7b42e38b80e52e0fca73",
+    "contextDigest": "d889dcd19caabb150b5b371fbf20b3bc33d1aed2b7a9e36db4bf03e7b0060104",
+    "conditionTreeDigest": "8e9d9aefb12e6ce2aa8758170ad76d36558bbaad7ea50980a0651a085664fcef",
+    "wordingDigest": "5a1c85f939f4f0c75b44cbf3d6090fa6509a7397333a0c867260b63677e57f91",
+    "fixturesDigest": "50db4654dd5ae0f1bb1f1cef09703f161857ac38ac15f11544cd7958a7364067",
+    "quotation": "天相貌美賢淑夫宜年長，親上成親，紫微同諧老，武曲少和，廉貞同入廟免刑，加羊陀火鈴空劫刑克。",
+    "conditions": [
+      "palace_phu_the",
+      "thien_tuong_in_host",
+      "direct_host_only"
+    ],
+    "conditionIds": [
+      "palace_phu_the",
+      "thien_tuong_in_host",
+      "direct_host_only"
+    ],
+    "exceptions": [],
+    "conditionTree": {
+      "op": "star_present",
+      "target": "phu_the",
+      "star": "Thiên Tướng"
+    },
+    "limitations": [
+      "literal_source_opening_annotation_only",
+      "direct_host_only",
+      "presence_does_not_mean_standalone",
+      "cohost_branches_preserved_not_evaluated",
+      "adverse_branches_preserved_not_evaluated",
+      "not_an_integrated_palace_judgment",
+      "not_a_whole_chart_judgment",
+      "natal_star_context_retained_not_imported_as_palace_conditions",
+      "not_a_brightness_change",
+      "source_brightness_not_engine_equivalence",
+      "not_a_verified_life_event",
+      "no_public_release",
+      "historical_gender_and_relative_age_preserved",
+      "not_personal_marriage_advice",
+      "no_factual_spouse_traits_or_marriage_event_claim",
+      "historical_kin_marriage_phrase_preserved_not_endorsed",
+      "liem_trinh_brightness_branch_retained_not_evaluated"
+    ],
+    "reviewedWording": "Trong mục Phu Thê của bản chép Juan2, câu mở đầu ở Thiên Tướng dùng hình ảnh người vợ đẹp, hiền thục, người chồng nên lớn tuổi, và nêu “親上成親” về kết hôn trong quan hệ họ hàng. Đây là ghi chú lời văn truyền thống, không phải lời khuyên chọn bạn đời hay kết luận về hôn nhân thực tế; các nhánh đồng cung Tử Vi, Vũ Khúc, Liêm Trinh và gia Kình, Đà, Hỏa, Linh, Không, Kiếp trong toàn đoạn chưa được đánh giá.",
+    "formulaComparison": "MATCH",
+    "verdict": "MATCH",
+    "interpretationVerdict": "INTERPRETATION_SUPPORTED_WITH_LIMITS",
+    "usage": "internal_research",
+    "releasePermission": "withheld",
+    "expertVerified": false,
+    "bookVerified": false,
+    "publicRelease": false,
+    "runtimeRuleChangeApplied": false,
+    "defaultFormulaChangeAuthorized": false,
+    "empiricalTruthVerified": false,
+    "sourceAssessment": {
+      "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+      "rawHtmlSha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+      "editionAuthenticated": false,
+      "originalEditionAuthenticated": false,
+      "textCollatedAgainstOriginal": false,
+      "digitalArtifactVerified": true,
+      "derivedTextSha256": "b824c61e1bdec55ecdc7123ff1e79bce9648f07d67d054c43a59ce731572d4a7",
+      "documentType": "pinned_html_transcription",
+      "sourceType": "secondary_transcription",
+      "independentPinnedRawFetch": {
+        "url": "https://raw.githubusercontent.com/SylarLong/iztro/2f00e2ab0c80b1632e55bc362f2ae26e121245cb/docs/zh_TW/learn/ancientBook-2.html",
+        "method": "PowerShell Invoke-WebRequest -UseBasicParsing; own fresh escalated tool execution; SHA256 over RawContentStream.ToArray()",
+        "status": 200,
+        "sha256": "438d8a20c62e9e27168f5b7e2f969d6ea196ce2b83732b8679ab14644118443a",
+        "bytes": 131129,
+        "retrievedAtUtc": "2026-10-17T02:44:25.3850688Z"
+      },
+      "readingScope": "Read full 850-line derived Juan2 text, both complete family-palace sections and three complete natal subsections; independently fetched raw bytes and inspected inert raw paragraph/context reconstruction. Read current sourcePalaceBinding.js, crossReview.js and output contract. Prior single-star review A read for field names only; no other family reviewer output read.",
+      "preambleAudit": "Both family headings are followed directly by a first-star paragraph; no separate prose preamble exists. Every reciprocal/cohost/adverse paragraph retained.",
+      "authenticityLimit": "Verified exact pinned modern HTML artifact only. No historical edition, expert, empirical event, astronomical calendar, natal formula or public-release authentication follows."
+    },
+    "reasoning": {
+      "translation": "貌美賢淑 supplies beauty and virtuous/gentle traditional wife imagery in the marriage entry; the wife subject is a contextual ellipsis, not an explicit 妻 character in that clause. 夫宜年長 explicitly retains husband and relative seniority. 親上成親 means forming a marriage within an already related kin relationship; the broad Vietnamese quan hệ họ hàng preserves it without inventing a specific cousin degree or modern legal category. All are reported as historical source language, never endorsed advice or inferred spouse facts.",
+      "opening": "The complete 夫妻宮 section begins with the 紫微 star entry and has no separate prose preamble. The 天相 opening runs through 貌美賢淑夫宜年長，親上成親 before the explicit 紫微 cohost branch. There is no opening 入廟/獨守/無殺 qualification. The exact proposed wording retains beauty/virtue, husband-age wording and kin-marriage phrase rather than dropping inconvenient historical scope.",
+      "cohosts": "Same paragraph preserves 紫微同諧老, 武曲少和 and 廉貞同入廟免刑. The 入廟 condition belongs to that Liêm Trinh branch; it must not be discarded to claim immunity and is not evaluated here. Reciprocal 紫微天相同年少 contrasts with the opening age imagery; reciprocal 武曲 includes 同年夫婦也相當 and its own modifiers; 廉貞 has different cohost language. These remain separate unevaluated source branches, and no integrated cohost relationship or age result is approved.",
+      "adverse": "加羊陀火鈴空劫刑克 is retained intact as adverse historical harm language. Neither the open-note predicate nor an adverse-free four-star fixture can suppress that closure, certify a favorable marriage, or assert absence of Không/Kiếp/Kỵ.",
+      "natal": "Read the complete 天相 natal subsection and male/female/limit verses, including 天相又能化廉貞之惡 and the source-specific branch brightness descriptions. That natal sentence is not substituted for the explicit palace 廉貞同入廟免刑 branch. No engine brightness or mitigation equivalence is inferred.",
+      "conclusion": "MATCH is limited to exact opening attribution under a direct-host star predicate. Historical wife/husband, relative-age and kin-marriage language is explicit and descriptive. No actual family relationship, spouse traits, age, or marriage condition is asserted; none is silently removed from an operative prediction because no operative prediction is authorized."
+    },
+    "conditionAnalysis": "Exact direct-host star_present AST identifies the named source entry only; presence is not standalone. For this carefully attributed opening note I find no additional actual sex/age/kin/brightness/adverse predicate. Source modifiers and historical qualifications remain binding interpretation limits and are discussed individually; they are not falsely encoded as evaluated chart conditions.",
+    "exceptionSemantics": "exceptions is empty because I require no additional predicate exception for exact textual attribution. This does not erase any source cohost/adverse condition; those retained branches are outside the approved opening-only judgment and are explicitly unevaluated.",
+    "scopeFlags": {
+      "historicalAttributionOnly": true,
+      "integratedPalaceAssessmentApproved": false,
+      "wholeChartAssessmentApproved": false,
+      "siblingOrSpouseExistenceVerified": false,
+      "actualSpouseTraitsVerified": false,
+      "actualMarriageEventVerified": false,
+      "historicalAdviceEndorsed": false,
+      "natalFormulaCertified": false,
+      "engineBrightnessEquivalenceCertified": false,
+      "publicInterpretationAuthorized": false,
+      "aiNarrationAuthorized": false
+    },
+    "evidence": {
+      "frozenBundleSha256": "8c5282edcb8c41bc1591ce44e79568687ae299cfdeb861521bd0f4dd1aedae0d",
+      "frozenManifestSha256": "95cccf23030357af011a106ab5c233a959259b8a946404e5e703b8d97b5db70f",
+      "manifestFiles": 29,
+      "verifiedCommands": [
+        {
+          "command": "node docs/knowledge/research/juan2-palace/foundational-family-packet/verify-proposal.mjs",
+          "exitCode": 0,
+          "result": "PASS_PROPOSAL_INTEGRITY_API_VALID_REPLAY_NOT_SOURCE_APPROVAL; 84 valid-input analyzer status-200 witnesses; all five digest classes/raw/derived/manifest exact; immutable chart replay"
+        },
+        {
+          "command": "node docs/knowledge/research/juan2-palace/foundational-family-packet/independent-fixtures/generate.mjs --check",
+          "exitCode": 0,
+          "result": "PASS_ENGINEERING_ONLY; frozen bytes reproduced; all 1152 independent inverse lunar round trips; 28 fixtures/24 positive/4 negative per predicate"
+        },
+        {
+          "command": "python docs/knowledge/research/juan2-palace/foundational-family-packet/verify-source.py",
+          "exitCode": 0,
+          "result": "PASS_LOCAL_SOURCE_BYTE_CONTEXT_REPLAY_NOT_SEMANTIC_APPROVAL; complete original paragraphs, complete family sections and complete natal subsections exact"
+        },
+        {
+          "command": "Independent reviewer inline Node checker via PowerShell stdin (not persisted)",
+          "exitCode": 0,
+          "result": "PASS_ENGINEERING_WITNESS_ONLY; separately recomputed 29 file hashes and all five classes; direct canonical starId host membership before evaluator; all 84 lunar/host/star/major/four-adverse fields; both genders all 12 positive branches and every reachable major cohost configuration; opposite-only negatives; evaluator/no-mutation checks"
+        }
+      ],
+      "fixtureClassification": "Real solar-input engineering witnesses. Star placement uses production engine/normalizer; expected membership does not use condition evaluator. Inverse lunar method shares year-code tables and is not independent astronomy.",
+      "fixtureCount": 28,
+      "positiveCount": 24,
+      "negativeCount": 4,
+      "perGender": {
+        "positive": 12,
+        "negative": 2,
+        "positiveHostBranches": 12
+      },
+      "fixtureLimits": [
+        "Four-adverse labels mean Kình Dương/Đà La/Hỏa Tinh/Linh Tinh only; absence does not exclude Không/Kiếp/Kỵ or imply favorable chart.",
+        "A globally absent major star cannot occur in valid chart output and is explicitly unreachable, not synthesized.",
+        "Both-gender fixtures prove direct membership behavior, not application of sex-specific historical advice to either gender.",
+        "Fixed-grid reachability and conditional coverage are engineering arithmetic, not population prevalence or semantic approval."
+      ],
+      "unrunChecks": "No full backend/frontend/browser suite: no product code edited; scoped source/evidence review used relevant read-only replay checks. No browser-only risk."
+    }
+  }
+]

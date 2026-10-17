@@ -37,7 +37,57 @@ const FOUNDATIONAL_RESOURCES = {
         '524f6941bded067b55de7d8019b94bcf7443f5f5b8bd426322317fff73f0bde3'
     ]
 };
+const FAMILY_RESOURCES = {
+    "evidenceBase": "docs/knowledge/research/juan2-palace/foundational-family-packet/",
+    "reviewA": "docs/knowledge/research/juan2-palace/foundational-family-packet/review-a.json",
+    "reviewB": "docs/knowledge/research/juan2-palace/foundational-family-packet/review-b.json",
+    "bundleFile": "docs/knowledge/research/juan2-palace/foundational-family-packet/review-bundle.json",
+    "executionFile": "docs/knowledge/research/juan2-palace/foundational-family-packet/execution.json",
+    "reviewDocumentDigests": [
+        "5f1fc0bb7c971a8e8a0b8a7f4ffe7671fed44112ee1318de23c16e2e98d791c6",
+        "7e39d1ea4c5be0774e16a6a6909a55660ea06e1dd574f3494c54b66123141bad"
+    ]
+};
 const SUBJECTS = {
+    'interp-quanshu-huynh-de-tu-vi-host': {
+        ...FAMILY_RESOURCES,
+        decisionRef: 'docs/knowledge/interpretation-decisions/juan2-family-huynh-de-tu-vi.json',
+        target: 'huynh_de',
+        spanFile: 'huynh-de-tu-vi-span.txt', contextFile: 'huynh-de-tu-vi-context.txt',
+        acceptedDigests: {
+          "sourceDigest": "fe1d0cd0683232fa5ab9bf3cfd9e81608314f94f9195e673bce0622ee8183e5a",
+          "contextDigest": "942fc38de490d0204a85ed272da3f982db415162f69da9ae74623930ecfe2c97",
+          "conditionTreeDigest": "47de012421ba8b852ebd5c8ac4864f7e00b047320cb5ee601ea0cf24b3f95bc2",
+          "wordingDigest": "13f6fd1a623b3e5b2d1b74517941a8a15a6f7710b2b1dea6f765f6bfa8f877b8",
+          "fixturesDigest": "123570975dbd59cbafc983309d0d1697f13c6599223dcd5b5079cfacbd98edbd"
+}
+    },
+    'interp-quanshu-phu-the-thien-luong-host': {
+        ...FAMILY_RESOURCES,
+        decisionRef: 'docs/knowledge/interpretation-decisions/juan2-family-phu-the-thien-luong.json',
+        target: 'phu_the',
+        spanFile: 'phu-the-thien-luong-span.txt', contextFile: 'phu-the-thien-luong-context.txt',
+        acceptedDigests: {
+          "sourceDigest": "c241087fa39c77a40db731dec371f0e141a00c79c80652ce877fd560baa41aed",
+          "contextDigest": "edc5f04d128d12cadd447f093e983621b177c61bdf80a7b048bf42fdcfa3ce38",
+          "conditionTreeDigest": "804531a61b034b0787d853d1b94a38bff8de91d48fd7d47d27d9e8328b04f9ee",
+          "wordingDigest": "bb6f290924b0bcb1483d8400377f7011c9b1c8a8342a9c65c4348dae8a6ff41d",
+          "fixturesDigest": "5c3dfd3277128eb08508d86826f10c0412c38bc6231a195ad8711c2299f8e899"
+}
+    },
+    'interp-quanshu-phu-the-thien-tuong-host': {
+        ...FAMILY_RESOURCES,
+        decisionRef: 'docs/knowledge/interpretation-decisions/juan2-family-phu-the-thien-tuong.json',
+        target: 'phu_the',
+        spanFile: 'phu-the-thien-tuong-span.txt', contextFile: 'phu-the-thien-tuong-context.txt',
+        acceptedDigests: {
+          "sourceDigest": "37ecb598f32da2f117340fa258b14e6c262a6004079f7b42e38b80e52e0fca73",
+          "contextDigest": "d889dcd19caabb150b5b371fbf20b3bc33d1aed2b7a9e36db4bf03e7b0060104",
+          "conditionTreeDigest": "8e9d9aefb12e6ce2aa8758170ad76d36558bbaad7ea50980a0651a085664fcef",
+          "wordingDigest": "5a1c85f939f4f0c75b44cbf3d6090fa6509a7397333a0c867260b63677e57f91",
+          "fixturesDigest": "50db4654dd5ae0f1bb1f1cef09703f161857ac38ac15f11544cd7958a7364067"
+}
+    },
     'interp-quanshu-thien-di-thien-luong-host': {
         ...FOUNDATIONAL_RESOURCES,
         decisionRef: 'docs/knowledge/interpretation-decisions/juan2-foundational-thien-di-thien-luong.json',

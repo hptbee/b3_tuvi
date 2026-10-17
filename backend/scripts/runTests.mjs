@@ -32,6 +32,7 @@ export const unitTests = [
     'test/sourcePalaceTaiTuViPha.test.mjs',
     'test/sourcePalaceQuanMao.test.mjs',
     'test/sourcePalaceFoundational.test.mjs',
+    'test/sourcePalaceFamily.test.mjs',
     'test/sprint11bInterpretation.test.mjs',
     'test/sprint11c12Evidence.test.mjs',
     'test/knowledgeCoverage.test.mjs',
@@ -69,6 +70,7 @@ export const unitTests = [
 
 export const integrationTests = [
     'test/sourcePalaceFoundationalApi.test.mjs',
+    'test/sourcePalaceFamilyApi.test.mjs',
     'test/structuredAnalysisContract.integration.test.mjs',
     'test/modernMajorApi.test.mjs',
     'test/modernMajorStemApi.test.mjs',

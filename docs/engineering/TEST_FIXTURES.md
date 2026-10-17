@@ -114,3 +114,6 @@ Khóa tính chất: không nâng nguồn từ test pass, catalog không thành p
 - `conditionEval.test.mjs`: typed condition contracts and three-valued Boolean cases. Not a historical formula proof.
 - `fixtureClasses.test.mjs`
 - `perfSmoke.test.mjs`
+
+- sourcePalaceFamily.test.mjs: 84 independently frozen valid solar source-comparative fixtures for three separately accepted family-palace opening notes. Both genders/all12positive branches/cohosts/named4adverse and wrong-host/opposite negatives; immutable evidence/forgery/cold-loader/cache synthetic boundaries. Previous11 membership subset419 preserved, current14 subset647/1152,770hits123overlap. Shared-table inverse is not astronomical or expert verification.
+- sourcePalaceFamilyApi.test.mjs: 84 actual fixture HTTP responses and14 boundary/ask requests through genuine production client validators. Withheld public/AI/fortune/internal text, no-store/privacy/logs and zero temporary SQLite writes; invalid bodies are synthetic engineering regressions, not source approval.

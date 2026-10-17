@@ -38,3 +38,9 @@ docs/knowledge/research/juan2-palace/foundational-single-star-packet/** text eol
 docs/knowledge/research/juan2-palace/foundational-single-star-packet/independent-fixture-research.mjs -text
 docs/knowledge/research/juan2-palace/foundational-single-star-packet/verify-proposal.mjs -text
 docs/knowledge/research/juan2-palace/foundational-single-star-packet/verify-source.py -text
+
+# T038 frozen source inputs and actual independent judgments.
+docs/knowledge/research/juan2-palace/foundational-family-packet/** text eol=lf
+# Exact reviewed CRLF bytes; do not normalize or rehash.
+docs/knowledge/research/juan2-palace/foundational-family-packet/coverage-projection.json -text
+docs/knowledge/research/juan2-palace/foundational-family-packet/verify-proposal.mjs -text

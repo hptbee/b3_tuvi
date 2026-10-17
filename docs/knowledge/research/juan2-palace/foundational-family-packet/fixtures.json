@@ -1,0 +1,3860 @@
+{
+  "interp-quanshu-huynh-de-tu-vi-host": [
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-01",
+      "input": {
+        "day": 15,
+        "month": 2,
+        "year": 1984,
+        "hour": 12,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 14,
+        "lunarMonth": 1,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "8",
+        "functionId": "huynh_de",
+        "branchName": "Mùi"
+      },
+      "starLocation": {
+        "id": "8",
+        "functionId": "huynh_de",
+        "branchName": "Mùi"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "positive",
+        "positive_cohost",
+        "positive_four_adverse_absent",
+        "positive_branch_Mùi",
+        "positive_major_configuration_pha_quan+tu_vi"
+      ],
+      "majorStars": [
+        "tu_vi",
+        "pha_quan"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-02",
+      "input": {
+        "day": 15,
+        "month": 1,
+        "year": 1985,
+        "hour": 12,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 25,
+        "lunarMonth": 12,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "7",
+        "functionId": "huynh_de",
+        "branchName": "Ngọ"
+      },
+      "starLocation": {
+        "id": "7",
+        "functionId": "huynh_de",
+        "branchName": "Ngọ"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "positive_standalone",
+        "positive_branch_Ngọ",
+        "positive_major_configuration_tu_vi"
+      ],
+      "majorStars": [
+        "tu_vi"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-03",
+      "input": {
+        "day": 15,
+        "month": 5,
+        "year": 1984,
+        "hour": 6,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 15,
+        "lunarMonth": 4,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "2",
+        "functionId": "huynh_de",
+        "branchName": "Sửu"
+      },
+      "starLocation": {
+        "id": "2",
+        "functionId": "huynh_de",
+        "branchName": "Sửu"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "positive_four_adverse_present",
+        "positive_branch_Sửu"
+      ],
+      "majorStars": [
+        "tu_vi",
+        "pha_quan"
+      ],
+      "adverseStars": [
+        "da_la",
+        "linh_tinh"
+      ],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-04",
+      "input": {
+        "day": 15,
+        "month": 1,
+        "year": 1984,
+        "hour": 0,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 13,
+        "lunarMonth": 12,
+        "lunarYear": 1983,
+        "isLeapMonth": false,
+        "canName": "Quý",
+        "chiName": "Hợi",
+        "canIndex": 9,
+        "chiIndex": 12
+      },
+      "host": {
+        "id": "1",
+        "functionId": "huynh_de",
+        "branchName": "Tí"
+      },
+      "starLocation": {
+        "id": "3",
+        "functionId": "phu_mau",
+        "branchName": "Dần"
+      },
+      "expected": false,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "negative_wrong_host",
+        "negative_missing_target_star"
+      ],
+      "majorStars": [
+        "pha_quan"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-05",
+      "input": {
+        "day": 15,
+        "month": 3,
+        "year": 1984,
+        "hour": 12,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 13,
+        "lunarMonth": 2,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "9",
+        "functionId": "huynh_de",
+        "branchName": "Thân"
+      },
+      "starLocation": {
+        "id": "3",
+        "functionId": "no_boc",
+        "branchName": "Dần"
+      },
+      "expected": false,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "negative_opposite_only"
+      ],
+      "majorStars": [
+        "that_sat"
+      ],
+      "adverseStars": [
+        "hoa_tinh"
+      ],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-06",
+      "input": {
+        "day": 15,
+        "month": 9,
+        "year": 1984,
+        "hour": 6,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 20,
+        "lunarMonth": 8,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "6",
+        "functionId": "huynh_de",
+        "branchName": "Tị"
+      },
+      "starLocation": {
+        "id": "6",
+        "functionId": "huynh_de",
+        "branchName": "Tị"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "positive_branch_Tị",
+        "positive_major_configuration_that_sat+tu_vi"
+      ],
+      "majorStars": [
+        "tu_vi",
+        "that_sat"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-07",
+      "input": {
+        "day": 15,
+        "month": 9,
+        "year": 1984,
+        "hour": 18,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 20,
+        "lunarMonth": 8,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "12",
+        "functionId": "huynh_de",
+        "branchName": "Hợi"
+      },
+      "starLocation": {
+        "id": "12",
+        "functionId": "huynh_de",
+        "branchName": "Hợi"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "positive_branch_Hợi"
+      ],
+      "majorStars": [
+        "tu_vi",
+        "that_sat"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-08",
+      "input": {
+        "day": 15,
+        "month": 2,
+        "year": 1986,
+        "hour": 18,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 7,
+        "lunarMonth": 1,
+        "lunarYear": 1986,
+        "isLeapMonth": false,
+        "canName": "Bính",
+        "chiName": "Dần",
+        "canIndex": 2,
+        "chiIndex": 3
+      },
+      "host": {
+        "id": "5",
+        "functionId": "huynh_de",
+        "branchName": "Thìn"
+      },
+      "starLocation": {
+        "id": "5",
+        "functionId": "huynh_de",
+        "branchName": "Thìn"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "positive_branch_Thìn",
+        "positive_major_configuration_thien_tuong+tu_vi"
+      ],
+      "majorStars": [
+        "tu_vi",
+        "thien_tuong"
+      ],
+      "adverseStars": [
+        "da_la",
+        "hoa_tinh"
+      ],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-09",
+      "input": {
+        "day": 15,
+        "month": 4,
+        "year": 1986,
+        "hour": 6,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 7,
+        "lunarMonth": 3,
+        "lunarYear": 1986,
+        "isLeapMonth": false,
+        "canName": "Bính",
+        "chiName": "Dần",
+        "canIndex": 2,
+        "chiIndex": 3
+      },
+      "host": {
+        "id": "1",
+        "functionId": "huynh_de",
+        "branchName": "Tí"
+      },
+      "starLocation": {
+        "id": "1",
+        "functionId": "huynh_de",
+        "branchName": "Tí"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "positive_branch_Tí"
+      ],
+      "majorStars": [
+        "tu_vi"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-10",
+      "input": {
+        "day": 15,
+        "month": 1,
+        "year": 1987,
+        "hour": 6,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 16,
+        "lunarMonth": 12,
+        "lunarYear": 1986,
+        "isLeapMonth": false,
+        "canName": "Bính",
+        "chiName": "Dần",
+        "canIndex": 2,
+        "chiIndex": 3
+      },
+      "host": {
+        "id": "10",
+        "functionId": "huynh_de",
+        "branchName": "Dậu"
+      },
+      "starLocation": {
+        "id": "10",
+        "functionId": "huynh_de",
+        "branchName": "Dậu"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "positive_branch_Dậu",
+        "positive_major_configuration_tham_lang+tu_vi"
+      ],
+      "majorStars": [
+        "tu_vi",
+        "tham_lang"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-11",
+      "input": {
+        "day": 15,
+        "month": 9,
+        "year": 1987,
+        "hour": 0,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 23,
+        "lunarMonth": 7,
+        "lunarYear": 1987,
+        "isLeapMonth": true,
+        "canName": "Đinh",
+        "chiName": "Mão",
+        "canIndex": 3,
+        "chiIndex": 4
+      },
+      "host": {
+        "id": "9",
+        "functionId": "huynh_de",
+        "branchName": "Thân"
+      },
+      "starLocation": {
+        "id": "9",
+        "functionId": "huynh_de",
+        "branchName": "Thân"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "positive_branch_Thân",
+        "positive_major_configuration_thien_phu+tu_vi"
+      ],
+      "majorStars": [
+        "tu_vi",
+        "thien_phu"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-12",
+      "input": {
+        "day": 15,
+        "month": 6,
+        "year": 1988,
+        "hour": 6,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 2,
+        "lunarMonth": 5,
+        "lunarYear": 1988,
+        "isLeapMonth": false,
+        "canName": "Mậu",
+        "chiName": "Thìn",
+        "canIndex": 4,
+        "chiIndex": 5
+      },
+      "host": {
+        "id": "3",
+        "functionId": "huynh_de",
+        "branchName": "Dần"
+      },
+      "starLocation": {
+        "id": "3",
+        "functionId": "huynh_de",
+        "branchName": "Dần"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "positive_branch_Dần"
+      ],
+      "majorStars": [
+        "tu_vi",
+        "thien_phu"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-13",
+      "input": {
+        "day": 15,
+        "month": 5,
+        "year": 1990,
+        "hour": 12,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 21,
+        "lunarMonth": 4,
+        "lunarYear": 1990,
+        "isLeapMonth": false,
+        "canName": "Canh",
+        "chiName": "Ngọ",
+        "canIndex": 6,
+        "chiIndex": 7
+      },
+      "host": {
+        "id": "11",
+        "functionId": "huynh_de",
+        "branchName": "Tuất"
+      },
+      "starLocation": {
+        "id": "11",
+        "functionId": "huynh_de",
+        "branchName": "Tuất"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "positive_branch_Tuất"
+      ],
+      "majorStars": [
+        "tu_vi",
+        "thien_tuong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-14",
+      "input": {
+        "day": 15,
+        "month": 7,
+        "year": 1991,
+        "hour": 6,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 4,
+        "lunarMonth": 6,
+        "lunarYear": 1991,
+        "isLeapMonth": false,
+        "canName": "Tân",
+        "chiName": "Mùi",
+        "canIndex": 7,
+        "chiIndex": 8
+      },
+      "host": {
+        "id": "4",
+        "functionId": "huynh_de",
+        "branchName": "Mão"
+      },
+      "starLocation": {
+        "id": "4",
+        "functionId": "huynh_de",
+        "branchName": "Mão"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "positive_branch_Mão"
+      ],
+      "majorStars": [
+        "tu_vi",
+        "tham_lang"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-15",
+      "input": {
+        "day": 15,
+        "month": 2,
+        "year": 1984,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 14,
+        "lunarMonth": 1,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "8",
+        "functionId": "huynh_de",
+        "branchName": "Mùi"
+      },
+      "starLocation": {
+        "id": "8",
+        "functionId": "huynh_de",
+        "branchName": "Mùi"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "positive",
+        "positive_cohost",
+        "positive_four_adverse_absent",
+        "positive_branch_Mùi",
+        "positive_major_configuration_pha_quan+tu_vi"
+      ],
+      "majorStars": [
+        "tu_vi",
+        "pha_quan"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-16",
+      "input": {
+        "day": 15,
+        "month": 1,
+        "year": 1985,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 25,
+        "lunarMonth": 12,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "7",
+        "functionId": "huynh_de",
+        "branchName": "Ngọ"
+      },
+      "starLocation": {
+        "id": "7",
+        "functionId": "huynh_de",
+        "branchName": "Ngọ"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "positive_standalone",
+        "positive_branch_Ngọ",
+        "positive_major_configuration_tu_vi"
+      ],
+      "majorStars": [
+        "tu_vi"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-17",
+      "input": {
+        "day": 15,
+        "month": 5,
+        "year": 1984,
+        "hour": 6,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 15,
+        "lunarMonth": 4,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "2",
+        "functionId": "huynh_de",
+        "branchName": "Sửu"
+      },
+      "starLocation": {
+        "id": "2",
+        "functionId": "huynh_de",
+        "branchName": "Sửu"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "positive_four_adverse_present",
+        "positive_branch_Sửu"
+      ],
+      "majorStars": [
+        "tu_vi",
+        "pha_quan"
+      ],
+      "adverseStars": [
+        "da_la"
+      ],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-18",
+      "input": {
+        "day": 15,
+        "month": 1,
+        "year": 1984,
+        "hour": 0,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 13,
+        "lunarMonth": 12,
+        "lunarYear": 1983,
+        "isLeapMonth": false,
+        "canName": "Quý",
+        "chiName": "Hợi",
+        "canIndex": 9,
+        "chiIndex": 12
+      },
+      "host": {
+        "id": "1",
+        "functionId": "huynh_de",
+        "branchName": "Tí"
+      },
+      "starLocation": {
+        "id": "3",
+        "functionId": "phu_mau",
+        "branchName": "Dần"
+      },
+      "expected": false,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "negative_wrong_host",
+        "negative_missing_target_star"
+      ],
+      "majorStars": [
+        "pha_quan"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-19",
+      "input": {
+        "day": 15,
+        "month": 3,
+        "year": 1984,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 13,
+        "lunarMonth": 2,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "9",
+        "functionId": "huynh_de",
+        "branchName": "Thân"
+      },
+      "starLocation": {
+        "id": "3",
+        "functionId": "no_boc",
+        "branchName": "Dần"
+      },
+      "expected": false,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "negative_opposite_only"
+      ],
+      "majorStars": [
+        "that_sat"
+      ],
+      "adverseStars": [
+        "hoa_tinh"
+      ],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-20",
+      "input": {
+        "day": 15,
+        "month": 9,
+        "year": 1984,
+        "hour": 6,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 20,
+        "lunarMonth": 8,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "6",
+        "functionId": "huynh_de",
+        "branchName": "Tị"
+      },
+      "starLocation": {
+        "id": "6",
+        "functionId": "huynh_de",
+        "branchName": "Tị"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "positive_branch_Tị",
+        "positive_major_configuration_that_sat+tu_vi"
+      ],
+      "majorStars": [
+        "tu_vi",
+        "that_sat"
+      ],
+      "adverseStars": [
+        "hoa_tinh"
+      ],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-21",
+      "input": {
+        "day": 15,
+        "month": 9,
+        "year": 1984,
+        "hour": 18,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 20,
+        "lunarMonth": 8,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "12",
+        "functionId": "huynh_de",
+        "branchName": "Hợi"
+      },
+      "starLocation": {
+        "id": "12",
+        "functionId": "huynh_de",
+        "branchName": "Hợi"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "positive_branch_Hợi"
+      ],
+      "majorStars": [
+        "tu_vi",
+        "that_sat"
+      ],
+      "adverseStars": [
+        "hoa_tinh"
+      ],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-22",
+      "input": {
+        "day": 15,
+        "month": 2,
+        "year": 1986,
+        "hour": 18,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 7,
+        "lunarMonth": 1,
+        "lunarYear": 1986,
+        "isLeapMonth": false,
+        "canName": "Bính",
+        "chiName": "Dần",
+        "canIndex": 2,
+        "chiIndex": 3
+      },
+      "host": {
+        "id": "5",
+        "functionId": "huynh_de",
+        "branchName": "Thìn"
+      },
+      "starLocation": {
+        "id": "5",
+        "functionId": "huynh_de",
+        "branchName": "Thìn"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "positive_branch_Thìn",
+        "positive_major_configuration_thien_tuong+tu_vi"
+      ],
+      "majorStars": [
+        "tu_vi",
+        "thien_tuong"
+      ],
+      "adverseStars": [
+        "da_la"
+      ],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-23",
+      "input": {
+        "day": 15,
+        "month": 4,
+        "year": 1986,
+        "hour": 6,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 7,
+        "lunarMonth": 3,
+        "lunarYear": 1986,
+        "isLeapMonth": false,
+        "canName": "Bính",
+        "chiName": "Dần",
+        "canIndex": 2,
+        "chiIndex": 3
+      },
+      "host": {
+        "id": "1",
+        "functionId": "huynh_de",
+        "branchName": "Tí"
+      },
+      "starLocation": {
+        "id": "1",
+        "functionId": "huynh_de",
+        "branchName": "Tí"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "positive_branch_Tí"
+      ],
+      "majorStars": [
+        "tu_vi"
+      ],
+      "adverseStars": [
+        "linh_tinh"
+      ],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-24",
+      "input": {
+        "day": 15,
+        "month": 1,
+        "year": 1987,
+        "hour": 6,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 16,
+        "lunarMonth": 12,
+        "lunarYear": 1986,
+        "isLeapMonth": false,
+        "canName": "Bính",
+        "chiName": "Dần",
+        "canIndex": 2,
+        "chiIndex": 3
+      },
+      "host": {
+        "id": "10",
+        "functionId": "huynh_de",
+        "branchName": "Dậu"
+      },
+      "starLocation": {
+        "id": "10",
+        "functionId": "huynh_de",
+        "branchName": "Dậu"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "positive_branch_Dậu",
+        "positive_major_configuration_tham_lang+tu_vi"
+      ],
+      "majorStars": [
+        "tu_vi",
+        "tham_lang"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-25",
+      "input": {
+        "day": 15,
+        "month": 9,
+        "year": 1987,
+        "hour": 0,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 23,
+        "lunarMonth": 7,
+        "lunarYear": 1987,
+        "isLeapMonth": true,
+        "canName": "Đinh",
+        "chiName": "Mão",
+        "canIndex": 3,
+        "chiIndex": 4
+      },
+      "host": {
+        "id": "9",
+        "functionId": "huynh_de",
+        "branchName": "Thân"
+      },
+      "starLocation": {
+        "id": "9",
+        "functionId": "huynh_de",
+        "branchName": "Thân"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "positive_branch_Thân",
+        "positive_major_configuration_thien_phu+tu_vi"
+      ],
+      "majorStars": [
+        "tu_vi",
+        "thien_phu"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-26",
+      "input": {
+        "day": 15,
+        "month": 6,
+        "year": 1988,
+        "hour": 6,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 2,
+        "lunarMonth": 5,
+        "lunarYear": 1988,
+        "isLeapMonth": false,
+        "canName": "Mậu",
+        "chiName": "Thìn",
+        "canIndex": 4,
+        "chiIndex": 5
+      },
+      "host": {
+        "id": "3",
+        "functionId": "huynh_de",
+        "branchName": "Dần"
+      },
+      "starLocation": {
+        "id": "3",
+        "functionId": "huynh_de",
+        "branchName": "Dần"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "positive_branch_Dần"
+      ],
+      "majorStars": [
+        "tu_vi",
+        "thien_phu"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-27",
+      "input": {
+        "day": 15,
+        "month": 5,
+        "year": 1990,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 21,
+        "lunarMonth": 4,
+        "lunarYear": 1990,
+        "isLeapMonth": false,
+        "canName": "Canh",
+        "chiName": "Ngọ",
+        "canIndex": 6,
+        "chiIndex": 7
+      },
+      "host": {
+        "id": "11",
+        "functionId": "huynh_de",
+        "branchName": "Tuất"
+      },
+      "starLocation": {
+        "id": "11",
+        "functionId": "huynh_de",
+        "branchName": "Tuất"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "positive_branch_Tuất"
+      ],
+      "majorStars": [
+        "tu_vi",
+        "thien_tuong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-huynh-de-tu-vi-host-independent-28",
+      "input": {
+        "day": 15,
+        "month": 7,
+        "year": 1991,
+        "hour": 6,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 4,
+        "lunarMonth": 6,
+        "lunarYear": 1991,
+        "isLeapMonth": false,
+        "canName": "Tân",
+        "chiName": "Mùi",
+        "canIndex": 7,
+        "chiIndex": 8
+      },
+      "host": {
+        "id": "4",
+        "functionId": "huynh_de",
+        "branchName": "Mão"
+      },
+      "starLocation": {
+        "id": "4",
+        "functionId": "huynh_de",
+        "branchName": "Mão"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "huynh_de",
+        "star": "Tử Vi"
+      },
+      "labels": [
+        "positive_branch_Mão"
+      ],
+      "majorStars": [
+        "tu_vi",
+        "tham_lang"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    }
+  ],
+  "interp-quanshu-phu-the-thien-luong-host": [
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-01",
+      "input": {
+        "day": 15,
+        "month": 3,
+        "year": 1984,
+        "hour": 12,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 13,
+        "lunarMonth": 2,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "8",
+        "functionId": "phu_the",
+        "branchName": "Mùi"
+      },
+      "starLocation": {
+        "id": "8",
+        "functionId": "phu_the",
+        "branchName": "Mùi"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "positive",
+        "positive_standalone",
+        "positive_four_adverse_absent",
+        "positive_branch_Mùi",
+        "positive_major_configuration_thien_luong"
+      ],
+      "majorStars": [
+        "thien_luong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-02",
+      "input": {
+        "day": 15,
+        "month": 4,
+        "year": 1984,
+        "hour": 12,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 15,
+        "lunarMonth": 3,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "9",
+        "functionId": "phu_the",
+        "branchName": "Thân"
+      },
+      "starLocation": {
+        "id": "9",
+        "functionId": "phu_the",
+        "branchName": "Thân"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "positive_cohost",
+        "positive_four_adverse_present",
+        "positive_branch_Thân",
+        "positive_major_configuration_thien_dong+thien_luong"
+      ],
+      "majorStars": [
+        "thien_dong",
+        "thien_luong"
+      ],
+      "adverseStars": [
+        "hoa_tinh"
+      ],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-03",
+      "input": {
+        "day": 15,
+        "month": 1,
+        "year": 1984,
+        "hour": 0,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 13,
+        "lunarMonth": 12,
+        "lunarYear": 1983,
+        "isLeapMonth": false,
+        "canName": "Quý",
+        "chiName": "Hợi",
+        "canIndex": 9,
+        "chiIndex": 12
+      },
+      "host": {
+        "id": "12",
+        "functionId": "phu_the",
+        "branchName": "Hợi"
+      },
+      "starLocation": {
+        "id": "8",
+        "functionId": "thien_di",
+        "branchName": "Mùi"
+      },
+      "expected": false,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "negative_wrong_host",
+        "negative_missing_target_star"
+      ],
+      "majorStars": [
+        "thai_duong"
+      ],
+      "adverseStars": [
+        "da_la"
+      ],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-04",
+      "input": {
+        "day": 15,
+        "month": 1,
+        "year": 1984,
+        "hour": 6,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 13,
+        "lunarMonth": 12,
+        "lunarYear": 1983,
+        "isLeapMonth": false,
+        "canName": "Quý",
+        "chiName": "Hợi",
+        "canIndex": 9,
+        "chiIndex": 12
+      },
+      "host": {
+        "id": "9",
+        "functionId": "phu_the",
+        "branchName": "Thân"
+      },
+      "starLocation": {
+        "id": "3",
+        "functionId": "quan_loc",
+        "branchName": "Dần"
+      },
+      "expected": false,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "negative_opposite_only"
+      ],
+      "majorStars": [],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-05",
+      "input": {
+        "day": 15,
+        "month": 4,
+        "year": 1984,
+        "hour": 18,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 15,
+        "lunarMonth": 3,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "6",
+        "functionId": "phu_the",
+        "branchName": "Tị"
+      },
+      "starLocation": {
+        "id": "6",
+        "functionId": "phu_the",
+        "branchName": "Tị"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "positive_branch_Tị"
+      ],
+      "majorStars": [
+        "thien_luong"
+      ],
+      "adverseStars": [
+        "hoa_tinh"
+      ],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-06",
+      "input": {
+        "day": 15,
+        "month": 5,
+        "year": 1984,
+        "hour": 0,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 15,
+        "lunarMonth": 4,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "4",
+        "functionId": "phu_the",
+        "branchName": "Mão"
+      },
+      "starLocation": {
+        "id": "4",
+        "functionId": "phu_the",
+        "branchName": "Mão"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "positive_branch_Mão",
+        "positive_major_configuration_thai_duong+thien_luong"
+      ],
+      "majorStars": [
+        "thai_duong",
+        "thien_luong"
+      ],
+      "adverseStars": [
+        "kinh_duong"
+      ],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-07",
+      "input": {
+        "day": 15,
+        "month": 8,
+        "year": 1984,
+        "hour": 18,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 19,
+        "lunarMonth": 7,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "10",
+        "functionId": "phu_the",
+        "branchName": "Dậu"
+      },
+      "starLocation": {
+        "id": "10",
+        "functionId": "phu_the",
+        "branchName": "Dậu"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "positive_branch_Dậu"
+      ],
+      "majorStars": [
+        "thai_duong",
+        "thien_luong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-08",
+      "input": {
+        "day": 15,
+        "month": 9,
+        "year": 1984,
+        "hour": 6,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 20,
+        "lunarMonth": 8,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "5",
+        "functionId": "phu_the",
+        "branchName": "Thìn"
+      },
+      "starLocation": {
+        "id": "5",
+        "functionId": "phu_the",
+        "branchName": "Thìn"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "positive_branch_Thìn",
+        "positive_major_configuration_thien_co+thien_luong"
+      ],
+      "majorStars": [
+        "thien_co",
+        "thien_luong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-09",
+      "input": {
+        "day": 15,
+        "month": 9,
+        "year": 1984,
+        "hour": 18,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 20,
+        "lunarMonth": 8,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "11",
+        "functionId": "phu_the",
+        "branchName": "Tuất"
+      },
+      "starLocation": {
+        "id": "11",
+        "functionId": "phu_the",
+        "branchName": "Tuất"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "positive_branch_Tuất"
+      ],
+      "majorStars": [
+        "thien_co",
+        "thien_luong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-10",
+      "input": {
+        "day": 15,
+        "month": 4,
+        "year": 1985,
+        "hour": 6,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 26,
+        "lunarMonth": 2,
+        "lunarYear": 1985,
+        "isLeapMonth": true,
+        "canName": "Ất",
+        "chiName": "Sửu",
+        "canIndex": 1,
+        "chiIndex": 2
+      },
+      "host": {
+        "id": "12",
+        "functionId": "phu_the",
+        "branchName": "Hợi"
+      },
+      "starLocation": {
+        "id": "12",
+        "functionId": "phu_the",
+        "branchName": "Hợi"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "positive_branch_Hợi"
+      ],
+      "majorStars": [
+        "thien_luong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-11",
+      "input": {
+        "day": 15,
+        "month": 11,
+        "year": 1985,
+        "hour": 6,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 4,
+        "lunarMonth": 10,
+        "lunarYear": 1985,
+        "isLeapMonth": false,
+        "canName": "Ất",
+        "chiName": "Sửu",
+        "canIndex": 1,
+        "chiIndex": 2
+      },
+      "host": {
+        "id": "7",
+        "functionId": "phu_the",
+        "branchName": "Ngọ"
+      },
+      "starLocation": {
+        "id": "7",
+        "functionId": "phu_the",
+        "branchName": "Ngọ"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "positive_branch_Ngọ"
+      ],
+      "majorStars": [
+        "thien_luong"
+      ],
+      "adverseStars": [
+        "hoa_tinh"
+      ],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-12",
+      "input": {
+        "day": 15,
+        "month": 10,
+        "year": 1986,
+        "hour": 12,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 12,
+        "lunarMonth": 9,
+        "lunarYear": 1986,
+        "isLeapMonth": false,
+        "canName": "Bính",
+        "chiName": "Dần",
+        "canIndex": 2,
+        "chiIndex": 3
+      },
+      "host": {
+        "id": "3",
+        "functionId": "phu_the",
+        "branchName": "Dần"
+      },
+      "starLocation": {
+        "id": "3",
+        "functionId": "phu_the",
+        "branchName": "Dần"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "positive_branch_Dần"
+      ],
+      "majorStars": [
+        "thien_dong",
+        "thien_luong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-13",
+      "input": {
+        "day": 15,
+        "month": 6,
+        "year": 1990,
+        "hour": 6,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 23,
+        "lunarMonth": 5,
+        "lunarYear": 1990,
+        "isLeapMonth": false,
+        "canName": "Canh",
+        "chiName": "Ngọ",
+        "canIndex": 6,
+        "chiIndex": 7
+      },
+      "host": {
+        "id": "2",
+        "functionId": "phu_the",
+        "branchName": "Sửu"
+      },
+      "starLocation": {
+        "id": "2",
+        "functionId": "phu_the",
+        "branchName": "Sửu"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "positive_branch_Sửu"
+      ],
+      "majorStars": [
+        "thien_luong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-14",
+      "input": {
+        "day": 15,
+        "month": 2,
+        "year": 1995,
+        "hour": 0,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 16,
+        "lunarMonth": 1,
+        "lunarYear": 1995,
+        "isLeapMonth": false,
+        "canName": "Ất",
+        "chiName": "Hợi",
+        "canIndex": 1,
+        "chiIndex": 12
+      },
+      "host": {
+        "id": "1",
+        "functionId": "phu_the",
+        "branchName": "Tí"
+      },
+      "starLocation": {
+        "id": "1",
+        "functionId": "phu_the",
+        "branchName": "Tí"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "positive_branch_Tí"
+      ],
+      "majorStars": [
+        "thien_luong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-15",
+      "input": {
+        "day": 15,
+        "month": 3,
+        "year": 1984,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 13,
+        "lunarMonth": 2,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "8",
+        "functionId": "phu_the",
+        "branchName": "Mùi"
+      },
+      "starLocation": {
+        "id": "8",
+        "functionId": "phu_the",
+        "branchName": "Mùi"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "positive",
+        "positive_standalone",
+        "positive_four_adverse_absent",
+        "positive_branch_Mùi",
+        "positive_major_configuration_thien_luong"
+      ],
+      "majorStars": [
+        "thien_luong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-16",
+      "input": {
+        "day": 15,
+        "month": 4,
+        "year": 1984,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 15,
+        "lunarMonth": 3,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "9",
+        "functionId": "phu_the",
+        "branchName": "Thân"
+      },
+      "starLocation": {
+        "id": "9",
+        "functionId": "phu_the",
+        "branchName": "Thân"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "positive_cohost",
+        "positive_four_adverse_present",
+        "positive_branch_Thân",
+        "positive_major_configuration_thien_dong+thien_luong"
+      ],
+      "majorStars": [
+        "thien_dong",
+        "thien_luong"
+      ],
+      "adverseStars": [
+        "hoa_tinh"
+      ],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-17",
+      "input": {
+        "day": 15,
+        "month": 1,
+        "year": 1984,
+        "hour": 0,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 13,
+        "lunarMonth": 12,
+        "lunarYear": 1983,
+        "isLeapMonth": false,
+        "canName": "Quý",
+        "chiName": "Hợi",
+        "canIndex": 9,
+        "chiIndex": 12
+      },
+      "host": {
+        "id": "12",
+        "functionId": "phu_the",
+        "branchName": "Hợi"
+      },
+      "starLocation": {
+        "id": "8",
+        "functionId": "thien_di",
+        "branchName": "Mùi"
+      },
+      "expected": false,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "negative_wrong_host",
+        "negative_missing_target_star"
+      ],
+      "majorStars": [
+        "thai_duong"
+      ],
+      "adverseStars": [
+        "da_la"
+      ],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-18",
+      "input": {
+        "day": 15,
+        "month": 1,
+        "year": 1984,
+        "hour": 6,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 13,
+        "lunarMonth": 12,
+        "lunarYear": 1983,
+        "isLeapMonth": false,
+        "canName": "Quý",
+        "chiName": "Hợi",
+        "canIndex": 9,
+        "chiIndex": 12
+      },
+      "host": {
+        "id": "9",
+        "functionId": "phu_the",
+        "branchName": "Thân"
+      },
+      "starLocation": {
+        "id": "3",
+        "functionId": "quan_loc",
+        "branchName": "Dần"
+      },
+      "expected": false,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "negative_opposite_only"
+      ],
+      "majorStars": [],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-19",
+      "input": {
+        "day": 15,
+        "month": 4,
+        "year": 1984,
+        "hour": 18,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 15,
+        "lunarMonth": 3,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "6",
+        "functionId": "phu_the",
+        "branchName": "Tị"
+      },
+      "starLocation": {
+        "id": "6",
+        "functionId": "phu_the",
+        "branchName": "Tị"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "positive_branch_Tị"
+      ],
+      "majorStars": [
+        "thien_luong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-20",
+      "input": {
+        "day": 15,
+        "month": 5,
+        "year": 1984,
+        "hour": 0,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 15,
+        "lunarMonth": 4,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "4",
+        "functionId": "phu_the",
+        "branchName": "Mão"
+      },
+      "starLocation": {
+        "id": "4",
+        "functionId": "phu_the",
+        "branchName": "Mão"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "positive_branch_Mão",
+        "positive_major_configuration_thai_duong+thien_luong"
+      ],
+      "majorStars": [
+        "thai_duong",
+        "thien_luong"
+      ],
+      "adverseStars": [
+        "kinh_duong"
+      ],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-21",
+      "input": {
+        "day": 15,
+        "month": 8,
+        "year": 1984,
+        "hour": 18,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 19,
+        "lunarMonth": 7,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "10",
+        "functionId": "phu_the",
+        "branchName": "Dậu"
+      },
+      "starLocation": {
+        "id": "10",
+        "functionId": "phu_the",
+        "branchName": "Dậu"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "positive_branch_Dậu"
+      ],
+      "majorStars": [
+        "thai_duong",
+        "thien_luong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-22",
+      "input": {
+        "day": 15,
+        "month": 9,
+        "year": 1984,
+        "hour": 6,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 20,
+        "lunarMonth": 8,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "5",
+        "functionId": "phu_the",
+        "branchName": "Thìn"
+      },
+      "starLocation": {
+        "id": "5",
+        "functionId": "phu_the",
+        "branchName": "Thìn"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "positive_branch_Thìn",
+        "positive_major_configuration_thien_co+thien_luong"
+      ],
+      "majorStars": [
+        "thien_co",
+        "thien_luong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-23",
+      "input": {
+        "day": 15,
+        "month": 9,
+        "year": 1984,
+        "hour": 18,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 20,
+        "lunarMonth": 8,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "11",
+        "functionId": "phu_the",
+        "branchName": "Tuất"
+      },
+      "starLocation": {
+        "id": "11",
+        "functionId": "phu_the",
+        "branchName": "Tuất"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "positive_branch_Tuất"
+      ],
+      "majorStars": [
+        "thien_co",
+        "thien_luong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-24",
+      "input": {
+        "day": 15,
+        "month": 4,
+        "year": 1985,
+        "hour": 6,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 26,
+        "lunarMonth": 2,
+        "lunarYear": 1985,
+        "isLeapMonth": true,
+        "canName": "Ất",
+        "chiName": "Sửu",
+        "canIndex": 1,
+        "chiIndex": 2
+      },
+      "host": {
+        "id": "12",
+        "functionId": "phu_the",
+        "branchName": "Hợi"
+      },
+      "starLocation": {
+        "id": "12",
+        "functionId": "phu_the",
+        "branchName": "Hợi"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "positive_branch_Hợi"
+      ],
+      "majorStars": [
+        "thien_luong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-25",
+      "input": {
+        "day": 15,
+        "month": 11,
+        "year": 1985,
+        "hour": 6,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 4,
+        "lunarMonth": 10,
+        "lunarYear": 1985,
+        "isLeapMonth": false,
+        "canName": "Ất",
+        "chiName": "Sửu",
+        "canIndex": 1,
+        "chiIndex": 2
+      },
+      "host": {
+        "id": "7",
+        "functionId": "phu_the",
+        "branchName": "Ngọ"
+      },
+      "starLocation": {
+        "id": "7",
+        "functionId": "phu_the",
+        "branchName": "Ngọ"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "positive_branch_Ngọ"
+      ],
+      "majorStars": [
+        "thien_luong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-26",
+      "input": {
+        "day": 15,
+        "month": 10,
+        "year": 1986,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 12,
+        "lunarMonth": 9,
+        "lunarYear": 1986,
+        "isLeapMonth": false,
+        "canName": "Bính",
+        "chiName": "Dần",
+        "canIndex": 2,
+        "chiIndex": 3
+      },
+      "host": {
+        "id": "3",
+        "functionId": "phu_the",
+        "branchName": "Dần"
+      },
+      "starLocation": {
+        "id": "3",
+        "functionId": "phu_the",
+        "branchName": "Dần"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "positive_branch_Dần"
+      ],
+      "majorStars": [
+        "thien_dong",
+        "thien_luong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-27",
+      "input": {
+        "day": 15,
+        "month": 6,
+        "year": 1990,
+        "hour": 6,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 23,
+        "lunarMonth": 5,
+        "lunarYear": 1990,
+        "isLeapMonth": false,
+        "canName": "Canh",
+        "chiName": "Ngọ",
+        "canIndex": 6,
+        "chiIndex": 7
+      },
+      "host": {
+        "id": "2",
+        "functionId": "phu_the",
+        "branchName": "Sửu"
+      },
+      "starLocation": {
+        "id": "2",
+        "functionId": "phu_the",
+        "branchName": "Sửu"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "positive_branch_Sửu"
+      ],
+      "majorStars": [
+        "thien_luong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-luong-host-independent-28",
+      "input": {
+        "day": 15,
+        "month": 2,
+        "year": 1995,
+        "hour": 0,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 16,
+        "lunarMonth": 1,
+        "lunarYear": 1995,
+        "isLeapMonth": false,
+        "canName": "Ất",
+        "chiName": "Hợi",
+        "canIndex": 1,
+        "chiIndex": 12
+      },
+      "host": {
+        "id": "1",
+        "functionId": "phu_the",
+        "branchName": "Tí"
+      },
+      "starLocation": {
+        "id": "1",
+        "functionId": "phu_the",
+        "branchName": "Tí"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Lương"
+      },
+      "labels": [
+        "positive_branch_Tí"
+      ],
+      "majorStars": [
+        "thien_luong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    }
+  ],
+  "interp-quanshu-phu-the-thien-tuong-host": [
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-01",
+      "input": {
+        "day": 15,
+        "month": 1,
+        "year": 1984,
+        "hour": 18,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 13,
+        "lunarMonth": 12,
+        "lunarYear": 1983,
+        "isLeapMonth": false,
+        "canName": "Quý",
+        "chiName": "Hợi",
+        "canIndex": 9,
+        "chiIndex": 12
+      },
+      "host": {
+        "id": "3",
+        "functionId": "phu_the",
+        "branchName": "Dần"
+      },
+      "starLocation": {
+        "id": "3",
+        "functionId": "phu_the",
+        "branchName": "Dần"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "positive",
+        "positive_cohost",
+        "positive_four_adverse_absent",
+        "positive_branch_Dần",
+        "positive_major_configuration_thien_tuong+vu_khuc"
+      ],
+      "majorStars": [
+        "vu_khuc",
+        "thien_tuong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-02",
+      "input": {
+        "day": 15,
+        "month": 2,
+        "year": 1984,
+        "hour": 18,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 14,
+        "lunarMonth": 1,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "4",
+        "functionId": "phu_the",
+        "branchName": "Mão"
+      },
+      "starLocation": {
+        "id": "4",
+        "functionId": "phu_the",
+        "branchName": "Mão"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "positive_standalone",
+        "positive_four_adverse_present",
+        "positive_branch_Mão",
+        "positive_major_configuration_thien_tuong"
+      ],
+      "majorStars": [
+        "thien_tuong"
+      ],
+      "adverseStars": [
+        "kinh_duong"
+      ],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-03",
+      "input": {
+        "day": 15,
+        "month": 1,
+        "year": 1984,
+        "hour": 0,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 13,
+        "lunarMonth": 12,
+        "lunarYear": 1983,
+        "isLeapMonth": false,
+        "canName": "Quý",
+        "chiName": "Hợi",
+        "canIndex": 9,
+        "chiIndex": 12
+      },
+      "host": {
+        "id": "12",
+        "functionId": "phu_the",
+        "branchName": "Hợi"
+      },
+      "starLocation": {
+        "id": "7",
+        "functionId": "no_boc",
+        "branchName": "Ngọ"
+      },
+      "expected": false,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "negative_wrong_host",
+        "negative_missing_target_star"
+      ],
+      "majorStars": [
+        "thai_duong"
+      ],
+      "adverseStars": [
+        "da_la"
+      ],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-04",
+      "input": {
+        "day": 15,
+        "month": 1,
+        "year": 1985,
+        "hour": 18,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 25,
+        "lunarMonth": 12,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "3",
+        "functionId": "phu_the",
+        "branchName": "Dần"
+      },
+      "starLocation": {
+        "id": "9",
+        "functionId": "quan_loc",
+        "branchName": "Thân"
+      },
+      "expected": false,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "negative_opposite_only"
+      ],
+      "majorStars": [
+        "pha_quan"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-05",
+      "input": {
+        "day": 15,
+        "month": 2,
+        "year": 1984,
+        "hour": 0,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 14,
+        "lunarMonth": 1,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "1",
+        "functionId": "phu_the",
+        "branchName": "Tí"
+      },
+      "starLocation": {
+        "id": "1",
+        "functionId": "phu_the",
+        "branchName": "Tí"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "positive_branch_Tí",
+        "positive_major_configuration_liem_trinh+thien_tuong"
+      ],
+      "majorStars": [
+        "thien_tuong",
+        "liem_trinh"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-06",
+      "input": {
+        "day": 15,
+        "month": 7,
+        "year": 1984,
+        "hour": 12,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 17,
+        "lunarMonth": 6,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "12",
+        "functionId": "phu_the",
+        "branchName": "Hợi"
+      },
+      "starLocation": {
+        "id": "12",
+        "functionId": "phu_the",
+        "branchName": "Hợi"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "positive_branch_Hợi"
+      ],
+      "majorStars": [
+        "thien_tuong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-07",
+      "input": {
+        "day": 15,
+        "month": 2,
+        "year": 1985,
+        "hour": 6,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 26,
+        "lunarMonth": 1,
+        "lunarYear": 1985,
+        "isLeapMonth": false,
+        "canName": "Ất",
+        "chiName": "Sửu",
+        "canIndex": 1,
+        "chiIndex": 2
+      },
+      "host": {
+        "id": "10",
+        "functionId": "phu_the",
+        "branchName": "Dậu"
+      },
+      "starLocation": {
+        "id": "10",
+        "functionId": "phu_the",
+        "branchName": "Dậu"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "positive_branch_Dậu"
+      ],
+      "majorStars": [
+        "thien_tuong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-08",
+      "input": {
+        "day": 15,
+        "month": 2,
+        "year": 1985,
+        "hour": 12,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 26,
+        "lunarMonth": 1,
+        "lunarYear": 1985,
+        "isLeapMonth": false,
+        "canName": "Ất",
+        "chiName": "Sửu",
+        "canIndex": 1,
+        "chiIndex": 2
+      },
+      "host": {
+        "id": "7",
+        "functionId": "phu_the",
+        "branchName": "Ngọ"
+      },
+      "starLocation": {
+        "id": "7",
+        "functionId": "phu_the",
+        "branchName": "Ngọ"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "positive_branch_Ngọ"
+      ],
+      "majorStars": [
+        "thien_tuong",
+        "liem_trinh"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-09",
+      "input": {
+        "day": 15,
+        "month": 3,
+        "year": 1985,
+        "hour": 12,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 24,
+        "lunarMonth": 2,
+        "lunarYear": 1985,
+        "isLeapMonth": false,
+        "canName": "Ất",
+        "chiName": "Sửu",
+        "canIndex": 1,
+        "chiIndex": 2
+      },
+      "host": {
+        "id": "8",
+        "functionId": "phu_the",
+        "branchName": "Mùi"
+      },
+      "starLocation": {
+        "id": "8",
+        "functionId": "phu_the",
+        "branchName": "Mùi"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "positive_branch_Mùi"
+      ],
+      "majorStars": [
+        "thien_tuong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-10",
+      "input": {
+        "day": 15,
+        "month": 9,
+        "year": 1985,
+        "hour": 6,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 1,
+        "lunarMonth": 8,
+        "lunarYear": 1985,
+        "isLeapMonth": false,
+        "canName": "Ất",
+        "chiName": "Sửu",
+        "canIndex": 1,
+        "chiIndex": 2
+      },
+      "host": {
+        "id": "5",
+        "functionId": "phu_the",
+        "branchName": "Thìn"
+      },
+      "starLocation": {
+        "id": "5",
+        "functionId": "phu_the",
+        "branchName": "Thìn"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "positive_branch_Thìn",
+        "positive_major_configuration_thien_tuong+tu_vi"
+      ],
+      "majorStars": [
+        "tu_vi",
+        "thien_tuong"
+      ],
+      "adverseStars": [
+        "kinh_duong"
+      ],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-11",
+      "input": {
+        "day": 15,
+        "month": 1,
+        "year": 1986,
+        "hour": 12,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 6,
+        "lunarMonth": 12,
+        "lunarYear": 1985,
+        "isLeapMonth": false,
+        "canName": "Ất",
+        "chiName": "Sửu",
+        "canIndex": 1,
+        "chiIndex": 2
+      },
+      "host": {
+        "id": "6",
+        "functionId": "phu_the",
+        "branchName": "Tị"
+      },
+      "starLocation": {
+        "id": "6",
+        "functionId": "phu_the",
+        "branchName": "Tị"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "positive_branch_Tị"
+      ],
+      "majorStars": [
+        "thien_tuong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-12",
+      "input": {
+        "day": 15,
+        "month": 3,
+        "year": 1989,
+        "hour": 0,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 8,
+        "lunarMonth": 2,
+        "lunarYear": 1989,
+        "isLeapMonth": false,
+        "canName": "Kỷ",
+        "chiName": "Tị",
+        "canIndex": 5,
+        "chiIndex": 6
+      },
+      "host": {
+        "id": "2",
+        "functionId": "phu_the",
+        "branchName": "Sửu"
+      },
+      "starLocation": {
+        "id": "2",
+        "functionId": "phu_the",
+        "branchName": "Sửu"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "positive_branch_Sửu"
+      ],
+      "majorStars": [
+        "thien_tuong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-13",
+      "input": {
+        "day": 15,
+        "month": 12,
+        "year": 1989,
+        "hour": 0,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 18,
+        "lunarMonth": 11,
+        "lunarYear": 1989,
+        "isLeapMonth": false,
+        "canName": "Kỷ",
+        "chiName": "Tị",
+        "canIndex": 5,
+        "chiIndex": 6
+      },
+      "host": {
+        "id": "11",
+        "functionId": "phu_the",
+        "branchName": "Tuất"
+      },
+      "starLocation": {
+        "id": "11",
+        "functionId": "phu_the",
+        "branchName": "Tuất"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "positive_branch_Tuất"
+      ],
+      "majorStars": [
+        "tu_vi",
+        "thien_tuong"
+      ],
+      "adverseStars": [
+        "linh_tinh"
+      ],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-14",
+      "input": {
+        "day": 15,
+        "month": 1,
+        "year": 1990,
+        "hour": 6,
+        "gender": -1
+      },
+      "lunar": {
+        "lunarDay": 19,
+        "lunarMonth": 12,
+        "lunarYear": 1989,
+        "isLeapMonth": false,
+        "canName": "Kỷ",
+        "chiName": "Tị",
+        "canIndex": 5,
+        "chiIndex": 6
+      },
+      "host": {
+        "id": "9",
+        "functionId": "phu_the",
+        "branchName": "Thân"
+      },
+      "starLocation": {
+        "id": "9",
+        "functionId": "phu_the",
+        "branchName": "Thân"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "positive_branch_Thân"
+      ],
+      "majorStars": [
+        "vu_khuc",
+        "thien_tuong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-15",
+      "input": {
+        "day": 15,
+        "month": 1,
+        "year": 1984,
+        "hour": 18,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 13,
+        "lunarMonth": 12,
+        "lunarYear": 1983,
+        "isLeapMonth": false,
+        "canName": "Quý",
+        "chiName": "Hợi",
+        "canIndex": 9,
+        "chiIndex": 12
+      },
+      "host": {
+        "id": "3",
+        "functionId": "phu_the",
+        "branchName": "Dần"
+      },
+      "starLocation": {
+        "id": "3",
+        "functionId": "phu_the",
+        "branchName": "Dần"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "positive",
+        "positive_cohost",
+        "positive_four_adverse_absent",
+        "positive_branch_Dần",
+        "positive_major_configuration_thien_tuong+vu_khuc"
+      ],
+      "majorStars": [
+        "vu_khuc",
+        "thien_tuong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-16",
+      "input": {
+        "day": 15,
+        "month": 2,
+        "year": 1984,
+        "hour": 18,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 14,
+        "lunarMonth": 1,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "4",
+        "functionId": "phu_the",
+        "branchName": "Mão"
+      },
+      "starLocation": {
+        "id": "4",
+        "functionId": "phu_the",
+        "branchName": "Mão"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "positive_standalone",
+        "positive_four_adverse_present",
+        "positive_branch_Mão",
+        "positive_major_configuration_thien_tuong"
+      ],
+      "majorStars": [
+        "thien_tuong"
+      ],
+      "adverseStars": [
+        "kinh_duong"
+      ],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-17",
+      "input": {
+        "day": 15,
+        "month": 1,
+        "year": 1984,
+        "hour": 0,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 13,
+        "lunarMonth": 12,
+        "lunarYear": 1983,
+        "isLeapMonth": false,
+        "canName": "Quý",
+        "chiName": "Hợi",
+        "canIndex": 9,
+        "chiIndex": 12
+      },
+      "host": {
+        "id": "12",
+        "functionId": "phu_the",
+        "branchName": "Hợi"
+      },
+      "starLocation": {
+        "id": "7",
+        "functionId": "no_boc",
+        "branchName": "Ngọ"
+      },
+      "expected": false,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "negative_wrong_host",
+        "negative_missing_target_star"
+      ],
+      "majorStars": [
+        "thai_duong"
+      ],
+      "adverseStars": [
+        "da_la"
+      ],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-18",
+      "input": {
+        "day": 15,
+        "month": 1,
+        "year": 1985,
+        "hour": 18,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 25,
+        "lunarMonth": 12,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "3",
+        "functionId": "phu_the",
+        "branchName": "Dần"
+      },
+      "starLocation": {
+        "id": "9",
+        "functionId": "quan_loc",
+        "branchName": "Thân"
+      },
+      "expected": false,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "negative_opposite_only"
+      ],
+      "majorStars": [
+        "pha_quan"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-19",
+      "input": {
+        "day": 15,
+        "month": 2,
+        "year": 1984,
+        "hour": 0,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 14,
+        "lunarMonth": 1,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "1",
+        "functionId": "phu_the",
+        "branchName": "Tí"
+      },
+      "starLocation": {
+        "id": "1",
+        "functionId": "phu_the",
+        "branchName": "Tí"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "positive_branch_Tí",
+        "positive_major_configuration_liem_trinh+thien_tuong"
+      ],
+      "majorStars": [
+        "thien_tuong",
+        "liem_trinh"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-20",
+      "input": {
+        "day": 15,
+        "month": 7,
+        "year": 1984,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 17,
+        "lunarMonth": 6,
+        "lunarYear": 1984,
+        "isLeapMonth": false,
+        "canName": "Giáp",
+        "chiName": "Tí",
+        "canIndex": 0,
+        "chiIndex": 1
+      },
+      "host": {
+        "id": "12",
+        "functionId": "phu_the",
+        "branchName": "Hợi"
+      },
+      "starLocation": {
+        "id": "12",
+        "functionId": "phu_the",
+        "branchName": "Hợi"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "positive_branch_Hợi"
+      ],
+      "majorStars": [
+        "thien_tuong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-21",
+      "input": {
+        "day": 15,
+        "month": 2,
+        "year": 1985,
+        "hour": 6,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 26,
+        "lunarMonth": 1,
+        "lunarYear": 1985,
+        "isLeapMonth": false,
+        "canName": "Ất",
+        "chiName": "Sửu",
+        "canIndex": 1,
+        "chiIndex": 2
+      },
+      "host": {
+        "id": "10",
+        "functionId": "phu_the",
+        "branchName": "Dậu"
+      },
+      "starLocation": {
+        "id": "10",
+        "functionId": "phu_the",
+        "branchName": "Dậu"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "positive_branch_Dậu"
+      ],
+      "majorStars": [
+        "thien_tuong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-22",
+      "input": {
+        "day": 15,
+        "month": 2,
+        "year": 1985,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 26,
+        "lunarMonth": 1,
+        "lunarYear": 1985,
+        "isLeapMonth": false,
+        "canName": "Ất",
+        "chiName": "Sửu",
+        "canIndex": 1,
+        "chiIndex": 2
+      },
+      "host": {
+        "id": "7",
+        "functionId": "phu_the",
+        "branchName": "Ngọ"
+      },
+      "starLocation": {
+        "id": "7",
+        "functionId": "phu_the",
+        "branchName": "Ngọ"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "positive_branch_Ngọ"
+      ],
+      "majorStars": [
+        "thien_tuong",
+        "liem_trinh"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-23",
+      "input": {
+        "day": 15,
+        "month": 3,
+        "year": 1985,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 24,
+        "lunarMonth": 2,
+        "lunarYear": 1985,
+        "isLeapMonth": false,
+        "canName": "Ất",
+        "chiName": "Sửu",
+        "canIndex": 1,
+        "chiIndex": 2
+      },
+      "host": {
+        "id": "8",
+        "functionId": "phu_the",
+        "branchName": "Mùi"
+      },
+      "starLocation": {
+        "id": "8",
+        "functionId": "phu_the",
+        "branchName": "Mùi"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "positive_branch_Mùi"
+      ],
+      "majorStars": [
+        "thien_tuong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-24",
+      "input": {
+        "day": 15,
+        "month": 9,
+        "year": 1985,
+        "hour": 6,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 1,
+        "lunarMonth": 8,
+        "lunarYear": 1985,
+        "isLeapMonth": false,
+        "canName": "Ất",
+        "chiName": "Sửu",
+        "canIndex": 1,
+        "chiIndex": 2
+      },
+      "host": {
+        "id": "5",
+        "functionId": "phu_the",
+        "branchName": "Thìn"
+      },
+      "starLocation": {
+        "id": "5",
+        "functionId": "phu_the",
+        "branchName": "Thìn"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "positive_branch_Thìn",
+        "positive_major_configuration_thien_tuong+tu_vi"
+      ],
+      "majorStars": [
+        "tu_vi",
+        "thien_tuong"
+      ],
+      "adverseStars": [
+        "kinh_duong"
+      ],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-25",
+      "input": {
+        "day": 15,
+        "month": 1,
+        "year": 1986,
+        "hour": 12,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 6,
+        "lunarMonth": 12,
+        "lunarYear": 1985,
+        "isLeapMonth": false,
+        "canName": "Ất",
+        "chiName": "Sửu",
+        "canIndex": 1,
+        "chiIndex": 2
+      },
+      "host": {
+        "id": "6",
+        "functionId": "phu_the",
+        "branchName": "Tị"
+      },
+      "starLocation": {
+        "id": "6",
+        "functionId": "phu_the",
+        "branchName": "Tị"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "positive_branch_Tị"
+      ],
+      "majorStars": [
+        "thien_tuong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-26",
+      "input": {
+        "day": 15,
+        "month": 3,
+        "year": 1989,
+        "hour": 0,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 8,
+        "lunarMonth": 2,
+        "lunarYear": 1989,
+        "isLeapMonth": false,
+        "canName": "Kỷ",
+        "chiName": "Tị",
+        "canIndex": 5,
+        "chiIndex": 6
+      },
+      "host": {
+        "id": "2",
+        "functionId": "phu_the",
+        "branchName": "Sửu"
+      },
+      "starLocation": {
+        "id": "2",
+        "functionId": "phu_the",
+        "branchName": "Sửu"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "positive_branch_Sửu"
+      ],
+      "majorStars": [
+        "thien_tuong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-27",
+      "input": {
+        "day": 15,
+        "month": 12,
+        "year": 1989,
+        "hour": 0,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 18,
+        "lunarMonth": 11,
+        "lunarYear": 1989,
+        "isLeapMonth": false,
+        "canName": "Kỷ",
+        "chiName": "Tị",
+        "canIndex": 5,
+        "chiIndex": 6
+      },
+      "host": {
+        "id": "11",
+        "functionId": "phu_the",
+        "branchName": "Tuất"
+      },
+      "starLocation": {
+        "id": "11",
+        "functionId": "phu_the",
+        "branchName": "Tuất"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "positive_branch_Tuất"
+      ],
+      "majorStars": [
+        "tu_vi",
+        "thien_tuong"
+      ],
+      "adverseStars": [
+        "linh_tinh"
+      ],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    },
+    {
+      "id": "interp-quanshu-phu-the-thien-tuong-host-independent-28",
+      "input": {
+        "day": 15,
+        "month": 1,
+        "year": 1990,
+        "hour": 6,
+        "gender": 1
+      },
+      "lunar": {
+        "lunarDay": 19,
+        "lunarMonth": 12,
+        "lunarYear": 1989,
+        "isLeapMonth": false,
+        "canName": "Kỷ",
+        "chiName": "Tị",
+        "canIndex": 5,
+        "chiIndex": 6
+      },
+      "host": {
+        "id": "9",
+        "functionId": "phu_the",
+        "branchName": "Thân"
+      },
+      "starLocation": {
+        "id": "9",
+        "functionId": "phu_the",
+        "branchName": "Thân"
+      },
+      "expected": true,
+      "condition": {
+        "op": "star_present",
+        "target": "phu_the",
+        "star": "Thiên Tướng"
+      },
+      "labels": [
+        "positive_branch_Thân"
+      ],
+      "majorStars": [
+        "vu_khuc",
+        "thien_tuong"
+      ],
+      "adverseStars": [],
+      "oracle": "Canonical normalized host starId membership; condition evaluator never imported"
+    }
+  ]
+}

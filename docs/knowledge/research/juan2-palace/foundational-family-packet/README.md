@@ -1,0 +1,13 @@
+# T038 foundational family source proposal
+
+FROZEN revision 1 with84separately authored real-chart witnesses. This packet proposes three literal source-opening annotations: Tử Vi Huynh Đệ, Thiên Lương Phu Thê and Thiên Tướng Phu Thê. Each predicate is exactly direct-host star_present; it does not imply the star is alone or any adverse/brightness/actual family fact.
+
+Both full family-palace sections, all reciprocal entries and three complete natal-star contexts are retained. These two palace sections begin immediately with their first star entry; there is no separate prose preamble to omit or fabricate. Natal brightness/year-stem/sex/limit qualifications are preserved for source reviewers and are not silently imported as palace-condition equivalence.
+
+Historical wife/husband/relative-age/kin-marriage language stays explicit. This is research text attribution, not relationship advice, endorsement of historical recommendations, or factual prediction about a sibling/spouse. All cohost and adverse branches remain visible but unevaluated; actual independent models must accept exact scoping/translation or reject it. No earlier source approval is transferred. Original edition/book/expert/empirical status remains unverified and public interpretation/AI narration gates remain closed.
+
+The independent investigator owns independent-fixtures/. Packet author does not author expected values. Exact source/AST/wording and independently authored witnesses are now frozen by manifest; no semantic approval follows. No actual review metadata or decision is manufactured.
+
+Run `node docs/knowledge/research/juan2-palace/foundational-family-packet/verify-proposal.mjs` for five digest classes, raw/derived identity, 84API-valid200witnesses, lunar/host/star placement, condition result and chart immutability. Run `node .../independent-fixtures/generate.mjs --check` for read-only independent direct-membership fixture reproduction and fixed-grid coverage arithmetic. Run `python .../verify-source.py` for exact complete original paragraphs/fullpalacesections/completenatalstarcontext. All executed successfully before freeze; none is a source-semantic review.
+
+Each candidate has28witnesses(24positive4negative), bothgenders/all12reachablepositivehostbranches/eachreachablemajorcohostconfiguration/standalone/cohost/fouradversecells and wronghost/opposite-only/missingtargethost negatives. Globally missing major-star cases are impossible on valid charts and explicitly NOT synthesized as real evidence. Independent inverse lunar roundtrip shares B3 year-code tables; it does not authenticate astronomy or natal source semantics.
