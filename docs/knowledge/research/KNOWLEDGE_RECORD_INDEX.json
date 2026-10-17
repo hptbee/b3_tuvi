@@ -6,16 +6,17 @@
     "docs/knowledge/research/knowledge-first-batch-2/knowledge-records.json",
     "docs/knowledge/research/knowledge-first-batch-3/knowledge-records.json",
     "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
-    "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json"
+    "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+    "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json"
   ],
   "metrics": {
     "indexedCells": 168,
-    "persistedRecords": 48,
-    "starPalaceRecords": 44,
-    "nonCellRecords": 4,
-    "contextualCells": 38,
-    "locatedOnlyCells": 130,
-    "comparedCellsIncludingDisputed": 38,
+    "persistedRecords": 57,
+    "starPalaceRecords": 52,
+    "nonCellRecords": 5,
+    "contextualCells": 41,
+    "locatedOnlyCells": 127,
+    "comparedCellsIncludingDisputed": 41,
     "cellsWithConflictingResearchStatus": 7,
     "cellsWithContradictionFlags": 12,
     "palacesWithContextualRecords": 12,
@@ -24,13 +25,16 @@
     "newBatch4Records": 14,
     "newBatch4Cells": 11,
     "newBatch5Records": 11,
-    "newBatch5Cells": 7
+    "newBatch5Cells": 7,
+    "newBatch6Records": 9,
+    "newBatch6Cells": 3
   },
   "metricMeaning": "Compared includes actually performed conditional comparisons with identity limits and disputed readings; not source acceptance. Contradiction flags include a linked dispute on a record whose main research status may be COMPARED.",
   "familySummary": [
     "quanshu-transmission: pinned digital witnesses, not independent mirrors",
     "ham-so-attributed-web: separate authored attribution, print edition unresolved",
-    "ling-donglai-authored-commentary: author-published web discussion, print edition unresolved; classical/book quotations remain dependent"
+    "ling-donglai-authored-commentary: author-published web discussion, print edition unresolved; classical/book quotations remain dependent",
+    "wang-tingzhi-attributed-lingtan: provisional fourth authored attribution; Scribd edition/borrowing unverified, Ling cites Wang; not proven independent historical family"
   ],
   "sourceReviewThisBatch": "not_executed",
   "runtimeApprovalThisBatch": "not_requested",
@@ -500,6 +504,97 @@
         ]
       },
       "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB6-PT-ZIWEI",
+      "file": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "subject": {
+        "starId": "tu_vi",
+        "palaceId": "phu_the"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB6-DT-LUONG",
+      "file": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "subject": {
+        "starId": "thien_luong",
+        "palaceId": "dien_trach"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB6-PD-LUONG",
+      "file": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "subject": {
+        "starId": "thien_luong",
+        "palaceId": "phuc_duc"
+      },
+      "researchStatus": "COMPARED"
+    },
+    {
+      "recordId": "KRB6-M-CO-SCAN",
+      "file": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "subject": {
+        "starId": "thien_co",
+        "palaceId": "menh"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB6-TT-CO-SCAN",
+      "file": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "subject": {
+        "starId": "thien_co",
+        "palaceId": "tu_tuc"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB6-TA-CO-SCAN",
+      "file": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "subject": {
+        "starId": "thien_co",
+        "palaceId": "tat_ach"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB6-QL-CO-SCAN",
+      "file": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "subject": {
+        "starId": "thien_co",
+        "palaceId": "quan_loc"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB6-NB-PHU-SCAN",
+      "file": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "subject": {
+        "starId": "thien_phu",
+        "palaceId": "no_boc"
+      },
+      "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB6-METHOD-WANG-PARTIAL",
+      "file": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "subject": {
+        "starId": null,
+        "palaceId": null,
+        "terms": [
+          "天機",
+          "天梁",
+          "左輔",
+          "右弼",
+          "文昌",
+          "文曲",
+          "會合",
+          "見"
+        ]
+      },
+      "researchStatus": "COMPARED"
     }
   ],
   "cells": [
@@ -664,7 +759,8 @@
       "cellId": "no_boc:thien_phu",
       "recordIds": [
         "KRB3-NB-PHU",
-        "KRB4-NB-PHU-LDL"
+        "KRB4-NB-PHU-LDL",
+        "KRB6-NB-PHU-SCAN"
       ],
       "researchStatesObserved": [
         "CONTEXT_MAPPED",
@@ -695,7 +791,8 @@
       "cellId": "menh:thien_co",
       "recordIds": [
         "KRB4-M-CO",
-        "KRB5-M-CO-COLLATION"
+        "KRB5-M-CO-COLLATION",
+        "KRB6-M-CO-SCAN"
       ],
       "researchStatesObserved": [
         "CONFLICTING",
@@ -706,7 +803,8 @@
       "cellId": "quan_loc:thien_co",
       "recordIds": [
         "KRB4-QL-CO",
-        "KRB5-QL-CO-COLLATION"
+        "KRB5-QL-CO-COLLATION",
+        "KRB6-QL-CO-SCAN"
       ],
       "researchStatesObserved": [
         "COMPARED",
@@ -806,19 +904,23 @@
     {
       "cellId": "tu_tuc:thien_co",
       "recordIds": [
-        "KRB5-TT-CO"
+        "KRB5-TT-CO",
+        "KRB6-TT-CO-SCAN"
       ],
       "researchStatesObserved": [
-        "CONFLICTING"
+        "CONFLICTING",
+        "CONTEXT_MAPPED"
       ]
     },
     {
       "cellId": "tat_ach:thien_co",
       "recordIds": [
-        "KRB5-TA-CO"
+        "KRB5-TA-CO",
+        "KRB6-TA-CO-SCAN"
       ],
       "researchStatesObserved": [
-        "COMPARED"
+        "COMPARED",
+        "CONTEXT_MAPPED"
       ]
     },
     {
@@ -856,7 +958,34 @@
       "researchStatesObserved": [
         "COMPARED"
       ]
+    },
+    {
+      "cellId": "phu_the:tu_vi",
+      "recordIds": [
+        "KRB6-PT-ZIWEI"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "dien_trach:thien_luong",
+      "recordIds": [
+        "KRB6-DT-LUONG"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
+    },
+    {
+      "cellId": "phuc_duc:thien_luong",
+      "recordIds": [
+        "KRB6-PD-LUONG"
+      ],
+      "researchStatesObserved": [
+        "COMPARED"
+      ]
     }
   ],
-  "refreshToolRef": "docs/knowledge/research/knowledge-first-batch-5/refresh-index.mjs"
+  "refreshToolRef": "docs/knowledge/research/knowledge-first-batch-6/refresh-index.mjs"
 }
