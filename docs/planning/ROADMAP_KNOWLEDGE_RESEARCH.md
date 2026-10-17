@@ -166,6 +166,14 @@ Current [refresh helper](../knowledge/research/knowledge-first-batch-6/refresh-i
 
 **Batch 7:** authenticate the new reproduction against official catalog/colophon; collate exact Cơ wordings with another edition and V2179 with its own print; seek a complete assistant-configuration comparator; select from Vi/Tật–Nô–Điền–Phúc and Lương/Huynh–Tài. The [bounded handoff](../knowledge/research/knowledge-first-batch-6/README.md#batch-7) owns precise next steps.
 
+## Batch 7 progress — 2026-10-17
+
+[Batch7](../knowledge/research/knowledge-first-batch-7/README.md) starts from fetched main811655f/mergedPR69 and adds three records: Vi/Nô, Lương/Huynh and one non-cell assistant-operand supplement. Full primary governing contexts and reciprocal clauses are mapped; cumulative**60records/43contextual cells/125locator cells**, with41previously authored-compared cells. Two new comparisons are within one source witness, not new independent authors.
+
+The Batch6handoff listed two already-covered cells; [explicit correction](../knowledge/research/knowledge-first-batch-7/corrections.json) preserves its historical files and identifies actual remaining Vi/Huynh, Vi/Điền, Vi/Phúc and Lương/Nô. Official catalogue/IA/printed Hàm Số routes fail at proxy CONNECT403; no fresh images/pages or authenticated edition. The four prior scan/digital variants and exact assistant exception remain unresolved. All14dispositions stay open; none evidence-resolved. Source registry, T030–T038, T034unapproved state and all runtime/public gates unchanged.
+
+The [Batch8handoff](../knowledge/research/knowledge-first-batch-7/HANDOFF_BATCH_8.md) owns the next adaptive step after the independent Batch7checkpoint is validated and committed. No AutoDev, app/E2E/full CI or new platform.
+
 ## Quality metrics and research completion
 
 Report a dated snapshot after each bounded research batch, with scope/denominator, source and edition references, unresolved counts and comparison to the previous snapshot. Store results with that topic packet, not in a new dashboard/framework. Initial documentation audit establishes 14 registered sources/five editions and the recorded engineering figures above; the research-depth metrics below were initially **not baselined**; the dated Batch 1–6 snapshots above now supply bounded denominators. Do not fill them from filenames or historical headline counts.

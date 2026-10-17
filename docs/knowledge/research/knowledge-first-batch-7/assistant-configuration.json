@@ -1,0 +1,346 @@
+{
+  "batch": 7,
+  "lane": "A3 exact assistant/beneficiary exception",
+  "date": "2026-10-17",
+  "newAuthoredWitnesses": 0,
+  "exactIndependentMatch": false,
+  "sourceReview": "not_executed",
+  "runtimeApproval": "not_requested",
+  "publicRelease": "unchanged_closed",
+  "primaryReadSpans": [
+    {
+      "path": "docs/knowledge/research/juan3-palace/tai-ziwei-fubi-candidate/derived-juan3.txt",
+      "startLine": 48,
+      "endLine": 66,
+      "sha256": "523b5fab97f6e7303aa8d539cad986617c6b37120e8e1b9c05c5eebd97f4ee33",
+      "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive",
+      "readThisBatch": true
+    },
+    {
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 126,
+      "endLine": 145,
+      "sha256": "fe7ee8886a89426f42197093bfc1174254bbdd75e92bc93ddfa566d705f04d70",
+      "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive",
+      "readThisBatch": true
+    },
+    {
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 146,
+      "endLine": 162,
+      "sha256": "85191478474108ae6f95d0e3ffcfa97ecd13251780ad2133d8f59f957a791cd2",
+      "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive",
+      "readThisBatch": true
+    },
+    {
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 331,
+      "endLine": 347,
+      "sha256": "dd10978bfff6eabfc30c237c7c470632cd1af323f894d20a13c7668030827f7b",
+      "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive",
+      "readThisBatch": true
+    },
+    {
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 416,
+      "endLine": 434,
+      "sha256": "8809ee55ca54ad72bae1901fba31293096c49add099d05ba2e8583f27b3693ed",
+      "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive",
+      "readThisBatch": true
+    },
+    {
+      "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+      "startLine": 817,
+      "endLine": 846,
+      "sha256": "92df67c009e504f7c395daa520ba747e2a42beadd7bb020e9d2740d947c59137",
+      "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive",
+      "readThisBatch": true
+    }
+  ],
+  "historicalResearchNotes": [
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-1/DOSSIER.md",
+      "sha256": "48f37773c7f6c45f9086bd81f4fc8c2a7335178e12b0f025e48cfe770d050d5c",
+      "role": "Historical context file hash; relevant records/comparisons/evidence read selectively for this topic, not full fresh external source-body access"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-1/evidence.json",
+      "sha256": "e69ebd6111e9ab10266ee2351871ca1714fd8df7de40100c9661c1af801ffb56",
+      "role": "Historical context file hash; relevant records/comparisons/evidence read selectively for this topic, not full fresh external source-body access"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-2/DOSSIER.md",
+      "sha256": "b12b46f9779ded25c64fc48c8f834bf0ddc83eb7af6cdd5ec139ca50cbfb24de",
+      "role": "Historical context file hash; relevant records/comparisons/evidence read selectively for this topic, not full fresh external source-body access"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-2/knowledge-records.json",
+      "sha256": "7b276fb7065263ad2894e67a96857de1fb7057fbc2a378c731794c7af0cf3125",
+      "role": "Historical context file hash; relevant records/comparisons/evidence read selectively for this topic, not full fresh external source-body access"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-2/comparisons.json",
+      "sha256": "b4059ae79134a37985c00b8859bcc75b8af52c12fcffe9810b99538b9f5c877b",
+      "role": "Historical context file hash; relevant records/comparisons/evidence read selectively for this topic, not full fresh external source-body access"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-2/evidence.json",
+      "sha256": "3abf3445096720de8c579c996aea09b5b72ded31c2c718c9069eeceed80b8296",
+      "role": "Historical context file hash; relevant records/comparisons/evidence read selectively for this topic, not full fresh external source-body access"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-3/DOSSIER.md",
+      "sha256": "c6023029516b1a444d09e2626d567a8924266e43493ef2235fa2518145e548bb",
+      "role": "Historical context file hash; relevant records/comparisons/evidence read selectively for this topic, not full fresh external source-body access"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-3/knowledge-records.json",
+      "sha256": "7c719e7c86f4f67983367be52853a73a3f5c2baa3fab758898ba2bc8ee0f7575",
+      "role": "Historical context file hash; relevant records/comparisons/evidence read selectively for this topic, not full fresh external source-body access"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-3/comparisons.json",
+      "sha256": "7e91eb0f5a2149fb918710f562867d4b4edea167269063c15ed53178c0ba4505",
+      "role": "Historical context file hash; relevant records/comparisons/evidence read selectively for this topic, not full fresh external source-body access"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-3/evidence.json",
+      "sha256": "f865742d938ef51c88e5fa444a5664ac93441da693eccf80d94b63a277962189",
+      "role": "Historical context file hash; relevant records/comparisons/evidence read selectively for this topic, not full fresh external source-body access"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-4/DOSSIER.md",
+      "sha256": "90e8198a6c4cf466fa7f99bec64f83671371059dcb0fc739e99a4e9f099a22e9",
+      "role": "Historical context file hash; relevant records/comparisons/evidence read selectively for this topic, not full fresh external source-body access"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+      "sha256": "b34e6f79586c2beb703743dbe5b2ba05a8bcb8142119ac0bf4580949191e4446",
+      "role": "Historical context file hash; relevant records/comparisons/evidence read selectively for this topic, not full fresh external source-body access"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-4/comparisons.json",
+      "sha256": "24ab2b0cca2a6c28024fcdb95abb401e4ee9df94f2309097b2d6f945b3311d35",
+      "role": "Historical context file hash; relevant records/comparisons/evidence read selectively for this topic, not full fresh external source-body access"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-4/dispositions.json",
+      "sha256": "abcab057c7d4620c03c29314c9b315513ac1c58983fefe61afd04675058d917e",
+      "role": "Historical context file hash; relevant records/comparisons/evidence read selectively for this topic, not full fresh external source-body access"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-4/evidence.json",
+      "sha256": "584cbdb31bb179535a161b66f2558b4fca230b814bc1101fcb56ae694744c591",
+      "role": "Historical context file hash; relevant records/comparisons/evidence read selectively for this topic, not full fresh external source-body access"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-5/DOSSIER.md",
+      "sha256": "cb4ddf43f5c9f0e8b09c56f680b48e197cdd47a65fa19fb9486251c98d945e49",
+      "role": "Historical context file hash; relevant records/comparisons/evidence read selectively for this topic, not full fresh external source-body access"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+      "sha256": "dce09d726ef1944a06f5032c958aac4bfa9f4744ba9adc836ff7ab853feac13d",
+      "role": "Historical context file hash; relevant records/comparisons/evidence read selectively for this topic, not full fresh external source-body access"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-5/comparisons.json",
+      "sha256": "2c7e60c2984ff0cadaccc8fdd8b299562313b7e055ff7684cf4f3bf720b015a2",
+      "role": "Historical context file hash; relevant records/comparisons/evidence read selectively for this topic, not full fresh external source-body access"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-5/dispositions.json",
+      "sha256": "67638b8fb81ec3053eec3a708bc2e6550607e3e87b6781fd632dcd6dec8763ae",
+      "role": "Historical context file hash; relevant records/comparisons/evidence read selectively for this topic, not full fresh external source-body access"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-5/evidence.json",
+      "sha256": "e311d30ea8746721766fc1734c34482d9dcd4867996abc777dc16551fbb4944c",
+      "role": "Historical context file hash; relevant records/comparisons/evidence read selectively for this topic, not full fresh external source-body access"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-6/DOSSIER.md",
+      "sha256": "b61e6ce98b7bf01c498ad09868e976a409ba0869e68e716952ed6a6f12245f73",
+      "role": "Historical context file hash; relevant records/comparisons/evidence read selectively for this topic, not full fresh external source-body access"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "sha256": "5f305f9d53e18d7ce384ad68dfeb816e71401cf6421e715f8d6023461dd53a45",
+      "role": "Historical context file hash; relevant records/comparisons/evidence read selectively for this topic, not full fresh external source-body access"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-6/comparisons.json",
+      "sha256": "6e1e3b4167b0cdb90d3364370adec95f8e63a95b4e0c7d6d916085c32e997539",
+      "role": "Historical context file hash; relevant records/comparisons/evidence read selectively for this topic, not full fresh external source-body access"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-6/dispositions.json",
+      "sha256": "7e7ff94645d50f437e0e1b8997457dd017c03b0b9347321323e7089549b150a9",
+      "role": "Historical context file hash; relevant records/comparisons/evidence read selectively for this topic, not full fresh external source-body access"
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-6/evidence.json",
+      "sha256": "21cd78af380273da526bf6096ed62be07daf1f620bca1a7512930e4b4d2bdccd",
+      "role": "Historical context file hash; relevant records/comparisons/evidence read selectively for this topic, not full fresh external source-body access"
+    }
+  ],
+  "matrix": [
+    {
+      "witness": "Ling169, KRB4-METHOD-CO-ASSISTANTS",
+      "evidenceLevel": "historical bounded research note, modern original body unavailable this batch",
+      "host": "Cơ at Mệnh",
+      "cohost": "Lương exception at Mệnh",
+      "assistants": "Tả/Hữu; same-palace Cơ limitation differs from assistance received by Lương",
+      "viPhuEndpoint": "Explicitly represented in historical note: Tử Vi at Phụ Mẫu receives assistance",
+      "otherNamedQualifiers": [
+        "Cơ–Âm and Cơ–Cự not automatically same exception",
+        "same-palace and opposition distinguished"
+      ],
+      "match": "TARGET_DESCRIPTION_NOT_INDEPENDENT_CONFIRMATION",
+      "missing": [
+        "Fresh full governing source body",
+        "identified print edition/page",
+        "independent same-configuration author"
+      ]
+    },
+    {
+      "witness": "Hàm Số, KRB5-METHOD-V-CONTEXT/B5C14",
+      "evidenceLevel": "historical bounded research note only",
+      "host": "Nô and Phu Thê examples, not matching Mệnh",
+      "cohost": "Cơ–Lương in recorded examples",
+      "assistants": "Tả/Hữu named; exact relation not freshly verified",
+      "viPhuEndpoint": "Not recorded for exact exception",
+      "otherNamedQualifiers": [
+        "general Cách classifications include brightness, major and assistant groupings",
+        "No universal transfer between palaces"
+      ],
+      "match": "INAPPLICABLE_TO_EXACT_ENDPOINT_COMPARISON",
+      "missing": [
+        "Mệnh host operand",
+        "Vi/Phụ receiving-assistance endpoint",
+        "edition and independent genealogy"
+      ]
+    },
+    {
+      "witness": "Wang 鬥數零談, KRB6-METHOD-WANG-PARTIAL/B6C09",
+      "evidenceLevel": "historical bounded note; original two-column transcription unavailable this batch",
+      "host": "Cơ Mệnh; later Cơ–Lương Mệnh辰戌 discussion",
+      "cohost": "Cơ hội Lương in earlier passage; cohost Mệnh辰戌 later, not silently merged",
+      "assistants": "Phụ/Bật AND additional Xương/Khúc in old recorded branch; 會合/見 not converted to all same-palace",
+      "viPhuEndpoint": "Missing from inspected historical scope850–913",
+      "otherNamedQualifiers": [
+        "Hình/Kỵ subject conflict at reader898/909 uncorrected",
+        "running page77–83 not authenticated physical pages",
+        "Ling quotation of Wang creates borrowing risk"
+      ],
+      "match": "PARTIAL_NOT_EXACT",
+      "missing": [
+        "Vi/Phụ endpoint",
+        "precise identical assistant relation",
+        "reliable print resolving898/909",
+        "historical independence"
+      ]
+    },
+    {
+      "witness": "Quanshu retained Juan2 天機146–162 / 天梁331–347",
+      "evidenceLevel": "actual retained primary transcription read this batch; same Quanshu transmission family",
+      "host": "Natal Cơ/Lương entries and male/female versus time-limit headings kept separate",
+      "cohost": "同度辰戌 at152/336; broader會合147/同行332 separate",
+      "assistants": "147: 左右昌曲魁鉞太陰湊合;332: 左右昌曲嘉會; no generic benefic substitution",
+      "viPhuEndpoint": "Absent from these sections; no transfer to parent palace",
+      "otherNamedQualifiers": [
+        "147乙丙丁+入廟化吉 and listed branches, plus later adverse clause",
+        "332要入廟 and陷地遇火羊破局; cohost alone insufficient",
+        "336丁己壬庚;152壬庚丁 differ, no harmonization",
+        "343 female cohost verse differs from broad favorable opening",
+        "341機日文昌左右同 is verse wording, not proof all listed stars share one palace"
+      ],
+      "match": "PARTIAL_RELATION_AND_QUALIFIER_CONTEXT_ONLY",
+      "missing": [
+        "Explicit exact same-palace assistants predicate",
+        "Vi/Phụ beneficiary endpoint",
+        "independent authored witness"
+      ]
+    },
+    {
+      "witness": "Quanshu retained Juan2 左輔416–426 / 右弼427–434 / 父母817–846",
+      "evidenceLevel": "actual retained primary transcription read this batch",
+      "host": "Assistant natal entries versus parent-palace entries are distinct local scopes",
+      "cohost": "417 lists Cơ among a larger 會 group;428 lists Vi/Phủ/Tướng/Xương/Khúc; not combined into one chart",
+      "assistants": "417再加右弼同垣 explicit same-enclosure clause;428會 broader; no swap",
+      "viPhuEndpoint": "819Vi/Phụ names Phủ/Tướng/Tham/Phá and adverse clauses;838Tả/Phụ and839Hữu/Phụ are separate entries, not explicit Vi+assistants configuration",
+      "otherNamedQualifiers": [
+        "417羊陀火忌 middle branch and陷地+巨門七殺天機下局 must not be discarded",
+        "428 adverse conjunctions reduce favorable wording; not unconditional aid",
+        "838廉貞/文昌/adverse and839吉星/adverse remain local",
+        "430右弼天機上宰星 is ambiguous poetic wording, not automatic conjunction with star Thiên Cơ",
+        "818Sun/Moon brightness and day/night preamble precedes all parent entries"
+      ],
+      "match": "INAPPLICABLE_AS_EXACT_CONFIRMATION; useful exclusion of synthetic composite predicate",
+      "missing": [
+        "A single clause linking Cơ+Lương in Mệnh, qualified assistants, and Vi at Phụ receiving aid",
+        "stable alias/gloss for poetic天機",
+        "independent authored source"
+      ]
+    }
+  ],
+  "accessAttempts": [
+    {
+      "url": "https://www.google.com/search?q=%22%E5%A4%A9%E6%A9%9F%E5%A4%A9%E6%A2%81%22%20%22%E7%88%B6%E6%AF%8D%E5%AE%AE%22%20%22%E5%B7%A6%E8%BC%94%22%20%22%E7%B4%AB%E5%BE%AE%22",
+      "result": "urllib URLError: Tunnel connection failed: 403 Forbidden",
+      "bodyRead": false,
+      "sha256": null,
+      "page": null,
+      "edition": null
+    },
+    {
+      "url": "https://www.xuanmen.com.cn/archives/169.html",
+      "result": "urllib URLError: Tunnel connection failed: 403 Forbidden",
+      "bodyRead": false,
+      "sha256": null,
+      "page": null,
+      "edition": null
+    },
+    {
+      "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+      "result": "urllib URLError: Tunnel connection failed: 403 Forbidden",
+      "bodyRead": false,
+      "sha256": null,
+      "page": null,
+      "edition": null
+    },
+    {
+      "url": "https://www.bing.com/search?q=%22%E5%A4%A9%E6%A9%9F%E5%A4%A9%E6%A2%81%22+%22%E7%88%B6%E6%AF%8D%E5%AE%AE%22",
+      "result": "urllib URLError: Tunnel connection failed: 403 Forbidden",
+      "bodyRead": false,
+      "sha256": null,
+      "page": null,
+      "edition": null
+    },
+    {
+      "url": "https://html.duckduckgo.com/html/?q=%22Thi%C3%AAn+C%C6%A1%22+%22T%E1%BA%A3+H%E1%BB%AFu%22+%22Th%C3%A1i+Th%E1%BB%A9+Lang%22",
+      "result": "urllib URLError: Tunnel connection failed: 403 Forbidden",
+      "bodyRead": false,
+      "sha256": null,
+      "page": null,
+      "edition": null
+    }
+  ],
+  "alternateDirectRoute": {
+    "url": "https://www.xuanmen.com.cn/archives/169.html",
+    "result": "curl --noproxy direct route exit6 Could not resolve host",
+    "bodyRead": false
+  },
+  "disposition": {
+    "id": "B5D11",
+    "status": "STILL_UNRESOLVED",
+    "resolutionClaim": false,
+    "newEvidence": "No new external author/source. Newly explicit local predicate/endpoint exclusion analysis only. Carry forward prior disposition unchanged."
+  },
+  "wang898909": {
+    "newPrintPageAvailable": false,
+    "rerunOldOCR": false,
+    "outcome": "Preserved unresolved; no choice of correct subject made"
+  },
+  "retention": "No external modern body or full copyrighted book retained. Only original analysis and existing-file locators/hashes. No app/source registry/decision changes."
+}

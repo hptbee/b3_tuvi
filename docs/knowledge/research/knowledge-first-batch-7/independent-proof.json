@@ -1,0 +1,18 @@
+{
+  "embeddedHashesChecked": 100,
+  "hashErrors": [],
+  "historicalBaselineHashes": 93,
+  "independentRecount": {
+    "records": 60,
+    "cells": 43,
+    "locatorCells": 125,
+    "newCells": [
+      "huynh_de:thien_luong",
+      "no_boc:tu_vi"
+    ],
+    "nonCellRecords": 6
+  },
+  "historicalDispositionsPreserved": 14,
+  "openDispositions": 14,
+  "resolvedWithEvidence": 0
+}

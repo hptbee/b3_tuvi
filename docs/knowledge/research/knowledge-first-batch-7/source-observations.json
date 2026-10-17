@@ -1,0 +1,525 @@
+{
+  "batchId": "KR-B7-20261017",
+  "collectionBoundary": "New access observations are not acquired source texts. Prior textual variants are historical observations with explicit retained references, not fresh print inspection.",
+  "catalogueAndScan": {
+    "task": "Batch7 A1 official catalogue authentication and four edition disputes",
+    "date": "2026-10-17",
+    "status": "BLOCKED_EXTERNAL_ACCESS_NO_NEW_SOURCE_FACTS",
+    "autodevStarted": false,
+    "officialCatalogueIdentityVerified": false,
+    "editionId": null,
+    "officialShelfmark": null,
+    "editionDate": null,
+    "physicalVolumes": null,
+    "printedFolio": null,
+    "colophonObservedThisBatch": false,
+    "sourceIdentity": "Unchanged provisional Quanshu reproduction quanshu-naikaku-ia-20260506-1217; Batch6 observed stamp/cover/credits only; no origin record matched",
+    "observedNewSourceBytes": 0,
+    "newSourceHashes": [],
+    "access": [
+      {
+        "url": "https://www.digital.archives.go.jp/",
+        "method": "urllib.request.urlopen HTTPS",
+        "status": null,
+        "originHttpStatus": null,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+        "bodyObserved": false,
+        "bodySha256": null,
+        "retainedInRepository": false,
+        "meaning": "Proxy CONNECT denied before origin HTTP response; not evidence that catalogue has no record"
+      },
+      {
+        "url": "https://kokusho.nijl.ac.jp/",
+        "method": "urllib.request.urlopen HTTPS",
+        "retainedInRepository": false,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+        "status": null,
+        "originHttpStatus": null,
+        "bodyObserved": false,
+        "bodySha256": null,
+        "meaning": "Proxy CONNECT denied before origin HTTP response; not evidence that catalogue has no record"
+      },
+      {
+        "url": "https://ndlsearch.ndl.go.jp/search?keyword=%E7%B4%AB%E5%BE%AE%E6%96%97%E6%95%B8%E5%85%A8%E6%9B%B8",
+        "method": "urllib.request.urlopen HTTPS",
+        "retainedInRepository": false,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+        "status": null,
+        "originHttpStatus": null,
+        "bodyObserved": false,
+        "bodySha256": null,
+        "meaning": "Proxy CONNECT denied before origin HTTP response; not evidence that catalogue has no record"
+      },
+      {
+        "url": "https://www.archives.go.jp/",
+        "method": "urllib.request.urlopen HTTPS",
+        "retainedInRepository": false,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+        "status": null,
+        "originHttpStatus": null,
+        "bodyObserved": false,
+        "bodySha256": null,
+        "meaning": "Proxy CONNECT denied before origin HTTP response; not evidence that catalogue has no record"
+      },
+      {
+        "url": "https://www.digital.archives.go.jp/DAS/meta/listPhoto?KEYWORD=%E7%B4%AB%E5%BE%AE%E6%96%97%E6%95%B8",
+        "method": "urllib.request.urlopen HTTPS",
+        "retainedInRepository": false,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+        "status": null,
+        "originHttpStatus": null,
+        "bodyObserved": false,
+        "bodySha256": null,
+        "meaning": "Proxy CONNECT denied before origin HTTP response; not evidence that catalogue has no record"
+      },
+      {
+        "url": "https://archive.org/metadata/20260506_20260506_1217",
+        "method": "urllib.request.urlopen HTTPS",
+        "retainedInRepository": false,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>",
+        "status": null,
+        "originHttpStatus": null,
+        "bodyObserved": false,
+        "bodySha256": null,
+        "meaning": "Proxy CONNECT denied before origin HTTP response; not evidence that catalogue has no record"
+      }
+    ],
+    "retention": "Only original analysis and access-result/locator metadata; no source body/image/corpus retained in repository; temporary scratch holds metadata notes only",
+    "newVersusBatch6": "No new historical/authentication/textual fact. New independent official routes attempted once each and blocked at proxy CONNECT; neither origin absence nor a source verdict.",
+    "priorInputHashes": {
+      "docs/knowledge/research/knowledge-first-batch-6/README.md": "e76cac0bdf8bbc5f4d7ce7246e8f46067821b8093434a16808b3e8df209492df",
+      "docs/knowledge/research/knowledge-first-batch-6/scan-collation.json": "48bf103b460dcf3ff31bc29c12a5d22129ee150b53cd039211c72398e2d1f5cb",
+      "docs/knowledge/research/knowledge-first-batch-6/evidence.json": "21cd78af380273da526bf6096ed62be07daf1f620bca1a7512930e4b4d2bdccd",
+      "docs/knowledge/research/knowledge-first-batch-6/dispositions.json": "7e7ff94645d50f437e0e1b8997457dd017c03b0b9347321323e7089549b150a9",
+      "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json": "b34e6f79586c2beb703743dbe5b2ba05a8bcb8142119ac0bf4580949191e4446",
+      "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json": "dce09d726ef1944a06f5032c958aac4bfa9f4744ba9adc836ff7ab853feac13d",
+      "docs/knowledge/provenance-contract.json": "184bc8b3003f136ce1a2fb01706e4bece7ce4fb97859b33532368bf82c9b4b56"
+    },
+    "actualLocalReadSpans": [
+      {
+        "label": "Cơ Mệnh complete natal/time block",
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 146,
+        "endLine": 162,
+        "sha256": "85191478474108ae6f95d0e3ffcfa97ecd13251780ad2133d8f59f957a791cd2",
+        "hashMethod": "UTF8 inclusive one-based lines joined LF without trailing LF",
+        "readScope": "actual local retained text read, not image or official catalogue"
+      },
+      {
+        "label": "Cơ Quan full section",
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 737,
+        "endLine": 764,
+        "sha256": "e036adb619841d719ea2aff35cb75880ae8b050e4aae7702924382383c0e9743",
+        "hashMethod": "UTF8 inclusive one-based lines joined LF without trailing LF",
+        "readScope": "actual local retained text read, not image or official catalogue"
+      },
+      {
+        "label": "Cơ Tử full section/preamble",
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 600,
+        "endLine": 632,
+        "sha256": "62e3e8d293004ef7be24b576c1fffb71166d96fb0af0c6c408513b416dce0721",
+        "hashMethod": "UTF8 inclusive one-based lines joined LF without trailing LF",
+        "readScope": "actual local retained text read, not image or official catalogue"
+      },
+      {
+        "label": "Phủ Nô full section",
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 712,
+        "endLine": 736,
+        "sha256": "efe76b53589501d504df967b87a6ba97cc845756e62ded80f41a10ee80993647",
+        "hashMethod": "UTF8 inclusive one-based lines joined LF without trailing LF",
+        "readScope": "actual local retained text read, not image or official catalogue"
+      }
+    ],
+    "fourDisputes": [
+      {
+        "topic": "Cơ/Quan",
+        "dispositionId": "B4D09",
+        "retainedQLine": 739,
+        "historicalScanExcerptRef": "S147",
+        "comparison": "Batch6 manual note 為良不見 contrasts retained Q 良巨，見. Complete entry continues Cơ–Lương, Cơ–Âm and hãm; no new independent print witness or punctuation observed.",
+        "newEvidence": false,
+        "historicalReadingReverifiedFromImage": false,
+        "next": "Official catalogue identity + whole Quan leaf and named independent-edition counterpart."
+      },
+      {
+        "topic": "Cơ/Mệnh brightness and stems",
+        "dispositionId": "B4D08",
+        "retainedQLines": [
+          146,
+          162
+        ],
+        "historicalScanExcerptRef": "S90",
+        "comparison": "Batch6 six brightness labels agree with Q but stems/wording differ. This observation does not settle Q versus Hàm Số brightness or approve universal can tables.",
+        "newEvidence": false,
+        "historicalReadingReverifiedFromImage": false,
+        "next": "Authenticated edition table, complete natal prose/verses and Hàm Số exact print counterpart."
+      },
+      {
+        "topic": "Cơ–Lương/Tử 寅申 vs 辰戌",
+        "dispositionId": "B5D12",
+        "retainedQLines": [
+          607,
+          148,
+          153
+        ],
+        "historicalScanExcerptRef": [
+          "S135",
+          "S90"
+        ],
+        "comparison": "Batch6 S135 retains 寅/申 and S90 same artifact places natal Cơ–Lương at 辰戌. Same-witness internal mismatch remains; software placement is not textual emendation.",
+        "newEvidence": false,
+        "historicalReadingReverifiedFromImage": false,
+        "next": "One authenticated edition both passages plus explicit commentary on relationship; not algorithm-based correction."
+      },
+      {
+        "topic": "Phủ/Nô 衛家 vs 天家",
+        "dispositionId": null,
+        "followupId": "Phủ/Nô",
+        "retainedQLine": 719,
+        "historicalScanExcerptRef": "S145",
+        "comparison": "Batch6 bounded incipit reads 助主衛家 while retained Q says 天家. Only incipit was manually transcribed previously; cannot label whole later entry collated or meaning/quantities verified.",
+        "newEvidence": false,
+        "historicalReadingReverifiedFromImage": false,
+        "next": "Edition-identified complete Nô entry and contextual gloss; no modernization of historic servant hierarchy."
+      }
+    ],
+    "dispositionUpdates": [],
+    "all14DispositionEffect": "No disposition status or historical field can change on this task evidence; zero closures. Exact no-new-evidence carry-forward permissible.",
+    "rights": "Official bibliographic bounded quotes/locators would be suitable for scoped metadata research, but no official body observed; no rights conclusion fabricated. IA scan redistribution remains unclear.",
+    "sourceReview": "not_executed",
+    "runtimeApproval": "not_requested",
+    "publicGates": "unchanged_closed",
+    "nextAction": "If approved network access becomes available, official NAJ catalogue record matching 子60–1/15856 + title/credits, NIJL/NDL independent cross-record; inspect folio/colophon and all four complete target passages. Do not repeat these failed routes in Batch8 without materially changed access/new lead."
+  },
+  "rights": "Original analytical notes and access/locator metadata only; no images, HTML, modern book body or corpus redistributed",
+  "newIndependentAuthoredWitnesses": 0,
+  "newAuthenticatedEditions": 0,
+  "sourceReviewExecuted": false,
+  "hamSoPrintSearch": {
+    "batchId": "knowledge-first-batch-7",
+    "lane": "A2 Ham So print/source identity",
+    "observedAtUtc": "2026-10-17T13:57:06.477102+00:00",
+    "mode": "knowledge_first_research_only",
+    "sourceId": "nguyen-phat-loc-ham-so",
+    "sourceFamily": "ham-so-attributed-web",
+    "actualAccessAttempts": [
+      {
+        "key": "openlibrary",
+        "url": "https://openlibrary.org/books/OL59448046M.json",
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "key": "work",
+        "url": "https://openlibrary.org/works/OL43610052W.json",
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "key": "worldcat",
+        "url": "https://search.worldcat.org/title/9449353",
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "key": "sonkhiem",
+        "url": "https://tuvisonkhiem.vn/thu-vien/sach/tu-vi-ham-so/",
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "key": "witness",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "key": "search",
+        "url": "https://www.google.com/search?q=%22T%E1%BB%AD+vi+h%C3%A0m+s%E1%BB%91%22+%22pdf%22",
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      }
+    ],
+    "sharedBlocker": {
+      "code": "ACCESS_BLOCKED",
+      "cause": "HTTPS CONNECT proxy denied with 403 Forbidden before remote HTTP response",
+      "sourceHttpStatus": null,
+      "sourceResponseBytes": 0,
+      "sourceBodySha256": null,
+      "limit": "No conclusion about source-site availability, deletion, permissions or text follows from an environment CONNECT denial."
+    },
+    "localAcquisition": {
+      "libraryPath": "/workspace/library-files",
+      "entriesObserved": 0,
+      "filenameTargetedLocalBookMatches": 0,
+      "imagePagesRead": 0,
+      "pdfPagesRead": 0,
+      "printPagesAcquired": 0
+    },
+    "bibliography": {
+      "authorAttribution": "Nguyễn Phát Lộc; prior web attribution, not newly authenticated title page",
+      "workTitle": "Tử Vi Hàm Số",
+      "editionId": null,
+      "originalEditionAuthenticated": false,
+      "printedPagination": null,
+      "historicalCatalogClaims": [
+        {
+          "reference": "docs/knowledge/research/knowledge-first-batch-1/ACQUISITION.md#A03",
+          "catalogUrl": "https://openlibrary.org/books/OL59448046M",
+          "workId": "OL43610052W",
+          "editionIdAsCatalogIdentifier": "OL59448046M",
+          "oclc": "9449353",
+          "reportedDate": "1980",
+          "reportedExtent": "468 pages",
+          "reportedNote": "US reprint of Saigon1974 original",
+          "scope": "Prior Batch1 metadata report, not freshly retrieved or title-page verified"
+        },
+        {
+          "reference": "docs/knowledge/research/knowledge-first-batch-1/ACQUISITION.md#A03",
+          "url": "https://tuvisonkhiem.vn/thu-vien/sach/tu-vi-ham-so/",
+          "reportedDate": "1972",
+          "scope": "Prior marketing/introduction claim; not selected as true original year"
+        }
+      ],
+      "uncertainty": "1972 introduction versus reported1974 original/1980 reprint remains unresolved; catalog extent cannot map reader lines to print pages."
+    },
+    "comparisonMatrix": [
+      {
+        "topic": "Thiên Cơ / bệnh lý",
+        "historicalExactShortReading": "Cự Lương",
+        "historicalReaderLocator": "V2179; subsection2172–2191",
+        "historicalReference": "docs/knowledge/research/knowledge-first-batch-5/comparisons.json#B5C03",
+        "dispositionId": "B5D13",
+        "forbiddenInference": "Do not silently substitute Cơ Lương; Quanshu health entry cannot emend another work.",
+        "printedPage": null,
+        "printEdition": null,
+        "freshSourceRead": false,
+        "scope": "Historical repository observation, not fresh source transcription"
+      },
+      {
+        "topic": "Thiên Cơ / Ở ĐIỀN",
+        "historicalExactShortReading": "Cự Nguyệt",
+        "historicalReaderLocator": "V2338; subsection2336–2342; Thân position reported in previous research",
+        "historicalReference": "docs/knowledge/research/knowledge-first-batch-4/comparisons.json#B4C06",
+        "dispositionId": "B4D10",
+        "forbiddenInference": "Do not substitute Cơ Nguyệt, infer typo from chart algorithms, or count as exact Cơ–Âm comparator.",
+        "printedPage": null,
+        "printEdition": null,
+        "freshSourceRead": false,
+        "scope": "Historical repository observation, not fresh source transcription"
+      },
+      {
+        "topic": "Thiên Cơ / Ở PHÚC",
+        "historicalExactShortReading": "Cự Lương",
+        "historicalReaderLocator": "V2349; subsection2344–2351",
+        "historicalReference": "docs/knowledge/research/knowledge-first-batch-4/comparisons.json#B4C04",
+        "dispositionId": "B4D10",
+        "forbiddenInference": "Do not replace first star or count as exact Cơ–Lương confirmation.",
+        "printedPage": null,
+        "printEdition": null,
+        "freshSourceRead": false,
+        "scope": "Historical repository observation, not fresh source transcription"
+      },
+      {
+        "topic": "Thiên Lương heading/body mismatch",
+        "historicalExactShortReading": "f) Ở ĐIỀN",
+        "historicalReaderLocator": "V2699 heading; body2701–2710",
+        "historicalReference": "docs/knowledge/research/knowledge-first-batch-6/evidence.json#vietnameseWitness",
+        "dispositionId": null,
+        "historicalBodySummaryVi": "Body được Batch6 ghi nhận nói phúc/thọ/họ hàng, khác chủ đề heading Điền.",
+        "forbiddenInference": "Do not rename heading to Phúc, treat body as exact property comparator, or assume print has same error.",
+        "printedPage": null,
+        "printEdition": null,
+        "freshSourceRead": false,
+        "scope": "Historical repository observation, not fresh source transcription"
+      }
+    ],
+    "dispositionUpdates": [
+      {
+        "dispositionId": "B4D10",
+        "disposition": "TRANSCRIPTION_UNCERTAIN",
+        "resolutionClaim": false,
+        "newObservation": "Fresh targeted access blocked at environment CONNECT; no identified print passage or independent transcription acquired. Prior reading preserved.",
+        "nextAction": "When source access is available, obtain lawful title/copyright pages plus complete relevant Thiên Cơ and Thiên Lương subsection images; record printed page alongside digital leaf and compare literal words before any emendation."
+      },
+      {
+        "dispositionId": "B5D13",
+        "disposition": "TRANSCRIPTION_UNCERTAIN",
+        "resolutionClaim": false,
+        "newObservation": "Fresh targeted access blocked at environment CONNECT; no identified print passage or independent transcription acquired. Prior reading preserved.",
+        "nextAction": "When source access is available, obtain lawful title/copyright pages plus complete relevant Thiên Cơ and Thiên Lương subsection images; record printed page alongside digital leaf and compare literal words before any emendation."
+      }
+    ],
+    "newSourceFacts": [],
+    "newKnowledgeRecordJustified": false,
+    "sourceReview": "not_executed",
+    "runtimeApproval": "not_requested",
+    "publicRelease": "unchanged_closed",
+    "rights": "Locators and short original analysis only; no modern book, HTML body, OCR corpus or images retained in repository. No rights clearance inferred.",
+    "priorEvidenceIntegrity": [
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-1/README.md",
+        "bytes": 7576,
+        "sha256": "36408e611fb358ac0814310cc39b53a892b13beb019c5afc83b69afde91571ab"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-1/DOSSIER.md",
+        "bytes": 12493,
+        "sha256": "48f37773c7f6c45f9086bd81f4fc8c2a7335178e12b0f025e48cfe770d050d5c"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-1/evidence.json",
+        "bytes": 25214,
+        "sha256": "e69ebd6111e9ab10266ee2351871ca1714fd8df7de40100c9661c1af801ffb56"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-1/ACQUISITION.md",
+        "bytes": 15432,
+        "sha256": "e2f834cf97a40abd299bba43dd90bf1157dd591ee510085ebd1f2c2aca69291f"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-1/inventory.json",
+        "bytes": 25114,
+        "sha256": "4cef38d91238d980415b7e4b75ee5d9180a9a9238120716e0ad82f7d7e88f900"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-2/README.md",
+        "bytes": 8169,
+        "sha256": "352a38c10187622672fa43c8b0e39821cb93dbeb631ff6870a3aaa4ff1be2c00"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-2/DOSSIER.md",
+        "bytes": 10340,
+        "sha256": "b12b46f9779ded25c64fc48c8f834bf0ddc83eb7af6cdd5ec139ca50cbfb24de"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-2/evidence.json",
+        "bytes": 6772,
+        "sha256": "3abf3445096720de8c579c996aea09b5b72ded31c2c718c9069eeceed80b8296"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-2/comparisons.json",
+        "bytes": 9163,
+        "sha256": "b4059ae79134a37985c00b8859bcc75b8af52c12fcffe9810b99538b9f5c877b"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-2/knowledge-records.json",
+        "bytes": 67760,
+        "sha256": "7b276fb7065263ad2894e67a96857de1fb7057fbc2a378c731794c7af0cf3125"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-3/README.md",
+        "bytes": 9889,
+        "sha256": "873b57e6e9272bb236c6da4392747c237ae48db7ca53a8ad3d8ab252bfbaa1fa"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-3/DOSSIER.md",
+        "bytes": 11117,
+        "sha256": "c6023029516b1a444d09e2626d567a8924266e43493ef2235fa2518145e548bb"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-3/evidence.json",
+        "bytes": 9898,
+        "sha256": "f865742d938ef51c88e5fa444a5664ac93441da693eccf80d94b63a277962189"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-3/comparisons.json",
+        "bytes": 12108,
+        "sha256": "7e91eb0f5a2149fb918710f562867d4b4edea167269063c15ed53178c0ba4505"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-3/knowledge-records.json",
+        "bytes": 102097,
+        "sha256": "7c719e7c86f4f67983367be52853a73a3f5c2baa3fab758898ba2bc8ee0f7575"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-4/README.md",
+        "bytes": 9101,
+        "sha256": "cc151ceda7bede1f2271b7c888c4c5629c8f37cba9cea2152c0bee3c56c7ba40"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-4/DOSSIER.md",
+        "bytes": 18788,
+        "sha256": "90e8198a6c4cf466fa7f99bec64f83671371059dcb0fc739e99a4e9f099a22e9"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-4/evidence.json",
+        "bytes": 11029,
+        "sha256": "584cbdb31bb179535a161b66f2558b4fca230b814bc1101fcb56ae694744c591"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-4/comparisons.json",
+        "bytes": 16740,
+        "sha256": "24ab2b0cca2a6c28024fcdb95abb401e4ee9df94f2309097b2d6f945b3311d35"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-4/dispositions.json",
+        "bytes": 4920,
+        "sha256": "abcab057c7d4620c03c29314c9b315513ac1c58983fefe61afd04675058d917e"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-4/knowledge-records.json",
+        "bytes": 103279,
+        "sha256": "b34e6f79586c2beb703743dbe5b2ba05a8bcb8142119ac0bf4580949191e4446"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-5/README.md",
+        "bytes": 10558,
+        "sha256": "f760e4db9f9d44b2b70763895c4af9b79200296bc95daa5c9e76481663eabd67"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-5/DOSSIER.md",
+        "bytes": 15855,
+        "sha256": "cb4ddf43f5c9f0e8b09c56f680b48e197cdd47a65fa19fb9486251c98d945e49"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-5/evidence.json",
+        "bytes": 17515,
+        "sha256": "e311d30ea8746721766fc1734c34482d9dcd4867996abc777dc16551fbb4944c"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-5/comparisons.json",
+        "bytes": 20241,
+        "sha256": "2c7e60c2984ff0cadaccc8fdd8b299562313b7e055ff7684cf4f3bf720b015a2"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-5/dispositions.json",
+        "bytes": 10023,
+        "sha256": "67638b8fb81ec3053eec3a708bc2e6550607e3e87b6781fd632dcd6dec8763ae"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
+        "bytes": 87297,
+        "sha256": "dce09d726ef1944a06f5032c958aac4bfa9f4744ba9adc836ff7ab853feac13d"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-6/README.md",
+        "bytes": 10540,
+        "sha256": "e76cac0bdf8bbc5f4d7ce7246e8f46067821b8093434a16808b3e8df209492df"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-6/DOSSIER.md",
+        "bytes": 10842,
+        "sha256": "b61e6ce98b7bf01c498ad09868e976a409ba0869e68e716952ed6a6f12245f73"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-6/evidence.json",
+        "bytes": 19924,
+        "sha256": "21cd78af380273da526bf6096ed62be07daf1f620bca1a7512930e4b4d2bdccd"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-6/comparisons.json",
+        "bytes": 14771,
+        "sha256": "6e1e3b4167b0cdb90d3364370adec95f8e63a95b4e0c7d6d916085c32e997539"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-6/dispositions.json",
+        "bytes": 13863,
+        "sha256": "7e7ff94645d50f437e0e1b8997457dd017c03b0b9347321323e7089549b150a9"
+      },
+      {
+        "path": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+        "bytes": 66901,
+        "sha256": "5f305f9d53e18d7ce384ad68dfeb816e71401cf6421e715f8d6023461dd53a45"
+      }
+    ]
+  },
+  "assistantConfigurationRef": "docs/knowledge/research/knowledge-first-batch-7/assistant-configuration.json"
+}
