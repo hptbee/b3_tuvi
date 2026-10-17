@@ -51,6 +51,8 @@ Do not create a competing “Master Plan V3”. Completed sprint **reports** liv
 
 Research priority and batch selection belong to the [knowledge research roadmap](planning/ROADMAP_KNOWLEDGE_RESEARCH.md). The two lists above retain detailed combination gaps, not a competing roadmap. Registered identities remain in [sources.json](knowledge/sources.json); the [dated source register](tuvi/TU_VI_SOURCE_REGISTRY.md) and [source coverage report](knowledge/SOURCE_COVERAGE_REPORT.md) retain their historical scope. New topic research reuses [knowledge/research/](knowledge/research/), existing passages, reviews and decisions.
 
+Latest bounded research: [Knowledge Research & Acquisition — Batch 1](knowledge/research/knowledge-first-batch-1/README.md), including the 14-source/five-edition audit, six-repository assessment, terminology dossier and twelve-palace gap index. Research findings do not grant source, runtime or release approval.
+
 ## Thần Số Học domain
 
 | Document | Role |
