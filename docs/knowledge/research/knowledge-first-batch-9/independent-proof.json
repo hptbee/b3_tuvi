@@ -1,0 +1,109 @@
+{
+  "reviewType": "independent checkpoint consistency, not source approval",
+  "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "excerpts": [
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-9/qa-pojun-excerpt.txt",
+      "gitBlob": "a0f07762f10dd291aa6f049f841a1c0c937e1adb",
+      "sha256": "de853cc8621e137722d9368a027d36b0075cad5a2e0b990b06503619a66841d7",
+      "matchesReextraction": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-9/qa-ziwei-excerpt.txt",
+      "gitBlob": "a0f07762f10dd291aa6f049f841a1c0c937e1adb",
+      "sha256": "a527e1ee5669a11444a2ea11b3cf9f4e1913de3a8b961ab98d422195e6d03867",
+      "matchesReextraction": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-9/qa-assistants-excerpt.txt",
+      "gitBlob": "a0f07762f10dd291aa6f049f841a1c0c937e1adb",
+      "sha256": "e86b5411a65688e22d39d9a81d92a7427b081ba9f12899f3eb6c33f6d1247661",
+      "matchesReextraction": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-9/juan1-fawei-excerpt.txt",
+      "gitBlob": "982752a5822c3ff3c7df2d243f1f39d7febe4d5e",
+      "sha256": "d77f1e9344638b547a92b05b0e85cc7cc17bfbcb60f6522fd6a88221ead710cf",
+      "matchesReextraction": true
+    }
+  ],
+  "historicalHashesVerified": 132,
+  "dispositionsVerified": 17,
+  "immutableDispositionFieldsVerified": 210,
+  "assessments": {
+    "B4D01": "NO_MATERIALLY_NEW_EVIDENCE",
+    "B4D02": "NO_MATERIALLY_NEW_EVIDENCE",
+    "B4D03": "NO_MATERIALLY_NEW_EVIDENCE",
+    "B4D04": "NO_MATERIALLY_NEW_EVIDENCE",
+    "B4D05": "NO_MATERIALLY_NEW_EVIDENCE",
+    "B4D06": "NO_MATERIALLY_NEW_EVIDENCE",
+    "B4D07": "NO_MATERIALLY_NEW_EVIDENCE",
+    "B4D08": "NO_MATERIALLY_NEW_EVIDENCE",
+    "B4D09": "NO_MATERIALLY_NEW_EVIDENCE",
+    "B4D10": "NO_MATERIALLY_NEW_EVIDENCE",
+    "B5D11": "NO_MATERIALLY_NEW_EVIDENCE",
+    "B5D12": "NO_MATERIALLY_NEW_EVIDENCE",
+    "B5D13": "NO_MATERIALLY_NEW_EVIDENCE",
+    "B5D14": "NO_MATERIALLY_NEW_EVIDENCE",
+    "B8D15": "PARTIALLY_CLARIFIED",
+    "B8D16": "PARTIALLY_CLARIFIED",
+    "B8D17": "STILL_CONFLICTING_WITH_SCOPE_LIMITS"
+  },
+  "metrics": {
+    "indexedCells": 168,
+    "persistedRecords": 65,
+    "starPalaceRecords": 58,
+    "nonCellRecords": 7,
+    "contextualCells": 47,
+    "locatedOnlyCells": 121,
+    "comparedCellsIncludingDisputed": 41,
+    "cellsWithConflictingResearchStatus": 7,
+    "cellsWithContradictionFlags": 15,
+    "palacesWithContextualRecords": 12,
+    "newBatch3Records": 14,
+    "newBatch3Cells": 11,
+    "newBatch4Records": 14,
+    "newBatch4Cells": 11,
+    "newBatch5Records": 11,
+    "newBatch5Cells": 7,
+    "newBatch6Records": 9,
+    "newBatch6Cells": 3,
+    "newBatch7Records": 3,
+    "newBatch7Cells": 2,
+    "newBatch8Records": 4,
+    "newBatch8Cells": 4,
+    "newBatch9Records": 1,
+    "newBatch9Cells": 0
+  },
+  "tests": {
+    "validatorExitCode": 0,
+    "researchTestsPassed": 13,
+    "researchTestsFailed": 0
+  },
+  "findings": [
+    {
+      "id": "R001",
+      "severity": "low",
+      "confidence": "high",
+      "status": "reported to parent for correction",
+      "path": "docs/knowledge/research/knowledge-first-batch-9/README.md",
+      "finding": "Test prose says two focused additions but suite now has three (13 tests total)."
+    }
+  ],
+  "future10BuilderProbe": {
+    "passed": true,
+    "previousObjectUnmutated": true,
+    "batch9RebuildUnchanged": true,
+    "syntheticBatch10MethodRecordAddsCells": 0
+  },
+  "historicalCliProbe": {
+    "batch7": "Expected scope rejection of untracked batch9; frozen validator permits historical scope only",
+    "batch8": "Not run after batch7 command failed; imported ten historical research tests did run and pass"
+  },
+  "finalDocumentationReviewed": [
+    "docs/README.md",
+    "docs/planning/ROADMAP_KNOWLEDGE_RESEARCH.md",
+    "docs/knowledge/research/knowledge-first-batch-9/README.md",
+    "docs/knowledge/research/knowledge-first-batch-9/HANDOFF_BATCH_10.md"
+  ]
+}

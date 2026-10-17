@@ -1,0 +1,35 @@
+{
+  "kind": "research_classification_not_runtime_enum",
+  "exactConfigurationMatches": 0,
+  "newIndependentAuthoredWitnesses": 0,
+  "cases": [
+    {
+      "reference": {
+        "path": "docs/knowledge/research/knowledge-first-batch-9/qa-assistants-excerpt.txt",
+        "startLine": 1,
+        "endLine": 11,
+        "sha256": "c1637ea8011679139c4e9af0b91eee21102b5fcbfb19ef0e6cf4e98e975f1a6f",
+        "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+      },
+      "classification": "PARTIAL_OVERLAP",
+      "reason": "Left assistant uses三合沖照 with紫府祿權; right uses紫府吉星同垣. No Cơ–Lương at Mệnh and Vi at Phụ receiving assistance simultaneously; relations and endpoints differ. Natal vs time not silently combined."
+    },
+    {
+      "reference": {
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 147,
+        "endLine": 152,
+        "sha256": "5dd106ae0cc1cf2c759a8acdf843e486ed4357abec9c2f143332f73d0ea721a7",
+        "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+      },
+      "classification": "PARTIAL_OVERLAP",
+      "reason": "Cơ block relates Lương/assistants and辰戌cohost; no complete Vi/Phụ endpoint. Previously mapped passage, not new independent reading."
+    },
+    {
+      "historicalReference": "docs/knowledge/research/knowledge-first-batch-7/assistant-configuration.json",
+      "classification": "INSUFFICIENT_EVIDENCE",
+      "reason": "Ling/Hàm Số/Wang findings remain historical secondary observations. No fresh original/identified printed898/909 pages; no new claim of modern confirmation."
+    }
+  ],
+  "nextAction": "Exact attributed author paragraph with both palace endpoints and explicit relation; no repeat denied route without new lead"
+}

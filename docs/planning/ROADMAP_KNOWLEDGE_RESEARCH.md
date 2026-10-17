@@ -184,6 +184,12 @@ The [methodology comparison](../knowledge/research/knowledge-first-batch-8/METHO
 
 The [Batch 9 handoff](../knowledge/research/knowledge-first-batch-8/HANDOFF_BATCH_9.md) prioritizes complete Vi–Phá pages/glosses, official artifact identification, exact independent assistant configuration and deeper independent comparisons. It does not start Batch 9.
 
+## Batch 9 progress — 2026-10-17
+
+[Batch9](../knowledge/research/knowledge-first-batch-9/README.md) starts from fetched main `52f578e` / merged PR70. One non-cell source-scope supplement uses freshly read pinned Quanshu Q&A and juan1 alongside full palace entries. It constrains Vi–Phá branch/relation comparisons without choosing a Huynh quantity, property outcome or Phúc reading. Same-family context adds no independent author. **65 records / 47 contextual cells / 121 locator-only cells / 41 authored-compared cells**; **17 open, zero evidence-resolved**.
+
+All previous disposition fields and 132 historical hashes are preserved. Official NDL metadata access remains CONNECT-blocked; edition, printed pages, exact assistant configuration and previous variants remain unresolved. No AutoDev, source/runtime/public approval or application changes. The [Batch10 handoff](../knowledge/research/knowledge-first-batch-9/HANDOFF_BATCH_10.md) requires adaptive planning after the validated commit, then bounded new-star contexts, depth/audit and a read-only readiness assessment.
+
 ## Quality metrics and research completion
 
 Report a dated snapshot after each bounded research batch, with scope/denominator, source and edition references, unresolved counts and comparison to the previous snapshot. Store results with that topic packet, not in a new dashboard/framework. Initial documentation audit establishes 14 registered sources/five editions and the recorded engineering figures above; the research-depth metrics below were initially **not baselined**; the dated Batch 1–6 snapshots above now supply bounded denominators. Do not fill them from filenames or historical headline counts.

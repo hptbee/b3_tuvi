@@ -1,0 +1,218 @@
+{
+  "batchId": "KR-B9-20261017",
+  "records": [
+    {
+      "recordId": "KRB9-METHOD-VI-PHA-SCOPE",
+      "claimType": "interpretation",
+      "subject": {
+        "terms": [
+          "紫微",
+          "破軍",
+          "同度",
+          "對居",
+          "子午",
+          "丑未",
+          "natal_vs_palace_scope"
+        ]
+      },
+      "schoolId": null,
+      "schoolScope": "One pinned Quanshu documentation witness, classical named attributions unresolved; no verified school assignment",
+      "researchStorage": "accepted_for_bounded_research_with_uncertainty",
+      "status": {
+        "collection": "COLLECTED",
+        "contextMapping": "CONTEXT_MAPPED",
+        "comparison": "performed_with_identity_limits",
+        "research": "CONTEXT_MAPPED",
+        "sourceReview": "not_executed",
+        "runtimeApproval": "not_requested",
+        "publicRelease": "withheld_closed"
+      },
+      "verificationStatus": {
+        "implementationStatus": "not_executable",
+        "formulaStatus": "undocumented",
+        "bibliographicStatus": "secondary",
+        "interpretationStatus": "unreviewed"
+      },
+      "rights": {
+        "retention": "Bounded newly read classical excerpts, precise pins/hashes and original Vietnamese analysis; no bulk modern text",
+        "scope": "Underlying work differs from modern reproduction; neither edition authentication nor public/personalized interpretation permission"
+      },
+      "exclusions": [
+        "Không chuyển phép giao tập chi của mô hình đọc câu thành test lá số thực, quy tắc runtime hay phán quyết vô hiệu hóa passage.",
+        "Không chọn hai/ba anh em, an/bất an hoặc một kết quả tài sản làm mặc định.",
+        "Ngôn ngữ gia đình, giới, bệnh tật, tội lỗi lịch sử không là sự thật cá nhân hay tư vấn."
+      ],
+      "sourceFamilyDependencies": [
+        "quanshu-transmission: Q&A, Juan1, Juan2 and Juan3 on the same pinned publisher site; not independent author confirmation"
+      ],
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-9/DOSSIER.md#krb9-method-vi-pha-scope",
+      "evidenceRef": "docs/knowledge/research/knowledge-first-batch-9/evidence.json",
+      "recordFile": "docs/knowledge/research/knowledge-first-batch-9/knowledge-records.json",
+      "sourceReferences": [
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": null,
+          "section": "問破軍所主若何？ full answer",
+          "page": null,
+          "originalQuotation": null,
+          "location": {
+            "path": "docs/knowledge/research/knowledge-first-batch-9/qa-pojun-excerpt.txt",
+            "startLine": 1,
+            "endLine": 3,
+            "sha256": "8eebbdc734ae838d6c5960bda82ef848ceae8d3b9b27f823e638b0fb92803056",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription; no print authentication"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": null,
+          "section": "問紫微所主若何？ answer and attributed comment",
+          "page": null,
+          "originalQuotation": null,
+          "location": {
+            "path": "docs/knowledge/research/knowledge-first-batch-9/qa-ziwei-excerpt.txt",
+            "startLine": 1,
+            "endLine": 5,
+            "sha256": "064cf7b93e7a913df14801dba3128599eb64c602012c4d6692e2f99a58b97f27",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription; no print authentication"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": null,
+          "section": "鬥數發微論 complete section",
+          "page": null,
+          "originalQuotation": null,
+          "location": {
+            "path": "docs/knowledge/research/knowledge-first-batch-9/juan1-fawei-excerpt.txt",
+            "startLine": 1,
+            "endLine": 21,
+            "sha256": "fa6e1b7040da4471c71d8e54721d1c2cf3bf2d7b78411bb50144c30dae268a32",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription; no print authentication"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "section": "Vi natal and temporal block",
+          "page": null,
+          "originalQuotation": null,
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 126,
+            "endLine": 145,
+            "sha256": "fe7ee8886a89426f42197093bfc1174254bbdd75e92bc93ddfa566d705f04d70",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription; no print authentication"
+        },
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "section": "Phá natal and temporal block",
+          "page": null,
+          "originalQuotation": null,
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 366,
+            "endLine": 386,
+            "sha256": "79b8ec627a52170bbfdb743c57d49560c8b381e07391b660e379907bfc42fff3",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "sourceLayer": "Pinned digital transcription; no print authentication"
+        }
+      ],
+      "predicate": "Vi–Phá: newly read Q&A and source-internal branch descriptions constrain comparison scope without resolving palace disputes",
+      "meaningVi": "Vấn đáp Phá ghi mất uy quyền khi ở với Vi; văn xuôi Q367 lại nói thích Vi có uy quyền. Chủ thể và tầng mô tả chưa được chú giải, nên không dùng một câu làm trọng tài cho ba cung. Q134 và372 cùng đặt Vi–Phá đồng độ ở Sửu/Mùi trong danh sách Mệnh, còn Q367 tách đồng viên hoặc đối cư trên một nhóm chi rộng hơn. Nếu ép điều kiện Tý/Ngọ đầu Q779 lên mọi nhánh đồng cung Vi–Phá, hai tập chi sẽ rỗng theo chính danh sách nguồn; đây là phép đối chiếu tiền đề văn bản, không phải xác minh công thức an sao hay lời giải cú pháp. Vấn đáp Điền hãm và câu phú Điền gặp Phá trước phá sau thành không chỉ đúng Vi–Phá, không lấp được điều kiện bị thiếu.",
+      "governingContext": {
+        "location": {
+          "path": "docs/knowledge/research/knowledge-first-batch-9/qa-pojun-excerpt.txt",
+          "startLine": 1,
+          "endLine": 3,
+          "sha256": "8eebbdc734ae838d6c5960bda82ef848ceae8d3b9b27f823e638b0fb92803056",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "meaningVi": "Đọc đủ câu hỏi và toàn đáp Phá; liên hệ trọn đáp Vi và phú đầy đủ. Phân tầng không gộp danh sách Mệnh hoặc câu vận thành điều kiện cung khác.",
+        "dependencies": [
+          "question_subject",
+          "relation_endpoint",
+          "natal_branch_list",
+          "palace_entry",
+          "temporal_scope",
+          "uncertain_clause_scope"
+        ]
+      },
+      "conditions": [
+        "Chỉ đối nội một họ truyền bản; danh sách Mệnh không tự thành điều kiện cho cả Huynh/Điền/Phúc.",
+        "Đồng độ/đồng viên và đối cư trong Q367 là các quan hệ riêng; không thay thế Đồng tại Q554/766/790.",
+        "Phân biệt văn xuôi, vấn đáp, phú, từng entry cung và câu Đẩu Quân/quá độ cuối mục."
+      ],
+      "modifiers": [
+        "Q134/372 cùng nêu Sửu/Mùi với Vi–Phá; Q367 dùng nhóm Thìn/Tuất/Sửu/Mùi và đồng viên hoặc đối cư, chưa chia từng chi theo relation.",
+        "Q779 có Tý/Ngọ ở đầu và bộ Dương/Đà/Hỏa/Linh trước nhánh Vi; Q790 chỉ năm tên Dương/Đà/Linh/Không/Kiếp.",
+        "Vấn đáp Phá: hãm+sát/phá, Lương chế, Thiên Lộc giải và lưu sát là những câu có chủ thể/quan hệ riêng; không tạo ưu tiên thắng mọi xung đột."
+      ],
+      "exceptions": [
+        "Câu phú Điền gặp Phá trước phá sau thành không có Vi hoặc chi: không cấp thời điểm để hòa giải Q766/779.",
+        "Vấn đáp Vi nói nam/nữ Phúc khác nhau; Q790 không ghi điều kiện giới: không tự nhập giới làm lời giải Q790/805.",
+        "Câu vấn đáp về hãm ở Điền không định nghĩa hết phạm vi của đồng cung Vi tại Q779."
+      ],
+      "relationships": [
+        {
+          "type": "source_internal_natal_branch_reference",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 126,
+            "endLine": 145,
+            "sha256": "fe7ee8886a89426f42197093bfc1174254bbdd75e92bc93ddfa566d705f04d70",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "scope": "Vi block;134 names丑未同度;138辰戌遇 is a verse relation not explicitly同度."
+        },
+        {
+          "type": "source_internal_natal_branch_reference",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 366,
+            "endLine": 386,
+            "sha256": "79b8ec627a52170bbfdb743c57d49560c8b381e07391b660e379907bfc42fff3",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "scope": "Phá full block;367 same/opposite not identical;372丑未同度;383–386 temporal, not natal."
+        }
+      ],
+      "positiveBranches": [
+        "Các câu thích Vi, Lương chế và Thiên Lộc giải được ghi riêng, không tổng hợp thành điểm."
+      ],
+      "adverseBranches": [
+        "Mất uy quyền trong vấn đáp và bất an trong Vi/Phúc được giữ nguyên, không xóa bằng câu thuận."
+      ],
+      "comparisonIds": [
+        "B9C01"
+      ],
+      "uncertainties": [
+        "Chưa có bản in/folio, chú giải đáng tin cho chủ thể mất uy quyền và phạm vi điều kiện trong các entry.",
+        "Giao tập rỗng chỉ bác cách gộp tiền đề trong mô hình văn bản đã nêu, không chứng minh tác giả định parse nào.",
+        "Độc lập tác giả, dị bản hoặc lỗi sao chép chưa được xác lập."
+      ],
+      "contradicts": [
+        "B8D15",
+        "B8D16",
+        "B8D17"
+      ],
+      "nextAction": "Có trang in/chú giải xác định đủ các entry và vấn đáp mới xét được nhánh đúng; giữ cả ba câu hỏi mở. Tìm một tác giả độc lập đúng cùng cấu hình, không đếm lại mirror.",
+      "originalTerms": [
+        "此星居紫微則失威權",
+        "喜紫微有威權",
+        "同度",
+        "同垣或對居",
+        "子午",
+        "丑未",
+        "先破後成"
+      ]
+    }
+  ]
+}

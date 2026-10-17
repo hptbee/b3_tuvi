@@ -9,13 +9,14 @@
     "docs/knowledge/research/knowledge-first-batch-5/knowledge-records.json",
     "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
     "docs/knowledge/research/knowledge-first-batch-7/knowledge-records.json",
-    "docs/knowledge/research/knowledge-first-batch-8/knowledge-records.json"
+    "docs/knowledge/research/knowledge-first-batch-8/knowledge-records.json",
+    "docs/knowledge/research/knowledge-first-batch-9/knowledge-records.json"
   ],
   "metrics": {
     "indexedCells": 168,
-    "persistedRecords": 64,
+    "persistedRecords": 65,
     "starPalaceRecords": 58,
-    "nonCellRecords": 6,
+    "nonCellRecords": 7,
     "contextualCells": 47,
     "locatedOnlyCells": 121,
     "comparedCellsIncludingDisputed": 41,
@@ -33,7 +34,9 @@
     "newBatch7Records": 3,
     "newBatch7Cells": 2,
     "newBatch8Records": 4,
-    "newBatch8Cells": 4
+    "newBatch8Cells": 4,
+    "newBatch9Records": 1,
+    "newBatch9Cells": 0
   },
   "metricMeaning": "Compared includes actually performed conditional comparisons with identity limits and disputed readings; not source acceptance. Contradiction flags include a linked dispute on a record whose main research status may be COMPARED.",
   "familySummary": [
@@ -678,6 +681,22 @@
         "palaceId": "phuc_duc"
       },
       "researchStatus": "CONTEXT_MAPPED"
+    },
+    {
+      "recordId": "KRB9-METHOD-VI-PHA-SCOPE",
+      "file": "docs/knowledge/research/knowledge-first-batch-9/knowledge-records.json",
+      "subject": {
+        "terms": [
+          "紫微",
+          "破軍",
+          "同度",
+          "對居",
+          "子午",
+          "丑未",
+          "natal_vs_palace_scope"
+        ]
+      },
+      "researchStatus": "CONTEXT_MAPPED"
     }
   ],
   "cells": [
@@ -1124,5 +1143,5 @@
       ]
     }
   ],
-  "refreshToolRef": "docs/knowledge/research/knowledge-first-batch-8/refresh-index.mjs"
+  "refreshToolRef": "docs/knowledge/research/knowledge-first-batch-9/refresh-index.mjs"
 }
