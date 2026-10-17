@@ -1,0 +1,97 @@
+{
+  "history": {
+    "verified": 156,
+    "mismatches": []
+  },
+  "pin": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "upstreamQaSha256": "4dd127acf974b07c4c74c7fe6720575ed046a9fd24e5c163f0fc74ecf2d2846a",
+  "scratchExtractionMatches": true,
+  "excerpts": [
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-10/qa-duong-excerpt.txt",
+      "matchesPinnedExtraction": true,
+      "hashMatches": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-10/qa-dong-excerpt.txt",
+      "matchesPinnedExtraction": true,
+      "hashMatches": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-10/qa-phu-excerpt.txt",
+      "matchesPinnedExtraction": true,
+      "hashMatches": true
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-10/qa-am-excerpt.txt",
+      "matchesPinnedExtraction": true,
+      "hashMatches": true
+    }
+  ],
+  "oldDispositionFieldsPreserved": true,
+  "p1Unchanged": true,
+  "counts": {
+    "old": 17,
+    "new": 18,
+    "resolved": 0
+  },
+  "metrics": {
+    "indexedCells": 168,
+    "persistedRecords": 71,
+    "starPalaceRecords": 64,
+    "nonCellRecords": 7,
+    "contextualCells": 51,
+    "locatedOnlyCells": 117,
+    "comparedCellsIncludingDisputed": 41,
+    "cellsWithConflictingResearchStatus": 7,
+    "cellsWithContradictionFlags": 17,
+    "palacesWithContextualRecords": 12,
+    "newBatch3Records": 14,
+    "newBatch3Cells": 11,
+    "newBatch4Records": 14,
+    "newBatch4Cells": 11,
+    "newBatch5Records": 11,
+    "newBatch5Cells": 7,
+    "newBatch6Records": 9,
+    "newBatch6Cells": 3,
+    "newBatch7Records": 3,
+    "newBatch7Cells": 2,
+    "newBatch8Records": 4,
+    "newBatch8Cells": 4,
+    "newBatch9Records": 1,
+    "newBatch9Cells": 0,
+    "newBatch10Records": 6,
+    "newBatch10Cells": 4
+  },
+  "blockers": [
+    {
+      "id": "B10R01",
+      "recordId": "KRB10-TB-AM",
+      "declaredEntry": 642,
+      "actualEntry": 644,
+      "declaredText": "七殺同鬧中取，天相同富足倉箱，如耗劫天空常在官府中破財。"
+    },
+    {
+      "id": "B10R02",
+      "path": "docs/knowledge/research/knowledge-first-batch-10/depth-analysis.json:211",
+      "declared": "Âm264三方吉拱 and265三方惡殺",
+      "actual": "265三方吉拱 and266三方惡殺",
+      "temporalDeclared": "270–271 or268–271",
+      "actualTemporal": "268–270;271 is貪狼 heading"
+    }
+  ],
+  "validation": {
+    "batch9Validator": "passed",
+    "batch10Validator": "passed",
+    "researchTests": {
+      "passed": 14,
+      "failed": 0
+    },
+    "docsLinksTest": "passed",
+    "docsLinks": {
+      "passed": true,
+      "markdownFiles": 321
+    },
+    "diffCheck": "passed"
+  }
+}

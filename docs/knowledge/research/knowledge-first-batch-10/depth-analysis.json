@@ -1,0 +1,253 @@
+{
+  "kind": "source_scoped_depth_not_executable",
+  "samples": [
+    {
+      "recordId": "KRB10-NB-PHU-DEPTH",
+      "extendsRecordIds": [
+        "KRB3-NB-PHU",
+        "KRB4-NB-PHU-LDL",
+        "KRB6-NB-PHU-SCAN"
+      ],
+      "evidence": [
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 719,
+          "endLine": 719,
+          "sha256": "a754bb26697ff472606b10078d644c4f4803e6ff752a68b27d9c9897bddb2e46",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 236,
+          "endLine": 252,
+          "sha256": "6ee9e79a751a8615a287d96d6f4b9eae579718f54e9578c8b91e23a7c7510120",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/knowledge-first-batch-10/qa-phu-excerpt.txt",
+          "startLine": 1,
+          "endLine": 8,
+          "sha256": "d9a75d5a8a55834c9077b3807ef99b6838029ab32a322b3005ade503cf1a40d5",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 65,
+          "endLine": 85,
+          "sha256": "96282962abc95fe68b1dd29ec893df713c84c857ebf50f4504900e2decb16d6c",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        }
+      ],
+      "dimensions": {
+        "identity_aliases": {
+          "state": "SUPPORTED_WITH_LIMITS",
+          "value": "天府 / 化令 / 祿庫 descriptive terms; not automatically interchangeable IDs"
+        },
+        "major_star_classification": {
+          "state": "PROJECT_INDEX_ONLY",
+          "value": "Included in B3 fourteen-major-star research index; Q85 editorial tip eighteen正曜 remains a separate unresolved layer, not reclassification"
+        },
+        "element": {
+          "state": "SUPPORTED",
+          "value": "土 atQ237 andQA"
+        },
+        "elemental_relationship_rules": {
+          "state": "ABSENT_IN_SELECTED_SCOPE",
+          "value": "No star-to-star generating/controlling rule approved from element names alone"
+        },
+        "brightness": {
+          "state": "UNRESOLVED",
+          "value": "Nô陷弱 inQA is function-level description; Q239–243 branch labels do not establish same concept"
+        },
+        "palace_meaning": {
+          "state": "SUPPORTED_WITH_LIMITS",
+          "value": "Bổ sung chiều sâu cho Phủ/Nô: QA xếp Nô/tướng mạo vào yếu, lại nói nhiều cungcát nhưng gặpKhôngVongcôlập; Q719 mởđắclực và mô tảphảnchủ/bỏđi khi thêmsáu tên. Đây là nhận địnhloạicungvà qualifierkhác cấp, không chứngminh brightnesshãm Phủ ở mọichiNô hay xóađiều kiện entry. Giữ天家của retainedQ so衛家của scanB6; chưa có printglossmới. Q237mệnhthổ vàcát/sát, Q246tam phương/Hội vàKhôngKiếpđồngviên không thànhmodifierđãduyệtchoNô."
+        },
+        "governing_preamble": {
+          "state": "NO_SEPARATE_PREAMBLE",
+          "value": "Read whole selected palace section; no preamble invented"
+        },
+        "menh_than_relation": {
+          "state": "SOURCE_LAYER_SEPARATE",
+          "value": "Character/prose and natal verse statements about Mệnh/Thân are not predicates of Nô/Huynh without an explicit link"
+        },
+        "branch_stem": {
+          "state": "ABSENT_IN_PALACE_ENTRY",
+          "value": "Branch/stem lists exist in natal block; no automatic transfer into selected palace entry"
+        },
+        "dong_cung": {
+          "state": "SUPPORTED_WITH_QUANTIFIER_LIMITS",
+          "value": "Vi/Vũ同719; no aggregation of multiple cohosts"
+        },
+        "doi_cung": {
+          "state": "ABSENT_FOR_TARGET_PALACE",
+          "value": "No target-specific opposite-palace condition in selected entry"
+        },
+        "tam_hop_hoi_chieu": {
+          "state": "SUPPORTED_IN_SEPARATE_CHARACTER_LAYER",
+          "value": "Phủ246三方會 and248三合照 concern natal verse, not an approved Nô predicate"
+        },
+        "giap_cung": {
+          "state": "ABSENT_FOR_TARGET_PALACE",
+          "value": "Prior Âm/Huynh authored giáp example is different placement; no new modern original read"
+        },
+        "supporting_stars": {
+          "state": "SOURCE_SCOPE_ONLY",
+          "value": "Q237named cát andQAgeneralities not freely transferred to719"
+        },
+        "adverse_stars": {
+          "state": "SUPPORTED_WITH_SCOPE_LIMITS",
+          "value": "Q719 named陀羊火鈴空劫 retained; genericQA空亡 not equated to ĐịaKhông"
+        },
+        "qualifying_exclusions": {
+          "state": "UNRESOLVED_SCOPE",
+          "value": "QA broad benefit, 不喜四殺 and若值空亡 all preserved; no universal override"
+        },
+        "tuan_triet": {
+          "state": "ABSENT_IN_SELECTED_SCOPE",
+          "value": "No named Tuần/Triệt target rule; absence is not immunity or eligibility"
+        },
+        "khong_kiep": {
+          "state": "SUPPORTED_AT_EXACT_ENTRY",
+          "value": "Explicit空劫 at719/561; no inference that every classical空亡 is that same pair"
+        },
+        "natal_temporal": {
+          "state": "SEPARATED",
+          "value": "Phủ250–252 nhập hạn versus719 natal and736ĐẩuQuân"
+        },
+        "competing_sources": {
+          "state": "SAME_FAMILY_ONLY",
+          "value": "Phủ/NôQAfunctionalweakness versus entrypositive language; historical衛家/天家 dispute unchanged"
+        },
+        "runtime_expert_public": {
+          "state": "NOT_APPROVED",
+          "value": "Unreviewed research, not source-reviewed/expert-verified/runtime-approved/publicly releasable"
+        }
+      }
+    },
+    {
+      "recordId": "KRB10-HD-AM-DEPTH",
+      "extendsRecordIds": [
+        "KRB3-HD-AM",
+        "KRB4-HD-AM-LDL"
+      ],
+      "evidence": [
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 561,
+          "endLine": 561,
+          "sha256": "9218c4c628eea829b58acb36ce5cb7f21bbf5d31103a1cd5fa9237d083f3fd04",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 253,
+          "endLine": 270,
+          "sha256": "c31a3d917282545ca6ebe0f05b399a62aceebced88fa48876df20b590d3d4c90",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/knowledge-first-batch-10/qa-am-excerpt.txt",
+          "startLine": 1,
+          "endLine": 5,
+          "sha256": "d29214f3498fee0583476fd495932ab2c3dbf6faeefe304c9c9bbea11ac23c50",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 65,
+          "endLine": 85,
+          "sha256": "96282962abc95fe68b1dd29ec893df713c84c857ebf50f4504900e2decb16d6c",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        }
+      ],
+      "dimensions": {
+        "identity_aliases": {
+          "state": "SUPPORTED_WITH_LIMITS",
+          "value": "太陰 / 化富 / 母星 / 妻宿 descriptive roles; not automatically separate aliases/stars"
+        },
+        "major_star_classification": {
+          "state": "PROJECT_INDEX_ONLY",
+          "value": "Included in B3 fourteen-major-star research index; Q85 editorial tip eighteen正曜 remains a separate unresolved layer, not reclassification"
+        },
+        "element": {
+          "state": "SUPPORTED",
+          "value": "水 atQ254 andQA"
+        },
+        "elemental_relationship_rules": {
+          "state": "ABSENT_IN_SELECTED_SCOPE",
+          "value": "No star-to-star generating/controlling rule approved from element names alone"
+        },
+        "brightness": {
+          "state": "UNRESOLVED",
+          "value": "Q257未利益 versus QA未陷;B10D18. Entry561入廟 does not select a table"
+        },
+        "palace_meaning": {
+          "state": "SUPPORTED_WITH_LIMITS",
+          "value": "Bổ sung Âm/Huynh qua fullblockcharacter vàQA: QAđặtMùi trongnhómhãm, trongkhiQ257Mùi/Thânlợiích. Đó là khácnhãn của hai lớptrongcùngpin,chưa phải hai tácgiảđộc lập hoặc cáchsửa bảngruntime. Entry561chỉghi nhậpmiếu, Nhật/Cơ/KhoaQuyền vàbộsáusátgiảmnửa,chưa nói chọnbảngnào. QAthượng/hạhuyền, ThânkhácMệnh và giớikhông tựthêm vào sốanh/em. Giữsố5/5–6/2/4–5 vàđốiứngNhật556,Cơ555ởđúngentry,khôngchochúngđồngđầuvào."
+        },
+        "governing_preamble": {
+          "state": "NO_SEPARATE_PREAMBLE",
+          "value": "Read whole selected palace section; no preamble invented"
+        },
+        "menh_than_relation": {
+          "state": "SOURCE_LAYER_SEPARATE",
+          "value": "Character/prose and natal verse statements about Mệnh/Thân are not predicates of Nô/Huynh without an explicit link"
+        },
+        "branch_stem": {
+          "state": "ABSENT_IN_PALACE_ENTRY",
+          "value": "Branch/stem lists exist in natal block; no automatic transfer into selected palace entry"
+        },
+        "dong_cung": {
+          "state": "SUPPORTED_WITH_QUANTIFIER_LIMITS",
+          "value": "Nhật/Cơ/KhoaQuyền同561; transformations lack identified host/group quantifier"
+        },
+        "doi_cung": {
+          "state": "ABSENT_FOR_TARGET_PALACE",
+          "value": "No target-specific opposite-palace condition in selected entry"
+        },
+        "tam_hop_hoi_chieu": {
+          "state": "SUPPORTED_IN_SEPARATE_CHARACTER_LAYER",
+          "value": "Âm265三方吉拱 and266三方惡殺 concern Mệnh/Thân; not an approved Huynh predicate"
+        },
+        "giap_cung": {
+          "state": "ABSENT_FOR_TARGET_PALACE",
+          "value": "Prior Âm/Huynh authored giáp example is different placement; no new modern original read"
+        },
+        "supporting_stars": {
+          "state": "SOURCE_SCOPE_ONLY",
+          "value": "Q561科權 retained; no synthetic universal benefic roster"
+        },
+        "adverse_stars": {
+          "state": "SUPPORTED_WITH_SCOPE_LIMITS",
+          "value": "Q561羊陀火鈴空劫 retained;减半 not a proven numeric operator"
+        },
+        "qualifying_exclusions": {
+          "state": "UNRESOLVED_SCOPE",
+          "value": "Q561miếu/adverse and QAbrightness/phase contexts retained without selecting one table"
+        },
+        "tuan_triet": {
+          "state": "ABSENT_IN_SELECTED_SCOPE",
+          "value": "No named Tuần/Triệt target rule; absence is not immunity or eligibility"
+        },
+        "khong_kiep": {
+          "state": "SUPPORTED_AT_EXACT_ENTRY",
+          "value": "Explicit空劫 at719/561; no inference that every classical空亡 is that same pair"
+        },
+        "natal_temporal": {
+          "state": "SEPARATED",
+          "value": "Âm267–270 nhập hạn versus561 natal and575ĐẩuQuân; no inherited age/time"
+        },
+        "competing_sources": {
+          "state": "SAME_FAMILY_ONLY",
+          "value": "New same-pin brightness variation; old partial Ling/Hàm Số comparisons are not freshly verified"
+        },
+        "runtime_expert_public": {
+          "state": "NOT_APPROVED",
+          "value": "Unreviewed research, not source-reviewed/expert-verified/runtime-approved/publicly releasable"
+        }
+      }
+    }
+  ],
+  "missingEvidencePolicy": "ABSENT is bounded to selected passages, not proof no tradition has that rule; no additional condition or universal score invented"
+}

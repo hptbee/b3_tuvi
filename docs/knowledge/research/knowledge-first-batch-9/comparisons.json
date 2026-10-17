@@ -1,0 +1,31 @@
+{
+  "batchId": "KR-B9-20261017",
+  "comparisons": [
+    {
+      "comparisonId": "B9C01",
+      "kind": "within_source_context_comparison",
+      "recordIds": [
+        "KRB9-METHOD-VI-PHA-SCOPE"
+      ],
+      "sourceReference": {
+        "sourceId": "ziwei-quanshu-iztro-transcription",
+        "editionId": null,
+        "section": "問破軍所主若何？ full answer",
+        "page": null,
+        "originalQuotation": null,
+        "location": {
+          "path": "docs/knowledge/research/knowledge-first-batch-9/qa-pojun-excerpt.txt",
+          "startLine": 1,
+          "endLine": 3,
+          "sha256": "8eebbdc734ae838d6c5960bda82ef848ceae8d3b9b27f823e638b0fb92803056",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "sourceLayer": "Pinned digital transcription; no print authentication"
+      },
+      "family": "quanshu-transmission",
+      "rights": "Bounded classical evidence; no book/modern body redistribution or public permission",
+      "independence": "Same Git pin and family; new context not a new author or edition",
+      "observationVi": "Vấn đáp mất uy quyền, Q367 thích Vi có uy quyền; khác tầng/chủ thể/qualifier chưa rõ. Q134/372 ràng buộc so sánh nhánh nhưng không quyết parse Q779. Không giải quyết B8D15–17."
+    }
+  ]
+}

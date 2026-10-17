@@ -1,0 +1,157 @@
+{
+  "kind": "source_comparative_condition_analysis_not_runtime",
+  "recordId": "KRB9-METHOD-VI-PHA-SCOPE",
+  "natalBoundary": {
+    "references": [
+      {
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 134,
+        "endLine": 134,
+        "sha256": "0c16c88a57e7e85abaec1911cb648f98965d874fa54432b43df5a30f78f99b91",
+        "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+      },
+      {
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 372,
+        "endLine": 372,
+        "sha256": "2d3eda9df956c82176786140ba8197c62f23c7f99fa59274aa5f90e03cee7444",
+        "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+      },
+      {
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 367,
+        "endLine": 367,
+        "sha256": "f65e1c0bbd81c6911de1a41d0d093e3bf62de1cbfe7ab72097cadfc546dd8a07",
+        "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+      },
+      {
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 138,
+        "endLine": 138,
+        "sha256": "b226aa33e58e0efb5c32fc6f3f0078e9dd55b215ef5454f0d28750885cf48f61",
+        "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+      }
+    ],
+    "cohostBranchesExplicitInLists": [
+      "丑",
+      "未"
+    ],
+    "openingBranchesAt779": [
+      "子",
+      "午"
+    ],
+    "intersectionIfConjoined": [],
+    "assessment": "PARTIALLY_CLARIFIED",
+    "limit": "Source lists only; no chart calculation or universal branch formula approved; 367 names same OR opposite, 138遇 does not say same"
+  },
+  "cases": [
+    {
+      "dispositionId": "B8D15",
+      "fullContext": {
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 553,
+        "endLine": 575,
+        "sha256": "347e031b5cdac4ae4ce8d733f343eeee7fdf2a48c592ae3ba66263644d598f1d",
+        "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+      },
+      "entries": [
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 554,
+          "endLine": 554,
+          "sha256": "fe1d0cd0683232fa5ab9bf3cfd9e81608314f94f9195e673bce0622ee8183e5a",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 567,
+          "endLine": 567,
+          "sha256": "ef78da41dcc198d1b3b233a3253a2d94a684016b3c44b35834a9c2212fb273ef",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        }
+      ],
+      "relation": "同 in both selected clauses; not unspecified hui/zhao",
+      "branch": "Neither selected Huynh clause names branch; do not inject子午/丑未 from other blocks",
+      "brightness": "567 opens入廟 then陷地加殺;554 no explicit brightness; scope unresolved",
+      "support": "567加昌曲左右 after quantity clauses; not same input established",
+      "adverse": "554 six names;567陷地加殺 then terminal six names; no roster/AND/OR normalized",
+      "category": "Family counts three versus two; not chosen or empirically verified",
+      "exceptions": "或各胞生 after Phá in554; scope open",
+      "assessment": "PARTIALLY_CLARIFIED",
+      "resolutionClaim": false,
+      "nextAction": "Edition-identified pages554/567 plus scoped gloss; no print acquired"
+    },
+    {
+      "dispositionId": "B8D16",
+      "fullContext": {
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 765,
+        "endLine": 788,
+        "sha256": "66c1a214119aab5b0228ef7cf74fe15f99fa7b01fd5ff0b8704de22aaf6dac83",
+        "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+      },
+      "entries": [
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 766,
+          "endLine": 766,
+          "sha256": "eecb46d1daf90b16dcd165e50cd7a4223b97592643c3c7c443f94c0a9ef64701",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 779,
+          "endLine": 779,
+          "sha256": "53778b07e3161973d4a3c0a2c8d7abdf909c1131925bdd90077ffada7e9a2d83",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        }
+      ],
+      "relation": "同; Q367同垣或對居 cannot be collapsed to same relation",
+      "branch": "779 opens子午; same-source natal lists use丑未 for Vi–Phá cohost; universal opening-scope conjunction is incompatible with those lists but does not establish intended parse",
+      "brightness": "766自置旺相 syntax uncertain;779 no new Vi brightness table",
+      "support": "766 trailing得左右昌曲 scope local/global unresolved",
+      "adverse": "766 six names;779 earlier four names; tail耗忌全無 scope unresolved",
+      "category": "退祖 versus見成家業; ancestral/ready/self-acquired property not interchangeable",
+      "exceptions": "Juan1 generic先破後成 lacks Vi and branch; QA generic田宅陷度 lacks Vi cohost; neither resolves pair",
+      "assessment": "PARTIALLY_CLARIFIED",
+      "resolutionClaim": false,
+      "nextAction": "Both complete print entries, branch-scope and property-category commentary"
+    },
+    {
+      "dispositionId": "B8D17",
+      "fullContext": {
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 789,
+        "endLine": 816,
+        "sha256": "1ad123491278d5fcc8c568956085100468f59e45bc57035339586d3387bc5757",
+        "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+      },
+      "entries": [
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 790,
+          "endLine": 790,
+          "sha256": "b8baa51cf0b10f4f8afe12ddfa4c88cf81567fe795e28c6a6332427fffaf1ef4",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 805,
+          "endLine": 805,
+          "sha256": "2130af8b897c398e3e73e302fc46ae46e80082f57b27c1aa1e5720f21a513d2f",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        }
+      ],
+      "relation": "同 in both; no evidence switching to related palace fixes opposite wording",
+      "branch": "Neither clause names branch or sex; QA Vi male/female福德 statement is a different layer, not authorized inherited predicate",
+      "brightness": "No Vi–Phá-specific brightness constraint stated in selected clauses",
+      "support": "No explicit named assistant condition for this pair in790/805",
+      "adverse": "790羊陀鈴空劫 omits火;805羊陀火鈴空劫 has火; scope differs and remains open",
+      "category": "Unrest versus peace in traditional Phúc language, not a diagnosis",
+      "exceptions": "No early/late distinction in either pair clause; do not borrow timing from Tham/Thất Sát entries",
+      "assessment": "STILL_CONFLICTING_WITH_SCOPE_LIMITS",
+      "resolutionClaim": false,
+      "nextAction": "Identified edition and commentary for both opposing clauses, no forced consensus"
+    }
+  ]
+}

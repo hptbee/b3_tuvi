@@ -1,0 +1,123 @@
+{
+  "kind": "bounded_old_new_quality_audit",
+  "sampleCount": 6,
+  "samples": [
+    {
+      "recordId": "KRB3-NB-PHU",
+      "recordFile": "docs/knowledge/research/knowledge-first-batch-3/knowledge-records.json",
+      "fileSha256LF": "7c719e7c86f4f67983367be52853a73a3f5c2baa3fab758898ba2bc8ee0f7575",
+      "fullContext": {
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 712,
+        "endLine": 736,
+        "sha256": "efe76b53589501d504df967b87a6ba97cc845756e62ded80f41a10ee80993647",
+        "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+      },
+      "scope": "Fresh selected complete retained primary contexts; modern original verification not performed",
+      "finding": "Historical wording retained; new linked Phủ/Nô or Âm/Huynh depth supplement clarifies functional weakness/brightness and absent parameters, not a silent correction",
+      "originalModernInspection": "LIMITATION_NOT_PERFORMED",
+      "rights": "Bounded classical material and original notes; modern bodies not imported",
+      "sourceIndependence": "Same-family comparison is not independent authored corroboration",
+      "statusApproval": "unreviewed_not_executable_closed"
+    },
+    {
+      "recordId": "KRB3-HD-AM",
+      "recordFile": "docs/knowledge/research/knowledge-first-batch-3/knowledge-records.json",
+      "fileSha256LF": "7c719e7c86f4f67983367be52853a73a3f5c2baa3fab758898ba2bc8ee0f7575",
+      "fullContext": {
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 553,
+        "endLine": 575,
+        "sha256": "347e031b5cdac4ae4ce8d733f343eeee7fdf2a48c592ae3ba66263644d598f1d",
+        "hashMethod": "UTF8 lines joined with LF, no trailing newline; one-based inclusive"
+      },
+      "scope": "Fresh selected complete retained primary contexts; modern original verification not performed",
+      "finding": "Historical wording retained; new linked Phủ/Nô or Âm/Huynh depth supplement clarifies functional weakness/brightness and absent parameters, not a silent correction",
+      "originalModernInspection": "LIMITATION_NOT_PERFORMED",
+      "rights": "Bounded classical material and original notes; modern bodies not imported",
+      "sourceIndependence": "Same-family comparison is not independent authored corroboration",
+      "statusApproval": "unreviewed_not_executable_closed"
+    },
+    {
+      "recordId": "KRB10-QL-PHU",
+      "recordFile": "docs/knowledge/research/knowledge-first-batch-10/knowledge-records.json",
+      "fileSha256LF": "89960291da99291fbe70c6434eef51cb280c271c9e910a541465ce6762c98f47",
+      "fullContext": {
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 737,
+        "endLine": 764,
+        "sha256": "e036adb619841d719ea2aff35cb75880ae8b050e4aae7702924382383c0e9743",
+        "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+      },
+      "scope": "Fresh selected complete retained primary contexts; modern original verification not performed",
+      "finding": "Explicit qualifier/relation/adverse roster and historical language limits retained; new CONTEXT_MAPPED only",
+      "originalModernInspection": "LIMITATION_NOT_PERFORMED",
+      "rights": "Bounded classical material and original notes; modern bodies not imported",
+      "sourceIndependence": "Same-family comparison is not independent authored corroboration",
+      "statusApproval": "unreviewed_not_executable_closed"
+    },
+    {
+      "recordId": "KRB10-TB-AM",
+      "recordFile": "docs/knowledge/research/knowledge-first-batch-10/knowledge-records.json",
+      "fileSha256LF": "89960291da99291fbe70c6434eef51cb280c271c9e910a541465ce6762c98f47",
+      "fullContext": {
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 633,
+        "endLine": 662,
+        "sha256": "18e05f3a45cf27553642da48035fa263e267e90d49c9a1211df734a6dc54ee13",
+        "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+      },
+      "scope": "Fresh selected complete retained primary contexts; modern original verification not performed",
+      "finding": "Explicit qualifier/relation/adverse roster and historical language limits retained; new CONTEXT_MAPPED only",
+      "originalModernInspection": "LIMITATION_NOT_PERFORMED",
+      "rights": "Bounded classical material and original notes; modern bodies not imported",
+      "sourceIndependence": "Same-family comparison is not independent authored corroboration",
+      "statusApproval": "unreviewed_not_executable_closed"
+    },
+    {
+      "recordId": "KRB10-QL-DUONG",
+      "recordFile": "docs/knowledge/research/knowledge-first-batch-10/knowledge-records.json",
+      "fileSha256LF": "89960291da99291fbe70c6434eef51cb280c271c9e910a541465ce6762c98f47",
+      "fullContext": {
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 737,
+        "endLine": 764,
+        "sha256": "e036adb619841d719ea2aff35cb75880ae8b050e4aae7702924382383c0e9743",
+        "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+      },
+      "scope": "Fresh selected complete retained primary contexts; modern original verification not performed",
+      "finding": "Explicit qualifier/relation/adverse roster and historical language limits retained; new CONTEXT_MAPPED only",
+      "originalModernInspection": "LIMITATION_NOT_PERFORMED",
+      "rights": "Bounded classical material and original notes; modern bodies not imported",
+      "sourceIndependence": "Same-family comparison is not independent authored corroboration",
+      "statusApproval": "unreviewed_not_executable_closed"
+    },
+    {
+      "recordId": "KRB10-PD-DONG",
+      "recordFile": "docs/knowledge/research/knowledge-first-batch-10/knowledge-records.json",
+      "fileSha256LF": "89960291da99291fbe70c6434eef51cb280c271c9e910a541465ce6762c98f47",
+      "fullContext": {
+        "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+        "startLine": 789,
+        "endLine": 816,
+        "sha256": "1ad123491278d5fcc8c568956085100468f59e45bc57035339586d3387bc5757",
+        "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+      },
+      "scope": "Fresh selected complete retained primary contexts; modern original verification not performed",
+      "finding": "Explicit qualifier/relation/adverse roster and historical language limits retained; new CONTEXT_MAPPED only",
+      "originalModernInspection": "LIMITATION_NOT_PERFORMED",
+      "rights": "Bounded classical material and original notes; modern bodies not imported",
+      "sourceIndependence": "Same-family comparison is not independent authored corroboration",
+      "statusApproval": "unreviewed_not_executable_closed"
+    }
+  ],
+  "correctionCount": 0,
+  "additiveSupplements": [
+    "KRB10-NB-PHU-DEPTH",
+    "KRB10-HD-AM-DEPTH"
+  ],
+  "newQuestion": "B10D18",
+  "historicalRecordsEdited": false,
+  "expertVerification": false,
+  "publicAdvice": "not_authorized"
+}

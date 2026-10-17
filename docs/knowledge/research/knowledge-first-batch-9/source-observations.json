@@ -1,0 +1,120 @@
+{
+  "batchId": "KR-B9-20261017",
+  "pinnedCommit": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+  "gitRetrieval": {
+    "method": "Native Git through existing HTTPS Git access; materially different from previously failed raw/GraphQL access, no proxy/authentication alteration",
+    "outcome": "SUCCESS_same_pinned_family",
+    "headObserved": "d05faecdb00dd074e73c90794345aa3a3c537f63",
+    "requestedCommit": "2f00e2ab0c80b1632e55bc362f2ae26e121245cb",
+    "origin": "https://github.com/SylarLong/iztro.git",
+    "repositoryVendored": false,
+    "modernBookBodiesAcquired": 0
+  },
+  "excerpts": [
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-9/qa-pojun-excerpt.txt",
+      "sha256": "de853cc8621e137722d9368a027d36b0075cad5a2e0b990b06503619a66841d7",
+      "extractionLines": [
+        167,
+        169
+      ],
+      "extraction": "Read-only HTMLParser: strip script/style; block tags become LF; normalize inline whitespace; omit blank lines. Scratch full extraction not redistributed.",
+      "upstream": {
+        "sourcePath": "docs/zh_TW/learn/ancientBook-qa.html",
+        "gitBlob": "a0f07762f10dd291aa6f049f841a1c0c937e1adb",
+        "sha256": "4dd127acf974b07c4c74c7fe6720575ed046a9fd24e5c163f0fc74ecf2d2846a",
+        "scratchText": "/tmp/research-9-10/ancientBook-qa.txt",
+        "meaning": "Fresh read of same pinned digital family, not print authentication or independent authorship"
+      }
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-9/qa-ziwei-excerpt.txt",
+      "sha256": "a527e1ee5669a11444a2ea11b3cf9f4e1913de3a8b961ab98d422195e6d03867",
+      "extractionLines": [
+        52,
+        56
+      ],
+      "extraction": "Read-only HTMLParser: strip script/style; block tags become LF; normalize inline whitespace; omit blank lines. Scratch full extraction not redistributed.",
+      "upstream": {
+        "sourcePath": "docs/zh_TW/learn/ancientBook-qa.html",
+        "gitBlob": "a0f07762f10dd291aa6f049f841a1c0c937e1adb",
+        "sha256": "4dd127acf974b07c4c74c7fe6720575ed046a9fd24e5c163f0fc74ecf2d2846a",
+        "scratchText": "/tmp/research-9-10/ancientBook-qa.txt",
+        "meaning": "Fresh read of same pinned digital family, not print authentication or independent authorship"
+      }
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-9/qa-assistants-excerpt.txt",
+      "sha256": "e86b5411a65688e22d39d9a81d92a7427b081ba9f12899f3eb6c33f6d1247661",
+      "extractionLines": [
+        188,
+        198
+      ],
+      "extraction": "Read-only HTMLParser: strip script/style; block tags become LF; normalize inline whitespace; omit blank lines. Scratch full extraction not redistributed.",
+      "upstream": {
+        "sourcePath": "docs/zh_TW/learn/ancientBook-qa.html",
+        "gitBlob": "a0f07762f10dd291aa6f049f841a1c0c937e1adb",
+        "sha256": "4dd127acf974b07c4c74c7fe6720575ed046a9fd24e5c163f0fc74ecf2d2846a",
+        "scratchText": "/tmp/research-9-10/ancientBook-qa.txt",
+        "meaning": "Fresh read of same pinned digital family, not print authentication or independent authorship"
+      }
+    },
+    {
+      "path": "docs/knowledge/research/knowledge-first-batch-9/juan1-fawei-excerpt.txt",
+      "sha256": "d77f1e9344638b547a92b05b0e85cc7cc17bfbcb60f6522fd6a88221ead710cf",
+      "extractionLines": [
+        171,
+        191
+      ],
+      "extraction": "Read-only HTMLParser: strip script/style; block tags become LF; normalize inline whitespace; omit blank lines. Scratch full extraction not redistributed.",
+      "upstream": {
+        "sourcePath": "docs/zh_TW/learn/ancientBook-1.html",
+        "gitBlob": "982752a5822c3ff3c7df2d243f1f39d7febe4d5e",
+        "sha256": "d64cdcb94df822867e2f0900faa57c4edde646b64496cded0fbd5b4764827c09",
+        "scratchText": "/tmp/research-9-10/ancientBook-1.txt",
+        "meaning": "Fresh read of same pinned digital family, not print authentication or independent authorship"
+      }
+    }
+  ],
+  "officialCatalogueAttempt": {
+    "purpose": "Official NDL metadata API is a materially different retrieval interface from prior HTML search; exact work title, not an invented catalogue ID",
+    "url": "https://ndlsearch.ndl.go.jp/api/opensearch?title=%E7%B4%AB%E5%BE%AE%E6%96%97%E6%95%B8%E5%85%A8%E6%9B%B8&cnt=5",
+    "method": "HTTPS GET public OpenSearch API",
+    "checkedAt": "2026-10-17T14:22:16.640876+00:00",
+    "originHttpStatus": null,
+    "bodyObserved": false,
+    "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+  },
+  "scanAndPrint": {
+    "assessment": "IDENTITY_EDITION_UNRESOLVED",
+    "newOfficialMetadata": false,
+    "newImages": 0,
+    "newPrintedPages": 0,
+    "priorEvidenceRef": "docs/knowledge/research/knowledge-first-batch-7/source-observations.json",
+    "shelfmark": "子60–1 / 15856 remains previously observed image notation, not newly verified official record",
+    "juanNumbering": "Newly read Q&A is a separate documentation page; its position does not prove physical juan structure",
+    "editionDate": null,
+    "folio": null,
+    "colophonVerified": false,
+    "retainedVariants": [
+      "Cơ/Quan 為良不見… versus digital 良巨，見…",
+      "Cơ–Lương/Tử 寅申 versus natal 辰戌",
+      "Cơ/Mệnh brightness/stem variants",
+      "Phủ/Nô 衛家 versus 天家"
+    ]
+  },
+  "hamSo": {
+    "assessment": "NO_MATERIALLY_NEW_EVIDENCE",
+    "webLocator": "V2179",
+    "printedPage": null,
+    "edition": null,
+    "newRequest": false,
+    "reason": "No new print lead or access change; denied routes not repeated. Quanshu cannot correct Hàm Số."
+  },
+  "familyAccounting": {
+    "newIndependentAuthoredWitnesses": 0,
+    "newlyAuthenticatedEditions": 0,
+    "newReadableContext": "Fresh pinned Q&A and Juan1 passages, same quanshu-transmission family"
+  },
+  "rights": "Bounded underlying classical passages and original analysis only; modern attribution/HTML/software/book bodies not vendored. Existing MIT notice and conflicting footer caveat preserved; no edition or public permission implied."
+}

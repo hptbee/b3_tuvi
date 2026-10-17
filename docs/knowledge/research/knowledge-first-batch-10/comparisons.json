@@ -1,0 +1,161 @@
+{
+  "batchId": "KR-B10-20261017",
+  "comparisons": [
+    {
+      "comparisonId": "B10C01",
+      "kind": "within_source_context_comparison",
+      "recordIds": [
+        "KRB10-QL-PHU"
+      ],
+      "sourceReference": {
+        "sourceId": "ziwei-quanshu-iztro-transcription",
+        "editionId": null,
+        "page": null,
+        "originalQuotation": null,
+        "section": "Complete selected Q&A question/answer/attributed layer",
+        "location": {
+          "path": "docs/knowledge/research/knowledge-first-batch-10/qa-phu-excerpt.txt",
+          "startLine": 1,
+          "endLine": 8,
+          "sha256": "d9a75d5a8a55834c9077b3807ef99b6838029ab32a322b3005ade503cf1a40d5",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+      },
+      "family": "quanshu-transmission",
+      "rights": "Bounded classical research only; no approval or modern book redistribution",
+      "independence": "Same pinned transmission; not a second authored family",
+      "observationVi": "Phủ/Quan nhập miếu được văn võ đều cát; không Dương/Đà/Hỏa/Linh/Không/Hao mới có lời toàn mỹ. Đồng Vi nêu danh tiếng văn võ, đồng Liêm/Vũ nêu quyền quý, thấy Không/Kiếp thì bình thường. Giữ Không/Hao ở mệnh đề vắng khác Không/Kiếp ở mệnh đề thấy; không chuẩn hóa chúng thành một bộ sáu sao. Vấn đáp nói nhiều cung cát nhưng cũng không thích bốn sát, gặp không vong cô lập và coi Nô/tướng mạo yếu; không thể lấy tóm tắt cát để xóa điều kiện tại Quan."
+    },
+    {
+      "comparisonId": "B10C02",
+      "kind": "within_source_context_comparison",
+      "recordIds": [
+        "KRB10-TB-AM"
+      ],
+      "sourceReference": {
+        "sourceId": "ziwei-quanshu-iztro-transcription",
+        "editionId": null,
+        "page": null,
+        "originalQuotation": null,
+        "section": "Complete selected Q&A question/answer/attributed layer",
+        "location": {
+          "path": "docs/knowledge/research/knowledge-first-batch-10/qa-am-excerpt.txt",
+          "startLine": 1,
+          "endLine": 5,
+          "sha256": "d29214f3498fee0583476fd495932ab2c3dbf6faeefe304c9c9bbea11ac23c50",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+      },
+      "family": "quanshu-transmission",
+      "rights": "Bounded classical research only; no approval or modern book redistribution",
+      "independence": "Same pinned transmission; not a second authored family",
+      "observationVi": "Âm/Tài nhập miếu kho đầy, hãm thành bại không tụ theo nguồn. Nhật đồng trước ít sau nhiều; Cơ đồng trắng tay tạo tài; Đồng đồng tài vượng sinh thân; Lộc Tồn kiêm Tả/Hữu đồng nêu đại phú. Nhóm kiêm/đồng không cho phép suy chỉ cần một sao, mọi sao đồng thời hay hội chiếu. Nhật637có thêm Tả/Hữu/cát trong nhánh Âm và Cơ636Âm đồng hãm nói thành bại; điều kiện không hoàn toàn trùng. Q&A nói thượng/hạ huyền và bảng sáng khác một phần, nên không nhập pha trăng, giới hoặc bảng miếu vào Tài khi chưa đủ semantics."
+    },
+    {
+      "comparisonId": "B10C03",
+      "kind": "within_source_context_comparison",
+      "recordIds": [
+        "KRB10-QL-DUONG"
+      ],
+      "sourceReference": {
+        "sourceId": "ziwei-quanshu-iztro-transcription",
+        "editionId": null,
+        "page": null,
+        "originalQuotation": null,
+        "section": "Complete selected Q&A question/answer/attributed layer",
+        "location": {
+          "path": "docs/knowledge/research/knowledge-first-batch-10/qa-duong-excerpt.txt",
+          "startLine": 1,
+          "endLine": 17,
+          "sha256": "6a5a0cdba631f5d4747ae7459dd0f7163ccbc49f782682941d0adda5dd0f247d",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+      },
+      "family": "quanshu-transmission",
+      "rights": "Bounded classical research only; no approval or modern book redistribution",
+      "independence": "Same pinned transmission; not a second authored family",
+      "observationVi": "Dương/Quan nhập miếu văn võ tốt, không Dương/Đà/Hỏa/Linh thì cát; Âm đồng quý hiển, Tả/Hữu/Xương/Khúc/Khôi/Việt đồng và câu更君科祿權 nói phẩm bậc lịch sử. Chữ君 tại đây khó hiểu, không sửa thành hóa hoặc phép kết hợp đã chốt. Âm746hội Nhật/Xương/Khúc/Tả/Hữu ghi tam phẩm và V.Xương755Nhật đồng kèm cát/Khoa/Quyền/Lộc là entry khác; không giải chúng bằng cách tự cộng phẩm bậc. Q&A nêu tam hợp拱照Tài/Quan khác同 của740, có điều kiện hạn nâng đỡ trong ngữ cảnh rộng, không cấp phép nhập mọi qualifier vào entryQuan."
+    },
+    {
+      "comparisonId": "B10C04",
+      "kind": "within_source_context_comparison",
+      "recordIds": [
+        "KRB10-PD-DONG"
+      ],
+      "sourceReference": {
+        "sourceId": "ziwei-quanshu-iztro-transcription",
+        "editionId": null,
+        "page": null,
+        "originalQuotation": null,
+        "section": "Complete selected Q&A question/answer/attributed layer",
+        "location": {
+          "path": "docs/knowledge/research/knowledge-first-batch-10/qa-dong-excerpt.txt",
+          "startLine": 1,
+          "endLine": 5,
+          "sha256": "2d169bd0599c11a6c2b4906a8ea6f99dbca061e72e02589c282c6fda543a2e8f",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+      },
+      "family": "quanshu-transmission",
+      "rights": "Bounded classical research only; no approval or modern book redistribution",
+      "independence": "Same pinned transmission; not a second authored family",
+      "observationVi": "Đồng/Phúc mở vui có phúc thọ; Cự đồng nhiều lo ít vui, Âm đồng hưởng phúc, Lương đồng thanh nhàn vui. Không có standalone Lương trong toànmục; Đồng796chỉ là một endpoint cohost, không tạo entry Lương thất lạc. Cự801ngược lại Đồng đồng hưởng phúc trong entry nhiều lo cùng bộ sáu sát cuối; khác chiều câu nhưng chưa cùng tập điều kiện. QA nói không sợ nhiều sát rồi vẫn có nếu bốn sát ởTỵ/Hợi và vôphá; giữ cả hai tầng, không kết luận Đồng miễn sát. BảngQ70水金 khácprose201/QA113水 được ghi là lớp từ ngữ cần làm rõ, không sửa ngũ hành."
+    },
+    {
+      "comparisonId": "B10C05",
+      "kind": "within_source_context_comparison",
+      "recordIds": [
+        "KRB10-NB-PHU-DEPTH"
+      ],
+      "sourceReference": {
+        "sourceId": "ziwei-quanshu-iztro-transcription",
+        "editionId": null,
+        "page": null,
+        "originalQuotation": null,
+        "section": "Complete selected Q&A question/answer/attributed layer",
+        "location": {
+          "path": "docs/knowledge/research/knowledge-first-batch-10/qa-phu-excerpt.txt",
+          "startLine": 1,
+          "endLine": 8,
+          "sha256": "d9a75d5a8a55834c9077b3807ef99b6838029ab32a322b3005ade503cf1a40d5",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+      },
+      "family": "quanshu-transmission",
+      "rights": "Bounded classical research only; no approval or modern book redistribution",
+      "independence": "Same pinned transmission; not a second authored family",
+      "observationVi": "Bổ sung chiều sâu cho Phủ/Nô: QA xếp Nô/tướng mạo vào yếu, lại nói nhiều cungcát nhưng gặpKhôngVongcôlập; Q719 mởđắclực và mô tảphảnchủ/bỏđi khi thêmsáu tên. Đây là nhận địnhloạicungvà qualifierkhác cấp, không chứngminh brightnesshãm Phủ ở mọichiNô hay xóađiều kiện entry. Giữ天家của retainedQ so衛家của scanB6; chưa có printglossmới. Q237mệnhthổ vàcát/sát, Q246tam phương/Hội vàKhôngKiếpđồngviên không thànhmodifierđãduyệtchoNô."
+    },
+    {
+      "comparisonId": "B10C06",
+      "kind": "within_source_context_comparison",
+      "recordIds": [
+        "KRB10-HD-AM-DEPTH"
+      ],
+      "sourceReference": {
+        "sourceId": "ziwei-quanshu-iztro-transcription",
+        "editionId": null,
+        "page": null,
+        "originalQuotation": null,
+        "section": "Complete selected Q&A question/answer/attributed layer",
+        "location": {
+          "path": "docs/knowledge/research/knowledge-first-batch-10/qa-am-excerpt.txt",
+          "startLine": 1,
+          "endLine": 5,
+          "sha256": "d29214f3498fee0583476fd495932ab2c3dbf6faeefe304c9c9bbea11ac23c50",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "sourceLayer": "Pinned digital transcription, original edition not authenticated"
+      },
+      "family": "quanshu-transmission",
+      "rights": "Bounded classical research only; no approval or modern book redistribution",
+      "independence": "Same pinned transmission; not a second authored family",
+      "observationVi": "Bổ sung Âm/Huynh qua fullblockcharacter vàQA: QAđặtMùi trongnhómhãm, trongkhiQ257Mùi/Thânlợiích. Đó là khácnhãn của hai lớptrongcùngpin,chưa phải hai tácgiảđộc lập hoặc cáchsửa bảngruntime. Entry561chỉghi nhậpmiếu, Nhật/Cơ/KhoaQuyền vàbộsáusátgiảmnửa,chưa nói chọnbảngnào. QAthượng/hạhuyền, ThânkhácMệnh và giớikhông tựthêm vào sốanh/em. Giữsố5/5–6/2/4–5 vàđốiứngNhật556,Cơ555ởđúngentry,khôngchochúngđồngđầuvào."
+    }
+  ]
+}
