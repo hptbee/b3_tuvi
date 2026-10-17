@@ -1,0 +1,274 @@
+{
+  "batchId": "KR-B6-20261017",
+  "meaning": "Four authored comparisons include partial/granularity differences; five same-family image collations never grant authored comparison approval",
+  "comparisons": [
+    {
+      "comparisonId": "B6C01",
+      "recordIds": [
+        "KRB6-PT-ZIWEI"
+      ],
+      "sourceReference": {
+        "sourceId": "nguyen-phat-loc-ham-so",
+        "editionId": null,
+        "author": "Nguyễn Phát Lộc (web attribution; print unverified)",
+        "work": "Tử Vi Hàm Số — web witness",
+        "section": "TỬ VI / i) Ở THÊ, PHU",
+        "page": null,
+        "language": "vi",
+        "url": "https://tuvi.xemtuong.net/show.php?id=tu_vi_ham_so",
+        "readerLines": [
+          3184,
+          3195
+        ],
+        "originalQuotation": null,
+        "locatorLimit": "Heading and access-time reader lines, not print pagination"
+      },
+      "observationVi": "V3184–3195 phân nhánh Phủ/Tướng/Phá/Tham; gần nhau về Phá nhưng không lặp cát miễn hình của Q. Tướng còn nêu bất hòa, không chỉ hài lão; khác phạm vi không tự thành mâu thuẫn tuyệt đối.",
+      "family": "ham-so-attributed-web",
+      "kind": "authored_comparison",
+      "independence": "Separately attributed authorship; borrowing and print identity unverified; scope match explicitly bounded",
+      "rights": "Locators, original analysis, bounded ancient collation only; no modern body retained",
+      "status": "COMPARED_WITH_IDENTITY_LIMITS"
+    },
+    {
+      "comparisonId": "B6C02",
+      "recordIds": [
+        "KRB6-DT-LUONG"
+      ],
+      "sourceReference": {
+        "provisionalWitnessId": "ling-donglai-minglixue-tianliang-154",
+        "editionId": null,
+        "author": "令东来",
+        "work": "紫微斗数命理学 / 第七节、天梁星",
+        "section": "田宅宫 paragraph: 天梁在田宅宫一般主吉…",
+        "page": null,
+        "language": "zh-Hans",
+        "url": "https://www.xuanmen.com.cn/archives/154.html",
+        "location": {
+          "paragraphLocator": "田宅宫 paragraph: 天梁在田宅宫一般主吉…",
+          "sourceTextRetained": false,
+          "observedDecodedHtmlSha256": "862d1661f030f6cd837be4043e5f3bb301280bcd1ecc413d571162b25461b570"
+        },
+        "originalQuotation": null
+      },
+      "observationVi": "Ling bổ sung trưởng bối hỗ trợ; nhập miếu OR Thiên Vu đồng cho thừa kế; Đinh Âm hóa Lộc hội chiếu, Nhâm Lương hóa Lộc, Ất Quyền gặp Âm Kỵ cần thêm cát. Cùng chủ đề tài sản nhưng không xác nhận chính xác bộ Cơ+vô sáu sát của Q.",
+      "family": "ling-donglai-authored-commentary",
+      "kind": "authored_comparison",
+      "independence": "Separately attributed authorship; borrowing and print identity unverified; scope match explicitly bounded",
+      "rights": "Locators, original analysis, bounded ancient collation only; no modern body retained",
+      "status": "COMPARED_WITH_IDENTITY_LIMITS"
+    },
+    {
+      "comparisonId": "B6C03",
+      "recordIds": [
+        "KRB6-PD-LUONG"
+      ],
+      "sourceReference": {
+        "provisionalWitnessId": "ling-donglai-minglixue-tianliang-154",
+        "editionId": null,
+        "author": "令东来",
+        "work": "紫微斗数命理学 / 第七节、天梁星",
+        "section": "福德宫 three consecutive paragraphs ending 天姚、咸池、沐浴…",
+        "page": null,
+        "language": "zh-Hans",
+        "url": "https://www.xuanmen.com.cn/archives/154.html",
+        "location": {
+          "paragraphLocator": "福德宫 three consecutive paragraphs ending 天姚、咸池、沐浴…",
+          "sourceTextRetained": false,
+          "observedDecodedHtmlSha256": "862d1661f030f6cd837be4043e5f3bb301280bcd1ecc413d571162b25461b570"
+        },
+        "originalQuotation": null
+      },
+      "observationVi": "Ling gắn cát/cát hóa với nghiên cứu và hưởng thụ tinh thần, sát/Kỵ với ưu phiền; nêu Thiên Diêu/Hàm Trì/Mộc Dục đồng là bất lợi trong luận đạo đức của tác giả. Đây là mô tả hiện đại độc lập về Lương, không lấp entry cổ hoặc xác nhận đủ cohost.",
+      "family": "ling-donglai-authored-commentary",
+      "kind": "authored_comparison",
+      "independence": "Separately attributed authorship; borrowing and print identity unverified; scope match explicitly bounded",
+      "rights": "Locators, original analysis, bounded ancient collation only; no modern body retained",
+      "status": "COMPARED_WITH_IDENTITY_LIMITS"
+    },
+    {
+      "comparisonId": "B6C04",
+      "recordIds": [
+        "KRB6-M-CO-SCAN"
+      ],
+      "sourceReference": {
+        "sourceId": "ziwei-quanshu-tradition",
+        "provisionalWitnessId": "quanshu-naikaku-ia-20260506-1217",
+        "editionId": null,
+        "author": null,
+        "authorAttribution": "陳摶 traditional attribution; leaf4 credits 潘希尹補輯, 楊一宇恭閱, 書林葆和堂葉梓行; no authenticated publication date",
+        "work": "新鋟希夷陳先生紫微斗數全書 — seven-juan scan witness",
+        "section": "KRB6-M-CO-SCAN",
+        "page": null,
+        "language": "zh-Hant",
+        "url": "https://archive.org/download/20260506_20260506_1217/page/n90.jpg",
+        "digitalLeafZeroBased": 90,
+        "pdfPageOneBased": 91,
+        "printedFolio": null,
+        "scanEvidenceRef": "docs/knowledge/research/knowledge-first-batch-6/scan-collation.json",
+        "originalQuotation": null,
+        "family": "quanshu-transmission",
+        "locatorLimit": "Actual image inspected; zero-based digital leaf is not a printed folio or authenticated edition ID"
+      },
+      "observationVi": "Scan90 xác nhận sáu nhãn sáng và các cohost chính trong witness này; chưa chọn bảng Q hay V là chuẩn. Ở子午 scan đọc丁己癸甲庚, Q148 thêm壬; 寅申 cũng cần collation can riêng.",
+      "family": "quanshu-transmission",
+      "kind": "dependent_witness_collation",
+      "independence": "Related Quanshu transmission; exact scan collation only, no independent authored agreement",
+      "rights": "Locators, original analysis, bounded ancient collation only; no modern body retained",
+      "status": "COLLATED_DEPENDENT_WITNESS"
+    },
+    {
+      "comparisonId": "B6C05",
+      "recordIds": [
+        "KRB6-TT-CO-SCAN"
+      ],
+      "sourceReference": {
+        "sourceId": "ziwei-quanshu-tradition",
+        "provisionalWitnessId": "quanshu-naikaku-ia-20260506-1217",
+        "editionId": null,
+        "author": null,
+        "authorAttribution": "陳摶 traditional attribution; leaf4 credits 潘希尹補輯, 楊一宇恭閱, 書林葆和堂葉梓行; no authenticated publication date",
+        "work": "新鋟希夷陳先生紫微斗數全書 — seven-juan scan witness",
+        "section": "KRB6-TT-CO-SCAN",
+        "page": null,
+        "language": "zh-Hant",
+        "url": "https://archive.org/download/20260506_20260506_1217/page/n135.jpg",
+        "digitalLeafZeroBased": 135,
+        "pdfPageOneBased": 136,
+        "printedFolio": null,
+        "scanEvidenceRef": "docs/knowledge/research/knowledge-first-batch-6/scan-collation.json",
+        "originalQuotation": null,
+        "family": "quanshu-transmission",
+        "locatorLimit": "Actual image inspected; zero-based digital leaf is not a printed folio or authenticated edition ID"
+      },
+      "observationVi": "寅/申 không chỉ có ở hai bản số: ảnh135 cũng giữ. Ảnh90 cung cấp đối chứng辰戌 trong cùng artifact; không có chú giải nguyên nhân nên không đóng B5D12.",
+      "family": "quanshu-transmission",
+      "kind": "dependent_witness_collation",
+      "independence": "Related Quanshu transmission; exact scan collation only, no independent authored agreement",
+      "rights": "Locators, original analysis, bounded ancient collation only; no modern body retained",
+      "status": "COLLATED_DEPENDENT_WITNESS"
+    },
+    {
+      "comparisonId": "B6C06",
+      "recordIds": [
+        "KRB6-TA-CO-SCAN"
+      ],
+      "sourceReference": {
+        "sourceId": "ziwei-quanshu-tradition",
+        "provisionalWitnessId": "quanshu-naikaku-ia-20260506-1217",
+        "editionId": null,
+        "author": null,
+        "authorAttribution": "陳摶 traditional attribution; leaf4 credits 潘希尹補輯, 楊一宇恭閱, 書林葆和堂葉梓行; no authenticated publication date",
+        "work": "新鋟希夷陳先生紫微斗數全書 — seven-juan scan witness",
+        "section": "KRB6-TA-CO-SCAN",
+        "page": null,
+        "language": "zh-Hant",
+        "url": "https://archive.org/download/20260506_20260506_1217/page/n140.jpg",
+        "digitalLeafZeroBased": 140,
+        "pdfPageOneBased": 141,
+        "printedFolio": null,
+        "scanEvidenceRef": "docs/knowledge/research/knowledge-first-batch-6/scan-collation.json",
+        "originalQuotation": null,
+        "family": "quanshu-transmission",
+        "locatorLimit": "Actual image inspected; zero-based digital leaf is not a printed folio or authenticated edition ID"
+      },
+      "observationVi": "Scan140 khớp quan hệ Cơ–Lương ở Q666 nhưng V2179 thuộc tác phẩm khác chưa có trang in. Câu hỏi về V còn mở; không dùng Quanshu để emend V.",
+      "family": "quanshu-transmission",
+      "kind": "dependent_witness_collation",
+      "independence": "Related Quanshu transmission; exact scan collation only, no independent authored agreement",
+      "rights": "Locators, original analysis, bounded ancient collation only; no modern body retained",
+      "status": "COLLATED_DEPENDENT_WITNESS"
+    },
+    {
+      "comparisonId": "B6C07",
+      "recordIds": [
+        "KRB6-QL-CO-SCAN"
+      ],
+      "sourceReference": {
+        "sourceId": "ziwei-quanshu-tradition",
+        "provisionalWitnessId": "quanshu-naikaku-ia-20260506-1217",
+        "editionId": null,
+        "author": null,
+        "authorAttribution": "陳摶 traditional attribution; leaf4 credits 潘希尹補輯, 楊一宇恭閱, 書林葆和堂葉梓行; no authenticated publication date",
+        "work": "新鋟希夷陳先生紫微斗數全書 — seven-juan scan witness",
+        "section": "KRB6-QL-CO-SCAN",
+        "page": null,
+        "language": "zh-Hant",
+        "url": "https://archive.org/download/20260506_20260506_1217/page/n147.jpg",
+        "digitalLeafZeroBased": 147,
+        "pdfPageOneBased": 148,
+        "printedFolio": null,
+        "scanEvidenceRef": "docs/knowledge/research/knowledge-first-batch-6/scan-collation.json",
+        "originalQuotation": null,
+        "family": "quanshu-transmission",
+        "locatorLimit": "Actual image inspected; zero-based digital leaf is not a printed folio or authenticated edition ID"
+      },
+      "observationVi": "Có direct image reading khác các bản số: mất 不 làm đảo hướng qualifier. Narrow reading đã được trả lời cho ảnh147; lịch sử chữ chuẩn/edition/ý nghĩa rộng vẫn chưa đủ để RESOLVED_WITH_EVIDENCE disposition gốc.",
+      "family": "quanshu-transmission",
+      "kind": "dependent_witness_collation",
+      "independence": "Related Quanshu transmission; exact scan collation only, no independent authored agreement",
+      "rights": "Locators, original analysis, bounded ancient collation only; no modern body retained",
+      "status": "COLLATED_DEPENDENT_WITNESS"
+    },
+    {
+      "comparisonId": "B6C08",
+      "recordIds": [
+        "KRB6-NB-PHU-SCAN"
+      ],
+      "sourceReference": {
+        "sourceId": "ziwei-quanshu-tradition",
+        "provisionalWitnessId": "quanshu-naikaku-ia-20260506-1217",
+        "editionId": null,
+        "author": null,
+        "authorAttribution": "陳摶 traditional attribution; leaf4 credits 潘希尹補輯, 楊一宇恭閱, 書林葆和堂葉梓行; no authenticated publication date",
+        "work": "新鋟希夷陳先生紫微斗數全書 — seven-juan scan witness",
+        "section": "KRB6-NB-PHU-SCAN",
+        "page": null,
+        "language": "zh-Hant",
+        "url": "https://archive.org/download/20260506_20260506_1217/page/n145.jpg",
+        "digitalLeafZeroBased": 145,
+        "pdfPageOneBased": 146,
+        "printedFolio": null,
+        "scanEvidenceRef": "docs/knowledge/research/knowledge-first-batch-6/scan-collation.json",
+        "originalQuotation": null,
+        "family": "quanshu-transmission",
+        "locatorLimit": "Actual image inspected; zero-based digital leaf is not a printed folio or authenticated edition ID"
+      },
+      "observationVi": "Nét 衛 được kiểm lại trên ảnh phóng vùng cột Phủ. Bằng chứng mới khoanh chữ cho witness này, chưa xác nhận toàn bộ lịch sử emendation hoặc số lượng người hầu.",
+      "family": "quanshu-transmission",
+      "kind": "dependent_witness_collation",
+      "independence": "Related Quanshu transmission; exact scan collation only, no independent authored agreement",
+      "rights": "Locators, original analysis, bounded ancient collation only; no modern body retained",
+      "status": "COLLATED_DEPENDENT_WITNESS"
+    },
+    {
+      "comparisonId": "B6C09",
+      "recordIds": [
+        "KRB6-METHOD-WANG-PARTIAL"
+      ],
+      "sourceReference": {
+        "sourceId": "trung-chau-wang-tingzhi",
+        "provisionalWitnessId": "wang-tingzhi-lingtan-scribd-871559757",
+        "editionId": null,
+        "author": "王亭之 (body attribution; edition unverified)",
+        "work": "鬥數零談 — Scribd readable transcription",
+        "section": "（二）天機星曜及其星系 / 天機守命，為人靈動; 機梁守命，三種變局",
+        "page": null,
+        "language": "zh-Hant",
+        "url": "https://www.scribd.com/document/871559757/王亭之-斗数零谈",
+        "readerLines": [
+          850,
+          913
+        ],
+        "runningPageLabels": "77–83 in two-column extracted body; physical pagination not authenticated",
+        "originalQuotation": null
+      },
+      "observationVi": "Partial match only. Same named Cơ/Lương and assistants but additional Xương/Khúc, broader hội relation and missing Vi/Phụ. New authored attribution is provisional; shared Quanshu sayings and Ling quotations create dependency risk.",
+      "family": "wang-tingzhi-attributed-lingtan",
+      "kind": "authored_comparison",
+      "independence": "Separately attributed authorship; borrowing and print identity unverified; scope match explicitly bounded",
+      "rights": "Locators, original analysis, bounded ancient collation only; no modern body retained",
+      "status": "COMPARED_WITH_IDENTITY_LIMITS"
+    }
+  ]
+}

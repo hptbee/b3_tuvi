@@ -1,0 +1,253 @@
+{
+  "provisionalWitnessId": "quanshu-naikaku-ia-20260506-1217",
+  "sourceId": "ziwei-quanshu-tradition",
+  "editionId": null,
+  "url": "https://archive.org/details/20260506_20260506_1217",
+  "metadataUrl": "https://archive.org/metadata/20260506_20260506_1217",
+  "observedIdentity": {
+    "cover": "紫微斗數全書 上; 内閣文庫 stamp; 子60–1 / 15856 visible",
+    "titleLeaf": "新鋟希夷陳先生紫微斗數全書卷之一",
+    "credits": [
+      "江西負鼎子潘希尹補輯",
+      "閩關西後裔楊一宇恭閱",
+      "書林葆和堂葉梓行"
+    ],
+    "observedSevenJuan": true,
+    "year": null,
+    "printedFolio": null,
+    "officialLibraryChainVerified": false,
+    "limitation": "Uploader date1600 / 明代南陽堂 description not authenticated. Title/credit/stamp visible in reproduction, not official archive custody verification."
+  },
+  "remoteArtifacts": {
+    "fullPdfBytes": 853249683,
+    "fullPdfSha1": "25428d9172069a67565f1667be915995a1c9e4f6",
+    "jp2ZipSha1": "a3f119374de4e37ea842352778e02318e35f8aa7",
+    "textPdfSha1": "6be1967d1237d6d93db17f32e3440d68f39154fc",
+    "fullPdfOrZipDownloaded": false,
+    "meaning": "IA metadata SHA1, not locally downloaded/verified book hash"
+  },
+  "access": "Direct HTTPS metadata + bounded JPEG leaves. IIIF manifest timed out; no repeat. OCR in memory used only as failed locator probe, not retained/collation evidence.",
+  "rights": "Ancient wording in bounded manual excerpts only; license/source/rights fields absent from uploader metadata. No image/full text/OCR corpus redistributed; does not clear scan reuse.",
+  "family": "quanshu-transmission",
+  "images": [
+    {
+      "digitalLeafZeroBased": 0,
+      "pdfPageOneBased": 1,
+      "url": "https://archive.org/download/20260506_20260506_1217/page/n0.jpg",
+      "bytes": 2793231,
+      "observedJpegSha256": "d48a61a316d7a3cb31995f1e689731f75b871f6a49e12aa9d1f94e725d7daa2d",
+      "imageRetainedInRepository": false,
+      "inspection": "identity/credit"
+    },
+    {
+      "digitalLeafZeroBased": 2,
+      "pdfPageOneBased": 3,
+      "url": "https://archive.org/download/20260506_20260506_1217/page/n2.jpg",
+      "bytes": 2473138,
+      "observedJpegSha256": "5bc0f989a461dad329ce088d2761a17e945dec9a6f33fcafc44fa748aaddea5d",
+      "imageRetainedInRepository": false,
+      "inspection": "bounded locator/context probe; not whole-section transcription"
+    },
+    {
+      "digitalLeafZeroBased": 4,
+      "pdfPageOneBased": 5,
+      "url": "https://archive.org/download/20260506_20260506_1217/page/n4.jpg",
+      "bytes": 2439195,
+      "observedJpegSha256": "e890f76cbfda2307badcc7f62bd4e353a46cb3a3036eaf25a3d6a3572a2e6486",
+      "imageRetainedInRepository": false,
+      "inspection": "identity/credit"
+    },
+    {
+      "digitalLeafZeroBased": 5,
+      "pdfPageOneBased": 6,
+      "url": "https://archive.org/download/20260506_20260506_1217/page/n5.jpg",
+      "bytes": 2748301,
+      "observedJpegSha256": "5be0c04f341e5413b4db0c1d5e7740a81060a11b9d3bf332c25cd5c4aa809e47",
+      "imageRetainedInRepository": false,
+      "inspection": "bounded locator/context probe; not whole-section transcription"
+    },
+    {
+      "digitalLeafZeroBased": 89,
+      "pdfPageOneBased": 90,
+      "url": "https://archive.org/download/20260506_20260506_1217/page/n89.jpg",
+      "bytes": 2436395,
+      "observedJpegSha256": "94ebb8c1e13687dcb2141ec389acbf0b6c67e2ade5eb6e771e1838037b30faf9",
+      "imageRetainedInRepository": false,
+      "inspection": "bounded locator/context probe; not whole-section transcription"
+    },
+    {
+      "digitalLeafZeroBased": 90,
+      "pdfPageOneBased": 91,
+      "url": "https://archive.org/download/20260506_20260506_1217/page/n90.jpg",
+      "bytes": 2455317,
+      "observedJpegSha256": "7111bf73d2d37c97e3b889fa467c93eea0fa18526ee8800cbcc5626241cb548f",
+      "imageRetainedInRepository": false,
+      "inspection": "target collation"
+    },
+    {
+      "digitalLeafZeroBased": 95,
+      "pdfPageOneBased": 96,
+      "url": "https://archive.org/download/20260506_20260506_1217/page/n95.jpg",
+      "bytes": 2496259,
+      "observedJpegSha256": "74d07d82815783e5fe659dbf9aecd01ade6d7f7644bcc12d8f1264a74bc2bf46",
+      "imageRetainedInRepository": false,
+      "inspection": "bounded locator/context probe; not whole-section transcription"
+    },
+    {
+      "digitalLeafZeroBased": 120,
+      "pdfPageOneBased": 121,
+      "url": "https://archive.org/download/20260506_20260506_1217/page/n120.jpg",
+      "bytes": 2415136,
+      "observedJpegSha256": "20ef847c59a10d21dce363baf3d7a00d6a4f9fbbef6c669cba8cbbd241d77210",
+      "imageRetainedInRepository": false,
+      "inspection": "bounded locator/context probe; not whole-section transcription"
+    },
+    {
+      "digitalLeafZeroBased": 135,
+      "pdfPageOneBased": 136,
+      "url": "https://archive.org/download/20260506_20260506_1217/page/n135.jpg",
+      "bytes": 2433249,
+      "observedJpegSha256": "68f349278de66d51fe59c278a2cf44eb87a281a460139a257a41afcacd32adfc",
+      "imageRetainedInRepository": false,
+      "inspection": "target collation"
+    },
+    {
+      "digitalLeafZeroBased": 136,
+      "pdfPageOneBased": 137,
+      "url": "https://archive.org/download/20260506_20260506_1217/page/n136.jpg",
+      "bytes": 2464166,
+      "observedJpegSha256": "462c2b895806f9e4cae87f8575b671b46e77061f19c397e4402ba8b9605f69e7",
+      "imageRetainedInRepository": false,
+      "inspection": "bounded locator/context probe; not whole-section transcription"
+    },
+    {
+      "digitalLeafZeroBased": 138,
+      "pdfPageOneBased": 139,
+      "url": "https://archive.org/download/20260506_20260506_1217/page/n138.jpg",
+      "bytes": 2531055,
+      "observedJpegSha256": "9005aca8e63ea3050b694955553a14efaa6e3dcc60ef74be273a16f769b59193",
+      "imageRetainedInRepository": false,
+      "inspection": "bounded locator/context probe; not whole-section transcription"
+    },
+    {
+      "digitalLeafZeroBased": 140,
+      "pdfPageOneBased": 141,
+      "url": "https://archive.org/download/20260506_20260506_1217/page/n140.jpg",
+      "bytes": 2536312,
+      "observedJpegSha256": "2054faec09a3df0ae0a9431f1f8bec203af87df2084c1f5baffefc1a1433f04c",
+      "imageRetainedInRepository": false,
+      "inspection": "target collation"
+    },
+    {
+      "digitalLeafZeroBased": 141,
+      "pdfPageOneBased": 142,
+      "url": "https://archive.org/download/20260506_20260506_1217/page/n141.jpg",
+      "bytes": 2481250,
+      "observedJpegSha256": "24158f992a9060632838d35de79af9e9e8e5b7c7dd3367617917a4887da6d6c6",
+      "imageRetainedInRepository": false,
+      "inspection": "bounded locator/context probe; not whole-section transcription"
+    },
+    {
+      "digitalLeafZeroBased": 142,
+      "pdfPageOneBased": 143,
+      "url": "https://archive.org/download/20260506_20260506_1217/page/n142.jpg",
+      "bytes": 2440829,
+      "observedJpegSha256": "dfaa8c6c680a1c50047da062aaf0799dc8675c0d3c2b182fa632af3b818090b1",
+      "imageRetainedInRepository": false,
+      "inspection": "bounded locator/context probe; not whole-section transcription"
+    },
+    {
+      "digitalLeafZeroBased": 145,
+      "pdfPageOneBased": 146,
+      "url": "https://archive.org/download/20260506_20260506_1217/page/n145.jpg",
+      "bytes": 2395129,
+      "observedJpegSha256": "c99678bf4c86b26ea9c41615e59e569ef128f01e5dcbf4ba19c65ad25bd14c39",
+      "imageRetainedInRepository": false,
+      "inspection": "target collation"
+    },
+    {
+      "digitalLeafZeroBased": 147,
+      "pdfPageOneBased": 148,
+      "url": "https://archive.org/download/20260506_20260506_1217/page/n147.jpg",
+      "bytes": 2391259,
+      "observedJpegSha256": "466f6d8b587b76a6b1f9cd019290ece7585d9f45fbaca4de050a2381fd2a0d0a",
+      "imageRetainedInRepository": false,
+      "inspection": "target collation"
+    },
+    {
+      "digitalLeafZeroBased": 148,
+      "pdfPageOneBased": 149,
+      "url": "https://archive.org/download/20260506_20260506_1217/page/n148.jpg",
+      "bytes": 2386142,
+      "observedJpegSha256": "a6c9084eab34c09e4d9f391599519adab206290654c58d341050a491d1921195",
+      "imageRetainedInRepository": false,
+      "inspection": "bounded locator/context probe; not whole-section transcription"
+    },
+    {
+      "digitalLeafZeroBased": 150,
+      "pdfPageOneBased": 151,
+      "url": "https://archive.org/download/20260506_20260506_1217/page/n150.jpg",
+      "bytes": 2551164,
+      "observedJpegSha256": "0820e862b25d74b60ad86a96d699bfa2f176710dd217882f3535db274579329f",
+      "imageRetainedInRepository": false,
+      "inspection": "bounded locator/context probe; not whole-section transcription"
+    }
+  ],
+  "excerpts": [
+    {
+      "id": "S90",
+      "leaf": 90,
+      "pane": "left: six branch rows below 天機 prose, 子午 through 丑未",
+      "diplomatic": "子午宮入廟丁己癸甲庚生人財官格\n卯酉宮旺地巨門同乙辛戊癸生人財官格\n寅申宮得地太陰同丁己甲庚癸生人財官格\n巳亥宮和平丙壬戊生人合局不耐久\n辰戌宮利益天梁同壬庚丁生人為福\n丑未宮陷地丙戊丁壬生人財官格乙壬生人祿合格",
+      "analysis": "Manual reading, no punctuation; not normalized to Q stems or inserted 與/同度. Labels match, some stems/words differ.",
+      "imageUrl": "https://archive.org/download/20260506_20260506_1217/page/n90.jpg",
+      "printedFolio": null,
+      "transcriptSha256": "0d2dcd530916e1a2a97755895178a9ccb7be64417b64ad8c17387f93d797e036",
+      "hashMeaning": "UTF8 manual transcript; integrity of our note, not image authentication"
+    },
+    {
+      "id": "S135",
+      "leaf": 135,
+      "pane": "left: 天機 entry in three left-side columns; heading 四子女 in right pane",
+      "diplomatic": "天機廟旺二人或庶生多巨門同一人天梁同在寅宮有二\n三人在申宮女多男少只可一子太陰同二三人加羊陀\n火鈴空劫全無子",
+      "analysis": "Line breaks follow printed columns; 寅/申 retained, 巨門同 differs Q607. Compare S90 same artifact, not a placement-derived emendation.",
+      "imageUrl": "https://archive.org/download/20260506_20260506_1217/page/n135.jpg",
+      "printedFolio": null,
+      "transcriptSha256": "309b0b9688ca9779361852da67617bc45de8da0eba690f872d53a9197d7f22ee",
+      "hashMeaning": "UTF8 manual transcript; integrity of our note, not image authentication"
+    },
+    {
+      "id": "S140",
+      "leaf": 140,
+      "pane": "left: 天機 column and start of leftmost continuation; heading 六疾厄 and preamble immediately above/right",
+      "diplomatic": "天機繈褓多災陷地頭面破相巨門同血氣疾天梁同下部\n疾",
+      "analysis": "Bounded to clear Cơ/cohost segment; later tail at left edge not transcribed. Q666 alone supplies retained full tail. Historical words, no medical interpretation.",
+      "imageUrl": "https://archive.org/download/20260506_20260506_1217/page/n140.jpg",
+      "printedFolio": null,
+      "transcriptSha256": "ad118dcd05f0532e242ff60547faa2e232f7b2c6e12b22488d538fe932b212a4",
+      "hashMeaning": "UTF8 manual transcript; integrity of our note, not image authentication"
+    },
+    {
+      "id": "S147",
+      "leaf": 147,
+      "pane": "right: 天機入廟 incipit paragraph continuing next column",
+      "diplomatic": "天機入廟權貴會文曲為良不見羊陀火鈴方宜天梁同文\n武之材太陰同名振邊夷陷宮退官失職吏員立腳",
+      "analysis": "No 巨/臣 read after 良. Proposed segmentation 為良 / 不見羊陀火鈴 / 方宜 is analyst punctuation, not diplomatic text.",
+      "imageUrl": "https://archive.org/download/20260506_20260506_1217/page/n147.jpg",
+      "printedFolio": null,
+      "transcriptSha256": "4ef22a89489d406e7ff3ac0fb4218b10ca98945f264ec6ac3f09fa7d48ce8ce6",
+      "hashMeaning": "UTF8 manual transcript; integrity of our note, not image authentication"
+    },
+    {
+      "id": "S145",
+      "leaf": 145,
+      "pane": "left: 天府 entry, first two columns; enlarged central portion inspected",
+      "diplomatic": "天府得力一呼百諾紫微同助主衛家",
+      "analysis": "Bounded incipit only. 衛 read visually, not 天; not copied into Q719. Full later clauses not claimed diplomatically collated.",
+      "imageUrl": "https://archive.org/download/20260506_20260506_1217/page/n145.jpg",
+      "printedFolio": null,
+      "transcriptSha256": "5cadb74d0b7e6b3b91cac07bebd2bfee0efc126921681cb3fe108c1e7e85b61d",
+      "hashMeaning": "UTF8 manual transcript; integrity of our note, not image authentication"
+    }
+  ]
+}

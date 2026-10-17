@@ -1,0 +1,1375 @@
+{
+  "batchId": "KR-B6-20261017",
+  "purpose": "Three new contextual cells; five direct-image dependent collations; one partial authored-method comparator. No approval.",
+  "conventionRef": "docs/tuvi/KNOWLEDGE_CLAIM_MODEL.md",
+  "records": [
+    {
+      "recordId": "KRB6-PT-ZIWEI",
+      "claimType": "interpretation",
+      "subject": {
+        "starId": "tu_vi",
+        "palaceId": "phu_the"
+      },
+      "schoolId": null,
+      "schoolScope": "Witness-specific attribution only; Wang describes 中州派, no runtime school ID or authenticated universal profile",
+      "researchStorage": "accepted_for_bounded_research_with_uncertainty",
+      "status": {
+        "collection": "COLLECTED",
+        "contextMapping": "CONTEXT_MAPPED",
+        "comparison": "performed_with_identity_limits",
+        "research": "COMPARED",
+        "sourceReview": "not_executed",
+        "runtimeApproval": "not_requested",
+        "publicRelease": "withheld_closed"
+      },
+      "verificationStatus": {
+        "implementationStatus": "not_executable",
+        "formulaStatus": "undocumented",
+        "bibliographicStatus": "secondary",
+        "interpretationStatus": "unreviewed"
+      },
+      "rights": {
+        "retention": "Modern works: locators and short original analytical notes only. Ancient scan: bounded manual collation excerpts, no images/OCR/book corpus redistributed; scan reuse license unknown.",
+        "scope": "Research storage only; not source-review, runtime, public-release or redistribution permission"
+      },
+      "exclusions": [
+        "Không dùng làm dự đoán cá nhân hay lời khuyên sức khỏe, sinh sản, hôn nhân hoặc tài chính",
+        "Không suy độ/quyền an sao hay kết luận runtime từ diễn giải",
+        "Không tự gộp khác biệt giới, địa vị, gia đình và nghề nghiệp cổ thành khuyến nghị hiện đại"
+      ],
+      "sourceFamilyDependencies": [
+        "ham-so-attributed-web",
+        "Different authored attribution does not establish historical independence or lack of borrowing"
+      ],
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-6/DOSSIER.md#krb6-pt-ziwei",
+      "evidenceRef": "docs/knowledge/research/knowledge-first-batch-6/evidence.json",
+      "recordFile": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "sourceReferences": [
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "author": null,
+          "authorAttribution": "Traditional attribution; retained transcription, not authenticated original edition",
+          "work": "紫微斗數全書 — retained iztro transcription",
+          "section": "夫妻宮 / 紫微",
+          "page": null,
+          "language": "zh-Hant",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 577,
+            "endLine": 577,
+            "sha256": "0283dcbe613ebda2617200c8509249c718b46a94071ef0a402ff11fbdfd432e0",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "originalQuotation": null
+        }
+      ],
+      "predicate": "tu_vi / phu_the — source-bounded conditional context",
+      "meaningVi": "Q tách kết hôn muộn, tính cương; Phủ đồng hài lão, Tướng đồng niên thiếu, Phá đồng hình khắc, thêm Dương/Đà/Hỏa/Linh cũng hình; Tham đồng có cát miễn hình. Entry đối ứng Tướng nói hài lão, Phá/Tham nhắc tuổi lớn hơn: giữ đúng chủ thể từng câu, chưa hợp thành một chỉ dẫn tuổi.",
+      "governingContext": {
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 576,
+          "endLine": 599,
+          "sha256": "5a30d0702bae7452547d2f7f965ad9e8dc3b84b3a8b07753b9172563c7691a74",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "preambleStatus": "No separate palace preamble before first entry",
+        "meaningVi": "Đọc trọn576–599 và đối ứng Phủ584, Tham586, Tướng588, Phá591; chỉ điều kiện cùng clause được giữ.",
+        "dependencies": [
+          "source_specific_scope",
+          "relation_endpoints",
+          "standalone_vs_cohost",
+          "no_runtime_inference"
+        ]
+      },
+      "conditions": [
+        "Vi ở Phu Thê; entry độc lập, không mượn bảng sáng Mệnh",
+        "Tham đồng PLUS có 吉星 mới là nhánh miễn hình"
+      ],
+      "modifiers": [
+        "晚聘 chỉ thời điểm theo xã hội nguồn; 年少 khác 年長 ở các entry đối ứng",
+        "Dương/Đà/Hỏa/Linh trong entry Vi; 不 tự thêm Không/Kiếp từ entry khác"
+      ],
+      "exceptions": [
+        "Không biến miễn hình theo cát thành miễn trừ mọi adverse",
+        "Không đọc câu thuận ở entry đối ứng để bỏ qualifier"
+      ],
+      "relationships": [
+        {
+          "type": "cohost_reference_in_other_entry",
+          "starId": "thien_phu",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 584,
+            "endLine": 584,
+            "sha256": "bfbd111110e4565f2079795cdbc40ef46ad06c587ac7022f96a0c57081ac7c37",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "scope": "Source clause only; no universal qualifier propagation"
+        },
+        {
+          "type": "cohost_reference_in_other_entry",
+          "starId": "tham_lang",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 586,
+            "endLine": 586,
+            "sha256": "bb69e72c6fd0009eb50d1a1bbba250421c43bba11afb6890acfec305488088c8",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "scope": "Source clause only; no universal qualifier propagation"
+        },
+        {
+          "type": "cohost_reference_in_other_entry",
+          "starId": "thien_tuong",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 588,
+            "endLine": 588,
+            "sha256": "37ecb598f32da2f117340fa258b14e6c262a6004079f7b42e38b80e52e0fca73",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "scope": "Source clause only; no universal qualifier propagation"
+        },
+        {
+          "type": "cohost_reference_in_other_entry",
+          "starId": "pha_quan",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 591,
+            "endLine": 591,
+            "sha256": "ea22e0c967cc93de13b97ae477c946b3a4e0b5604f3a47b81b3866b35d849e1c",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "scope": "Source clause only; no universal qualifier propagation"
+        }
+      ],
+      "positiveBranches": [
+        "Chỉ có hiệu lực nghiên cứu trong đúng điều kiện và witness được dẫn"
+      ],
+      "adverseBranches": [
+        "Thiếu edition/gloss hoặc điều kiện không trùng khiến chưa thể hợp nhất kết luận"
+      ],
+      "comparisonIds": [
+        "B6C01"
+      ],
+      "uncertainties": [
+        "吉星 chưa có roster cụ thể",
+        "V3186 ghép Ngọ và Phủ bằng “và”; giữ nguyên, không sửa theo an sao",
+        "Tuổi/chủ thể và lời gia đạo là lịch sử, không lời khuyên"
+      ],
+      "contradicts": [],
+      "nextAction": "Tìm edition và comparator trùng đủ điều kiện; giữ khác phạm vi, không sinh rule chung.",
+      "originalTerms": [
+        "紫微",
+        "晚聘",
+        "諧老",
+        "年少",
+        "刑克",
+        "吉星"
+      ]
+    },
+    {
+      "recordId": "KRB6-DT-LUONG",
+      "claimType": "interpretation",
+      "subject": {
+        "starId": "thien_luong",
+        "palaceId": "dien_trach"
+      },
+      "schoolId": null,
+      "schoolScope": "Witness-specific attribution only; Wang describes 中州派, no runtime school ID or authenticated universal profile",
+      "researchStorage": "accepted_for_bounded_research_with_uncertainty",
+      "status": {
+        "collection": "COLLECTED",
+        "contextMapping": "CONTEXT_MAPPED",
+        "comparison": "performed_with_identity_limits",
+        "research": "COMPARED",
+        "sourceReview": "not_executed",
+        "runtimeApproval": "not_requested",
+        "publicRelease": "withheld_closed"
+      },
+      "verificationStatus": {
+        "implementationStatus": "not_executable",
+        "formulaStatus": "undocumented",
+        "bibliographicStatus": "secondary",
+        "interpretationStatus": "unreviewed"
+      },
+      "rights": {
+        "retention": "Modern works: locators and short original analytical notes only. Ancient scan: bounded manual collation excerpts, no images/OCR/book corpus redistributed; scan reuse license unknown.",
+        "scope": "Research storage only; not source-review, runtime, public-release or redistribution permission"
+      },
+      "exclusions": [
+        "Không dùng làm dự đoán cá nhân hay lời khuyên sức khỏe, sinh sản, hôn nhân hoặc tài chính",
+        "Không suy độ/quyền an sao hay kết luận runtime từ diễn giải",
+        "Không tự gộp khác biệt giới, địa vị, gia đình và nghề nghiệp cổ thành khuyến nghị hiện đại"
+      ],
+      "sourceFamilyDependencies": [
+        "ling-donglai-authored-commentary",
+        "Different authored attribution does not establish historical independence or lack of borrowing"
+      ],
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-6/DOSSIER.md#krb6-dt-luong",
+      "evidenceRef": "docs/knowledge/research/knowledge-first-batch-6/evidence.json",
+      "recordFile": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "sourceReferences": [
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "author": null,
+          "authorAttribution": "Traditional attribution; retained transcription, not authenticated original edition",
+          "work": "紫微斗數全書 — retained iztro transcription",
+          "section": "田宅宮 / 天梁",
+          "page": null,
+          "language": "zh-Hant",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 778,
+            "endLine": 778,
+            "sha256": "9dce2300b68eb376ecb2da753cbdc9688e0079b036fdae7bb1248fdbc0e1f4da",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "originalQuotation": null
+        }
+      ],
+      "predicate": "thien_luong / dien_trach — source-bounded conditional context",
+      "meaningVi": "Q phân Lương miếu/vượng có tổ nghiệp; Đồng đồng trước khó sau dễ; Cơ đồng không thấy sáu sao Dương/Đà/Hỏa/Linh/Không/Kiếp thì cuối có điền. Entry Cơ nhấn có đặt mua và giàu muộn; entry Đồng trước lui sau tiến. Không đảo điều kiện vô sát thành bảo đảm tài sản.",
+      "governingContext": {
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 765,
+          "endLine": 788,
+          "sha256": "66c1a214119aab5b0228ef7cf74fe15f99fa7b01fd5ff0b8704de22aaf6dac83",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "preambleStatus": "No separate preamble before first star",
+        "meaningVi": "Đọc765–788, đối ứng767/771, giữ sáng/cohost và thời gian trong từng entry.",
+        "dependencies": [
+          "source_specific_scope",
+          "relation_endpoints",
+          "standalone_vs_cohost",
+          "no_runtime_inference"
+        ]
+      },
+      "conditions": [
+        "Lương miếu/vượng cho nhánh tổ nghiệp",
+        "Cơ đồng AND không thấy đủ danh sách adverse được nêu cho nhánh cuối có điền",
+        "Ling154: nhập miếu OR Thiên Vu đồng cho nhánh thừa kế; Đinh Âm hóa Lộc HỘI CHIẾU Lương/Điền; Nhâm Lương hóa Lộc tại Điền; Ất Lương hóa Quyền hội Âm hóa Kỵ chỉ thêm sản nghiệp khi còn cát/cát hóa hỗ trợ"
+      ],
+      "modifiers": [
+        "Đồng đồng: trình tự khó→dễ; entry đối ứng771 lui→tiến",
+        "Tổ nghiệp khác tự tạo/mua; không gộp hai loại"
+      ],
+      "exceptions": [
+        "Không thay bộ adverse771 bằng bộ778",
+        "Không có số lượng nhà hay xác suất thực nghiệm"
+      ],
+      "relationships": [
+        {
+          "type": "cohost_reference_in_other_entry",
+          "starId": "thien_co",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 767,
+            "endLine": 767,
+            "sha256": "4aeb0c94263499259240be3230a90c6aa9227135c49131029c638d834fadecdd",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "scope": "Source clause only; no universal qualifier propagation"
+        },
+        {
+          "type": "cohost_reference_in_other_entry",
+          "starId": "thien_dong",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 771,
+            "endLine": 771,
+            "sha256": "743f2b041a05596ad9ff7125da80d3a735161b164dca3e12d96cd77df70c7711",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "scope": "Source clause only; no universal qualifier propagation"
+        }
+      ],
+      "positiveBranches": [
+        "Chỉ có hiệu lực nghiên cứu trong đúng điều kiện và witness được dẫn"
+      ],
+      "adverseBranches": [
+        "Thiếu edition/gloss hoặc điều kiện không trùng khiến chưa thể hợp nhất kết luận"
+      ],
+      "comparisonIds": [
+        "B6C02"
+      ],
+      "uncertainties": [
+        "Q không định nghĩa ở đây phạm vi 不見",
+        "V2699 mang heading Điền nhưng body nói phúc/thọ/họ hàng, không dùng xác nhận điền"
+      ],
+      "contradicts": [],
+      "nextAction": "Tìm edition và comparator trùng đủ điều kiện; giữ khác phạm vi, không sinh rule chung.",
+      "originalTerms": [
+        "天梁",
+        "廟旺",
+        "祖業",
+        "天同",
+        "天機",
+        "不見羊陀火鈴空劫"
+      ]
+    },
+    {
+      "recordId": "KRB6-PD-LUONG",
+      "claimType": "interpretation",
+      "subject": {
+        "starId": "thien_luong",
+        "palaceId": "phuc_duc"
+      },
+      "schoolId": null,
+      "schoolScope": "Witness-specific attribution only; Wang describes 中州派, no runtime school ID or authenticated universal profile",
+      "researchStorage": "accepted_for_bounded_research_with_uncertainty",
+      "status": {
+        "collection": "COLLECTED",
+        "contextMapping": "CONTEXT_MAPPED",
+        "comparison": "performed_with_identity_limits",
+        "research": "COMPARED",
+        "sourceReview": "not_executed",
+        "runtimeApproval": "not_requested",
+        "publicRelease": "withheld_closed"
+      },
+      "verificationStatus": {
+        "implementationStatus": "not_executable",
+        "formulaStatus": "undocumented",
+        "bibliographicStatus": "secondary",
+        "interpretationStatus": "unreviewed"
+      },
+      "rights": {
+        "retention": "Modern works: locators and short original analytical notes only. Ancient scan: bounded manual collation excerpts, no images/OCR/book corpus redistributed; scan reuse license unknown.",
+        "scope": "Research storage only; not source-review, runtime, public-release or redistribution permission"
+      },
+      "exclusions": [
+        "Không dùng làm dự đoán cá nhân hay lời khuyên sức khỏe, sinh sản, hôn nhân hoặc tài chính",
+        "Không suy độ/quyền an sao hay kết luận runtime từ diễn giải",
+        "Không tự gộp khác biệt giới, địa vị, gia đình và nghề nghiệp cổ thành khuyến nghị hiện đại"
+      ],
+      "sourceFamilyDependencies": [
+        "ling-donglai-authored-commentary",
+        "Different authored attribution does not establish historical independence or lack of borrowing"
+      ],
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-6/DOSSIER.md#krb6-pd-luong",
+      "evidenceRef": "docs/knowledge/research/knowledge-first-batch-6/evidence.json",
+      "recordFile": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "sourceReferences": [
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "author": null,
+          "authorAttribution": "Traditional attribution; retained transcription, not authenticated original edition",
+          "work": "紫微斗數全書 — retained iztro transcription",
+          "section": "福德宮 / Lương cohost references; no standalone entry in789–816",
+          "page": null,
+          "language": "zh-Hant",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 791,
+            "endLine": 796,
+            "sha256": "8cbe52aa0c78947a9492d29cc0a318ab140cf78b7e3ba2bd019f19bb45df4237",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "originalQuotation": null
+        }
+      ],
+      "predicate": "thien_luong / phuc_duc — source-bounded conditional context",
+      "meaningVi": "Q chỉ nhắc Lương đồng Cơ là hưởng phúc, đồng Nhật là khoái lạc, đồng Đồng là thanh nhàn. Toàn mục789–816 không có entry Lương riêng. Không lấy lời về Cơ/Nhật/Đồng làm kết luận cho Lương độc tọa.",
+      "governingContext": {
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 789,
+          "endLine": 816,
+          "sha256": "1ad123491278d5fcc8c568956085100468f59e45bc57035339586d3387bc5757",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "preambleStatus": "No separate preamble; complete section checked for absence",
+        "meaningVi": "Đọc toàn789–816; các đề cập791,792–793,796 là cohost-only. Cấp depth ngữ cảnh không có nghĩa standalone hoàn chỉnh.",
+        "dependencies": [
+          "source_specific_scope",
+          "relation_endpoints",
+          "standalone_vs_cohost",
+          "no_runtime_inference"
+        ]
+      },
+      "conditions": [
+        "Primary Q: Lương là cohost của Cơ hoặc Nhật hoặc Đồng",
+        "Modern Ling: entry Lương/Phúc độc lập, granularity khác"
+      ],
+      "modifiers": [
+        "Cơ791 có adverse làm bôn ba, không tự bỏ khi gặp Lương",
+        "Nhật792–793 nối qualifier nữ/cát và adverse: phạm vi chưa chắc; giữ riêng",
+        "Ling154: cát/cát hóa khác sát/Kỵ; Thiên Diêu, Hàm Trì, Mộc Dục ĐỒNG CUNG là nhánh không thuận theo tác giả, không đổi thành phổ quát hoặc bệnh lý"
+      ],
+      "exceptions": [
+        "Không sáng tác entry Lương cổ bị thiếu",
+        "Không chuyển tâm trạng theo sao thành chẩn đoán sức khỏe tâm thần"
+      ],
+      "relationships": [
+        {
+          "type": "cohost_reference_in_other_entry",
+          "starId": "thien_co",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 791,
+            "endLine": 791,
+            "sha256": "4f88f899563c41f21430fb4f6a5240e754a9683f65327833fe0eb9ac3ee16294",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "scope": "Source clause only; no universal qualifier propagation"
+        },
+        {
+          "type": "cohost_reference_in_other_entry",
+          "starId": "thai_duong",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 792,
+            "endLine": 793,
+            "sha256": "4a2e2dedf20f2fb2862789e962395953e23de28c132f2236a77f4d021434deeb",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "scope": "Source clause only; no universal qualifier propagation"
+        },
+        {
+          "type": "cohost_reference_in_other_entry",
+          "starId": "thien_dong",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 796,
+            "endLine": 796,
+            "sha256": "d0ef3ada30bc2f7c5a9ec33e3d94ad295a05ba621db929c8812b11cffe711798",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "scope": "Source clause only; no universal qualifier propagation"
+        }
+      ],
+      "positiveBranches": [
+        "Chỉ có hiệu lực nghiên cứu trong đúng điều kiện và witness được dẫn"
+      ],
+      "adverseBranches": [
+        "Thiếu edition/gloss hoặc điều kiện không trùng khiến chưa thể hợp nhất kết luận"
+      ],
+      "comparisonIds": [
+        "B6C03"
+      ],
+      "uncertainties": [
+        "Chưa biết thiếu entry là truyền bản hay chủ ý",
+        "Chưa có comparator Việt với heading/body Phúc rõ ràng"
+      ],
+      "contradicts": [],
+      "nextAction": "Tìm edition và comparator trùng đủ điều kiện; giữ khác phạm vi, không sinh rule chung.",
+      "originalTerms": [
+        "天梁",
+        "天機",
+        "太陽",
+        "天同",
+        "享福",
+        "清閑快樂"
+      ]
+    },
+    {
+      "recordId": "KRB6-M-CO-SCAN",
+      "claimType": "interpretation",
+      "subject": {
+        "starId": "thien_co",
+        "palaceId": "menh"
+      },
+      "schoolId": null,
+      "schoolScope": "Witness-specific attribution only; Wang describes 中州派, no runtime school ID or authenticated universal profile",
+      "researchStorage": "accepted_for_bounded_research_with_uncertainty",
+      "status": {
+        "collection": "COLLECTED",
+        "contextMapping": "CONTEXT_MAPPED",
+        "comparison": "performed_dependent_collation",
+        "research": "CONTEXT_MAPPED",
+        "sourceReview": "not_executed",
+        "runtimeApproval": "not_requested",
+        "publicRelease": "withheld_closed"
+      },
+      "verificationStatus": {
+        "implementationStatus": "not_executable",
+        "formulaStatus": "undocumented",
+        "bibliographicStatus": "secondary",
+        "interpretationStatus": "unreviewed"
+      },
+      "rights": {
+        "retention": "Modern works: locators and short original analytical notes only. Ancient scan: bounded manual collation excerpts, no images/OCR/book corpus redistributed; scan reuse license unknown.",
+        "scope": "Research storage only; not source-review, runtime, public-release or redistribution permission"
+      },
+      "exclusions": [
+        "Không dùng làm dự đoán cá nhân hay lời khuyên sức khỏe, sinh sản, hôn nhân hoặc tài chính",
+        "Không suy độ/quyền an sao hay kết luận runtime từ diễn giải",
+        "Không tự gộp khác biệt giới, địa vị, gia đình và nghề nghiệp cổ thành khuyến nghị hiện đại"
+      ],
+      "sourceFamilyDependencies": [
+        "quanshu-transmission",
+        "Same Quanshu family; scan not a new authored source"
+      ],
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-6/DOSSIER.md#krb6-m-co-scan",
+      "evidenceRef": "docs/knowledge/research/knowledge-first-batch-6/evidence.json",
+      "recordFile": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "sourceReferences": [
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "author": null,
+          "authorAttribution": "Traditional attribution; retained transcription, not authenticated original edition",
+          "work": "紫微斗數全書 — retained iztro transcription",
+          "section": "Complete retained section for scan collation",
+          "page": null,
+          "language": "zh-Hant",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 148,
+            "endLine": 153,
+            "sha256": "25a6f5fb4bec484f4e8a8222075d558c60ec32b2c69d80d410807e7341e630b1",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "originalQuotation": null
+        },
+        {
+          "sourceId": "ziwei-quanshu-tradition",
+          "provisionalWitnessId": "quanshu-naikaku-ia-20260506-1217",
+          "editionId": null,
+          "author": null,
+          "authorAttribution": "陳摶 traditional attribution; leaf4 credits 潘希尹補輯, 楊一宇恭閱, 書林葆和堂葉梓行; no authenticated publication date",
+          "work": "新鋟希夷陳先生紫微斗數全書 — seven-juan scan witness",
+          "section": "KRB6-M-CO-SCAN",
+          "page": null,
+          "language": "zh-Hant",
+          "url": "https://archive.org/download/20260506_20260506_1217/page/n90.jpg",
+          "digitalLeafZeroBased": 90,
+          "pdfPageOneBased": 91,
+          "printedFolio": null,
+          "scanEvidenceRef": "docs/knowledge/research/knowledge-first-batch-6/scan-collation.json",
+          "originalQuotation": null,
+          "family": "quanshu-transmission",
+          "locatorLimit": "Actual image inspected; zero-based digital leaf is not a printed folio or authenticated edition ID"
+        }
+      ],
+      "predicate": "thien_co / menh — source-bounded conditional context",
+      "meaningVi": "Ảnh90 giữ nhãn Cơ: Tý/Ngọ miếu, Mão/Dậu vượng với Cự, Dần/Thân đắc với Âm, Tỵ/Hợi hòa, Thìn/Tuất lợi với Lương, Sửu/Mùi hãm. Phần can sinh có chữ/độ dài khác Q; không suy sáu hàng hoàn toàn đồng văn. Cùng ảnh in giữ Lương辰戌, còn ảnh135 mục Tử giữ寅申.",
+      "governingContext": {
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 146,
+          "endLine": 162,
+          "sha256": "85191478474108ae6f95d0e3ffcfa97ecd13251780ad2133d8f59f957a791cd2",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "preambleStatus": "Retained full section; no extra preamble imported",
+        "meaningVi": "Q section read in full; scan inspection bounded to named paragraphs and nearby context, not the whole print chapter.",
+        "dependencies": [
+          "source_specific_scope",
+          "relation_endpoints",
+          "standalone_vs_cohost",
+          "no_runtime_inference"
+        ],
+        "scanReadScope": "Digital leaf90 plus title/credit leaves0/4; partial image chapters only"
+      },
+      "conditions": [
+        "Chỉ đọc chữ ở đúng scan leaf/pane/entry được nêu",
+        "Không sửa corpus hoặc approved claim từ collation này"
+      ],
+      "modifiers": [
+        "Branch/cohost as image, not formula-derived",
+        "Can sinh khác chữ được giữ trong bounded transcript, không hợp bảng"
+      ],
+      "exceptions": [
+        "Digital Juan2 và scan juan4 là numbering khác nhau",
+        "Bản ảnh cùng family không tạo độc lập tác giả"
+      ],
+      "relationships": [
+        {
+          "type": "linked_historical_record",
+          "recordId": "KRB4-M-CO"
+        }
+      ],
+      "positiveBranches": [
+        "Chỉ có hiệu lực nghiên cứu trong đúng điều kiện và witness được dẫn"
+      ],
+      "adverseBranches": [
+        "Thiếu edition/gloss hoặc điều kiện không trùng khiến chưa thể hợp nhất kết luận"
+      ],
+      "comparisonIds": [
+        "B6C04"
+      ],
+      "uncertainties": [
+        "Ảnh là ấn bản cũ có credit, nhưng niên đại và chuỗi thư viện chưa xác thực",
+        "Không giải khác bảng Hàm Số bằng bỏ phiếu mirror"
+      ],
+      "contradicts": [
+        "B4D08"
+      ],
+      "nextAction": "Đối chiếu thêm bản in có catalog/copyright và chú giải đúng clause; giữ các chữ đã đọc tách khỏi emendation.",
+      "originalTerms": [
+        "天機",
+        "子午",
+        "卯酉",
+        "寅申",
+        "辰戌",
+        "廟",
+        "旺",
+        "得",
+        "和",
+        "利",
+        "陷"
+      ],
+      "extendsRecordIds": [
+        "KRB4-M-CO"
+      ]
+    },
+    {
+      "recordId": "KRB6-TT-CO-SCAN",
+      "claimType": "interpretation",
+      "subject": {
+        "starId": "thien_co",
+        "palaceId": "tu_tuc"
+      },
+      "schoolId": null,
+      "schoolScope": "Witness-specific attribution only; Wang describes 中州派, no runtime school ID or authenticated universal profile",
+      "researchStorage": "accepted_for_bounded_research_with_uncertainty",
+      "status": {
+        "collection": "COLLECTED",
+        "contextMapping": "CONTEXT_MAPPED",
+        "comparison": "performed_dependent_collation",
+        "research": "CONTEXT_MAPPED",
+        "sourceReview": "not_executed",
+        "runtimeApproval": "not_requested",
+        "publicRelease": "withheld_closed"
+      },
+      "verificationStatus": {
+        "implementationStatus": "not_executable",
+        "formulaStatus": "undocumented",
+        "bibliographicStatus": "secondary",
+        "interpretationStatus": "unreviewed"
+      },
+      "rights": {
+        "retention": "Modern works: locators and short original analytical notes only. Ancient scan: bounded manual collation excerpts, no images/OCR/book corpus redistributed; scan reuse license unknown.",
+        "scope": "Research storage only; not source-review, runtime, public-release or redistribution permission"
+      },
+      "exclusions": [
+        "Không dùng làm dự đoán cá nhân hay lời khuyên sức khỏe, sinh sản, hôn nhân hoặc tài chính",
+        "Không suy độ/quyền an sao hay kết luận runtime từ diễn giải",
+        "Không tự gộp khác biệt giới, địa vị, gia đình và nghề nghiệp cổ thành khuyến nghị hiện đại"
+      ],
+      "sourceFamilyDependencies": [
+        "quanshu-transmission",
+        "Same Quanshu family; scan not a new authored source"
+      ],
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-6/DOSSIER.md#krb6-tt-co-scan",
+      "evidenceRef": "docs/knowledge/research/knowledge-first-batch-6/evidence.json",
+      "recordFile": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "sourceReferences": [
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "author": null,
+          "authorAttribution": "Traditional attribution; retained transcription, not authenticated original edition",
+          "work": "紫微斗數全書 — retained iztro transcription",
+          "section": "Complete retained section for scan collation",
+          "page": null,
+          "language": "zh-Hant",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 607,
+            "endLine": 607,
+            "sha256": "154ae025fe5e5786f98436d55eaca65ce366894fb9bcdff41b224eab4f1fc04f",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "originalQuotation": null
+        },
+        {
+          "sourceId": "ziwei-quanshu-tradition",
+          "provisionalWitnessId": "quanshu-naikaku-ia-20260506-1217",
+          "editionId": null,
+          "author": null,
+          "authorAttribution": "陳摶 traditional attribution; leaf4 credits 潘希尹補輯, 楊一宇恭閱, 書林葆和堂葉梓行; no authenticated publication date",
+          "work": "新鋟希夷陳先生紫微斗數全書 — seven-juan scan witness",
+          "section": "KRB6-TT-CO-SCAN",
+          "page": null,
+          "language": "zh-Hant",
+          "url": "https://archive.org/download/20260506_20260506_1217/page/n135.jpg",
+          "digitalLeafZeroBased": 135,
+          "pdfPageOneBased": 136,
+          "printedFolio": null,
+          "scanEvidenceRef": "docs/knowledge/research/knowledge-first-batch-6/scan-collation.json",
+          "originalQuotation": null,
+          "family": "quanshu-transmission",
+          "locatorLimit": "Actual image inspected; zero-based digital leaf is not a printed folio or authenticated edition ID"
+        }
+      ],
+      "predicate": "thien_co / tu_tuc — source-bounded conditional context",
+      "meaningVi": "Ảnh135 đọc rõ Lương đồng tại Dần hai-ba, Thân gái nhiều/trai ít/chỉ một. Cự có chữ 同 mà Q607 không có. Bảng Mệnh cùng artifact ảnh90 lại ghi Cơ–Lương辰戌. Đây là bất nhất liên mục trong witness ảnh; chưa biết lỗi khắc, lớp truyền văn hay ý riêng. Không thay chi từ thuật toán. Con số chỉ là lời thuật số lịch sử.",
+      "governingContext": {
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 600,
+          "endLine": 632,
+          "sha256": "62e3e8d293004ef7be24b576c1fffb71166d96fb0af0c6c408513b416dce0721",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "preambleStatus": "Palace preamble explicitly retained",
+        "meaningVi": "Q section read in full; scan inspection bounded to named paragraphs and nearby context, not the whole print chapter.",
+        "dependencies": [
+          "source_specific_scope",
+          "relation_endpoints",
+          "standalone_vs_cohost",
+          "no_runtime_inference"
+        ],
+        "preambleLocation": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 601,
+          "endLine": 604,
+          "sha256": "2e9035e99db67e134fbc37a64b415e808c24624b4d41c7a470f6145ca0cad9cf",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "scanReadScope": "Digital leaf135 plus title/credit leaves0/4; partial image chapters only"
+      },
+      "conditions": [
+        "Chỉ đọc chữ ở đúng scan leaf/pane/entry được nêu",
+        "Không sửa corpus hoặc approved claim từ collation này"
+      ],
+      "modifiers": [
+        "Nhập miếu/vượng, thứ sinh, Âm đồng, sáu adverse cùng entry phải còn trong ngữ cảnh",
+        "Preamble xét bản/đối cung, tam phương và chế hóa"
+      ],
+      "exceptions": [
+        "Digital Juan2 và scan juan4 là numbering khác nhau",
+        "Bản ảnh cùng family không tạo độc lập tác giả"
+      ],
+      "relationships": [
+        {
+          "type": "linked_historical_record",
+          "recordId": "KRB5-TT-CO"
+        }
+      ],
+      "positiveBranches": [
+        "Chỉ có hiệu lực nghiên cứu trong đúng điều kiện và witness được dẫn"
+      ],
+      "adverseBranches": [
+        "Thiếu edition/gloss hoặc điều kiện không trùng khiến chưa thể hợp nhất kết luận"
+      ],
+      "comparisonIds": [
+        "B6C05"
+      ],
+      "uncertainties": [
+        "Chưa có critical commentary giải thích mismatch",
+        "Không xác nhận các số con hoặc quan niệm giới của nguồn"
+      ],
+      "contradicts": [
+        "B5D12"
+      ],
+      "nextAction": "Đối chiếu thêm bản in có catalog/copyright và chú giải đúng clause; giữ các chữ đã đọc tách khỏi emendation.",
+      "originalTerms": [
+        "天機",
+        "天梁同",
+        "寅宮",
+        "申宮",
+        "巨門同",
+        "子女"
+      ],
+      "extendsRecordIds": [
+        "KRB5-TT-CO"
+      ]
+    },
+    {
+      "recordId": "KRB6-TA-CO-SCAN",
+      "claimType": "interpretation",
+      "subject": {
+        "starId": "thien_co",
+        "palaceId": "tat_ach"
+      },
+      "schoolId": null,
+      "schoolScope": "Witness-specific attribution only; Wang describes 中州派, no runtime school ID or authenticated universal profile",
+      "researchStorage": "accepted_for_bounded_research_with_uncertainty",
+      "status": {
+        "collection": "COLLECTED",
+        "contextMapping": "CONTEXT_MAPPED",
+        "comparison": "performed_dependent_collation",
+        "research": "CONTEXT_MAPPED",
+        "sourceReview": "not_executed",
+        "runtimeApproval": "not_requested",
+        "publicRelease": "withheld_closed"
+      },
+      "verificationStatus": {
+        "implementationStatus": "not_executable",
+        "formulaStatus": "undocumented",
+        "bibliographicStatus": "secondary",
+        "interpretationStatus": "unreviewed"
+      },
+      "rights": {
+        "retention": "Modern works: locators and short original analytical notes only. Ancient scan: bounded manual collation excerpts, no images/OCR/book corpus redistributed; scan reuse license unknown.",
+        "scope": "Research storage only; not source-review, runtime, public-release or redistribution permission"
+      },
+      "exclusions": [
+        "Không dùng làm dự đoán cá nhân hay lời khuyên sức khỏe, sinh sản, hôn nhân hoặc tài chính",
+        "Không suy độ/quyền an sao hay kết luận runtime từ diễn giải",
+        "Không tự gộp khác biệt giới, địa vị, gia đình và nghề nghiệp cổ thành khuyến nghị hiện đại"
+      ],
+      "sourceFamilyDependencies": [
+        "quanshu-transmission",
+        "Same Quanshu family; scan not a new authored source"
+      ],
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-6/DOSSIER.md#krb6-ta-co-scan",
+      "evidenceRef": "docs/knowledge/research/knowledge-first-batch-6/evidence.json",
+      "recordFile": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "sourceReferences": [
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "author": null,
+          "authorAttribution": "Traditional attribution; retained transcription, not authenticated original edition",
+          "work": "紫微斗數全書 — retained iztro transcription",
+          "section": "Complete retained section for scan collation",
+          "page": null,
+          "language": "zh-Hant",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 666,
+            "endLine": 666,
+            "sha256": "652b66d891ed65136e4cbe851f9410adf5978f2a0e2b160a10d9d25c788b4295",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "originalQuotation": null
+        },
+        {
+          "sourceId": "ziwei-quanshu-tradition",
+          "provisionalWitnessId": "quanshu-naikaku-ia-20260506-1217",
+          "editionId": null,
+          "author": null,
+          "authorAttribution": "陳摶 traditional attribution; leaf4 credits 潘希尹補輯, 楊一宇恭閱, 書林葆和堂葉梓行; no authenticated publication date",
+          "work": "新鋟希夷陳先生紫微斗數全書 — seven-juan scan witness",
+          "section": "KRB6-TA-CO-SCAN",
+          "page": null,
+          "language": "zh-Hant",
+          "url": "https://archive.org/download/20260506_20260506_1217/page/n140.jpg",
+          "digitalLeafZeroBased": 140,
+          "pdfPageOneBased": 141,
+          "printedFolio": null,
+          "scanEvidenceRef": "docs/knowledge/research/knowledge-first-batch-6/scan-collation.json",
+          "originalQuotation": null,
+          "family": "quanshu-transmission",
+          "locatorLimit": "Actual image inspected; zero-based digital leaf is not a printed folio or authenticated edition ID"
+        }
+      ],
+      "predicate": "thien_co / tat_ach — source-bounded conditional context",
+      "meaningVi": "Ảnh140 đọc Cự đồng huyết khí tật, Lương đồng hạ bộ tật ngay trong entry Cơ. Lời dẫn vẫn xét Mệnh thủ/chiếu với adverse trước Tật. Đây là chữ của Quanshu; không chứng minh “Cự Lương” ở V2179 phải sửa thành “Cơ Lương”, cũng không định danh bệnh hiện đại.",
+      "governingContext": {
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 663,
+          "endLine": 686,
+          "sha256": "5983082017347cc98238f468190117431f69e4818aac31ad739196496855534a",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "preambleStatus": "Palace preamble explicitly retained",
+        "meaningVi": "Q section read in full; scan inspection bounded to named paragraphs and nearby context, not the whole print chapter.",
+        "dependencies": [
+          "source_specific_scope",
+          "relation_endpoints",
+          "standalone_vs_cohost",
+          "no_runtime_inference"
+        ],
+        "preambleLocation": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 664,
+          "endLine": 664,
+          "sha256": "68f8092ca016f30a51db79b4f1c7b2658b8aa73fcbbe8eaff4bb110d572d2b48",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "scanReadScope": "Digital leaf140 plus title/credit leaves0/4; partial image chapters only"
+      },
+      "conditions": [
+        "Chỉ đọc chữ ở đúng scan leaf/pane/entry được nêu",
+        "Không sửa corpus hoặc approved claim từ collation này"
+      ],
+      "modifiers": [
+        "Cơ hãm có nhánh đầu/mặt; đồng Cự và đồng Lương là hai clause riêng",
+        "Chỉ lưu transcript đoạn nhìn rõ; đuôi Âm/adverse theo Q666 giữ tách, không giả vờ đã đọc mọi nét cột sát mép"
+      ],
+      "exceptions": [
+        "Digital Juan2 và scan juan4 là numbering khác nhau",
+        "Bản ảnh cùng family không tạo độc lập tác giả"
+      ],
+      "relationships": [
+        {
+          "type": "linked_historical_record",
+          "recordId": "KRB5-TA-CO"
+        }
+      ],
+      "positiveBranches": [
+        "Chỉ có hiệu lực nghiên cứu trong đúng điều kiện và witness được dẫn"
+      ],
+      "adverseBranches": [
+        "Thiếu edition/gloss hoặc điều kiện không trùng khiến chưa thể hợp nhất kết luận"
+      ],
+      "comparisonIds": [
+        "B6C06"
+      ],
+      "uncertainties": [
+        "Bệnh danh cổ chưa có gloss theo edition",
+        "Không bằng chứng y học hay liên hệ dự đoán với bệnh thật"
+      ],
+      "contradicts": [
+        "B5D13"
+      ],
+      "nextAction": "Đối chiếu thêm bản in có catalog/copyright và chú giải đúng clause; giữ các chữ đã đọc tách khỏi emendation.",
+      "originalTerms": [
+        "天機",
+        "巨門同血氣疾",
+        "天梁同下部疾",
+        "陷地",
+        "疾厄"
+      ],
+      "extendsRecordIds": [
+        "KRB5-TA-CO"
+      ]
+    },
+    {
+      "recordId": "KRB6-QL-CO-SCAN",
+      "claimType": "interpretation",
+      "subject": {
+        "starId": "thien_co",
+        "palaceId": "quan_loc"
+      },
+      "schoolId": null,
+      "schoolScope": "Witness-specific attribution only; Wang describes 中州派, no runtime school ID or authenticated universal profile",
+      "researchStorage": "accepted_for_bounded_research_with_uncertainty",
+      "status": {
+        "collection": "COLLECTED",
+        "contextMapping": "CONTEXT_MAPPED",
+        "comparison": "performed_dependent_collation",
+        "research": "CONTEXT_MAPPED",
+        "sourceReview": "not_executed",
+        "runtimeApproval": "not_requested",
+        "publicRelease": "withheld_closed"
+      },
+      "verificationStatus": {
+        "implementationStatus": "not_executable",
+        "formulaStatus": "undocumented",
+        "bibliographicStatus": "secondary",
+        "interpretationStatus": "unreviewed"
+      },
+      "rights": {
+        "retention": "Modern works: locators and short original analytical notes only. Ancient scan: bounded manual collation excerpts, no images/OCR/book corpus redistributed; scan reuse license unknown.",
+        "scope": "Research storage only; not source-review, runtime, public-release or redistribution permission"
+      },
+      "exclusions": [
+        "Không dùng làm dự đoán cá nhân hay lời khuyên sức khỏe, sinh sản, hôn nhân hoặc tài chính",
+        "Không suy độ/quyền an sao hay kết luận runtime từ diễn giải",
+        "Không tự gộp khác biệt giới, địa vị, gia đình và nghề nghiệp cổ thành khuyến nghị hiện đại"
+      ],
+      "sourceFamilyDependencies": [
+        "quanshu-transmission",
+        "Same Quanshu family; scan not a new authored source"
+      ],
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-6/DOSSIER.md#krb6-ql-co-scan",
+      "evidenceRef": "docs/knowledge/research/knowledge-first-batch-6/evidence.json",
+      "recordFile": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "sourceReferences": [
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "author": null,
+          "authorAttribution": "Traditional attribution; retained transcription, not authenticated original edition",
+          "work": "紫微斗數全書 — retained iztro transcription",
+          "section": "Complete retained section for scan collation",
+          "page": null,
+          "language": "zh-Hant",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 739,
+            "endLine": 739,
+            "sha256": "a6a9db731e2c666e49c900c3fe519839a4b04b62e62ea886361388dfb824599c",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "originalQuotation": null
+        },
+        {
+          "sourceId": "ziwei-quanshu-tradition",
+          "provisionalWitnessId": "quanshu-naikaku-ia-20260506-1217",
+          "editionId": null,
+          "author": null,
+          "authorAttribution": "陳摶 traditional attribution; leaf4 credits 潘希尹補輯, 楊一宇恭閱, 書林葆和堂葉梓行; no authenticated publication date",
+          "work": "新鋟希夷陳先生紫微斗數全書 — seven-juan scan witness",
+          "section": "KRB6-QL-CO-SCAN",
+          "page": null,
+          "language": "zh-Hant",
+          "url": "https://archive.org/download/20260506_20260506_1217/page/n147.jpg",
+          "digitalLeafZeroBased": 147,
+          "pdfPageOneBased": 148,
+          "printedFolio": null,
+          "scanEvidenceRef": "docs/knowledge/research/knowledge-first-batch-6/scan-collation.json",
+          "originalQuotation": null,
+          "family": "quanshu-transmission",
+          "locatorLimit": "Actual image inspected; zero-based digital leaf is not a printed folio or authenticated edition ID"
+        }
+      ],
+      "predicate": "thien_co / quan_loc — source-bounded conditional context",
+      "meaningVi": "Ảnh147 có chuỗi 會文曲為良不見羊陀火鈴方宜: sau 良 là 不, không có 巨/臣 được đọc trong đoạn này. Ngắt phân tích đề xuất: 為良 / 不見羊陀火鈴 / 方宜. Q739 lại là 良巨，見…方宜. Ghi dị văn xác định theo witness; chưa sửa Q, chưa chọn chữ “良臣”. Cơ miếu/quyền quý, Lương đồng văn võ, Âm đồng, hãm thoái quan vẫn thuộc paragraph.",
+      "governingContext": {
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 737,
+          "endLine": 764,
+          "sha256": "e036adb619841d719ea2aff35cb75880ae8b050e4aae7702924382383c0e9743",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "preambleStatus": "Retained full section; no extra preamble imported",
+        "meaningVi": "Q section read in full; scan inspection bounded to named paragraphs and nearby context, not the whole print chapter.",
+        "dependencies": [
+          "source_specific_scope",
+          "relation_endpoints",
+          "standalone_vs_cohost",
+          "no_runtime_inference"
+        ],
+        "scanReadScope": "Digital leaf147 plus title/credit leaves0/4; partial image chapters only"
+      },
+      "conditions": [
+        "Chỉ đọc chữ ở đúng scan leaf/pane/entry được nêu",
+        "Không sửa corpus hoặc approved claim từ collation này"
+      ],
+      "modifiers": [
+        "Bất kiến Dương/Đà/Hỏa/Linh trong ảnh không phải beneficial-sát exception",
+        "Dấu câu do phân tích viên, không phải dấu câu bản khắc"
+      ],
+      "exceptions": [
+        "Digital Juan2 và scan juan4 là numbering khác nhau",
+        "Bản ảnh cùng family không tạo độc lập tác giả"
+      ],
+      "relationships": [
+        {
+          "type": "linked_historical_record",
+          "recordId": "KRB4-QL-CO"
+        }
+      ],
+      "positiveBranches": [
+        "Chỉ có hiệu lực nghiên cứu trong đúng điều kiện và witness được dẫn"
+      ],
+      "adverseBranches": [
+        "Thiếu edition/gloss hoặc điều kiện không trùng khiến chưa thể hợp nhất kết luận"
+      ],
+      "comparisonIds": [
+        "B6C07"
+      ],
+      "uncertainties": [
+        "Không độc lập authored family mới",
+        "Cần bản in/collation khác và catalog xác nhận ấn bản, không đồng nhất digital Juan2 với scan juan4"
+      ],
+      "contradicts": [
+        "B4D09"
+      ],
+      "nextAction": "Đối chiếu thêm bản in có catalog/copyright và chú giải đúng clause; giữ các chữ đã đọc tách khỏi emendation.",
+      "originalTerms": [
+        "天機",
+        "會文曲為良",
+        "不見羊陀火鈴方宜",
+        "天梁同",
+        "陷宮"
+      ],
+      "extendsRecordIds": [
+        "KRB4-QL-CO"
+      ]
+    },
+    {
+      "recordId": "KRB6-NB-PHU-SCAN",
+      "claimType": "interpretation",
+      "subject": {
+        "starId": "thien_phu",
+        "palaceId": "no_boc"
+      },
+      "schoolId": null,
+      "schoolScope": "Witness-specific attribution only; Wang describes 中州派, no runtime school ID or authenticated universal profile",
+      "researchStorage": "accepted_for_bounded_research_with_uncertainty",
+      "status": {
+        "collection": "COLLECTED",
+        "contextMapping": "CONTEXT_MAPPED",
+        "comparison": "performed_dependent_collation",
+        "research": "CONTEXT_MAPPED",
+        "sourceReview": "not_executed",
+        "runtimeApproval": "not_requested",
+        "publicRelease": "withheld_closed"
+      },
+      "verificationStatus": {
+        "implementationStatus": "not_executable",
+        "formulaStatus": "undocumented",
+        "bibliographicStatus": "secondary",
+        "interpretationStatus": "unreviewed"
+      },
+      "rights": {
+        "retention": "Modern works: locators and short original analytical notes only. Ancient scan: bounded manual collation excerpts, no images/OCR/book corpus redistributed; scan reuse license unknown.",
+        "scope": "Research storage only; not source-review, runtime, public-release or redistribution permission"
+      },
+      "exclusions": [
+        "Không dùng làm dự đoán cá nhân hay lời khuyên sức khỏe, sinh sản, hôn nhân hoặc tài chính",
+        "Không suy độ/quyền an sao hay kết luận runtime từ diễn giải",
+        "Không tự gộp khác biệt giới, địa vị, gia đình và nghề nghiệp cổ thành khuyến nghị hiện đại"
+      ],
+      "sourceFamilyDependencies": [
+        "quanshu-transmission",
+        "Same Quanshu family; scan not a new authored source"
+      ],
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-6/DOSSIER.md#krb6-nb-phu-scan",
+      "evidenceRef": "docs/knowledge/research/knowledge-first-batch-6/evidence.json",
+      "recordFile": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "sourceReferences": [
+        {
+          "sourceId": "ziwei-quanshu-iztro-transcription",
+          "editionId": "iztro-juan2-2f00e2ab0c80",
+          "author": null,
+          "authorAttribution": "Traditional attribution; retained transcription, not authenticated original edition",
+          "work": "紫微斗數全書 — retained iztro transcription",
+          "section": "Complete retained section for scan collation",
+          "page": null,
+          "language": "zh-Hant",
+          "location": {
+            "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+            "startLine": 719,
+            "endLine": 719,
+            "sha256": "a754bb26697ff472606b10078d644c4f4803e6ff752a68b27d9c9897bddb2e46",
+            "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+          },
+          "originalQuotation": null
+        },
+        {
+          "sourceId": "ziwei-quanshu-tradition",
+          "provisionalWitnessId": "quanshu-naikaku-ia-20260506-1217",
+          "editionId": null,
+          "author": null,
+          "authorAttribution": "陳摶 traditional attribution; leaf4 credits 潘希尹補輯, 楊一宇恭閱, 書林葆和堂葉梓行; no authenticated publication date",
+          "work": "新鋟希夷陳先生紫微斗數全書 — seven-juan scan witness",
+          "section": "KRB6-NB-PHU-SCAN",
+          "page": null,
+          "language": "zh-Hant",
+          "url": "https://archive.org/download/20260506_20260506_1217/page/n145.jpg",
+          "digitalLeafZeroBased": 145,
+          "pdfPageOneBased": 146,
+          "printedFolio": null,
+          "scanEvidenceRef": "docs/knowledge/research/knowledge-first-batch-6/scan-collation.json",
+          "originalQuotation": null,
+          "family": "quanshu-transmission",
+          "locatorLimit": "Actual image inspected; zero-based digital leaf is not a printed folio or authenticated edition ID"
+        }
+      ],
+      "predicate": "thien_phu / no_boc — source-bounded conditional context",
+      "meaningVi": "Ảnh145 đọc 紫微同助主衛家 trong entry Phủ, khác 天家 ở Q719. Vệ gia là hướng nghĩa giữ/bảo hộ nhà trong lời cổ về quan hệ chủ–người hầu; chưa có gloss edition để xác lập đầy đủ nghĩa hoặc số người. Không thay bằng thuật ngữ nhân sự hiện đại.",
+      "governingContext": {
+        "location": {
+          "path": "docs/knowledge/research/juan2-palace/foundational-single-star-packet/derived-juan2.txt",
+          "startLine": 712,
+          "endLine": 736,
+          "sha256": "efe76b53589501d504df967b87a6ba97cc845756e62ded80f41a10ee80993647",
+          "hashMethod": "UTF8 lines joined LF, no trailing newline; one-based inclusive"
+        },
+        "preambleStatus": "Retained full section; no extra preamble imported",
+        "meaningVi": "Q section read in full; scan inspection bounded to named paragraphs and nearby context, not the whole print chapter.",
+        "dependencies": [
+          "source_specific_scope",
+          "relation_endpoints",
+          "standalone_vs_cohost",
+          "no_runtime_inference"
+        ],
+        "scanReadScope": "Digital leaf145 plus title/credit leaves0/4; partial image chapters only"
+      },
+      "conditions": [
+        "Chỉ đọc chữ ở đúng scan leaf/pane/entry được nêu",
+        "Không sửa corpus hoặc approved claim từ collation này"
+      ],
+      "modifiers": [
+        "Phủ/Vi đồng là nhánh đang collation; không gộp với Vũ/adverse cuối entry",
+        "Bối cảnh nô bộc lịch sử, không khuyến nghị quan hệ lao động"
+      ],
+      "exceptions": [
+        "Digital Juan2 và scan juan4 là numbering khác nhau",
+        "Bản ảnh cùng family không tạo độc lập tác giả"
+      ],
+      "relationships": [
+        {
+          "type": "linked_historical_record",
+          "recordId": "KRB3-NB-PHU"
+        }
+      ],
+      "positiveBranches": [
+        "Chỉ có hiệu lực nghiên cứu trong đúng điều kiện và witness được dẫn"
+      ],
+      "adverseBranches": [
+        "Thiếu edition/gloss hoặc điều kiện không trùng khiến chưa thể hợp nhất kết luận"
+      ],
+      "comparisonIds": [
+        "B6C08"
+      ],
+      "uncertainties": [
+        "Catalog/niên đại bản in chưa xác thực",
+        "Không có independently authored gloss hoặc kiểm định số lượng"
+      ],
+      "contradicts": [],
+      "nextAction": "Đối chiếu thêm bản in có catalog/copyright và chú giải đúng clause; giữ các chữ đã đọc tách khỏi emendation.",
+      "originalTerms": [
+        "天府",
+        "紫微同",
+        "助主衛家",
+        "天家"
+      ],
+      "extendsRecordIds": [
+        "KRB3-NB-PHU"
+      ]
+    },
+    {
+      "recordId": "KRB6-METHOD-WANG-PARTIAL",
+      "claimType": "interpretation",
+      "subject": {
+        "starId": null,
+        "palaceId": null,
+        "terms": [
+          "天機",
+          "天梁",
+          "左輔",
+          "右弼",
+          "文昌",
+          "文曲",
+          "會合",
+          "見"
+        ]
+      },
+      "schoolId": null,
+      "schoolScope": "Witness-specific attribution only; Wang describes 中州派, no runtime school ID or authenticated universal profile",
+      "researchStorage": "accepted_for_bounded_research_with_uncertainty",
+      "status": {
+        "collection": "COLLECTED",
+        "contextMapping": "CONTEXT_MAPPED",
+        "comparison": "performed_with_identity_limits",
+        "research": "COMPARED",
+        "sourceReview": "not_executed",
+        "runtimeApproval": "not_requested",
+        "publicRelease": "withheld_closed"
+      },
+      "verificationStatus": {
+        "implementationStatus": "not_executable",
+        "formulaStatus": "undocumented",
+        "bibliographicStatus": "secondary",
+        "interpretationStatus": "unreviewed"
+      },
+      "rights": {
+        "retention": "Modern works: locators and short original analytical notes only. Ancient scan: bounded manual collation excerpts, no images/OCR/book corpus redistributed; scan reuse license unknown.",
+        "scope": "Research storage only; not source-review, runtime, public-release or redistribution permission"
+      },
+      "exclusions": [
+        "Không dùng làm dự đoán cá nhân hay lời khuyên sức khỏe, sinh sản, hôn nhân hoặc tài chính",
+        "Không suy độ/quyền an sao hay kết luận runtime từ diễn giải",
+        "Không tự gộp khác biệt giới, địa vị, gia đình và nghề nghiệp cổ thành khuyến nghị hiện đại"
+      ],
+      "sourceFamilyDependencies": [
+        "wang-tingzhi-attributed-lingtan",
+        "Different authored attribution does not establish historical independence or lack of borrowing"
+      ],
+      "dossierRef": "docs/knowledge/research/knowledge-first-batch-6/DOSSIER.md#krb6-method-wang-partial",
+      "evidenceRef": "docs/knowledge/research/knowledge-first-batch-6/evidence.json",
+      "recordFile": "docs/knowledge/research/knowledge-first-batch-6/knowledge-records.json",
+      "sourceReferences": [
+        {
+          "sourceId": "trung-chau-wang-tingzhi",
+          "provisionalWitnessId": "wang-tingzhi-lingtan-scribd-871559757",
+          "editionId": null,
+          "author": "王亭之 (body attribution; edition unverified)",
+          "work": "鬥數零談 — Scribd readable transcription",
+          "section": "（二）天機星曜及其星系 / 天機守命，為人靈動; 機梁守命，三種變局",
+          "page": null,
+          "language": "zh-Hant",
+          "url": "https://www.scribd.com/document/871559757/王亭之-斗数零谈",
+          "readerLines": [
+            850,
+            913
+          ],
+          "runningPageLabels": "77–83 in two-column extracted body; physical pagination not authenticated",
+          "originalQuotation": null
+        },
+        {
+          "sourceId": null,
+          "editionId": null,
+          "provisionalWitnessId": "ling-donglai-thien-co-169-web-20261017",
+          "author": "令东来",
+          "work": "紫微斗数命理学：天机星",
+          "section": "第十四节、天机星",
+          "page": null,
+          "language": "zh-Hans",
+          "originalQuotation": null,
+          "location": {
+            "url": "https://www.xuanmen.com.cn/archives/169.html",
+            "paragraphLocator": "第十四节、天机星; consecutive natal paragraphs discussing 左辅、右弼, 天机天梁 and 父母宫的紫微星; subsequent cohost/opposition definitions read",
+            "sourceTextRetained": false,
+            "observedDecodedHtmlSha256": "cfa9fd9ca415589a459664386ca6112d8d5e11d5bf9b46784c663196ac8f1c51",
+            "hashMethod": "SHA256 of observed decoded HTML re-encoded UTF8; dynamic observation, not a retained replayable artifact"
+          },
+          "bibliographicLimit": "Author site calls this a print-book extract; edition/year/page and reuse license unverified",
+          "reusedFromRecord": "KRB4-METHOD-CO-ASSISTANTS",
+          "accessScope": "Previously retained Batch4 evidence, not newly fetched in Batch6"
+        }
+      ],
+      "predicate": "Cơ–Lương / trợ tinh: partial authored comparator, not exact exception confirmation",
+      "meaningVi": "Witness gán Vương Đình Chi dùng Cơ hội Lương và thấy Phụ/Bật/Xương/Khúc để bàn đánh giá cổ, quy phần lớn ý nghĩa cho Lương. Đoạn khác phân biến Cơ–Lương Mệnh辰戌. Không có đủ Vi tại Phụ Mẫu nhận trợ; chỉ là comparator một phần. Hai câu về sao nào phát huy khi gặp Hình/Kỵ lại căng nhau trong bản chép, chưa chọn câu đúng.",
+      "governingContext": {
+        "preambleStatus": "Prefaces and full selected Cơ subsection with adjacent context read",
+        "meaningVi": "Scribd body credit/readable transcription; opening dates are author-preface dates, not an authenticated publication year. Two columns interleave; use headings and line ranges, no silent word repair.",
+        "dependencies": [
+          "source_specific_scope",
+          "relation_endpoints",
+          "standalone_vs_cohost",
+          "no_runtime_inference"
+        ]
+      },
+      "conditions": [
+        "會合/見 không tự đổi thành mọi sao đồng cung",
+        "Không lấy Lương nổi trội trong một đoạn làm precedence chung",
+        "Exact target requires Mệnh Cơ–Lương + Phụ/Bật + Vi/Phụ nhận trợ"
+      ],
+      "modifiers": [
+        "Đoạn859–861 còn Xương/Khúc, không chỉ Tả/Hữu",
+        "Đoạn891–913 là cohost Mệnh辰戌; phải tách khỏi hội hợp rộng"
+      ],
+      "exceptions": [
+        "Missing Vi/Phụ endpoint prevents direct confirmation or refutation of Ling exception",
+        "Attributed Wang material quoted by Ling does not establish historically independent origin"
+      ],
+      "relationships": [
+        {
+          "type": "linked_historical_record",
+          "recordId": "KRB4-METHOD-CO-ASSISTANTS"
+        },
+        {
+          "type": "linked_historical_record",
+          "recordId": "KRB5-METHOD-V-CONTEXT"
+        }
+      ],
+      "positiveBranches": [
+        "Chỉ có hiệu lực nghiên cứu trong đúng điều kiện và witness được dẫn"
+      ],
+      "adverseBranches": [
+        "Thiếu edition/gloss hoặc điều kiện không trùng khiến chưa thể hợp nhất kết luận"
+      ],
+      "comparisonIds": [
+        "B6C09"
+      ],
+      "uncertainties": [
+        "Edition/publisher/year/page physically unverified; running labels not print authentication",
+        "898 và909 khác chủ thể sức mạnh khi Hình/Kỵ; cần trang in",
+        "Không có comparator khớp đủ exact-case"
+      ],
+      "contradicts": [
+        "B5D11"
+      ],
+      "nextAction": "Tìm edition và comparator trùng đủ điều kiện; giữ khác phạm vi, không sinh rule chung.",
+      "originalTerms": [
+        "天機",
+        "天梁",
+        "左輔",
+        "右弼",
+        "文昌",
+        "文曲",
+        "會合",
+        "見"
+      ]
+    }
+  ]
+}
